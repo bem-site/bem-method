@@ -173,3 +173,20 @@ BEM решает следующие задачи:
 Модификатор `has-close=yes` — добавляет элемент закрывающий крестик.
 Добавляет отступы блоку, освобождая место крестика.
 ![Блок b-popup с закрывающим крестиком](https://github.com/bem/bem-method/raw/master/images/b-popup-close.png)
+
+### Контекстом
+
+Блок при размещении в другом блоке может менять свой внешний вид или поведение.
+
+**Пример**<br/>
+Цвет текста вложенного блока меняется с зелёного на красный, если
+он помещён в блок с синим фоном с красными буквами.
+
+**Примеры**
+
+Переключатель языков (`b-lang-switcher`)<br/>
+![Переключатель языков b-lang-switcher](https://github.com/bem/bem-method/raw/master/images/b-lang-switcher.png)
+
+Переключатель языков (`b-lang-switcher`) в подвале страницы
+(`b-foot`), уменьшается размер шрифта.<br/>
+![Переключатель языков b-lang-switcher в подвале](https://github.com/bem/bem-method/raw/master/images/b-lang-switcher-foot.png)
