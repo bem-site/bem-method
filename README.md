@@ -137,3 +137,39 @@ BEM решает следующие задачи:
  * Модификатором
  * Контекстом
  * Уровнем переопределения
+
+### Модификатором
+
+Блоку/элементу добавляется модификатор и изменение блока/элемента описывается в коде этого модификатора.
+
+**Примеры**
+
+По умолчанию фон у попапа осутствует.<br/>
+![Блок b-popup без фона](https://github.com/bem/bem-method/raw/master/images/b-popup-tr.png)
+
+Добавление модификатора theme блоку `b-popup` добавляет ему фон.<br/>
+`theme=yellow` добавляет фон желтого цвета:<br/>
+![Блок b-popup с желтым фоном](https://github.com/bem/bem-method/raw/master/images/b-popup-yellow.png)
+
+`theme=black` добавляет фон черного цвета:<br/>
+![Блок b-popup с чёрным фоном](https://github.com/bem/bem-method/raw/master/images/b-popup-bl.png)
+
+У блока может быть одновременно несколько модификаторов.
+
+**Примеры**
+
+Модификатор `theme` — отвечает за фон попапа. Модификатор
+`direction` — отвечает за направление отображения попапа.
+
+`theme=yellow` и `direction=left` — попап желтого цвета открывается влево:<br/>
+![Блок b-popup с хвостиком слева](https://github.com/bem/bem-method/raw/master/images/b-popup-left.png)
+
+`theme=yellow` и `direction=right` — попап желтого цвета открывается вправо:<br/>
+![Блок b-popup с хвостиком справа](https://github.com/bem/bem-method/raw/master/images/b-popup-right.png)
+
+Модификатор блока может изменять структуру блока (например, добавлять/удалять элементы) или его реализацию.
+
+**Пример**<br/>
+Модификатор `has-close=yes` — добавляет элемент закрывающий крестик.
+Добавляет отступы блоку, освобождая место крестика.
+![Блок b-popup с закрывающим крестиком](https://github.com/bem/bem-method/raw/master/images/b-popup-close.png)
