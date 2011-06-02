@@ -2,4 +2,4 @@
 
 ## Что такое БЭМ
 
-![Image](images/search.ru.png)
+![Image](https://github.com/bem/bem-method/blob/master/images/search.ru.png)
