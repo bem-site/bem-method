@@ -103,3 +103,17 @@ BEM решает следующие задачи:
     b-menu_layout_horiz
     b-menu_layout_vert
     b-popup_direction_up
+
+### Имя модификатора элемента
+
+Полное имя модификатора элемента формируется так, чтобы из него
+можно было определить принадлежность данного модификатора к конкретному
+элементу конкретного блока.
+Полное имя модификатора элемента создается по схеме:
+<tt style="background: #F7F7E7;">b-<span style="color: #C00;">имя-блока</span>__<span style="color: #008000;">имя-элемента</span>\_<span style="color: #06C;">имя-модификатора</span>\_<span style="color: gray;">значение-модификатора</span></tt>.
+
+**Примеры**
+
+    b-menu__item_state_current
+    b-popupa__content_visibile_yes
+    b-popupa__content_visibile_no
