@@ -131,3 +131,9 @@ BEM решает следующие задачи:
     b-menu__item_state_current
     b-popupa__content_visibile_yes
     b-popupa__content_visibile_no
+
+## Варианты модификации блоков
+
+ * Модификатором
+ * Контекстом
+ * Уровнем переопределения
