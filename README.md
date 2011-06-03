@@ -358,3 +358,65 @@ TODO: Подготовить bemhtml
 ## Представление в DOM
 В простейшем случае блок соответствует `DOM`-узлу, один к одному.
 Но важно понимать, что `DOM`-узел и блок это не всегда одно и тоже.
+
+### Микс
+
+Под миксом подразумевается смешивание на одном DOM-узле разных блоков и элементов.
+
+На одном DOM-узле может быть:
+
+ * несколько блоков
+
+        b-menu b-head-menu
+ * блок и элемент этого же блока
+
+        b-menu b-menu__layout
+ * блок и элемент другого блока
+
+        b-link b-menu__link
+ * элемент одного блока и элемент другого блока
+
+        b-menu__item b-head-menu__item
+ * блок с модификатором и другой блок
+
+        b-menu b-menu_layout_horiz b-head-menu
+ * блок с модификатором и другой блок с модификатором
+
+        b-menu b-menu_layout_horiz b-head-toolbar b-head-toolbar_theme_black
+
+**Пример**
+
+Переключатель панелей имеет элементы табы (`b-tabbed-pane__tabs`) и панели
+(`b-tabbed-pane__panels`). Эти два элемента находятся на одном `DOM`-узле
+одновременно. Это позволяет легко менять расположение элементов на странице
+с вертикального на горизонтальное.
+
+Вертикальное расположение элементов
+
+![Панели над табами](https://github.com/bem/bem-method/raw/master/images/tab-panel-v.png)
+
+    <div class="b-tabbed-pane b-tabbed-pane__tabs">
+        ...
+    </div>
+    <div class="b-tabbed-pane b-tabbed-pane__panels">
+        ...
+    </div>
+
+Горизонтальное расположение элементов
+
+![Панели рядом с табами](https://github.com/bem/bem-method/raw/master/images/tab-panel-h.png)
+
+    <table class="l-page">
+    <tr>
+        <td class="l-page__left">
+            <div class="b-tabbed-pane b-tabbed-pane__tabs">
+                ...
+            </div>
+        </td>
+        <td class="l-page__right">
+            <div class="b-tabbed-pane b-tabbed-pane__panels">
+                ...
+            </div>
+        </td>
+    </tr>
+    </table>
