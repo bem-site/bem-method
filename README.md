@@ -420,3 +420,93 @@ TODO: Подготовить bemhtml
         </td>
     </tr>
     </table>
+
+## Структура БЭМ-проекта на файловой системе
+
+Проект, реализованный на БЭМ состоит из одного или нескольких уровней переопределения и кода страниц.
+
+Приведённые ниже примеры структуры не жёсткие и могут быть изменены в зависимости от потребностей проекта.
+
+### Страница
+
+Совокупность файлов, которые определяют внешний вид и поведение конкретной страницы.
+
+**Пример**
+
+    pages/
+        index/
+            index.css
+            index.js
+            index.bemhtml
+            index.bemdecl
+            index.bemjson
+
+Страница состоит из описания блоков, которые на ней используются
+(`.bemdecl`) и конкретного их расположения (`.bemjson`). Это исходный код страницы.
+Из него генерируются все необходимые для отображения файлы (`.css`, `.js`, etc)
+
+#### Исходный код страницы
+
+##### index.bemdecl
+
+TODO: написать пример страницы с использованием b-page, b-menu и b-link
+
+**Пример index.bemdecl**
+
+    module.exports = [
+        {
+            name : 'b-page',
+            elems : [
+                { name : 'head' },
+                { name : 'title' }
+            ]
+        },
+        {
+            name: 'b-link',
+            mods: [
+                {
+                    name : 'isBEM',
+                    vals : [
+                        { name : 'yes'}
+                    ]
+                }
+            ]
+        }
+    ]
+
+##### index.bemjson 
+
+TODO: написать пример страницы с использованием b-page, b-menu и b-link
+
+**Пример index.bemjson**
+
+    ({
+        block: 'b-page',
+        content: {
+            block: 'b-link',
+            url: 'http://yandex.ru',
+                content: 'Самая посещаемая страница Рунета'
+            }
+    })
+
+#### Генерируемые файлы
+
+##### index.css
+
+TODO: написать пример index.css с использованием b-page, b-menu и b-link
+
+**Пример index.css**
+
+    @import url(lego/b-page/b-page.css);
+    @import url(lego/b-menu/b-menu.css);
+    @import url(lego/b-menu/_layout/b-menu_layout_horiz.css);
+    @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
+    @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
+
+
+##### index.js
+
+TODO: написать пример index.js с использованием b-page, b-menu и b-link
+
+    include(lego/b-menu/b-menu.js);
+    include(lego/i-counter/i-counter.js);
