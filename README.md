@@ -185,8 +185,8 @@ BEM решает следующие задачи:
 **Примеры**
 
 Переключатель языков (`b-lang-switcher`)<br/>
-![Переключатель языков b-lang-switcher](https://github.com/bem/bem-method/raw/master/images/b-lang-switcher.png)
+![Переключатель языков b-lang-switcher](https://github.com/bem/bem-method/raw/master/images/lang-switcher.png)
 
 Переключатель языков (`b-lang-switcher`) в подвале страницы
 (`b-foot`), уменьшается размер шрифта.<br/>
-![Переключатель языков b-lang-switcher в подвале](https://github.com/bem/bem-method/raw/master/images/b-lang-switcher-foot.png)
+![Переключатель языков b-lang-switcher в подвале](https://github.com/bem/bem-method/raw/master/images/lang-switcher-foot.png)
