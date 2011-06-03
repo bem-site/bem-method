@@ -226,7 +226,7 @@ TODO: Сделать пример или ссылку на пример.
                 b-menu_layout_horiz.bemhtml
                 b-menu_layout_vertical.css
                 b-menu_layout_vertical.bemhtml
-            elem/
+            __elem/
                 b-menu__elem.css
                 b-menu__elem.bemhtml
             b-menu.css
@@ -690,13 +690,13 @@ TODO: картинка с уровнями и технологиями
             b-domik_type_popup.ie.css
             b-domik_type_popup.js
             b-domik_type_popup.xsl
-        lock/                                           # замочек — элемент блока
+        __lock/                                         # замочек — элемент блока
             b-domik__lock.css
             b-domik__lock.png
             b-domik__lock.xsl
             _visibility/                                # модификатор элемента lock, делает его видимым  
                 b-domik__lock_visibility_visible.css
-        shadow/                                         # тень — элемент блока
+        __shadow/                                       # тень — элемент блока
             b-domik__shadow.css
             b-domik__shadow.ie.css
             b-domik__shadow.png
