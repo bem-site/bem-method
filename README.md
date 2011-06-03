@@ -48,6 +48,7 @@ BEM решает следующие задачи:
 **Пример**<br/>
 ![Модификатор](https://github.com/bem/bem-method/raw/master/images/search-m.ru.png)
 
+<a name="levels"></a>
 ### Уровень переопределения
 Уровень переопределения — это набор реализаций блоков. Проект может
 иметь несколько уровней, на каждом из которых добавляется или изменяется
@@ -510,3 +511,147 @@ TODO: написать пример index.js с использованием b-p
 
     include(lego/b-menu/b-menu.js);
     include(lego/i-counter/i-counter.js);
+
+### Уровни переопределения проекта
+
+Проект состоит из [уровней переопределения](#levels). Количество уровней
+переопределения зависит от проекта, всегда есть минимум 1 уровень.
+
+TODO: картинка с уровнями и технологиями
+
+Реализация блока может быть на нескольких уровнях. Для каждой страницы можно
+настроить своё используемое множество уровней. Финальная реализация блока на
+странице собирается со всех уровней для этой страницы.
+
+#### Расположение уровней на проектах
+
+##### Только блоки проекта
+
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+
+##### Блоки проекта и отдельных страниц проекта
+
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/              # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+
+##### Блоки фреймворка и проекта
+
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+
+##### Блоки фреймворка, проекта и страниц
+
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/              # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+
+##### Блоки проекта, страниц и темы
+
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/              # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+        themes/
+            black/                             # не раскладываем файлы по директориям, кладём их рядом
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+            yellow/
+                b-head.css
+                b-foot.css
+                b-sidebar.css
