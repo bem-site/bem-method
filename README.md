@@ -407,14 +407,14 @@ TODO: Подготовить bemhtml
 
 ![Панели рядом с табами](https://github.com/bem/bem-method/raw/master/images/tab-panel-h.png)
 
-    <table class="l-page">
+    <table class="b-layout-table">
     <tr>
-        <td class="l-page__left">
+        <td class="b-layout-table__column b-layout-table__column_side_left">
             <div class="b-tabbed-pane b-tabbed-pane__tabs">
                 ...
             </div>
         </td>
-        <td class="l-page__right">
+        <td class="b-layout-table__column b-layout-table__column_side_right">
             <div class="b-tabbed-pane b-tabbed-pane__panels">
                 ...
             </div>
