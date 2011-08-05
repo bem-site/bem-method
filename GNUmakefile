@@ -4,7 +4,7 @@ html: $(patsubst %.wiki,%.html,$(patsubst src%,bin%,$(wildcard src/*.wiki))) bin
 
 .PRECIOUS: %.html
 %.html: %.wiki
-	shmakowiki2html -i $(patsubst %.html,%.wiki,$@) -o $@
+	node lib/wiki2html.js $(patsubst %.html,%.wiki,$@) $@
 
 bin/all.wiki:
 	touch $@
