@@ -1,0 +1,68 @@
+Реализация блока состоит из набора технологий, к примеру:
+
+ * HTML-разметка обеспечивает нужную разметку (`XML` + `XSL` = `HTML` или `bemjson` + `bemhtml` = `HTML`)
+ * CSS-правила внешний вид блока
+ * JS-правила поведения блока
+
+Этот набор технологий может быть разным, в зависимости от блока, его назначения, и удобства использования.
+
+В файловой системе реализации в разных технологиях записаны в соответствующие файлы.
+Имена файлов соответствуют [соглашению об именовании](#naming).
+
+###Каждый блок в директории, элементы и модификаторы в отдельных директорияx
+
+    blocks/
+        b-menu/
+            _layout/
+                b-menu_layout_horiz.css
+                b-menu_layout_horiz.bemhtml
+                b-menu_layout_vertical.css
+                b-menu_layout_vertical.bemhtml
+            __elem/
+                b-menu__elem.css
+                b-menu__elem.bemhtml
+            b-menu.css
+            b-menu.js
+            b-menu.bemhtml
+
+### Каждый блок в директории, элементы и модификаторы в отдельных файлах без директорий
+
+    blocks/
+        b-menu/
+            b-menu_layout_horiz.css
+            b-menu_layout_horiz.bemhtml
+            b-menu_layout_vertical.css
+            b-menu_layout_vertical.bemhtml
+            b-menu__elem.css
+            b-menu__elem.bemhtml
+            b-menu.css
+            b-menu.js
+            b-menu.bemhtml
+
+### Каждый блок в директории, элементы и модификаторы в файлах блока
+
+    blocks/
+        b-menu/
+            b-menu.css
+            b-menu.js
+            b-menu.bemhtml
+
+### Директории не используются, элементы и модификаторы в отдельных файлах
+
+    blocks/
+        b-menu_layout_horiz.css
+        b-menu_layout_horiz.bemhtml
+        b-menu_layout_vertical.css
+        b-menu_layout_vertical.bemhtml
+        b-menu__elem.css
+        b-menu__elem.bemhtml
+        b-menu.css
+        b-menu.js
+        b-menu.bemhtml
+
+### Директории не используются, элементы и модификаторы в файлах блока
+
+    blocks/
+        b-menu.css
+        b-menu.js
+        b-menu.bemhtml

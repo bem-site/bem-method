@@ -1,0 +1,44 @@
+Реализация блока состоит из набора технологий, к примеру:
+
+ * `HTML`-разметка обеспечивает нужную структуру блока (`XML` + `XSL` или `JSON` + `JS`)
+ * `CSS`-правила внешний вид блока
+ * `JS`-правила поведения блока
+
+Этот набор технологий может быть разным, в засимости от блока, его назначения, и удобства использования.<br/>
+Структура блока первична, а реализация блока вторична.
+
+**Пример реализации блока b-domik**
+
+<div style="float: right">
+<b>Домик на странице</b><br/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png"/><br/><br/>
+<b>Домик в попапе</b><br/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png"/>
+</div>
+
+    b-domik/
+        b-domik.css                                     # общие файлы реализации для всех типов домика
+        b-domik.ie.css
+        b-domik.js
+        b-domik.xsl
+        _type/                                          # папка с модификаторами для блока
+            b-domik_type_onpage.css                     # домик прибитый на странице
+            b-domik_type_onpage.ie.css
+            b-domik_type_onpage.js
+            b-domik_type_onpage.xsl
+            b-domik_type_popup.css                      # домик как всплывающее окно
+            b-domik_type_popup.ie.css
+            b-domik_type_popup.js
+            b-domik_type_popup.xsl
+        __lock/                                         # замочек — элемент блока
+            b-domik__lock.css
+            b-domik__lock.png
+            b-domik__lock.xsl
+            _visibility/                                # модификатор элемента lock, делает его видимым  
+                b-domik__lock_visibility_visible.css
+        __shadow/                                       # тень — элемент блока
+            b-domik__shadow.css
+            b-domik__shadow.ie.css
+            b-domik__shadow.png
+
+<div style="clear: both;"></div>
