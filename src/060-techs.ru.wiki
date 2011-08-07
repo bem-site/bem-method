@@ -79,8 +79,20 @@ TODO: Приложить ссылку на исследования.
     i-request_type_ajax      //Конструктор AJAX-запросов
 %%
 
-TODO: Подготовить i-bem к релизу.
+Клиентским js-фреймворком для работы со страницей в терминах БЭМ является
+js-реализация блока ##i-bem## библиотеки ##bem-bl##:
+
+ * ((https://github.com/bem/bem-bl/tree/master/blocks-desktop/i-bem код в репозитории на GitHub))
+ * ((https://github.com/bem/bem-bl/ библиотека блоков bem-bl).
+ * ((http://clubs.ya.ru/bem/replies.xml?item_no=900 Доклад Дмитрия Филатова и Сергея Бережного о i-bem.js))
 
 ==== Шаблоны
 
-TODO: Подготовить bemhtml
+Одной из реализаций блока может быть его шаблон, который по входным данным строит HTML.
+
+В бибилиотеки ##bem-bl## в качестве шаблонной технологии используется ##bemhtml##.
+Это надмножество js-шаблонизатора xjst, написанные на нём шаблоны блоков компилируются
+в plain JavaScript и могут быть выполнены как на сервере (через Node.js) или на клиенте.
+
+ * ((http://clubs.ya.ru/bem/replies.xml?item_no=898 Доклад Сергея Бережного (veged) bemhtml))
+ * ((http://clubs.ya.ru/bem/replies.xml?item_no=899 Доклад Андрея Мищенко (druxa) и Сергея Бережного (veged) о xjst))
