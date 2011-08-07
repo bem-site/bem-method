@@ -1,18 +1,1 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Одной страницей</title></head><body><div class="shmakowiki"><p>﻿=== Технологии реализации</p><p>BEM-метод подразумевает реализацию блока в различных технологиях.</p><p>TODO: нарисовать картинку с уровнями переопределения и технологиями</p><h3>HTML</h3><p>Реализация возможна в нескольких вариантах.</p><p>http:<i>clubs.ya.ru/bem/replies.xml?item_no=712</i></p><h4>Тэги HTML и классы</h4><p>TODO</p><h4>Кастомные тэги</h4><p>TODO</p><h3>CSS</h3><p>Каждая БЭМ-сущность должна иметь класс, чтобы при необходимости изменить или дописать или переопредлить для них CSS-свойства.</p><p>Опираясь на то, что любой блок, возможно придется использовать повторно, т.е. блок не является уникальным, CSS-свойства для блоков и его елементов описываются только через классы.</p><p><b>Важно</b>: CSS-свойства не описываются через <tt>id</tt>, а именно вот так *НЕ ПИШЕМ*:</p><p>    #header {}</p><p>CSS-классы для BEM-сущностей соответствуют полным именам этих сущностей<br/> См. [соглашение об именовании](#naming)</p><p><b>Примеры CSS-классов</b></p><div>    .b-popup {}                 // CSS-класс блока
-    .b-popup__content {}        // CSS-класс элемента блока
-    .b-popupa_theme_yellow {}   // CSS-класс модификатора блока</div><p>По возможности отказываемся от [Селекторов типа](http:<i>h.yandex.net/?http%3A%2F%2Fwww.w3.org%2FTR%2F2001%2FCR-css3-selectors-20011113%2F%23type-selectors).</i> Селекторы типа — селекторы, которые применяются к <tt>DOM</tt>-узлам без <tt>CSS</tt>-класса (элементо-зависимые селекторы).</p><p><b>Например</b>, вот так <b>НЕ ПИШЕМ</b>:</p><div>    p
-    {
-          color: #ccc;
-    }
-
-    table.news td
-    {
-       border-bottom: 1px solid #ccc;
-    }
-
-    .list li
-    {
-        float: left;
-    }</div><p>Отказ от использования Селекторов типа и <tt>CSS</tt>-каскада уменьшает <tt>Reflow Time</tt> — чистое время наложения стилей на сформированный <tt>DOM</tt>.<br/> TODO: Приложить ссылку на исследования.</p><h3>JavaScript</h3><p>В <tt>JS</tt> мы также работаем в терминах &quot;Блок-Элемент-Модификатор&quot;. <tt>DOM</tt>-представление блоков рассматривается как более низкий уровень реализации.<br/> Допустимы блоки без <tt>DOM</tt>-представления. Обычно это блоки-хелперы.</p><p><b>Пример блоков без <tt>DOM</tt>-представления:</b></p><div>    i-request                // Конструктор запросов
-    i-request_type_ajax      //Конструктор AJAX-запросов</div><p>Клиентским js-фреймворком для работы со страницей в терминах БЭМ является js-реализация блока <tt>i-bem</tt> библиотеки <tt>bem-bl</tt>:</p><ul><li><a href="https://github.com/bem/bem-bl/tree/master/blocks-desktop/i-bem">код в репозитории на GitHub</a></li><li><a href="https://github.com/bem/bem-bl/">https://github.com/bem/bem-bl/</a> библиотека блоков bem-bl).</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=900">Доклад Дмитрия Филатова и Сергея Бережного о i-bem.js</a></li></ul><h3>Шаблоны</h3><p>Одной из реализаций блока может быть его шаблон, который по входным данным строит HTML.</p><p>В бибилиотеки <tt>bem-bl</tt> в качестве шаблонной технологии используется <tt>bemhtml</tt>. Это надмножество js-шаблонизатора xjst, написанные на нём шаблоны блоков компилируются в plain JavaScript и могут быть выполнены как на сервере (через Node.js) или на клиенте.</p><ul><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=898">Доклад Сергея Бережного (veged) bemhtml</a></li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=899">Доклад Андрея Мищенко (druxa) и Сергея Бережного (veged) о xjst</a></li></ul></div>
-</body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Одной страницей</title></head><body></body></html>
