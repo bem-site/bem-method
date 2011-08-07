@@ -32,7 +32,7 @@ TODO: написать пример страницы с использовани
 
 **Пример index.bemdecl**
 
-%%hl js
+%%
     module.exports = [
         {
             name : 'b-page',
@@ -80,14 +80,13 @@ TODO: написать пример index.css с использованием b-
 
 **Пример index.css**
 
-%%hl css
+%%
     @import url(lego/b-page/b-page.css);
     @import url(lego/b-menu/b-menu.css);
     @import url(lego/b-menu/_layout/b-menu_layout_horiz.css);
     @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
     @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
 %%
-
 
 ====== index.js
 
@@ -251,3 +250,4 @@ TODO: картинка с уровнями и технологиями
                 b-foot.css
                 b-sidebar.css
 %%
+
