@@ -1,2 +1,30 @@
-<html><head><title></title></head><body><div class="shmakowiki"><p>﻿Реализация блока состоит из набора технологий, к примеру:</p><ul><li>`HTML`-разметка обеспечивает нужную структуру блока (`XML` + `XSL` или `JSON` + `JS`)</li><li>`CSS`-правила внешний вид блока</li><li>`JS`-правила поведения блока</li></ul><p>Этот набор технологий может быть разным, в засимости от блока, его назначения, и удобства использования.<i> Структура блока первична, а реализация блока вторична.</i></p><p><b>Пример реализации блока b-domik</b></p><p>&lt;div style=&quot;float: right&quot;&gt; &lt;b&gt;Домик на странице&lt;/b&gt;<i> &lt;img src=&quot;https:</i>github.com/bem/bem-method/raw/master/images/domik-onpage.png&quot;/&gt;<i></i> &lt;b&gt;Домик в попапе&lt;/b&gt;<i> &lt;img src=&quot;https:</i>github.com/bem/bem-method/raw/master/images/domik-popup.png&quot;/&gt; &lt;/div&gt;</p><p>    b-domik/ b-domik.css                                     # общие файлы реализации для всех типов домика b-domik.ie.css b-domik.js b-domik.xsl _type/                                          # папка с модификаторами для блока b-domik_type_onpage.css                     # домик прибитый на странице b-domik_type_onpage.ie.css b-domik_type_onpage.js b-domik_type_onpage.xsl b-domik_type_popup.css                      # домик как всплывающее окно b-domik_type_popup.ie.css b-domik_type_popup.js b-domik_type_popup.xsl <u>lock/                                         # замочек — элемент блока b-domik</u>lock.css b-domik<u>lock.png b-domik</u>lock.xsl _visibility/                                # модификатор элемента lock, делает его видимым b-domik<u>lock_visibility_visible.css </u>shadow/                                       # тень — элемент блока b-domik<u>shadow.css b-domik</u>shadow.ie.css b-domik<u>shadow.png</u></p><p>&lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;</p></div>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Одной страницей</title></head><body><div class="shmakowiki"><p>﻿=== Реализация блока</p><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li><tt>HTML</tt>-разметка обеспечивает нужную структуру блока (<tt>XML</tt> + <tt>XSL</tt> или <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt>-правила внешний вид блока</li><li><tt>JS</tt>-правила поведения блока</li></ul><p>Этот набор технологий может быть разным, в засимости от блока, его назначения, и удобства использования.<br/> Структура блока первична, а реализация блока вторична.</p><p><b>Пример реализации блока b-domik</b></p><pre class="ohl ohl-xml"><code><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">style<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>float: right<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b<span class="ohl-punctuation">&gt;</span></span>Домик на странице<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>img <span class="ohl-name ohl-name-attribute">src<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>https://github.com/bem/bem-method/raw/master/images/domik-onpage.png<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b<span class="ohl-punctuation">&gt;</span></span>Домик в попапе<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>img <span class="ohl-name ohl-name-attribute">src<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>https://github.com/bem/bem-method/raw/master/images/domik-popup.png<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span></code></pre><div>    b-domik/
+        b-domik.css                                     # общие файлы реализации для всех типов домика
+        b-domik.ie.css
+        b-domik.js
+        b-domik.xsl
+        _type/                                          # папка с модификаторами для блока
+            b-domik_type_onpage.css                     # домик прибитый на странице
+            b-domik_type_onpage.ie.css
+            b-domik_type_onpage.js
+            b-domik_type_onpage.xsl
+            b-domik_type_popup.css                      # домик как всплывающее окно
+            b-domik_type_popup.ie.css
+            b-domik_type_popup.js
+            b-domik_type_popup.xsl
+        __lock/                                         # замочек — элемент блока
+            b-domik__lock.css
+            b-domik__lock.png
+            b-domik__lock.xsl
+            _visibility/                                # модификатор элемента lock, делает его видимым  
+                b-domik__lock_visibility_visible.css
+        __shadow/                                       # тень — элемент блока
+            b-domik__shadow.css
+            b-domik__shadow.ie.css
+            b-domik__shadow.png</div></div>
 </body></html>
