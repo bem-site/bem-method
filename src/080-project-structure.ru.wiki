@@ -80,7 +80,7 @@ TODO: написать пример index.css с использованием b-
 
 **Пример index.css**
 
-%%h css
+%%hl css
     @import url(lego/b-page/b-page.css);
     @import url(lego/b-menu/b-menu.css);
     @import url(lego/b-menu/_layout/b-menu_layout_horiz.css);
