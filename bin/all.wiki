@@ -497,7 +497,7 @@ TODO: написать пример страницы с использовани
 
 **Пример index.bemdecl**
 
-%%hl js
+%%
     module.exports = [
         {
             name : 'b-page',
@@ -545,14 +545,13 @@ TODO: написать пример index.css с использованием b-
 
 **Пример index.css**
 
-%%hl css
+%%
     @import url(lego/b-page/b-page.css);
     @import url(lego/b-menu/b-menu.css);
     @import url(lego/b-menu/_layout/b-menu_layout_horiz.css);
     @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
     @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
 %%
-
 
 ====== index.js
 
@@ -716,6 +715,7 @@ TODO: картинка с уровнями и технологиями
                 b-foot.css
                 b-sidebar.css
 %%
+
 ﻿=== Реализация блока
 
 Реализация блока состоит из набора технологий, к примеру:
@@ -724,16 +724,16 @@ TODO: картинка с уровнями и технологиями
  * ##CSS##-правила внешний вид блока
  * ##JS##-правила поведения блока
 
-Этот набор технологий может быть разным, в засимости от блока, его назначения, и удобства использования.//
+Этот набор технологий может быть разным, в засимости от блока, его назначения, и удобства использования.\\
 Структура блока первична, а реализация блока вторична.
 
 **Пример реализации блока b-domik**
 
 %%hl xml
 <div style="float: right">
-<b>Домик на странице</b>//
+<b>Домик на странице</b>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png"/>
-<b>Домик в попапе</b>//
+<b>Домик в попапе</b>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png"/>
 </div>
 %%
@@ -764,6 +764,9 @@ TODO: картинка с уровнями и технологиями
             b-domik__shadow.ie.css
             b-domik__shadow.png
 %%
+
+﻿=== Инструменты
+
 ### bem-tools
 `bem-tools` в данный момент содержат одну утилиту командной строки bem,
 которая упрощает работу с различными BEM-сущностями.
