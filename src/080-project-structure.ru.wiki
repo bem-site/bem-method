@@ -32,7 +32,7 @@ TODO: написать пример страницы с использовани
 
 **Пример index.bemdecl**
 
-%%
+%%hl js
     module.exports = [
         {
             name : 'b-page',
