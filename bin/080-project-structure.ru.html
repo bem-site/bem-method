@@ -4,38 +4,97 @@
             index.js
             index.bemhtml
             index.bemdecl.js
-            index.bemjson.js</div><p>Страница состоит из описания блоков, которые на ней используются (<tt>.bemdecl</tt>) и конкретного их расположения (<tt>.bemjson</tt>). Это исходный код страницы. Из него генерируются все необходимые для отображения файлы (<tt>.css</tt>, <tt>.js</tt>, etc)</p><h4>Исходный код страницы</h4><h5>index.bemdecl.js</h5><p>TODO: написать пример страницы с использованием b-page, b-menu и b-link</p><p><b>Пример index.bemdecl</b></p><div>    module.exports = [
+            index.bemjson.js</div><p>Страница состоит из описания блоков, которые на ней используются (<tt>.bemdecl</tt>) и конкретного их расположения (<tt>.bemjson</tt>). Это исходный код страницы. Из него генерируются все необходимые для отображения файлы (<tt>.css</tt>, <tt>.js</tt>, etc)</p><h4>Исходный код страницы</h4><h5>index.bemdecl.js</h5><p>На странице b-page используем b-menu и b-link</p><p><b>Пример</b></p><div>    exports.blocks = [
         {
-            name : &apos;b-page&apos;,
-            elems : [
-                { name : &apos;head&apos; },
-                { name : &apos;title&apos; }
-            ]
+            &quot;name&quot;: &quot;b-page&quot;
         },
         {
-            name: &apos;b-link&apos;,
-            mods: [
+            &quot;name&quot;: &quot;b-menu&quot;,
+            &quot;mods&quot;: [
                 {
-                    name : &apos;isBEM&apos;,
-                    vals : [
-                        { name : &apos;yes&apos;}
+                    &quot;name&quot;: &quot;layout&quot;,
+                    &quot;vals&quot;: [
+                        &quot;horiz&quot;
+                    ]
+                },
+                {
+                    &quot;name&quot;: &quot;theme&quot;,
+                    &quot;vals&quot;: [
+                        &quot;red&quot;
+                    ]
+                }
+            ],
+            &quot;elems&quot;: [
+                {
+                    &quot;name&quot;: &quot;item&quot;,
+                    &quot;mods&quot;: [
+                        {
+                            &quot;name&quot;: &quot;state&quot;,
+                            &quot;vals&quot;: [
+                                &quot;current&quot;
+                            ]
+                        }
                     ]
                 }
             ]
+        },
+        {
+            &quot;name&quot;: &quot;b-link&quot;
         }
-    ]</div><h5>index.bemjson.js</h5><p>TODO: написать пример страницы с использованием b-page, b-menu и b-link</p><p><b>Пример index.bemjson</b></p><pre class="ohl ohl-js"><code>    <span class="ohl-punctuation">(</span><span class="ohl-punctuation">{</span>
+    ]</div><h5>index.bemjson.js</h5><p>На странице b-page используем b-menu и b-link</p><p><b>Пример</b></p><pre class="ohl ohl-js"><code>    <span class="ohl-punctuation">(</span><span class="ohl-punctuation">{</span>
         <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-page<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
         <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
-            <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
-            <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>http://yandex.ru<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
-                <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Самая посещаемая страница Рунета<span class="ohl-punctuation">&apos;</span></span>
-            <span class="ohl-punctuation">}</span>
-    <span class="ohl-punctuation">}</span><span class="ohl-punctuation">)</span></code></pre><h4>Генерируемые файлы</h4><h5>index.css</h5><p>TODO: написать пример index.css с использованием b-page, b-menu и b-link</p><p><b>Пример index.css</b></p><div>    @import url(lego/b-page/b-page.css);
-    @import url(lego/b-menu/b-menu.css);
-    @import url(lego/b-menu/_layout/b-menu_layout_horiz.css);
-    @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
-    @import url(lego/b-menu/_layout/b-menu_layout_vert.css);</div><h5>index.js</h5><p>TODO: написать пример index.js с использованием b-page, b-menu и b-link</p><pre class="ohl ohl-js"><code>    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-name">lego</span><span class="ohl-string ohl-string-regex"><span class="ohl-punctuation">/</span>b-menu<span class="ohl-punctuation">/</span></span><span class="ohl-name">b</span><span class="ohl-operator">-</span><span class="ohl-name">menu</span><span class="ohl-operator">.</span><span class="ohl-name">js</span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
-    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-name">lego</span><span class="ohl-string ohl-string-regex"><span class="ohl-punctuation">/</span>i-counter<span class="ohl-punctuation">/</span>i</span><span class="ohl-operator">-</span><span class="ohl-name">counter</span><span class="ohl-operator">.</span><span class="ohl-name">js</span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Уровни переопределения проекта</h3><p>Проект состоит из уровней переопределения. Количество уровней переопределения зависит от проекта, всегда есть минимум 1 уровень.</p><p>TODO: картинка с уровнями и технологиями</p><p>Реализация блока может быть на нескольких уровнях. Для каждой страницы можно настроить своё используемое множество уровней. Финальная реализация блока на странице собирается со всех уровней для этой страницы.</p><h4>Расположение уровней на проектах</h4><h5>Только блоки проекта</h5><div>    project/
+            <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-menu<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+            <span class="ohl-name">mods</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span> <span class="ohl-name">layout</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>horiz<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span> <span class="ohl-name">theme</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>red<span class="ohl-punctuation">&apos;</span></span> <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+            <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">elemMods</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span> <span class="ohl-name">state</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>current<span class="ohl-punctuation">&apos;</span></span> <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Главная<span class="ohl-punctuation">&apos;</span></span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+                        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>/<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Находки<span class="ohl-punctuation">&apos;</span></span>
+                    <span class="ohl-punctuation">}</span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+                        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>/<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Поиск<span class="ohl-punctuation">&apos;</span></span>
+                    <span class="ohl-punctuation">}</span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+                        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>/<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>О проекте<span class="ohl-punctuation">&apos;</span></span>
+                    <span class="ohl-punctuation">}</span>
+                <span class="ohl-punctuation">}</span>
+            <span class="ohl-punctuation">]</span>
+        <span class="ohl-punctuation">}</span>
+    <span class="ohl-punctuation">}</span><span class="ohl-punctuation">)</span></code></pre><h4>Генерируемые файлы</h4><h5>index.css</h5><p>На странице b-page используем b-menu и b-link</p><p><b>Пример</b></p><pre class="ohl ohl-xml"><code>    @import url(../../bem-bl/blocks-desktop/b-menu/b-menu.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/b-menu__item.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/_state/b-menu__item_state_current.css);
+    @import url(../../bem-bl/blocks-desktop/blocks/b-menu/_layout/b-menu_layout_horiz.css);
+    @import url(../../bem-bl/blocks-desktop/b-link/b-link.css);
+    @import url(blocks/b-menu/_theme/b-menu_theme_red.css);</code></pre><h5>index.js</h5><p>На странице b-page используем b-menu и b-link</p><pre class="ohl ohl-js"><code>    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__inherit/i-jquery__inherit.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__identify/i-jquery__identify.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__is-empty-object/i-jquery__is-empty-object.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktopery/__debounce/i-jquery__debounce.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__observable/i-jquery__observable.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/i-bem.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__internal/i-bem__internal.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__stringify/i-jquery__stringify.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Уровни переопределения проекта</h3><p>Проект состоит из уровней переопределения. Количество уровней переопределения зависит от проекта, всегда есть минимум 1 уровень.</p><p>TODO: картинка с уровнями и технологиями</p><p>Реализация блока может быть на нескольких уровнях. Для каждой страницы можно настроить своё используемое множество уровней. Финальная реализация блока на странице собирается со всех уровней для этой страницы.</p><h4>Расположение уровней на проектах</h4><h5>Только блоки проекта</h5><div>    project/
         blocks/
             b-head/
                 b-head.css
