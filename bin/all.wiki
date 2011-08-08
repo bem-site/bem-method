@@ -334,7 +334,7 @@ http://clubs.ya.ru/bem/replies.xml?item_no=712
 
 В html-е каждая БЕМ-сущность определяется тегом и своим классом или классами.
 
-%%hl html
+%%hl xml
     <div class="block-name">
         <i class="block-name__elem"></i>
         ...
@@ -346,7 +346,7 @@ http://clubs.ya.ru/bem/replies.xml?item_no=712
 
 Можно пойти дальше и сократить использование классов, заменив дефолтные теги на кастомные.
 
-%%hl html
+%%hl xml
     <copyright>
         <copyright-elem>...</copyright-elem>
         ...
