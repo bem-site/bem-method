@@ -98,7 +98,7 @@ CSS-классы для BEM-сущностей соответствуют пол
 js-реализация блока ##i-bem## библиотеки ##bem-bl##:
 
  * ((https://github.com/bem/bem-bl/tree/master/blocks-desktop/i-bem код в репозитории на GitHub))
- * ((https://github.com/bem/bem-bl/ библиотека блоков bem-bl).
+ * ((https://github.com/bem/bem-bl/ библиотека блоков bem-bl)).
  * ((http://clubs.ya.ru/bem/replies.xml?item_no=900 Доклад Дмитрия Филатова и Сергея Бережного о i-bem.js))
 
 ==== Шаблоны
