@@ -1,0 +1,109 @@
+.shmakowiki h1,
+.shmakowiki h2,
+.shmakowiki h3
+{
+
+    margin-top: 1em;
+
+    margin-bottom: 0.5em;
+
+}
+
+.shmakowiki h1 {
+
+    color: #339900;
+
+}
+
+.shmakowiki h2
+{
+
+    color: #0066CC;
+
+    font-size: 1.6em;
+
+}
+
+.shmakowiki h3
+{
+    font-size: 1.4em;
+}
+
+.shmakowiki h4
+{
+
+    font-size: 1.2em;
+
+}
+
+.ohl
+{
+    background-color: #eee;
+    padding: 0.5em;
+    border: #aaa 1px dotted;
+    color: #0a192c;
+}
+
+.ohl-keyword
+{
+    color: #29528c;
+}
+
+.ohl-name
+{
+    color: #0a192c;
+}
+
+.ohl-literal
+{
+    color: #89335f;
+}
+
+.ohl-string
+{
+    color: #683874;
+}
+
+.ohl-string .ohl-punctuation
+{
+    color: #896994;
+}
+
+.ohl-string-escape
+{
+    color: #a53868;
+}
+
+.ohl-string-regex
+{
+    color: #652b65;
+}
+
+.ohl-number
+{
+    color: #652b65;
+}
+
+.ohl-operator
+{
+    color: #3862a1;
+}
+
+.ohl-punctuation
+{
+    color: #4d6e9f;
+}
+
+.ohl-comment
+{
+    color: #449b94;
+}
+
+.ohl-comment .ohl-punctuation
+{
+    color: #5c9995;
+}
+
+.ohl-generic
+{
+}
