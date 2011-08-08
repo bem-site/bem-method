@@ -16,8 +16,8 @@
             index.css
             index.js
             index.bemhtml
-            index.bemdecl
-            index.bemjson
+            index.bemdecl.js
+            index.bemjson.js
 %%
 
 Страница состоит из описания блоков, которые на ней используются
@@ -26,7 +26,7 @@
 
 ===== Исходный код страницы
 
-====== index.bemdecl
+====== index.bemdecl.js
 
 На странице b-page используем b-menu и b-link
 
@@ -73,7 +73,7 @@
     ]
 %%
 
-====== index.bemjson
+====== index.bemjson.js
 
 На странице b-page используем b-menu и b-link
 
