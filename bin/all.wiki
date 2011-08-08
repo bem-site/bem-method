@@ -321,7 +321,7 @@ BEM решает следующие задачи:
 BEM-метод подразумевает реализацию блока в различных технологиях.
 
 %%html
-<img src="/bem-method/images/levels.tech.png"/>
+    <img src="/bem-method/images/levels.tech.png"/>
 %%
 
 ==== HTML
@@ -332,11 +332,27 @@ http://clubs.ya.ru/bem/replies.xml?item_no=712
 
 ===== Тэги HTML и классы
 
-TODO
+В html-е каждая БЕМ-сущность определяется тегом и своим классом или классами.
+
+%%hl html
+    <div class="block-name">
+        <i class="block-name__elem"></i>
+        ...
+    </div>
+    <div class="block-name block-name_modifier">...</div>
+%%
 
 ===== Кастомные тэги
 
-TODO
+Можно пойти дальше и сократить использование классов, заменив дефолтные теги на кастомные.
+
+%%hl html
+    <copyright>
+        <copyright-elem>...</copyright-elem>
+        ...
+    </copyright>
+    <copyright class="block-name_modifier">...</copyright>
+%%
 
 ==== CSS
 
