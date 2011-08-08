@@ -28,47 +28,95 @@
 
 ====== index.bemdecl
 
-TODO: написать пример страницы с использованием b-page, b-menu и b-link
+На странице b-page используем b-menu и b-link
 
-**Пример index.bemdecl**
+**Пример**
 
 %%
-    module.exports = [
+    exports.blocks = [
         {
-            name : 'b-page',
-            elems : [
-                { name : 'head' },
-                { name : 'title' }
-            ]
+            "name": "b-page"
         },
         {
-            name: 'b-link',
-            mods: [
+            "name": "b-menu",
+            "mods": [
                 {
-                    name : 'isBEM',
-                    vals : [
-                        { name : 'yes'}
+                    "name": "layout",
+                    "vals": [
+                        "horiz"
+                    ]
+                },
+                {
+                    "name": "theme",
+                    "vals": [
+                        "red"
+                    ]
+                }
+            ],
+            "elems": [
+                {
+                    "name": "item",
+                    "mods": [
+                        {
+                            "name": "state",
+                            "vals": [
+                                "current"
+                            ]
+                        }
                     ]
                 }
             ]
+        },
+        {
+            "name": "b-link"
         }
     ]
 %%
 
 ====== index.bemjson
 
-TODO: написать пример страницы с использованием b-page, b-menu и b-link
+На странице b-page используем b-menu и b-link
 
-**Пример index.bemjson**
+**Пример**
 
 %%hl js
     ({
         block: 'b-page',
         content: {
-            block: 'b-link',
-            url: 'http://yandex.ru',
-                content: 'Самая посещаемая страница Рунета'
-            }
+            block: 'b-menu',
+            mods: { layout: 'horiz', theme: 'red' },
+            content: [
+                {
+                    elem: 'item',
+                    elemMods: { state: 'current' },
+                    content: 'Главная'
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'Находки'
+                    }
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'Поиск'
+                    }
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'О проекте'
+                    }
+                }
+            ]
+        }
     })
 %%
 
@@ -76,25 +124,36 @@ TODO: написать пример страницы с использовани
 
 ====== index.css
 
-TODO: написать пример index.css с использованием b-page, b-menu и b-link
+На странице b-page используем b-menu и b-link
 
-**Пример index.css**
+**Пример**
 
-%%
-    @import url(lego/b-page/b-page.css);
-    @import url(lego/b-menu/b-menu.css);
-    @import url(lego/b-menu/_layout/b-menu_layout_horiz.css);
-    @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
-    @import url(lego/b-menu/_layout/b-menu_layout_vert.css);
+%%hl xml
+    @import url(../../bem-bl/blocks-desktop/b-menu/b-menu.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/b-menu__item.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/_state/b-menu__item_state_current.css);
+    @import url(../../bem-bl/blocks-desktop/blocks/b-menu/_layout/b-menu_layout_horiz.css);
+    @import url(../../bem-bl/blocks-desktop/b-link/b-link.css);
+    @import url(blocks/b-menu/_theme/b-menu_theme_red.css);
 %%
 
 ====== index.js
 
-TODO: написать пример index.js с использованием b-page, b-menu и b-link
+На странице b-page используем b-menu и b-link
 
 %%hl js
-    include(lego/b-menu/b-menu.js);
-    include(lego/i-counter/i-counter.js);
+    include("../../bem-bl/blocks-desktop/i-jquery/__inherit/i-jquery__inherit.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__identify/i-jquery__identify.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__is-empty-object/i-jquery__is-empty-object.js");
+    include("../../bem-bl/blocks-desktopery/__debounce/i-jquery__debounce.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__observable/i-jquery__observable.js");
+    include("../../bem-bl/blocks-desktop/i-bem/i-bem.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__internal/i-bem__internal.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__stringify/i-jquery__stringify.js");
+    include("../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js");
 %%
 
 ==== Уровни переопределения проекта
