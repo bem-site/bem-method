@@ -8,7 +8,7 @@ html: $(patsubst %.wiki,%.html,$(patsubst src%,bin%,$(wildcard src/*.wiki))) bin
 
 bin/all.wiki:
 	touch $@
-	find src -name '*.wiki' | sort | xargs -L1 cat > $@
+	find src -name '*.wiki' | sort | xargs -L1 tail --bytes=+4 > $@
 
 %.wiki: bin/all.wiki
 	cp $(patsubst bin%,src%,$@) $@
