@@ -1,0 +1,314 @@
+﻿=== Структура БЭМ-проекта на файловой системе
+
+Проект, реализованный на БЭМ состоит из одного или нескольких уровней переопределения и кода страниц.
+
+Приведённые ниже примеры структуры не жёсткие и могут быть изменены в зависимости от потребностей проекта.
+
+==== Страница
+
+Совокупность файлов, которые определяют внешний вид и поведение конкретной страницы.
+
+**Пример**
+
+%%
+    pages/
+        index/
+            index.css
+            index.js
+            index.bemhtml
+            index.bemdecl.js
+            index.bemjson.js
+%%
+
+Страница состоит из описания блоков, которые на ней используются
+(##.bemdecl##) и конкретного их расположения (##.bemjson##). Это исходный код страницы.
+Из него генерируются все необходимые для отображения файлы (##.css##, ##.js##, etc)
+
+===== Исходный код страницы
+
+====== index.bemdecl.js
+
+На странице b-page используем b-menu и b-link
+
+**Пример**
+
+%%
+    exports.blocks = [
+        {
+            "name": "b-page"
+        },
+        {
+            "name": "b-menu",
+            "mods": [
+                {
+                    "name": "layout",
+                    "vals": [
+                        "horiz"
+                    ]
+                },
+                {
+                    "name": "theme",
+                    "vals": [
+                        "red"
+                    ]
+                }
+            ],
+            "elems": [
+                {
+                    "name": "item",
+                    "mods": [
+                        {
+                            "name": "state",
+                            "vals": [
+                                "current"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b-link"
+        }
+    ]
+%%
+
+====== index.bemjson.js
+
+На странице b-page используем b-menu и b-link
+
+**Пример**
+
+%%hl js
+    ({
+        block: 'b-page',
+        content: {
+            block: 'b-menu',
+            mods: { layout: 'horiz', theme: 'red' },
+            content: [
+                {
+                    elem: 'item',
+                    elemMods: { state: 'current' },
+                    content: 'Главная'
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'Находки'
+                    }
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'Поиск'
+                    }
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'О проекте'
+                    }
+                }
+            ]
+        }
+    })
+%%
+
+===== Генерируемые файлы
+
+====== index.css
+
+На странице b-page используем b-menu и b-link
+
+**Пример**
+
+%%hl xml
+    @import url(../../bem-bl/blocks-desktop/b-menu/b-menu.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/b-menu__item.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/_state/b-menu__item_state_current.css);
+    @import url(../../bem-bl/blocks-desktop/blocks/b-menu/_layout/b-menu_layout_horiz.css);
+    @import url(../../bem-bl/blocks-desktop/b-link/b-link.css);
+    @import url(blocks/b-menu/_theme/b-menu_theme_red.css);
+%%
+
+====== index.js
+
+На странице b-page используем b-menu и b-link
+
+%%hl js
+    include("../../bem-bl/blocks-desktop/i-jquery/__inherit/i-jquery__inherit.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__identify/i-jquery__identify.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__is-empty-object/i-jquery__is-empty-object.js");
+    include("../../bem-bl/blocks-desktopery/__debounce/i-jquery__debounce.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__observable/i-jquery__observable.js");
+    include("../../bem-bl/blocks-desktop/i-bem/i-bem.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__internal/i-bem__internal.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__stringify/i-jquery__stringify.js");
+    include("../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js");
+%%
+
+==== Уровни переопределения проекта
+
+Проект состоит из уровней переопределения. Количество уровней
+переопределения зависит от проекта, всегда есть минимум 1 уровень.
+
+%%html
+    <img src="/bem-method/images/levels.tech.png"/>
+%%
+
+Реализация блока может быть на нескольких уровнях. Для каждой страницы можно
+настроить своё используемое множество уровней. Финальная реализация блока на
+странице собирается со всех уровней для этой страницы.
+
+===== Расположение уровней на проектах
+
+====== Только блоки проекта
+
+%%
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+%%
+
+====== Блоки проекта и отдельных страниц проекта
+
+%%
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/              # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+%%
+
+====== Блоки фреймворка и проекта
+
+%%
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+%%
+
+====== Блоки фреймворка, проекта и страниц
+
+%%
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/              # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+%%
+
+====== Блоки проекта, страниц и темы
+
+%%
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/              # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+        themes/
+            black/                             # не раскладываем файлы по директориям, кладём их рядом
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+            yellow/
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+%%
+
