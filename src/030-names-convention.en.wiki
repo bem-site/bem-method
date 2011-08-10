@@ -1,9 +1,9 @@
-﻿=== Соглашения по именованию
+=== Naming conventions
 
-==== Имя блока
-Имя блока формируется как ##префикс-имя-блока##.
+==== Block name
+Block names are defined as ##prefix-block-name##.
 
-**Примеры**
+**Examples**
 
 %%
     b-menu
@@ -11,58 +11,50 @@
     i-popup
 %%
 
-==== Префикс блока
-Мы используем два вида префиксов, которые позволяют определить назначение блока.
+==== Block prefix
+We commonly use two prefixes to define the designation of a block.
 
-**b- (от block)**\\
-Префикс блока с визуальным представлением на странице.
+**b- (as in block)**\\
+The b- prefix is used for blocks that have a user interface or, more generically, a visual representation.
 
-**Пример**\\
-Попап с тенью имеет конкретное визуальное представление. Может иметь или не
-иметь хвостик или закрывающий крестик. Может быть разных цветов. Может отображаться в разных направлениях.
+**Example**\\
+A popup window has a visual representation. It may, or may not, contain a close button, or have a balloon-like appearance. It can be displayed in different directions, or have different color schemes.
 
 %%html
 <img src="/bem-method/images/b-popup.png"/>
 %%
 
-**i- (от include)**\\
-Префикс абстрактного блока, который не существует сам по себе, но используется
-для построения других блоков.\\
-Или префикс блока, не имеющего визуального представления и реализующего какую-то
-функциональность.
+**i- (as in include)**\\
+The i- prefix is used for abstract blocks which do not exist on their own but rather are used to build other blocks.\\
+The i-blocks do not have visual representations, they only implement some logic.
 
-**Пример**\\
-Блок ##i-popup## не имеет конкретного визуального
-представления. Хранит в себе функциональность, на основе которой строится блок
-##b-popup##. Без блока ##i-popup##
-блок ##b-popup## не существует.
+**Example**\\
+The ##i-popup## block does not have a visual representation, but it implements certain logic required by the ##b-popup## block, which cannot exist without ##i-popup##.
 
 %%html
 <img src="/bem-method/images/i-popup.png"/>
 %%
 
-==== Имя элемента
+==== Element name
 
-Полное имя элемента формируется так, чтобы из него можно было определить
-принадлежность данного элемента к конкретному блоку.\\
-Полное имя элемента создается по схеме:
-##b-имя-блока_~_имя-элмента##
+Element names specify unambiguously, which block the element belongs to.\\
+Element names are defined as:
+##b-block-name_~_element-name##
 
-**Примеры**
+**Examples**
 
 %%
     b-menu__item
     b-popup__content
 %%
 
-==== Имя модификатора блока
+==== Naming of block modifiers
 
-Полное имя модификатора блока формируется так, чтобы из него можно было
-определить принадлежность данного модификатора к конкретному блоку.
-Полное имя модификатора блока создается по схеме:
-##b-имя-блока_имя-модификатора_значение-модификатора##.
+Modifier names specify unambiguously, which block the modifier belongs to.
+Fully qualified modifier names are defined as:
+##b-block-name_modifier-name_modifier-value##.
 
-**Примеры**
+**Examples**
 
 %%
     b-menu_layout_horiz
@@ -70,15 +62,13 @@
     b-popup_direction_up
 %%
 
-==== Имя модификатора элемента
+==== Naming of element modifiers
 
-Полное имя модификатора элемента формируется так, чтобы из него
-можно было определить принадлежность данного модификатора к конкретному
-элементу конкретного блока.
-Полное имя модификатора элемента создается по схеме:
-##b-имя-блока_~_имя-элемента_имя-модификатора_значение-модификатора##.
+Modifier names specify unambiguously, which block and which element the modifier belongs to.
+Fully qualified modifier names are defined as:
+##b-block-name_~_element-name_modifier-name_modifier-value##.
 
-**Примеры**
+**Examples**
 
 %%
     b-menu__item_state_current

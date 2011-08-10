@@ -1,21 +1,17 @@
-﻿=== Что такое БЭМ
+=== What is BEM?
 
-Подход к web-разработке, который позволяет получить гибкий, легко изменяемый код.
+BEM is an approach to front-end development designed with flexibility and ease-of-modification in mind.
 
-BEM решает следующие задачи:
+BEM helps solve the following tasks:
 
- * разделение кода на логические части
-    * происходит разделение ответственности, части кода могут писать разные люди
-    * использование без погружения в детали реализации - можно оперировать частями
-    без погружения в то, как эти части сделаны
-    * увеличивается вероятность повторного использования — чем больше частей у нашего решения,
-    тем больше вероятность того, что какая-либо часть решения может быть повторно использована
- * единый подход к реализации, во множестве технологий (мультилингвальность)
-    * в web-технологиях финальный продукт состоит из разных технологий, но при этом во всех
-     технологиях единые термины и подходы к реализации
-    * картинки и документация тоже технологии
- * оптимизировать выполнение production runtime
-    * добавлять в него только действительно используемые части, не грузить лишний, не используемый код
-    * генерировать для разных браузеров («виртуальных машин») разный код, оптимизированный для этого браузера
-    * для улучшения скорости работы можно менять не код приложения, а улучшать «компилятор»,
-    который генерирует код из БЭМ-сущностей
+ * separation of the codebase into logical parts
+    * separation of responsibilities between developers of different specialization
+    * high-level abstractions - BEM technologies can be used without deep understanding of their internal workings
+    * ease of reuse - BEM consists of a large number of loosely coupled components which can be used - and reused - independently
+ * a singular approach to implementation of various technologies, written in different languages
+    * web applications are written in multiple programming and markup languages - it is possible to develop with all of them using the same set of terms and approaches
+    * images and documentation are technologies too
+ * optimization of the production runtime
+    * build the production runtime with components that are actually being used
+    * generate browser-specific production runtimes
+    * performance improvements are possible by improving not only the application code, but the "compiler" itself

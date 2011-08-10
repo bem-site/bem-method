@@ -1,41 +1,39 @@
-﻿=== Определения
-==== Блок
-Некая самостоятельная сущность, кирпичик проекта.\\
-Блок содержит информацию о самом себе и может знать о своих детях — элементах блока.\\
-Они могут использоваться сами по себе или внутри других блоков.
+=== Definitions
+==== Block
+Block is an independent entity, a building block of an application.\\
+Blocks contain information about themselves and their children (block elements).\\
+Blocks can be used on their own or as a part of other blocks.
 
-**Пример**\\
-Блок ##b-search## поисковой формы\\
+**Example**\\
+##b-search## - a search form block\\
 %%html
 <img src="/bem-method/images/search.ru.png"/>
 %%
 
-==== Элемент
-Часть блока, которая отвечает за какую-то отдельную функцию.\\
-Элементы блока имеют смысл только в рамках своего родителя. Могут быть обязательными и не обязательными.
+==== Element
+Element is a part of block that performs a certain function.\\
+Block elements can only appear inside their respective blocks. Elements can be mandatory or optional.
 
-**Пример**\\
-Поле ввода и кнопка — элементы блока ##b-search##\\
+**Example**\\
+An input field and a button — elements of the ##b-search## block\\
 %%html
 <img src="/bem-method/images/search-e.ru.png"/>
 %%
 
-==== Модификатор
-Модификатор — это свойство блока или элемента, которое меняет внешний вид или поведение.\\
-Модификатор имеет имя и значение. Одновременно может использоваться несколько разных модификаторов.
+==== Modifier
+Modifiers are properties of blocks and elements, they change appearance or behavior of the elements they're applied to.\\
+Each modifier has a name and a value. Multiple modifiers can be applied simultaneously.
 
-**Пример**\\
-Модификатор блока ##b-search## задает ему цвет фона//
+**Example**\\
+A ##b-search## block modifier sets the block's background color//
 %%html
 <img src="/bem-method/images/search-m.ru.png"/>
 %%
 
-==== Уровень переопределения
-Уровень переопределения — это набор реализаций блоков. Проект может
-иметь несколько уровней, на каждом из которых добавляется или изменяется
-реализация блоков. Конечная реализация блока собирается со всех уровней последовательно.
+==== Overloading
+A project may consist of several sets of block implementations. Each set, or level, extends the higher-level set. The final implementation of a block is assembled by building the levels sequentially.
 
-**Пример**\\
+**Example**\\
 %%html
 <img src="/bem-method/images/levels.ru.png"/>
 %%
