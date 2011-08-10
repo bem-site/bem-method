@@ -1,17 +1,16 @@
-﻿=== Структура блока на файловой системе
+=== File system representation
 
-Реализация блока состоит из набора технологий, к примеру:
+Blocks are implemented using multiple technologies:
 
- * HTML-разметка обеспечивает нужную разметку (##XML## + ##XSL## = ##HTML## или ##bemjson## + ##bemhtml## = ##HTML##)
- * CSS-правила внешний вид блока
- * JS-правила поведения блока
+ * HTML for markup (##XML## + ##XSL## = ##HTML## or ##bemjson## + ##bemhtml## = ##HTML##)
+ * CSS to describe presentation semantics
+ * JS to describe behavior
 
-Этот набор технологий может быть разным, в зависимости от блока, его назначения, и удобства использования.
+Depending on the puprose of a block, different sets of technologies can be used.
 
-В файловой системе реализации в разных технологиях записаны в соответствующие файлы.
-Имена файлов соответствуют соглашению об именовании.
+File system layout follows the naming conventions we described earlier. Multiple variants are possible as described below.
 
-====Каждый блок в директории, элементы и модификаторы в отдельных директорияx
+====Each block is stored in a separate directory, elements and modifiers are stored in separate directories as well.
 
 %%
     blocks/
@@ -29,7 +28,7 @@
             b-menu.bemhtml
 %%
 
-==== Каждый блок в директории, элементы и модификаторы в отдельных файлах без директорий
+==== Alternatively, elements and modifiers can be stored under block's directory in separate files.
 
 %%
     blocks/
@@ -45,7 +44,7 @@
             b-menu.bemhtml
 %%
 
-==== Каждый блок в директории, элементы и модификаторы в файлах блока
+==== A layout where the code for elements and modifiers is stored in blocks' files is allowed as well:
 
 %%
     blocks/
@@ -55,7 +54,7 @@
             b-menu.bemhtml
 %%
 
-==== Директории не используются, элементы и модификаторы в отдельных файлах
+==== You can also do this (no directories, elements and modifiers in separate files):
 
 %%
     blocks/
@@ -70,7 +69,7 @@
         b-menu.bemhtml
 %%
 
-==== Директории не используются, элементы и модификаторы в файлах блока
+==== Or this (no directories, the code for elements and modifiers is stored in blocks' files):
 
 %%
     blocks/
