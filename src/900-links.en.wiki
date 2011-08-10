@@ -1,25 +1,25 @@
-﻿== Полезные ссылки
+== Useful links (all in Russian)
 
-=== Доклады с конференций
+=== Conferences
 
-==== Доклад Виталия Харисова и Сергея Бережного "БЭМ!" 22 апреля 2011 на пЯТЬнице (внутренний семинар Яндекса)
- * ((http://video.yandex.ru/users/toivonens/view/10/ Видео выступления))
- * ((http://narod.ru/disk/16920640001/BEM.pdf.html Презентация в формате PDF))
+==== "BEM!" by Vitaly Harisov, Sergey Berezhnoy at Yandex Fridays. April 22, 2011.
+ * ((http://video.yandex.ru/users/toivonens/view/10/ Video))
+ * ((http://narod.ru/disk/16920640001/BEM.pdf.html Slides in PDF))
 
-==== Доклад Сергея Бережного "bemhtml — bem js-шаблонизатор" 21 апреля 2011 на пЯТЬнице
- * ((http://video.yandex.ru/users/toivonens/view/12/ Видео выступления))
- * ((http://narod.ru/disk/19671293001/bemhtml.pdf.html Презентация в формате PDF))
+==== "JS templating with bemhtml" by Sergey Berezhnoy at Yandex Fridays. April 21, 2011
+ * ((http://video.yandex.ru/users/toivonens/view/12/ Video))
+ * ((http://narod.ru/disk/19671293001/bemhtml.pdf.html Slides in PDF))
 
-==== Доклад Андрея Мищенко и Сергея Бережного "xjst — низкоуровневый js-шаблонизатор" 21 апреля 2011 на пЯТЬнице
- * ((http://video.yandex.ru/users/toivonens/view/11/ Видео выступления))
- * ((http://narod.ru/disk/19671069001/xjst.pdf.html Презентация в формате PDF))
+==== "Low-level JS templating with xjst" by Andrey Mischenko, Sergey Berezhnoy at Yandex Fridays. April 21, 2011.
+ * ((http://video.yandex.ru/users/toivonens/view/11/ Video))
+ * ((http://narod.ru/disk/19671069001/xjst.pdf.html Slides in PDF))
 
-==== Доклад Дмитрия Филатова и Сергея Бережного "i-bem.js — javascript блок, помогающий-делать-другие-блоки" 22 апреля 2011 на пЯТЬнице
- * ((http://video.yandex.ru/users/toivonens/view/13/ Видео выступления))
- * ((http://narod.ru/disk/19671387001/i-bem.js.pdf.html Презентация в формате PDF))
+==== "i-bem.js - the block-building helper" by Dmitry Filatov, Sergey Berezhnoy at Yandex Fridays. April 22, 2011
+ * ((http://video.yandex.ru/users/toivonens/view/13/ Video))
+ * ((http://narod.ru/disk/19671387001/i-bem.js.pdf.html Slides in PDF))
 
-=== Связанные ссылки
+=== Related links
 
-==== Репозитории
- * ((https://github.com/bem/bem-bl Библиотека блоков bem-bl))
- * ((https://github.com/bem/bem-tools Инструменты для работы с файлами))
+==== Source code repositories
+ * ((https://github.com/bem/bem-bl bem-bl Block library))
+ * ((https://github.com/bem/bem-tools CLI tools))
