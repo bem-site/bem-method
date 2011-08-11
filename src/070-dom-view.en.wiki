@@ -1,35 +1,32 @@
-﻿=== Представление в DOM
+=== DOM representation
 
-В простейшем случае блок соответствует ##DOM##-узлу, один к одному.
-Но важно понимать, что ##DOM##-узел и блок это не всегда одно и тоже.
+In the simplest form, a block is represented by a single DOM node, but generally blocks and ##DOM## nodes are not the same thing.
 
-==== Микс
+==== Mixin
 
-Под миксом подразумевается смешивание на одном DOM-узле разных блоков и элементов.
+Mixins are just that - using several blocks or elements on the same DOM node.
 
-На одном DOM-узле может быть:
+A DOM node can have:
 
- * несколько блоков\\
+ * several blocks\\
    ##b-menu b-head-menu##
- * блок и элемент этого же блока\\
+ * a block and an element of the same block\\
    ##b-menu b-menu_~_layout##
- * блок и элемент другого блока\\
+ * a block and an element of another block\\
    ##b-link b-menu_~_link##
- * элемент одного блока и элемент другого блока\\
+ * elements of different blocks\\
    ##b-menu_~_item b-head-menu_~_item##
- * блок с модификатором и другой блок\\
+ * a block with a modifier and another block\\
    ##b-menu b-menu_layout_horiz b-head-menu##
- * блок с модификатором и другой блок с модификатором\\
+ * several different blocks with modifiers\\
    ##b-menu b-menu_layout_horiz b-head-toolbar b-head-toolbar_theme_black##
 
-**Пример**
+**Example**
 
-Переключатель панелей имеет элементы табы (##b-tabbed-pane_~_tabs##) и панели
-(##b-tabbed-pane_~_panels##). Эти два элемента находятся на одном ##DOM##-узле
-одновременно. Это позволяет легко менять расположение элементов на странице
-с вертикального на горизонтальное.
+The tabbed pane block includes tabs (##b-tabbed-pane_~_tabs##) and panels
+(##b-tabbed-pane_~_panels##) as its elements. Both elements are applied to a single ##DOM## node. This allows toggling of the pane's visual representation from vertical to horizontal.
 
-Вертикальное расположение элементов
+Vertical tabbed pane
 
 %%html
 <img src="/bem-method/images/tab-panel-v.png"/>
@@ -44,7 +41,7 @@
     </div>
 %%
 
-Горизонтальное расположение элементов
+Horizontal tabbed pane
 
 %%html
 <img src="/bem-method/images/tab-panel-h.png"/>
