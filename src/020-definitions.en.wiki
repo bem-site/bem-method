@@ -15,7 +15,7 @@ Element is a part of block that performs a certain function.\\
 Block elements can only appear inside their respective blocks. Elements can be mandatory or optional.
 
 **Example**\\
-An input field and a button — elements of the ##b-search## block\\
+An input field and a button are elements of the ##b-search## block\\
 %%html
 <img src="/bem-method/images/search-e.ru.png"/>
 %%
@@ -31,7 +31,7 @@ A ##b-search## block modifier sets the block's background color//
 %%
 
 ==== Overloading
-A project may consist of several sets of block implementations. Each set, or level, extends the higher-level set. The final implementation of a block is assembled by building the levels sequentially.
+A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. The final implementation of a block is assembled by building the levels sequentially.
 
 **Example**\\
 %%html

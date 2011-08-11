@@ -1,6 +1,5 @@
 === Toolkit
 
-Command-line tools are being developed to enhance development experience
-##bem-tools##. A set of tools for quick creation of BEM source files using different technologies (HTML/CSS/JS) and the BEM compiler
+##bem-tools## command-line tools are being developed to enhance development experience. It's a toolkit used to quickly create BEM source files using different technologies (HTML/CSS/JS), and the BEM compiler.
 
 Main repository is at ((https://github.com/bem/bem-tools bem-tools))

@@ -2,7 +2,7 @@
 
 === Conferences
 
-==== "BEM!" by Vitaly Harisov, Sergey Berezhnoy at Yandex Fridays. April 22, 2011.
+==== "BEM!" by Vitaly Harisov, Sergey Berezhnoy at Yandex Fridays. April 22, 2011
  * ((http://video.yandex.ru/users/toivonens/view/10/ Video))
  * ((http://narod.ru/disk/16920640001/BEM.pdf.html Slides in PDF))
 
@@ -10,7 +10,7 @@
  * ((http://video.yandex.ru/users/toivonens/view/12/ Video))
  * ((http://narod.ru/disk/19671293001/bemhtml.pdf.html Slides in PDF))
 
-==== "Low-level JS templating with xjst" by Andrey Mischenko, Sergey Berezhnoy at Yandex Fridays. April 21, 2011.
+==== "Low-level JS templating with xjst" by Andrey Mischenko, Sergey Berezhnoy at Yandex Fridays. April 21, 2011
  * ((http://video.yandex.ru/users/toivonens/view/11/ Video))
  * ((http://narod.ru/disk/19671069001/xjst.pdf.html Slides in PDF))
 

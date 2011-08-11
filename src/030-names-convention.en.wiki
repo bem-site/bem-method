@@ -15,7 +15,7 @@ Block names are defined as ##prefix-block-name##.
 We commonly use two prefixes to define the designation of a block.
 
 **b- (as in block)**\\
-The b- prefix is used for blocks that have a user interface or, more generically, a visual representation.
+The b- prefix is used for blocks that have a user interface or, more generally, a visual representation.
 
 **Example**\\
 A popup window has a visual representation. It may, or may not, contain a close button, or have a balloon-like appearance. It can be displayed in different directions, or have different color schemes.
