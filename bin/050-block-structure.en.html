@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title>Одной страницей</title></head><body><div class="shmakowiki"><p>﻿=== Структура блока на файловой системе</p><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li>HTML-разметка обеспечивает нужную разметку (<tt>XML</tt> + <tt>XSL</tt> = <tt>HTML</tt> или <tt>bemjson</tt> + <tt>bemhtml</tt> = <tt>HTML</tt>)</li><li>CSS-правила внешний вид блока</li><li>JS-правила поведения блока</li></ul><p>Этот набор технологий может быть разным, в зависимости от блока, его назначения, и удобства использования.</p><p>В файловой системе реализации в разных технологиях записаны в соответствующие файлы. Имена файлов соответствуют соглашению об именовании.</p><h3>Каждый блок в директории, элементы и модификаторы в отдельных директорияx</h3><div>    blocks/
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title>Одной страницей</title></head><body><div class="shmakowiki"><h2>File system representation</h2><p>Blocks are implemented using multiple technologies:</p><ul><li>HTML for markup (<tt>XML</tt> + <tt>XSL</tt> = <tt>HTML</tt> or <tt>bemjson</tt> + <tt>bemhtml</tt> = <tt>HTML</tt>)</li><li>CSS to describe presentation semantics</li><li>JS to describe behavior</li></ul><p>Depending on the puprose of a block, different sets of technologies can be used.</p><p>File system layout follows the naming conventions we described earlier. Multiple variants are possible as described below.</p><h3>Each block is stored in a separate directory, elements and modifiers are stored in separate directories as well.</h3><div>    blocks/
         b-menu/
             _layout/
                 b-menu_layout_horiz.css
@@ -10,7 +10,7 @@
                 b-menu__elem.bemhtml
             b-menu.css
             b-menu.js
-            b-menu.bemhtml</div><h3>Каждый блок в директории, элементы и модификаторы в отдельных файлах без директорий</h3><div>    blocks/
+            b-menu.bemhtml</div><h3>Alternatively, elements and modifiers can be stored under block&apos;s directory in separate files.</h3><div>    blocks/
         b-menu/
             b-menu_layout_horiz.css
             b-menu_layout_horiz.bemhtml
@@ -20,11 +20,11 @@
             b-menu__elem.bemhtml
             b-menu.css
             b-menu.js
-            b-menu.bemhtml</div><h3>Каждый блок в директории, элементы и модификаторы в файлах блока</h3><div>    blocks/
+            b-menu.bemhtml</div><h3>A layout where the code for elements and modifiers is stored in blocks&apos; files is allowed as well:</h3><div>    blocks/
         b-menu/
             b-menu.css
             b-menu.js
-            b-menu.bemhtml</div><h3>Директории не используются, элементы и модификаторы в отдельных файлах</h3><div>    blocks/
+            b-menu.bemhtml</div><h3>You can also do this (no directories, elements and modifiers in separate files):</h3><div>    blocks/
         b-menu_layout_horiz.css
         b-menu_layout_horiz.bemhtml
         b-menu_layout_vertical.css
@@ -33,7 +33,7 @@
         b-menu__elem.bemhtml
         b-menu.css
         b-menu.js
-        b-menu.bemhtml</div><h3>Директории не используются, элементы и модификаторы в файлах блока</h3><div>    blocks/
+        b-menu.bemhtml</div><h3>Or this (no directories, the code for elements and modifiers is stored in blocks&apos; files):</h3><div>    blocks/
         b-menu.css
         b-menu.js
         b-menu.bemhtml</div></div>
