@@ -1,0 +1,309 @@
+=== File system structure of a BEM-based project
+
+A typical BEM project consists of one or more block levels and the page code itself.
+
+The following layout examples are not requirements, but recommendations.
+
+==== Pages
+
+A page is the sum total of files that define the visual appearance and behavior of a given page.
+
+**Example**
+
+%%
+    pages/
+        index/
+            index.css
+            index.js
+            index.bemhtml
+            index.bemdecl.js
+            index.bemjson.js
+%%
+
+Pages are defined using a block declaration file (##.bemdecl##) and a block implementation file (##.bemjson##). These two are the page source and are used to generate the final CSS and JS code.
+
+===== Page source
+
+====== index.bemdecl.js
+
+The b-page page uses b-menu and b-link blocks.
+
+**Example**
+
+%%
+    exports.blocks = [
+        {
+            "name": "b-page"
+        },
+        {
+            "name": "b-menu",
+            "mods": [
+                {
+                    "name": "layout",
+                    "vals": [
+                        "horiz"
+                    ]
+                },
+                {
+                    "name": "theme",
+                    "vals": [
+                        "red"
+                    ]
+                }
+            ],
+            "elems": [
+                {
+                    "name": "item",
+                    "mods": [
+                        {
+                            "name": "state",
+                            "vals": [
+                                "current"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b-link"
+        }
+    ]
+%%
+
+====== index.bemjson.js
+
+The b-page page uses b-menu and b-link blocks.
+
+**Example**
+
+%%hl js
+    ({
+        block: 'b-page',
+        content: {
+            block: 'b-menu',
+            mods: { layout: 'horiz', theme: 'red' },
+            content: [
+                {
+                    elem: 'item',
+                    elemMods: { state: 'current' },
+                    content: 'Home page'
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'My bookmarks'
+                    }
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'Search'
+                    }
+                },
+                {
+                    elem: 'item',
+                    content: {
+                        block: 'b-link',
+                        url: '/',
+                        content: 'About'
+                    }
+                }
+            ]
+        }
+    })
+%%
+
+===== Generated files
+
+====== index.css
+
+The b-page page uses b-menu and b-link blocks
+
+**Example**
+
+%%hl xml
+    @import url(../../bem-bl/blocks-desktop/b-menu/b-menu.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/b-menu__item.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/_state/b-menu__item_state_current.css);
+    @import url(../../bem-bl/blocks-desktop/blocks/b-menu/_layout/b-menu_layout_horiz.css);
+    @import url(../../bem-bl/blocks-desktop/b-link/b-link.css);
+    @import url(blocks/b-menu/_theme/b-menu_theme_red.css);
+%%
+
+====== index.js
+
+The b-page page uses b-menu and b-link blocks
+
+%%hl js
+    include("../../bem-bl/blocks-desktop/i-jquery/__inherit/i-jquery__inherit.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__identify/i-jquery__identify.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__is-empty-object/i-jquery__is-empty-object.js");
+    include("../../bem-bl/blocks-desktopery/__debounce/i-jquery__debounce.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__observable/i-jquery__observable.js");
+    include("../../bem-bl/blocks-desktop/i-bem/i-bem.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__internal/i-bem__internal.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__stringify/i-jquery__stringify.js");
+    include("../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js");
+    include("../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js");
+    include("../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js");
+%%
+
+==== Overloading
+
+A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. A minimum of 1 set is required.
+
+%%html
+    <img src="/bem-method/images/levels.tech.png"/>
+%%
+
+A block can be defined on several levels. A combination of levels used can be defined on a per-page level. The final implementation of the block is assembled by building the levels sequentially.
+
+===== Defining levels
+
+====== Only project blocks
+
+%%
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+%%
+
+====== Project blocks and page blocks
+
+%%
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # b-head is redefined for the index page
+            about/
+                blocks/
+                    b-about-text/              # a new block has been added for the index page
+                        b-about-text.css
+                        b-about-text.bemhtml
+%%
+
+====== Framework blocks and project blocks
+
+%%
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # redefines the b-page block defined on the higher (framework) level
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+%%
+
+====== Framework, project, and page blocks
+
+%%
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # Redefines the b-page block defined on the higher (framework) level
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # b-head is redefined for the index page
+            about/
+                blocks/
+                    b-about-text/              # a new block has been added for the index page
+                        b-about-text.css
+                        b-about-text.bemhtml
+%%
+
+====== Project, page, and theme blocks
+
+%%
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/                           # Redefines the b-page block defined on the higher (framework) level
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css             # b-head is redefined for the index page
+            about/
+                blocks/
+                    b-about-text/              # a new block has been added for the index page
+                        b-about-text.css
+                        b-about-text.bemhtml
+        themes/
+            black/                             # Files which define the 'black' color scheme (stored in the same directory)
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+            yellow/
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+%%
+

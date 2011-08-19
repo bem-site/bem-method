@@ -1,0 +1,30 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title>Одной страницей</title></head><body><div class="shmakowiki"><p>﻿=== Implementing a block</p><p>Blocks are implemented using multiple technologies:</p><ul><li><tt>HTML</tt> for markup(<tt>XML</tt> + <tt>XSL</tt> or <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt> to describe presentation semantics</li><li><tt>JS</tt> to describe behavior</li></ul><p>Depending on the puprose of a block, different sets of technologies can be used.<br/> Structure matters most - implementation details are secondary.</p><p><b>Example of a b-domik block (login form)</b></p><pre class="ohl ohl-xml"><code><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">style<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>float: right<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b<span class="ohl-punctuation">&gt;</span></span>Login form on a page<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>img <span class="ohl-name ohl-name-attribute">src<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>https://github.com/bem/bem-method/raw/master/images/domik-onpage.png<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b<span class="ohl-punctuation">&gt;</span></span>Login form in a popup<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>img <span class="ohl-name ohl-name-attribute">src<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>https://github.com/bem/bem-method/raw/master/images/domik-popup.png<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span></code></pre><div>    b-domik/
+        b-domik.css                                     # common files
+        b-domik.ie.css
+        b-domik.js
+        b-domik.xsl
+        _type/                                          # modifiers
+            b-domik_type_onpage.css                     # login form on a page
+            b-domik_type_onpage.ie.css
+            b-domik_type_onpage.js
+            b-domik_type_onpage.xsl
+            b-domik_type_popup.css                      # login form in a popup
+            b-domik_type_popup.ie.css
+            b-domik_type_popup.js
+            b-domik_type_popup.xsl
+        __lock/                                         # &quot;lock&quot; element (denotes secure login)
+            b-domik__lock.css
+            b-domik__lock.png
+            b-domik__lock.xsl
+            _visibility/                                # a modifier of the &quot;lock&quot; element which makes the element visible
+                b-domik__lock_visibility_visible.css
+        __shadow/                                       # &quot;shadow&quot; element
+            b-domik__shadow.css
+            b-domik__shadow.ie.css
+            b-domik__shadow.png</div></div>
+</body></html>

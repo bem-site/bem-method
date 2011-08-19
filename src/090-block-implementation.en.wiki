@@ -1,0 +1,49 @@
+﻿=== Implementing a block
+
+Blocks are implemented using multiple technologies:
+
+ * ##HTML## for markup(##XML## + ##XSL## or ##JSON## + ##JS##)
+ * ##CSS## to describe presentation semantics
+ * ##JS## to describe behavior
+
+Depending on the puprose of a block, different sets of technologies can be used.\\
+Structure matters most - implementation details are secondary.
+
+**Example of a b-domik block (login form)**
+
+%%hl xml
+<div style="float: right">
+<b>Login form on a page</b>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png"/>
+<b>Login form in a popup</b>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png"/>
+</div>
+%%
+
+%%
+    b-domik/
+        b-domik.css                                     # common files
+        b-domik.ie.css
+        b-domik.js
+        b-domik.xsl
+        _type/                                          # modifiers
+            b-domik_type_onpage.css                     # login form on a page
+            b-domik_type_onpage.ie.css
+            b-domik_type_onpage.js
+            b-domik_type_onpage.xsl
+            b-domik_type_popup.css                      # login form in a popup
+            b-domik_type_popup.ie.css
+            b-domik_type_popup.js
+            b-domik_type_popup.xsl
+        __lock/                                         # "lock" element (denotes secure login)
+            b-domik__lock.css
+            b-domik__lock.png
+            b-domik__lock.xsl
+            _visibility/                                # a modifier of the "lock" element which makes the element visible
+                b-domik__lock_visibility_visible.css
+        __shadow/                                       # "shadow" element
+            b-domik__shadow.css
+            b-domik__shadow.ie.css
+            b-domik__shadow.png
+%%
+

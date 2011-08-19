@@ -1,0 +1,77 @@
+=== Naming conventions
+
+==== Block name
+Block names are defined as ##prefix-block-name##.
+
+**Examples**
+
+%%
+    b-menu
+    b-popup
+    i-popup
+%%
+
+==== Block prefix
+We commonly use two prefixes to define the designation of a block.
+
+**b- (as in block)**\\
+The b- prefix is used for blocks that have a user interface or, more generally, a visual representation.
+
+**Example**\\
+A popup window has a visual representation. It may, or may not, contain a close button, or have a balloon-like appearance. It can be displayed in different directions, or have different color schemes.
+
+%%html
+<img src="/bem-method/images/b-popup.png"/>
+%%
+
+**i- (as in include)**\\
+The i- prefix is used for abstract blocks which do not exist on their own but rather are used to build other blocks.\\
+The i-blocks do not have visual representations, they only implement some logic.
+
+**Example**\\
+The ##i-popup## block does not have a visual representation, but it implements certain logic required by the ##b-popup## block, which cannot exist without ##i-popup##.
+
+%%html
+<img src="/bem-method/images/i-popup.png"/>
+%%
+
+==== Element name
+
+Element names specify unambiguously, which block the element belongs to.\\
+Element names are defined as:
+##b-block-name_~_element-name##
+
+**Examples**
+
+%%
+    b-menu__item
+    b-popup__content
+%%
+
+==== Naming of block modifiers
+
+Modifier names specify unambiguously, which block the modifier belongs to.
+Fully qualified modifier names are defined as:
+##b-block-name_modifier-name_modifier-value##.
+
+**Examples**
+
+%%
+    b-menu_layout_horiz
+    b-menu_layout_vert
+    b-popup_direction_up
+%%
+
+==== Naming of element modifiers
+
+Modifier names specify unambiguously, which block and which element the modifier belongs to.
+Fully qualified modifier names are defined as:
+##b-block-name_~_element-name_modifier-name_modifier-value##.
+
+**Examples**
+
+%%
+    b-menu__item_state_current
+    b-popupa__content_visibile_yes
+    b-popupa__content_visibile_no
+%%

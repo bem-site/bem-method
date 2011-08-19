@@ -1,0 +1,17 @@
+=== What is BEM?
+
+BEM is an approach to front-end development designed with flexibility and ease of modification in mind.
+
+BEM helps solve the following tasks:
+
+ * separation of the codebase into logical parts:
+    * separation of responsibilities between developers of different specialization;
+    * high-level abstractions - BEM technologies can be used without deep understanding of their internal workings;
+    * ease of reuse - BEM consists of a large number of loosely coupled components which can be used - and reused - independently.
+ * a singular approach to implementation of various technologies, written in different languages:
+    * web applications are written in multiple programming and markup languages - it is possible to develop with all of them using the same set of terms and approaches;
+    * images and documentation are technologies too.
+ * optimization of the production runtime:
+    * build the production runtime with components that are actually being used;
+    * generate browser-specific production runtimes;
+    * performance improvements are possible by improving not only the application code, but the "compiler" itself.
