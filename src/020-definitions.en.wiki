@@ -1,0 +1,39 @@
+=== Definitions
+==== Block
+Block is an independent entity, a building block of an application.\\
+Blocks contain information about themselves and their children (block elements).\\
+Blocks can be used on their own or as a part of other blocks.
+
+**Example**\\
+##b-search## - a search form block\\
+%%html
+<img src="/bem-method/images/search.ru.png"/>
+%%
+
+==== Element
+Element is a part of block that performs a certain function.\\
+Block elements can only appear inside their respective blocks. Elements can be mandatory or optional.
+
+**Example**\\
+An input field and a button are elements of the ##b-search## block\\
+%%html
+<img src="/bem-method/images/search-e.ru.png"/>
+%%
+
+==== Modifier
+Modifiers are properties of blocks and elements, they change appearance or behavior of the elements they're applied to.\\
+Each modifier has a name and a value. Multiple modifiers can be applied simultaneously.
+
+**Example**\\
+A ##b-search## block modifier sets the block's background color//
+%%html
+<img src="/bem-method/images/search-m.ru.png"/>
+%%
+
+==== Overloading
+A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. The final implementation of a block is assembled by building the levels sequentially.
+
+**Example**\\
+%%html
+<img src="/bem-method/images/levels.ru.png"/>
+%%
