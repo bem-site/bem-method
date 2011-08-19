@@ -1,14 +1,14 @@
-﻿=== Структура БЭМ-проекта на файловой системе
+=== File system structure of a BEM-based project
 
-Проект, реализованный на БЭМ состоит из одного или нескольких уровней переопределения и кода страниц.
+A typical BEM project consists of one or more block levels and the page code itself.
 
-Приведённые ниже примеры структуры не жёсткие и могут быть изменены в зависимости от потребностей проекта.
+The following layout examples are not requirements, but recommendations.
 
-==== Страница
+==== Pages
 
-Совокупность файлов, которые определяют внешний вид и поведение конкретной страницы.
+A page is the sum total of files that define the visual appearance and behavior of a given page.
 
-**Пример**
+**Example**
 
 %%
     pages/
@@ -20,17 +20,15 @@
             index.bemjson.js
 %%
 
-Страница состоит из описания блоков, которые на ней используются
-(##.bemdecl##) и конкретного их расположения (##.bemjson##). Это исходный код страницы.
-Из него генерируются все необходимые для отображения файлы (##.css##, ##.js##, etc)
+Pages are defined using a block declaration file (##.bemdecl##) and a block implementation file (##.bemjson##). These two are the page source and are used to generate the final CSS and JS code.
 
-===== Исходный код страницы
+===== Page source
 
 ====== index.bemdecl.js
 
-На странице b-page используем b-menu и b-link
+The b-page page uses b-menu and b-link blocks.
 
-**Пример**
+**Example**
 
 %%
     exports.blocks = [
@@ -75,9 +73,9 @@
 
 ====== index.bemjson.js
 
-На странице b-page используем b-menu и b-link
+The b-page page uses b-menu and b-link blocks.
 
-**Пример**
+**Example**
 
 %%hl js
     ({
@@ -89,14 +87,14 @@
                 {
                     elem: 'item',
                     elemMods: { state: 'current' },
-                    content: 'Главная'
+                    content: 'Home page'
                 },
                 {
                     elem: 'item',
                     content: {
                         block: 'b-link',
                         url: '/',
-                        content: 'Находки'
+                        content: 'My bookmarks'
                     }
                 },
                 {
@@ -104,7 +102,7 @@
                     content: {
                         block: 'b-link',
                         url: '/',
-                        content: 'Поиск'
+                        content: 'Search'
                     }
                 },
                 {
@@ -112,7 +110,7 @@
                     content: {
                         block: 'b-link',
                         url: '/',
-                        content: 'О проекте'
+                        content: 'About'
                     }
                 }
             ]
@@ -120,13 +118,13 @@
     })
 %%
 
-===== Генерируемые файлы
+===== Generated files
 
 ====== index.css
 
-На странице b-page используем b-menu и b-link
+The b-page page uses b-menu and b-link blocks
 
-**Пример**
+**Example**
 
 %%hl xml
     @import url(../../bem-bl/blocks-desktop/b-menu/b-menu.css);
@@ -139,7 +137,7 @@
 
 ====== index.js
 
-На странице b-page используем b-menu и b-link
+The b-page page uses b-menu and b-link blocks
 
 %%hl js
     include("../../bem-bl/blocks-desktop/i-jquery/__inherit/i-jquery__inherit.js");
@@ -156,22 +154,19 @@
     include("../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js");
 %%
 
-==== Уровни переопределения проекта
+==== Overloading
 
-Проект состоит из уровней переопределения. Количество уровней
-переопределения зависит от проекта, всегда есть минимум 1 уровень.
+A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. A minimum of 1 set is required.
 
 %%html
     <img src="/bem-method/images/levels.tech.png"/>
 %%
 
-Реализация блока может быть на нескольких уровнях. Для каждой страницы можно
-настроить своё используемое множество уровней. Финальная реализация блока на
-странице собирается со всех уровней для этой страницы.
+A block can be defined on several levels. A combination of levels used can be defined on a per-page level. The final implementation of the block is assembled by building the levels sequentially.
 
-===== Расположение уровней на проектах
+===== Defining levels
 
-====== Только блоки проекта
+====== Only project blocks
 
 %%
     project/
@@ -187,7 +182,7 @@
                 b-sidebar.bemhtml
 %%
 
-====== Блоки проекта и отдельных страниц проекта
+====== Project blocks and page blocks
 
 %%
     project/
@@ -207,15 +202,15 @@
             index/
                 blocks/
                     b-head/
-                        b-head.css             # переопределили вид шапки на заглавной странице
+                        b-head.css             # b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # добавили новый блок
+                    b-about-text/              # a new block has been added for the index page
                         b-about-text.css
                         b-about-text.bemhtml
 %%
 
-====== Блоки фреймворка и проекта
+====== Framework blocks and project blocks
 
 %%
     project/
@@ -233,14 +228,14 @@
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+            b-page/                           # redefines the b-page block defined on the higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
                 b-sidebar.bemhtml
 %%
 
-====== Блоки фреймворка, проекта и страниц
+====== Framework, project, and page blocks
 
 %%
     project/
@@ -258,7 +253,7 @@
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+            b-page/                           # Redefines the b-page block defined on the higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -267,15 +262,15 @@
             index/
                 blocks/
                     b-head/
-                        b-head.css             # переопределили вид шапки на заглавной странице
+                        b-head.css             # b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # добавили новый блок
+                    b-about-text/              # a new block has been added for the index page
                         b-about-text.css
                         b-about-text.bemhtml
 %%
 
-====== Блоки проекта, страниц и темы
+====== Project, page, and theme blocks
 
 %%
     project/
@@ -286,7 +281,7 @@
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+            b-page/                           # Redefines the b-page block defined on the higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -295,14 +290,14 @@
             index/
                 blocks/
                     b-head/
-                        b-head.css             # переопределили вид шапки на заглавной странице
+                        b-head.css             # b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # добавили новый блок
+                    b-about-text/              # a new block has been added for the index page
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # не раскладываем файлы по директориям, кладём их рядом
+            black/                             # Files which define the 'black' color scheme (stored in the same directory)
                 b-head.css
                 b-foot.css
                 b-sidebar.css
