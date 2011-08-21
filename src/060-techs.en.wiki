@@ -40,14 +40,14 @@ Making one step further, we can partially replace standard HTML tags with custom
 
 Each BEM entity must have a CSS class to allow modification.
 
-As blocks are inherently non-unique and can be reused, only CSS classes are allowed - not IDs.
+As blocks are inherently non-unique and can be reused, only CSS classes are allowed, not IDs.
 
 **Important**: ID-based CSS selectors are *NOT ALLOWED*:
 %%hl xml
     #header {}
 %%
 
-The naming of CSS classes of BEM entities must follow [naming conventions](#naming)
+The naming of CSS classes of BEM entities must follow the [naming conventions](#naming)
 
 **Examples of naming**
 
@@ -78,12 +78,12 @@ Usage of ((http://h.yandex.net/?http%3A%2F%2Fwww.w3.org%2FTR%2F2001%2FCR-css3-se
     }
 %%
 
-Avoiding of type selectors significantly improves page rendering performance, specifically the ##Reflow Time## — time spent by the browser during application of a stylesheet to a ##DOM## tree.\\ ((http://clubs.ya.ru/bem/replies.xml?item_no=712 More information is provided in this blog post (in Russian)))
+Avoiding of type selectors significantly improves page rendering performance, known as ##Reflow Time## — time spent by the browser during application of a stylesheet to a ##DOM## tree.\\ ((http://clubs.ya.ru/bem/replies.xml?item_no=712 More information is provided in this blog post (in Russian)))
 
 ==== JavaScript
 
-JavaScript code can also be written in BEM terms. We treat ##DOM## representation as a low-level implementation detail.\\
-Blocks without a DOM representation are allowed as well, they usually provide helper functionality.
+JavaScript code can also be written in BEM terms - for example, instead of working with CSS classes directly, we can add, remove, or test for blocks, elements, modifiers. The exact ##DOM## representation is treated as a low-level implementation detail.\\
+Blocks without a DOM representation are allowed as well - they usually provide helper functionality.
 
 **Examples of blocks without a DOM representation:**
 
@@ -100,7 +100,7 @@ A client-side JS framework called ##i-bem## is provided as part of the ##bem-bl#
 
 ==== Templates
 
-Blocks can be implemented using templates which use some input data to build HTML.
+Blocks can be implemented using templates, which use some input data to build HTML.
 
 The ##bem-bl## library uses ##bemhtml## as a templating mechanism.
 

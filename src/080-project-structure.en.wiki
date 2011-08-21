@@ -1,12 +1,12 @@
 === File system structure of a BEM-based project
 
-A typical BEM project consists of one or more block levels and the page code itself.
+A typical BEM project contains one or more block levels and the page code itself.
 
-The following layout examples are not requirements, but recommendations.
+The following layout examples are recommendations, not requirements.
 
 ==== Pages
 
-A page is the sum total of files that define the visual appearance and behavior of a given page.
+A page is the sum total of files that define visual appearance and behavior of a given page.
 
 **Example**
 
@@ -20,7 +20,7 @@ A page is the sum total of files that define the visual appearance and behavior 
             index.bemjson.js
 %%
 
-Pages are defined using a block declaration file (##.bemdecl##) and a block implementation file (##.bemjson##). These two are the page source and are used to generate the final CSS and JS code.
+Pages are defined using a block declaration file (##.bemdecl##) and a block implementation file (##.bemjson##). These two are the "page source" and are used to generate the final CSS and JS code.
 
 ===== Page source
 
@@ -166,7 +166,7 @@ A block can be defined on several levels. A combination of levels used can be de
 
 ===== Defining levels
 
-====== Only project blocks
+====== Project blocks only
 
 %%
     project/
@@ -205,7 +205,7 @@ A block can be defined on several levels. A combination of levels used can be de
                         b-head.css             # b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block has been added for the index page
+                    b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
 %%
@@ -228,7 +228,7 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # redefines the b-page block defined on the higher (framework) level
+            b-page/                           # redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -253,7 +253,7 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # Redefines the b-page block defined on the higher (framework) level
+            b-page/                           # Redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -265,7 +265,7 @@ A block can be defined on several levels. A combination of levels used can be de
                         b-head.css             # b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block has been added for the index page
+                    b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
 %%
@@ -281,7 +281,7 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # Redefines the b-page block defined on the higher (framework) level
+            b-page/                           # Redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -293,11 +293,11 @@ A block can be defined on several levels. A combination of levels used can be de
                         b-head.css             # b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block has been added for the index page
+                    b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # Files which define the 'black' color scheme (stored in the same directory)
+            black/                             # Files, which define the 'black' color scheme (stored in the same directory)
                 b-head.css
                 b-foot.css
                 b-sidebar.css

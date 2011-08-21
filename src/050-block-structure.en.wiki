@@ -4,7 +4,7 @@ Blocks are implemented using multiple technologies:
 
  * HTML for markup (##XML## + ##XSL## = ##HTML## or ##bemjson## + ##bemhtml## = ##HTML##)
  * CSS to describe presentation semantics
- * JS to describe behavior
+ * JavaScript to describe behavior
 
 Depending on the puprose of a block, different sets of technologies can be used.
 
@@ -54,7 +54,7 @@ File system layout follows the naming conventions we described earlier. Multiple
             b-menu.bemhtml
 %%
 
-==== You can also do this (no directories, elements and modifiers in separate files):
+==== You can also do this (no directories; elements and modifiers in separate files):
 
 %%
     blocks/
@@ -69,7 +69,7 @@ File system layout follows the naming conventions we described earlier. Multiple
         b-menu.bemhtml
 %%
 
-==== Or this (no directories, the code for elements and modifiers is stored in blocks' files):
+==== Or this (no directories; the code for elements and modifiers is stored in blocks' files):
 
 %%
     blocks/
