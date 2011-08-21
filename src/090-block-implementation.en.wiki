@@ -27,7 +27,7 @@ Structure matters most - implementation details are secondary.
         b-domik.js
         b-domik.xsl
         _type/                                          # modifiers
-            b-domik_type_onpage.css                     # login form on a page
+            b-domik_type_onpage.css                     # login form on the page
             b-domik_type_onpage.ie.css
             b-domik_type_onpage.js
             b-domik_type_onpage.xsl

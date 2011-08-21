@@ -1,6 +1,6 @@
 === Definitions
 ==== Block
-Block is an independent entity, a building block of an application.\\
+Block is an independent entity, a "building block" of an application.\\
 Blocks contain information about themselves and their children (block elements).\\
 Blocks can be used on their own or as a part of other blocks.
 
@@ -11,8 +11,8 @@ Blocks can be used on their own or as a part of other blocks.
 %%
 
 ==== Element
-Element is a part of block that performs a certain function.\\
-Block elements can only appear inside their respective blocks. Elements can be mandatory or optional.
+Element is a part of a block, that performs a certain function.\\
+Block elements can only appear inside their respective blocks. Elements can be mandatory and optional.
 
 **Example**\\
 An input field and a button are elements of the ##b-search## block\\
@@ -21,11 +21,11 @@ An input field and a button are elements of the ##b-search## block\\
 %%
 
 ==== Modifier
-Modifiers are properties of blocks and elements, they change appearance or behavior of the elements they're applied to.\\
+Modifiers are properties of blocks and elements; they change appearance or behavior of the elements, they are applied to.\\
 Each modifier has a name and a value. Multiple modifiers can be applied simultaneously.
 
 **Example**\\
-A ##b-search## block modifier sets the block's background color//
+A ##b-search## block modifier sets the background color of a block//
 %%html
 <img src="/bem-method/images/search-m.ru.png"/>
 %%

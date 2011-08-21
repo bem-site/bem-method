@@ -4,9 +4,9 @@ In the simplest form, a block is represented by a single DOM node, but generally
 
 ==== Mixin
 
-Mixins are just that - using several blocks or elements on the same DOM node.
+Mixins are just that - usage of several blocks and/or elements on the same DOM node.
 
-A DOM node can have:
+A single DOM node can represent:
 
  * several blocks\\
    ##b-menu b-head-menu##
@@ -24,7 +24,7 @@ A DOM node can have:
 **Example**
 
 The tabbed pane block includes tabs (##b-tabbed-pane_~_tabs##) and panels
-(##b-tabbed-pane_~_panels##) as its elements. Both elements are applied to a single ##DOM## node. This allows toggling of the pane's visual representation from vertical to horizontal.
+(##b-tabbed-pane_~_panels##) as its elements. Both elements are applied to a single ##DOM## node. This allows toggling of the panel's visual representation from vertical to horizontal.
 
 Vertical tabbed pane
 
