@@ -7,11 +7,11 @@ Blocks can be modified using:
 
 ==== Modifiers
 
-A modifier class is added to a block or element, which contains the necessary appearance or behavior changes.
+A modifier class is added to a block or an element, and it contains the necessary appearance or behavior changes.
 
 **Examples**
 
-A b-popup block does not have a background by default.
+A b-popup block does not have background set by default.
 %%html
 <img src="/bem-method/images/b-popup-tr.png"/>
 %%
@@ -33,12 +33,12 @@ A block can have several modifiers applied at once.
 
 ##theme## modifier specifies background color, ##direction## modifier specifies dropdown behavior (whether popups should open to the left, right, etc).
 
-##theme=yellow## and ##direction=left## — popup window with a yellow background, opens to the left:\\
+##theme=yellow## and ##direction=left## — popup window with yellow background, opens to the left:\\
 %%html
 <img src="/bem-method/images/b-popup-left.png"/>
 %%
 
-##theme=yellow## and ##direction=right## — popup window with a yellow background, opens to the right:
+##theme=yellow## and ##direction=right## — popup window with yellow background, opens to the right:
 %%html
 <img src="/bem-method/images/b-popup-right.png"/>
 %%
@@ -46,17 +46,17 @@ A block can have several modifiers applied at once.
 Modifiers can alter the blocks' structure (by adding/removing elements) and implementation.
 
 **Example**
-A ##has-close=yes## modifier adds a closing button and adjusts the block's padding.
+A ##has-close=yes## modifier adds a closing button and adjusts block's padding accordingly.
 %%html
 <img src="/bem-method/images/b-popup-close.png"/>
 %%
 
 ==== Modification by context
 
-A block can appear or behave differently when put inside another block.
+A block can appear or behave differently, when put inside another block.
 
 **Example**\\
-Text color of an embedded block changes from green to red when put inside a block with a blue background.
+Text color of the embedded block changes from green to red, when put inside a block with blue background.
 
 **Examples**
 
@@ -72,7 +72,7 @@ Text color of an embedded block changes from green to red when put inside a bloc
 
 ==== Modification by overloading
 
-Appearance or behavior changes can be introduced on the higher level.
+Appearance or behavior changes can be introduced on a higher level.
 
 **Example**\\
 The common part of the block's implementation belongs to the framework (and is stored in the framework's repository) while some local modifications belong to a specific project (and are stored in the project's repository in separate files).
