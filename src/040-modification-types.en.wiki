@@ -45,7 +45,7 @@ A block can have several modifiers applied at once.
 
 Modifiers can alter the blocks' structure (by adding/removing elements) and implementation.
 
-**Example**
+**Example**\\
 A ##has-close=yes## modifier adds a closing button and adjusts block's padding accordingly.
 %%html
 <img src="/bem-method/images/b-popup-close.png"/>
