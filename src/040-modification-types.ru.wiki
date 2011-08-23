@@ -15,7 +15,7 @@
 <img src="/bem-method/images/b-popup-tr.png"/>
 %%
 
-Добавление модификатора theme блоку ##b-popup## добавляет ему фон.\\
+Добавление модификатора ##theme## блоку ##b-popup## добавляет ему фон.\\
 ##theme=yellow## добавляет фон желтого цвета:\\
 %%html
 <img src="/bem-method/images/b-popup-yellow.png"/>

@@ -1,4 +1,4 @@
-=== Modifying the blocks
+﻿=== Modifying the blocks
 
 Blocks can be modified using:
  * modifier classes
@@ -16,7 +16,7 @@ A b-popup block does not have background set by default.
 <img src="/bem-method/images/b-popup-tr.png"/>
 %%
 
-By adding a theme modifier to the ##b-popup## block, background color can be specified for this block.\\
+By adding a ##theme## modifier to the ##b-popup## block, background color can be specified for this block.\\
 ##theme=yellow## specifies a yellow background:\\
 %%html
 <img src="/bem-method/images/b-popup-yellow.png"/>
