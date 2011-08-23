@@ -86,4 +86,4 @@
 ##((https://github.com/toivonen/bem-bl-test bem-bl-test))##, где в папке ##blocks## содержится
 код, доопределяющий поведение блока ##b-link##. Это позволяет изменить
 ((https://github.com/toivonen/bem-bl/tree/master/blocks-desktop/b-link основную реализацию блока))
-(из библиотеки ##((https://github.com/toivonen/bem-bl-test bem-bl))## под нужды проекта.
+(из библиотеки ##((https://github.com/toivonen/bem-bl-test bem-bl))##) под нужды проекта.
