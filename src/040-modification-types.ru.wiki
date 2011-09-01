@@ -12,18 +12,18 @@
 
 По умолчанию фон у попапа осутствует.
 %%html
-<img src="/bem-method/images/b-popup-tr.png"/>
+<img src="/bem-method/images/b-popup-tr.png" alt="Transparent b-popup"/>
 %%
 
 Добавление модификатора ##theme## блоку ##b-popup## добавляет ему фон.\\
 ##theme=yellow## добавляет фон желтого цвета:\\
 %%html
-<img src="/bem-method/images/b-popup-yellow.png"/>
+<img src="/bem-method/images/b-popup-yellow.png" alt="Yellow background modificator for b-popup block"/>
 %%
 
 ##theme=black## добавляет фон черного цвета:\\
 %%html
-<img src="/bem-method/images/b-popup-bl.png"/>
+<img src="/bem-method/images/b-popup-bl.png" alt="Black background modificator for b-popup block"/>
 %%
 
 У блока может быть одновременно несколько модификаторов.
@@ -35,12 +35,12 @@
 
 ##theme=yellow## и ##direction=left## — попап желтого цвета открывается влево:\\
 %%html
-<img src="/bem-method/images/b-popup-left.png"/>
+<img src="/bem-method/images/b-popup-left.png" alt="Left direction modificator for b-popup block"/>
 %%
 
 ##theme=yellow## и ##direction=right## — попап желтого цвета открывается вправо:
 %%html
-<img src="/bem-method/images/b-popup-right.png"/>
+<img src="/bem-method/images/b-popup-right.png" alt="Right direction modificator for b-poup block"/>
 %%
 
 Модификатор блока может изменять структуру блока (например, добавлять/удалять элементы) или его реализацию.
@@ -49,7 +49,7 @@
 Модификатор ##has-close=yes## — добавляет элемент «закрывающий крестик».
 Добавляет отступы блоку, освобождая место крестика.
 %%html
-<img src="/bem-method/images/b-popup-close.png"/>
+<img src="/bem-method/images/b-popup-close.png" alt="Modificator for adding close icon to b-popup"/>
 %%
 
 ==== Контекстом
@@ -64,13 +64,13 @@
 
 Переключатель языков (##b-lang-switcher##)\\
 %%html
-<img src="/bem-method/images/lang-switcher.png"/>
+<img src="/bem-method/images/lang-switcher.png" alt="Language switcher block"/>
 %%
 
 Переключатель языков (##b-lang-switcher##) в подвале страницы
 (##b-foot##), уменьшается размер шрифта.\\
 %%html
-<img src="/bem-method/images/lang-switcher-foot.png"/>
+<img src="/bem-method/images/lang-switcher-foot.png" alt="b-lang-switcher with small text"/>
 %%
 
 ==== Уровнем переопределения

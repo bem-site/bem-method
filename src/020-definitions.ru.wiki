@@ -7,7 +7,7 @@
 **Пример**\\
 Блок ##b-search## поисковой формы\\
 %%html
-<img src="/bem-method/images/search.ru.png"/>
+<img src="/bem-method/images/search.ru.png" alt="Block b-search"/>
 %%
 
 ==== Элемент
@@ -17,7 +17,7 @@
 **Пример**\\
 Поле ввода и кнопка — элементы блока ##b-search##\\
 %%html
-<img src="/bem-method/images/search-e.ru.png"/>
+<img src="/bem-method/images/search-e.ru.png" alt="Input and button elements of b-search block"/>
 %%
 
 ==== Модификатор
@@ -27,7 +27,7 @@
 **Пример**\\
 Модификатор блока ##b-search## задает ему цвет фона//
 %%html
-<img src="/bem-method/images/search-m.ru.png"/>
+<img src="/bem-method/images/search-m.ru.png" alt="Background color modificator of b-search block"/>
 %%
 
 ==== Уровень переопределения
@@ -37,5 +37,5 @@
 
 **Пример**\\
 %%html
-<img src="/bem-method/images/levels.ru.png"/>
+<img src="/bem-method/images/levels.ru.png" alt="Blocks levels"/>
 %%
