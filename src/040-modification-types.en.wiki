@@ -1,0 +1,80 @@
+﻿=== Modifying the blocks
+
+Blocks can be modified using:
+ * modifier classes
+ * context
+ * overloading
+
+==== Modifiers
+
+A modifier class is added to a block or an element, and it contains the necessary appearance or behavior changes.
+
+**Examples**
+
+A b-popup block does not have background set by default.
+%%html
+<img src="/bem-method/images/b-popup-tr.png"/>
+%%
+
+By adding a ##theme## modifier to the ##b-popup## block, background color can be specified for this block.\\
+##theme=yellow## specifies a yellow background:\\
+%%html
+<img src="/bem-method/images/b-popup-yellow.png"/>
+%%
+
+##theme=black## specifies a black background:\\
+%%html
+<img src="/bem-method/images/b-popup-bl.png"/>
+%%
+
+A block can have several modifiers applied at once.
+
+**Examples**
+
+##theme## modifier specifies background color, ##direction## modifier specifies dropdown behavior (whether popups should open to the left, right, etc).
+
+##theme=yellow## and ##direction=left## — popup window with yellow background, opens to the left:\\
+%%html
+<img src="/bem-method/images/b-popup-left.png"/>
+%%
+
+##theme=yellow## and ##direction=right## — popup window with yellow background, opens to the right:
+%%html
+<img src="/bem-method/images/b-popup-right.png"/>
+%%
+
+Modifiers can alter the blocks' structure (by adding/removing elements) and implementation.
+
+**Example**\\
+A ##has-close=yes## modifier adds a closing button and adjusts block's padding accordingly.
+%%html
+<img src="/bem-method/images/b-popup-close.png"/>
+%%
+
+==== Modification by context
+
+A block can appear or behave differently, when put inside another block.
+
+**Example**\\
+Text color of the embedded block changes from green to red, when put inside a block with blue background.
+
+**Examples**
+
+##b-lang-switcher## - language switcher block\\
+%%html
+<img src="/bem-method/images/lang-switcher.png"/>
+%%
+
+##b-lang-switcher## block located in the footer (##b-foot##) - font size becomes smaller.\\
+%%html
+<img src="/bem-method/images/lang-switcher-foot.png"/>
+%%
+
+==== Modification by overloading
+
+Appearance or behavior changes can be introduced on a higher level.
+
+**Example**\\
+The common part of the block's implementation belongs to the framework (and is stored in the framework's repository) while some local modifications belong to a specific project (and are stored in the project's repository in separate files).
+
+See ##((https://github.com/toivonen/bem-bl-test bem-bl-test))## for an example of modifying the ((https://github.com/toivonen/bem-bl/tree/master/blocks-desktop/b-link common)) ##b-link## implementation to suit the needs of the ##bem-bl-test## project.
