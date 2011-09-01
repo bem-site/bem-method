@@ -3,7 +3,7 @@
 БЭМ-метод подразумевает реализацию блока в различных технологиях.
 
 %%html
-    <img src="/bem-method/images/levels.tech.png"/>
+    <img src="/bem-method/images/levels.tech.png" alt="Level can include different techs"/>
 %%
 
 ==== HTML
@@ -99,7 +99,7 @@ CSS-классы для БЭМ-сущностей соответствуют п�
 Клиентским JS-фреймворком для работы со страницей в терминах БЭМ является
 JS-реализация блока ##i-bem## библиотеки ##bem-bl##:
 
- * ((https://github.com/bem/bem-bl/tree/master/blocks-desktop/i-bem код в репозитории на GitHub))
+ * ((https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem код в репозитории на GitHub))
  * ((https://github.com/bem/bem-bl/ библиотека блоков bem-bl)).
  * ((http://clubs.ya.ru/bem/replies.xml?item_no=900 Доклад Дмитрия Филатова и Сергея Бережного об i-bem.js))
 
