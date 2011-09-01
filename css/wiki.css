@@ -1,13 +1,118 @@
-.shmakowiki h1,
-.shmakowiki h2,
-.shmakowiki h3
+/* Line-height 1.4 as a base for vertical rhythm */
+.shmakowiki
 {
-
-    margin-top: 1em;
-
-    margin-bottom: 0.5em;
-
+    font: 1em/1.4em "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
+/* Compensating line-height in links */
+.shmakowiki A:link,
+.shmakowiki A:visited
+{
+    padding: 0.2em 0;
+}
+
+/* Margin for elements */ /**/
+.shmakowiki P,
+.shmakowiki UL,
+.shmakowiki OL,
+.shmakowiki DL,
+.shmakowiki BLOCKQUOTE,
+.shmakowiki HR,
+.shmakowiki CODE,
+.shmakowiki PRE,
+.shmakowiki TABLE
+{
+    margin-top: 0;
+    margin-bottom: 1.4em;
+}
+
+/* Half of the margin in lists (and extras for good browsers) */
+.shmakowiki LI,
+.shmakowiki LI>P
+{
+    margin-top: 0;
+    margin-bottom: 0.7em;
+}
+
+/* Magic for headers (rhythm, fonts, lalala)*/
+.shmakowiki H1
+{
+    font: 2.25em/1.2444em Helvetica, "Helvetica Neue", Arial, sans-serif;
+    
+    margin: 0.3111em 0;
+}
+
+.shmakowiki H2
+{
+    font: 1.5em/1.4em Helvetica, "Helvetica Neue", Arial, sans-serif;
+    
+    margin: 0.4666em 0;
+}
+
+.shmakowiki H3
+{
+    font: 1.3125em/1.0666em Helvetica, "Helvetica Neue", Arial, sans-serif;
+    
+    margin: 0.5333em 0;
+}
+
+.shmakowiki H4,
+.shmakowiki H5,
+.shmakowiki H6
+{
+    font: 1.125em/1.2444em Helvetica, "Helvetica Neue", Arial, sans-serif;
+    
+    margin: 0.6222em 0;
+}
+
+/* Blockquotes */ /**/
+.shmakowiki BLOCKQUOTE
+{
+    border-left: 0.2em solid #AAA;
+    border-color: rgba(0,0,0,0.33);
+    margin-left: 1.2em;
+    padding: 0 0.7em;
+
+    background: #F5F5F5;
+    background: rgba(0,0,0,0.04);
+}
+
+.shmakowiki BLOCKQUOTE BLOCKQUOTE
+{
+    margin-left: 0.5em;
+}
+
+/* Code with monospace font stack */ /**/
+.shmakowiki CODE,
+.shmakowiki KBD,
+.shmakowiki PRE,
+.shmakowiki SAMP,
+.shmakowiki VAR
+{
+    font: 0.9333em/1.5em Consolas, "Lucida Console", "DejaVu Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+
+.shmakowiki PRE CODE
+{
+    font-size: 1em;
+}
+
+/* Tables */ /**/
+.shmakowiki TABLE
+{
+    border: 1px solid #CCC;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.shmakowiki TH,
+.shmakowiki TD
+{
+    padding: 0 0.7em;
+
+    text-align: left;
+}
+
+/* Original shmakowiki visual styles there */
 
 .shmakowiki h1 {
 
@@ -19,20 +124,6 @@
 {
 
     color: #0066CC;
-
-    font-size: 1.6em;
-
-}
-
-.shmakowiki h3
-{
-    font-size: 1.4em;
-}
-
-.shmakowiki h4
-{
-
-    font-size: 1.2em;
 
 }
 
