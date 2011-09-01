@@ -101,6 +101,7 @@ BODY
 .shmakowiki KBD,
 .shmakowiki PRE,
 .shmakowiki SAMP,
+.shmakowiki TT,
 .shmakowiki VAR
 {
     font: 0.9333em/1.5em Consolas, "Lucida Console", "DejaVu Sans Mono", Monaco, "Courier New", Courier, monospace;
