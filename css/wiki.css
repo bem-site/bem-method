@@ -7,7 +7,7 @@ BODY
 
 .shmakowiki
 {
-    width: 37em;
+    width: 40em;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -143,6 +143,8 @@ BODY
 
 .ohl
 {
+    display: inline-block;
+    
     background-color: #eee;
     padding: 0.5em;
     border: #aaa 1px dotted;
