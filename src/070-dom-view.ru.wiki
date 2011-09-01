@@ -32,7 +32,7 @@
 Вертикальное расположение элементов
 
 %%html
-<img src="/bem-method/images/tab-panel-v.png"/>
+<img src="/bem-method/images/tab-panel-v.png" alt="Tabbed pane with vertical tabs"/>
 %%
 
 %%hl xml
@@ -47,7 +47,7 @@
 Горизонтальное расположение элементов
 
 %%html
-<img src="/bem-method/images/tab-panel-h.png"/>
+<img src="/bem-method/images/tab-panel-h.png" alt="Tabbed pane with horizaontal tabs"/>
 %%
 
 %%hl xml

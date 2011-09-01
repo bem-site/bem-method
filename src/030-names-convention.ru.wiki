@@ -22,7 +22,7 @@
 иметь хвостик или закрывающий крестик. Может быть разных цветов. Может отображаться в разных направлениях.
 
 %%html
-<img src="/bem-method/images/b-popup.png"/>
+<img src="/bem-method/images/b-popup.png" alt="b-popup block"/>
 %%
 
 **i- (от include)**\\
@@ -38,7 +38,7 @@
 блок ##b-popup## не существует.
 
 %%html
-<img src="/bem-method/images/i-popup.png"/>
+<img src="/bem-method/images/i-popup.png" alt="i-popup block"/>
 %%
 
 ==== Имя элемента
