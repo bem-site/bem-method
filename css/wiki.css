@@ -1,3 +1,17 @@
+/* Layout
+---------------------------------------- */
+BODY
+{
+    padding: 0 2.625em;
+}
+
+.shmakowiki
+{
+    width: 37em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 /* Line-height 1.4 as a base for vertical rhythm */
 .shmakowiki
 {
