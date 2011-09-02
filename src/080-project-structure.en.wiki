@@ -207,10 +207,12 @@ A block can be defined on several levels. A combination of levels used can be de
             index/
                 blocks/
                     b-head/
-                        b-head.css             # b-head is redefined for the index page
+                        b-head.css
+						# b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block added specifically for the index page
+                    b-about-text/
+					# a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
 </pre>
@@ -235,7 +237,8 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # redefines the b-page block defined on a higher (framework) level
+            b-page/
+			# redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -262,7 +265,8 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # Redefines the b-page block defined on a higher (framework) level
+            b-page/
+			# Redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -271,10 +275,12 @@ A block can be defined on several levels. A combination of levels used can be de
             index/
                 blocks/
                     b-head/
-                        b-head.css             # b-head is redefined for the index page
+                        b-head.css
+						# b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block added specifically for the index page
+                    b-about-text/
+					# a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
 </pre>
@@ -292,7 +298,8 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # Redefines the b-page block defined on a higher (framework) level
+            b-page/
+			# Redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -301,14 +308,17 @@ A block can be defined on several levels. A combination of levels used can be de
             index/
                 blocks/
                     b-head/
-                        b-head.css             # b-head is redefined for the index page
+                        b-head.css
+						# b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block added specifically for the index page
+                    b-about-text/
+					# a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # Files, which define the 'black' color scheme (stored in the same directory)
+            black/
+			# Files, which define the 'black' color scheme (stored in the same directory)
                 b-head.css
                 b-foot.css
                 b-sidebar.css
