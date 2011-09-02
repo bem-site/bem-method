@@ -13,7 +13,8 @@
 
 ====Каждый блок в директории, элементы и модификаторы в отдельных директорияx
 
-%%
+%%html
+<pre>
     blocks/
         b-menu/
             _layout/
@@ -27,11 +28,13 @@
             b-menu.css
             b-menu.js
             b-menu.bemhtml
+</pre>
 %%
 
 ==== Каждый блок в директории, элементы и модификаторы в отдельных файлах без директорий
 
-%%
+%%html
+<pre>
     blocks/
         b-menu/
             b-menu_layout_horiz.css
@@ -43,21 +46,25 @@
             b-menu.css
             b-menu.js
             b-menu.bemhtml
+</pre>
 %%
 
 ==== Каждый блок в директории, элементы и модификаторы в файлах блока
 
-%%
+%%html
+<pre>
     blocks/
         b-menu/
             b-menu.css
             b-menu.js
             b-menu.bemhtml
+</pre>
 %%
 
 ==== Директории не используются, элементы и модификаторы в отдельных файлах
 
-%%
+%%html
+<pre>
     blocks/
         b-menu_layout_horiz.css
         b-menu_layout_horiz.bemhtml
@@ -68,13 +75,16 @@
         b-menu.css
         b-menu.js
         b-menu.bemhtml
+</pre>
 %%
 
 ==== Директории не используются, элементы и модификаторы в файлах блока
 
-%%
+%%html
+<pre>
     blocks/
         b-menu.css
         b-menu.js
         b-menu.bemhtml
+</pre>
 %%
