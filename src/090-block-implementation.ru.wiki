@@ -27,31 +27,31 @@
 %%html
 <pre>
     b-domik/
-		# общие файлы реализации для всех типов домика
+        # общие файлы реализации для всех типов домика
         b-domik.css
         b-domik.ie.css
         b-domik.js
         b-domik.xsl
         _type/
-		# папка с модификаторами для блока
-            b-domik_type_onpage.css		# домик, прибитый на странице
+        # папка с модификаторами для блока
+            b-domik_type_onpage.css    # домик, прибитый на странице
             b-domik_type_onpage.ie.css
             b-domik_type_onpage.js
             b-domik_type_onpage.xsl
-            b-domik_type_popup.css		# домик как всплывающее окно
+            b-domik_type_popup.css    # домик как всплывающее окно
             b-domik_type_popup.ie.css
             b-domik_type_popup.js
             b-domik_type_popup.xsl
         __lock/
-		# замочек — элемент блока
+        # замочек — элемент блока
             b-domik__lock.css
             b-domik__lock.png
             b-domik__lock.xsl
             _visibility/
-			# модификатор элемента lock, делает его видимым
+            # модификатор элемента lock, делает его видимым
                 b-domik__lock_visibility_visible.css
         __shadow/
-		# тень — элемент блока
+        # тень — элемент блока
             b-domik__shadow.css
             b-domik__shadow.ie.css
             b-domik__shadow.png
