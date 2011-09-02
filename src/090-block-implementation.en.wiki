@@ -20,7 +20,8 @@ Structure matters most - implementation details are secondary.
 </div>
 %%
 
-%%
+%%html
+<pre>
     b-domik/
         b-domik.css                                     # common files
         b-domik.ie.css
@@ -45,5 +46,6 @@ Structure matters most - implementation details are secondary.
             b-domik__shadow.css
             b-domik__shadow.ie.css
             b-domik__shadow.png
+</pre>
 %%
 

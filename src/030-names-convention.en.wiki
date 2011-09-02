@@ -1,14 +1,16 @@
-=== Naming conventions
+﻿=== Naming conventions
 
 ==== Block name
 Block names are defined as ##prefix-block-name##.
 
 **Examples**
 
-%%
+%%html
+<pre>
     b-menu
     b-popup
     i-popup
+</pre>
 %%
 
 ==== Block prefix
@@ -43,9 +45,11 @@ Element names are defined as:
 
 **Examples**
 
-%%
+%%html
+<pre>
     b-menu__item
     b-popup__content
+</pre>
 %%
 
 ==== Naming of block modifiers
@@ -56,10 +60,12 @@ Fully qualified modifier names are defined as:
 
 **Examples**
 
-%%
+%%html
+<pre>
     b-menu_layout_horiz
     b-menu_layout_vert
     b-popup_direction_up
+</pre>
 %%
 
 ==== Naming of element modifiers
@@ -70,8 +76,10 @@ Fully qualified modifier names are defined as:
 
 **Examples**
 
-%%
+%%html
+<pre>
     b-menu__item_state_current
     b-popupa__content_visibile_yes
     b-popupa__content_visibile_no
+</pre>
 %%

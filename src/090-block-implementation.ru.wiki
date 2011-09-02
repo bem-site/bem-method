@@ -12,15 +12,20 @@
 **Пример реализации блока b-domik**
 
 %%html
-<div style="float: right">
-<b>Домик на странице</b>
+<table>
+<tr><td>
+<b>Домик на странице</b><br/>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
-<b>Домик в попапе</b>
+</td>
+<td>
+<b>Домик в попапе</b><br/>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
-</div>
+</td></tr>
+</table>
 %%
 
-%%
+%%html
+<pre>
     b-domik/
         b-domik.css                                     # общие файлы реализации для всех типов домика
         b-domik.ie.css
@@ -45,5 +50,6 @@
             b-domik__shadow.css
             b-domik__shadow.ie.css
             b-domik__shadow.png
+</pre>
 %%
 

@@ -5,10 +5,12 @@
 
 **Примеры**
 
-%%
+%%html
+<pre>
     b-menu
     b-popup
     i-popup
+</pre>
 %%
 
 ==== Префикс блока
@@ -50,9 +52,11 @@
 
 **Примеры**
 
-%%
+%%html
+<pre>
     b-menu__item
     b-popup__content
+</pre>
 %%
 
 ==== Имя модификатора блока
@@ -64,10 +68,12 @@
 
 **Примеры**
 
-%%
+%%html
+<pre>
     b-menu_layout_horiz
     b-menu_layout_vert
     b-popup_direction_up
+</pre>
 %%
 
 ==== Имя модификатора элемента
@@ -80,8 +86,10 @@
 
 **Примеры**
 
-%%
+%%html
+<pre>
     b-menu__item_state_current
     b-popupa__content_visibile_yes
     b-popupa__content_visibile_no
+</pre>
 %%

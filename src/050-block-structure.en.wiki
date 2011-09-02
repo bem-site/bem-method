@@ -1,4 +1,4 @@
-=== File system representation
+﻿=== File system representation
 
 Blocks are implemented using multiple technologies:
 
@@ -12,7 +12,8 @@ File system layout follows the naming conventions we described earlier. Multiple
 
 ====Each block is stored in a separate directory, elements and modifiers are stored in separate directories as well.
 
-%%
+%%html
+<pre>
     blocks/
         b-menu/
             _layout/
@@ -26,11 +27,13 @@ File system layout follows the naming conventions we described earlier. Multiple
             b-menu.css
             b-menu.js
             b-menu.bemhtml
+</pre>
 %%
 
 ==== Alternatively, elements and modifiers can be stored under block's directory in separate files.
 
-%%
+%%html
+<pre>
     blocks/
         b-menu/
             b-menu_layout_horiz.css
@@ -42,21 +45,25 @@ File system layout follows the naming conventions we described earlier. Multiple
             b-menu.css
             b-menu.js
             b-menu.bemhtml
+</pre>
 %%
 
 ==== A layout where the code for elements and modifiers is stored in blocks' files is allowed as well:
 
-%%
+%%html
+<pre>
     blocks/
         b-menu/
             b-menu.css
             b-menu.js
             b-menu.bemhtml
+</pre>
 %%
 
 ==== You can also do this (no directories; elements and modifiers in separate files):
 
-%%
+%%html
+<pre>
     blocks/
         b-menu_layout_horiz.css
         b-menu_layout_horiz.bemhtml
@@ -67,13 +74,16 @@ File system layout follows the naming conventions we described earlier. Multiple
         b-menu.css
         b-menu.js
         b-menu.bemhtml
+</pre>
 %%
 
 ==== Or this (no directories; the code for elements and modifiers is stored in blocks' files):
 
-%%
+%%html
+<pre>
     blocks/
         b-menu.css
         b-menu.js
         b-menu.bemhtml
+</pre>
 %%
