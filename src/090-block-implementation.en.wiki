@@ -11,12 +11,12 @@ Structure matters most - implementation details are secondary.
 
 **Example of a b-domik block (login form)**
 
-%%hl xml
+%%html
 <div style="float: right">
-<b>Login form on a page</b>
-<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png"/>
-<b>Login form in a popup</b>
-<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png"/>
+<b>Домик на странице</b>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
+<b>Домик в попапе</b>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
 </div>
 %%
 

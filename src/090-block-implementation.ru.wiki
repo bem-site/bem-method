@@ -11,12 +11,12 @@
 
 **Пример реализации блока b-domik**
 
-%%hl xml
+%%html
 <div style="float: right">
 <b>Домик на странице</b>
-<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png"/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
 <b>Домик в попапе</b>
-<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png"/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
 </div>
 %%
 
