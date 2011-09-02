@@ -1,4 +1,4 @@
-=== BEM technologies
+﻿=== BEM technologies
 
 BEM blocks are usually implemented using multiple technologies.
 

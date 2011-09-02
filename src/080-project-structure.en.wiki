@@ -1,4 +1,4 @@
-=== File system structure of a BEM-based project
+﻿=== File system structure of a BEM-based project
 
 A typical BEM project contains one or more block levels and the page code itself.
 
@@ -10,7 +10,8 @@ A page is the sum total of files that define visual appearance and behavior of a
 
 **Example**
 
-%%
+%%html
+<pre>
     pages/
         index/
             index.css
@@ -18,6 +19,7 @@ A page is the sum total of files that define visual appearance and behavior of a
             index.bemhtml
             index.bemdecl.js
             index.bemjson.js
+</pre>
 %%
 
 Pages are defined using a block declaration file (##.bemdecl##) and a block implementation file (##.bemjson##). These two are the "page source" and are used to generate the final CSS and JS code.
@@ -30,7 +32,7 @@ The b-page page uses b-menu and b-link blocks.
 
 **Example**
 
-%%
+%%hhl js
     exports.blocks = [
         {
             "name": "b-page"
@@ -168,7 +170,8 @@ A block can be defined on several levels. A combination of levels used can be de
 
 ====== Project blocks only
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
@@ -180,11 +183,13 @@ A block can be defined on several levels. A combination of levels used can be de
             b-sidebar/
                 b-sidebar.css
                 b-sidebar.bemhtml
+</pre>
 %%
 
 ====== Project blocks and page blocks
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
@@ -202,17 +207,21 @@ A block can be defined on several levels. A combination of levels used can be de
             index/
                 blocks/
                     b-head/
-                        b-head.css             # b-head is redefined for the index page
+                        b-head.css
+						# b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block added specifically for the index page
+                    b-about-text/
+					# a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
+</pre>
 %%
 
 ====== Framework blocks and project blocks
 
-%%
+%%html
+<pre>
     project/
         framework/
             b-menu/
@@ -228,16 +237,19 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # redefines the b-page block defined on a higher (framework) level
+            b-page/
+			# redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
                 b-sidebar.bemhtml
+</pre>
 %%
 
 ====== Framework, project, and page blocks
 
-%%
+%%html
+<pre>
     project/
         framework/
             b-menu/
@@ -253,7 +265,8 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # Redefines the b-page block defined on a higher (framework) level
+            b-page/
+			# Redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -262,17 +275,21 @@ A block can be defined on several levels. A combination of levels used can be de
             index/
                 blocks/
                     b-head/
-                        b-head.css             # b-head is redefined for the index page
+                        b-head.css
+						# b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block added specifically for the index page
+                    b-about-text/
+					# a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
+</pre>
 %%
 
 ====== Project, page, and theme blocks
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
@@ -281,7 +298,8 @@ A block can be defined on several levels. A combination of levels used can be de
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # Redefines the b-page block defined on a higher (framework) level
+            b-page/
+			# Redefines the b-page block defined on a higher (framework) level
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -290,14 +308,17 @@ A block can be defined on several levels. A combination of levels used can be de
             index/
                 blocks/
                     b-head/
-                        b-head.css             # b-head is redefined for the index page
+                        b-head.css
+						# b-head is redefined for the index page
             about/
                 blocks/
-                    b-about-text/              # a new block added specifically for the index page
+                    b-about-text/
+					# a new block added specifically for the index page
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # Files, which define the 'black' color scheme (stored in the same directory)
+            black/
+			# Files, which define the 'black' color scheme (stored in the same directory)
                 b-head.css
                 b-foot.css
                 b-sidebar.css
@@ -305,5 +326,5 @@ A block can be defined on several levels. A combination of levels used can be de
                 b-head.css
                 b-foot.css
                 b-sidebar.css
+</pre>
 %%
-

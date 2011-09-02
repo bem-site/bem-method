@@ -10,7 +10,8 @@
 
 **Пример**
 
-%%
+%%html
+<pre>
     pages/
         index/
             index.css
@@ -18,6 +19,7 @@
             index.bemhtml
             index.bemdecl.js
             index.bemjson.js
+</pre>
 %%
 
 Страница состоит из описания блоков, которые на ней используются
@@ -32,7 +34,7 @@
 
 **Пример**
 
-%%
+%%hl js
     exports.blocks = [
         {
             "name": "b-page"
@@ -173,7 +175,8 @@
 
 ====== Только блоки проекта
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
@@ -185,11 +188,13 @@
             b-sidebar/
                 b-sidebar.css
                 b-sidebar.bemhtml
+</pre>
 %%
 
 ====== Блоки проекта и отдельных страниц проекта
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
@@ -207,17 +212,21 @@
             index/
                 blocks/
                     b-head/
-                        b-head.css             # переопределили вид шапки на заглавной странице
+                        b-head.css
+                        # переопределили вид шапки на заглавной странице
             about/
                 blocks/
-                    b-about-text/              # добавили новый блок
+                    b-about-text/
+                    # добавили новый блок
                         b-about-text.css
                         b-about-text.bemhtml
+</pre>
 %%
 
 ====== Блоки фреймворка и проекта
 
-%%
+%%html
+<pre>
     project/
         framework/
             b-menu/
@@ -233,16 +242,19 @@
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+            b-page/
+            # переопределение шаблонов b-page из уровня framework'а
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
                 b-sidebar.bemhtml
+</pre>
 %%
 
 ====== Блоки фреймворка, проекта и страниц
 
-%%
+%%html
+<pre>
     project/
         framework/
             b-menu/
@@ -258,7 +270,8 @@
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+            b-page/
+            # переопределение шаблонов b-page из уровня framework'а
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -267,17 +280,21 @@
             index/
                 blocks/
                     b-head/
-                        b-head.css             # переопределили вид шапки на заглавной странице
+                        b-head.css
+                        # переопределили вид шапки на заглавной странице
             about/
                 blocks/
-                    b-about-text/              # добавили новый блок
+                    b-about-text/
+                    # добавили новый блок
                         b-about-text.css
                         b-about-text.bemhtml
+</pre>
 %%
 
 ====== Блоки проекта, страниц и темы
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
@@ -286,7 +303,8 @@
             b-foot/
                 b-foot.css
                 b-foot.bemhtml
-            b-page/                           # переопределение шаблонов b-page из уровня framework'а
+            b-page/
+            # переопределение шаблонов b-page из уровня framework'а
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
@@ -295,14 +313,17 @@
             index/
                 blocks/
                     b-head/
-                        b-head.css             # переопределили вид шапки на заглавной странице
+                        b-head.css
+                        # переопределили вид шапки на заглавной странице
             about/
                 blocks/
-                    b-about-text/              # добавили новый блок
+                    b-about-text/
+                    # добавили новый блок
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # не раскладываем файлы по директориям, кладем их рядом
+            black/
+            # не раскладываем файлы по директориям, кладем их рядом
                 b-head.css
                 b-foot.css
                 b-sidebar.css
@@ -310,5 +331,5 @@
                 b-head.css
                 b-foot.css
                 b-sidebar.css
+</pre>
 %%
-
