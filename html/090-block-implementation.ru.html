@@ -1,9 +1,14 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><div class="shmakowiki"><h2>Реализация блока</h2><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li><tt>HTML</tt>-разметка обеспечивает нужную структуру блока (<tt>XML</tt> + <tt>XSL</tt> или <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt>-правила внешнего вида блока</li><li><tt>JS</tt>-правила поведения блока</li></ul><p>Этот набор технологий может быть разным в зависимости от блока, его назначения, и удобства использования.<br/> Структура блока первична, а реализация блока вторична.</p><p><b>Пример реализации блока b-domik</b></p><div style="float: right">
-<b>Домик на странице</b>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><div class="shmakowiki"><h2>Реализация блока</h2><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li><tt>HTML</tt>-разметка обеспечивает нужную структуру блока (<tt>XML</tt> + <tt>XSL</tt> или <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt>-правила внешнего вида блока</li><li><tt>JS</tt>-правила поведения блока</li></ul><p>Этот набор технологий может быть разным в зависимости от блока, его назначения, и удобства использования.<br/> Структура блока первична, а реализация блока вторична.</p><p><b>Пример реализации блока b-domik</b></p><table>
+<tr><td>
+<b>Домик на странице</b><br/>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
-<b>Домик в попапе</b>
+</td>
+<td>
+<b>Домик в попапе</b><br/>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
-</div><div>    b-domik/
+</td></tr>
+</table><pre>
+    b-domik/
         b-domik.css                                     # общие файлы реализации для всех типов домика
         b-domik.ie.css
         b-domik.js
@@ -26,5 +31,6 @@
         __shadow/                                       # тень — элемент блока
             b-domik__shadow.css
             b-domik__shadow.ie.css
-            b-domik__shadow.png</div></div>
+            b-domik__shadow.png
+</pre></div>
 </body></html>

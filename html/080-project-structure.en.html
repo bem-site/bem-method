@@ -1,10 +1,12 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><div class="shmakowiki"><h2>File system structure of a BEM-based project</h2><p>A typical BEM project contains one or more block levels and the page code itself.</p><p>The following layout examples are recommendations, not requirements.</p><h3>Pages</h3><p>A page is the sum total of files that define visual appearance and behavior of a given page.</p><p><b>Example</b></p><div>    pages/
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><div class="shmakowiki"><h2>File system structure of a BEM-based project</h2><p>A typical BEM project contains one or more block levels and the page code itself.</p><p>The following layout examples are recommendations, not requirements.</p><h3>Pages</h3><p>A page is the sum total of files that define visual appearance and behavior of a given page.</p><p><b>Example</b></p><pre>
+    pages/
         index/
             index.css
             index.js
             index.bemhtml
             index.bemdecl.js
-            index.bemjson.js</div><p>Pages are defined using a block declaration file (<tt>.bemdecl</tt>) and a block implementation file (<tt>.bemjson</tt>). These two are the &quot;page source&quot; and are used to generate the final CSS and JS code.</p><h4>Page source</h4><h5>index.bemdecl.js</h5><p>The b-page page uses b-menu and b-link blocks.</p><p><b>Example</b></p><div>    exports.blocks = [
+            index.bemjson.js
+</pre><p>Pages are defined using a block declaration file (<tt>.bemdecl</tt>) and a block implementation file (<tt>.bemjson</tt>). These two are the &quot;page source&quot; and are used to generate the final CSS and JS code.</p><h4>Page source</h4><h5>index.bemdecl.js</h5><p>The b-page page uses b-menu and b-link blocks.</p><p><b>Example</b></p><div>    exports.blocks = [
         {
             &quot;name&quot;: &quot;b-page&quot;
         },
@@ -94,7 +96,8 @@
     <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
     <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
     <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
-    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Overloading</h3><p>A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. A minimum of 1 set is required.</p>    <img src="/bem-method/images/levels.tech.png"/><p>A block can be defined on several levels. A combination of levels used can be defined on a per-page level. The final implementation of the block is assembled by building the levels sequentially.</p><h4>Defining levels</h4><h5>Project blocks only</h5><div>    project/
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Overloading</h3><p>A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. A minimum of 1 set is required.</p>    <img src="/bem-method/images/levels.tech.png"/><p>A block can be defined on several levels. A combination of levels used can be defined on a per-page level. The final implementation of the block is assembled by building the levels sequentially.</p><h4>Defining levels</h4><h5>Project blocks only</h5><pre>
+    project/
         blocks/
             b-head/
                 b-head.css
@@ -104,7 +107,9 @@
                 b-foot.bemhtml
             b-sidebar/
                 b-sidebar.css
-                b-sidebar.bemhtml</div><h5>Project blocks and page blocks</h5><div>    project/
+                b-sidebar.bemhtml
+</pre><h5>Project blocks and page blocks</h5><pre>
+    project/
         blocks/
             b-head/
                 b-head.css
@@ -126,7 +131,9 @@
                 blocks/
                     b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
-                        b-about-text.bemhtml</div><h5>Framework blocks and project blocks</h5><div>    project/
+                        b-about-text.bemhtml
+</pre><h5>Framework blocks and project blocks</h5><pre>
+    project/
         framework/
             b-menu/
                 b-menu.css
@@ -145,7 +152,9 @@
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
-                b-sidebar.bemhtml</div><h5>Framework, project, and page blocks</h5><div>    project/
+                b-sidebar.bemhtml
+</pre><h5>Framework, project, and page blocks</h5><pre>
+    project/
         framework/
             b-menu/
                 b-menu.css
@@ -174,7 +183,9 @@
                 blocks/
                     b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
-                        b-about-text.bemhtml</div><h5>Project, page, and theme blocks</h5><div>    project/
+                        b-about-text.bemhtml
+</pre><h5>Project, page, and theme blocks</h5><pre>
+    project/
         blocks/
             b-head/
                 b-head.css
@@ -198,12 +209,13 @@
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # Files, which define the &apos;black&apos; color scheme (stored in the same directory)
+            black/                             # Files, which define the 'black' color scheme (stored in the same directory)
                 b-head.css
                 b-foot.css
                 b-sidebar.css
             yellow/
                 b-head.css
                 b-foot.css
-                b-sidebar.css</div></div>
+                b-sidebar.css
+</pre></div>
 </body></html>

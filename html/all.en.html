@@ -1,11 +1,20 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><div class="shmakowiki"><h2>What is BEM?</h2><p>BEM is an approach to front-end development designed with flexibility and ease of modification in mind.</p><p>BEM helps solve the following problems:</p><ul><li>separation of project&apos;s codebase into logical parts:<ul><li>separation of responsibilities between developers of different specialization;</li><li>high-level abstractions - BEM technologies can be used without deep understanding of their internal workings;</li><li>ease of reuse - BEM consists of a large number of loosely coupled components which can be used - and reused - independently.</li></ul></li><li>a singular approach to implementation of parts of the web stack written in different programming languages:<ul><li>web applications are written in multiple programming and markup languages - it is possible to develop with all of them using the same set of terms and approaches;</li><li>images and documentation are treated as &quot;technologies&quot; too.</li></ul></li><li>optimization of the production runtime:<ul><li>build the production runtime with components that are actually being used;</li><li>generate browser-specific production runtimes;</li><li>performance improvements are possible by improving not only the application code, but the &quot;compiler&quot; itself.</li></ul></li></ul><h2>Definitions</h2><h3>Block</h3><p>Block is an independent entity, a &quot;building block&quot; of an application.<br/> Blocks contain information about themselves and their children (block elements).<br/> Blocks can be used on their own or as a part of other blocks.</p><p><b>Example</b><br/> <tt>b-search</tt> - a search form block<br/></p><img src="/bem-method/images/search.ru.png"/><h3>Element</h3><p>Element is a part of a block, that performs a certain function.<br/> Block elements can only appear inside their respective blocks. Elements can be mandatory and optional.</p><p><b>Example</b><br/> An input field and a button are elements of the <tt>b-search</tt> block<br/></p><img src="/bem-method/images/search-e.ru.png"/><h3>Modifier</h3><p>Modifiers are properties of blocks and elements; they change appearance or behavior of the elements, they are applied to.<br/> Each modifier has a name and a value. Multiple modifiers can be applied simultaneously.</p><p><b>Example</b><br/> A <tt>b-search</tt> block modifier sets the background color of a block<i></i></p><img src="/bem-method/images/search-m.ru.png"/><h3>Overloading</h3><p>A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. The final implementation of a block is assembled by building the levels sequentially.</p><p><b>Example</b><br/></p><img src="/bem-method/images/levels.ru.png"/><h2>Naming conventions</h2><h3>Block name</h3><p>Block names are defined as <tt>prefix-block-name</tt>.</p><p><b>Examples</b></p><div>    b-menu
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><div class="shmakowiki"><h2>What is BEM?</h2><p>BEM is an approach to front-end development designed with flexibility and ease of modification in mind.</p><p>BEM helps solve the following problems:</p><ul><li>separation of project&apos;s codebase into logical parts:<ul><li>separation of responsibilities between developers of different specialization;</li><li>high-level abstractions - BEM technologies can be used without deep understanding of their internal workings;</li><li>ease of reuse - BEM consists of a large number of loosely coupled components which can be used - and reused - independently.</li></ul></li><li>a singular approach to implementation of parts of the web stack written in different programming languages:<ul><li>web applications are written in multiple programming and markup languages - it is possible to develop with all of them using the same set of terms and approaches;</li><li>images and documentation are treated as &quot;technologies&quot; too.</li></ul></li><li>optimization of the production runtime:<ul><li>build the production runtime with components that are actually being used;</li><li>generate browser-specific production runtimes;</li><li>performance improvements are possible by improving not only the application code, but the &quot;compiler&quot; itself.</li></ul></li></ul><h2>Definitions</h2><h3>Block</h3><p>Block is an independent entity, a &quot;building block&quot; of an application.<br/> Blocks contain information about themselves and their children (block elements).<br/> Blocks can be used on their own or as a part of other blocks.</p><p><b>Example</b><br/> <tt>b-search</tt> - a search form block<br/></p><img src="/bem-method/images/search.ru.png"/><h3>Element</h3><p>Element is a part of a block, that performs a certain function.<br/> Block elements can only appear inside their respective blocks. Elements can be mandatory and optional.</p><p><b>Example</b><br/> An input field and a button are elements of the <tt>b-search</tt> block<br/></p><img src="/bem-method/images/search-e.ru.png"/><h3>Modifier</h3><p>Modifiers are properties of blocks and elements; they change appearance or behavior of the elements, they are applied to.<br/> Each modifier has a name and a value. Multiple modifiers can be applied simultaneously.</p><p><b>Example</b><br/> A <tt>b-search</tt> block modifier sets the background color of a block<i></i></p><img src="/bem-method/images/search-m.ru.png"/><h3>Overloading</h3><p>A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. The final implementation of a block is assembled by building the levels sequentially.</p><p><b>Example</b><br/></p><img src="/bem-method/images/levels.ru.png"/><h2>Naming conventions</h2><h3>Block name</h3><p>Block names are defined as <tt>prefix-block-name</tt>.</p><p><b>Examples</b></p><pre>
+    b-menu
     b-popup
-    i-popup</div><h3>Block prefix</h3><p>We commonly use two prefixes to define the designation of a block.</p><p><b>b- (as in block)</b><br/> The b- prefix is used for blocks that have a user interface or, more generally, a visual representation.</p><p><b>Example</b><br/> A popup window has a visual representation. It may, or may not, contain a close button, or have a balloon-like appearance. It can be displayed in different directions or have different color schemes.</p><img src="/bem-method/images/b-popup.png"/><p><b>i- (as in include)</b><br/> The i- prefix is used for abstract blocks, which do not exist on their own, but are used to build other blocks.<br/> i- blocks do not have a visual representation, they only implement some logic.</p><p><b>Example</b><br/> The <tt>i-popup</tt> block does not have a visual representation, but it implements certain logic required by the <tt>b-popup</tt> block, which cannot exist without <tt>i-popup</tt>.</p><img src="/bem-method/images/i-popup.png"/><h3>Element name</h3><p>Element names specify unambiguously, which block the element belongs to.<br/> Element names are defined as: <tt>b-block-name_<span>_</span>element-name</tt></p><p><b>Examples</b></p><div>    b-menu__item
-    b-popup__content</div><h3>Naming of block modifiers</h3><p>Modifier names specify unambiguously, which block the modifier belongs to. Fully qualified modifier names are defined as: <tt>b-block-name_modifier-name_modifier-value</tt>.</p><p><b>Examples</b></p><div>    b-menu_layout_horiz
+    i-popup
+</pre><h3>Block prefix</h3><p>We commonly use two prefixes to define the designation of a block.</p><p><b>b- (as in block)</b><br/> The b- prefix is used for blocks that have a user interface or, more generally, a visual representation.</p><p><b>Example</b><br/> A popup window has a visual representation. It may, or may not, contain a close button, or have a balloon-like appearance. It can be displayed in different directions or have different color schemes.</p><img src="/bem-method/images/b-popup.png"/><p><b>i- (as in include)</b><br/> The i- prefix is used for abstract blocks, which do not exist on their own, but are used to build other blocks.<br/> i- blocks do not have a visual representation, they only implement some logic.</p><p><b>Example</b><br/> The <tt>i-popup</tt> block does not have a visual representation, but it implements certain logic required by the <tt>b-popup</tt> block, which cannot exist without <tt>i-popup</tt>.</p><img src="/bem-method/images/i-popup.png"/><h3>Element name</h3><p>Element names specify unambiguously, which block the element belongs to.<br/> Element names are defined as: <tt>b-block-name_<span>_</span>element-name</tt></p><p><b>Examples</b></p><pre>
+    b-menu__item
+    b-popup__content
+</pre><h3>Naming of block modifiers</h3><p>Modifier names specify unambiguously, which block the modifier belongs to. Fully qualified modifier names are defined as: <tt>b-block-name_modifier-name_modifier-value</tt>.</p><p><b>Examples</b></p><pre>
+    b-menu_layout_horiz
     b-menu_layout_vert
-    b-popup_direction_up</div><h3>Naming of element modifiers</h3><p>Modifier names specify unambiguously, which block and which element the modifier belongs to. Fully qualified modifier names are defined as: <tt>b-block-name_<span>_</span>element-name_modifier-name_modifier-value</tt>.</p><p><b>Examples</b></p><div>    b-menu__item_state_current
+    b-popup_direction_up
+</pre><h3>Naming of element modifiers</h3><p>Modifier names specify unambiguously, which block and which element the modifier belongs to. Fully qualified modifier names are defined as: <tt>b-block-name_<span>_</span>element-name_modifier-name_modifier-value</tt>.</p><p><b>Examples</b></p><pre>
+    b-menu__item_state_current
     b-popupa__content_visibile_yes
-    b-popupa__content_visibile_no</div><h2>Modifying the blocks</h2><p>Blocks can be modified using:</p><ul><li>modifier classes</li><li>context</li><li>overloading</li></ul><h3>Modifiers</h3><p>A modifier class is added to a block or an element, and it contains the necessary appearance or behavior changes.</p><p><b>Examples</b></p><p>A b-popup block does not have background set by default.</p><img src="/bem-method/images/b-popup-tr.png"/><p>By adding a <tt>theme</tt> modifier to the <tt>b-popup</tt> block, background color can be specified for this block.<br/> <tt>theme=yellow</tt> specifies a yellow background:<br/></p><img src="/bem-method/images/b-popup-yellow.png"/><p><tt>theme=black</tt> specifies a black background:<br/></p><img src="/bem-method/images/b-popup-bl.png"/><p>A block can have several modifiers applied at once.</p><p><b>Examples</b></p><p><tt>theme</tt> modifier specifies background color, <tt>direction</tt> modifier specifies dropdown behavior (whether popups should open to the left, right, etc).</p><p><tt>theme=yellow</tt> and <tt>direction=left</tt> — popup window with yellow background, opens to the left:<br/></p><img src="/bem-method/images/b-popup-left.png"/><p><tt>theme=yellow</tt> and <tt>direction=right</tt> — popup window with yellow background, opens to the right:</p><img src="/bem-method/images/b-popup-right.png"/><p>Modifiers can alter the blocks&apos; structure (by adding/removing elements) and implementation.</p><p><b>Example</b><br/> A <tt>has-close=yes</tt> modifier adds a closing button and adjusts block&apos;s padding accordingly.</p><img src="/bem-method/images/b-popup-close.png"/><h3>Modification by context</h3><p>A block can appear or behave differently, when put inside another block.</p><p><b>Example</b><br/> Text color of the embedded block changes from green to red, when put inside a block with blue background.</p><p><b>Examples</b></p><p><tt>b-lang-switcher</tt> - language switcher block<br/></p><img src="/bem-method/images/lang-switcher.png"/><p><tt>b-lang-switcher</tt> block located in the footer (<tt>b-foot</tt>) - font size becomes smaller.<br/></p><img src="/bem-method/images/lang-switcher-foot.png"/><h3>Modification by overloading</h3><p>Appearance or behavior changes can be introduced on a higher level.</p><p><b>Example</b><br/> The common part of the block&apos;s implementation belongs to the framework (and is stored in the framework&apos;s repository) while some local modifications belong to a specific project (and are stored in the project&apos;s repository in separate files).</p><p>See <tt><a href="https://github.com/toivonen/bem-bl-test">bem-bl-test</a></tt> for an example of modifying the <a href="https://github.com/toivonen/bem-bl/tree/master/blocks-desktop/b-link">common</a> <tt>b-link</tt> implementation to suit the needs of the <tt>bem-bl-test</tt> project.</p><h2>File system representation</h2><p>Blocks are implemented using multiple technologies:</p><ul><li>HTML for markup (<tt>XML</tt> + <tt>XSL</tt> = <tt>HTML</tt> or <tt>bemjson</tt> + <tt>bemhtml</tt> = <tt>HTML</tt>)</li><li>CSS to describe presentation semantics</li><li>JavaScript to describe behavior</li></ul><p>Depending on the puprose of a block, different sets of technologies can be used.</p><p>File system layout follows the naming conventions we described earlier. Multiple variants are possible as described below.</p><h3>Each block is stored in a separate directory, elements and modifiers are stored in separate directories as well.</h3><div>    blocks/
+    b-popupa__content_visibile_no
+</pre><h2>Modifying the blocks</h2><p>Blocks can be modified using:</p><ul><li>modifier classes</li><li>context</li><li>overloading</li></ul><h3>Modifiers</h3><p>A modifier class is added to a block or an element, and it contains the necessary appearance or behavior changes.</p><p><b>Examples</b></p><p>A b-popup block does not have background set by default.</p><img src="/bem-method/images/b-popup-tr.png"/><p>By adding a <tt>theme</tt> modifier to the <tt>b-popup</tt> block, background color can be specified for this block.<br/> <tt>theme=yellow</tt> specifies a yellow background:<br/></p><img src="/bem-method/images/b-popup-yellow.png"/><p><tt>theme=black</tt> specifies a black background:<br/></p><img src="/bem-method/images/b-popup-bl.png"/><p>A block can have several modifiers applied at once.</p><p><b>Examples</b></p><p><tt>theme</tt> modifier specifies background color, <tt>direction</tt> modifier specifies dropdown behavior (whether popups should open to the left, right, etc).</p><p><tt>theme=yellow</tt> and <tt>direction=left</tt> — popup window with yellow background, opens to the left:<br/></p><img src="/bem-method/images/b-popup-left.png"/><p><tt>theme=yellow</tt> and <tt>direction=right</tt> — popup window with yellow background, opens to the right:</p><img src="/bem-method/images/b-popup-right.png"/><p>Modifiers can alter the blocks&apos; structure (by adding/removing elements) and implementation.</p><p><b>Example</b><br/> A <tt>has-close=yes</tt> modifier adds a closing button and adjusts block&apos;s padding accordingly.</p><img src="/bem-method/images/b-popup-close.png"/><h3>Modification by context</h3><p>A block can appear or behave differently, when put inside another block.</p><p><b>Example</b><br/> Text color of the embedded block changes from green to red, when put inside a block with blue background.</p><p><b>Examples</b></p><p><tt>b-lang-switcher</tt> - language switcher block<br/></p><img src="/bem-method/images/lang-switcher.png"/><p><tt>b-lang-switcher</tt> block located in the footer (<tt>b-foot</tt>) - font size becomes smaller.<br/></p><img src="/bem-method/images/lang-switcher-foot.png"/><h3>Modification by overloading</h3><p>Appearance or behavior changes can be introduced on a higher level.</p><p><b>Example</b><br/> The common part of the block&apos;s implementation belongs to the framework (and is stored in the framework&apos;s repository) while some local modifications belong to a specific project (and are stored in the project&apos;s repository in separate files).</p><p>See <tt><a href="https://github.com/toivonen/bem-bl-test">bem-bl-test</a></tt> for an example of modifying the <a href="https://github.com/toivonen/bem-bl/tree/master/blocks-desktop/b-link">common</a> <tt>b-link</tt> implementation to suit the needs of the <tt>bem-bl-test</tt> project.</p><h2>File system representation</h2><p>Blocks are implemented using multiple technologies:</p><ul><li>HTML for markup (<tt>XML</tt> + <tt>XSL</tt> = <tt>HTML</tt> or <tt>bemjson</tt> + <tt>bemhtml</tt> = <tt>HTML</tt>)</li><li>CSS to describe presentation semantics</li><li>JavaScript to describe behavior</li></ul><p>Depending on the puprose of a block, different sets of technologies can be used.</p><p>File system layout follows the naming conventions we described earlier. Multiple variants are possible as described below.</p><h3>Each block is stored in a separate directory, elements and modifiers are stored in separate directories as well.</h3><pre>
+    blocks/
         b-menu/
             _layout/
                 b-menu_layout_horiz.css
@@ -17,7 +26,9 @@
                 b-menu__elem.bemhtml
             b-menu.css
             b-menu.js
-            b-menu.bemhtml</div><h3>Alternatively, elements and modifiers can be stored under block&apos;s directory in separate files.</h3><div>    blocks/
+            b-menu.bemhtml
+</pre><h3>Alternatively, elements and modifiers can be stored under block&apos;s directory in separate files.</h3><pre>
+    blocks/
         b-menu/
             b-menu_layout_horiz.css
             b-menu_layout_horiz.bemhtml
@@ -27,11 +38,15 @@
             b-menu__elem.bemhtml
             b-menu.css
             b-menu.js
-            b-menu.bemhtml</div><h3>A layout where the code for elements and modifiers is stored in blocks&apos; files is allowed as well:</h3><div>    blocks/
+            b-menu.bemhtml
+</pre><h3>A layout where the code for elements and modifiers is stored in blocks&apos; files is allowed as well:</h3><pre>
+    blocks/
         b-menu/
             b-menu.css
             b-menu.js
-            b-menu.bemhtml</div><h3>You can also do this (no directories; elements and modifiers in separate files):</h3><div>    blocks/
+            b-menu.bemhtml
+</pre><h3>You can also do this (no directories; elements and modifiers in separate files):</h3><pre>
+    blocks/
         b-menu_layout_horiz.css
         b-menu_layout_horiz.bemhtml
         b-menu_layout_vertical.css
@@ -40,10 +55,13 @@
         b-menu__elem.bemhtml
         b-menu.css
         b-menu.js
-        b-menu.bemhtml</div><h3>Or this (no directories; the code for elements and modifiers is stored in blocks&apos; files):</h3><div>    blocks/
+        b-menu.bemhtml
+</pre><h3>Or this (no directories; the code for elements and modifiers is stored in blocks&apos; files):</h3><pre>
+    blocks/
         b-menu.css
         b-menu.js
-        b-menu.bemhtml</div><h2>BEM technologies</h2><p>BEM blocks are usually implemented using multiple technologies.</p>    <img src="/bem-method/images/levels.tech.png"/><h3>HTML</h3><p>Two different approaches to HTML markup are possible:</p><p>http:<i>clubs.ya.ru/bem/replies.xml?item_no=712</i></p><h4>Using HTML tags and CSS classes</h4><p>Each BEM entity is defined by an HTML tag and corresponding CSS classes.</p><pre class="ohl ohl-xml"><code>    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+        b-menu.bemhtml
+</pre><h2>BEM technologies</h2><p>BEM blocks are usually implemented using multiple technologies.</p>    <img src="/bem-method/images/levels.tech.png"/><h3>HTML</h3><p>Two different approaches to HTML markup are possible:</p><p>http:<i>clubs.ya.ru/bem/replies.xml?item_no=712</i></p><h4>Using HTML tags and CSS classes</h4><p>Each BEM entity is defined by an HTML tag and corresponding CSS classes.</p><pre class="ohl ohl-xml"><code>    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
         <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>i <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name__elem<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>i<span class="ohl-punctuation">&gt;</span></span>
         ...
     <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
@@ -91,13 +109,15 @@
             <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
         <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>td<span class="ohl-punctuation">&gt;</span></span>
     <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>tr<span class="ohl-punctuation">&gt;</span></span>
-    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>table<span class="ohl-punctuation">&gt;</span></span></code></pre><h2>File system structure of a BEM-based project</h2><p>A typical BEM project contains one or more block levels and the page code itself.</p><p>The following layout examples are recommendations, not requirements.</p><h3>Pages</h3><p>A page is the sum total of files that define visual appearance and behavior of a given page.</p><p><b>Example</b></p><div>    pages/
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>table<span class="ohl-punctuation">&gt;</span></span></code></pre><h2>File system structure of a BEM-based project</h2><p>A typical BEM project contains one or more block levels and the page code itself.</p><p>The following layout examples are recommendations, not requirements.</p><h3>Pages</h3><p>A page is the sum total of files that define visual appearance and behavior of a given page.</p><p><b>Example</b></p><pre>
+    pages/
         index/
             index.css
             index.js
             index.bemhtml
             index.bemdecl.js
-            index.bemjson.js</div><p>Pages are defined using a block declaration file (<tt>.bemdecl</tt>) and a block implementation file (<tt>.bemjson</tt>). These two are the &quot;page source&quot; and are used to generate the final CSS and JS code.</p><h4>Page source</h4><h5>index.bemdecl.js</h5><p>The b-page page uses b-menu and b-link blocks.</p><p><b>Example</b></p><div>    exports.blocks = [
+            index.bemjson.js
+</pre><p>Pages are defined using a block declaration file (<tt>.bemdecl</tt>) and a block implementation file (<tt>.bemjson</tt>). These two are the &quot;page source&quot; and are used to generate the final CSS and JS code.</p><h4>Page source</h4><h5>index.bemdecl.js</h5><p>The b-page page uses b-menu and b-link blocks.</p><p><b>Example</b></p><div>    exports.blocks = [
         {
             &quot;name&quot;: &quot;b-page&quot;
         },
@@ -187,7 +207,8 @@
     <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
     <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
     <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
-    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Overloading</h3><p>A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. A minimum of 1 set is required.</p>    <img src="/bem-method/images/levels.tech.png"/><p>A block can be defined on several levels. A combination of levels used can be defined on a per-page level. The final implementation of the block is assembled by building the levels sequentially.</p><h4>Defining levels</h4><h5>Project blocks only</h5><div>    project/
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Overloading</h3><p>A project can consist of several sets of block implementations. Each set, or level, extends the higher-level set. A minimum of 1 set is required.</p>    <img src="/bem-method/images/levels.tech.png"/><p>A block can be defined on several levels. A combination of levels used can be defined on a per-page level. The final implementation of the block is assembled by building the levels sequentially.</p><h4>Defining levels</h4><h5>Project blocks only</h5><pre>
+    project/
         blocks/
             b-head/
                 b-head.css
@@ -197,7 +218,9 @@
                 b-foot.bemhtml
             b-sidebar/
                 b-sidebar.css
-                b-sidebar.bemhtml</div><h5>Project blocks and page blocks</h5><div>    project/
+                b-sidebar.bemhtml
+</pre><h5>Project blocks and page blocks</h5><pre>
+    project/
         blocks/
             b-head/
                 b-head.css
@@ -219,7 +242,9 @@
                 blocks/
                     b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
-                        b-about-text.bemhtml</div><h5>Framework blocks and project blocks</h5><div>    project/
+                        b-about-text.bemhtml
+</pre><h5>Framework blocks and project blocks</h5><pre>
+    project/
         framework/
             b-menu/
                 b-menu.css
@@ -238,7 +263,9 @@
                 b-page.bemhtml
             b-sidebar/
                 b-sidebar.css
-                b-sidebar.bemhtml</div><h5>Framework, project, and page blocks</h5><div>    project/
+                b-sidebar.bemhtml
+</pre><h5>Framework, project, and page blocks</h5><pre>
+    project/
         framework/
             b-menu/
                 b-menu.css
@@ -267,7 +294,9 @@
                 blocks/
                     b-about-text/              # a new block added specifically for the index page
                         b-about-text.css
-                        b-about-text.bemhtml</div><h5>Project, page, and theme blocks</h5><div>    project/
+                        b-about-text.bemhtml
+</pre><h5>Project, page, and theme blocks</h5><pre>
+    project/
         blocks/
             b-head/
                 b-head.css
@@ -291,19 +320,21 @@
                         b-about-text.css
                         b-about-text.bemhtml
         themes/
-            black/                             # Files, which define the &apos;black&apos; color scheme (stored in the same directory)
+            black/                             # Files, which define the 'black' color scheme (stored in the same directory)
                 b-head.css
                 b-foot.css
                 b-sidebar.css
             yellow/
                 b-head.css
                 b-foot.css
-                b-sidebar.css</div><h2>Implementing a block</h2><p>Blocks are implemented using multiple technologies:</p><ul><li><tt>HTML</tt> for markup(<tt>XML</tt> + <tt>XSL</tt> or <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt> to describe presentation semantics</li><li><tt>JS</tt> to describe behavior</li></ul><p>Depending on the puprose of a block, different sets of technologies can be used.<br/> Structure matters most - implementation details are secondary.</p><p><b>Example of a b-domik block (login form)</b></p><div style="float: right">
+                b-sidebar.css
+</pre><h2>Implementing a block</h2><p>Blocks are implemented using multiple technologies:</p><ul><li><tt>HTML</tt> for markup(<tt>XML</tt> + <tt>XSL</tt> or <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt> to describe presentation semantics</li><li><tt>JS</tt> to describe behavior</li></ul><p>Depending on the puprose of a block, different sets of technologies can be used.<br/> Structure matters most - implementation details are secondary.</p><p><b>Example of a b-domik block (login form)</b></p><div style="float: right">
 <b>Домик на странице</b>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
 <b>Домик в попапе</b>
 <img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
-</div><div>    b-domik/
+</div><pre>
+    b-domik/
         b-domik.css                                     # common files
         b-domik.ie.css
         b-domik.js
@@ -317,14 +348,15 @@
             b-domik_type_popup.ie.css
             b-domik_type_popup.js
             b-domik_type_popup.xsl
-        __lock/                                         # &quot;lock&quot; element (denotes secure login)
+        __lock/                                         # "lock" element (denotes secure login)
             b-domik__lock.css
             b-domik__lock.png
             b-domik__lock.xsl
-            _visibility/                                # a modifier of the &quot;lock&quot; element which makes the element visible
+            _visibility/                                # a modifier of the "lock" element which makes the element visible
                 b-domik__lock_visibility_visible.css
-        __shadow/                                       # &quot;shadow&quot; element
+        __shadow/                                       # "shadow" element
             b-domik__shadow.css
             b-domik__shadow.ie.css
-            b-domik__shadow.png</div><h2>Toolkit</h2><p><tt>bem-tools</tt> command-line tools are being developed to enhance development experience. BEM tools include a command-line utility, that can be used to quickly create BEM source files using different technologies (HTML/CSS/JS), and a BEM compiler.</p><p>Main repository is at <a href="https://github.com/bem/bem-tools">bem-tools</a></p><h1>Useful links (all in Russian)</h1><h2>Related links</h2><h3>Source code repositories</h3><ul><li><a href="https://github.com/bem/bem-bl">bem-bl Block library</a></li><li><a href="https://github.com/bem/bem-tools">CLI tools</a></li></ul></div>
+            b-domik__shadow.png
+</pre><h2>Toolkit</h2><p><tt>bem-tools</tt> command-line tools are being developed to enhance development experience. BEM tools include a command-line utility, that can be used to quickly create BEM source files using different technologies (HTML/CSS/JS), and a BEM compiler.</p><p>Main repository is at <a href="https://github.com/bem/bem-tools">bem-tools</a></p><h1>Useful links (all in Russian)</h1><h2>Related links</h2><h3>Source code repositories</h3><ul><li><a href="https://github.com/bem/bem-bl">bem-bl Block library</a></li><li><a href="https://github.com/bem/bem-tools">CLI tools</a></li></ul></div>
 </body></html>
