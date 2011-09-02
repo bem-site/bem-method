@@ -288,11 +288,13 @@
                     # добавили новый блок
                         b-about-text.css
                         b-about-text.bemhtml
+</pre>
 %%
 
 ====== Блоки проекта, страниц и темы
 
-%%
+%%html
+<pre>
     project/
         blocks/
             b-head/
