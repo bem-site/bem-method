@@ -6,5 +6,5 @@
 
 Подход к web-разработке, который позволяет получить гибкий, легко изменяемый код.
 
-[Документация одной страницей](http://bem.github.com/bem-method/bin/all.ru.html)
+[Документация одной страницей](http://bem.github.com/bem-method/html/all.ru.html)
 
