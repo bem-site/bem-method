@@ -1,7 +1,9 @@
 all:: bem-bl
 all:: html
 
-html: $(patsubst %.wiki,%.html,$(patsubst src%,html%,$(wildcard src/*.wiki))) html/all.ru.html html/all.en.html
+html:: $(patsubst %.wiki,%.html,$(patsubst src%,html%,$(wildcard src/*.wiki)))
+html:: $(patsubst %.wiki,%.html,$(wildcard pages/*/*.wiki))
+html:: html/all.ru.html html/all.en.html
 
 .PRECIOUS: %.html
 %.html: %.wiki
