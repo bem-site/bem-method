@@ -1,0 +1,83 @@
+<div class="shmakowiki"><h2>Что такое БЭМ?</h2><p>В Яндексе свёрстали множество проектов, счёт страниц идёт на десятки тысяч. Подходы, применяемые разработчиками Яндекса к HTML/CSS-вёрстке и клиентскому коду вообще, постоянно эволюционировали.</p><p>Проекты, разрабатываемые в Яндексе, и процессы их разработки имеют ряд особенностей:</p><ul><li>Типовые проекты должны разрабатываться быстро, но жить долго<br/>
+   Нужно уметь за короткий срок создать проект, архитектура которого позволит без
+   труда поддерживать и развивать его долгие годы.</li><li>Над проектом работает много людей<br/>
+   Нужно уметь эффективно организовывать работу команд, как из 1–2 разработчиков,
+   так и из десятков.</li><li>Масштабируемость команд<br/>
+   Добавление новых людей в команду должно улучшать производительность. Необходима
+   возможность быстро вводить новых разработчиков в курс дела и выделять им
+   собственные зоны ответственности.<br/>
+   Для того, чтобы с одним и тем же кодом можно было работать долгое время и разным
+   составом команды, код должен быть хорошо структурирован.</li><li>Повторное использование кода<br/>
+   Каждый новый проект или фича не должны писаться с нуля. Если где-то внутри
+   компании уже выполнялась похожая задача, нужно максимально повторно использовать
+   полученный в результате код.</li></ul><p>Мы искали решения возникающих перед нами проблем. Начиная с какого-то момента, эти решения составили <tt>методологию БЭМ</tt>.<br/> Один из самых распространённых примеров методологии в программировании – это ООП. ООП – парадигма программирования, применимая во многих языка. Точно также и методология БЭМ – способ описания действительности в коде, набор паттернов и способ думать о сущностях вне зависимости от того, на каком языке программирования это реализуется.<br/> На основе этой методологии разработаны подходы к вёрстке и технические решения, которые позволяют нам быстро создавать новые страницы и легко поддерживать уже существующие.</p><p><tt>БЭМ</tt> расшифровывается как Блок-Элемент-Модификатор, смысл этих терминов раскрыт ниже.<br/> В этой статье описаны теоретические аспекты подходов к web-разработке, применяемых в Яндексе. Помимо теории у нас, конечно, есть и практические разработки библиотек и инструментов. Ссылки на них представлены в тексте статьи как дополнительные материалы.</p><p>Итак, каким принципам отвечают наш код и процессы разработки:</p><h2>Единая предметная область</h2><p>Представьте обычный сайт. Например, такой как на картинке.</p><div style="text-align:center">
+<img src="images/site.png"/>
+</div><p>При разработке и развитии сайта удобно мысленно выделить «блоки», из которых сайт состоит.<br/> Например, на этом макете есть <tt>Шапка</tt>, <tt>Основной лайаут</tt> и <tt>Подвал</tt>. Шапка в свою очередь состоит из <tt>Логотипа</tt>, <tt>Поиска</tt>, <tt>Блока авторизации</tt> и <tt>Меню</tt>. Основной лайаут содержит <tt>Заголовок страницы</tt> и <tt>Блок текста</tt>.</p><div style="text-align:center">
+<img src="images/site-marked.png"/>
+</div><p>Если у каждой части сайта есть название, этими терминами удобно пользоваться при общении внутри команды. Менеджер может попросить</p><ul><li>увеличить <tt>Шапку</tt>, или</li><li>Сделать ещё одну страницу, где в <tt>Шапке</tt> нет <tt>Поиска</tt></li></ul><p>Можно попросить JavaScript-разработчика</p><ul><li>Сделать <tt>Блок авторизации</tt> анимированным, и т.д.</li></ul><p>Итак,</p><h3>Блок</h3><p>Мы называем блоком некоторую самостоятельную сущность, кирпичик проекта. Блок может быть простым или составным, то есть содержать в себе другие блоки.</p><p><b>Пример</b><br/> Блок поисковой формы<br/></p><div style="text-align:center">
+<img src="images/search-block.png"/>
+</div><h3>Элемент</h3><p>Элемент – это какая-то часть блока, отвечающая за отдельную функцию. Элемент может находиться только в составе блока и не имеет смысла в отрыве от него.</p><p><b>Пример</b><br/> Поле ввода и кнопка — элементы блока</p><div style="text-align:center">
+<img src="images/search-block-marked.png"/>
+</div><h2>Cредства описания страницы и шаблоны</h2><p>Блоки и элементы – это обозначение содержания страницы. Помимо факта присутствия конкретных блоков на странице, важно также их расположение.</p><p>Блоки (или элементы) могут идти друг за другом в определённом порядке:</p><p>Например, товары в интернет-магазине:</p><div style="text-align:center">
+<img src="images/goods-list.png"/>
+</div><p>Или пункты меню:</p><div style="text-align:center">
+<img src="images/menu-items.png"/>
+</div><p>Блоки могут быть вложены друг в друга:</p><p>Например, блок Шапка содержит другие блоки:</p><div style="text-align:center">
+<img src="images/head-marked.png"/>
+</div><p>Чтобы быстро изменять содержание страницы, добавлять новые блоки, перемещать их друг относительно друга, нужен способ описания страницы в виде текста. Для этого необходимо, чтобы каждому блоку или элементу соответствовало ключевое слово.</p><p>Ключевое слово, обозначающее конкретный блок, называется <tt>именем блока</tt>.</p><p>Например, <tt>menu</tt> для меню или <tt>head</tt> для шапки сайта.</p><p>Ключевое слово, обозначающее элемент, называется <tt>именем элемента</tt>.</p><p>Например, каждый пункт меню – это элемент <tt>item</tt> блока <tt>menu</tt>.</p><p>Имя блока должно быть уникальным, из него однозначно следует, о каком блоке идёт речь. Одинаковые имена могут быть только у одинаковых блоков. В этом случае мы говорим о том, что один блок представлен на странице 2 (3, 4, ...) раза.</p><p>Имя элемента должно быть уникальным только в пределах блока. Элемент может повторяться в блоке несколько раз. Например, пункты меню.</p><div style="text-align:center">
+<img src="images/menu-items.png"/>
+</div><p>Такие ключевые слова нужно размещать в определённом порядке. Для этого подойдут форматы данных с использованием вложенности. Например, XML или JSON:</p><pre class="ohl ohl-xml"><code><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b:page<span class="ohl-punctuation">&gt;</span></span>
+  <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b:head<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b:menu<span class="ohl-punctuation">&gt;</span></span>
+      ...
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b:menu<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>e:column<span class="ohl-punctuation">&gt;</span></span>
+      <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b:logo<span class="ohl-punctuation">/&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>e:column<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>e:column<span class="ohl-punctuation">&gt;</span></span>
+      <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b:search<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>e:input<span class="ohl-punctuation">/&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>e:button<span class="ohl-punctuation">&gt;</span></span>Search<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>e:button<span class="ohl-punctuation">&gt;</span></span>
+      <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b:search<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>e:column<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>e:column<span class="ohl-punctuation">&gt;</span></span>
+      <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>b:auth<span class="ohl-punctuation">&gt;</span></span>
+        ...
+      <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b:auth<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>e:column<span class="ohl-punctuation">&gt;</span></span>
+  <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b:head<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>b:page<span class="ohl-punctuation">&gt;</span></span></code></pre><p>В данном примере пространства имён <tt>b</tt> и <tt>e</tt> использованы, чтобы отделять узлы про блоки от узлов про элементы.</p><p>То же самое в JSON:</p><pre class="ohl ohl-js"><code><span class="ohl-punctuation">{</span>
+  <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>page<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+  <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+    <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>head<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+      <span class="ohl-punctuation">{</span> <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>menu<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span> <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-operator">.</span><span class="ohl-operator">.</span><span class="ohl-operator">.</span> <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+      <span class="ohl-punctuation">{</span>
+        <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>column<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span> <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>logo<span class="ohl-punctuation">&apos;</span></span> <span class="ohl-punctuation">}</span>
+      <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+      <span class="ohl-punctuation">{</span>
+        <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>column<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+          <span class="ohl-punctuation">{</span>
+            <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>search<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+            <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+              <span class="ohl-punctuation">{</span> <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>input<span class="ohl-punctuation">&apos;</span></span> <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+              <span class="ohl-punctuation">{</span>
+                <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>button<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Search<span class="ohl-punctuation">&apos;</span></span>
+              <span class="ohl-punctuation">}</span>
+            <span class="ohl-punctuation">]</span>
+          <span class="ohl-punctuation">}</span>
+        <span class="ohl-punctuation">]</span>
+      <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+      <span class="ohl-punctuation">{</span>
+        <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>column<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+          <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>i-auth<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+          <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-operator">.</span><span class="ohl-operator">.</span><span class="ohl-operator">.</span>
+        <span class="ohl-punctuation">}</span>
+      <span class="ohl-punctuation">}</span>
+    <span class="ohl-punctuation">]</span>
+  <span class="ohl-punctuation">}</span>
+<span class="ohl-punctuation">}</span></code></pre><p>На примерах выше приведена объектная модель с вложенностью блоков и элементов в другие блоки. Также в описании страницы присутствуют произвольные данные.<br/> Такую структуру мы назваем <tt>БЭМ-деревом</tt> (по аналогии с DOM-деревом).</p><p>Конечный HTML для браузера получается из БЭМ-дерева страницы путём наложения шаблонов (например, XSL-шаблоны или JavaScript).</p><p>Если разработчику нужно переместить блок в другое место на странице, это делается при помощи изменения дерева. Конечный вид шаблоны сделают сами.</p><p>В своих последних разработках мы ориентируемся на JSON как формат описания страницы. Он превращается в HTML при помощи JavaScript-based шаблонизатора.<br/> Ссылки на конкретные инструменты можно найти в конце статьи.</p></div>
