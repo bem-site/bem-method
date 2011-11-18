@@ -183,4 +183,63 @@
 <img src="images/button.png"/>
 </div><p>При наведении курсора на этот блок он меняет свой внешний вид.</p><div style="text-align: center">
 <img src="images/button-cursor.png"/>
-</div><p>Менеджер может попросить:</p><ul><li>Использовать такую же кнопку на другой странице</li></ul><p>Просто CSS-реализации блока недостаточно. Ведь в данном случае, чтобы полностью повторить блок, нужно повторить и его поведение, описанное в JavaScript.</p><p>Таким образом, блок должен знать о себе всё. То есть реализация блока подразумевает описание его внешнего вида и поведения во всех необходимых дехнологиях. Этот принцип мы называем <tt>мультилингвальность</tt>.</p><p><tt>Мультилингвальность</tt> - это описание блока на всех языках (технологиях), необходимых для его работы.</p><p>Если блок нужно прредставить на странице, у него должны быть реализованы технологии:</p><ul><li>шаблоны (XSL, TT2, JavaScript, и т.д.), превращающие декларацию блока на странице в HTML-код</li><li>CSS, отвечающий за внешний вид блока</li></ul><p>Когда у блока также есть динамическое поведение, к этому списку добавляются:</p><ul><li>JS-реализация блока</li></ul><p>В список технологий входит всё, что относится к блоку, в том числе и:</p><ul><li>Картинки блока</li></ul></div>
+</div><p>Менеджер может попросить:</p><ul><li>Использовать такую же кнопку на другой странице</li></ul><p>Просто CSS-реализации блока недостаточно. Ведь в данном случае, чтобы полностью повторить блок, нужно повторить и его поведение, описанное в JavaScript.</p><p>Таким образом, блок должен знать о себе всё. То есть реализация блока подразумевает описание его внешнего вида и поведения во всех необходимых дехнологиях. Этот принцип мы называем <tt>мультилингвальность</tt>.</p><p><tt>Мультилингвальность</tt> - это описание блока на всех языках (технологиях), необходимых для его работы.</p><p>Если блок нужно прредставить на странице, у него должны быть реализованы технологии:</p><ul><li>шаблоны (XSL, TT2, JavaScript, и т.д.), превращающие декларацию блока на странице в HTML-код</li><li>CSS, отвечающий за внешний вид блока</li></ul><p>Когда у блока также есть динамическое поведение, к этому списку добавляются:</p><ul><li>JS-реализация блока</li></ul><p>В список технологий входит всё, что относится к блоку, в том числе и:</p><ul><li>Картинки блока</li></ul><h2>Представление блоков на файловой системе</h2><h3>Однозначное положение кода</h3><h4>Именование файлов</h4><p>Если проект</p><ul><li>живёт долго и постоянно обрастает новыми сущностями</li></ul><p>Если команда разработки</p><ul><li>состоит из нескольких специалистов</li><li>растёт и изменяется (появляются новые люди)</li></ul><p>нужен способ быстро определять, где может находится код блока.</p><p>Код блока легко искать, если он расположен в файлах, одноимённых ключевому слову блока:</p><pre>
+menu.xsl
+menu.js
+menu.css
+</pre><h4>Файловая независимость блока</h4><p>Может возникнуть задача</p><ul><li>использовать несколько блоков предыдущего проекта на новом проекте</li></ul><p>Чтобы легко делать это, реализацию блока (во всех технологиях) нужно уметь доставлять в другое место. Это может быть сделано при помощи копирования файлов или частичным чекаутом репозитория проекта-донора. И в том и в другом случае удобно, чтобы все файлы, относящиеся к блоку, были объединены в одну папку:</p><pre>
+menu/
+  menu.xsl
+  menu.js
+  menu.css
+</pre><h4>Файловая структура блока</h4><p>В процессе работы над проектом может возникнуть необходимость изменить какой-то блок.</p><p>Менеджер может попросить:</p><ul><li>Изменить цвет <tt>активному пункту Меню</tt>, или</li><li>Сделать <tt>Меню</tt> реагирующим на наведение курсора</li></ul><p>Один разработчик может попросить другого:</p><ul><li>Помочь с вёрсткой <tt>Поисковой формы</tt> под IE</li></ul><p>Чтобы можно было сразу понять, где лежит код, о котором идёт речь, нужно соблюдать в разработке следующие требования:</p><ul><li>Код блока размещён в отдельной директории<ul><li>Имя директории совпадает с именем блока</li><li>Техническая реализация блока размещена в файлах в директории блока</li></ul></li><li>Элементу соответствует под-директория в директории блока<ul><li>Имя директории совпадает с именем элемента </li><li>Техническая реализация элемента располагается в файлах в этой директории</li></ul></li><li>Модификатору соответствует под-директория в директории блока<ul><li>Имя директории соответствует имени модификатора</li><li>Техническая реализация модификатора размещается в файлах в этой директории</li><li>Названия файлов содержат как имя, так и значение модификатора</li></ul></li></ul><p><b>Пример</b><br/> Файловая структура блока Меню</p><pre>
+menu/
+  __item/
+    _state/
+      menu__item_state_current.css
+      menu__item_state_current.xsl
+    menu__item.css
+    menu__item.xsl
+  menu.css
+  menu.js
+  menu.xsl
+</pre><p>Поддерживать такую файловую структуру вручную неудобно. Для работы с файлами мы используем <a href="https://github.com/bem/bem-tools">БЭМ-инструменты</a>. Это набор утилит, позволяющий создавать файлы по определённым шаблонам и с определённой схемой расположения на файловой системе.</p><h4>Группировка блоков в папки</h4><p>На большом портале необходимо реализовывать одни и те же блоки на разных проектах.</p><p>Может возникнуть задача:</p><ul><li>Реализовать одинаковый Подвал <tt>на всех проектах Портала</tt>, или</li><li>Сделать  <tt>новый проект</tt>, используя блоки уже существующего</li></ul><p>Разработка сайтов один за другим в web-студии часто подразумевает использование типовых решений для типовых страниц.</p><p>Менеджер может попросить:</p><ul><li>Сделать Страницу заказа товара с формой <tt>как на позапрошлом проекте</tt></li></ul><p>Выполнять эти задачи нужно, не копируя блоки из проекта в проект. Должна быть возможность подключить блоки одного проекта к другому. Для этого блоки нужно объединять в одну директорию.</p><p>Мы называем такую директорию <tt>blocks</tt>.</p><p><b>Пример</b></p><pre>
+blocks/
+  foot/
+  head/
+  menu/
+  page/
+  search/
+</pre><p>Такую папку можно подключить к новому проекту прямо из репозитория. Так, код блока будет храниться только в одном месте. Если нужно внести изменения или починить баг, это нужно будет сделать только там.</p><h3>Уровни переопределения</h3><p>Если группа блоков одного проекта (объединённая в папку) подключена к другому проекту напрямую (при помощи частичного чекаута или svn:externals), то любое закоммиченное изменение в таких блоках повлияет на оба проекта.</p><p>При разработке одного сайта на основе существующего может потребоваться:</p><ul><li>Увеличить шрифт в Шапке на всём сайте (не затрагивая предыдущий сайт),</li><li>Добавить анимацию для раскрытия всех выпадающих меню.</li></ul><p>То есть необходима возможность переопределять (или доопределять) блоки в разных технологиях только для определённого сайта или только для определённых страниц. Это возможно благодаря <tt>уровням переопределения</tt>.</p><p><tt>Уровень переопределения</tt> — это набор реализаций блоков, сгруппированных в одну директорию.</p><div style="text-align:center;">
+<img src="images/levels-schema.png"/>
+</div><p>Реализация любого блока библиотеки может быть расширена (или переопределена) на уровне проекта.</p><div style="text-align:center;">
+<img src="images/block-levels.png"/>
+</div><p>С точки зрения сборки страниц:</p><ul><li>При сборке каждой страницы можно указать список уровней (директорий), блоки которых будут
+   представлены на странице. Например,<br/>
+   <tt>build-page -l blocks-common -l blocks-my my-page.html</tt></li></ul><p>С точки зрения файловой структуры:</p><ul><li>Проект можно содержать любое количество реализаций блоков. Но на страницу попадут только те,
+   которые явно указаны к применению для сборки этой страницы. Возможно делать разные наборы
+   уровней переопределения для разных разделов сайтов.</li></ul><p>С точки зрения JavaScript</p><ul><li>Необходима возможность декларативного описания динамического поведения элементов на странице.
+   Конечное поведение должно собираться с разных уровней переопределения. Например,</li></ul><pre class="ohl ohl-js"><code><span class="ohl-comment ohl-comment-multiline"><span class="ohl-punctuation">/*</span> blocks-common/dropdown/dropdown.js <span class="ohl-punctuation">*/</span></span>
+<span class="ohl-name">Block</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>dropdown<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span> <span class="ohl-punctuation">{</span>
+  <span class="ohl-name">init</span><span class="ohl-operator">:</span> <span class="ohl-keyword ohl-keyword-declaration">function</span><span class="ohl-punctuation">(</span><span class="ohl-punctuation">)</span> <span class="ohl-punctuation">{</span>
+    <span class="ohl-operator">.</span><span class="ohl-operator">.</span><span class="ohl-operator">.</span>
+  <span class="ohl-punctuation">}</span>
+<span class="ohl-punctuation">}</span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+
+<span class="ohl-comment ohl-comment-multiline"><span class="ohl-punctuation">/*</span> blocks-my/dropdown/dropdown.js <span class="ohl-punctuation">*/</span></span>
+<span class="ohl-name">Block</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>dropdown<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span> <span class="ohl-punctuation">{</span>
+  <span class="ohl-name">init</span><span class="ohl-operator">:</span> <span class="ohl-keyword ohl-keyword-declaration">function</span><span class="ohl-punctuation">(</span><span class="ohl-punctuation">)</span> <span class="ohl-punctuation">{</span>
+    <span class="ohl-keyword">this</span><span class="ohl-operator">.</span><span class="ohl-name">__base</span><span class="ohl-punctuation">(</span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-operator">.</span><span class="ohl-operator">.</span><span class="ohl-operator">.</span>
+  <span class="ohl-punctuation">}</span>
+<span class="ohl-punctuation">}</span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><p>С точки зрения шаблонного движка</p><ul><li>Для того, чтобы можно было не только переопределять, но и &quot;доопределять&quot; шаблон, нужна
+   возможность вызвать предыдущую реализацию шаблона.<br/>
+   Например, в случае xsl:</li></ul><pre class="ohl ohl-xml"><code><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:template <span class="ohl-name ohl-name-attribute">match<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b:head<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+  <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div<span class="ohl-punctuation">&gt;</span></span> <span class="ohl-comment"><span class="ohl-punctuation">&lt;!--</span> Node for extra design <span class="ohl-punctuation">--&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:apply-imports<span class="ohl-punctuation">/&gt;</span></span>
+  <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>xsl:template<span class="ohl-punctuation">&gt;</span></span></code></pre><p>С точки зрения архитектуры проекта</p><ul><li>При разработке портала из нескольких сайтов можно выделить общую библиотеку блоков, которая станет
+   одним из уровней переопределения для всех сайтов портала. Блоки конкретного сайта — объединить в
+   другой уровень переопределения.</li><li>В одном и том же репозитории, может храниться реализация сайта для десктопным и мобильных браузеров.<br/>
+   В таком проекте есть уровень переопределения для общей реализации блоков, для мобильной и для десктопной.
+   Различные комбинации уровней дают желаемую реализацию блоков на конкретных страницах.</li></ul><p>Примером реализации нескольких уровней переопределения в одном репозитории может служить <a href="https://github.com/bem/bem-bl">Open Source библиотека блоков bem-bl</a>.</p></div>
