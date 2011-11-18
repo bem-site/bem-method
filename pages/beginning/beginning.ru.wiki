@@ -352,3 +352,130 @@ JavaScript-based шаблонного движка ((https://github.com/veged/xj
 одинаковый CSS-класс\\
    Используя селекторы класса, можно выбрать все одинаковые блоки на странице и задать им нужное
    динамическое поведение.
+
+===Модифицируемость блоков и элементов
+Может возникнуть ситуация, в которой требуется не просто повторить блок, но и в внести в него
+незначительные изменения.\\
+Например, стоит задача:
+ * Сделать в подвале ещё одно меню, с //другим дизайном//.
+
+%%html
+<div style="text-align: center">
+<img src="images/site-footer-menu.png"/>
+</div>
+%%
+
+Чтобы не разрабатывать рядом блок, минимально отличающийся от уже существующего, нужно
+воспользоваться ##модификатором##.
+
+##Модификатор## — это свойство блока или элемента, которое немного меняет внешний вид или поведение.\\
+Модификатор имеет имя и значение. Одновременно может использоваться несколько разных модификаторов.
+
+**Приммер**\\
+Модификатор блока задаёт ему цвет фона
+
+%%html
+<div style="text-align: center">
+<img src="images/search-background.png"/>
+</div>
+%%
+
+**Пример**\\
+Модификатор элемента для текущего пункта меню изменяет эго внешний вид
+
+%%html
+<div style="text-align: center">
+<img src="images/menu-current-item.png"/>
+</div>
+%%
+
+С точки зрения входных-данных:
+ * В БЭМ-дереве модификаторы представлены как свойства той сущности, которая описывает блок или элемент
+
+Например, в XML это могут быть атрибуты соответствующего узла:
+
+%%hl xml
+<b:menu m:type="big" m:type="buttons">
+  ...
+</b:menu>
+%%
+
+То же самое в формате JSON:
+
+%%hl js
+{
+  block: 'menu',
+  mods: [
+   { size: 'big' },
+   { type: 'buttons' }
+  ]
+}
+%%
+
+C точки зрения CSS:
+ * Модификатор представляется дополнительным CSS-классом блока или элемента.
+
+%%hl xml
+<ul class="menu menu_size_big menu_type_buttons">
+  ...
+</ul>
+%%
+
+%%hl js
+.menu_size_big {
+  // CSS code to change height
+}
+.menu_type_buttons .menu__item {
+  // CSS code to change item's view
+}
+%%
+
+Модифицируемость элементов реализуется по аналогии.
+
+Например, модификатором можно обозначить текущий пункт меню:
+
+%%hl xml
+<b:menu>
+  <e:item>Index<e:item>
+  <e:item m:state="current">Products</e:item>
+  <e:item>Contact<e:item>
+</b:menu>
+%%
+
+%%hl js
+{
+  block: 'menu',
+  content: [
+    { elem: 'item', content: 'Index' },
+    {
+      elem: 'item',
+      mods: { 'state' : 'current' },
+      content: 'Products'
+    },
+    { elem: 'item', content: 'Contact' }
+  ]
+}
+%%
+
+%%hl xml
+<div class="menu">
+  <ul class="menu__layout">
+    <li class="menu__layout-unit">
+      <div class="menu__item">Index</div>
+    </li>
+    <li class="menu__layout-unit">
+      <div class="menu__item menu__item_state_current">Products</div>
+    </li>
+    <li class="menu__layout-unit">
+      <div class="menu__item">Contact</div>
+    </li>
+  </ul>
+</div>
+%%
+
+%%hl js
+.menu__item_state_current {
+  font-weight: bold;
+}
+%%
+
