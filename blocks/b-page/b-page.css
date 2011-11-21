@@ -1,0 +1,19 @@
+.b-page
+{
+    font: 16px 'PT Sans', sans-serif;
+
+    position: relative;
+    z-index: 0;
+
+    margin: 0;
+    padding: 80px 60px;
+
+    color: #444;
+}
+
+
+.b-page__i
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
