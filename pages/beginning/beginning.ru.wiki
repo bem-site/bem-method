@@ -216,7 +216,7 @@
       {
         elem: 'column',
         content: {
-          block: 'i-auth',
+          block: 'auth',
           content: ...
         }
       }
@@ -395,7 +395,7 @@ JavaScript-based шаблонного движка ((https://github.com/veged/xj
 Например, в XML это могут быть атрибуты соответствующего узла:
 
 %%hl xml
-<b:menu m:type="big" m:type="buttons">
+<b:menu m:size="big" m:type="buttons">
   ...
 </b:menu>
 %%
@@ -794,10 +794,10 @@ Block('dropdown', {
    утилиты ((https://github.com/veged/borschik borschik)).
  * Браузер получает минимизированный код\\
    В процессе сборки можно минимизировать и оптимизировать CSS-код. Например, при помощи утилиты
-   ((https://github.com/afelix/csso CSSO, прототип))
+   ((https://github.com/afelix/csso CSSO))
  * Каждый браузер получает CSS, написанный специально для него\\
    Есть возможность разделять CSS-реализации для разных браузеров и поставлять в каждый конкретный
-   браузер только тот CSS, который нужен ему. Для этого можно использовать ((https://github.com/afelix/setochka Сеточку))
+   браузер только тот CSS, который нужен ему. Для этого можно использовать ((https://github.com/afelix/setochka Сеточку, прототип))
 
 С точки зрения JavaScript
  * Много файлов для блоков, один файл для страницы\\
@@ -828,10 +828,10 @@ Block('dropdown', {
  * ((https://github.com/bem/bem-tools Инструменты для работы с файлами по БЭМ-методу))
  * ((https://github.com/veged/borschik Borschik))\\
    Утилита для сборки статических файлов web-проектов в один.
- * ((https://github.com/afelix/setochka Сеточка))\\
+ * ((https://github.com/afelix/setochka Сеточка, прототип))\\
    Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. Также может
    использоваться для удаления этих свойств без записи.
- * ((https://github.com/afelix/csso CSSO, прототип))\\
+ * ((https://github.com/afelix/csso CSSO))\\
    Утилита, оптимизирующая CSS-код с учётом его структуры.
 ==== Дополнительная информация
  * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Видео выступлений и мастер-классов))
