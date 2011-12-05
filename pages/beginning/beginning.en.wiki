@@ -62,22 +62,22 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-Если у каждой части сайта есть название, этими терминами удобно пользоваться при общении
-внутри команды. Менеджер может попросить
- * увеличить ##Шапку##, или
- * Сделать ещё одну страницу, где в ##Шапке## нет ##Поиска##
+If each part of the page as its own name, this is very useful for a team communication.
+A manager can ask
+ * to enlarge the ##Head## or
+ * to create one more page with a ##Head## without ##Search##
 
-Можно попросить JavaScript-разработчика
- * Сделать ##Блок авторизации## анимированным, и т.д.
+You can ask JavaScript developer
+ * to make ##Auth block## animated, etc.
 
-Итак,
+So,
 
-==== Блок
-Мы называем блоком некоторую самостоятельную сущность, кирпичик проекта. Блок может быть
-простым или составным, то есть содержать в себе другие блоки.
+==== Block
+We call as ##block## an independent entity, a "building block" of a application. Block
+can be either simple or complicated (contains other blocks).
 
-**Пример**\\
-Блок поисковой формы\\
+**Example**\\
+Search form block\\
 
 %%html
 <div style="text-align:center">
@@ -85,12 +85,13 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-====Элемент
-Элемент – это некоторая часть блока, отвечающая за отдельную функцию. Элемент может
-находиться только в составе блока и не имеет смысла в отрыве от него.
+====Element
+Element is a part of a block, that performs a certain function.
+Element is a part of a block, that performs a certain function. There is no sense
+of element without its block.
 
-**Пример**\\
-Поле ввода и кнопка — элементы блока
+**Example**\\
+An input field and a button are elements of the Search Block
 
 %%html
 <div style="text-align:center">
@@ -98,13 +99,13 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-===Cредства описания страницы и шаблоны
-Блоки и элементы – это обозначение содержания страницы. Помимо факта присутствия
-конкретных блоков на странице, важно также их расположение.
+===Facilities of describing pages and templates
+Blocks and elements are page's content. Besides the fact of being on the page,
+their arrangement is also important.
 
-Блоки (или элементы) могут идти друг за другом в определённом порядке:
+Blocks (oe elements) can be situated in special order:
 
-Например, товары в интернет-магазине:
+For example, a list of goods in Internet shop:
 
 %%html
 <div style="text-align:center">
@@ -112,7 +113,7 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-Или пункты меню:
+Or menu items:
 
 %%html
 <div style="text-align:center">
@@ -120,9 +121,9 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-Блоки могут быть вложены друг в друга:
+Block can be included in the other block:
 
-Например, блок Шапка содержит другие блоки:
+For example, block Head includes other blocks:
 
 %%html
 <div style="text-align:center">
@@ -130,25 +131,24 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
+There has to be a way to describe a page in text to be able to change
+page's content, to add new blocks, to move blocks. That requires each block and element to
+have a key word.
 
-Чтобы быстро изменять содержание страницы, добавлять новые блоки, перемещать их друг
-относительно друга, нужен способ описания страницы в виде текста. Для этого необходимо,
-чтобы каждому блоку или элементу соответствовало ключевое слово.
+Key word designating concrete block is called ##block name##.
 
-Ключевое слово, обозначающее конкретный блок, называется ##именем блока##.
+For example, ##menu## is a key work for Menu Block, or ##head## is a key
 
-Например, ##menu## для меню или ##head## для шапки сайта.
+Key word designating an element is called ##element name##.
 
-Ключевое слово, обозначающее элемент, называется ##именем элемента##.
+For example, each point of menu is an element ##item## of ##menu## block.
 
-Например, каждый пункт меню – это элемент ##item## блока ##menu##.
+Block name must be unique, it unequivocally designares which block is described.
+Only the same blocks can have same block names. In this case we speak that one block
+is represented at the page 2 (3, 4, ...) times.
 
-Имя блока должно быть уникальным, из него однозначно следует, о каком блоке идёт речь.
-Одинаковые имена могут быть только у одинаковых блоков. В этом случае мы говорим о том,
-что один блок представлен на странице 2 (3, 4, ...) раза.
-
-Имя элемента должно быть уникальным только в пределах блока. Элемент может повторяться
-в блоке несколько раз. Например, пункты меню.
+Element name must be unique only within the scope of block. An element can repeats
+several times. For example, menu items.
 
 %%html
 <div style="text-align:center">
@@ -156,8 +156,8 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-Такие ключевые слова нужно размещать в определённом порядке. Для этого подойдут форматы
-данных с использованием вложенности. Например, XML или JSON:
+It needs to place the key words in certain order. Data formats with nesting do for it.
+For example, XML or JSON:
 
 %%hl xml
 <b:page>
@@ -183,10 +183,9 @@ Layout contains ##Page Title## and ##Text Block##.
 </b:page>
 %%
 
-В данном примере пространства имён ##b## и ##e## использованы, чтобы отделять узлы про
-блоки от узлов про элементы.
+In this example namespaces ##b## and ##e## are to separate block nodes from element nodes.
 
-То же самое в JSON:
+The same in JSON:
 
 %%hl js
 {
@@ -226,19 +225,18 @@ Layout contains ##Page Title## and ##Text Block##.
 }
 %%
 
-На примерах выше приведена объектная модель с вложенностью блоков и элементов в другие
-блоки. Также в описании страницы присутствуют произвольные данные.\\
-Такую структуру мы назваем ##БЭМ-деревом## (по аналогии с DOM-деревом).
+The examples above show object model with nesting for block and elements to others blocks.
+There is also optional data in page describing.\\
+This structure we call ##BEM tree## (by analogy with DOM tree).
 
-Конечный HTML для браузера получается из БЭМ-дерева страницы путём наложения шаблонов
-(например, XSL-шаблоны или JavaScript).
+Final HTML for a browser comes from BEM tree by applying templates (fro example, XSL or Javascript).
 
-Если разработчику нужно переместить блок в другое место на странице, это делается при
-помощи изменения дерева. Конечный вид шаблоны сделают сами.
+If a developer needs to move block in different place on the page, this is done by
+changing a tree. The templates are making the final view themselves.
 
-В своих последних разработках мы ориентируемся на JSON как формат описания страницы. Он
-превращается в HTML при помощи JavaScript-based шаблонизатора.\\
-Ссылки на конкретные инструменты можно найти в конце статьи.
+In out last products we oprients to JSON as a format for describing a page. It turns into
+HTML by JavaScript-based template engine.\\
+The linkes for concrete tools can be found at the end of the page.
 
 === Независимость блоков
 
