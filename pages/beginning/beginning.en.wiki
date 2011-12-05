@@ -335,22 +335,20 @@ We write our templates on domain specific language BEMHTML based on XJST.
 ((http://clubs.ya.ru/bem/replies.xml?item_no=992 Main ideas of BEMHTML)) are published
 in BEM club at Ya.Ru (in Russian).
 
-=== Повторяемость блоков
-На сайте может появиться второй блок ##Меню##, например, в ##Подвале##. Или два блока ##Текст##,
-разделённых рекламной вставкой.\\
-Даже если блок проектировался как единственный, на странице в любой момент может появиться второй
-такой же.
+=== Blocks reiteration
+The second ##Menu Block## can occur in the ##Foot block## of a site. Or one ##Text Block##
+can turn into two separated by an advertisement.\\
+Even if a block was developed as singular, there can appear the same one at any moment.
 
-С точки зрения CSS это обозначает, что:
- * Для CSS-селекторов не используются селекторы с ID\\
-   Вместо них удобно использовать классы
+From CSS's viewpoint this means that:
+ * CSS id selectors are not used\\
+   It is conviniently to use CSS classes
 
-С точки зрения JavaScript это обозначает, что:
+From JavaScript's viewpoint this means that:
 
- * Блоки, которым требуется одинаковое поведение, могут быть однозначно определены: у них
-одинаковый CSS-класс\\
-   Используя селекторы класса, можно выбрать все одинаковые блоки на странице и задать им нужное
-   динамическое поведение.
+ * The blocks with the similar behaviour can be detected unequivocally: they have the same CSS class\\
+   Using CSS class selectors it is possible to pick out all the same blocks on the page and specify
+   them dynamic behaviour wanted.
 
 ===Модифицируемость блоков и элементов
 Может возникнуть ситуация, в которой требуется не просто повторить блок, но и внести в него
