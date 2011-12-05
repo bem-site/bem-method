@@ -1,0 +1,837 @@
+﻿=== What is BEM?
+This article describes theoretical aspects of web-developing in one big company.
+Except the theory certainly we have practical things such as libraries and tools.
+There are links to them in the article.
+
+There is plenty of sites developed at Yandex, thousands of pages. The approaches
+we use for HTML/CSS markup and for others front end code are permanentaly
+evolving.
+
+Projects developed for a big portal and the process of developing for such
+usually have a range of specifics.
+
+ * Typical projects ought to be developed fast, but they should live long\\
+   It needs to be able to create a project in a short period of time with an
+   architecture which helps to maintain it for a long time.
+ * Numerous people work for a project\\
+   It has to be able to organize work efficiently for teams either of
+   1-2 developers or larger numbers.
+ * Team scalability\\
+   The adding of new people to a team has to improve its productivity. There needs
+   to exist an ability to commit new developers to work and assign them their
+   own parts of the project.\\
+   To be able to work with the same code for a long time with different members of
+   the team, the code has to be well-structured.
+ * Code reuse\\
+   New projects of an interface element don't have to be written from
+   scratch. If there is a similar task done for the company, it needs to maximize
+   reuse of the code derived.
+
+We looked for solutions to our problems. And at one point they became
+##BEM methodology##.\\
+##BEM## means Block, Elemen, Modifier. The meanings of these terms are given further
+in the article.
+
+One of the most widespread example of a methodology in  programming is OOP.
+OOP is a programming paradigm embodied by a lot of languages. The same applies for BEM
+methodology. This is a manner to describe reality in code, a range of patterns and
+a way of thinking about entities whatever programming language is used.\\
+Based on this methodology we devised some fon tend developing approaches
+and technical solutions which make us put out new pages fast and maintain
+existing pages easily.
+
+The principles of our code and work process are the following:
+
+=== Unified data domain
+Imagine an ordinary site. The same as in a picture.
+
+%%html
+<div style="text-align:center">
+<img src="images/site.png"/>
+</div>
+%%
+
+While developing and maintainting a site it is useful to mark out "blocks" of
+which the site consists.\\
+For example, in this picture there are ##Head##, ##Main Layout## and ##Foot##. The
+Head in-turn consists of ##Logo##, ##Search##, ##Auth block## and ##Menu##. The Main
+Layout contains ##Page Title## and ##Text Block##.
+
+%%html
+<div style="text-align:center">
+<img src="images/site-marked.png"/>
+</div>
+%%
+
+If each part of the page has its own name, it will be very useful when it comes to
+team communication.\\
+A manager can ask:
+ * to enlarge the ##Head## or
+ * to create one more page with a ##Head## without ##Search##
+
+You can ask a JavaScript developer
+ * to make ##Auth Block## animated, etc.
+
+That is
+
+==== Block
+We call as ##block## an independent entity, a "building block" of a application. A block
+can be either simple or complicated (containing other blocks).
+
+**e.g.**\\
+Search form block\\
+
+%%html
+<div style="text-align:center">
+<img src="images/search-block.png"/>
+</div>
+%%
+
+====Element
+An Element is a part of a block that performs a certain function. There's no point
+of element without its block.
+
+**e.g.**\\
+An input field and a button are elements of the Search Block
+
+%%html
+<div style="text-align:center">
+<img src="images/search-block-marked.png"/>
+</div>
+%%
+
+===Facilities of describing pages and templates
+Blocks and elements are a page's content. Besides the fact of being on the page,
+their arrangement is also important.
+
+Blocks (or elements) can be situated in a special order:
+
+For example, a list of goods in an Internet shop:
+
+%%html
+<div style="text-align:center">
+<img src="images/goods-list.png"/>
+</div>
+%%
+
+Or menu items:
+
+%%html
+<div style="text-align:center">
+<img src="images/menu-items.png"/>
+</div>
+%%
+
+A block can be included in another:
+
+For example, a ##Head Block## includes other blocks:
+
+%%html
+<div style="text-align:center">
+<img src="images/head-marked.png"/>
+</div>
+%%
+
+There has to be a way to describe a page in text to be able to change the
+page's content, to add new blocks and to move the blocks within the page.
+That requires each block and element to have a key word.
+
+A key word designating a concrete block is called ##block name##.
+
+For example, ##menu## is a key word for ##Menu Block##, or ##head## is a key
+work fod a ##Head##.
+
+A key word designating an element is called ##element name##.
+
+For example, each point of a menu is an element ##item## of ##menu## block.
+
+Block name must be unique, it unequivocally designates which block is described.
+Only the same blocks can have same block names. In this case we speak that one block
+is represented on the page 2 (3, 4, ...) times.
+
+An element name must be unique only within the scope of block. An element can be repeated
+several times. For example, menu items.
+
+%%html
+<div style="text-align:center">
+<img src="images/menu-items.png"/>
+</div>
+%%
+
+It' necessary to place the key words in certain order. Data formats with nesting will do for it.
+For example, XML or JSON:
+
+%%hl xml
+<b:page>
+  <b:head>
+    <b:menu>
+      ...
+    </b:menu>
+    <e:column>
+      <b:logo/>
+    </e:column>
+    <e:column>
+      <b:search>
+        <e:input/>
+        <e:button>Search</e:button>
+      </b:search>
+    </e:column>
+    <e:column>
+      <b:auth>
+        ...
+      </b:auth>
+    <e:column>
+  </b:head>
+</b:page>
+%%
+
+In this example namespaces ##b## and ##e## separate block nodes from element nodes.
+
+The same in JSON:
+
+%%hl js
+{
+  block: 'page',
+  content: {
+    block: 'head',
+    content: [
+      { block: 'menu', content: ... },
+      {
+        elem: 'column',
+        content: { block: 'logo' }
+      },
+      {
+        elem: 'column',
+        content: [
+          {
+            block: 'search',
+            content: [
+              { elem: 'input' },
+              {
+                elem: 'button',
+                content: 'Search'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        elem: 'column',
+        content: {
+          block: 'auth',
+          content: ...
+        }
+      }
+    ]
+  }
+}
+%%
+
+The examples above show the object model with a nesting for blocks and elements to other blocks.
+There is also optional data in the page description.\\
+This structure we call ##BEM tree## (on analogy from DOM tree).
+
+Final HTML for a browser comes from BEM tree by applying templates (for example, XSL or Javascript).
+
+If a developer needs to move a block to a different place on the page, it's done by
+changing a tree. Templates make the final view themselves.
+
+In our last products we've gone with JSON as a format for describing a page. It turns into
+HTML by a JavaScript-based template engine.\\
+The links for concrete tools can be found at the end of this article.
+
+=== Block independence
+
+While developing a long-term project there could be a desire to move a block.\\
+E.g.
+
+ * to swap ##Logo## and ##Auth Block## or
+ * to place ##Menu## under ##Search Block##
+
+%%html
+<div style="text-align: center">
+<img src="images/head.png"/>
+</div>
+%%
+
+%%html
+<div style="text-align: center">
+<img src="images/head-changed.png"/>
+</div>
+%%
+
+To make this process easier blocks must be ##independent##.
+
+An ##independent## block is implemented so that it can be placed anywhere
+on the page. And to be included in another block as well.
+
+====Independent CSS
+
+From block's CSS view point this mean that
+
+ * A block (or an element) must have a unique "name" for which can be written a CSS rule.
+   E.g., a class.
+ * There mustn't be CSS selectors for tags.
+ * Cascade selectors for several blocks should be avoided.
+
+=====Naming for independent CSS classes
+
+One of possible namings for CSS classes satisfying the requirements is the following:
+
+ * CSS class for a block coincide with its ##block name##
+%%hl xml
+<ul class="menu">
+  ...
+</ul>
+%%
+ * CSS class for an element is a ##block name## and an ##element name## divided
+ by a symbol (or symbols)
+%%hl xml
+<ul class="menu">
+  <li class="menu__item">
+    ...
+  </li>
+  <li class="menu__item">
+    ...
+  </li>
+</ul>
+%%
+It is necessary to include a block name in a CSS class for an element to minimize a cascade.
+
+Naming rules for CSS classes can be different.
+Read ((http://bem.github.com/bem-bl/pages/naming/naming.eb.wiki here)) about a naming convention
+we use.
+
+====Independent templates
+
+From template engine's point of view block independence means that:
+
+ * Blocks and elements must be described in incoming data\\
+   A block (or an element) must have a unique "name" for the possibility to tell a template engine
+   "The Menu must be placed here".
+ * A block can be easily placed in every place in BEM tree
+
+===== Independent templates for blocks
+Comingupon the block in the incoming data a template engine must unambiguously transform it into
+HTML. Every block must have its template for that.
+
+For example, this can look like this in XSL:
+%%hl xml
+<xsl:template match="b:menu">
+  <ul class="menu">
+    <xsl:apply-templates/>
+  </ul>
+</xsl:template>
+
+<xsl:template match="b:menu/e:item">
+  <li class="menu__item">
+    <xsl:apply-templates/>
+  </li>
+<xsl:template>
+%%
+
+We gradually reject XSL for our products for our own JavaScript based template engine
+((https://github.com/veged/xjst XJST)). This template engine absorbs all that we like in XSL,
+but implements it with JavaScript's productivity at either client or server side.\\
+We write our templates on domain specific language BEMHTML based on XJST.
+((http://clubs.ya.ru/bem/replies.xml?item_no=992 The main ideas of BEMHTML)) are published
+in BEM club at Ya.Ru (in Russian).
+
+=== Blocks reiteration
+The second ##Menu Block## can occur in the ##Foot block## of a site. Or one ##Text Block##
+can turn into two separated by an advertisement.\\
+Even if a block was developed as a singular unit, the same one can appear at any moment.
+
+From CSS's viewpoint this means that:
+ * CSS id selectors are not used\\
+   It is convinient to use CSS classes
+
+From JavaScript's viewpoint this means that:
+
+ * The blocks with similar behaviour can be detected unequivocally: they have the same CSS classes\\
+   Using CSS class selectors it is possible to pick out all the same blocks on the page, and to specify
+   them the dynamic behaviour wanted.
+
+===Модифицируемость блоков и элементов
+Может возникнуть ситуация, в которой требуется не просто повторить блок, но и внести в него
+незначительные изменения.\\
+Например, стоит задача:
+ * Сделать в подвале ещё одно меню, с //другим дизайном//.
+
+%%html
+<div style="text-align: center">
+<img src="images/site-footer-menu.png"/>
+</div>
+%%
+
+Чтобы не разрабатывать рядом блок, минимально отличающийся от уже существующего, нужно
+воспользоваться ##модификатором##.
+
+##Модификатор## — это свойство блока или элемента, которое немного меняет внешний вид или поведение.\\
+Модификатор имеет имя и значение. Одновременно может использоваться несколько разных модификаторов.
+
+**Приммер**\\
+Модификатор блока задаёт ему цвет фона
+
+%%html
+<div style="text-align: center">
+<img src="images/search-background.png"/>
+</div>
+%%
+
+**Пример**\\
+Модификатор элемента для текущего пункта меню изменяет эго внешний вид
+
+%%html
+<div style="text-align: center">
+<img src="images/menu-current-item.png"/>
+</div>
+%%
+
+С точки зрения входных данных:
+ * В БЭМ-дереве модификаторы представлены как свойства той сущности, которая описывает блок или элемент
+
+Например, в XML это могут быть атрибуты соответствующего узла:
+
+%%hl xml
+<b:menu m:size="big" m:type="buttons">
+  ...
+</b:menu>
+%%
+
+То же самое в формате JSON:
+
+%%hl js
+{
+  block: 'menu',
+  mods: [
+   { size: 'big' },
+   { type: 'buttons' }
+  ]
+}
+%%
+
+C точки зрения CSS:
+ * Модификатор представляется дополнительным CSS-классом блока или элемента.
+
+%%hl xml
+<ul class="menu menu_size_big menu_type_buttons">
+  ...
+</ul>
+%%
+
+%%hl js
+.menu_size_big {
+  // CSS code to change height
+}
+.menu_type_buttons .menu__item {
+  // CSS code to change item's view
+}
+%%
+
+Модифицируемость элементов реализуется по аналогии.
+
+Например, модификатором можно обозначить текущий пункт меню:
+
+%%hl xml
+<b:menu>
+  <e:item>Index<e:item>
+  <e:item m:state="current">Products</e:item>
+  <e:item>Contact<e:item>
+</b:menu>
+%%
+
+%%hl js
+{
+  block: 'menu',
+  content: [
+    { elem: 'item', content: 'Index' },
+    {
+      elem: 'item',
+      mods: { 'state' : 'current' },
+      content: 'Products'
+    },
+    { elem: 'item', content: 'Contact' }
+  ]
+}
+%%
+
+%%hl xml
+<div class="menu">
+  <ul class="menu__layout">
+    <li class="menu__layout-unit">
+      <div class="menu__item">Index</div>
+    </li>
+    <li class="menu__layout-unit">
+      <div class="menu__item menu__item_state_current">Products</div>
+    </li>
+    <li class="menu__layout-unit">
+      <div class="menu__item">Contact</div>
+    </li>
+  </ul>
+</div>
+%%
+
+%%hl js
+.menu__item_state_current {
+  font-weight: bold;
+}
+%%
+
+=== Предметная абстракция
+Если над проектом работает много людей, им нужно договариваться о предметной области. У всех блоков
+проекта должны быть однозначные имена, которые используются в коде.
+
+Например, реализованный на сайте блок ##Облако тегов## всегда называется ##tags##, а каждый элемент
+(метка) в нём - ##tag##. Это справедливо для любой технологии: CSS, JS, XSL, etc.
+
+С точки зрения процесса разработки:
+ * Все участники процесса оперируют одними терминами
+
+С точки зрения CSS:
+ * CSS блоков и элементов можно описывать на псевдоязыке, который затем компилируется в чистый
+   CSS согласно принятой схеме именования.
+
+%%hl js
+  .menu {
+    __layout {
+      display: inline;
+    }
+    __layout-item {
+      display: inline-block;
+      ...
+    }
+    __item {
+      _state_current {
+        font-weight: bold;
+      }
+    }
+  }
+%%
+
+С точки зрения JavaScript:
+ * Не нужно обращаться к DOM-узлам блоков и элементов по имени класса
+
+%%hl js
+$('menu__item').click( ... );
+$('menu__item').addClass('menu__item_state_current');
+$('menu').toggle('menu_size_big').toggle('menu_size_small');
+%%
+
+Схема именования CSS-классов для блоков и элементов может измениться. При использовании специальных
+JavaScript-функций для обращения к блокам и работы с их модификаторами нужно будет внести изменения
+только в эти функции
+
+%%hl js
+Block('menu').elem('item').click( ... );
+Block('menu').elem('item').setMod('state', 'current');
+Block('menu').toggleMod('size', 'big', 'small');
+%%
+
+Приведённый здесь код - абстрактный. В реальных разработках мы используем JavaScript-ядро блока
+##i-bem## из библиотеки bem-bl: ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
+
+=== Консистентность блока
+На нашем сайте реализован блок Кнопка, у которого есть динамическое поведение.
+
+%%html
+<div style="text-align: center">
+<img src="images/button.png"/>
+</div>
+%%
+
+При наведении курсора на этот блок он меняет свой внешний вид.
+
+%%html
+<div style="text-align: center">
+<img src="images/button-cursor.png"/>
+</div>
+%%
+
+Менеджер может попросить:
+ * Использовать такую же кнопку на другой странице
+
+Просто CSS-реализации блока недостаточно. Ведь в данном случае, чтобы полностью повторить блок, нужно
+повторить и его поведение, описанное в JavaScript.
+
+Таким образом, блок должен знать о себе всё. То есть реализация блока подразумевает описание его
+внешнего вида и поведения во всех необходимых технологиях. Этот принцип мы называем ##мультилингвальность##.
+
+##Мультилингвальность## - это описание блока на всех языках (технологиях), необходимых для его работы.
+
+Если блок нужно представить на странице, у него должны быть реализованы технологии:
+ * шаблоны (XSL, TT2, JavaScript, и т.д.), превращающие декларацию блока на странице в HTML-код
+ * CSS, отвечающий за внешний вид блока
+
+Когда у блока также есть динамическое поведение, к этому списку добавляются:
+ * JavaScript-реализация блока
+
+В список технологий входит всё, что относится к блоку, в том числе и:
+ * Картинки блока
+
+=== Представление блоков на файловой системе
+==== Однозначное положение кода
+===== Именование файлов
+Если проект
+ * живёт долго и постоянно обрастает новыми сущностями
+
+Если команда разработки
+ * состоит из нескольких специалистов
+ * растёт и изменяется (появляются новые люди)
+
+нужен способ быстро определять, где может находиться код блока.
+
+Код блока легко искать, если он расположен в файлах, одноимённых ключевому слову блока:
+
+%%html
+<pre>
+menu.xsl
+menu.js
+menu.css
+</pre>
+%%
+
+===== Файловая независимость блока
+Может возникнуть задача
+ * использовать несколько блоков предыдущего проекта на новом проекте
+
+Чтобы легко делать это, реализацию блока (во всех технологиях) нужно уметь доставлять в
+другое место. Это может быть сделано при помощи копирования файлов или частичным чекаутом
+репозитория проекта-донора. И в том, и в другом случае удобно, чтобы все файлы, относящиеся
+к блоку, были объединены в одну папку:
+
+%%html
+<pre>
+menu/
+  menu.xsl
+  menu.js
+  menu.css
+</pre>
+%%
+
+===== Файловая структура блока
+В процессе работы над проектом может возникнуть необходимость изменить какой-нибудь блок.
+
+Менеджер может попросить:
+ *  Изменить цвет ##активному пункту Меню##, или
+ *  Сделать ##Меню## реагирующим на наведение курсора
+
+Один разработчик может попросить другого:
+ *  Помочь с вёрсткой ##Поисковой формы## под IE
+
+Чтобы можно было сразу понять, где лежит код, о котором идёт речь, нужно соблюдать в
+разработке следующие требования:
+ * Код блока размещён в отдельной директории
+   * Имя директории совпадает с именем блока
+   * Техническая реализация блока размещена в файлах в директории блока
+ * Элементу соответствует поддиректория в директории блока
+   * Имя директории совпадает с именем элемента
+   * Техническая реализация элемента располагается в файлах в этой директории
+ * Модификатору соответствует поддиректория в директории блока
+   * Имя директории соответствует имени модификатора
+   * Техническая реализация модификатора размещается в файлах в этой директории
+   * Названия файлов содержат как имя, так и значение модификатора
+
+**Пример**\\
+Файловая структура блока Меню
+
+%%html
+<pre>
+menu/
+  __item/
+    _state/
+      menu__item_state_current.css
+      menu__item_state_current.xsl
+    menu__item.css
+    menu__item.xsl
+  menu.css
+  menu.js
+  menu.xsl
+</pre>
+%%
+
+Поддерживать такую файловую структуру вручную неудобно. Для работы с файлами мы используем
+((https://github.com/bem/bem-tools БЭМ-инструменты)). Это набор утилит, позволяющий создавать
+файлы по определённым шаблонам и с определённой схемой расположения на файловой системе.
+
+===== Группировка блоков в папки
+На большом портале необходимо реализовывать одни и те же блоки на разных проектах.
+
+Может возникнуть задача:
+ * Реализовать одинаковый Подвал ##на всех проектах Портала##, или
+ * Сделать  ##новый проект##, используя блоки уже существующего
+
+Разработка сайтов один за другим в web-студии часто подразумевает использование типовых решений для типовых страниц.
+
+Менеджер может попросить:
+ * Сделать Страницу заказа товара с формой ##как на позапрошлом проекте##
+
+Выполнять эти задачи нужно без копирования блоков из проекта в проект. Должна быть возможность
+подключить блоки одного проекта к другому. Для этого блоки нужно объединять в одну директорию.
+
+Мы называем такую директорию ##blocks##.
+
+**Пример**
+
+%%html
+<pre>
+blocks/
+  foot/
+  head/
+  menu/
+  page/
+  search/
+</pre>
+%%
+
+Такую папку можно подключить к новому проекту прямо из репозитория. Так, код блока будет храниться
+только в одном месте. Если нужно исправить ошибку или внести другие изменения, это нужно будет сделать только там.
+
+==== Уровни переопределения
+Если группа блоков одного проекта (объединённая в папку) подключена к другому проекту напрямую
+(при помощи частичного чекаута или svn:externals), то любое закоммиченное изменение в таких блоках
+повлияет на оба проекта.
+
+При разработке одного сайта на основе существующего может потребоваться:
+ * Увеличить шрифт в Шапке на всём сайте (не затрагивая предыдущий сайт),
+ * Добавить анимацию для раскрытия всех выпадающих меню.
+
+То есть необходима возможность переопределять (или доопределять) блоки в разных технологиях только
+для определённого сайта или только для определённых страниц. Это возможно благодаря ##уровням переопределения##.
+
+##Уровень переопределения## — это набор реализаций блоков, сгруппированных в одну директорию.
+
+%%html
+<div style="text-align:center;">
+<img src="images/levels-schema.png"/>
+</div>
+%%
+
+Реализация любого блока библиотеки может быть расширена (или переопределена) на уровне проекта.
+
+%%html
+<div style="text-align:center;">
+<img src="images/block-levels.png"/>
+</div>
+%%
+
+С точки зрения сборки страниц:
+ * При сборке каждой страницы можно указать список уровней (директорий), блоки которых будут
+   представлены на странице. Например,\\
+   ##build-page -l blocks-common -l blocks-my my-page.html##
+
+С точки зрения файловой структуры:
+ * Проект можно содержать любое количество реализаций блоков. Но на страницу попадут только те,
+   которые явно указаны к применению для сборки этой страницы. Возможно делать разные наборы
+   уровней переопределения для разных разделов сайтов.
+
+С точки зрения JavaScript
+ * Необходима возможность декларативного описания динамического поведения элементов на странице.
+   Конечное поведение должно собираться с разных уровней переопределения. Например,
+
+%%hl js
+/* blocks-common/dropdown/dropdown.js */
+Block('dropdown', {
+  init: function() {
+    ...
+  }
+});
+
+/* blocks-my/dropdown/dropdown.js */
+Block('dropdown', {
+  init: function() {
+    this.__base();
+    ...
+  }
+});
+%%
+
+С точки зрения шаблонного движка
+* Для того, чтобы можно было не только переопределять, но и "доопределять" шаблон, нужна
+   возможность вызвать предыдущую реализацию шаблона.\\
+   Например, в случае xsl:
+
+%%hl xml
+<xsl:template match="b:head">
+  <div> <!-- Node for extra design -->
+    <xsl:apply-imports/>
+  </div>
+</xsl:template>
+%%
+
+С точки зрения архитектуры проекта
+
+ * При разработке портала из нескольких сайтов можно выделить общую библиотеку блоков, которая станет
+   одним из уровней переопределения для всех сайтов портала. Блоки конкретного сайта — объединить в
+   другой уровень переопределения.
+ * В одном и том же репозитории может храниться реализация сайта для десктопных и мобильных браузеров.\\
+   В таком проекте есть уровень переопределения для общей реализации блоков, для мобильной и для десктопной.
+   Различные комбинации уровней дают желаемую реализацию блоков на конкретных страницах.
+
+Примером реализации нескольких уровней переопределения в одном репозитории может служить
+((https://github.com/bem/bem-bl Open Source библиотека блоков bem-bl)).
+
+=== Сборка страниц
+Работа со страницей в терминах блоков подразумевает ##предметную абстракцию##. Эта предметная абстракция
+обязательна только на уровне взаимодействия человека с кодом. Когда код попадает в браузер, наличие
+предметной абстракции не обязательно, важно лишь сохранить требуемый внешний вид и поведение блоков на странице.
+
+Таким образом, ##код для людей## и ##код для браузеров## — не одно и то же:
+ * Человек пишет код блоков, браузер получает код целой страницы
+
+Для того, чтобы превратить "код для людей" в "код для браузеров", существует понятие ##сборки страниц##.
+
+##Сборка страницы## — это формирование кода страницы в различных технологиях (HTML, CSS, JavaScript) на основе декларативного описания страницы (XML, JSON) путём применения реализаций описыванных блоков.
+
+С точки зрения CSS
+
+ * Файлы всех блоков собираются в один файл страницы\\
+   Несмотря на то, что CSS для каждого блока, элемента и модификатора реализован в отдельном файле,
+   для работы страницы нет необходимости подключать эти файлы as is. Всю необходимую CSS-реализацию
+   страницы можно собрать в один файл. К тому же это решает проблемы: ограниченного количества импортов
+   в IE, количества HTTP-запросов к серверу. Объединение всех CSS в один файл мы делаем при помощи
+   утилиты ((https://github.com/veged/borschik borschik)).
+ * Браузер получает минимизированный код\\
+   В процессе сборки можно минимизировать и оптимизировать CSS-код. Например, при помощи утилиты
+   ((https://github.com/afelix/csso CSSO))
+ * Каждый браузер получает CSS, написанный специально для него\\
+   Есть возможность разделять CSS-реализации для разных браузеров и поставлять в каждый конкретный
+   браузер только тот CSS, который нужен ему. Для этого можно использовать ((https://github.com/afelix/setochka Сеточку, прототип))
+
+С точки зрения JavaScript
+ * Много файлов для блоков, один файл для страницы\\
+   Так же, как и в случае CSS, JavaScript-реализация всех необходимых блоков может быть объединена в один файл.
+
+С точки зрения шаблонных движков
+ * Работают только нужные шаблоны\\
+   Конечный набор шаблонов, используемых для вывода HTML страницы в результате сборки содержит только
+   шаблоны нужных блоков. Благодаря этому увеличивается производительность шаблонов и  уменьшается
+   вероятность возникновения побочных эффектов.
+
+С точки зрения процесса разработки
+ * Роботы на службе у человека (не наоборот)\\
+   Разработчик пишет код так, как ему удобно. О производительности заботятся роботы, которые в процессе
+   сборки превращают код в оптимизированный (и, возможно, нечитаемый).
+
+С точки зрения организации труда
+ * Разделение труда\\
+   Существуют одни разработчики, создающие блоки, и существуют другие разработчики, занимающиеся
+   оптимизацией конечного продукта.
+
+Для сборки файлов страниц используются ((https://github.com/bem/bem-tools БЭМ-инструменты)).
+
+=== Связанные ссылки
+==== Библиотеки
+ * ((http://bem.github.com/bem-bl/index.ru.html Библиотека блоков, разрабатываемых по БЭМ-методу))
+==== Инструменты
+ * ((https://github.com/bem/bem-tools Инструменты для работы с файлами по БЭМ-методу))
+ * ((https://github.com/veged/borschik Borschik))\\
+   Утилита для сборки статических файлов web-проектов в один.
+ * ((https://github.com/afelix/setochka Сеточка, прототип))\\
+   Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. Также может
+   использоваться для удаления этих свойств без записи.
+ * ((https://github.com/afelix/csso CSSO))\\
+   Утилита, оптимизирующая CSS-код с учётом его структуры.
+==== Дополнительная информация
+ * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Видео выступлений и мастер-классов))
+ * ((http://clubs.ya.ru/bem/ Клуб БЭМ на Я.ру))
