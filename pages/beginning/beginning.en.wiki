@@ -238,13 +238,13 @@ In out last products we oprients to JSON as a format for describing a page. It t
 HTML by JavaScript-based template engine.\\
 The linkes for concrete tools can be found at the end of the page.
 
-=== Независимость блоков
+=== Block independency
 
-Во время разработки или поддержки долгоживущего проекта может возникнуть желание
-переместить блок. Например, стоит задача
+While developing long-term project there could be a desire to move block.
+For example,
 
- * Поменять местами ##Логотип## и ##Блок авторизации##, или
- * Разместить ##Меню## под ##Поиском##
+ * to swap ##Logo## and ##Auth Block## or
+ * to place ##Menu## under ##Search Block##
 
 %%html
 <div style="text-align: center">
@@ -258,32 +258,32 @@ The linkes for concrete tools can be found at the end of the page.
 </div>
 %%
 
-Для того, чтобы легко выполнять эти просьбы, блоки должны быть ##независимыми##.
+For you to do this things easy blocks must be ##independent##.
 
-##Независимый## блок свёрстан так, чтобы его можно было вставить в любое место на странице.
-В том числе и вставить в другой блок.
+##Independent## block is implementes so that it can be placed in any place
+on the page. And to be included in the other block as well.
 
-====Независимый CSS
+====Independent CSS
 
-С точки зрения CSS для блока это означает, что
+From block's CSS view point this mean that
 
- * У блока (или элемента) должно быть уникальное «имя», на которое можно написать CSS
-   правило. Например, соответствующий CSS-класс.
- * Не должно быть CSS-селекторов на теги
- * Не нужно писать каскадные селекторы из нескольких блоков
+ * A block (or an element) must have unique "name" for which can be written a CSS rule.
+   For example, a class.
+ * There must not be CSS selectors for tags.
+ * Cascade selectors for several blocks should be avoided.
 
-=====Пример схемы именования независимых CSS-классов
+=====The example of naming for independent CSS classes
 
-Одна из возможных схем именования CSS-классов, удовлетворяющая требованиям, такая:
+One of possible namings for CSS classes satisfying the requirements is the following:
 
- * CSS-класс блока совпадает с ##именем блока##
+ * CSS class for a block coincide with its ##block name##
 %%hl xml
 <ul class="menu">
   ...
 </ul>
 %%
- * CSS-класс элемента — это ##имя блока## и ##имя элемента##, разделённые
- определённым символом (или символами)
+ * CSS class for an element is a ##block name## and an ##element name## divided
+ by a symbol (or symbols)
 %%hl xml
 <ul class="menu">
   <li class="menu__item">
@@ -294,25 +294,26 @@ The linkes for concrete tools can be found at the end of the page.
   </li>
 </ul>
 %%
-Необходимость учитывать имя блока в CSS-классе для элемента нужна для минимизации каскада.
+It is necessary to include block name is CSS class for an element to minimize a cascade.
 
-Правила именования CSS-классов могут быть и другими. О том, какие мы используем соглашения об именовании,
-можно прочесть ((http://bem.github.com/bem-bl/pages/naming/naming.ru.wiki здесь)).
+Naming rules for CSS classes can be different.
+Read ((http://bem.github.com/bem-bl/pages/naming/naming.eb.wiki here)) about a naming convention
+we use.
 
-====Независимые шаблоны
+====Independent templates
 
-С точки зрения шаблонного движка независимость блоков означает, что:
+From template engine's viewpoint block independency means that:
 
- * Блоки и элементы должны иметь описание во входных данных\\
-   У блока (или элемента) должно быть уникальное «имя», чтобы при передаче данных шаблонному движку
-   можно было сказать «здесь нужно разместить Меню».
- * Блок может быть легко помещён в любое место в БЭМ-дереве
+ * Blocks and elements must be described in incoming data\\
+   A block (or an element) must have a unique "name" for a possibility to tell a template engine
+   "The Menu must be placed here".
+ * Block can be easily placed in every place in BEM tree
 
-===== Пример независимых шаблонов для блоков
-Встречая во входных данных описание блока, шаблон должен однозначно преобразовывать его в
-нужный HTML. Для этого у каждого блока должен быть свой шаблон.
+===== The example for independent templates for blocks
+Comingupon the block in the incoming data a template engine must unambiguously transform it into
+HTML. Every block must have its template for that.
 
-Например, в XSL это может выглядеть так:
+For example, this can look like this in XSL:
 %%hl xml
 <xsl:template match="b:menu">
   <ul class="menu">
@@ -327,13 +328,12 @@ The linkes for concrete tools can be found at the end of the page.
 <xsl:template>
 %%
 
-В своих собственных разработках мы постепенно отказываемся от XSL в пользу собственного
-JavaScript-based шаблонного движка ((https://github.com/veged/xjst XJST)). Этот шаблонизатор вобрал в
-себя всё то, что нам нравилось в XSL, но реализует это с производительностью JavaScript как на
-сервере, так и на клиенте.\\
-Мы пишем шаблоны для блоков на предметно-ориентированном языке (domain specific language) BEMHTML, в
-основе которого лежит XJST.
-((http://clubs.ya.ru/bem/replies.xml?item_no=992 Основные понятия шаблонизатора BEMHTML)) опубликованы в клубе БЭМ.
+We gradually reject XSL for our products for our own JavaScript based template engine
+((https://github.com/veged/xjst XJST)). This template engine absorb all we like in XSL,
+but implements it with JavaScript's productivity at either client or server side.\\
+We write our templates on domain specific language BEMHTML based on XJST.
+((http://clubs.ya.ru/bem/replies.xml?item_no=992 Main ideas of BEMHTML)) are published
+in BEM club at Ya.Ru (in Russian).
 
 === Повторяемость блоков
 На сайте может появиться второй блок ##Меню##, например, в ##Подвале##. Или два блока ##Текст##,
