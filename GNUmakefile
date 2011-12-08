@@ -5,9 +5,11 @@ all:: pages
 pages: $(patsubst %.wiki,%.html, $(wildcard pages/*/*.wiki))
 
 pages/%.html: pages/%.bemjson.js pages/%.bemhtml.js pages/%.css pages/%.ie.css pages/%.js
-	rm pages/$*.html
+	if [ -f pages/$*.html ]; then \
+		rm pages/$*.html; \
+	fi; \
 	BEMTECH_locales_techs="`pwd`/bem-bl/blocks-common/i-bem/bem/techs/html.js" \
-	BEMTECH_locales_locales="`echo pages/$(@F) | perl -pi -e 's#^.*(ru|en).*$#\1#g'`" \
+	BEMTECH_locales_locales="`echo pages/$(@F) | perl -pi -e 's#^.*(ru|en).*$$#\1#g'`" \
 	bem create block -T lib/bem/techs/locales.js \
 	-l pages \
 	$(*D)
