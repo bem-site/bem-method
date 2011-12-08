@@ -36,8 +36,8 @@ One of the most widespread example of a methodology in  programming is OOP.
 OOP is a programming paradigm embodied by a lot of languages. The same applies for BEM
 methodology. This is a manner to describe reality in code, a range of patterns and
 a way of thinking about entities whatever programming language is used.\\
-Based on this methodology we devised some fon tend developing approaches
-and technical solutions which make us put out new pages fast and maintain
+Based on this methodology we created some front end developing approaches
+and technical solutions which make us able to put out new pages fast and maintain
 existing pages easily.
 
 The principles of our code and work process are the following:
