@@ -531,8 +531,8 @@ The code above is abstract. In our real products we use a JavaScript core of ##i
 for ##bem-bl## block library:
  ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
 
-=== Консистентность блока
-На нашем сайте реализован блок Кнопка, у которого есть динамическое поведение.
+=== A block's consistency
+A site has a ##Button## block which has its dymanic behaviour.
 
 %%html
 <div style="text-align: center">
@@ -540,7 +540,7 @@ for ##bem-bl## block library:
 </div>
 %%
 
-При наведении курсора на этот блок он меняет свой внешний вид.
+When a cursor hovers on the block, it changes its appearance.
 
 %%html
 <div style="text-align: center">
@@ -548,26 +548,27 @@ for ##bem-bl## block library:
 </div>
 %%
 
-Менеджер может попросить:
- * Использовать такую же кнопку на другой странице
+A manager can ask:
+ * to use the same button on another page
 
-Просто CSS-реализации блока недостаточно. Ведь в данном случае, чтобы полностью повторить блок, нужно
-повторить и его поведение, описанное в JavaScript.
+The CSS implementation of the block is insufficient. In this case to reiterate the block we must
+reiterate its behaviour which described in JavaScript as well.
 
-Таким образом, блок должен знать о себе всё. То есть реализация блока подразумевает описание его
-внешнего вида и поведения во всех необходимых технологиях. Этот принцип мы называем ##мультилингвальность##.
+So a block must "know" everything about itself. That is block's implementation means its realization
+of a view and behaviour in all the technologies needed. That we call ##multilengualism##.
 
-##Мультилингвальность## - это описание блока на всех языках (технологиях), необходимых для его работы.
+##Multilingualism## is a description of a block in all the programming langiages which neccessary for
+its functionality.
 
-Если блок нужно представить на странице, у него должны быть реализованы технологии:
- * шаблоны (XSL, TT2, JavaScript, и т.д.), превращающие декларацию блока на странице в HTML-код
- * CSS, отвечающий за внешний вид блока
+If a block has to be viewed on a page, it has to have the following techs:
+ * templates (XSL, TT2, JavScript, etc), which turn block's declaration into page's HTML code
+ * CSS describing block's view
 
-Когда у блока также есть динамическое поведение, к этому списку добавляются:
- * JavaScript-реализация блока
+If a block has a dynamic behaviour, we sppend to this list:
+ * a JavaScript implementation for the block
 
-В список технологий входит всё, что относится к блоку, в том числе и:
- * Картинки блока
+Everything that concern the block is it's technology. E.g.:
+ * Block's images
 
 === Представление блоков на файловой системе
 ==== Однозначное положение кода
