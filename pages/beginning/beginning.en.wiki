@@ -570,19 +570,20 @@ If a block has a dynamic behaviour, we sppend to this list:
 Everything that concern the block is it's technology. E.g.:
  * Block's images
 
-=== Представление блоков на файловой системе
-==== Однозначное положение кода
-===== Именование файлов
-Если проект
- * живёт долго и постоянно обрастает новыми сущностями
+=== File system representation for a block
+==== Unequivocal place of code
+===== File naming
+If a project
+ * lives long and is always acquire new features
 
-Если команда разработки
- * состоит из нескольких специалистов
- * растёт и изменяется (появляются новые люди)
+If a  developing team
+ * consits of several people
+ * grows and changes (new people appear)
 
-нужен способ быстро определять, где может находиться код блока.
+it needs a way to find block's code files fast.
 
-Код блока легко искать, если он расположен в файлах, одноимённых ключевому слову блока:
+Block's code is easy to find if it's placed in files with the same name as a blok key
+word is:
 
 %%html
 <pre>
@@ -592,14 +593,14 @@ menu.css
 </pre>
 %%
 
-===== Файловая независимость блока
-Может возникнуть задача
- * использовать несколько блоков предыдущего проекта на новом проекте
+===== File independence of a block
+There can be a task
+ * to use some blocks from a previous project for a new one
 
-Чтобы легко делать это, реализацию блока (во всех технологиях) нужно уметь доставлять в
-другое место. Это может быть сделано при помощи копирования файлов или частичным чекаутом
-репозитория проекта-донора. И в том, и в другом случае удобно, чтобы все файлы, относящиеся
-к блоку, были объединены в одну папку:
+For doing it easily we have to be enable to deliver block's implementation (in all its techs)
+to another place. This can be done by file copying or partial checkout of a repo from a 
+donor project. In both these cases it is useful if all block's files are gathered in the same
+directory:
 
 %%html
 <pre>
@@ -610,31 +611,30 @@ menu/
 </pre>
 %%
 
-===== Файловая структура блока
-В процессе работы над проектом может возникнуть необходимость изменить какой-нибудь блок.
+===== File structure of a block
+When working on a project there can appear a neccessarity to change a block.
 
-Менеджер может попросить:
- *  Изменить цвет ##активному пункту Меню##, или
- *  Сделать ##Меню## реагирующим на наведение курсора
+A manager can ask:
+ * to change a color of a ##Current Menu Point## or
+ * to make a ##Menu## reacting on cursor's hovering
 
-Один разработчик может попросить другого:
- *  Помочь с вёрсткой ##Поисковой формы## под IE
+One developer can ask to another:
+ * to help with ##Search Form## markup for IE
 
-Чтобы можно было сразу понять, где лежит код, о котором идёт речь, нужно соблюдать в
-разработке следующие требования:
- * Код блока размещён в отдельной директории
-   * Имя директории совпадает с именем блока
-   * Техническая реализация блока размещена в файлах в директории блока
- * Элементу соответствует поддиректория в директории блока
-   * Имя директории совпадает с именем элемента
-   * Техническая реализация элемента располагается в файлах в этой директории
- * Модификатору соответствует поддиректория в директории блока
-   * Имя директории соответствует имени модификатора
-   * Техническая реализация модификатора размещается в файлах в этой директории
-   * Названия файлов содержат как имя, так и значение модификатора
+To understand where is the code discussed is we have to follow these rules when developing:
+ * Block's code is placed in a separated directory
+   * Directory's name cincides with the blocks' name
+   * Block's technical implementation is placed in the files in block's directory
+ * An element has a subdirectory in it block's directory
+   * A subdirectory's name coincides with the element's name
+   * A technical implementation of an elemnet is placed in the files in this subdirectory
+ * A modifier has a subdirectory in it block's directory
+   * A subdirectory's name coincides with the modifier's name
+   * A technical implementation of the modifier is placed in the files in this subdirectory
+   * A file name includes both a key and a value of a modifier
 
-**Пример**\\
-Файловая структура блока Меню
+**E.g.**\\
+A file structure of a ##Menu## block
 
 %%html
 <pre>
@@ -651,26 +651,29 @@ menu/
 </pre>
 %%
 
-Поддерживать такую файловую структуру вручную неудобно. Для работы с файлами мы используем
-((https://github.com/bem/bem-tools БЭМ-инструменты)). Это набор утилит, позволяющий создавать
-файлы по определённым шаблонам и с определённой схемой расположения на файловой системе.
+To maintain this file structure manually is inconvenient. So we use
+((https://github.com/bem/bem-tools BEM tools))
+to work with files. This is a range of utilities enable us to create
+files with certain names, file place and a content.
 
-===== Группировка блоков в папки
-На большом портале необходимо реализовывать одни и те же блоки на разных проектах.
+===== Grouping blocks in directories
+A big portal needs to have the same block in differen sites.
 
-Может возникнуть задача:
- * Реализовать одинаковый Подвал ##на всех проектах Портала##, или
- * Сделать  ##новый проект##, используя блоки уже существующего
+There can be a task:
+ * to create the same ##Footer## on //all the portal's services// or
+ * to create a //new project// using the blocks for existing ones
 
-Разработка сайтов один за другим в web-студии часто подразумевает использование типовых решений для типовых страниц.
+A developing in web design company often means use typical solutions
+for typical web pages.
 
-Менеджер может попросить:
- * Сделать Страницу заказа товара с формой ##как на позапрошлом проекте##
+A manager can ask:
+ * to create an order page with a web form //as on previous project//
 
-Выполнять эти задачи нужно без копирования блоков из проекта в проект. Должна быть возможность
-подключить блоки одного проекта к другому. Для этого блоки нужно объединять в одну директорию.
+We have to do these tasks and avoid to copy blocks' files from project to project. There needs be
+an opportunity to link up the blocks from one project to another. Blocks has to be united in
+one directory for that.
 
-Мы называем такую директорию ##blocks##.
+We call such a directory ##blocks##.
 
 **Пример**
 
@@ -685,8 +688,9 @@ blocks/
 </pre>
 %%
 
-Такую папку можно подключить к новому проекту прямо из репозитория. Так, код блока будет храниться
-только в одном месте. Если нужно исправить ошибку или внести другие изменения, это нужно будет сделать только там.
+That directory can be linked up to another project straight from a repo. So block's code is kept
+in one place. If we need to correct something or to make other changes, we do it in one
+place only.
 
 ==== Уровни переопределения
 Если группа блоков одного проекта (объединённая в папку) подключена к другому проекту напрямую
