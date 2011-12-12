@@ -351,11 +351,11 @@ From JavaScript's viewpoint this means that:
    Using CSS class selectors it is possible to pick out all the same blocks on the page, and to specify
    them the dynamic behaviour wanted.
 
-===Модифицируемость блоков и элементов
-Может возникнуть ситуация, в которой требуется не просто повторить блок, но и внести в него
-незначительные изменения.\\
-Например, стоит задача:
- * Сделать в подвале ещё одно меню, с //другим дизайном//.
+===Modifiers for elements and blocks
+There can be a situation when it needs not only to reiterate a block but make also slight
+changes for it.\\
+E.g. there is a task:
+ * Create onemt more ##Menu## in ##Footer## with //another layout//.
 
 %%html
 <div style="text-align: center">
@@ -363,14 +363,14 @@ From JavaScript's viewpoint this means that:
 </div>
 %%
 
-Чтобы не разрабатывать рядом блок, минимально отличающийся от уже существующего, нужно
-воспользоваться ##модификатором##.
+To avoid developing of a block that is minimally different from the existed one, it needs to use
+##modifier##.
 
-##Модификатор## — это свойство блока или элемента, которое немного меняет внешний вид или поведение.\\
-Модификатор имеет имя и значение. Одновременно может использоваться несколько разных модификаторов.
+##Modifier## is a block's or element's proper which change a littelt its view or behaviour.\\
+A modifier has a name and a value. You can use several modifiers at the same time.
 
-**Приммер**\\
-Модификатор блока задаёт ему цвет фона
+**e.g.**\\
+Block's modifier makes background color
 
 %%html
 <div style="text-align: center">
@@ -378,8 +378,8 @@ From JavaScript's viewpoint this means that:
 </div>
 %%
 
-**Пример**\\
-Модификатор элемента для текущего пункта меню изменяет эго внешний вид
+**e.g.**\\
+Element's modofier for the current point changes its view
 
 %%html
 <div style="text-align: center">
@@ -387,10 +387,10 @@ From JavaScript's viewpoint this means that:
 </div>
 %%
 
-С точки зрения входных данных:
- * В БЭМ-дереве модификаторы представлены как свойства той сущности, которая описывает блок или элемент
+From input data's point of view:
+ * In the BEM tree modifiers are propers of the entity that describes a block or an element
 
-Например, в XML это могут быть атрибуты соответствующего узла:
+E.g, they are node attributes in XML:
 
 %%hl xml
 <b:menu m:size="big" m:type="buttons">
@@ -398,7 +398,7 @@ From JavaScript's viewpoint this means that:
 </b:menu>
 %%
 
-То же самое в формате JSON:
+The same in JSON:
 
 %%hl js
 {
@@ -410,8 +410,8 @@ From JavaScript's viewpoint this means that:
 }
 %%
 
-C точки зрения CSS:
- * Модификатор представляется дополнительным CSS-классом блока или элемента.
+From the viewpoint of CSS:
+ * A modifier is an additional CSS class for a block or an element.
 
 %%hl xml
 <ul class="menu menu_size_big menu_type_buttons">
@@ -428,9 +428,9 @@ C точки зрения CSS:
 }
 %%
 
-Модифицируемость элементов реализуется по аналогии.
+Modifiers for elements are imptemented on analogy.
 
-Например, модификатором можно обозначить текущий пункт меню:
+E.g. a current menu point can be marked with a modifier:
 
 %%hl xml
 <b:menu>
