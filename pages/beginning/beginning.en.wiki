@@ -1,18 +1,17 @@
 ﻿=== What is BEM?
-This article describes theoretical aspects of web-developing in one big company.
-Except the theory certainly we have practical things such as libraries and tools.
-There are links to them in the article.
+This article describes the theoretical aspects of web-developing for a big company.
+Except the theory we certainly have practical things such as libraries and tools.
+You can find links to them in the article.
 
-There is plenty of sites developed at Yandex, thousands of pages. The approaches
-we use for HTML/CSS markup and for others front end code are permanentaly
-evolving.
+There is plenty of sites developed at Yandex, thousands in fact. The approaches
+we use for HTML/CSS markup and for others front end code are in constant evolution.
 
 Projects developed for a big portal and the process of developing for such
 usually have a range of specifics.
 
- * Typical projects ought to be developed fast, but they should live long\\
+ * Typical projects ought to be developed fast, but they should also live long\\
    It needs to be able to create a project in a short period of time with an
-   architecture which helps to maintain it for a long time.
+   architecture which will help to maintain it for a long time.
  * Numerous people work for a project\\
    It has to be able to organize work efficiently for teams either of
    1-2 developers or larger numbers.
@@ -32,12 +31,12 @@ We looked for solutions to our problems. And at one point they became
 ##BEM## means Block, Elemen, Modifier. The meanings of these terms are given further
 in the article.
 
-One of the most widespread example of a methodology in  programming is OOP.
-OOP is a programming paradigm embodied by a lot of languages. The same applies for BEM
-methodology. This is a manner to describe reality in code, a range of patterns and
+One of the most widespread examples of a methodology in  programming is OOP.
+This is a programming paradigm embodied by many languages. The same applies for BEM
+methodology. This is a way to describe reality in code, a range of patterns and
 a way of thinking about entities whatever programming language is used.\\
 Based on this methodology we created some front end developing approaches
-and technical solutions which make us able to put out new pages fast and maintain
+and technical solutions which enable us to put out new pages fast and maintain
 existing pages easily.
 
 The principles of our code and work process are the following:
@@ -63,7 +62,7 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-If each part of the page has its own name, it will be very useful when it comes to
+Giving each part of the page has its own name makes it very useful when it comes to
 team communication.\\
 A manager can ask:
  * to enlarge the ##Head## or
@@ -89,7 +88,7 @@ Search form block\\
 
 ====Element
 An Element is a part of a block that performs a certain function. There's no point
-of element without its block.
+of an element without its block.
 
 **e.g.**\\
 An input field and a button are elements of the Search Block
@@ -146,7 +145,7 @@ A key word designating an element is called ##element name##.
 For example, each point of a menu is an element ##item## of ##menu## block.
 
 Block name must be unique, it unequivocally designates which block is described.
-Only the same blocks can have same block names. In this case we speak that one block
+Only the same blocks can have same block names. In this case we say that one block
 is represented on the page 2 (3, 4, ...) times.
 
 An element name must be unique only within the scope of block. An element can be repeated
