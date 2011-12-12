@@ -675,7 +675,7 @@ one directory for that.
 
 We call such a directory ##blocks##.
 
-**Пример**
+**E.g.**
 
 %%html
 <pre>
@@ -692,19 +692,18 @@ That directory can be linked up to another project straight from a repo. So bloc
 in one place. If we need to correct something or to make other changes, we do it in one
 place only.
 
-==== Уровни переопределения
-Если группа блоков одного проекта (объединённая в папку) подключена к другому проекту напрямую
-(при помощи частичного чекаута или svn:externals), то любое закоммиченное изменение в таких блоках
-повлияет на оба проекта.
+==== Overloading levels (overload - ???)
+If a group of blocks (united in one directory) is linked up to a project directly (via a partial checkout
+or svn:externals), then every changing commited for these blocks influences to both projects.
 
-При разработке одного сайта на основе существующего может потребоваться:
- * Увеличить шрифт в Шапке на всём сайте (не затрагивая предыдущий сайт),
- * Добавить анимацию для раскрытия всех выпадающих меню.
+When developing a site based on the other existed it may need:
+ * to enlarge a font in ##Head## on a site (without affecting on a previous site),
+ * to add an animation when showing a dropdown menu.
 
-То есть необходима возможность переопределять (или доопределять) блоки в разных технологиях только
-для определённого сайта или только для определённых страниц. Это возможно благодаря ##уровням переопределения##.
+Then there is need an opportunity to define or redefine blocks in different technologies for
+one site only or for certain pages only. It is possible owing to ##defining levels##.
 
-##Уровень переопределения## — это набор реализаций блоков, сгруппированных в одну директорию.
+A ##defining level## is a set of blocks' implementations grouped in one directory.
 
 %%html
 <div style="text-align:center;">
@@ -712,7 +711,7 @@ place only.
 </div>
 %%
 
-Реализация любого блока библиотеки может быть расширена (или переопределена) на уровне проекта.
+An implementation of every block from a library can be expanded (or redefine) at a project's level.
 
 %%html
 <div style="text-align:center;">
@@ -720,19 +719,19 @@ place only.
 </div>
 %%
 
-С точки зрения сборки страниц:
- * При сборке каждой страницы можно указать список уровней (директорий), блоки которых будут
-   представлены на странице. Например,\\
+From the viewpoint of a process of building a page:
+ * When building a page we can set a list of levels (directories) to use their blocks on
+   the page. E.g.,
    ##build-page -l blocks-common -l blocks-my my-page.html##
 
-С точки зрения файловой структуры:
- * Проект можно содержать любое количество реализаций блоков. Но на страницу попадут только те,
-   которые явно указаны к применению для сборки этой страницы. Возможно делать разные наборы
-   уровней переопределения для разных разделов сайтов.
+From the file structure's poitn of view:
+ * A project can have any count of levels. But only the levels that enumerated when builing
+   will be on the page. It is possibly to make different sets of defining levels
+   for different parts of the site.
 
-С точки зрения JavaScript
- * Необходима возможность декларативного описания динамического поведения элементов на странице.
-   Конечное поведение должно собираться с разных уровней переопределения. Например,
+From the JavaScript's point of view:
+ * There needs to be a possibility to define a dynamic behaviour of a page in a declarative style.
+   Final behaviour has to be gathered from different defining levels. E.g.,
 
 %%hl js
 /* blocks-common/dropdown/dropdown.js */
@@ -751,10 +750,10 @@ Block('dropdown', {
 });
 %%
 
-С точки зрения шаблонного движка
-* Для того, чтобы можно было не только переопределять, но и "доопределять" шаблон, нужна
-   возможность вызвать предыдущую реализацию шаблона.\\
-   Например, в случае xsl:
+From the viewpoint of a template engine:
+ * To be able not only to define but to redefine a template there needs to be
+   a possibility to apply previous implementation for a template.\\
+   E.g., for XSL:
 
 %%hl xml
 <xsl:template match="b:head">
@@ -764,17 +763,18 @@ Block('dropdown', {
 </xsl:template>
 %%
 
-С точки зрения архитектуры проекта
+From project architechture's point of view:
+ * When develping a portal of several sites we can sort out a blocks library which is one of
+   defining levels for all the sites of the portal. And the blocks for a concrete site
+   can be united in another level.
+ * The same repo can have blocks of both desktop and mobile browsers.\\
+   Such a project has defining levels of common blocks, mobile blocks and desktop blocks.
+   Different combinations of these levels give the implementation needed on concrete
+   pages.
 
- * При разработке портала из нескольких сайтов можно выделить общую библиотеку блоков, которая станет
-   одним из уровней переопределения для всех сайтов портала. Блоки конкретного сайта — объединить в
-   другой уровень переопределения.
- * В одном и том же репозитории может храниться реализация сайта для десктопных и мобильных браузеров.\\
-   В таком проекте есть уровень переопределения для общей реализации блоков, для мобильной и для десктопной.
-   Различные комбинации уровней дают желаемую реализацию блоков на конкретных страницах.
 
-Примером реализации нескольких уровней переопределения в одном репозитории может служить
-((https://github.com/bem/bem-bl Open Source библиотека блоков bem-bl)).
+((https://github.com/bem/bem-bl Open source block library bem-bl)) can be an example of
+having several defining levels in one repo.
 
 === Сборка страниц
 Работа со страницей в терминах блоков подразумевает ##предметную абстракцию##. Эта предметная абстракция
