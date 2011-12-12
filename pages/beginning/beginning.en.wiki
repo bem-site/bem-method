@@ -477,19 +477,19 @@ E.g. a current menu point can be marked with a modifier:
 }
 %%
 
-=== Предметная абстракция
-Если над проектом работает много людей, им нужно договариваться о предметной области. У всех блоков
-проекта должны быть однозначные имена, которые используются в коде.
+=== Subject abstraction
+If there are meny people who work for a project, they should arrange for a data domain. All the bloks
+of a project must have definite names used in code.
 
-Например, реализованный на сайте блок ##Облако тегов## всегда называется ##tags##, а каждый элемент
-(метка) в нём - ##tag##. Это справедливо для любой технологии: CSS, JS, XSL, etc.
+E.g. a block ##Tag Cloud## is always called ##tags##. Each its element is a ##tag##. This is right for
+every language: CSS, JavaScript, XSL, etc.
 
-С точки зрения процесса разработки:
- * Все участники процесса оперируют одними терминами
+From the development process' point of view:
+ * All the participants operate with the same terms
 
-С точки зрения CSS:
- * CSS блоков и элементов можно описывать на псевдоязыке, который затем компилируется в чистый
-   CSS согласно принятой схеме именования.
+From the viewpoint of CSS:
+ * CSS for blocks and elements can be written in a pseudo language which then is compiled
+   into a pure CSS according to the naming convention.
 
 %%hl js
   .menu {
@@ -508,8 +508,8 @@ E.g. a current menu point can be marked with a modifier:
   }
 %%
 
-С точки зрения JavaScript:
- * Не нужно обращаться к DOM-узлам блоков и элементов по имени класса
+From the JavaScript's point of view:
+ * Do not use CSS class selector to get a block's or an elements' DOM object.
 
 %%hl js
 $('menu__item').click( ... );
@@ -517,9 +517,9 @@ $('menu__item').addClass('menu__item_state_current');
 $('menu').toggle('menu_size_big').toggle('menu_size_small');
 %%
 
-Схема именования CSS-классов для блоков и элементов может измениться. При использовании специальных
-JavaScript-функций для обращения к блокам и работы с их модификаторами нужно будет внести изменения
-только в эти функции
+The naming convention for CSS classes of blocks and elements can be changed. Using special JavaScript
+functions for an access to the blocks and the elements and for a work with their modifiers makes it possible
+to change these functions only.
 
 %%hl js
 Block('menu').elem('item').click( ... );
@@ -527,8 +527,9 @@ Block('menu').elem('item').setMod('state', 'current');
 Block('menu').toggleMod('size', 'big', 'small');
 %%
 
-Приведённый здесь код - абстрактный. В реальных разработках мы используем JavaScript-ядро блока
-##i-bem## из библиотеки bem-bl: ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
+The code above is abstract. In our real products we use a JavaScript core of ##i-bem## block
+for ##bem-bl## block library:
+ ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
 
 === Консистентность блока
 На нашем сайте реализован блок Кнопка, у которого есть динамическое поведение.
