@@ -776,67 +776,72 @@ From project architechture's point of view:
 ((https://github.com/bem/bem-bl Open source block library bem-bl)) can be an example of
 having several defining levels in one repo.
 
-=== Сборка страниц
-Работа со страницей в терминах блоков подразумевает ##предметную абстракцию##. Эта предметная абстракция
-обязательна только на уровне взаимодействия человека с кодом. Когда код попадает в браузер, наличие
-предметной абстракции не обязательно, важно лишь сохранить требуемый внешний вид и поведение блоков на странице.
+=== Building a page
+A work in terms of blocks means existing a ##subject abstraction##. This is obligatory only when
+a programmer work with code. When code gets to a browser the existing of sibject abstraction is
+not neccessary. It is important only to save a design and behaviour of every block on the page.
 
-Таким образом, ##код для людей## и ##код для браузеров## — не одно и то же:
- * Человек пишет код блоков, браузер получает код целой страницы
+So, there is a ##code for people## and a ##code for browsers##. They are not the same one.
+ * A programmer writes a code for blocks, a browser gets a code for the whole page
 
-Для того, чтобы превратить "код для людей" в "код для браузеров", существует понятие ##сборки страниц##.
+To turn a ##code fo people##  into ##code for a browser## we ##build## a page.
 
-##Сборка страницы## — это формирование кода страницы в различных технологиях (HTML, CSS, JavaScript) на основе декларативного описания страницы (XML, JSON) путём применения реализаций описыванных блоков.
+##Building a page## is making a page's code in different technologies (HTML, CSS, JavaScript)
+based on a page declaration (XML or JSON) by applying implementations of the blocks declared
 
-С точки зрения CSS
+From the CSS' point of view:
 
- * Файлы всех блоков собираются в один файл страницы\\
-   Несмотря на то, что CSS для каждого блока, элемента и модификатора реализован в отдельном файле,
-   для работы страницы нет необходимости подключать эти файлы as is. Всю необходимую CSS-реализацию
-   страницы можно собрать в один файл. К тому же это решает проблемы: ограниченного количества импортов
-   в IE, количества HTTP-запросов к серверу. Объединение всех CSS в один файл мы делаем при помощи
-   утилиты ((https://github.com/veged/borschik borschik)).
- * Браузер получает минимизированный код\\
-   В процессе сборки можно минимизировать и оптимизировать CSS-код. Например, при помощи утилиты
-   ((https://github.com/afelix/csso CSSO))
- * Каждый браузер получает CSS, написанный специально для него\\
-   Есть возможность разделять CSS-реализации для разных браузеров и поставлять в каждый конкретный
-   браузер только тот CSS, который нужен ему. Для этого можно использовать ((https://github.com/afelix/setochka Сеточку, прототип))
+ * The block files are gathered in one page file\\
+   Despite the fact that CSS for every block, element or modifier is placed in a separate
+   file, there is no need to link up these files to the page as is. It is possible to
+   collect all the CSS implementation needed in one file.\\
+   In addition that solves the problem of limitation for CSS imports in IE and descreases
+   the number of HTTP requests.
+   We use the ((https://github.com/veged/borschik borschik)) tool to unite all CSS in one
+   file.
+ * A browser gets minimized code\\
+   When building we can minimize and optimize a CSS code. E.g. using the
+   ((https://github.com/afelix/csso CSSO)) util.
+ * Each browser can get a CSS code written especially for it\\
+   There is a possibility to divide CSS implementations for different browsers and deliver
+   only the code needed for each browser.\\
+   A ((https://github.com/afelix/setochka setochka, a prototype)) can be used for that.
 
-С точки зрения JavaScript
- * Много файлов для блоков, один файл для страницы\\
-   Так же, как и в случае CSS, JavaScript-реализация всех необходимых блоков может быть объединена в один файл.
+From JavaScript's point of view:
+ * There are many files for blocks, and there is one file for a page\\
+   The same as in CSS' case, a JavaScript implementation of all teh blocks
+   needed can be united in one file.
 
-С точки зрения шаблонных движков
- * Работают только нужные шаблоны\\
-   Конечный набор шаблонов, используемых для вывода HTML страницы в результате сборки содержит только
-   шаблоны нужных блоков. Благодаря этому увеличивается производительность шаблонов и  уменьшается
-   вероятность возникновения побочных эффектов.
+From template engine's point of view:
+ * Only needed templates work\\
+   A final set of templates that is used for creating an HTML for a page has only the templates
+   for the blocks required. Because of that a template productivity increases and a probability
+   of appearing side effects abates.
 
-С точки зрения процесса разработки
- * Роботы на службе у человека (не наоборот)\\
-   Разработчик пишет код так, как ему удобно. О производительности заботятся роботы, которые в процессе
-   сборки превращают код в оптимизированный (и, возможно, нечитаемый).
+From the viewpoint of developing process:
+ * Robots serve for people (not contrariwise)\\
+   A developer writes a code in an easy way. "Robots" take care about productivity optimizing the
+   code (and probably making it unreadable) when building a page.
 
-С точки зрения организации труда
- * Разделение труда\\
-   Существуют одни разработчики, создающие блоки, и существуют другие разработчики, занимающиеся
-   оптимизацией конечного продукта.
+From the viewpoint of labor organization
+ * Division of labour\\
+   There are developers to create blocks. And there are developers to optimize the final product.
 
-Для сборки файлов страниц используются ((https://github.com/bem/bem-tools БЭМ-инструменты)).
+We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 
-=== Связанные ссылки
-==== Библиотеки
- * ((http://bem.github.com/bem-bl/index.ru.html Библиотека блоков, разрабатываемых по БЭМ-методу))
-==== Инструменты
- * ((https://github.com/bem/bem-tools Инструменты для работы с файлами по БЭМ-методу))
+== Related links
+==== Libraries
+ * ((http://bem.github.com/bem-bl/index.en.html An open source block library bem-bl))
+==== Tools
+ * ((https://github.com/bem/bem-tools Tools for woring with files accroding to BEM methodology))
  * ((https://github.com/veged/borschik Borschik))\\
-   Утилита для сборки статических файлов web-проектов в один.
- * ((https://github.com/afelix/setochka Сеточка, прототип))\\
+   An utility to build static files into one.
+ * ((https://github.com/afelix/setochka Setochka, a prototype))\\
+   A tool to divide CSS in several browser-oriented files.
    Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. Также может
    использоваться для удаления этих свойств без записи.
  * ((https://github.com/afelix/csso CSSO))\\
-   Утилита, оптимизирующая CSS-код с учётом его структуры.
-==== Дополнительная информация
- * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Видео выступлений и мастер-классов))
- * ((http://clubs.ya.ru/bem/ Клуб БЭМ на Я.ру))
+   An utility that optimizes a CSS code with a glance of its structure.
+==== Supplement information
+ * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (russian speaking)
+ * ((http://clubs.ya.ru/bem/ BEM club at Ya.Ru)) (russian speaking)
