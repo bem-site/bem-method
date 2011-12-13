@@ -64,11 +64,11 @@ Layout contains ##Page Title## and ##Text Block##.
 
 Giving each part of the page has its own name makes it very useful when it comes to
 team communication.\\
-A manager can ask:
+A manager could ask:
  * to enlarge the ##Head## or
  * to create one more page with a ##Head## without ##Search##
 
-You can ask a JavaScript developer
+You could ask a JavaScript developer
  * to make ##Auth Block## animated, etc.
 
 That is
@@ -352,10 +352,10 @@ From JavaScript's viewpoint this means that:
    them the dynamic behaviour wanted.
 
 ===Modifiers for elements and blocks
-There can be a situation when it needs not only to reiterate a block but make also slight
+There can be a situation when there needs not only to reiterate a block but also to make slight
 changes for it.\\
 E.g. there is a task:
- * Create onemt more ##Menu## in ##Footer## with //another layout//.
+ * Create one more ##Menu## in ##Footer## with //another layout//.
 
 %%html
 <div style="text-align: center">
@@ -366,11 +366,11 @@ E.g. there is a task:
 To avoid developing of a block that is minimally different from the existed one, it needs to use
 ##modifier##.
 
-##Modifier## is a block's or element's proper which change a littelt its view or behaviour.\\
+A ##modifier## is a block's or element's property which change a litte its view or behaviour.\\
 A modifier has a name and a value. You can use several modifiers at the same time.
 
 **e.g.**\\
-Block's modifier makes background color
+A block's modifier specifies background color
 
 %%html
 <div style="text-align: center">
@@ -379,7 +379,7 @@ Block's modifier makes background color
 %%
 
 **e.g.**\\
-Element's modofier for the current point changes its view
+An element's modofier for the current item changes its view
 
 %%html
 <div style="text-align: center">
@@ -387,8 +387,8 @@ Element's modofier for the current point changes its view
 </div>
 %%
 
-From input data's point of view:
- * In the BEM tree modifiers are propers of the entity that describes a block or an element
+From an input data's point of view:
+ * In the BEM tree modifiers are properties of the entity that describes a block or an element
 
 E.g, they are node attributes in XML:
 
@@ -430,7 +430,7 @@ From the viewpoint of CSS:
 
 Modifiers for elements are imptemented on analogy.
 
-E.g. a current menu point can be marked with a modifier:
+E.g. a current menu item can be marked with a modifier:
 
 %%hl xml
 <b:menu>
@@ -478,10 +478,10 @@ E.g. a current menu point can be marked with a modifier:
 %%
 
 === Subject abstraction
-If there are meny people who work for a project, they should arrange for a data domain. All the bloks
+If there are many people who work for a project, they should arrange for a data domain. All the bloks
 of a project must have definite names used in code.
 
-E.g. a block ##Tag Cloud## is always called ##tags##. Each its element is a ##tag##. This is right for
+E.g. a block ##Tag Cloud## is always called ##tags##. Each of its element is a ##tag##. This is right for
 every language: CSS, JavaScript, XSL, etc.
 
 From the development process' point of view:
@@ -518,7 +518,7 @@ $('menu').toggle('menu_size_big').toggle('menu_size_small');
 %%
 
 The naming convention for CSS classes of blocks and elements can be changed. Using special JavaScript
-functions for an access to the blocks and the elements and for a work with their modifiers makes it possible
+functions for an access to the blocks and the elements and in order to work with their modifiers makes it possible
 to change these functions only.
 
 %%hl js
@@ -528,7 +528,7 @@ Block('menu').toggleMod('size', 'big', 'small');
 %%
 
 The code above is abstract. In our real products we use a JavaScript core of ##i-bem## block
-for ##bem-bl## block library:
+from ##bem-bl## block library:
  ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
 
 === A block's consistency
@@ -548,41 +548,41 @@ When a cursor hovers on the block, it changes its appearance.
 </div>
 %%
 
-A manager can ask:
+A manager could ask:
  * to use the same button on another page
 
 The CSS implementation of the block is insufficient. In this case to reiterate the block we must
-reiterate its behaviour which described in JavaScript as well.
+reiterate its behaviour which is described in JavaScript as well.
 
-So a block must "know" everything about itself. That is block's implementation means its realization
-of a view and behaviour in all the technologies needed. That we call ##multilengualism##.
+So a block must "know" everything about itself. That is a block's implementation. This means that
+its view and behaviour is realized in all the technologies needed. That we call ##multilengualism##.
 
-##Multilingualism## is a description of a block in all the programming langiages which neccessary for
+##Multilingualism## is a description of a block in all the programming languages which are neccessary for
 its functionality.
 
 If a block has to be viewed on a page, it has to have the following techs:
- * templates (XSL, TT2, JavScript, etc), which turn block's declaration into page's HTML code
- * CSS describing block's view
+ * templates (XSL, TT2, JavaScript, etc), which turn block's declaration into page's HTML code
+ * CSS that describes a block's view
 
-If a block has a dynamic behaviour, we sppend to this list:
+If a block has a dynamic behaviour, we add it to this list:
  * a JavaScript implementation for the block
 
-Everything that concern the block is it's technology. E.g.:
- * Block's images
+Everything that concern the block is its technology. E.g.:
+ * A block's images
 
 === File system representation for a block
 ==== Unequivocal place of code
 ===== File naming
 If a project
- * lives long and is always acquire new features
+ * lives long and it's always acquiring new features
 
 If a  developing team
  * consits of several people
  * grows and changes (new people appear)
 
-it needs a way to find block's code files fast.
+All this in turn mean that needs a way to find block's code files fast.
 
-Block's code is easy to find if it's placed in files with the same name as a blok key
+A block's code is easy to find if it's placed in files with the same name as a block key
 word is:
 
 %%html
@@ -594,10 +594,10 @@ menu.css
 %%
 
 ===== File independence of a block
-There can be a task
+There could be a task
  * to use some blocks from a previous project for a new one
 
-For doing it easily we have to be enable to deliver block's implementation (in all its techs)
+For doing it easily we have to be able to deliver a block's implementation (in all its techs)
 to another place. This can be done by file copying or partial checkout of a repo from a 
 donor project. In both these cases it is useful if all block's files are gathered in the same
 directory:
@@ -612,25 +612,26 @@ menu/
 %%
 
 ===== File structure of a block
-When working on a project there can appear a neccessarity to change a block.
+When working on a project there can appear a neccessity to change a block.
 
-A manager can ask:
- * to change a color of a ##Current Menu Point## or
+A manager could ask:
+ * to change a color of a ##Current Menu Point##
+or
  * to make a ##Menu## reacting on cursor's hovering
 
-One developer can ask to another:
+One developer could ask another:
  * to help with ##Search Form## markup for IE
 
-To understand where is the code discussed is we have to follow these rules when developing:
- * Block's code is placed in a separated directory
-   * Directory's name cincides with the blocks' name
-   * Block's technical implementation is placed in the files in block's directory
- * An element has a subdirectory in it block's directory
-   * A subdirectory's name coincides with the element's name
-   * A technical implementation of an elemnet is placed in the files in this subdirectory
- * A modifier has a subdirectory in it block's directory
-   * A subdirectory's name coincides with the modifier's name
-   * A technical implementation of the modifier is placed in the files in this subdirectory
+To understand where is the code discussed we have to follow these rules when developing:
+ * A block's code is placed in a separate directory
+   * The directory's name coincides with the blocks' name
+   * The block's technical implementation is placed in the files in block's directory
+ * An element has a subdirectory in its block's directory
+   * The subdirectory's name coincides with the element's name
+   * The technical implementation of an elemnet is placed in the files in this subdirectory
+ * A modifier has a subdirectory in its block's directory
+   * The subdirectory's name coincides with the modifier's name
+   * The technical implementation of the modifier is placed in the files in this subdirectory
    * A file name includes both a key and a value of a modifier
 
 **E.g.**\\
@@ -651,26 +652,26 @@ menu/
 </pre>
 %%
 
-To maintain this file structure manually is inconvenient. So we use
+Maintaining this file structure manually is not convenient. So we use
 ((https://github.com/bem/bem-tools BEM tools))
-to work with files. This is a range of utilities enable us to create
+to work with files. These are a range of utilities that enable us to create
 files with certain names, file place and a content.
 
 ===== Grouping blocks in directories
-A big portal needs to have the same block in differen sites.
+A big portal needs to have the same block in different sites.
 
-There can be a task:
+There could be a task:
  * to create the same ##Footer## on //all the portal's services// or
  * to create a //new project// using the blocks for existing ones
 
-A developing in web design company often means use typical solutions
+Developing for a web design company, often means that onr has to use typical solutions
 for typical web pages.
 
-A manager can ask:
+A manager could ask:
  * to create an order page with a web form //as on previous project//
 
 We have to do these tasks and avoid to copy blocks' files from project to project. There needs be
-an opportunity to link up the blocks from one project to another. Blocks has to be united in
+an opportunity to link up the blocks from one project to another. Blocks have to be united in
 one directory for that.
 
 We call such a directory ##blocks##.
@@ -688,20 +689,20 @@ blocks/
 </pre>
 %%
 
-That directory can be linked up to another project straight from a repo. So block's code is kept
+That directory can be linked up to another project straight from a repo. So a block's code is kept
 in one place. If we need to correct something or to make other changes, we do it in one
 place only.
 
-==== Overloading levels (overload - ???)
+==== Levels of defenition
 If a group of blocks (united in one directory) is linked up to a project directly (via a partial checkout
 or svn:externals), then every changing commited for these blocks influences to both projects.
 
-When developing a site based on the other existed it may need:
- * to enlarge a font in ##Head## on a site (without affecting on a previous site),
+When developing a site based on another existing one it may need:
+ * to enlarge a font in ##Head## on a site (without affecting the previous site),
  * to add an animation when showing a dropdown menu.
 
-Then there is need an opportunity to define or redefine blocks in different technologies for
-one site only or for certain pages only. It is possible owing to ##defining levels##.
+Then there is a need to define or redefine blocks in different technologies for
+one site only or for certain pages only. It is owed to ##defining levels##.
 
 A ##defining level## is a set of blocks' implementations grouped in one directory.
 
@@ -711,7 +712,7 @@ A ##defining level## is a set of blocks' implementations grouped in one director
 </div>
 %%
 
-An implementation of every block from a library can be expanded (or redefine) at a project's level.
+An implementation of every block from a library can be expanded (or redefined) at a project's level.
 
 %%html
 <div style="text-align:center;">
@@ -719,18 +720,18 @@ An implementation of every block from a library can be expanded (or redefine) at
 </div>
 %%
 
-From the viewpoint of a process of building a page:
+From the viewpoint of the process of building a page:
  * When building a page we can set a list of levels (directories) to use their blocks on
    the page. E.g.,
    ##build-page -l blocks-common -l blocks-my my-page.html##
 
 From the file structure's poitn of view:
- * A project can have any count of levels. But only the levels that enumerated when builing
+ * A project can have any number of levels. But only the levels that are enumerated when builing
    will be on the page. It is possibly to make different sets of defining levels
    for different parts of the site.
 
 From the JavaScript's point of view:
- * There needs to be a possibility to define a dynamic behaviour of a page in a declarative style.
+ * There is need to define a dynamic behaviour of a page in a declarative style.
    Final behaviour has to be gathered from different defining levels. E.g.,
 
 %%hl js
@@ -751,8 +752,8 @@ Block('dropdown', {
 %%
 
 From the viewpoint of a template engine:
- * To be able not only to define but to redefine a template there needs to be
-   a possibility to apply previous implementation for a template.\\
+ * To be able not only to define but to redefine a template one needs to
+   apply previous implementation for a template.\\
    E.g., for XSL:
 
 %%hl xml
@@ -763,8 +764,8 @@ From the viewpoint of a template engine:
 </xsl:template>
 %%
 
-From project architechture's point of view:
- * When develping a portal of several sites we can sort out a blocks library which is one of
+From a project architechture's point of view:
+ * When developing a portal of several sites we can sort out a blocks library which is one of
    defining levels for all the sites of the portal. And the blocks for a concrete site
    can be united in another level.
  * The same repo can have blocks of both desktop and mobile browsers.\\
@@ -777,8 +778,8 @@ From project architechture's point of view:
 having several defining levels in one repo.
 
 === Building a page
-A work in terms of blocks means existing a ##subject abstraction##. This is obligatory only when
-a programmer work with code. When code gets to a browser the existing of sibject abstraction is
+Working in terms of blocks means that there exists ##subject abstraction##. This is obligatory only when
+a programmer work with code. When code gets to a browser subject abstraction is
 not neccessary. It is important only to save a design and behaviour of every block on the page.
 
 So, there is a ##code for people## and a ##code for browsers##. They are not the same one.
@@ -801,26 +802,26 @@ From the CSS' point of view:
    file.
  * A browser gets minimized code\\
    When building we can minimize and optimize a CSS code. E.g. using the
-   ((https://github.com/afelix/csso CSSO)) util.
+   ((https://github.com/afelix/csso CSSO)) utility.
  * Each browser can get a CSS code written especially for it\\
    There is a possibility to divide CSS implementations for different browsers and deliver
    only the code needed for each browser.\\
    A ((https://github.com/afelix/setochka setochka, a prototype)) can be used for that.
 
-From JavaScript's point of view:
+From the JavaScript's point of view:
  * There are many files for blocks, and there is one file for a page\\
-   The same as in CSS' case, a JavaScript implementation of all teh blocks
+   The same as in the CSS' case, a JavaScript implementation of all the blocks
    needed can be united in one file.
 
-From template engine's point of view:
+From the template engine's point of view:
  * Only needed templates work\\
    A final set of templates that is used for creating an HTML for a page has only the templates
-   for the blocks required. Because of that a template productivity increases and a probability
-   of appearing side effects abates.
+   for the blocks required. Because of that a template productivity increases and the probability
+   of appearing side effects is diminished.
 
 From the viewpoint of developing process:
- * Robots serve for people (not contrariwise)\\
-   A developer writes a code in an easy way. "Robots" take care about productivity optimizing the
+ * Robots serve for people (not counterwise)\\
+   A developer writes a code in an easy way. "Robots" take care of the productivity by optimizing the
    code (and probably making it unreadable) when building a page.
 
 From the viewpoint of labor organization
@@ -833,15 +834,13 @@ We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 ==== Libraries
  * ((http://bem.github.com/bem-bl/index.en.html An open source block library bem-bl))
 ==== Tools
- * ((https://github.com/bem/bem-tools Tools for woring with files accroding to BEM methodology))
+ * ((https://github.com/bem/bem-tools Tools for working with files accroding to BEM methodology))
  * ((https://github.com/veged/borschik Borschik))\\
    An utility to build static files into one.
  * ((https://github.com/afelix/setochka Setochka, a prototype))\\
    A tool to divide CSS in several browser-oriented files.
-   Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. Также может
-   использоваться для удаления этих свойств без записи.
  * ((https://github.com/afelix/csso CSSO))\\
-   An utility that optimizes a CSS code with a glance of its structure.
+   A utility that optimizes a CSS code with a glance of its structure.
 ==== Supplement information
  * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (russian speaking)
  * ((http://clubs.ya.ru/bem/ BEM club at Ya.Ru)) (russian speaking)
