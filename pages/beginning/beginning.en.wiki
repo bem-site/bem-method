@@ -530,39 +530,37 @@ When a block is hovered, it changes its appearance.
 A manager could ask:
  * to use the same button on a different page
 
-The CSS implementation of the block is insufficient. In this case to reiterate the block we must
-reiterate its behavior which is described in JavaScript as well.
+Having a CSS implementation of a block is not enough. Reusing a block also means reusing its behavior, described in
+JavaScript.
 
-So a block must "know" everything about itself. That is a block's implementation. This means that
-its view and behavior is realized in all the technologies needed. That we call ##multilingualism##.
+So a block must "know" everything about itself. Implementing a block means describing its looks and behavior in all
+technologies being used - we call that ##multilingualism##.
 
 ##Multilingualism## is a description of a block in all the programming languages which are neccessary for
 its functionality.
 
-If a block has to be viewed on a page, it has to have the following techs:
- * templates (XSL, TT2, JavaScript, etc), which turn block's declaration into page's HTML code
- * CSS that describes a block's view
+If a block has to be present on a page, it has to have the following techs:
+ * templates (XSL, TT2, JavaScript, etc), which turn the declaration of a block into HTML code
+ * CSS that describes appearance of the block
 
-If a block has a dynamic behavior, we add it to this list:
+If a block has dynamic behavior, we add it to this list:
  * a JavaScript implementation for the block
 
-Everything that concern the block is its technology. E.g.:
- * A block's images
+Everything that constitues a block is a technology, including images.
 
 === File system representation for a block
-==== Unequivocal place of code
+==== Unequivocal placement of code
 ===== File naming
-If a project
- * lives long and it's always acquiring new features
+When a project is
+ * long-lived and under constant development
 
-If a  developing team
+If the development team
  * consists of several people
- * grows and changes (new people appear)
+ * grows and changes
 
-All this in turn mean that needs a way to find block's code files fast.
+Then being able to navigate the codebase quickly is crucial.
 
-A block's code is easy to find if it's placed in files with the same name as a block key
-word is:
+Block's code is easiest to find when it's placed in files using the same naming scheme as the one we use for naming our entities:
 
 %%html
 <pre>
@@ -574,12 +572,11 @@ menu.css
 
 ===== File independence of a block
 There could be a task
- * to use some blocks from a previous project for a new one
+ * to reuse some blocks from a previous project for a new one
 
-For doing it easily we have to be able to deliver a block's implementation (in all its techs)
-to another place. This can be done by file copying or partial checkout of a repo from a 
-donor project. In both these cases it is useful if all block's files are gathered in the same
-directory:
+For doing it easily we have to be able to move an implementation of a block implementation (in all its techs)
+to another place. This can be done by simply copying the files, or using partial checkout of a repo from a
+"donor" project. In both cases it is useful if all of the files are located under the same directory:
 
 %%html
 <pre>
@@ -591,30 +588,30 @@ menu/
 %%
 
 ===== File structure of a block
-When working on a project there can appear a necessity to change a block.
+When working on a project there can arise a necessity to change a block.
 
 A manager could ask:
- * to change a color of a ##Current Menu Point##
+ * to change the color of the ##Current Menu Point##
 or
- * to make a ##Menu## reacting on cursor's hovering
+ * to make the ##Menu## react on hover
 
-One developer could ask another:
- * to help with ##Search Form## markup for IE
+One developer could ask his colleague:
+ * to help with ##Search Form## styling for IE
 
-To understand where is the code discussed we have to follow these rules when developing:
- * A block's code is placed in a separate directory
-   * The directory's name coincides with the blocks' name
-   * The block's technical implementation is placed in the files in block's directory
- * An element has a subdirectory in its block's directory
-   * The subdirectory's name coincides with the element's name
-   * The technical implementation of an element is placed in the files in this subdirectory
- * A modifier has a subdirectory in its block's directory
-   * The subdirectory's name coincides with the modifier's name
-   * The technical implementation of the modifier is placed in the files in this subdirectory
-   * A file name includes both a key and a value of a modifier
+To understand where the code under discussion is located, it can be useful to follow these (or similar) rules:
+ * Block's code is placed in a separate directory
+   * Directory name matches block name
+   * Implementation is placed under this directory
+ * Elements are placed in subdirectories under the block directory
+   * Directory name matches element name
+   * Implementation is placed under this directory
+ * Modifiers are placed in subdirectories under the block directory
+   * Directory name matches modifier name
+   * Implementation is placed under this directory
+   * File name includes both key and value of the modifier
 
 **Example**\\
-A file structure of a ##Menu## block
+File structure of a ##Menu## block
 
 %%html
 <pre>
@@ -631,27 +628,26 @@ menu/
 </pre>
 %%
 
-Maintaining this file structure manually is not convenient. So we use
+Maintaining such file structure manually is, quite obviously, not convenient. So we've developed
 ((https://github.com/bem/bem-tools BEM tools))
-to work with files. These are a range of utilities that enable us to create
-files with certain names, file place and a content.
+to handle the burden. These tools help with creating the directory structure, file placement, generating placeholder
+content, etc.
 
 ===== Grouping blocks in directories
-A big portal needs to have the same block in different sites.
+Big portals like Yandex often need to reuse the same blocks across different sites.
 
 There could be a task:
- * to create the same ##Footer## on //all the portal's services// or
- * to create a //new project// using the blocks for existing ones
+ * to create the same ##Footer## on //all the portal's sites// or
+ * to create a //new project// using blocks from the existing sites
 
-Developing for a web design company, often means that onr has to use typical solutions
+Working for a web design agency, often means that one has to use typical solutions
 for typical web pages.
 
 A manager could ask:
- * to create an order page with a web form //as on previous project//
+ * to create an order page with a web form //as on a previous project//
 
-We have to do these tasks and avoid to copy blocks' files from project to project. There needs be
-an opportunity to link up the blocks from one project to another. Blocks have to be united in
-one directory for that.
+We have to do these tasks while, preferably, avoiding copying blocks around manually. So it's nice to have a repository
+of shared blocks that can be linked to a project. Blocks then should be united under a single directory for that.
 
 We call such a directory ##blocks##.
 
@@ -668,22 +664,21 @@ blocks/
 </pre>
 %%
 
-That directory can be linked up to another project straight from a repo. So a block's code is kept
-in one place. If we need to correct something or to make other changes, we do it in one
-place only.
+That directory can be linked to another project straight from a repo, so that we can make changes to shared blocks in a
+single place.
 
 ==== Levels of definition
-If a group of blocks (united in one directory) is linked up to a project directly (via a partial checkout
-or svn:externals), then every changing committed for these blocks influences to both projects.
+If a group of blocks (united under one directory) is linked to a project directly (via a partial checkout
+or svn:externals), then every change committed for these blocks influences all projects.
 
-When developing a site based on another existing one it may need:
- * to enlarge a font in ##Head## on a site (without affecting the previous site),
- * to add an animation when showing a dropdown menu.
+When developing a site based on an existing one we may need:
+ * to enlarge the font in the ##Head## on site A without affecting site B
+ * to add animation when showing a dropdown menu.
 
-Then there is a need to define or redefine blocks in different technologies for
-one site only or for certain pages only. It is owed to ##defining levels##.
+To do so, we need to be able to define or redefine blocks in different technologies for
+one site only or for certain pages only. It is possible using ##definition levels##.
 
-A ##defining level## is a set of blocks' implementations grouped in one directory.
+A ##definition level## is a set of implementations grouped in one directory.
 
 %%html
 <div style="text-align:center;">
@@ -691,7 +686,7 @@ A ##defining level## is a set of blocks' implementations grouped in one director
 </div>
 %%
 
-An implementation of every block from a library can be expanded (or redefined) at a project's level.
+An implementation of every block from a library can be changed (or completely redefined) at project level.
 
 %%html
 <div style="text-align:center;">
@@ -699,19 +694,19 @@ An implementation of every block from a library can be expanded (or redefined) a
 </div>
 %%
 
-From the viewpoint of the process of building a page:
+From the viewpoint of page-building process:
  * When building a page we can set a list of levels (directories) to use their blocks on
    the page. E.g.,
    ##build-page -l blocks-common -l blocks-my my-page.html##
 
-From the file structure's point of view:
+From the file structure point of view:
  * A project can have any number of levels. But only the levels that are enumerated when builing
-   will be on the page. It is possibly to make different sets of defining levels
+   will be present on the page. It is possible to specify different sets of definition levels
    for different parts of the site.
 
-From the JavaScript's point of view:
- * There is need to define a dynamic behavior of a page in a declarative style.
-   Final behavior has to be gathered from different defining levels. E.g.,
+From the JavaScript point of view:
+ * There is a need to define dynamic behavior of a page in declarative style.
+   Final behavior has to be gathered from different definition levels. E.g.,
 
 %%hl js
 /* blocks-common/dropdown/dropdown.js */
@@ -732,7 +727,7 @@ Block('dropdown', {
 
 From the viewpoint of a template engine:
  * To be able not only to define but to redefine a template one needs to
-   apply previous implementation for a template.\\
+   apply a preceding template implementation.\\
    E.g., for XSL:
 
 %%hl xml
@@ -743,69 +738,61 @@ From the viewpoint of a template engine:
 </xsl:template>
 %%
 
-From a project architecture's point of view:
- * When developing a portal of several sites we can sort out a blocks library which is one of
-   defining levels for all the sites of the portal. And the blocks for a concrete site
-   can be united in another level.
- * The same repo can have blocks of both desktop and mobile browsers.\\
-   Such a project has defining levels of common blocks, mobile blocks and desktop blocks.
-   Different combinations of these levels give the implementation needed on concrete
-   pages.
+From an architectural point of view:
+ * When developing a portal of several sites we can extract a blocks library which can serve as one of
+   definition levels for all the sites of the portal. The blocks for a specific site will form another level.
+ * The same repo can hold blocks of both desktop and mobile versions.\\
+   Such a project will have the following levels: common, mobile, desktop.
+   Different combinations of these levels give the resulting implementation required for specific pages.
 
 
-((https://github.com/bem/bem-bl Open source block library bem-bl)) can be an example of
-having several defining levels in one repo.
+((https://github.com/bem/bem-bl Open source block library bem-bl)) is an example of
+having several definition levels in one repo.
 
 === Building a page
-Working in terms of blocks means that there exists ##subject abstraction##. This is obligatory only when
-a programmer work with code. When code gets to a browser subject abstraction is
-not necessary. It is important only to save a design and behavior of every block on the page.
+Working in terms of blocks means having a ##high-level abstraction##. This abstraction is for developers only, browsers
+will get a compiled version
 
-So, there is a ##code for people## and a ##code for browsers##. They are not the same one.
- * A programmer writes a code for blocks, a browser gets a code for the whole page
+So we have ##code for people## and ##code for browsers##. They are not the same.
+ * Programmers code blocks - browsers get the code for the whole page
 
-To turn a ##code fo people##  into ##code for a browser## we ##build## a page.
+To turn ##code for people## into ##code for browsers## we ##build## a page.
 
-##Building a page## is making a page's code in different technologies (HTML, CSS, JavaScript)
-based on a page declaration (XML or JSON) by applying implementations of the blocks declared
+##Building a page## means generating HTML, CSS, and JavaScript code from a page declaration (written in XML or JSON)
+by applying transformations.
 
-From the CSS' point of view:
+From the CSS point of view:
 
- * The block files are gathered in one page file\\
-   Despite the fact that CSS for every block, element or modifier is placed in a separate
-   file, there is no need to link up these files to the page as is. It is possible to
-   collect all the CSS implementation needed in one file.\\
-   In addition that solves the problem of limitation for CSS imports in IE and descreases
-   the number of HTTP requests.
-   We use the ((https://github.com/veged/borschik borschik)) tool to unite all CSS in one
-   file.
- * A browser gets minimized code\\
-   When building we can minimize and optimize a CSS code. E.g. using the
+ * All CSS files are combined into one\\
+   Despite the fact that CSS for every block, element or modifier is stored in separate
+   files, there is no need to link these files to the page as-is. It is possible to
+   collect all the required CSS implementations in one file.\\
+   This also solves the number of imports issue in IE and decreases the number of HTTP requests.
+   To combine CSS we use the ((https://github.com/veged/borschik borschik)) tool.
+ * Browser gets minimized code\\
+   When building CSS, we can minimize and optimize CSS code, for example, using the
    ((https://github.com/afelix/csso CSSO)) utility.
- * Each browser can get a CSS code written especially for it\\
-   There is a possibility to divide CSS implementations for different browsers and deliver
+ * Each browser can get CSS code written especially for it\\
+   It is possible to divide CSS implementations for different browsers and deliver
    only the code needed for each browser.\\
-   A ((https://github.com/afelix/setochka setochka, a prototype)) can be used for that.
+   ((https://github.com/afelix/setochka setochka - currently in prototype)) can be used for that.
 
-From the JavaScript's point of view:
- * There are many files for blocks, and there is one file for a page\\
-   The same as in the CSS' case, a JavaScript implementation of all the blocks
-   needed can be united in one file.
+From the JavaScript point of view:
+ * Similarly to CSS, JavaScript files can be combined into one.
 
 From the template engine's point of view:
- * Only needed templates work\\
-   A final set of templates that is used for creating an HTML for a page has only the templates
-   for the blocks required. Because of that a template productivity increases and the probability
-   of appearing side effects is diminished.
+ * Only needed templates are included\\
+   The final set of templates that are used for displaying a page includes only the templates
+   for required blocks. This boosts template performance and reduces the likelihood of side effects.
 
-From the viewpoint of developing process:
- * Robots serve for people (not counterwise)\\
-   A developer writes a code in an easy way. "Robots" take care of the productivity by optimizing the
-   code (and probably making it unreadable) when building a page.
+From the viewpoint of development process:
+ * Robots serve people (not the other way around)\\
+   Developer writes code as he sees fit. "Robots" take care of performance by optimizing the
+   code (together with making it unreadable) when building a page.
 
-From the viewpoint of labor organization
- * Division of labour\\
-   There are developers to create blocks. And there are developers to optimize the final product.
+From the viewpoint of work organization:
+ * Division of labor\\
+   There are developers working on a block library, and there are developers building sites using them.
 
 We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 
@@ -816,10 +803,10 @@ We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
  * ((https://github.com/bem/bem-tools Tools for working with files accroding to BEM methodology))
  * ((https://github.com/veged/borschik Borschik))\\
    An utility to build static files into one.
- * ((https://github.com/afelix/setochka Setochka, a prototype))\\
+ * ((https://github.com/afelix/setochka Setochka, a working prototype))\\
    A tool to divide CSS in several browser-oriented files.
  * ((https://github.com/afelix/csso CSSO))\\
-   A utility that optimizes a CSS code with a glance of its structure.
-==== Supplement information
- * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (russian speaking)
- * ((http://clubs.ya.ru/bem/ BEM club at Ya.Ru)) (russian speaking)
+   An utility that performs advanced, structural optimizations of CSS code
+==== Additional information
+ * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (in Russian)
+ * ((http://clubs.ya.ru/bem/ BEM club on Ya.Ru)) (in Russian)
