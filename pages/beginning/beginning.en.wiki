@@ -327,9 +327,9 @@ From the CSS viewpoint it means that:
 
 From the JavaScript viewpoint it means that:
 
- * The blocks with similar behaviour can be detected unequivocally: they have the same CSS classes\\
+ * The blocks with similar behavior can be detected unequivocally: they have the same CSS classes\\
    Using CSS class selectors makes it possible to pick out all blocks with a given name and specify
-   the required dynamic behaviour.
+   the required dynamic behavior.
 
 ===Modifiers for elements and blocks
 It is often needed to create a block which is very similar to an existing block, but with slight changes to
@@ -368,9 +368,9 @@ An element's modifier changes the looks of a "current" item
 %%
 
 From the template point of view:
- * In the BEM tree, modifiers are properties of the entity that describes a block or an element
+ * In the BEM tree, modifiers are properties of an entity that describes a block or an element
 
-For example, they can be node attributes in XML:
+For example, they can be attribute nodes in XML:
 
 %%hl xml
 <b:menu m:size="big" m:type="buttons">
@@ -378,7 +378,7 @@ For example, they can be node attributes in XML:
 </b:menu>
 %%
 
-The same expressed using JSON:
+The same expressed in JSON:
 
 %%hl js
 {
@@ -458,18 +458,17 @@ E.g. current menu item can be marked with a modifier:
 %%
 
 === Subject abstraction
-If there are many people who work for a project, they should arrange for a data domain. All the bloks
-of a project must have definite names used in code.
+When many people are working on a project they should agree on a data domain and use it in naming their blocks and elements.
 
-E.g. a block ##Tag Cloud## is always called ##tags##. Each of its element is a ##tag##. This is right for
-every language: CSS, JavaScript, XSL, etc.
+For example, a ##Tag Cloud## block is always called ##tags##. Each of its elements is a ##tag##. This convention spreads across all
+languages: CSS, JavaScript, XSL, etc.
 
 From the development process' point of view:
  * All the participants operate with the same terms
 
-From the viewpoint of CSS:
- * CSS for blocks and elements can be written in a pseudo language which then is compiled
-   into a pure CSS according to the naming convention.
+From the CSS point of view:
+ * CSS for blocks and elements can be written in a pseudo language which is then compiled
+   down to CSS according to the naming convention.
 
 %%hl js
   .menu {
@@ -488,8 +487,8 @@ From the viewpoint of CSS:
   }
 %%
 
-From the JavaScript's point of view:
- * Do not use CSS class selector to get a block's or an elements' DOM object.
+From the JavaScript point of view:
+ * Instead of using class selectors directly to find DOM elements, a special library is used.
 
 %%hl js
 $('menu__item').click( ... );
@@ -497,9 +496,9 @@ $('menu__item').addClass('menu__item_state_current');
 $('menu').toggle('menu_size_big').toggle('menu_size_small');
 %%
 
-The naming convention for CSS classes of blocks and elements can be changed. Using special JavaScript
-functions for an access to the blocks and the elements and in order to work with their modifiers makes it possible
-to change these functions only.
+The naming convention for CSS classes of blocks and elements can change in the course of time. Using special JavaScript
+functions for accessing blocks and elements and working with their modifiers makes it possible
+to change only these functions when the convention changes.
 
 %%hl js
 Block('menu').elem('item').click( ... );
@@ -507,12 +506,12 @@ Block('menu').elem('item').setMod('state', 'current');
 Block('menu').toggleMod('size', 'big', 'small');
 %%
 
-The code above is abstract. In our real products we use a JavaScript core of ##i-bem## block
-from ##bem-bl## block library:
+The code above is abstract. In real life we are using a JavaScript core of ##i-bem## block
+from the ##bem-bl## block library:
  ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
 
-=== A block's consistency
-A site has a ##Button## block which has its dymanic behaviour.
+=== Blocks consistency
+A site has a ##Button## block which has a certain dynamic behavior.
 
 %%html
 <div style="text-align: center">
@@ -520,7 +519,7 @@ A site has a ##Button## block which has its dymanic behaviour.
 </div>
 %%
 
-When a cursor hovers on the block, it changes its appearance.
+When a block is hovered, it changes its appearance.
 
 %%html
 <div style="text-align: center">
@@ -529,13 +528,13 @@ When a cursor hovers on the block, it changes its appearance.
 %%
 
 A manager could ask:
- * to use the same button on another page
+ * to use the same button on a different page
 
 The CSS implementation of the block is insufficient. In this case to reiterate the block we must
-reiterate its behaviour which is described in JavaScript as well.
+reiterate its behavior which is described in JavaScript as well.
 
 So a block must "know" everything about itself. That is a block's implementation. This means that
-its view and behaviour is realized in all the technologies needed. That we call ##multilengualism##.
+its view and behavior is realized in all the technologies needed. That we call ##multilingualism##.
 
 ##Multilingualism## is a description of a block in all the programming languages which are neccessary for
 its functionality.
@@ -544,7 +543,7 @@ If a block has to be viewed on a page, it has to have the following techs:
  * templates (XSL, TT2, JavaScript, etc), which turn block's declaration into page's HTML code
  * CSS that describes a block's view
 
-If a block has a dynamic behaviour, we add it to this list:
+If a block has a dynamic behavior, we add it to this list:
  * a JavaScript implementation for the block
 
 Everything that concern the block is its technology. E.g.:
@@ -711,8 +710,8 @@ From the file structure's point of view:
    for different parts of the site.
 
 From the JavaScript's point of view:
- * There is need to define a dynamic behaviour of a page in a declarative style.
-   Final behaviour has to be gathered from different defining levels. E.g.,
+ * There is need to define a dynamic behavior of a page in a declarative style.
+   Final behavior has to be gathered from different defining levels. E.g.,
 
 %%hl js
 /* blocks-common/dropdown/dropdown.js */
@@ -760,7 +759,7 @@ having several defining levels in one repo.
 === Building a page
 Working in terms of blocks means that there exists ##subject abstraction##. This is obligatory only when
 a programmer work with code. When code gets to a browser subject abstraction is
-not necessary. It is important only to save a design and behaviour of every block on the page.
+not necessary. It is important only to save a design and behavior of every block on the page.
 
 So, there is a ##code for people## and a ##code for browsers##. They are not the same one.
  * A programmer writes a code for blocks, a browser gets a code for the whole page
