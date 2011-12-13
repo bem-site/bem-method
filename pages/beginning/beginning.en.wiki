@@ -1,18 +1,17 @@
 ﻿=== What is BEM?
-This article describes theoretical aspects of web-developing in one big company.
-Except the theory certainly we have practical things such as libraries and tools.
-There are links to them in the article.
+This article describes the theoretical aspects of web-developing for a big company.
+Except the theory we certainly have practical things such as libraries and tools.
+You can find links to them in the article.
 
-There is plenty of sites developed at Yandex, thousands of pages. The approaches
-we use for HTML/CSS markup and for others front end code are permanentaly
-evolving.
+There is plenty of sites developed at Yandex, thousands in fact. The approaches
+we use for HTML/CSS markup and for others front end code are in constant evolution.
 
 Projects developed for a big portal and the process of developing for such
 usually have a range of specifics.
 
- * Typical projects ought to be developed fast, but they should live long\\
+ * Typical projects ought to be developed fast, but they should also live long\\
    It needs to be able to create a project in a short period of time with an
-   architecture which helps to maintain it for a long time.
+   architecture which will help to maintain it for a long time.
  * Numerous people work for a project\\
    It has to be able to organize work efficiently for teams either of
    1-2 developers or larger numbers.
@@ -32,12 +31,12 @@ We looked for solutions to our problems. And at one point they became
 ##BEM## means Block, Elemen, Modifier. The meanings of these terms are given further
 in the article.
 
-One of the most widespread example of a methodology in  programming is OOP.
-OOP is a programming paradigm embodied by a lot of languages. The same applies for BEM
-methodology. This is a manner to describe reality in code, a range of patterns and
+One of the most widespread examples of a methodology in  programming is OOP.
+This is a programming paradigm embodied by many languages. The same applies for BEM
+methodology. This is a way to describe reality in code, a range of patterns and
 a way of thinking about entities whatever programming language is used.\\
 Based on this methodology we created some front end developing approaches
-and technical solutions which make us able to put out new pages fast and maintain
+and technical solutions which enable us to put out new pages fast and maintain
 existing pages easily.
 
 The principles of our code and work process are the following:
@@ -63,13 +62,13 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-If each part of the page has its own name, it will be very useful when it comes to
+Giving each part of the page has its own name makes it very useful when it comes to
 team communication.\\
-A manager can ask:
+A manager could ask:
  * to enlarge the ##Head## or
  * to create one more page with a ##Head## without ##Search##
 
-You can ask a JavaScript developer
+You could ask a JavaScript developer
  * to make ##Auth Block## animated, etc.
 
 That is
@@ -89,14 +88,14 @@ Search form block\\
 
 ====Element
 An Element is a part of a block that performs a certain function. There's no point
-of element without its block.
+of an element without its block.
 
 **e.g.**\\
 An input field and a button are elements of the Search Block
 
 %%html
 <div style="text-align:center">
-<img src="images/search-block-marked.png"/>
+<img src="images/search-block-marked.en.png"/>
 </div>
 %%
 
@@ -146,7 +145,7 @@ A key word designating an element is called ##element name##.
 For example, each point of a menu is an element ##item## of ##menu## block.
 
 Block name must be unique, it unequivocally designates which block is described.
-Only the same blocks can have same block names. In this case we speak that one block
+Only the same blocks can have same block names. In this case we say that one block
 is represented on the page 2 (3, 4, ...) times.
 
 An element name must be unique only within the scope of block. An element can be repeated
@@ -352,11 +351,11 @@ From JavaScript's viewpoint this means that:
    Using CSS class selectors it is possible to pick out all the same blocks on the page, and to specify
    them the dynamic behaviour wanted.
 
-===Модифицируемость блоков и элементов
-Может возникнуть ситуация, в которой требуется не просто повторить блок, но и внести в него
-незначительные изменения.\\
-Например, стоит задача:
- * Сделать в подвале ещё одно меню, с //другим дизайном//.
+===Modifiers for elements and blocks
+There can be a situation when there needs not only to reiterate a block but also to make slight
+changes for it.\\
+E.g. there is a task:
+ * Create one more ##Menu## in ##Footer## with //another layout//.
 
 %%html
 <div style="text-align: center">
@@ -364,14 +363,14 @@ From JavaScript's viewpoint this means that:
 </div>
 %%
 
-Чтобы не разрабатывать рядом блок, минимально отличающийся от уже существующего, нужно
-воспользоваться ##модификатором##.
+To avoid developing of a block that is minimally different from the existed one, it needs to use
+##modifier##.
 
-##Модификатор## — это свойство блока или элемента, которое немного меняет внешний вид или поведение.\\
-Модификатор имеет имя и значение. Одновременно может использоваться несколько разных модификаторов.
+A ##modifier## is a block's or element's property which change a litte its view or behaviour.\\
+A modifier has a name and a value. You can use several modifiers at the same time.
 
-**Приммер**\\
-Модификатор блока задаёт ему цвет фона
+**e.g.**\\
+A block's modifier specifies background color
 
 %%html
 <div style="text-align: center">
@@ -379,8 +378,8 @@ From JavaScript's viewpoint this means that:
 </div>
 %%
 
-**Пример**\\
-Модификатор элемента для текущего пункта меню изменяет эго внешний вид
+**e.g.**\\
+An element's modofier for the current item changes its view
 
 %%html
 <div style="text-align: center">
@@ -388,10 +387,10 @@ From JavaScript's viewpoint this means that:
 </div>
 %%
 
-С точки зрения входных данных:
- * В БЭМ-дереве модификаторы представлены как свойства той сущности, которая описывает блок или элемент
+From an input data's point of view:
+ * In the BEM tree modifiers are properties of the entity that describes a block or an element
 
-Например, в XML это могут быть атрибуты соответствующего узла:
+E.g, they are node attributes in XML:
 
 %%hl xml
 <b:menu m:size="big" m:type="buttons">
@@ -399,7 +398,7 @@ From JavaScript's viewpoint this means that:
 </b:menu>
 %%
 
-То же самое в формате JSON:
+The same in JSON:
 
 %%hl js
 {
@@ -411,8 +410,8 @@ From JavaScript's viewpoint this means that:
 }
 %%
 
-C точки зрения CSS:
- * Модификатор представляется дополнительным CSS-классом блока или элемента.
+From the viewpoint of CSS:
+ * A modifier is an additional CSS class for a block or an element.
 
 %%hl xml
 <ul class="menu menu_size_big menu_type_buttons">
@@ -429,9 +428,9 @@ C точки зрения CSS:
 }
 %%
 
-Модифицируемость элементов реализуется по аналогии.
+Modifiers for elements are imptemented on analogy.
 
-Например, модификатором можно обозначить текущий пункт меню:
+E.g. a current menu item can be marked with a modifier:
 
 %%hl xml
 <b:menu>
@@ -478,19 +477,19 @@ C точки зрения CSS:
 }
 %%
 
-=== Предметная абстракция
-Если над проектом работает много людей, им нужно договариваться о предметной области. У всех блоков
-проекта должны быть однозначные имена, которые используются в коде.
+=== Subject abstraction
+If there are many people who work for a project, they should arrange for a data domain. All the bloks
+of a project must have definite names used in code.
 
-Например, реализованный на сайте блок ##Облако тегов## всегда называется ##tags##, а каждый элемент
-(метка) в нём - ##tag##. Это справедливо для любой технологии: CSS, JS, XSL, etc.
+E.g. a block ##Tag Cloud## is always called ##tags##. Each of its element is a ##tag##. This is right for
+every language: CSS, JavaScript, XSL, etc.
 
-С точки зрения процесса разработки:
- * Все участники процесса оперируют одними терминами
+From the development process' point of view:
+ * All the participants operate with the same terms
 
-С точки зрения CSS:
- * CSS блоков и элементов можно описывать на псевдоязыке, который затем компилируется в чистый
-   CSS согласно принятой схеме именования.
+From the viewpoint of CSS:
+ * CSS for blocks and elements can be written in a pseudo language which then is compiled
+   into a pure CSS according to the naming convention.
 
 %%hl js
   .menu {
@@ -509,8 +508,8 @@ C точки зрения CSS:
   }
 %%
 
-С точки зрения JavaScript:
- * Не нужно обращаться к DOM-узлам блоков и элементов по имени класса
+From the JavaScript's point of view:
+ * Do not use CSS class selector to get a block's or an elements' DOM object.
 
 %%hl js
 $('menu__item').click( ... );
@@ -518,9 +517,9 @@ $('menu__item').addClass('menu__item_state_current');
 $('menu').toggle('menu_size_big').toggle('menu_size_small');
 %%
 
-Схема именования CSS-классов для блоков и элементов может измениться. При использовании специальных
-JavaScript-функций для обращения к блокам и работы с их модификаторами нужно будет внести изменения
-только в эти функции
+The naming convention for CSS classes of blocks and elements can be changed. Using special JavaScript
+functions for an access to the blocks and the elements and in order to work with their modifiers makes it possible
+to change these functions only.
 
 %%hl js
 Block('menu').elem('item').click( ... );
@@ -528,11 +527,12 @@ Block('menu').elem('item').setMod('state', 'current');
 Block('menu').toggleMod('size', 'big', 'small');
 %%
 
-Приведённый здесь код - абстрактный. В реальных разработках мы используем JavaScript-ядро блока
-##i-bem## из библиотеки bem-bl: ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
+The code above is abstract. In our real products we use a JavaScript core of ##i-bem## block
+from ##bem-bl## block library:
+ ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
 
-=== Консистентность блока
-На нашем сайте реализован блок Кнопка, у которого есть динамическое поведение.
+=== A block's consistency
+A site has a ##Button## block which has its dymanic behaviour.
 
 %%html
 <div style="text-align: center">
@@ -540,7 +540,7 @@ Block('menu').toggleMod('size', 'big', 'small');
 </div>
 %%
 
-При наведении курсора на этот блок он меняет свой внешний вид.
+When a cursor hovers on the block, it changes its appearance.
 
 %%html
 <div style="text-align: center">
@@ -548,40 +548,42 @@ Block('menu').toggleMod('size', 'big', 'small');
 </div>
 %%
 
-Менеджер может попросить:
- * Использовать такую же кнопку на другой странице
+A manager could ask:
+ * to use the same button on another page
 
-Просто CSS-реализации блока недостаточно. Ведь в данном случае, чтобы полностью повторить блок, нужно
-повторить и его поведение, описанное в JavaScript.
+The CSS implementation of the block is insufficient. In this case to reiterate the block we must
+reiterate its behaviour which is described in JavaScript as well.
 
-Таким образом, блок должен знать о себе всё. То есть реализация блока подразумевает описание его
-внешнего вида и поведения во всех необходимых технологиях. Этот принцип мы называем ##мультилингвальность##.
+So a block must "know" everything about itself. That is a block's implementation. This means that
+its view and behaviour is realized in all the technologies needed. That we call ##multilengualism##.
 
-##Мультилингвальность## - это описание блока на всех языках (технологиях), необходимых для его работы.
+##Multilingualism## is a description of a block in all the programming languages which are neccessary for
+its functionality.
 
-Если блок нужно представить на странице, у него должны быть реализованы технологии:
- * шаблоны (XSL, TT2, JavaScript, и т.д.), превращающие декларацию блока на странице в HTML-код
- * CSS, отвечающий за внешний вид блока
+If a block has to be viewed on a page, it has to have the following techs:
+ * templates (XSL, TT2, JavaScript, etc), which turn block's declaration into page's HTML code
+ * CSS that describes a block's view
 
-Когда у блока также есть динамическое поведение, к этому списку добавляются:
- * JavaScript-реализация блока
+If a block has a dynamic behaviour, we add it to this list:
+ * a JavaScript implementation for the block
 
-В список технологий входит всё, что относится к блоку, в том числе и:
- * Картинки блока
+Everything that concern the block is its technology. E.g.:
+ * A block's images
 
-=== Представление блоков на файловой системе
-==== Однозначное положение кода
-===== Именование файлов
-Если проект
- * живёт долго и постоянно обрастает новыми сущностями
+=== File system representation for a block
+==== Unequivocal place of code
+===== File naming
+If a project
+ * lives long and it's always acquiring new features
 
-Если команда разработки
- * состоит из нескольких специалистов
- * растёт и изменяется (появляются новые люди)
+If a  developing team
+ * consits of several people
+ * grows and changes (new people appear)
 
-нужен способ быстро определять, где может находиться код блока.
+All this in turn mean that needs a way to find block's code files fast.
 
-Код блока легко искать, если он расположен в файлах, одноимённых ключевому слову блока:
+A block's code is easy to find if it's placed in files with the same name as a block key
+word is:
 
 %%html
 <pre>
@@ -591,14 +593,14 @@ menu.css
 </pre>
 %%
 
-===== Файловая независимость блока
-Может возникнуть задача
- * использовать несколько блоков предыдущего проекта на новом проекте
+===== File independence of a block
+There could be a task
+ * to use some blocks from a previous project for a new one
 
-Чтобы легко делать это, реализацию блока (во всех технологиях) нужно уметь доставлять в
-другое место. Это может быть сделано при помощи копирования файлов или частичным чекаутом
-репозитория проекта-донора. И в том, и в другом случае удобно, чтобы все файлы, относящиеся
-к блоку, были объединены в одну папку:
+For doing it easily we have to be able to deliver a block's implementation (in all its techs)
+to another place. This can be done by file copying or partial checkout of a repo from a 
+donor project. In both these cases it is useful if all block's files are gathered in the same
+directory:
 
 %%html
 <pre>
@@ -609,31 +611,31 @@ menu/
 </pre>
 %%
 
-===== Файловая структура блока
-В процессе работы над проектом может возникнуть необходимость изменить какой-нибудь блок.
+===== File structure of a block
+When working on a project there can appear a neccessity to change a block.
 
-Менеджер может попросить:
- *  Изменить цвет ##активному пункту Меню##, или
- *  Сделать ##Меню## реагирующим на наведение курсора
+A manager could ask:
+ * to change a color of a ##Current Menu Point##
+or
+ * to make a ##Menu## reacting on cursor's hovering
 
-Один разработчик может попросить другого:
- *  Помочь с вёрсткой ##Поисковой формы## под IE
+One developer could ask another:
+ * to help with ##Search Form## markup for IE
 
-Чтобы можно было сразу понять, где лежит код, о котором идёт речь, нужно соблюдать в
-разработке следующие требования:
- * Код блока размещён в отдельной директории
-   * Имя директории совпадает с именем блока
-   * Техническая реализация блока размещена в файлах в директории блока
- * Элементу соответствует поддиректория в директории блока
-   * Имя директории совпадает с именем элемента
-   * Техническая реализация элемента располагается в файлах в этой директории
- * Модификатору соответствует поддиректория в директории блока
-   * Имя директории соответствует имени модификатора
-   * Техническая реализация модификатора размещается в файлах в этой директории
-   * Названия файлов содержат как имя, так и значение модификатора
+To understand where is the code discussed we have to follow these rules when developing:
+ * A block's code is placed in a separate directory
+   * The directory's name coincides with the blocks' name
+   * The block's technical implementation is placed in the files in block's directory
+ * An element has a subdirectory in its block's directory
+   * The subdirectory's name coincides with the element's name
+   * The technical implementation of an elemnet is placed in the files in this subdirectory
+ * A modifier has a subdirectory in its block's directory
+   * The subdirectory's name coincides with the modifier's name
+   * The technical implementation of the modifier is placed in the files in this subdirectory
+   * A file name includes both a key and a value of a modifier
 
-**Пример**\\
-Файловая структура блока Меню
+**E.g.**\\
+A file structure of a ##Menu## block
 
 %%html
 <pre>
@@ -650,28 +652,31 @@ menu/
 </pre>
 %%
 
-Поддерживать такую файловую структуру вручную неудобно. Для работы с файлами мы используем
-((https://github.com/bem/bem-tools БЭМ-инструменты)). Это набор утилит, позволяющий создавать
-файлы по определённым шаблонам и с определённой схемой расположения на файловой системе.
+Maintaining this file structure manually is not convenient. So we use
+((https://github.com/bem/bem-tools BEM tools))
+to work with files. These are a range of utilities that enable us to create
+files with certain names, file place and a content.
 
-===== Группировка блоков в папки
-На большом портале необходимо реализовывать одни и те же блоки на разных проектах.
+===== Grouping blocks in directories
+A big portal needs to have the same block in different sites.
 
-Может возникнуть задача:
- * Реализовать одинаковый Подвал ##на всех проектах Портала##, или
- * Сделать  ##новый проект##, используя блоки уже существующего
+There could be a task:
+ * to create the same ##Footer## on //all the portal's services// or
+ * to create a //new project// using the blocks for existing ones
 
-Разработка сайтов один за другим в web-студии часто подразумевает использование типовых решений для типовых страниц.
+Developing for a web design company, often means that onr has to use typical solutions
+for typical web pages.
 
-Менеджер может попросить:
- * Сделать Страницу заказа товара с формой ##как на позапрошлом проекте##
+A manager could ask:
+ * to create an order page with a web form //as on previous project//
 
-Выполнять эти задачи нужно без копирования блоков из проекта в проект. Должна быть возможность
-подключить блоки одного проекта к другому. Для этого блоки нужно объединять в одну директорию.
+We have to do these tasks and avoid to copy blocks' files from project to project. There needs be
+an opportunity to link up the blocks from one project to another. Blocks have to be united in
+one directory for that.
 
-Мы называем такую директорию ##blocks##.
+We call such a directory ##blocks##.
 
-**Пример**
+**E.g.**
 
 %%html
 <pre>
@@ -684,22 +689,22 @@ blocks/
 </pre>
 %%
 
-Такую папку можно подключить к новому проекту прямо из репозитория. Так, код блока будет храниться
-только в одном месте. Если нужно исправить ошибку или внести другие изменения, это нужно будет сделать только там.
+That directory can be linked up to another project straight from a repo. So a block's code is kept
+in one place. If we need to correct something or to make other changes, we do it in one
+place only.
 
-==== Уровни переопределения
-Если группа блоков одного проекта (объединённая в папку) подключена к другому проекту напрямую
-(при помощи частичного чекаута или svn:externals), то любое закоммиченное изменение в таких блоках
-повлияет на оба проекта.
+==== Levels of defenition
+If a group of blocks (united in one directory) is linked up to a project directly (via a partial checkout
+or svn:externals), then every changing commited for these blocks influences to both projects.
 
-При разработке одного сайта на основе существующего может потребоваться:
- * Увеличить шрифт в Шапке на всём сайте (не затрагивая предыдущий сайт),
- * Добавить анимацию для раскрытия всех выпадающих меню.
+When developing a site based on another existing one it may need:
+ * to enlarge a font in ##Head## on a site (without affecting the previous site),
+ * to add an animation when showing a dropdown menu.
 
-То есть необходима возможность переопределять (или доопределять) блоки в разных технологиях только
-для определённого сайта или только для определённых страниц. Это возможно благодаря ##уровням переопределения##.
+Then there is a need to define or redefine blocks in different technologies for
+one site only or for certain pages only. It is owed to ##defining levels##.
 
-##Уровень переопределения## — это набор реализаций блоков, сгруппированных в одну директорию.
+A ##defining level## is a set of blocks' implementations grouped in one directory.
 
 %%html
 <div style="text-align:center;">
@@ -707,7 +712,7 @@ blocks/
 </div>
 %%
 
-Реализация любого блока библиотеки может быть расширена (или переопределена) на уровне проекта.
+An implementation of every block from a library can be expanded (or redefined) at a project's level.
 
 %%html
 <div style="text-align:center;">
@@ -715,19 +720,19 @@ blocks/
 </div>
 %%
 
-С точки зрения сборки страниц:
- * При сборке каждой страницы можно указать список уровней (директорий), блоки которых будут
-   представлены на странице. Например,\\
+From the viewpoint of the process of building a page:
+ * When building a page we can set a list of levels (directories) to use their blocks on
+   the page. E.g.,
    ##build-page -l blocks-common -l blocks-my my-page.html##
 
-С точки зрения файловой структуры:
- * Проект можно содержать любое количество реализаций блоков. Но на страницу попадут только те,
-   которые явно указаны к применению для сборки этой страницы. Возможно делать разные наборы
-   уровней переопределения для разных разделов сайтов.
+From the file structure's poitn of view:
+ * A project can have any number of levels. But only the levels that are enumerated when builing
+   will be on the page. It is possibly to make different sets of defining levels
+   for different parts of the site.
 
-С точки зрения JavaScript
- * Необходима возможность декларативного описания динамического поведения элементов на странице.
-   Конечное поведение должно собираться с разных уровней переопределения. Например,
+From the JavaScript's point of view:
+ * There is need to define a dynamic behaviour of a page in a declarative style.
+   Final behaviour has to be gathered from different defining levels. E.g.,
 
 %%hl js
 /* blocks-common/dropdown/dropdown.js */
@@ -746,10 +751,10 @@ Block('dropdown', {
 });
 %%
 
-С точки зрения шаблонного движка
-* Для того, чтобы можно было не только переопределять, но и "доопределять" шаблон, нужна
-   возможность вызвать предыдущую реализацию шаблона.\\
-   Например, в случае xsl:
+From the viewpoint of a template engine:
+ * To be able not only to define but to redefine a template one needs to
+   apply previous implementation for a template.\\
+   E.g., for XSL:
 
 %%hl xml
 <xsl:template match="b:head">
@@ -759,79 +764,83 @@ Block('dropdown', {
 </xsl:template>
 %%
 
-С точки зрения архитектуры проекта
+From a project architechture's point of view:
+ * When developing a portal of several sites we can sort out a blocks library which is one of
+   defining levels for all the sites of the portal. And the blocks for a concrete site
+   can be united in another level.
+ * The same repo can have blocks of both desktop and mobile browsers.\\
+   Such a project has defining levels of common blocks, mobile blocks and desktop blocks.
+   Different combinations of these levels give the implementation needed on concrete
+   pages.
 
- * При разработке портала из нескольких сайтов можно выделить общую библиотеку блоков, которая станет
-   одним из уровней переопределения для всех сайтов портала. Блоки конкретного сайта — объединить в
-   другой уровень переопределения.
- * В одном и том же репозитории может храниться реализация сайта для десктопных и мобильных браузеров.\\
-   В таком проекте есть уровень переопределения для общей реализации блоков, для мобильной и для десктопной.
-   Различные комбинации уровней дают желаемую реализацию блоков на конкретных страницах.
 
-Примером реализации нескольких уровней переопределения в одном репозитории может служить
-((https://github.com/bem/bem-bl Open Source библиотека блоков bem-bl)).
+((https://github.com/bem/bem-bl Open source block library bem-bl)) can be an example of
+having several defining levels in one repo.
 
-=== Сборка страниц
-Работа со страницей в терминах блоков подразумевает ##предметную абстракцию##. Эта предметная абстракция
-обязательна только на уровне взаимодействия человека с кодом. Когда код попадает в браузер, наличие
-предметной абстракции не обязательно, важно лишь сохранить требуемый внешний вид и поведение блоков на странице.
+=== Building a page
+Working in terms of blocks means that there exists ##subject abstraction##. This is obligatory only when
+a programmer work with code. When code gets to a browser subject abstraction is
+not neccessary. It is important only to save a design and behaviour of every block on the page.
 
-Таким образом, ##код для людей## и ##код для браузеров## — не одно и то же:
- * Человек пишет код блоков, браузер получает код целой страницы
+So, there is a ##code for people## and a ##code for browsers##. They are not the same one.
+ * A programmer writes a code for blocks, a browser gets a code for the whole page
 
-Для того, чтобы превратить "код для людей" в "код для браузеров", существует понятие ##сборки страниц##.
+To turn a ##code fo people##  into ##code for a browser## we ##build## a page.
 
-##Сборка страницы## — это формирование кода страницы в различных технологиях (HTML, CSS, JavaScript) на основе декларативного описания страницы (XML, JSON) путём применения реализаций описыванных блоков.
+##Building a page## is making a page's code in different technologies (HTML, CSS, JavaScript)
+based on a page declaration (XML or JSON) by applying implementations of the blocks declared
 
-С точки зрения CSS
+From the CSS' point of view:
 
- * Файлы всех блоков собираются в один файл страницы\\
-   Несмотря на то, что CSS для каждого блока, элемента и модификатора реализован в отдельном файле,
-   для работы страницы нет необходимости подключать эти файлы as is. Всю необходимую CSS-реализацию
-   страницы можно собрать в один файл. К тому же это решает проблемы: ограниченного количества импортов
-   в IE, количества HTTP-запросов к серверу. Объединение всех CSS в один файл мы делаем при помощи
-   утилиты ((https://github.com/veged/borschik borschik)).
- * Браузер получает минимизированный код\\
-   В процессе сборки можно минимизировать и оптимизировать CSS-код. Например, при помощи утилиты
-   ((https://github.com/afelix/csso CSSO))
- * Каждый браузер получает CSS, написанный специально для него\\
-   Есть возможность разделять CSS-реализации для разных браузеров и поставлять в каждый конкретный
-   браузер только тот CSS, который нужен ему. Для этого можно использовать ((https://github.com/afelix/setochka Сеточку, прототип))
+ * The block files are gathered in one page file\\
+   Despite the fact that CSS for every block, element or modifier is placed in a separate
+   file, there is no need to link up these files to the page as is. It is possible to
+   collect all the CSS implementation needed in one file.\\
+   In addition that solves the problem of limitation for CSS imports in IE and descreases
+   the number of HTTP requests.
+   We use the ((https://github.com/veged/borschik borschik)) tool to unite all CSS in one
+   file.
+ * A browser gets minimized code\\
+   When building we can minimize and optimize a CSS code. E.g. using the
+   ((https://github.com/afelix/csso CSSO)) utility.
+ * Each browser can get a CSS code written especially for it\\
+   There is a possibility to divide CSS implementations for different browsers and deliver
+   only the code needed for each browser.\\
+   A ((https://github.com/afelix/setochka setochka, a prototype)) can be used for that.
 
-С точки зрения JavaScript
- * Много файлов для блоков, один файл для страницы\\
-   Так же, как и в случае CSS, JavaScript-реализация всех необходимых блоков может быть объединена в один файл.
+From the JavaScript's point of view:
+ * There are many files for blocks, and there is one file for a page\\
+   The same as in the CSS' case, a JavaScript implementation of all the blocks
+   needed can be united in one file.
 
-С точки зрения шаблонных движков
- * Работают только нужные шаблоны\\
-   Конечный набор шаблонов, используемых для вывода HTML страницы в результате сборки содержит только
-   шаблоны нужных блоков. Благодаря этому увеличивается производительность шаблонов и  уменьшается
-   вероятность возникновения побочных эффектов.
+From the template engine's point of view:
+ * Only needed templates work\\
+   A final set of templates that is used for creating an HTML for a page has only the templates
+   for the blocks required. Because of that a template productivity increases and the probability
+   of appearing side effects is diminished.
 
-С точки зрения процесса разработки
- * Роботы на службе у человека (не наоборот)\\
-   Разработчик пишет код так, как ему удобно. О производительности заботятся роботы, которые в процессе
-   сборки превращают код в оптимизированный (и, возможно, нечитаемый).
+From the viewpoint of developing process:
+ * Robots serve for people (not counterwise)\\
+   A developer writes a code in an easy way. "Robots" take care of the productivity by optimizing the
+   code (and probably making it unreadable) when building a page.
 
-С точки зрения организации труда
- * Разделение труда\\
-   Существуют одни разработчики, создающие блоки, и существуют другие разработчики, занимающиеся
-   оптимизацией конечного продукта.
+From the viewpoint of labor organization
+ * Division of labour\\
+   There are developers to create blocks. And there are developers to optimize the final product.
 
-Для сборки файлов страниц используются ((https://github.com/bem/bem-tools БЭМ-инструменты)).
+We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 
-=== Связанные ссылки
-==== Библиотеки
- * ((http://bem.github.com/bem-bl/index.ru.html Библиотека блоков, разрабатываемых по БЭМ-методу))
-==== Инструменты
- * ((https://github.com/bem/bem-tools Инструменты для работы с файлами по БЭМ-методу))
+== Related links
+==== Libraries
+ * ((http://bem.github.com/bem-bl/index.en.html An open source block library bem-bl))
+==== Tools
+ * ((https://github.com/bem/bem-tools Tools for working with files accroding to BEM methodology))
  * ((https://github.com/veged/borschik Borschik))\\
-   Утилита для сборки статических файлов web-проектов в один.
- * ((https://github.com/afelix/setochka Сеточка, прототип))\\
-   Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. Также может
-   использоваться для удаления этих свойств без записи.
+   An utility to build static files into one.
+ * ((https://github.com/afelix/setochka Setochka, a prototype))\\
+   A tool to divide CSS in several browser-oriented files.
  * ((https://github.com/afelix/csso CSSO))\\
-   Утилита, оптимизирующая CSS-код с учётом его структуры.
-==== Дополнительная информация
- * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Видео выступлений и мастер-классов))
- * ((http://clubs.ya.ru/bem/ Клуб БЭМ на Я.ру))
+   A utility that optimizes a CSS code with a glance of its structure.
+==== Supplement information
+ * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (russian speaking)
+ * ((http://clubs.ya.ru/bem/ BEM club at Ya.Ru)) (russian speaking)
