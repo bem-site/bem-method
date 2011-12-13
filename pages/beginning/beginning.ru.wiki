@@ -93,7 +93,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/search-block-marked.png"/>
+<img src="images/search-block-marked.ru.png"/>
 </div>
 %%
 
