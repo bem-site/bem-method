@@ -1,48 +1,40 @@
 ﻿=== What is BEM?
-This article describes the theoretical aspects of web-developing for a big company.
-Except the theory we certainly have practical things such as libraries and tools.
-You can find links to them in the article.
+This article describes the theory and practice of building web sites at a big company.
 
-There is plenty of sites developed at Yandex, thousands in fact. The approaches
-we use for HTML/CSS markup and for others front end code are in constant evolution.
+There are plenty of sites under development at Yandex, thousands in fact. The approaches
+we use for HTML/CSS markup and other front-end technologies are in constant evolution.
 
-Projects developed for a big portal and the process of developing for such
-usually have a range of specifics.
+Developing for a big portal has a range of specifics and the process should be able to accommodate them:
 
- * Typical projects ought to be developed fast, but they should also live long\\
-   It needs to be able to create a project in a short period of time with an
-   architecture which will help to maintain it for a long time.
- * Numerous people work for a project\\
-   It has to be able to organize work efficiently for teams either of
-   1-2 developers or larger numbers.
+ * Fast-to-develop, long-lived projects\\
+   It should be possible to develop and launch the first version quickly with an architecture that helps
+   to maintain it in the long run.
+ * Numerous people work on a project\\
+   It should be possible to organize work efficiently in teams of 2 or more developers.
  * Team scalability\\
-   The adding of new people to a team has to improve its productivity. There needs
-   to exist an ability to commit new developers to work and assign them their
-   own parts of the project.\\
-   To be able to work with the same code for a long time with different members of
-   the team, the code has to be well-structured.
+   Adding new people to a team has to improve its productivity. It should be possible to assign new members to a team
+   without a steep learning curve.\\
+   Code has to be well-structured for a project to remain maintainable over time and team changes.
  * Code reuse\\
-   New projects of an interface element don't have to be written from
-   scratch. If there is a similar task done for the company, it needs to maximize
-   reuse of the code derived.
+   To maintain UI consistency and minimize development effort on typical interface components, said components have to be
+   easily reusable.
 
-We looked for solutions to our problems. And at one point they became
+For years we kept looking for solutions to our problems, and at one point they became
 ##BEM methodology##.\\
-##BEM## means Block, Elemen, Modifier. The meanings of these terms are given further
+##BEM## means Block, Element, Modifier. The meaning of these terms is described further
 in the article.
 
-One of the most widespread examples of a methodology in  programming is OOP.
-This is a programming paradigm embodied by many languages. The same applies for BEM
-methodology. This is a way to describe reality in code, a range of patterns and
-a way of thinking about entities whatever programming language is used.\\
-Based on this methodology we created some front end developing approaches
-and technical solutions which enable us to put out new pages fast and maintain
-existing pages easily.
+One of the most common examples of a methodology in  programming is Object-Oriented Programming.
+This is a programming paradigm embodied by many languages. In many ways, BEM
+is similar to OOP. It's a way of describing reality in code, a range of patterns, and
+a way of thinking about program entities regardless of programming language in use.\\
+We used BEM principles to create a set of front-end development techniques and tools which enable us 
+to build pages quickly and maintain them for a long time.
 
-The principles of our code and work process are the following:
+The principles are the following:
 
 === Unified data domain
-Imagine an ordinary site. The same as in a picture.
+Imagine an ordinary website, like the one pictured below.
 
 %%html
 <div style="text-align:center">
@@ -50,10 +42,10 @@ Imagine an ordinary site. The same as in a picture.
 </div>
 %%
 
-While developing and maintainting a site it is useful to mark out "blocks" of
+When starting to develop such a site it is useful to mark out "blocks" of
 which the site consists.\\
-For example, in this picture there are ##Head##, ##Main Layout## and ##Foot##. The
-Head in-turn consists of ##Logo##, ##Search##, ##Auth block## and ##Menu##. The Main
+For example, in this picture there are ##Head##, ##Main Layout## and ##Foot## blocks. The
+Head in turn consists of ##Logo##, ##Search##, ##Auth block## and ##Menu##. The Main
 Layout contains ##Page Title## and ##Text Block##.
 
 %%html
@@ -62,22 +54,22 @@ Layout contains ##Page Title## and ##Text Block##.
 </div>
 %%
 
-Giving each part of the page has its own name makes it very useful when it comes to
+Giving each part of the page its own name is very useful when it comes to
 team communication.\\
 A manager could ask:
- * to enlarge the ##Head## or
+ * to make the ##Head## bigger or
  * to create one more page with a ##Head## without ##Search##
 
-You could ask a JavaScript developer
+An HTML guy could ask a JavaScript developer
  * to make ##Auth Block## animated, etc.
 
-That is
+Let's take a closer look at what constitutes BEM:
 
 ==== Block
-We call as ##block## an independent entity, a "building block" of a application. A block
-can be either simple or complicated (containing other blocks).
+A ##block## is an independent entity, a "building block" of an application. A block
+can be either simple or compound (containing other blocks).
 
-**e.g.**\\
+**Example**\\
 Search form block\\
 
 %%html
@@ -87,10 +79,10 @@ Search form block\\
 %%
 
 ====Element
-An Element is a part of a block that performs a certain function. There's no point
-of an element without its block.
+An Element is a part of a block that performs a certain function. Elements are context-dependent: they only exist
+inside blocks and are meaningless outside of them.
 
-**e.g.**\\
+**Example**\\
 An input field and a button are elements of the Search Block
 
 %%html
@@ -99,13 +91,13 @@ An input field and a button are elements of the Search Block
 </div>
 %%
 
-===Facilities of describing pages and templates
-Blocks and elements are a page's content. Besides the fact of being on the page,
+===Means of describing pages and templates
+Blocks and elements constitute a page content. Besides simply being present on the page,
 their arrangement is also important.
 
-Blocks (or elements) can be situated in a special order:
+Blocks (or elements) can follow each other in a certain order:
 
-For example, a list of goods in an Internet shop:
+For example, a list of goods on a commerce website:
 
 %%html
 <div style="text-align:center">
@@ -113,7 +105,7 @@ For example, a list of goods in an Internet shop:
 </div>
 %%
 
-Or menu items:
+...or menu items:
 
 %%html
 <div style="text-align:center">
@@ -121,7 +113,7 @@ Or menu items:
 </div>
 %%
 
-A block can be included in another:
+Blocks can also be contained inside other blocks:
 
 For example, a ##Head Block## includes other blocks:
 
@@ -311,7 +303,7 @@ From template engine's point of view block independence means that:
  * A block can be easily placed in every place in BEM tree
 
 ===== Independent templates for blocks
-Comingupon the block in the incoming data a template engine must unambiguously transform it into
+Coming upon the block in the incoming data a template engine must unambiguously transform it into
 HTML. Every block must have its template for that.
 
 For example, this can look like this in XSL:
@@ -341,11 +333,11 @@ The second ##Menu Block## can occur in the ##Foot block## of a site. Or one ##Te
 can turn into two separated by an advertisement.\\
 Even if a block was developed as a singular unit, the same one can appear at any moment.
 
-From CSS's viewpoint this means that:
+From the CSS viewpoint this means that:
  * CSS id selectors are not used\\
-   It is convinient to use CSS classes
+   It is convenient to use CSS classes
 
-From JavaScript's viewpoint this means that:
+From the JavaScript viewpoint this means that:
 
  * The blocks with similar behaviour can be detected unequivocally: they have the same CSS classes\\
    Using CSS class selectors it is possible to pick out all the same blocks on the page, and to specify
@@ -369,7 +361,7 @@ To avoid developing of a block that is minimally different from the existed one,
 A ##modifier## is a block's or element's property which change a litte its view or behaviour.\\
 A modifier has a name and a value. You can use several modifiers at the same time.
 
-**e.g.**\\
+**Example**\\
 A block's modifier specifies background color
 
 %%html
@@ -378,7 +370,7 @@ A block's modifier specifies background color
 </div>
 %%
 
-**e.g.**\\
+**Example**\\
 An element's modofier for the current item changes its view
 
 %%html
@@ -428,7 +420,7 @@ From the viewpoint of CSS:
 }
 %%
 
-Modifiers for elements are imptemented on analogy.
+Modifiers for elements are implemented on analogy.
 
 E.g. a current menu item can be marked with a modifier:
 
@@ -577,7 +569,7 @@ If a project
  * lives long and it's always acquiring new features
 
 If a  developing team
- * consits of several people
+ * consists of several people
  * grows and changes (new people appear)
 
 All this in turn mean that needs a way to find block's code files fast.
@@ -612,7 +604,7 @@ menu/
 %%
 
 ===== File structure of a block
-When working on a project there can appear a neccessity to change a block.
+When working on a project there can appear a necessity to change a block.
 
 A manager could ask:
  * to change a color of a ##Current Menu Point##
@@ -628,13 +620,13 @@ To understand where is the code discussed we have to follow these rules when dev
    * The block's technical implementation is placed in the files in block's directory
  * An element has a subdirectory in its block's directory
    * The subdirectory's name coincides with the element's name
-   * The technical implementation of an elemnet is placed in the files in this subdirectory
+   * The technical implementation of an element is placed in the files in this subdirectory
  * A modifier has a subdirectory in its block's directory
    * The subdirectory's name coincides with the modifier's name
    * The technical implementation of the modifier is placed in the files in this subdirectory
    * A file name includes both a key and a value of a modifier
 
-**E.g.**\\
+**Example**\\
 A file structure of a ##Menu## block
 
 %%html
@@ -693,9 +685,9 @@ That directory can be linked up to another project straight from a repo. So a bl
 in one place. If we need to correct something or to make other changes, we do it in one
 place only.
 
-==== Levels of defenition
+==== Levels of definition
 If a group of blocks (united in one directory) is linked up to a project directly (via a partial checkout
-or svn:externals), then every changing commited for these blocks influences to both projects.
+or svn:externals), then every changing committed for these blocks influences to both projects.
 
 When developing a site based on another existing one it may need:
  * to enlarge a font in ##Head## on a site (without affecting the previous site),
@@ -725,7 +717,7 @@ From the viewpoint of the process of building a page:
    the page. E.g.,
    ##build-page -l blocks-common -l blocks-my my-page.html##
 
-From the file structure's poitn of view:
+From the file structure's point of view:
  * A project can have any number of levels. But only the levels that are enumerated when builing
    will be on the page. It is possibly to make different sets of defining levels
    for different parts of the site.
@@ -764,7 +756,7 @@ From the viewpoint of a template engine:
 </xsl:template>
 %%
 
-From a project architechture's point of view:
+From a project architecture's point of view:
  * When developing a portal of several sites we can sort out a blocks library which is one of
    defining levels for all the sites of the portal. And the blocks for a concrete site
    can be united in another level.
@@ -780,7 +772,7 @@ having several defining levels in one repo.
 === Building a page
 Working in terms of blocks means that there exists ##subject abstraction##. This is obligatory only when
 a programmer work with code. When code gets to a browser subject abstraction is
-not neccessary. It is important only to save a design and behaviour of every block on the page.
+not necessary. It is important only to save a design and behaviour of every block on the page.
 
 So, there is a ##code for people## and a ##code for browsers##. They are not the same one.
  * A programmer writes a code for blocks, a browser gets a code for the whole page
