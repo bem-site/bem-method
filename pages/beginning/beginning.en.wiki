@@ -95,7 +95,7 @@ An input field and a button are elements of the Search Block
 
 %%html
 <div style="text-align:center">
-<img src="images/search-block-marked.png"/>
+<img src="images/search-block-marked.en.png"/>
 </div>
 %%
 
