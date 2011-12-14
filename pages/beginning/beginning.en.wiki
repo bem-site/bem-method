@@ -79,7 +79,7 @@ Search form block\\
 
 ====Element
 An ##element## is a part of a block that performs a certain function. Elements are context-dependent: they only make sense
-inside the blocks they belong to.
+in the context of the block they belong to.
 
 **Example**\\
 An input field and a button are elements of the Search Block
@@ -792,7 +792,8 @@ From the viewpoint of development process:
 
 From the viewpoint of work organization:
  * Division of labor\\
-   There are developers working on a block library, and there are developers building sites using them.
+   We have developers working on the core framework (compilers, tools, performance); library developers, who maintain
+   the block library; application developers, who develop sites using the framework.
 
 We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 
