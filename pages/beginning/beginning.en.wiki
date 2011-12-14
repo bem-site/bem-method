@@ -145,7 +145,7 @@ Element names must be unique within the scope of a block. An element can be repe
 </div>
 %%
 
-Keywords should be put in certain order. Any data format which supports nesting (XML, JSON) will do:
+Keywords should be put in certain order. Any data format that supports nesting (XML, JSON) will do:
 
 %%hl xml
 <b:page>
@@ -256,7 +256,7 @@ From the CSS point of view it means that
 
 =====Naming for independent CSS classes
 
-One of the possible naming schemes for CSS classes, which satisfies said requirements, is the following:
+One of the possible naming schemes for CSS classes that satisfies said requirements is the following:
 
  * CSS class for a block coincides with its ##block name##
 %%hl xml
@@ -287,8 +287,8 @@ a naming convention we use.
 
 From the template engine's point of view, block independence means that:
 
- * Blocks and elements must be described in the template\\
-   Blocks (or elements) must have unique "names" to be able to tell the template engine "Menu must be placed here".
+ * Blocks and elements must be described in the input data\\
+   Blocks (or elements) must have unique "names" to be able to tell the template engine "##Menu## must be placed here".
  * Blocks can be placed in every place in the BEM tree
 
 ===== Independent templates for blocks
@@ -347,7 +347,7 @@ For example, there is a task:
 To avoid developing a block that is only minimally different from an existing one, we can use a
 ##modifier##.
 
-A ##modifier## is a property of a block or an element which alters its look or behavior.\\
+A ##modifier## is a property of a block or an element that alters its look or behavior.\\
 A modifier has a name and a value. Several modifiers can be used at once.
 
 **Example**\\
@@ -368,7 +368,7 @@ An element's modifier changes the look of a "current" item
 </div>
 %%
 
-From the template point of view:
+From the input data of view:
  * In the BEM tree, modifiers are properties of an entity that describes a block or an element
 
 For example, they can be attribute nodes in XML:
@@ -499,7 +499,7 @@ $('menu').toggle('menu_size_big').toggle('menu_size_small');
 %%
 
 The naming convention for CSS classes of blocks and elements can change in the course of time. Using special JavaScript
-functions for accessing blocks and elements and working with their modifiers makes it possible
+functions to access blocks and elements and to work with their modifiers makes it possible
 to change only these functions when the convention changes.
 
 %%hl js
@@ -538,11 +538,11 @@ JavaScript.
 So a block must "know" everything about itself. Implementing a block means describing its look and behavior in all
 technologies being used - we call that ##multilingualism##.
 
-##Multilingual## presentation is a description of a block in all the programming languages which are necessary to implement
+##Multilingual## presentation is a description of a block in all the programming languages that are necessary to implement
 the functionality of a block.
 
 If a block has to be present on a page as an interface element, it needs to have implementations in the following techs:
- * templates (XSL, TT2, JavaScript, etc), which turn the declaration of a block into HTML code
+ * templates (XSL, TT2, JavaScript, etc), which turn block declarations into HTML code
  * CSS that describes appearance of the block
 
 If a block has dynamic behavior, we add it to this list:
@@ -740,7 +740,7 @@ From the viewpoint of a template engine:
 %%
 
 From an architectural point of view:
- * When developing a portal of several sites we can extract a block library which can serve as one of the
+ * When developing a portal of several sites we can extract a block library that can serve as one of the
    definition levels for all the sites which are part of the portal. The blocks for a specific site will form another level.
  * The same repo can hold blocks of both desktop and mobile versions.\\
    Such a project will have the following levels: common, mobile, desktop.
