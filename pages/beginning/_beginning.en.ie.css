@@ -18,3 +18,178 @@
     margin: 0 auto;
 }
 
+.b-text__h1,
+.b-text__h2,
+.b-text__h3
+{
+    font-size: 1.8em;
+    font-weight: normal;
+
+    margin: 1.5em 0 0.7em 0;
+    padding: 0;
+}
+
+.b-text__h3
+{
+    font-size: 1.6em;
+
+    margin: 1em 0 0.5em 0;
+}
+
+.b-text__h4
+{
+    font-size: 1.4em;
+    font-weight: 400;
+
+    margin: 0.6em 0 0.5em 0;
+    padding: 0;
+}
+
+.b-text__p
+{
+    margin: 0 0 0.8em;
+
+    line-height: 1.4em;
+}
+
+.b-text__pre,
+.b-text__tt
+{
+    font: 100% Monaco, Consolas, "Courier New", monospace;
+}
+
+.b-text__pre
+{
+    margin: 0 0 0.8em;
+}
+
+.b-text__ul,
+.b-text__ol
+{
+    margin: 0 0 1em;
+    padding: 0;
+}
+
+.b-text__li
+{
+    margin: 0 0.2em 0.3em 2.5em;
+    padding: 0;
+}
+
+.b-text__ol .b-text__li
+{
+    list-style: decimal;
+}
+
+.b-text__ul .b-text__li
+{
+    list-style: disc;
+}
+
+.b-text
+{
+    width: 40em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.b-text__pre,
+.b-text__code,
+.b-text tt
+{
+    font: 12px Monaco, Consolas, "Courier New", monospace;
+
+    white-space: normal;
+
+    color: #060;
+}
+
+.b-text__h1,
+.b-text__h2,
+.b-text__h3,
+.b-text__h4,
+.b-text__h5
+{
+    font-family: 'PT Serif', serif;
+}
+
+.b-text div img 
+{ 
+    max-width: 100%;
+    height: auto;
+}
+
+
+.ohl
+{
+    display: inline-block;
+    
+    padding: 0.5em;
+    color: #0a192c;
+}
+
+.ohl-keyword
+{
+    color: #29528c;
+}
+
+.ohl-name
+{
+    color: #0a192c;
+}
+
+.ohl-literal
+{
+    color: #89335f;
+}
+
+.ohl-string
+{
+    color: #683874;
+}
+
+.ohl-string .ohl-punctuation
+{
+    color: #896994;
+}
+
+.ohl-string-escape
+{
+    color: #a53868;
+}
+
+.ohl-string-regex
+{
+    color: #652b65;
+}
+
+.ohl-number
+{
+    color: #652b65;
+}
+
+.ohl-operator
+{
+    color: #3862a1;
+}
+
+.ohl-punctuation
+{
+    color: #4d6e9f;
+}
+
+.ohl-comment
+{
+    color: #449b94;
+}
+
+.ohl-comment .ohl-punctuation
+{
+    color: #5c9995;
+}
+
+.ohl-generic
+{
+}
+
+
