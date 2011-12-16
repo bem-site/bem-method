@@ -1,51 +1,57 @@
-﻿=== What is BEM?
-This article describes the theory and practice of building web sites at Yandex, a big Internet company.
+﻿== What is BEM?
+This article describes the theory and practice of building web sites at
+((http://company.yandex.com/ Yandex)), a big Internet company.
 
 There are plenty of sites under development here, thousands in fact. The approaches
 we use for HTML/CSS markup and other front-end technologies are in constant evolution.
 
-Developing for a big portal has a range of specifics and the process should be able to accommodate them:
+Developing for a big portal has a range of specifics and the process should be able
+to accommodate them:
 
  * Fast-to-develop, long-lived projects\\
-   It should be possible to develop and launch the first version quickly with an architecture that helps maintain it
-   in the long run.
+   It should be possible to develop and launch the first version quickly with an
+   architecture that helps maintain it in the long run.
  * Numerous people working on a project\\
    We should be able to organize work efficiently in teams of 2 or more developers.
  * Team scalability\\
-   Adding new people to a product team should improve its productivity. We need to be able to assign new members to a team
-   without a steep learning curve.\\
-   Code should be well-structured for a project to remain maintainable over time and team changes.
+   Adding new people to a product team should improve its productivity. We need to be
+   able to assign new members to a team without a steep learning curve.\\
+   Code should be well-structured for a project to remain maintainable over time and
+   team changes.
  * Code reuse\\
-   To maintain UI consistency and minimize development effort on typical interface components, those components have to be
-   easily reusable.
+   To maintain UI consistency and minimize development effort on typical interface
+   components, those components have to be easily reusable.
 
 For years we kept looking for solutions to our problems, and at one point they became
 ##BEM methodology##.\\
-##BEM## means Block, Element, Modifier. The meaning of these terms will be described further
+##BEM## stands for Block, Element, Modifier. The meaning of these terms will be described further
 in the article. Right now, let us put BEM in some historical perspective.
 
-We first began sketching out our front-end framework around year 2007, starting with a robust CSS naming convention and a
-file system layout associated with it. Since the naming convention was well-structured, it seemed suitable to develop
-certain JavaScript helpers to work with the DOM and CSS classes in particular on a higher level of abstraction. We then used
-those approaches to build a library of UI components that could be shared among our various websites and rich applications,
-built using different technology stacks (XML/XSLT, Python/Django, Perl/TT2). As our ambitions, complexity, and performance
-requirements grew, we aimed at replacing XSLT and Perl templates with a JS-based declarative templating DSL, built on top of
-Node.js. Along with those efforts we looked into simplifying development workflow and developed a bunch of command-line tools
-that already help us manage front-end code on the file system, preprocess CSS and JavaScript code, and so on, and so forth.
+We first began sketching out our internal front-end framework around year 2007, starting
+with a robust CSS naming convention and a file system layout associated with it. Since
+the naming convention was well-structured, it seemed suitable to develop certain JavaScript
+helpers to work with the DOM and CSS classes in particular on a higher level of abstraction.
+We then used those approaches to build an internal library of UI components that could be
+shared among our various websites and rich applications, built using different technology
+stacks (XML/XSLT, Python/Django, Perl/TT2). As our ambitions, complexity, and performance
+requirements grew, we aimed at replacing XSLT and Perl templates with a JS-based declarative
+templating DSL, built on top of Node.js. Along with those efforts we looked into simplifying
+development workflow and developed a bunch of command-line tools that already help us manage
+front-end code on the file system, preprocess CSS and JavaScript code, and so on, and so forth.
 
-Some parts of the BEM stack started as open source projects, others (like the UI component library) are being gradually
-open sourced. Our goal is to publish most of it during 2012.
+Some parts of the BEM stack started as open source projects, others (like the UI component library)
+are being gradually open sourced. Our goal is to publish most of it during 2012.
 
 One of the most common examples of a methodology in  programming is Object-Oriented Programming.
 It's a programming paradigm embodied by many languages. In some ways, BEM
 is similar to OOP. It's a way of describing reality in code, a range of patterns, and
 a way of thinking about program entities regardless of programming languages being used.\\
-We used BEM principles to create a set of front-end development techniques and tools, that allow us
-to build websites quickly and maintain them over a long time.
+We used BEM principles to create a set of front-end development techniques and tools, that
+allow us to build websites quickly and maintain them over a long time.
 
 The principles are the following:
 
-=== Unified data domain
+=== Unified Data Domain
 Imagine an ordinary website, like the one pictured below.
 
 %%html
@@ -89,8 +95,8 @@ Search form block\\
 %%
 
 ====Element
-An ##element## is a part of a block that performs a certain function. Elements are context-dependent: they only make sense
-in the context of the block they belong to.
+An ##element## is a part of a block that performs a certain function. Elements are
+context-dependent: they only make sense in the context of the block they belong to.
 
 **Example**\\
 An input field and a button are elements of the Search Block
@@ -102,7 +108,7 @@ An input field and a button are elements of the Search Block
 %%
 
 ===Means of describing pages and templates
-Blocks and elements constitute page content. Besides simply being present on the page,
+Blocks and elements constitute page content. Besides simply being present on a page,
 their arrangement is also important.
 
 Blocks (or elements) may follow each other in a certain order:
@@ -133,22 +139,24 @@ For example, a ##Head Block## includes other blocks:
 </div>
 %%
 
-Besides our building blocks we need a way to describe page layout in plain text. To do so, every block
-and element should have a keyword that identifies it.
+Besides our building blocks we need a way to describe page layout in plain text.
+To do so, every block and element should have a keyword that identifies it.
 
 A keyword designating a specific block is called ##block name##.
 
-For example, ##menu## can be a keyword for the ##Menu Block##, ##head## can be a keyword for the ##Head## block.
+For example, ##menu## can be a keyword for the ##Menu Block##, ##head## can be a
+keyword for the ##Head## block.
 
 A keyword designating an element is called ##element name##.
 
 For example, each item in a menu is an element ##item## of the ##menu## block.
 
-Block names must be unique within a project to unequivocally designate which block is being described.
-Only instances of the same block can have same names. In this case we say that one block
-is present on the page 2 (3, 4, ...) times.
+Block names must be unique within a project to unequivocally designate which
+block is being described. Only instances of the same block can have same names.
+In this case we say that one block is present on the page 2 (3, 4, ...) times.
 
-Element names must be unique within the scope of a block. An element can be repeated several times. For example, menu items.
+Element names must be unique within the scope of a block. An element can be repeated
+several times. For example, menu items.
 
 %%html
 <div style="text-align:center">
@@ -156,7 +164,8 @@ Element names must be unique within the scope of a block. An element can be repe
 </div>
 %%
 
-Keywords should be put in certain order. Any data format that supports nesting (XML, JSON) will do:
+Keywords should be put in certain order. Any data format that supports nesting
+(XML, JSON) will do:
 
 %%hl xml
 <b:page>
@@ -224,22 +233,25 @@ The same in JSON:
 }
 %%
 
-Examples above show an object model with blocks and elements nested inside each other. This structure can
-also contain any number of custom data fields. We call this structure ##BEM tree## (by analogy with DOM tree).
+Examples above show an object model with blocks and elements nested inside each other.
+This structure can also contain any number of custom data fields. We call this structure
+##BEM tree## (by analogy with DOM tree).
 
-Final browser markup is generated by applying template transformations (using XSL or JavaScript) to the BEM tree.
+Final browser markup is generated by applying template transformations (using XSL or
+JavaScript) to a BEM tree.
 
-If a developer needs to move a block to a different place on a page, he does so by changing the BEM tree. Templates
-generate the final view themselves.
+If a developer needs to move a block to a different place on a page, he does so by
+changing the BEM tree. Templates generate the final view themselves.
 
-In our recent products we went with JSON as a page description format. It is then turned into HTML by a JS-based
-template engine.\\
+In our recent products we went with JSON as a page description format. It is then turned
+into HTML by a JS-based template engine.\\
 The tools we use are listed at the end of this article.
 
-=== Block independence
+=== Block Independence
 
-As projects grow, blocks tend to be added, removed, or moved around the page. For example, you may want to swap
-the ##Logo## and ##Auth Block## or to place the ##Menu## under the ##Search Block##
+As projects grow, blocks tend to be added, removed, or moved around the page. For example,
+you may want to swap the ##Logo## and ##Auth Block## or to place the ##Menu## under the
+##Search Block##.
 
 %%html
 <div style="text-align: center">
@@ -255,15 +267,16 @@ the ##Logo## and ##Auth Block## or to place the ##Menu## under the ##Search Bloc
 
 To make this process easier, blocks must be ##independent##.
 
-An ##independent## block is implemented in a way that allows arbitrary placement - anywhere on the page, including
-nesting inside another block.
+An ##independent## block is implemented in a way that allows arbitrary placement — anywhere
+on the page, including nesting inside another block.
 
 ====Independent CSS
 
 From the CSS point of view it means that
 
  * A block (or an element) must have a unique "name" (a CSS class) that could be used in a CSS rule.
- * HTML elements must not be used in CSS selectors (.menu td) as such selectors are inherently not context-free.
+ * HTML elements must not be used in CSS selectors (.menu td) as such selectors are inherently
+   not context-free.
  * Cascading selectors for several blocks should be avoided.
 
 =====Naming for independent CSS classes
@@ -288,20 +301,22 @@ One of the possible naming schemes for CSS classes that satisfies said requireme
   </li>
 </ul>
 %%
-It is necessary to include block name into a CSS class for an element to minimize cascading. It is also important
-to use separators consistently to allow the tools and helpers (described further) unambiguous programmatic access to the
-elements.
+It is necessary to include block name into a CSS class for an element to minimize cascading.
+It is also important to use separators consistently to allow the tools and helpers (described
+further) unambiguous programmatic access to the elements.
 
-Different naming schemes can be used, read ((http://bem.github.com/bem-bl/pages/naming/naming.en.wiki here)) about
-a naming convention we use.
+Different naming schemes can be used, read
+((http://bem.github.com/bem-bl/pages/naming/naming.en.wiki here)) about
+the naming convention we use.
 
 ====Independent templates
 
-From the template engine's point of view, block independence means that:
+From the template engine's perspective, block independence means that:
 
  * Blocks and elements must be described in the input data\\
-   Blocks (or elements) must have unique "names" to make things like "##Menu## should be placed here" expressible in our templates.
- * Blocks may appear anywhere in the BEM tree
+   Blocks (or elements) must have unique "names" to make things like "##Menu## should be
+   placed here" expressible in our templates.
+ * Blocks may appear anywhere in a BEM tree
 
 ===== Independent templates for blocks
 Coming upon a block in a template, the template engine should be able to unambiguously transform it into
@@ -322,30 +337,31 @@ For example, a template can look like this in XSL:
 <xsl:template>
 %%
 
-We are gradually discarding XSLT in our products in favor of our own JavaScript-based template engine
-((https://github.com/veged/xjst XJST)). This template engine absorbs everything we like about XSLT (we are fans of
-declarative programming), and implements it with JavaScript's productivity on either client or server side.\\
+We are gradually discarding XSLT in our products in favor of our own JavaScript-based
+template engine ((https://github.com/veged/xjst XJST)). This template engine absorbs everything
+we like about XSLT (we are fans of declarative programming), and implements it with JavaScript's
+productivity on either client or server side.\\
 We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
 ((http://clubs.ya.ru/bem/replies.xml?item_no=992 The main ideas of BEMHTML)) are published
-in BEM club on Ya.Ru (in Russian).
+in the BEM club on Ya.Ru (in Russian).
 
-=== Blocks reiteration
-The second ##Menu Block## can occur in the ##Foot block## of a site. Or, a ##Text Block##
+=== Blocks Reiteration
+The second ##Menu Block## can occur in the ##Foot Block## of a site. Or, a ##Text Block##
 can turn into two, separated by an advertisement.\\
-Even if a block was developed as a singular unit, the same one can appear at any moment.
+Even if a block was developed as a singular unit, the same one can appear on a page at any moment.
 
-From the CSS viewpoint it means that:
+In CSS related terms, it means:
  * ID-based CSS selectors must not be used\\
    Only class selectors satisfy our non-uniqueness requirement.
 
 On the JavaScript side it means:
 
  * Blocks with similar behavior are detected unequivocally: they have the same CSS classes\\
-   Using CSS class selectors makes it possible to pick all blocks with a given name and specify
-   the required dynamic behavior.
+   Using CSS class selectors allow picking all blocks with a given name to apply the required
+   dynamic behavior.
 
-===Modifiers for elements and blocks
-We often need to create a block very similar to an existing block, but with slight changes to
+===Modifiers for Elements and Blocks
+We often need to create a block very similar to an existing one, but with slightly altered
 its appearance or behavior.\\
 Let's say, we have a task:
  * Add another ##Menu## in the ##Footer## with a //different layout//.
@@ -381,7 +397,7 @@ An element modifier changes the look of the "current" item
 %%
 
 From the input data point of view:
- * In the BEM tree, modifiers are properties of an entity that describes a block or an element
+ * In a BEM tree, modifiers are properties of an entity that describes a block or an element
 
 For example, they can be attribute nodes in XML:
 
@@ -421,8 +437,8 @@ From the CSS point of view:
 }
 %%
 
-Element modifiers are implemented in the same fashion. Again, when writing CSS by hand, it is very important to use
-separators consistently for programmatic access.
+Element modifiers are implemented in the same fashion. Again, when writing CSS by
+hand, it is very important to use separators consistently for programmatic access.
 
 E.g., current menu item can be marked with a modifier:
 
@@ -471,17 +487,19 @@ E.g., current menu item can be marked with a modifier:
 }
 %%
 
-=== Subject matter abstraction
-When many people are working on a project they should agree on a data domain and use it when naming their blocks and elements.
+=== Subject-Matter Abstraction
+When many people work on a project they should agree on a data domain and use it
+when naming their blocks and elements.
 
-For example, a ##Tag Cloud## block is always named ##tags##. Each of its elements is a ##tag##. This convention spreads across all
-languages: CSS, JavaScript, XSL, etc.
+For example, a ##Tag Cloud## block is always named ##tags##. Each of its elements is a
+##tag##. This convention spreads across all languages: CSS, JavaScript, XSL, etc.
 
 From the development process' point of view:
  * All participants operate on the same terms
 
 From the CSS point of view:
- * CSS for blocks and elements can be written in a pseudo language that compiles down to CSS according to the naming convention.
+ * CSS for blocks and elements can be written in a pseudo language that compiles
+   down to CSS according to the naming convention.
 
 %%hl js
   .menu {
@@ -501,7 +519,8 @@ From the CSS point of view:
 %%
 
 On the JavaScript side:
- * Instead of using class selectors directly to find DOM elements, a special helper library may be used.
+ * Instead of using class selectors directly to find DOM elements, a special helper
+   library may be used.
 
 %%hl js
 $('menu__item').click( ... );
@@ -509,9 +528,9 @@ $('menu__item').addClass('menu__item_state_current');
 $('menu').toggle('menu_size_big').toggle('menu_size_small');
 %%
 
-The naming convention for CSS classes of blocks and elements can change in the course of time. Using special JavaScript
-functions to access blocks and elements and to work with their modifiers makes it possible to change only these
-functions if the naming convention changes.
+The naming convention for CSS classes of blocks and elements can change in the course of
+time. Using special JavaScript functions to access blocks and elements and to work with their
+modifiers makes it possible to change only these functions if the naming convention changes.
 
 %%hl js
 Block('menu').elem('item').click( ... );
@@ -521,7 +540,7 @@ Block('menu').toggleMod('size', 'big', 'small');
 
 The code above is abstract. In real life we use the JavaScript core of ##i-bem## block
 from the ##bem-bl## block library:
- ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html))
+ ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html)) (described in Russian)
 
 === Blocks consistency
 A site has a ##Button## block with certain dynamic behavior.
@@ -543,14 +562,14 @@ When a block is hovered, it changes its appearance.
 A manager could ask:
  * to use the same button on another page
 
-Having a CSS implementation of a block is not enough. Reusing a block also means reusing its behavior, described in
-JavaScript.
+Having a CSS implementation of a block is not enough. Reusing a block also means reusing its
+behavior, described in JavaScript.
 
-So a block must "know" everything about itself. To implement a block we describe its appearance and behavior in all
-technologies being used - we call that ##multilingualism##.
+So a block must "know" everything about itself. To implement a block we describe its appearance
+and behavior in all technologies being used - we call that ##multilingualism##.
 
-##Multilingual## presentation is a description of a block in all the programming languages that are necessary to implement
-the functionality of a block.
+##Multilingual## presentation is a description of a block in all the programming languages
+that are necessary to implement the view and the functionality of a block.
 
 To have a block present on a page as a UI element we need to implement it in the following techs:
  * templates (XSL, TT2, JavaScript, etc), which turn block declarations into HTML code
@@ -561,7 +580,7 @@ If a block has dynamic behavior, we add it to this list:
 
 Everything that constitutes a block is a technology, including images.
 
-=== File system representation for a block
+=== File System Representation for a Block
 ==== Unequivocal placement of code
 ===== File naming
 When a project is
@@ -573,7 +592,8 @@ If the development team
 
 Then, being able to navigate the code base quickly is crucial.
 
-Block code is easiest to find when it's placed in files using the same naming scheme as the one we use for naming our entities:
+Block code is easiest to find when it's placed in files using the same naming scheme as the one we
+use for naming our entities:
 
 %%html
 <pre>
@@ -583,7 +603,7 @@ menu.css
 </pre>
 %%
 
-===== File independence of a block
+===== Expressing blocks on a file system
 There could be a task
  * to reuse some blocks from a previous project in a new one
 
@@ -611,7 +631,7 @@ or
 A developer could ask their colleague:
  * to help with ##Search Form## styling for IE
 
-To understand where the relevant code is located, it can be useful to follow these (or similar) rules:
+To understand where the relevant code is located, follow these (or similar) rules:
  * Block code is placed in a separate directory
    * Directory name matches block name
    * Implementation is placed under this directory
@@ -642,9 +662,8 @@ menu/
 %%
 
 Maintaining such file structure manually is, quite obviously, not convenient. So we've developed
-((https://github.com/bem/bem-tools BEM tools))
-to handle the burden. These tools help with creating the directory structure, placing files, generating placeholder
-content, etc.
+((https://github.com/bem/bem-tools BEM tools)) to handle the burden. These tools help with
+creating the directory structure, placing files, generating placeholder content, etc.
 
 ===== Grouping blocks in directories
 Big internet portals often need to reuse the same blocks across different sites.
@@ -655,13 +674,14 @@ There could be a task:
 
 Working for a web design agency often means that one has to use typical solutions for typical web pages.
 
-A manager could ask you:
- * to create an order page with a web form //as on a previous project//
+A project manager could ask you:
+ * to create an order page with a web form //as on the previous project//
 
-We have to do these tasks while, preferably, avoiding copying blocks around manually. So it's nice to have a repository
-of shared blocks that can be linked to a project. Blocks then should be united under a single directory for that.
+We have to do these tasks while, preferably, avoiding copying blocks around manually. So it's
+nice to have a repository of shared blocks that can be linked to a project. Blocks then should
+be united under a single directory for that.
 
-We call such a directory ##blocks##.
+Such a directory is usually called ##blocks##.
 
 **E.g.**
 
@@ -676,21 +696,21 @@ blocks/
 </pre>
 %%
 
-That directory can be linked to another project straight from the version control system, so that we can make changes to shared blocks in a
-single location.
+That directory can be linked to another project straight from the version control system, so
+that we can make changes to shared blocks in a single location.
 
-==== Levels of definition
-If a group of blocks (united under one directory) is linked to a project directly (via a partial checkout, svn:externals, etc.),
-then every change committed for these blocks influences all projects.
+=== Levels of Definition
+If a group of blocks (united under one directory) is linked to a project directly (via a partial
+checkout, svn:externals, etc.), then every change committed for these blocks influences all projects.
 
 When developing a site based on an existing one we might want:
  * to enlarge the font in the ##Head## on site A without affecting site B
  * to add animation when showing a dropdown menu.
 
 To do so, we need to be able to define or redefine blocks in different technologies for
-one site only, or for certain pages only. It can be achieved using ##definition levels##.
+a specific site only, or for certain pages only. It can be achieved using ##definition levels##.
 
-A ##definition level## is a set of implementations grouped in one directory.
+A ##definition level## is a set of blocks grouped in one directory.
 
 %%html
 <div style="text-align:center;">
@@ -698,7 +718,8 @@ A ##definition level## is a set of implementations grouped in one directory.
 </div>
 %%
 
-An implementation of every block from a library can be changed (or completely redefined) at project level.
+An implementation of every block from the library can be changed (or completely redefined)
+at project level.
 
 %%html
 <div style="text-align:center;">
@@ -706,7 +727,7 @@ An implementation of every block from a library can be changed (or completely re
 </div>
 %%
 
-From the viewpoint of page-building process:
+From page-building process' perspective:
  * When building a page we can set a list of levels (directories) to use their blocks on
    the page. E.g.,
    ##build-page -l blocks-common -l blocks-my my-page.html##
@@ -716,9 +737,9 @@ From the file structure point of view:
    will be present on the page. It is possible to specify different sets of definition levels
    for different parts of the site.
 
-From the JavaScript point of view:
+On the JavaScript side:
  * We need to define dynamic behavior of a page in declarative style.
-   Final behavior has to be gathered from different definition levels. E.g.,
+   Final behavior is gathered from different definition levels. E.g.,
 
 %%hl js
 /* blocks-common/dropdown/dropdown.js */
@@ -750,9 +771,10 @@ From the viewpoint of a template engine:
 </xsl:template>
 %%
 
-From an architectural point of view:
- * When developing a portal of several sites we can extract a block library that can serve as one of the
-   definition levels for all the sites which are part of the portal. The blocks for a specific site will form another level.
+From the architectural point of view:
+ * When developing a portal of several sites we can extract a block library that serves as one of the
+   definition levels for all the sites which are part of the portal. The blocks for a specific
+   site will form another level.
  * The same repo can hold blocks of both desktop and mobile versions.\\
    Such a project will have the following levels: common, mobile, desktop.
    Different combinations of these levels give the resulting implementation, required by specific pages.
@@ -761,19 +783,19 @@ From an architectural point of view:
 ((https://github.com/bem/bem-bl Open source block library bem-bl)) is an example of
 having several definition levels in one repository.
 
-=== Building a page
-Working in terms of blocks means having a ##subject-matter abstraction##. This abstraction is for developers only, browsers
-will get a compiled version of the code.
+=== Building a Page
+Working in terms of blocks means having a ##subject-matter abstraction##. This abstraction is for
+developers only, browsers will get a compiled version of the code.
 
 So we have ##code for people## and ##code for browsers## - they are not the same.
  * Programmers code blocks - browsers get the code for the whole page
 
 To turn ##code for people## into ##code for browsers## we ##build## a page.
 
-##Building a page## means generating HTML, CSS, and JavaScript code from a page declaration (written in XML or JSON)
-by applying implementations of declared blocks.
+##Building a page## means generating HTML, CSS, and JavaScript code from a page declaration
+(written in XML or JSON) by applying implementations of declared blocks.
 
-From the CSS point of view:
+On the CSS side:
 
  * All CSS files are combined into a single "page" CSS file\\
    Despite the fact that CSS for every block, element or modifier is stored in separate
@@ -799,7 +821,7 @@ From the template engine's point of view:
 
 From the viewpoint of development process:
  * Robots serve people (not the other way around)\\
-   Developer writes code as he sees fit. "Robots" take (some) care of performance by optimizing the
+   Developer writes code as they sees fit. "Robots" take (some) care of performance by optimizing the
    code (together with making it unreadable) when building a page.
 
 In terms of work organization:
@@ -809,7 +831,7 @@ In terms of work organization:
 
 We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 
-== Related links
+=== Related Links
 ==== Libraries
  * ((http://bem.github.com/bem-bl/index.en.html An open source block library bem-bl))
 ==== Tools
@@ -823,3 +845,4 @@ We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 ==== Additional information
  * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (in Russian)
  * ((http://clubs.ya.ru/bem/ BEM club on Ya.Ru)) (in Russian)
+ * ((http://www.facebook.com/#!/groups/209713935765634/ BEM on Facebook))
