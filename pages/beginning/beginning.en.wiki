@@ -1,6 +1,6 @@
 ﻿== What is BEM?
 This article describes the theory and practice of building web sites at
-((http://company.yandex.com/ Yandex)), a big Internet company.
+((http://company.yandex.com/ Yandex)), a large Internet company.
 
 There are plenty of sites under development here, thousands in fact. The approaches
 we use for HTML/CSS markup and other front-end technologies are in constant evolution.
