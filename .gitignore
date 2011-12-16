@@ -1,0 +1,3 @@
+pages/*/*.bemjson.js
+pages/*/*.css
+!pages/*/_*.css
