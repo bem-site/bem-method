@@ -831,6 +831,78 @@ In terms of work organization:
 
 We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
 
+==== How to automate the building process?
+
+The usage of ((https://github.com/bem/bem-tools bem tools)) require to run several
+commands for each page whenever page input data or blocks implementation are changed.
+As a result of these commands you get CSS and JavaScript files for the page, page's template
+and, if you are developing static pages, HTML code of your page.
+
+To avoid to run these commands manually, there is also the
+((http://www.gnu.org/software/make/manual/make.html GNUmakefile)) written for a project that
+includes the instructions how to build pages.\\
+You can find an example of such a file in the test project ((https://github.com/bem/bem-bl-test/blob/master/GNUmakefile bem-bl-test)).
+
+But the usage of GNU make has a list of problems:
+
+ * You have to run it every time you have changed something;
+ * Every time you run gmake it reads the infromation on a disk. So the compilation
+   process could not be fast.
+ * The pages you build depend not only on the content of block files but on their file structure
+   as well. But it is impossible to write a gmake goal dependency in these terms.
+
+So we would like to create something to replace GNU make for the process of page building.
+This will be both a development server and a tool to build production files.
+##bem server## will be run in a project root directory and give http response with
+page files built
+(so you won't need to run gmake manually after every changing).\\
+Besides, it will be able to watch files (adding and removing of them) via
+ ((http://nodemanual.org/latest/nodejs_ref_guide/fs.FSWatcher.html fs.FSWatcher))
+ that helps to chache results efficiently.
+
+=== Real examples
+
+((http://yandex.ru Yandex)) is a large (mostly Russian) company that
+use BEM methodology to develop its services.
+
+BEM methodology does not request you to use certain framework. You also don't
+have to use BEM for all the technologies you have on your pages (but that would
+be the most efficient).
+
+((http://www.yandex.ru/all All the services of Yandex)) have BEM in their
+CSS and JavaScript code and XSL templates of the pages. E.g.,
+ * ((http://maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&sll=37.609218%2C55.753559&ll=37.609218%2C55.753563&spn=2.570801%2C0.884460&z=9&l=map Yandex.Maps))
+ * ((http://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image Yandex.Images))\\
+   This is a service for searching images in the Internet.
+ * ((http://video.yandex.ru/#search?text=yac%202011 Yandex.Video))\\
+   This is a service for both hosting and searching images.
+ * ((http://auto.yandex.ru/ Yandex.Auto))
+ * ((http://www.yandex.com.tr/ Turkish Yandex))
+
+Some services don't use XSL templates and build their pages with our newest template
+product, ##bemhtml## template engine which was mentioned above. These are the following
+services:
+ * ((http://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213 Yandex Search))\\
+   or ((http://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213 Yandex Search in English))
+ * ((http://apps.yandex.ru/ Mobile Apps Search))\\
+   This site is to look under smartphones.
+
+There are also other companies that use BEM methodology.
+
+For example, guys in ((http://mail.ru Mail.ru)) partly use BEM for their services.
+Some blocks on their pages are BEM-based in terms of CSS code. They also have their
+own C++ template engine and write block templates according to the methodology.
+
+More examples:
+ * ((http://beta.news.rambler.ru/ Rambler.News))
+ * ((http://hh.ru/ HeadHunter))
+ * ((http://futurecolors.ru/tnkracing/ TNK Racing Team))
+
+You may also be interested in sites that use ((http://bem.github.com/bem-bl/index.ru.html bem-bl)) block library:
+ * ((http://mishanga.pro/ Mikhail Troshev vCard))\\
+   Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))
+ * ((http://form.dev.eot.su/ BEM based web form with JZ validation))
+
 === Related Links
 ==== Libraries
  * ((http://bem.github.com/bem-bl/index.en.html An open source block library bem-bl))
