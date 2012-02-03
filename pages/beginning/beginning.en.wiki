@@ -915,6 +915,7 @@ You may also be interested in sites that use ((http://bem.github.com/bem-bl/inde
  * ((https://github.com/afelix/csso CSSO))\\
    A utility that performs advanced, structural optimizations of CSS code
 ==== Additional information
+ * ((http://www.youtube.com/watch?v=pjPMTrhciUI&feature=youtu.be How to Install BEM tools on Mac, screencast))
  * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (in Russian)
  * ((http://clubs.ya.ru/bem/ BEM club on Ya.Ru)) (in Russian)
  * ((http://www.facebook.com/#!/groups/209713935765634/ BEM on Facebook))
