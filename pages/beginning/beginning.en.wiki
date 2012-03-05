@@ -90,7 +90,7 @@ Search form block\\
 
 %%html
 <div style="text-align:center">
-<img src="images/search-block_.png"/>
+<img src="images/search-block.png"/>
 </div>
 %%
 
