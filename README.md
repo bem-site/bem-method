@@ -8,3 +8,6 @@
 
 [Что такое БЭМ?](http://bem.github.com/bem-method/pages/beginning/beginning.ru.html)
 
+<!-- Yandex.Metrika counter -->
+<img src="//mc.yandex.ru/watch/12831025" style="position:absolute; left:-9999px;" alt="" />
+<!-- /Yandex.Metrika counter -->
