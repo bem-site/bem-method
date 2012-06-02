@@ -1,0 +1,370 @@
+<!DOCTYPE html><html class="i-ua_js_no i-ua_css_standard"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=edge"/><title>История создания БЭМ</title><script>;(function(d,e,c,r){e=d.documentElement;c="className";r="replace";e[c]=e[c][r]("i-ua_js_no","i-ua_js_yes");if(d.compatMode!="CSS1Compat")e[c]=e[c][r]("i-ua_css_standart","i-ua_css_quirks")})(document);</script><!--[if gt IE 7]><!--><link rel="stylesheet" href="_history.ru.css"/><!--<![endif]--><!--[if lt IE 8]><link rel="stylesheet" href="_history.ru.ie.css"/><![endif]--><script src="//yandex.st/jquery/1.7.2/jquery.min.js"></script><script src="history.ru.js"></script></head><body class="b-page__body b-page"><!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10053391 = new Ya.Metrika({id:10053391, enableAll: true, trackHash:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/10053391" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --><div class="b-text"><h1 class="b-text__h1" id="IstoriyasozdaniyaBEM">История создания БЭМ</h1><p class="b-text__p">Это статья об истории создания БЭМ, о том, откуда взялись сущности БЭМ и почему они сейчас именно такие.</p><p class="b-text__p">К концу статьи вы увидите, что БЭМ гибок и может применяться в том объёме, в каком это возможно в вашем проекте.</p><h2 class="b-text__h2" id="SamoenachaloYandeksAdresa">Самое начало (Яндекс.Адреса)</h2><p class="b-text__p">Когда я начал работать над Яндекс.Адресами в далёком 2005 году, вёрстку я делал так:</p><pre class="ohl ohl_lang_xml">about.html
+index.html
+…
+adresa.css
+adresa.js
+i/
+    yandex.png</pre><p class="b-text__p">Странички были статическими html-файлами. Стили для них складывались в один файл на весь проект – <tt>adresa.css</tt>, скрипты – в <tt>adresa.js</tt>. Скриптов было очень мало.) Картинки – в отдельную директорию.</p><p class="b-text__p">Все стили были в одном файле и для отделения стилей разных частей страницы использовались комментарии с указанием начала и конца.</p><pre class="ohl ohl_lang_xml">/* Content container (begin) */
+    #body
+        {
+            font: 0.8em Arial, sans-serif;
+
+            margin: 0.5em 1.95% 0.5em 2%;
+        }
+/* Content container (end) */
+
+/* Graphical banner (begin) */
+    .banner
+        {
+            text-align: center;
+        }
+
+    .banner a
+        {
+            text-decoration: none;
+        }
+/* Graphical banner (end) */</pre><p class="b-text__p">В вёрстке использовались как id, так и классы.</p><p class="b-text__p">Свёрстанные статические HTML-странички нарезались в XSL-шаблоны, которые использовались в продакшене. Если HTML изменялся, все правки вручную переносиись в XSL. И наоборот: изменения в шаблонах несли с собой изменения в HTML для поддержания статического HTML в актуальном состоянии.</p><h2 class="b-text__h2" id="Proektypobolyshe">Проекты побольше</h2><p class="b-text__p">Адреса были маленьким проектом с несколькими страницами и такой подход к вёрстке был удобен.</p><p class="b-text__p">Но при вёрстке первой версии Яндекс.Музыки в начале 2006 стало понятно, что для проекта с большим количеством разных страниц этот подход работает плохо.<br/> Тяжело подбирать названия классам, сложно держать в голове код всего проекта и писать так, чтобы изменения на одной странице ничего не ломали на другой.</p><p class="b-text__p">Типичный код того времени:</p><pre class="ohl ohl_lang_xml">    /* Albums (begin) */
+        .result .albums .info
+            {
+                padding-right: 8.5em;
+            }
+
+        .result .albums .title
+            {
+                float: left;
+
+                padding-bottom: 0.3em;
+            }
+
+        .result .albums .album .listen
+            {
+                float: left;
+
+                padding: 0.3em 1em 0 1em;
+            }
+
+        .result .albums .album .buy
+            {
+                float: left;
+
+                padding: 0.4em 1em 0 1.6em;
+            }
+
+        .result .albums .info i
+            {
+                font-size: 85%;
+            }
+    /* Albums (end) */</pre><p class="b-text__p">Здесь используется длинный каскад.</p><p class="b-text__p">Или вот ещё пример.</p><pre class="ohl ohl_lang_xml">    /* Картинки на фоне (begin) */
+        .b-foot div
+            {
+                height: 71px;
+
+                background: transparent url(../i/foot-1.png) 4% 50% no-repeat;
+            }
+
+        .b-foot div div
+            {
+                background-position: 21%;
+                background-image: url(../i/foot-2.png);
+            }
+
+        .b-foot div div div
+            {
+                background-position: 38%;
+                background-image: url(../i/foot-3.png);
+            }
+
+        .b-foot div div div div
+            {
+                background-position: 54%;
+                background-image: url(../i/foot-4.png);
+            }
+
+        .b-foot div div div div div
+            {
+                background-position: 71%;
+                background-image: url(../i/foot-5.png);
+            }
+
+        .b-foot div div div div div div
+            {
+                background-position: 87%;
+                background-image: url(../i/foot-6.png);
+            }
+    /* Картинки на фоне (end) */</pre><p class="b-text__p">Тут используются <tt>id</tt> и тэги.</p><p class="b-text__p">Одновременно с Музыкой началась вёрстка <a class="b-link" href="http://news.yandex.ru">Яру</a>.<br/> Это проект с десятками страниц и такой подход не работает – вёрстка становится неуправляемой.</p><h3 class="b-text__h3" id="Poyavlenieblokov">Появление блоков</h3><p class="b-text__p">И мы ввели понятие блока для частей страниц, которые имеют самостоятельное значение в дизайне.</p><p class="b-text__p">Классы блоков получили префиксы (<tt>b-</tt>, <tt>c-</tt>, <tt>g-</tt>), чтобы отличаться от классов внутри.</p><p class="b-text__p">Используемые префиксы:</p><ul class="b-text__ul"><li class="b-text__li"><b>b-</b>  block<br/>
+   независимый блок, может использоваться в любом месте страницы</li><li class="b-text__li"><b>с-</b>  control<br/>
+   контрол (независимый блок) с которым ассоциирован JavaScript
+   объект, обеспечивающий его функциональность, может использоваться
+   в любом месте страницы</li><li class="b-text__li"><b>g-</b>  global<br/>
+   глобальное определение, используется по необходимости, количество
+   сведено к минимуму</li></ul><p class="b-text__p">Кроме префиксов были постфиксы:</p><ul class="b-text__ul"><li class="b-text__li"><b>-nojs</b>   no javascript<br/>
+   стиль применяется в отсутствие javascript, если javascript
+   включен, то при загрузке страницы у всех элементов этот
+   постфикс убирается, для этого должен быть вызван метод <tt>init()</tt>
+   в onload.</li></ul><h3 class="b-text__h3" id="Poyavlenieelementov">Появление элементов</h3><p class="b-text__p">Внутренние классы мы стали называть элементами.</p><p class="b-text__p">Элементы, у которых много кода, выделялись комментариями.</p><pre class="ohl ohl_lang_xml">    /* Head (begin) */
+        .b-head { … }
+
+        /* Logo (begin) */
+            .b-head .logo { … }
+            .b-head .logo a { … }
+        /* Logo (end) */
+
+        /* Right side (begin) */
+        .b-head .right { … }
+
+            /* Info (begin) */
+                .b-head .info { … }
+                .b-head .info .exit a { … }
+            /* Info (end) */
+
+            /* Search (begin) */
+                .b-head .search { … }
+                .b-head .search div div, .b-head .search div div i { … }
+            /* Search (end) */
+        /* Right side (end) */
+    /* Head (end) */</pre><h3 class="b-text__h3" id="Strukturavyorstkiproekta">Структура вёрстки проекта</h3><p class="b-text__p">Изменилась структура вёрстки проекта.</p><p class="b-text__p">Ввели директории для технологий css и js.</p><pre class="ohl ohl_lang_xml">index.html
+css/
+    yaru.css
+    yaru-ie.css
+js/
+    yaru.js
+i/
+    yandex.png</pre><p class="b-text__p">Валидные хаки для MSIE писали в основном CSS-файле <tt>yaru.css</tt>.</p><pre class="ohl ohl_lang_xml">    /* Common definitions (begin) */
+        body
+            {
+                font-family: Arial, sans-serif;
+                font-size: 0.8em;
+
+                padding: 0 0 2em 0;
+                background: #fff;
+            }
+
+        * html body
+            {
+                font-size: 80%;
+            }</pre><p class="b-text__p">Невалидные – в файле <tt>yaru-ie.css</tt>.</p><pre class="ohl ohl_lang_xml">    /* Common blocks (begin) */
+        /* Artist (begin) */
+            .b-artist .i i
+                {
+                    top: expression(7 + (90 - this.parentNode.getElementsByTagName(&apos;img&apos;)[0].height)/2);
+                    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&apos;../i/sticker-lt.png&apos;, sizingMethod=&apos;crop&apos;);
+                }</pre><h2 class="b-text__h2" id="Zachatkiobshheportalynogofrejmvorka">Зачатки общепортального фреймворка</h2><p class="b-text__p">При верстке нескольких проектов с похожим дизайном есть общие блоки.</p><p class="b-text__p">Очень быстро понимаешь, что copy/paste этих блоков с проекта на проект не выход и надо делать common.</p><p class="b-text__p">Так появилось общее хранилище для стилей шапки, подвала и статического текста на специальном сервере.</p><p class="b-text__p">Cтили с него подключались в основной проектный файл с помощью импортов.</p><pre class="ohl ohl_lang_xml">@import url(http://common.cloudkill.yandex.ru/css/global.css);
+@import url(http://common.cloudkill.yandex.ru/css/head/common.css);
+@import url(http://common.cloudkill.yandex.ru/css/static-text.css);
+@import url(http://common.cloudkill.yandex.ru/css/foot/common-absolute.css);
+@import url(http://common.cloudkill.yandex.ru/css/foot/common-absolute-4-columns.css);
+@import url(http://common.cloudkill.yandex.ru/css/list/hlist.css);
+@import url(http://common.cloudkill.yandex.ru/css/list/hlist-middot.css);
+@import url(http://common.cloudkill.yandex.ru/css/dropdown/dropdown.css);
+@import url(http://common.cloudkill.yandex.ru/css/dropdown/dropdown-arrow.css);
+@import url(slider.css);
+
+/* Header (begin) */
+    /* Service (begin) */
+        .b-head .service h1 { … }
+        .b-head .service h1, .b-head .service h1 a, .b-head .service h1 b { … }</pre><p class="b-text__p">Чтобы с этим можно было уйти в продакшн, появился процесс сборки, во время которого вместо <tt>@import</tt> подставляется содержимое этих файлов.</p><h2 class="b-text__h2" id="Vyorstkanezavisimymiblokami">Вёрстка независимыми блоками</h2><p class="b-text__p">К осени 2007 года правила вёрстки уже устоялись, и о них захотелось рассказать вне Яндекса.</p><p class="b-text__p">На ClientSide&apos;2007 я сделал доклад «<a class="b-link" href="http://vitaly.harisov.name/article/independent-blocks.html">Вёрстка независимыми блоками</a>»</p><p class="b-text__p">В докладе вводится понятие <tt>Блок</tt>:</p><ul class="b-text__ul"><li class="b-text__li">Блоком будем называть фрагмент страницы, который описывается своей разметкой и стилями.</li></ul><p class="b-text__p">Более позднее описание в клубе БЭМ: <a class="b-link" href="http://clubs.ya.ru/bem/replies.xml?item_no=42">http://clubs.ya.ru/bem/replies.xml?item_no=42</a></p><h3 class="b-text__h3" id="Pravilablokov">Правила блоков</h3><p class="b-text__p">Формулируются правила независимости блока:</p><ol class="b-text__ol"><li class="b-text__li">для описания элемента используется <tt>class</tt>, но не <tt>id</tt></li><li class="b-text__li">каждый блок имеет префикс</li><li class="b-text__li">в таблице стилей нет классов вне блоков</li></ol><p class="b-text__p">Отказ от id даёт возможность использовать один и тот же блок несколько раз на странице. А также позволяет использовать на одном DOM-узле несколько классов, что в дальнейшем нам пригодилось.</p><h4 class="b-text__h4" id="Prostyeisostavnyebloki">Простые и составные блоки</h4><p class="b-text__p">Блоки делятся на простые и составные.</p><ul class="b-text__ul"><li class="b-text__li">В простые блоки нельзя вкладывать другие блоки, в составные – можно.</li></ul><p class="b-text__p">Это было очень наивное деление, мы неоднократно сталкивались с тем, что даже в самые простые блоки вкладывались другие и приходилось переделывать вёрстку.</p><h4 class="b-text__h4" id="Pravilapolnojnezavisimostiblokov">Правила полной независимости блоков</h4><p class="b-text__p">Так же были сформулированы правила полной независимости блоков:</p><ol class="b-text__ol"><li class="b-text__li">никогда не опираться на элементы, только на классы:<br/>
+    <tt>.b-user b -&gt; .b-user .first-letter</tt></li><li class="b-text__li">всем классам внутри блока давать имена начинающиеся с имени этого блока:<br/>
+    <tt>.b-user .first-letter -&gt; .b-user-first_letter</tt></li></ol><p class="b-text__p">Позже мы назвали это АНБ – <a class="b-link" href="clubs.ya.ru/bem/replies.xml?item_no=43">абсолютно-независимые блоки</a>.</p><p class="b-text__p">Но класс у каждого DOM-узла существенно увеличивает HTML-код.<br/> На тот момент мы считали, что это дорого и применяли такой подход в исключительных случаях.</p><h4 class="b-text__h4" id="Prefiksy">Префиксы</h4><p class="b-text__p">Тогда же, сформулировали правила для префиксов.</p><ul class="b-text__ul"><li class="b-text__li"><b>b-</b><br/>
+   обычные блоки</li><li class="b-text__li"><b>h-</b><br/>
+   обёртки</li><li class="b-text__li"><b>l-</b><br/>
+    раскладки</li><li class="b-text__li"><b>g-</b><br/>
+   глобальные стили</li></ul><h4 class="b-text__h4" id="Modifikaciya">Модификация</h4><p class="b-text__p">Ввели понятие модификации:</p><ol class="b-text__ol"><li class="b-text__li">Блок может изменить свой внешний вид в зависимости от того, где он находится.
+    Это модификация от контекста.</li><li class="b-text__li">Можно добавить блоку второй класс, это модификация постфиксом, она не зависит от контекста.<br/>
+<tt>class=&quot;b-block b-block-postfix&quot;</tt></li></ol><h2 class="b-text__h2" id="Obshheportalynyjfrejmvork">Общепортальный фреймворк</h2><p class="b-text__p">Весной 2008 года была поставлена задача сделать брендбук, описывающий наш портальный стиль.</p><p class="b-text__p">Я начал с того, что умел лучше всего — делать HTML/CSS код.<br/> Если делать просто описание — оно устареет, не успев дописаться до конца.</p><p class="b-text__p">Проект получил название <tt>Лего</tt>.</p><h3 class="b-text__h3" id="StrukturarepozitoriyaLego">Структура репозитория Лего</h3><p class="b-text__p">Первичное разделение на верхнем уровне репозитория идёт по технологиям.</p><pre class="ohl ohl_lang_xml">css/
+html/
+js/
+xml/
+xsl/</pre><p class="b-text__p">В каждой технологии своя структура.</p><p class="b-text__p">CSS раскладывается в три разные директории:</p><pre class="ohl ohl_lang_xml">css/
+    block/
+        b-dropdown/
+            b-dropdown.css
+    service/
+        auto/
+            block/
+                b-head-logo-auto.css
+            head.css
+    util/
+        b-hmenu/
+            b-hmenu.css</pre><ol class="b-text__ol"><li class="b-text__li">block <s> общепортальные блоки</s></li><li class="b-text__li">util <s> блоки, которые имеют смысл вне Яндекса, их можно выложить в OpenSource</s></li><li class="b-text__li">service <s> стили для конкретных сервисов Яндекса, подключив их на сервис можно отобразить шапку, подвал</s></li></ol><p class="b-text__p">Структура директории html аналогична css.</p><pre class="ohl ohl_lang_xml">html/
+    block/
+        b-dropdown.html
+    service/
+        auto/
+            l-head.html
+    util/
+        b-hmenu.html</pre><p class="b-text__p">JS находится в зачаточном состоянии:</p><pre class="ohl ohl_lang_xml">js/
+    check-is-frame.js
+    check-session.js
+    clean-on-focus.js
+    dropdown.js
+    event.add.js
+    event.del.js</pre><p class="b-text__p">У каждого сервиса есть XML-файл, использующийся для построения шапки.</p><pre class="ohl ohl_lang_xml">xml/
+    block/
+        b-head-tabs-communication.xml
+        common-services.ru.xml
+        head-messages.ru.xml
+    service/
+        auto/
+            head.xml</pre><p class="b-text__p">XSL блоков лежит в одной директории:</p><pre class="ohl ohl_lang_xml">xsl/
+    block/
+        b-dropdown.xsl
+        b-head-line.xsl
+        i-common.xsl
+        i-locale.xsl
+        l-foot.xsl
+        l-head.xsl</pre><p class="b-text__p">Каждому блоку соответствует один файл.</p><p class="b-text__p">Подключение Лего на проекты делалось через svn:externals.</p><p class="b-text__p">При сборке для продакшена, код библиотеки полностью включается в проект, что можно сравнить со статической линковкой.</p><p class="b-text__p">Такой подход позволяет выпускать версии сервисов с разными версиями Лего и переходить на новую версию, когда это удобно команде проекта.<br/> Мы используем его до сих пор.</p><h4 class="b-text__h4" id="Fajlystranic">Файлы страниц</h4><p class="b-text__p">Файлы, подключавшиеся на страницах, состояли из @import&apos;ов реализации блоков.</p><pre class="ohl ohl_lang_xml">@import url(../../block/l-head/l-head.css);
+@import url(../../block/b-head-logo/b-head-logo.css);
+@import url(../../block/b-head-logo/b-head-logo_name.css);
+@import url(block/b-head-logo-auto.css);</pre><p class="b-text__p">Эти import’ы писались вручную.</p><p class="b-text__p">Именование файлов ещё не устоялось, мы пробуем разные варианты.</p><h2 class="b-text__h2" id="ObshheportalynyjfrejmvorkLego122008">Общепортальный фреймворк: Лего 1.2 (2008)</h2><p class="b-text__p">Чуть позже в рамках версии 1.2 был сделан рефакторинг и структура Лего изменилась.</p><pre class="ohl ohl_lang_xml">common/
+    css/
+    js/
+    xml/
+    xsl/
+example/
+    html/
+service/
+    auto/
+        css/
+        xml/</pre><p class="b-text__p">Убрано разделение на util и block, весь общий CSS лежит в common/css.<br/> От идеи выноса кода в Open Source на тот момент отказались. Вернулись к ней только через два года.</p><pre class="ohl ohl_lang_xml">common/
+    css/
+        b-dropdown/
+            arr/
+                b-dropdown.arr.css
+                b-dropdown.arr.ie.css
+                b-dropdown.css
+                b-dropdown.ie.css</pre><p class="b-text__p">Файлы для MSIE переименованы, было -ie.css, стало .ie.css. Расширения у файлов теперь могут быть из нескольких слов.</p><p class="b-text__p">Всё что было в опциональном CSS (файлах <tt>b-dropdown_arr.css</tt>) вынесено в директории (<tt>arr/b-dropdown.arr.css</tt>).<br/> В основном файле блока стало меньше кода.</p><p class="b-text__p">Для модификации постфиксом вместо минуса начали использовать подчёркивание.<br/> Это позволило визуально отделить имя блока от модификатора, что потом пригодилось при реализации инструментов, помогающих работать с кодом.</p><h2 class="b-text__h2" id="BEM">БЭМ</h2><p class="b-text__p">В марте 2009 выходит версия Лего 2.0.<br/> Этим событием заканчивается «Вёрстка независимыми блоками» и начинается «БЭМ».</p><h3 class="b-text__h3" id="Lego202009">Лего 2.0, 2009</h3><p class="b-text__p">Что же принципиально изменилось с выходом версии 2.0?</p><p class="b-text__p">Самое главное изменение – мы вывели вперёд блоки, а не технологии. Блоки стали первичны, а технологии их реализации – вторичны.</p><p class="b-text__p">Реализация блока делалась в отдельной директории, а технологии – это файлы внутри неё. В том числе появилась документация к блоку — это файл <tt>.wiki</tt> внутри блока.</p><p class="b-text__p">Какими терминами мы тогда оперировали?</p><h4 class="b-text__h4" id="Terminologiya">Терминология</h4><p class="b-text__p"><tt>Независимый блок</tt>, который может быть использован в любом месте страницы.<br/> В XML он представлен тегом в неймспейсе lego.</p><p class="b-text__p">XML:</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:l-head<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:b-head-logo<span class="ohl-punctuation">&gt;</span></span></pre><p class="b-text__p">В HTML класс у блока, такой же, как имя этого тега.</p><p class="b-text__p">HTML:</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>table <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>l-head<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-head-logo<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span></pre><p class="b-text__p">CSS:</p><pre class="ohl ohl_lang_xml">.l-head
+.b-head-logo</pre><p class="b-text__p">Все файлы (css, js, html, xsl), относящиеся к блоку, кладутся в его директорию:</p><pre class="ohl ohl_lang_xml">    common/
+        block/
+            b-head-logo/
+                b-head-logo.css
+                b-head-logo.xsl
+                b-head-logo.js
+                b-head-logo.wiki</pre><p class="b-text__p">Элементы в XML пишутся в неймспейсе lego без префикса:</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:b-head-logo<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:name<span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>lego:b-head-logo<span class="ohl-punctuation">&gt;</span></span></pre><p class="b-text__p">Класс в HTML — тоже без префикса.</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-head-logo<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>span <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>Авто<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>span<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
+
+.b-head-logo .name { ... }</pre><p class="b-text__p">Файлы для вложенного элемента кладутся в отдельную директорию.</p><pre class="ohl ohl_lang_xml">common/
+    block/
+        b-head-logo/
+            name/
+                b-head-logo.name.css
+                b-head-logo.name.png
+                b-head-logo.name.wiki</pre><p class="b-text__p">Модификаторы в XML представлены атрибутами в неймспейсе lego:</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:b-head-tabs <span class="ohl-name ohl-name-attribute">lego:theme<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>grey<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span></pre><p class="b-text__p">В HTML используется дополнительный класс.</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-head-tabs b-head-tabs_grey<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+
+.b-head-tabs_grey { ... }</pre><p class="b-text__p">Файлы для модификатора кладутся в отдельную директорию, с подчёркиванием в начале имени:</p><pre class="ohl ohl_lang_xml">common/
+    block/
+        b-head-logo/
+            _theme/
+                b-head-logo_gray.css
+                b-head-logo_gray.png
+                b-head-logo_gray.wiki</pre><h4 class="b-text__h4" id="Deklaraciyaispolyzuemyxblokov">Декларация используемых блоков</h4><p class="b-text__p">Все лего-компоненты проекта описываются в XML-файле.</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:page<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:l-head<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:b-head-logo<span class="ohl-punctuation">&gt;</span></span>
+            <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:name<span class="ohl-punctuation">/&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>lego:b-head-logo<span class="ohl-punctuation">&gt;</span></span>
+
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>lego:b-head-tabs <span class="ohl-name ohl-name-attribute">type<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>search-and-content<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span></pre><p class="b-text__p">Из него генерируются CSS-файлы.</p><pre class="ohl ohl_lang_xml">@import url(../../common/block/global/_type/global_reset.css);
+@import url(../../common/block/l-head/l-head.css);
+@import url(../../common/block/b-head-logo/b-head-logo.css);
+@import url(../../common/block/b-head-logo/name/b-head-logo.name.css);
+@import url(../../common/block/b-head-tabs/b-head-tabs.css);
+@import url(../../common/block/b-dropdown/b-dropdown.css);
+@import url(../../common/block/b-dropdown/text/b-dropdown.text.css);
+@import url(../../common/block/b-pseudo-link/b-pseudo-link.css);
+@import url(../../common/block/b-dropdown/arrow/b-dropdown.arrow.css);
+@import url(../../common/block/b-head-search/b-head-search.css);
+@import url(../../common/block/b-head-search/arrow/b-head-search.arrow.css);
+@import url(../../common/block/b-search/b-search.css);
+@import url(../../common/block/b-search/input/b-search.input.css);
+@import url(../../common/block/b-search/sample/b-search.sample.css);
+@import url(../../common/block/b-search/precise/b-search.precise.css);
+@import url(../../common/block/b-search/button/b-search.button.css);
+@import url(../../common/block/b-head-userinfo/b-head-userinfo.css);
+@import url(../../common/block/b-head-userinfo/user/b-head-userinfo.user.css);
+@import url(../../common/block/b-user/b-user.css);
+@import url(../../common/block/b-head-userinfo/service/b-head-userinfo.service.css);
+@import url(../../common/block/b-head-userinfo/setup/b-head-userinfo.setup.css);
+@import url(../../common/block/b-head-userinfo/region/b-head-userinfo.region.css);
+@import url(block/b-head-logo/b-head-logo.css);
+@import url(block/b-head-search/b-head-search.css);</pre><p class="b-text__p">Из этого файла видно, что сначала идёт общий код, а потом добавляются стили, чтобы привести лего-блоки к дизайну проекта.</p><p class="b-text__p">Имена файлов элементов пишутся через точку: <tt>b-head-logo.name.css</tt></p><p class="b-text__p">Из XML-декларации генерируются и JS-файлы.</p><pre class="ohl ohl_lang_js"><span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/i-locale/i-locale.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+<span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-dropdown/b-dropdown.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+<span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-search/sample/b-search.sample.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+<span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-userinfo/user/b-head-userinfo.user.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></pre><p class="b-text__p">А также XSL-файлы.</p><pre class="ohl ohl_lang_xml"><span class="ohl-comment ohl-comment-preproc"><span class="ohl-punctuation">&lt;?</span>xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;<span class="ohl-punctuation">?&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:stylesheet <span class="ohl-name ohl-name-attribute">xmlns:xsl<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>http://www.w3.org/1999/XSL/Transform<span class="ohl-punctuation">&quot;</span></span></span> <span class="ohl-name ohl-name-attribute">version<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>1.0<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/i-common/i-common.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/i-items/i-items.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/l-head/l-head.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-logo/b-head-logo.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-logo/name/b-head-logo.name.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-tabs/b-head-tabs.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-dropdown/b-dropdown.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-pseudo-link/b-pseudo-link.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-search/b-head-search.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-search/b-search.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-search/input/b-search.input.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-search/sample/b-search.sample.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-search/precise/b-search.precise.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-search/button/b-search.button.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-userinfo/b-head-userinfo.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-user/b-user.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-userinfo/service/b-head-userinfo.service.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-userinfo/setup/b-head-userinfo.setup.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>xsl:import <span class="ohl-name ohl-name-attribute">href<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../common/block/b-head-userinfo/region/b-head-userinfo.region.xsl<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">/&gt;</span></span>
+
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>xsl:stylesheet<span class="ohl-punctuation">&gt;</span></span></pre><p class="b-text__p">Мы перестали писать эти файлы руками, началась генерация кода.</p><h3 class="b-text__h3" id="Skorostyselektorov2009">Скорость селекторов, 2009</h3><p class="b-text__p">При реализации новой версии Яндекс.Почты была задача сделать её такой быстрой как программа на компьютере.</p><p class="b-text__p">При решении этой задачи начали использовать XSL в браузере (и подгружать по сети XML, необходимый для отрисовки данных на странице) и столкнулись с проблемой, что трансформации отрабатывают быстро, но вставка в DOM полученного результата происходит очень медленно. При этом, если отключить CSS — всё происходит быстро.</p><p class="b-text__p">Начали исследовать эту проблему и пришли к тому, что тормозят селекторы CSS, которые при большом DOM-дереве и большой таблице стилей оказывают существенное влияние на скорость отрисовки браузером страницы.</p><p class="b-text__p">Результаты исследования подробно описаны в статье <a class="b-link" href="http://clubs.ya.ru/bem/replies.xml?item_no=338">http://clubs.ya.ru/bem/replies.xml?item_no=338</a>.</p><p class="b-text__p">Мы поняли, что решение этой проблемы у нас есть давно – это <a class="b-link" href="http://clubs.ya.ru/bem/replies.xml?item_no=338">абсолютно-независимые блоки</a>.</p><p class="b-text__p">Мы переделали все блоки в Лего на АНБ нотацию и с тех пор пишем блоки так, чтобы у каждого DOM-узла был свой class (на который можно навесить стили) и не используемся Tag Rules в CSS.<br/> В классы элементов вносится имя блока, селекторы получаются простыми и быстрыми.</p><pre class="ohl ohl_lang_xml"><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-head-logo<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>span <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-head-logo__name<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+        Авто
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>span<span class="ohl-punctuation">&gt;</span></span>
+<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span></pre><h3 class="b-text__h3" id="Stabilizaciyanotacii">Стабилизация нотации</h3><p class="b-text__p">Постепенно мы пришли к тому, что нотация в коде и структура на файловой системе устоялась и с тех пор уже не меняется.</p><p class="b-text__p">В именах файлов разделитель . был заменён на <u>. Было </u><tt>b-block.elem.css</tt>, стало <tt>b-block<u>elem.css</u></tt>. Теперь они совпадают с CSS-селекторами.</p><p class="b-text__p">Были реализованы модификаторы у элементов по аналогии с модификаторами блоков. <tt>.b-block<u>elem_theme_green</u></tt> по аналогии с <tt>.b-block_theme_green</tt>.</p><p class="b-text__p">В имя файла модификатора и в его класс внесён тип модификатора. Было <tt>.b-menu<u>item_current</u></tt>, стало <tt>.b-menu<u>item_state_current</u></tt>.<br/> Причина этого изменения — работа с модификаторами из JS.</p><h2 class="b-text__h2" id="OpenSource2010">Open Source (2010)</h2><p class="b-text__p">В 2010 году мы создали организацию <a class="b-link" href="https://github.com/bem">bem на github’е</a>, чтобы вести разработку в open source.</p><h3 class="b-text__h3" id="Bibliotekabembl">Библиотека bem-bl</h3><p class="b-text__p">Мы начали выносить блоки из Лего в <a class="b-link" href="https://github.com/bem/bem-bl">bem-bl</a>, проводя одновременно с этим рефакторинг.<br/> Вместе с выносом блоков публиковали информацию про них в клубе: <a class="b-link" href="http://clubs.ya.ru/bem/posts.xml?tag=8486525">http://clubs.ya.ru/bem/posts.xml?tag=8486525</a>.</p><p class="b-text__p">Работы по выносу блоков в Open Source пока не закончены.</p><h3 class="b-text__h3" id="Instrumenty">Инструменты</h3><p class="b-text__p">Начали реализацию инструментов <a class="b-link" href="https://github.com/bem/bem-tools">bem-tools</a>, которые помогают работать с файлами по БЭМ-методу.<br/> Инструменты реализуются на JavaScript под Node.js.</p><p class="b-text__p">Директории с реализацией блоков стали называть «уровнем переопределения».</p><p class="b-text__p">Например, на проекте может быть:</p><ol class="b-text__ol"><li class="b-text__li">публичная библиотека блоков с github</li><li class="b-text__li">внутренняя библиотека lego</li><li class="b-text__li">и блоки самого проекта</li></ol><pre class="ohl ohl_lang_xml">bem-bl/
+    b-logo/
+lego/
+    b-logo/
+auto/
+    blocks/
+        b-logo/</pre><p class="b-text__p">На уровне переопределения можно задать другую схему именования папок/файлов, отличную от нашей.<br/> Для этого нужно сконфигурировать уровень:</p><pre class="ohl ohl_lang_xml">.bem/
+    level.js</pre><p class="b-text__p">Например, вы можете задать другие разделители между именем блока и элемента, или не раскладывать всё по директориям, а сделать плоскую структуру из файлов.</p><h3 class="b-text__h3" id="ShablonizatorBEMHTML">Шаблонизатор BEMHTML</h3><p class="b-text__p">После экспериментов с разными шаблонизаторами, был разработан шаблонизатор BEMHTML.</p><p class="b-text__p">Этот шаблонизатор</p><ol class="b-text__ol"><li class="b-text__li">позволяет писать шаблоны в БЭМ-терминах</li><li class="b-text__li">доопределять их на уровнях переопределения</li><li class="b-text__li">исполнять эти шаблоны, как на сервере, так и в браузере, поскольку
+ шаблоны компилируются в простой и быстрый JavaScript</li></ol><p class="b-text__p">О BEMHTML есть много информации в клубе на Яру:</p><ul class="b-text__ul"><li class="b-text__li"><a class="b-link" href="clubs.ya.ru/bem/replies.xml?item_no=898">clubs.ya.ru/bem/replies.xml?item_no=898</a></li><li class="b-text__li"><a class="b-link" href="clubs.ya.ru/bem/replies.xml?item_no=899">clubs.ya.ru/bem/replies.xml?item_no=899</a></li><li class="b-text__li"><a class="b-link" href="clubs.ya.ru/bem/replies.xml?item_no=1153">clubs.ya.ru/bem/replies.xml?item_no=1153</a></li><li class="b-text__li"><a class="b-link" href="clubs.ya.ru/bem/replies.xml?item_no=1172">clubs.ya.ru/bem/replies.xml?item_no=1172</a></li><li class="b-text__li"><a class="b-link" href="clubs.ya.ru/bem/replies.xml?item_no=1391">clubs.ya.ru/bem/replies.xml?item_no=1391</a></li></ul><h2 class="b-text__h2" id="VariantyispolyzovaniyaBEM">Варианты использования БЭМ</h2><p class="b-text__p">Как вы можете видеть, БЭМ не появился сразу. У нас был долгий период проб и подбора наиболее подходящего нам варианта.</p><p class="b-text__p">Но хочу обратить внимание, что всё это время это был БЭМ.</p><p class="b-text__p">То, что мы используем сейчас — не единственно верное решение. Наоборот, вы можете использовать БЭМ на своих проектах в том объёме, в котором он принесёт наибольшую пользу.</p><p class="b-text__p">БЭМ методология очень гибкая и позволяет вам настраивать её под свои процессы, под свои текущие технологии.</p><p class="b-text__p">Давайте посмотрим на примерах.</p><h3 class="b-text__h3" id="Blokivodnomfajle">Блоки в одном файле</h3><p class="b-text__p">У вас есть проект, в котором вы хотите применить БЭМ для вёрстки и ни для чего более.</p><p class="b-text__p">Хорошо, мы тоже с этого начинали.</p><p class="b-text__p">Выбирайте подходящую вам схему...</p><p class="b-text__p">Например, с префиксами и каскадом.</p><pre class="ohl ohl_lang_xml">.b-block
+.b-block .elem
+.b-block_size_l
+.b-block .elem_size_l</pre><p class="b-text__p">Или задайте класс каждому DOM-узлу и используйте абсолютно-независимые блоки.</p><pre class="ohl ohl_lang_xml">.b-block
+.b-block__elem
+.b-block_size_l
+.b-block__elem_size_l</pre><p class="b-text__p">Или можно убрать префиксы.</p><pre class="ohl ohl_lang_xml">.block
+.block__elem
+.block_size_l
+.block__elem_size_l</pre><p class="b-text__p">И начинайте делать вёрстку на проекте по БЭМ.</p><p class="b-text__p">Используйте самую простую схему на файловой системе, когда реализация блоков лежит в одном файле.</p><pre class="ohl ohl_lang_xml">myfacebook/
+    myfacebook.css
+    myfacebook.js
+    myfacebook.html</pre><p class="b-text__p">При использовании этого варианта всё делается руками, без bem-tools.</p><h3 class="b-text__h3" id="Blokivdirektorii">Блоки в директории</h3><p class="b-text__p">Когда вы поймёте, что ваш проект вырос, можно начать раскладывать реализацию блоков по файлам и использовать сборку.</p><pre class="ohl ohl_lang_xml">blocks/
+    b-myblock.css
+    b-myblock.js
+    b-yourblock.css
+    b-yourblock.js</pre><p class="b-text__p">В этом случае можно начинать использовать bem-tools для сборки проекта.</p><h3 class="b-text__h3" id="Neobyazatelynoevfajlax">Не обязательное в файлах</h3><p class="b-text__p">Если в ваших блоках есть элементы/модификаторы, которые используются не на всех страницах, можно вынести их реализацию в отдельные файлы, чтобы подключать только то, что нужно.</p><pre class="ohl ohl_lang_xml">blocks/
+    b-myblock/
+        b-myblock_mod_val1.css
+        b-myblock__opt-elem.css
+        b-myblock__opt-elem_mod_val1.css
+        b-myblock.css</pre><h3 class="b-text__h3" id="Modifikatoryvdirektoriyax">Модификаторы в директориях</h3><p class="b-text__p">Если модификаторов много, для каждого можно сделать отдельную директорию.</p><pre class="ohl ohl_lang_xml">blocks/
+    b-myblock/
+        _mod/
+            b-myblock_mod_val1.css
+            b-myblock__opt-elem.css
+            b-myblock__opt-elem_mod_val1.css
+        b-myblock.css</pre><p class="b-text__p">Это разгрузит корневую директорию блока.</p><h3 class="b-text__h3" id="Opcionalynyeelementyvdirektoriyax">Опциональные элементы в директориях</h3><p class="b-text__p">Предпоследний по сложности вариант, когда в директории выносятся ещё и необязательные элементы, а код обязательных элементов лежит в основных файлах блока.</p><pre class="ohl ohl_lang_xml">blocks/
+    b-myblock/
+        _mod/
+            b-myblock_mod_val1.css
+        __opt-elem/
+            b-myblock__opt-elem.css
+        b-myblock.css</pre><p class="b-text__p">Мы используем сейчас именно этот вариант при разработке Лего и bem-bl.</p><h3 class="b-text__h3" id="VSEelementymodifikatoryvdirektoriyax">ВСЕ элементы/модификаторы в директориях</h3><p class="b-text__p">Самый сложный в разработке, но самый понятный вариант по конечной структуре, когда ВСЕ элементы блока и ВСЕ модификаторы имеют свои директории.</p><pre class="ohl ohl_lang_xml">blocks/
+    b-myblock/
+        _mod/
+            b-myblock_mod_val1.css
+        __elem/
+           b-myblock__elem.css
+        b-myblock.css</pre><p class="b-text__p">Этот вариант очень наглядный, при взгляде на файловую систему можно увидеть всю структуру блока.</p><p class="b-text__p">Мы сейчас спорим, надо нам переходить на него в Лего или нет.Ф</p><h2 class="b-text__h2" id="Itog">Итог</h2><p class="b-text__p">Итак, давайте подведём итог.</p><p class="b-text__p">БЭМ – это методология организации работы над проектом, которая позволяет команде работать c единым кодом и говорить на одном языке.</p><p class="b-text__p">При этом нет единственно правильного варианта и мы не стремимся его получить.</p><p class="b-text__p">Наоборот, мы рассматриваем БЭМ как набор правил.<br/> Каждая конкретная команда встраивает его в свой процесс разработки и использует так, как им удобно.</p></div></body></html>
