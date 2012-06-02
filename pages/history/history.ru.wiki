@@ -56,3 +56,205 @@ i/
 использовались в продакшене. Если HTML изменялся, все правки вручную
 переносиись в XSL. И наоборот: изменения в шаблонах несли с собой изменения в HTML
 для поддержания статического HTML в актуальном состоянии.
+
+===Проекты побольше
+
+Адреса были маленьким проектом с несколькими страницами и такой подход
+к вёрстке был удобен.
+
+Но при вёрстке первой версии Яндекс.Музыки в начале 2006 стало понятно,
+что для проекта с большим количеством разных страниц этот подход работает плохо.\\
+Тяжело подбирать названия классам, сложно держать в голове код всего проекта
+и писать так, чтобы изменения на одной странице ничего не ломали на другой.
+
+Типичный код того времени:
+
+%%hl xml
+    /* Albums (begin) */
+        .result .albums .info
+            {
+                padding-right: 8.5em;
+            }
+
+        .result .albums .title
+            {
+                float: left;
+
+                padding-bottom: 0.3em;
+            }
+
+        .result .albums .album .listen
+            {
+                float: left;
+
+                padding: 0.3em 1em 0 1em;
+            }
+
+        .result .albums .album .buy
+            {
+                float: left;
+
+                padding: 0.4em 1em 0 1.6em;
+            }
+
+        .result .albums .info i
+            {
+                font-size: 85%;
+            }
+    /* Albums (end) */
+%%
+
+Здесь используется длинный каскад.
+
+Или вот ещё пример.
+
+%%hl xml
+    /* Картинки на фоне (begin) */
+        .b-foot div
+            {
+                height: 71px;
+
+                background: transparent url(../i/foot-1.png) 4% 50% no-repeat;
+            }
+
+        .b-foot div div
+            {
+                background-position: 21%;
+                background-image: url(../i/foot-2.png);
+            }
+
+        .b-foot div div div
+            {
+                background-position: 38%;
+                background-image: url(../i/foot-3.png);
+            }
+
+        .b-foot div div div div
+            {
+                background-position: 54%;
+                background-image: url(../i/foot-4.png);
+            }
+
+        .b-foot div div div div div
+            {
+                background-position: 71%;
+                background-image: url(../i/foot-5.png);
+            }
+
+        .b-foot div div div div div div
+            {
+                background-position: 87%;
+                background-image: url(../i/foot-6.png);
+            }
+    /* Картинки на фоне (end) */
+%%
+
+Тут используются ##id## и тэги.
+
+Одновременно с Музыкой началась вёрстка ((http://news.yandex.ru Яру)).\\
+Это проект с десятками страниц и такой подход не работает -- вёрстка
+становится неуправляемой.
+
+====Появление блоков
+
+И мы ввели понятие блока для частей страниц, которые имеют самостоятельное
+значение в дизайне.
+
+Классы блоков получили префиксы (##b-##, ##c-##, ##g-##), чтобы отличаться от классов
+внутри.
+
+Используемые префиксы:
+ * **b-**  block\\
+   независимый блок, может использоваться в любом месте страницы
+ * **с-**  control\\
+   контрол (независимый блок) с которым ассоциирован JavaScript
+   объект, обеспечивающий его функциональность, может использоваться
+   в любом месте страницы
+ * **g-**  global\\
+   глобальное определение, используется по необходимости, количество
+   сведено к минимуму
+
+Кроме префиксов были постфиксы:
+ * **-nojs**   no javascript\\
+   стиль применяется в отсутствие javascript, если javascript
+   включен, то при загрузке страницы у всех элементов этот
+   постфикс убирается, для этого должен быть вызван метод ##init()##
+   в onload.
+
+====Появление элементов
+Внутренние классы мы стали называть элементами.
+
+Элементы, у которых много кода, выделялись комментариями.
+
+%%hl xml
+    /* Head (begin) */
+        .b-head { … }
+
+        /* Logo (begin) */
+            .b-head .logo { … }
+            .b-head .logo a { … }
+        /* Logo (end) */
+
+        /* Right side (begin) */
+        .b-head .right { … }
+
+            /* Info (begin) */
+                .b-head .info { … }
+                .b-head .info .exit a { … }
+            /* Info (end) */
+
+            /* Search (begin) */
+                .b-head .search { … }
+                .b-head .search div div, .b-head .search div div i { … }
+            /* Search (end) */
+        /* Right side (end) */
+    /* Head (end) */
+%%
+
+====Структура вёрстки проекта
+Изменилась структура вёрстки проекта.
+
+Ввели директории для технологий css и js.
+
+%%hl xml
+index.html
+css/
+    yaru.css
+    yaru-ie.css
+js/
+    yaru.js
+i/
+    yandex.png
+%%
+
+Валидные хаки для MSIE писали в основном CSS-файле ##yaru.css##.
+
+%%hl xml
+    /* Common definitions (begin) */
+        body
+            {
+                font-family: Arial, sans-serif;
+                font-size: 0.8em;
+
+                padding: 0 0 2em 0;
+                background: #fff;
+            }
+
+        * html body
+            {
+                font-size: 80%;
+            }
+%%
+
+Невалидные -- в файле ##yaru-ie.css##.
+
+%%hl xml
+    /* Common blocks (begin) */
+        /* Artist (begin) */
+            .b-artist .i i
+                {
+                    top: expression(7 + (90 - this.parentNode.getElementsByTagName('img')[0].height)/2);
+                    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../i/sticker-lt.png', sizingMethod='crop');
+                }
+%%
+
