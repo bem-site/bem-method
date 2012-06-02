@@ -258,3 +258,728 @@ i/
                 }
 %%
 
+===Зачатки общепортального фреймворка
+
+При верстке нескольких проектов с похожим дизайном есть общие блоки.
+
+Очень быстро понимаешь, что copy/paste этих блоков с проекта на проект
+не выход и надо делать common.
+
+Так появилось общее хранилище для стилей шапки, подвала и статического текста на
+специальном сервере.
+
+Cтили с него подключались в основной проектный файл с помощью импортов.
+
+%%hl xml
+@import url(http://common.cloudkill.yandex.ru/css/global.css);
+@import url(http://common.cloudkill.yandex.ru/css/head/common.css);
+@import url(http://common.cloudkill.yandex.ru/css/static-text.css);
+@import url(http://common.cloudkill.yandex.ru/css/foot/common-absolute.css);
+@import url(http://common.cloudkill.yandex.ru/css/foot/common-absolute-4-columns.css);
+@import url(http://common.cloudkill.yandex.ru/css/list/hlist.css);
+@import url(http://common.cloudkill.yandex.ru/css/list/hlist-middot.css);
+@import url(http://common.cloudkill.yandex.ru/css/dropdown/dropdown.css);
+@import url(http://common.cloudkill.yandex.ru/css/dropdown/dropdown-arrow.css);
+@import url(slider.css);
+
+/* Header (begin) */
+    /* Service (begin) */
+        .b-head .service h1 { … }
+        .b-head .service h1, .b-head .service h1 a, .b-head .service h1 b { … }
+%%
+
+Чтобы с этим можно было уйти в продакшн, появился процесс сборки, во время
+которого вместо ##@import## подставляется содержимое этих файлов.
+
+===Вёрстка независимыми блоками
+К осени 2007 года правила вёрстки уже устоялись, и о них захотелось
+рассказать вне Яндекса.
+
+На ClientSide'2007 я сделал доклад
+«((http://vitaly.harisov.name/article/independent-blocks.html Вёрстка независимыми блоками))»
+
+В докладе вводится понятие ##Блок##:
+ * Блоком будем называть фрагмент страницы, который описывается своей разметкой и стилями.
+
+Более позднее описание в клубе БЭМ: ((http://clubs.ya.ru/bem/replies.xml?item_no=42))
+
+==== Правила блоков
+Формулируются правила независимости блока:
+ 1. для описания элемента используется ##class##, но не ##id##
+ 1. каждый блок имеет префикс
+ 1. в таблице стилей нет классов вне блоков
+
+Отказ от id даёт возможность использовать один и тот же блок несколько раз на
+странице. А также позволяет использовать на одном DOM-узле несколько классов, что
+в дальнейшем нам пригодилось.
+
+=====Простые и составные блоки
+Блоки делятся на простые и составные.
+
+ * В простые блоки нельзя вкладывать другие блоки, в составные -- можно.
+
+Это было очень наивное деление, мы неоднократно сталкивались с тем, что
+даже в самые простые блоки вкладывались другие и приходилось переделывать вёрстку.
+
+=====Правила полной независимости блоков
+Так же были сформулированы правила полной независимости блоков:
+
+ 1. никогда не опираться на элементы, только на классы:\\
+    ##.b-user b -> .b-user .first-letter##
+ 2. всем классам внутри блока давать имена начинающиеся с имени этого блока:\\
+    ##.b-user .first-letter -> .b-user-first_letter##
+
+Позже мы назвали это АНБ -- ((clubs.ya.ru/bem/replies.xml?item_no=43 абсолютно-независимые блоки)).
+
+Но класс у каждого DOM-узла существенно увеличивает HTML-код.\\
+На тот момент мы считали, что это дорого и применяли такой подход в
+исключительных случаях.
+
+=====Префиксы
+Тогда же, сформулировали правила для префиксов.
+
+ * **b-**\\
+   обычные блоки
+ * **h-**\\
+   обёртки
+ * **l-**\\
+    раскладки
+ * **g-**\\
+   глобальные стили
+
+=====Модификация
+
+Ввели понятие модификации:
+
+ 1. Блок может изменить свой внешний вид в зависимости от того, где он находится.
+    Это модификация от контекста.
+ 1. Можно добавить блоку второй класс, это модификация постфиксом, она не зависит от контекста.\\
+##class="b-block b-block-postfix"##
+
+===Общепортальный фреймворк
+Весной 2008 года была поставлена задача сделать брендбук, описывающий
+наш портальный стиль.
+
+Я начал с того, что умел лучше всего — делать HTML/CSS код.\\
+Если делать просто описание — оно устареет, не успев дописаться до конца.
+
+Проект получил название ##Лего##.
+
+====Структура репозитория Лего
+Первичное разделение на верхнем уровне репозитория идёт по технологиям.
+
+%%hl xml
+css/
+html/
+js/
+xml/
+xsl/
+%%
+
+В каждой технологии своя структура.
+
+CSS раскладывается в три разные директории:
+
+%%hl xml
+css/
+    block/
+        b-dropdown/
+            b-dropdown.css
+    service/
+        auto/
+            block/
+                b-head-logo-auto.css
+            head.css
+    util/
+        b-hmenu/
+            b-hmenu.css
+%%
+
+ 1. block -- общепортальные блоки
+ 1. util -- блоки, которые имеют смысл вне Яндекса, их можно выложить в OpenSource
+ 1. service -- стили для конкретных сервисов Яндекса, подключив их на сервис можно отобразить шапку, подвал
+
+Структура директории html аналогична css.
+
+%%hl xml
+html/
+    block/
+        b-dropdown.html
+    service/
+        auto/
+            l-head.html
+    util/
+        b-hmenu.html
+%%
+
+JS находится в зачаточном состоянии:
+
+%%hl xml
+js/
+    check-is-frame.js
+    check-session.js
+    clean-on-focus.js
+    dropdown.js
+    event.add.js
+    event.del.js
+%%
+
+У каждого сервиса есть XML-файл, использующийся для построения шапки.
+
+%%hl xml
+xml/
+    block/
+        b-head-tabs-communication.xml
+        common-services.ru.xml
+        head-messages.ru.xml
+    service/
+        auto/
+            head.xml
+%%
+
+XSL блоков лежит в одной директории:
+
+%%hl xml
+xsl/
+    block/
+        b-dropdown.xsl
+        b-head-line.xsl
+        i-common.xsl
+        i-locale.xsl
+        l-foot.xsl
+        l-head.xsl
+%%
+
+Каждому блоку соответствует один файл.
+
+Подключение Лего на проекты делалось через svn:externals.
+
+При сборке для продакшена, код библиотеки полностью включается в проект,
+что можно сравнить со статической линковкой.
+
+Такой подход позволяет выпускать версии сервисов с разными версиями Лего
+и переходить на новую версию, когда это удобно команде проекта.\\
+Мы используем его до сих пор.
+
+=====Файлы страниц
+Файлы, подключавшиеся на страницах, состояли из @import'ов реализации блоков.
+
+%%hl xml
+@import url(../../block/l-head/l-head.css);
+@import url(../../block/b-head-logo/b-head-logo.css);
+@import url(../../block/b-head-logo/b-head-logo_name.css);
+@import url(block/b-head-logo-auto.css);
+%%
+
+Эти import’ы писались вручную.
+
+Именование файлов ещё не устоялось, мы пробуем разные варианты.
+
+=== Общепортальный фреймворк: Лего 1.2 (2008)
+Чуть позже в рамках версии 1.2 был сделан рефакторинг и структура Лего изменилась.
+
+%%hl xml
+common/
+    css/
+    js/
+    xml/
+    xsl/
+example/
+    html/
+service/
+    auto/
+        css/
+        xml/
+%%
+
+Убрано разделение на util и block, весь общий CSS лежит в common/css.\\
+От идеи выноса кода в Open Source на тот момент отказались. Вернулись к ней только через два года.
+
+%%hl xml
+common/
+    css/
+        b-dropdown/
+            arr/
+                b-dropdown.arr.css
+                b-dropdown.arr.ie.css
+                b-dropdown.css
+                b-dropdown.ie.css
+%%
+
+Файлы для MSIE переименованы, было -ie.css, стало .ie.css.
+Расширения у файлов теперь могут быть из нескольких слов.
+
+Всё что было в опциональном CSS (файлах ##b-dropdown_arr.css##)
+вынесено в директории (##arr/b-dropdown.arr.css##).\\
+В основном файле блока стало меньше кода.
+
+Для модификации постфиксом вместо минуса начали использовать подчёркивание.\\
+Это позволило визуально отделить имя блока от модификатора, что
+потом пригодилось при реализации инструментов, помогающих работать с кодом.
+
+===БЭМ
+В марте 2009 выходит версия Лего 2.0.\\
+Этим событием заканчивается «Вёрстка независимыми блоками» и начинается «БЭМ».
+
+====Лего 2.0, 2009
+Что же принципиально изменилось с выходом версии 2.0?
+
+Самое главное изменение -- мы вывели вперёд блоки, а не технологии.
+Блоки стали первичны, а технологии их реализации -- вторичны.
+
+Реализация блока делалась в отдельной директории, а технологии --
+это файлы внутри неё. В том числе появилась документация к блоку — это файл
+##.wiki## внутри блока.
+
+Какими терминами мы тогда оперировали?
+
+=====Терминология
+##Независимый блок##, который может быть использован в любом месте страницы.\\
+В XML он представлен тегом в неймспейсе lego.
+
+XML:
+
+%%hl xml
+<lego:l-head>
+<lego:b-head-logo>
+%%
+
+В HTML класс у блока, такой же, как имя этого тега.
+
+HTML:
+
+%%hl xml
+<table class="l-head">
+<div class="b-head-logo">
+%%
+
+CSS:
+
+%%hl xml
+.l-head
+.b-head-logo
+%%
+
+Все файлы (css, js, html, xsl), относящиеся к блоку, кладутся в его директорию:
+
+%%hl xml
+    common/
+        block/
+            b-head-logo/
+                b-head-logo.css
+                b-head-logo.xsl
+                b-head-logo.js
+                b-head-logo.wiki
+%%
+
+Элементы в XML пишутся в неймспейсе lego без префикса:
+
+%%hl xml
+<lego:b-head-logo>
+    <lego:name/>
+</lego:b-head-logo>
+%%
+
+Класс в HTML — тоже без префикса.
+
+%%hl xml
+<div class="b-head-logo">
+    <span class="name">Авто</span>
+</div>
+
+.b-head-logo .name { ... }
+%%
+
+Файлы для вложенного элемента кладутся в отдельную директорию.
+
+%%hl xml
+common/
+    block/
+        b-head-logo/
+            name/
+                b-head-logo.name.css
+                b-head-logo.name.png
+                b-head-logo.name.wiki
+%%
+
+Модификаторы в XML представлены атрибутами в неймспейсе lego:
+
+%%hl xml
+<lego:b-head-tabs lego:theme="grey">
+%%
+
+В HTML используется дополнительный класс.
+
+%%hl xml
+<div class="b-head-tabs b-head-tabs_grey">
+
+.b-head-tabs_grey { ... }
+%%
+
+Файлы для модификатора кладутся в отдельную директорию, с
+подчёркиванием в начале имени:
+
+%%hl xml
+common/
+    block/
+        b-head-logo/
+            _theme/
+                b-head-logo_gray.css
+                b-head-logo_gray.png
+                b-head-logo_gray.wiki
+%%
+
+===== Декларация используемых блоков
+Все лего-компоненты проекта описываются в XML-файле.
+
+%%hl xml
+<lego:page>
+    <lego:l-head>
+        <lego:b-head-logo>
+            <lego:name/>
+        </lego:b-head-logo>
+
+        <lego:b-head-tabs type="search-and-content"/>
+%%
+
+Из него генерируются CSS-файлы.
+
+%%hl xml
+@import url(../../common/block/global/_type/global_reset.css);
+@import url(../../common/block/l-head/l-head.css);
+@import url(../../common/block/b-head-logo/b-head-logo.css);
+@import url(../../common/block/b-head-logo/name/b-head-logo.name.css);
+@import url(../../common/block/b-head-tabs/b-head-tabs.css);
+@import url(../../common/block/b-dropdown/b-dropdown.css);
+@import url(../../common/block/b-dropdown/text/b-dropdown.text.css);
+@import url(../../common/block/b-pseudo-link/b-pseudo-link.css);
+@import url(../../common/block/b-dropdown/arrow/b-dropdown.arrow.css);
+@import url(../../common/block/b-head-search/b-head-search.css);
+@import url(../../common/block/b-head-search/arrow/b-head-search.arrow.css);
+@import url(../../common/block/b-search/b-search.css);
+@import url(../../common/block/b-search/input/b-search.input.css);
+@import url(../../common/block/b-search/sample/b-search.sample.css);
+@import url(../../common/block/b-search/precise/b-search.precise.css);
+@import url(../../common/block/b-search/button/b-search.button.css);
+@import url(../../common/block/b-head-userinfo/b-head-userinfo.css);
+@import url(../../common/block/b-head-userinfo/user/b-head-userinfo.user.css);
+@import url(../../common/block/b-user/b-user.css);
+@import url(../../common/block/b-head-userinfo/service/b-head-userinfo.service.css);
+@import url(../../common/block/b-head-userinfo/setup/b-head-userinfo.setup.css);
+@import url(../../common/block/b-head-userinfo/region/b-head-userinfo.region.css);
+@import url(block/b-head-logo/b-head-logo.css);
+@import url(block/b-head-search/b-head-search.css);
+%%
+
+Из этого файла видно, что сначала идёт общий код,
+а потом добавляются стили, чтобы привести лего-блоки к дизайну проекта.
+
+Имена файлов элементов пишутся через точку: ##b-head-logo.name.css##
+
+Из XML-декларации генерируются и JS-файлы.
+
+%%hl js
+include("../../common/block/i-locale/i-locale.js");
+include("../../common/block/b-dropdown/b-dropdown.js");
+include("../../common/block/b-search/sample/b-search.sample.js");
+include("../../common/block/b-head-userinfo/user/b-head-userinfo.user.js");
+%%
+
+А также XSL-файлы.
+
+%%hl xml
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+<xsl:import href="../../common/block/i-common/i-common.xsl"/>
+<xsl:import href="../../common/block/i-items/i-items.xsl"/>
+<xsl:import href="../../common/block/l-head/l-head.xsl"/>
+<xsl:import href="../../common/block/b-head-logo/b-head-logo.xsl"/>
+<xsl:import href="../../common/block/b-head-logo/name/b-head-logo.name.xsl"/>
+<xsl:import href="../../common/block/b-head-tabs/b-head-tabs.xsl"/>
+<xsl:import href="../../common/block/b-dropdown/b-dropdown.xsl"/>
+<xsl:import href="../../common/block/b-pseudo-link/b-pseudo-link.xsl"/>
+<xsl:import href="../../common/block/b-head-search/b-head-search.xsl"/>
+<xsl:import href="../../common/block/b-search/b-search.xsl"/>
+<xsl:import href="../../common/block/b-search/input/b-search.input.xsl"/>
+<xsl:import href="../../common/block/b-search/sample/b-search.sample.xsl"/>
+<xsl:import href="../../common/block/b-search/precise/b-search.precise.xsl"/>
+<xsl:import href="../../common/block/b-search/button/b-search.button.xsl"/>
+<xsl:import href="../../common/block/b-head-userinfo/b-head-userinfo.xsl"/>
+<xsl:import href="../../common/block/b-user/b-user.xsl"/>
+<xsl:import href="../../common/block/b-head-userinfo/service/b-head-userinfo.service.xsl"/>
+<xsl:import href="../../common/block/b-head-userinfo/setup/b-head-userinfo.setup.xsl"/>
+<xsl:import href="../../common/block/b-head-userinfo/region/b-head-userinfo.region.xsl"/>
+
+</xsl:stylesheet>
+%%
+
+Мы перестали писать эти файлы руками, началась генерация кода.
+
+==== Скорость селекторов, 2009
+
+При реализации новой версии Яндекс.Почты была задача сделать
+её такой быстрой как программа на компьютере.
+
+При решении этой задачи начали использовать XSL в браузере (и
+подгружать по сети XML, необходимый для отрисовки данных на странице)
+и столкнулись с проблемой, что трансформации отрабатывают быстро,
+но вставка в DOM полученного результата происходит очень медленно.
+При этом, если отключить CSS — всё происходит быстро.
+
+Начали исследовать эту проблему и пришли к тому, что тормозят селекторы
+CSS, которые при большом DOM-дереве и большой таблице стилей оказывают
+существенное влияние на скорость отрисовки браузером страницы.
+
+Результаты исследования подробно описаны в статье
+((http://clubs.ya.ru/bem/replies.xml?item_no=338)).
+
+Мы поняли, что решение этой проблемы у нас есть давно -- это
+((http://clubs.ya.ru/bem/replies.xml?item_no=338 абсолютно-независимые блоки)).
+
+Мы переделали все блоки в Лего на АНБ нотацию и с тех пор пишем блоки так, чтобы
+у каждого DOM-узла был свой class (на который можно навесить стили) и не
+используемся Tag Rules в CSS.\\
+В классы элементов вносится имя блока, селекторы получаются простыми и быстрыми.
+
+%%hl xml
+<div class="b-head-logo">
+    <span class="b-head-logo__name">
+        Авто
+    </span>
+</div>
+%%
+
+====Стабилизация нотации
+Постепенно мы пришли к тому, что нотация в коде и структура на файловой
+системе устоялась и с тех пор уже не меняется.
+
+В именах файлов разделитель . был заменён на __. Было ##b-block.elem.css##,
+стало ##b-block__elem.css##. Теперь они совпадают с CSS-селекторами.
+
+Были реализованы модификаторы у элементов по аналогии с модификаторами блоков.
+##.b-block__elem_theme_green## по аналогии с ##.b-block_theme_green##.
+
+В имя файла модификатора и в его класс внесён тип модификатора.
+Было ##.b-menu__item_current##, стало ##.b-menu__item_state_current##.\\
+Причина этого изменения — работа с модификаторами из JS.
+
+===Open Source (2010)
+
+В 2010 году мы создали организацию ((https://github.com/bem bem на github’е)),
+чтобы вести разработку в open source.
+
+====Библиотека bem-bl
+Мы начали выносить блоки из Лего в ((https://github.com/bem/bem-bl bem-bl)),
+проводя одновременно с этим рефакторинг.\\
+Вместе с выносом блоков публиковали информацию про них в клубе:
+((http://clubs.ya.ru/bem/posts.xml?tag=8486525)).
+
+Работы по выносу блоков в Open Source пока не закончены.
+
+====Инструменты
+Начали реализацию инструментов ((https://github.com/bem/bem-tools bem-tools)),
+которые помогают работать с файлами по БЭМ-методу.\\
+Инструменты реализуются на JavaScript под Node.js.
+
+Директории с реализацией блоков стали называть «уровнем переопределения».
+
+Например, на проекте может быть:
+
+ 1. публичная библиотека блоков с github
+ 1. внутренняя библиотека lego
+ 1. и блоки самого проекта
+
+%%hl xml
+bem-bl/
+    b-logo/
+lego/
+    b-logo/
+auto/
+    blocks/
+        b-logo/
+%%
+
+На уровне переопределения можно задать другую схему
+именования папок/файлов, отличную от нашей.\\
+Для этого нужно сконфигурировать уровень:
+
+%%hl xml
+.bem/
+    level.js
+%%
+
+Например, вы можете задать другие разделители между именем блока
+и элемента, или не раскладывать всё по директориям, а сделать
+плоскую структуру из файлов.
+
+==== Шаблонизатор BEMHTML
+После экспериментов с разными шаблонизаторами, был разработан
+шаблонизатор BEMHTML.
+
+Этот шаблонизатор
+
+ 1. позволяет писать шаблоны в БЭМ-терминах
+ 1. доопределять их на уровнях переопределения
+ 1. исполнять эти шаблоны, как на сервере, так и в браузере, поскольку
+ шаблоны компилируются в простой и быстрый JavaScript
+
+О BEMHTML есть много информации в клубе на Яру:
+
+ * ((clubs.ya.ru/bem/replies.xml?item_no=898))
+ * ((clubs.ya.ru/bem/replies.xml?item_no=899))
+ * ((clubs.ya.ru/bem/replies.xml?item_no=1153))
+ * ((clubs.ya.ru/bem/replies.xml?item_no=1172))
+ * ((clubs.ya.ru/bem/replies.xml?item_no=1391))
+
+===Варианты использования БЭМ
+
+Как вы можете видеть, БЭМ не появился сразу. У нас был долгий период
+проб и подбора наиболее подходящего нам варианта.
+
+Но хочу обратить внимание, что всё это время это был БЭМ.
+
+То, что мы используем сейчас — не единственно верное решение. Наоборот,
+вы можете использовать БЭМ на своих проектах в том объёме, в
+котором он принесёт наибольшую пользу.
+
+БЭМ методология очень гибкая и позволяет вам настраивать её под свои процессы, под свои текущие технологии.
+
+Давайте посмотрим на примерах.
+
+====Блоки в одном файле
+У вас есть проект, в котором вы хотите применить БЭМ
+для вёрстки и ни для чего более.
+
+Хорошо, мы тоже с этого начинали.
+
+Выбирайте подходящую вам схему...
+
+Например, с префиксами и каскадом.
+
+%%hl xml
+.b-block
+.b-block .elem
+.b-block_size_l
+.b-block .elem_size_l
+%%
+
+Или задайте класс каждому DOM-узлу и используйте абсолютно-независимые блоки.
+
+%%hl xml
+.b-block
+.b-block__elem
+.b-block_size_l
+.b-block__elem_size_l
+%%
+
+Или можно убрать префиксы.
+
+%%hl xml
+.block
+.block__elem
+.block_size_l
+.block__elem_size_l
+%%
+
+И начинайте делать вёрстку на проекте по БЭМ.
+
+Используйте самую простую схему на файловой системе, когда реализация блоков лежит в одном файле.
+
+%%hl xml
+myfacebook/
+    myfacebook.css
+    myfacebook.js
+    myfacebook.html
+%%
+
+При использовании этого варианта всё делается руками, без bem-tools.
+
+====Блоки в директории
+Когда вы поймёте, что ваш проект вырос, можно начать раскладывать
+реализацию блоков по файлам и использовать сборку.
+
+%%hl xml
+blocks/
+    b-myblock.css
+    b-myblock.js
+    b-yourblock.css
+    b-yourblock.js
+%%
+
+В этом случае можно начинать использовать bem-tools для сборки проекта.
+
+====Не обязательное в файлах
+Если в ваших блоках есть элементы/модификаторы, которые используются не на всех страницах,
+можно вынести их реализацию в отдельные файлы, чтобы подключать только то, что нужно.
+
+%%hl xml
+blocks/
+    b-myblock/
+        b-myblock_mod_val1.css
+        b-myblock__opt-elem.css
+        b-myblock__opt-elem_mod_val1.css
+        b-myblock.css
+%%
+
+====Модификаторы в директориях
+Если модификаторов много, для каждого можно сделать отдельную директорию.
+
+%%hl xml
+blocks/
+    b-myblock/
+        _mod/
+            b-myblock_mod_val1.css
+            b-myblock__opt-elem.css
+            b-myblock__opt-elem_mod_val1.css
+        b-myblock.css
+%%
+
+Это разгрузит корневую директорию блока.
+
+====Опциональные элементы в директориях
+Предпоследний по сложности вариант, когда в директории выносятся ещё и
+необязательные элементы, а код обязательных элементов лежит в основных файлах блока.
+
+%%hl xml
+blocks/
+    b-myblock/
+        _mod/
+            b-myblock_mod_val1.css
+        __opt-elem/
+            b-myblock__opt-elem.css
+        b-myblock.css
+%%
+
+Мы используем сейчас именно этот вариант при разработке Лего и bem-bl.
+
+====ВСЕ элементы/модификаторы в директориях
+
+Самый сложный в разработке, но самый понятный вариант по конечной структуре,
+когда ВСЕ элементы блока и ВСЕ модификаторы имеют свои директории.
+
+%%hl xml
+blocks/
+    b-myblock/
+        _mod/
+            b-myblock_mod_val1.css
+        __elem/
+           b-myblock__elem.css
+        b-myblock.css
+%%
+
+Этот вариант очень наглядный, при взгляде на файловую систему можно увидеть всю структуру блока.
+
+Мы сейчас спорим, надо нам переходить на него в Лего или нет.Ф
+
+===Итог
+Итак, давайте подведём итог.
+
+БЭМ -- это методология организации работы над проектом, которая
+позволяет команде работать c единым кодом и говорить на одном языке.
+
+При этом нет единственно правильного варианта и мы не стремимся его получить.
+
+Наоборот, мы рассматриваем БЭМ как набор правил.\\
+Каждая конкретная команда встраивает его в свой процесс
+разработки и использует так, как им удобно.
