@@ -1,0 +1,41 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10053391 = new Ya.Metrika({id:10053391, enableAll: true, trackHash:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/10053391" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --><div class="shmakowiki"><h2>Реализация блока</h2><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li><tt>HTML</tt>-разметка обеспечивает нужную структуру блока (<tt>XML</tt> + <tt>XSL</tt> или <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt>-правила внешнего вида блока</li><li><tt>JS</tt>-правила поведения блока</li></ul><p>Этот набор технологий может быть разным в зависимости от блока, его назначения, и удобства использования.<br/> Структура блока первична, а реализация блока вторична.</p><p><b>Пример реализации блока b-domik</b></p><table>
+<tr><td>
+<b>Домик на странице</b><br/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
+</td>
+<td>
+<b>Домик в попапе</b><br/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
+</td></tr>
+</table><pre>
+    b-domik/
+        # общие файлы реализации для всех типов домика
+        b-domik.css
+        b-domik.ie.css
+        b-domik.js
+        b-domik.xsl
+        _type/
+        # папка с модификаторами для блока
+            b-domik_type_onpage.css    # домик, прибитый на странице
+            b-domik_type_onpage.ie.css
+            b-domik_type_onpage.js
+            b-domik_type_onpage.xsl
+            b-domik_type_popup.css    # домик как всплывающее окно
+            b-domik_type_popup.ie.css
+            b-domik_type_popup.js
+            b-domik_type_popup.xsl
+        __lock/
+        # замочек — элемент блока
+            b-domik__lock.css
+            b-domik__lock.png
+            b-domik__lock.xsl
+            _visibility/
+            # модификатор элемента lock, делает его видимым
+                b-domik__lock_visibility_visible.css
+        __shadow/
+        # тень — элемент блока
+            b-domik__shadow.css
+            b-domik__shadow.ie.css
+            b-domik__shadow.png
+</pre></div>
+</body></html>

@@ -1,0 +1,391 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="/bem-method/css/wiki.css"/><title></title></head><body><!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10053391 = new Ya.Metrika({id:10053391, enableAll: true, trackHash:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/10053391" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --><div class="shmakowiki">
+<p style="color: red; font-weight: bold">
+Этот текст устарел. Читайте <a href="../pages/beginning/beginning.ru.html">новую статью</a> вместо него.
+</p>
+<h2>Что такое БЭМ</h2><p><tt>БЭМ</tt> - это подход к web-разработке, который позволяет получить гибкий, легко изменяемый код.</p><p>БЭМ решает следующие задачи:</p><ul><li>разделение кода на логические части</li><li>единый подход к реализации, во множестве технологий (мультилингвальность)</li><li>оптимизация выполнения production runtime</li></ul><h3>Разделение кода на логические части</h3><h4>Разделение ответственности</h4><p>Разделение кода на логические составляющие (блоки и их элементы) позволяет разделить ответственность. Разные части кода страницы могут писать разные люди.<br/> Например, один разработчик ответственнен за colorpicker (на всём проекте), другой - за компонент валидации форм, третий - за подвал сайта и т.д.</p><h4>Использование без погружения</h4><p>Можно оперировать частями (блоками) без погружения в то, как эти части сделаны. Блоки реализуются так, что могут работать, будучи вставленными в любое место на странице.</p><h4>Повторное использование</h4><p>Сложные блоки составляются из простых согласно их логической структуре. Таким образом, каждое решение подразумевает выделение в коде множества самостоятельных частей. Это повышает вероятность повторного использования кода.</p><h3>Мультилингвальность</h3><h4>Единая предметная область</h4><p>В web-технологиях финальный продукт состоит из разных технологий (например, HTML, CSS, JS). БЭМ-методология декларирует единые термины и подходы к реализации во всех применяемых технологиях.<br/> Напрмер, JavaScript-реализации блоков не оперируют понятиями DOM-элементов, а используют следующий уровень абстрации - <tt>БЭМ-дерево</tt>.</p><h4>Технологии реализации</h4><p>Картинки и документация - это тоже технологии реализации блока.</p><h3>Оптимизация выполнения production runtime</h3><h4>Использовать только нужное</h4><p>Благодаря сборке страниц из блоков, в runtime попадают только действительно используемые части. Не нужно грузить лишний, неиспользуемый код.</p><h4>Браузер как assembler</h4><p>Код, который пишет человек и код, который попадает в браузер - это не одно и то же. Первый устроен так, как удобно разрабатывать. Второй, благодаря компиляционным преобразованиям, сделан подходящим для браузера. Например, для разных браузеров можно генерировать разный код, оптимизированный конкретно для них.</p><h4>Послойная структура</h4><p>Разделение слоёв &quot;код для человека&quot; и &quot;код для браузера&quot; позволяет не менять код приложения в целях оптимизации, а улучшать &quot;компилятор&quot;, который генерирует код для браузера из БЭМ-сущностей.</p><h2>Определения</h2><h3>Блок</h3><p>Некая самостоятельная сущность, кирпичик проекта.<br/> Блок содержит информацию о самом себе и может знать о своих детях — элементах блока.<br/> Может использоваться сам по себе или внутри других блоков.</p><p><b>Пример</b><br/> Блок <tt>b-search</tt> поисковой формы<br/></p><img src="/bem-method/images/search.ru.png" alt="Block b-search"/><h3>Элемент</h3><p>Часть блока, которая отвечает за какую-то отдельную функцию.<br/> Элементы блока имеют смысл только в рамках своего родителя. Могут быть обязательными и не обязательными.</p><p><b>Пример</b><br/> Поле ввода и кнопка — элементы блока <tt>b-search</tt><br/></p><img src="/bem-method/images/search-e.ru.png" alt="Input and button elements of b-search block"/><h3>Модификатор</h3><p>Модификатор — это свойство блока или элемента, которое меняет внешний вид или поведение.<br/> Модификатор имеет имя и значение. Одновременно может использоваться несколько разных модификаторов.</p><p><b>Пример</b><br/> Модификатор блока <tt>b-search</tt> задает ему цвет фона<i></i></p><img src="/bem-method/images/search-m.ru.png" alt="Background color modificator of b-search block"/><h3>Уровень переопределения</h3><p>Уровень переопределения — это набор реализаций блоков. Проект может иметь несколько уровней, на каждом из которых добавляется или изменяется реализация блоков. Конечная реализация блока собирается со всех уровней последовательно.</p><p><b>Пример</b><br/></p><img src="/bem-method/images/levels.ru.png" alt="Blocks levels"/><h2>Соглашения по именованию</h2><h3>Имя блока</h3><p>Имя блока формируется как <tt>префикс-имя-блока</tt>.</p><p><b>Примеры</b></p><pre>
+    b-menu
+    b-popup
+    i-popup
+</pre><h3>Префикс блока</h3><p>Мы используем два вида префиксов, которые позволяют определить назначение блока.</p><p><b>b- (от block)</b><br/> Префикс блока с визуальным представлением на странице.</p><p><b>Пример</b><br/> Попап с тенью имеет конкретное визуальное представление. Может иметь или не иметь хвостик или закрывающий крестик. Может быть разных цветов. Может отображаться в разных направлениях.</p><img src="/bem-method/images/b-popup.png" alt="b-popup block"/><p><b>i- (от include)</b><br/> Префикс абстрактного блока, который не существует сам по себе, но используется для построения других блоков.<br/> Или префикс блока, не имеющего визуального представления и реализующего какую-то функциональность.</p><p><b>Пример</b><br/> Блок <tt>i-popup</tt> не имеет конкретного визуального представления. Хранит в себе функциональность, на основе которой строится блок <tt>b-popup</tt>. Без блока <tt>i-popup</tt> блок <tt>b-popup</tt> не существует.</p><img src="/bem-method/images/i-popup.png" alt="i-popup block"/><h3>Имя элемента</h3><p>Полное имя элемента формируется так, чтобы из него можно было определить принадлежность данного элемента к конкретному блоку.<br/> Полное имя элемента создается по схеме: <tt>b-имя-блока_<span>_</span>имя-элмента</tt></p><p><b>Примеры</b></p><pre>
+    b-menu__item
+    b-popup__content
+</pre><h3>Имя модификатора блока</h3><p>Полное имя модификатора блока формируется так, чтобы из него можно было определить принадлежность данного модификатора к конкретному блоку. Полное имя модификатора блока создается по схеме: <tt>b-имя-блока_имя-модификатора_значение-модификатора</tt>.</p><p><b>Примеры</b></p><pre>
+    b-menu_layout_horiz
+    b-menu_layout_vert
+    b-popup_direction_up
+</pre><h3>Имя модификатора элемента</h3><p>Полное имя модификатора элемента формируется так, чтобы из него можно было определить принадлежность данного модификатора к конкретному элементу конкретного блока. Полное имя модификатора элемента создается по схеме: <tt>b-имя-блока_<span>_</span>имя-элемента_имя-модификатора_значение-модификатора</tt>.</p><p><b>Примеры</b></p><pre>
+    b-menu__item_state_current
+    b-popupa__content_visibile_yes
+    b-popupa__content_visibile_no
+</pre><h2>Варианты модификации блока</h2><ul><li>Модификатором</li><li>Контекстом</li><li>Уровнем переопределения</li></ul><h3>Модификатором</h3><p>Блоку/элементу добавляется модификатор и изменение блока/элемента описывается в коде этого модификатора.</p><p><b>Примеры</b></p><p>По умолчанию фон у попапа осутствует.</p><img src="/bem-method/images/b-popup-tr.png" alt="Transparent b-popup"/><p>Добавление модификатора <tt>theme</tt> блоку <tt>b-popup</tt> добавляет ему фон.<br/> <tt>theme=yellow</tt> добавляет фон желтого цвета:<br/></p><img src="/bem-method/images/b-popup-yellow.png" alt="Yellow background modificator for b-popup block"/><p><tt>theme=black</tt> добавляет фон черного цвета:<br/></p><img src="/bem-method/images/b-popup-bl.png" alt="Black background modificator for b-popup block"/><p>У блока может быть одновременно несколько модификаторов.</p><p><b>Примеры</b></p><p>Модификатор <tt>theme</tt> — отвечает за фон попапа. Модификатор <tt>direction</tt> — отвечает за направление отображения попапа.</p><p><tt>theme=yellow</tt> и <tt>direction=left</tt> — попап желтого цвета открывается влево:<br/></p><img src="/bem-method/images/b-popup-left.png" alt="Left direction modificator for b-popup block"/><p><tt>theme=yellow</tt> и <tt>direction=right</tt> — попап желтого цвета открывается вправо:</p><img src="/bem-method/images/b-popup-right.png" alt="Right direction modificator for b-poup block"/><p>Модификатор блока может изменять структуру блока (например, добавлять/удалять элементы) или его реализацию.</p><p><b>Пример</b><br/> Модификатор <tt>has-close=yes</tt> — добавляет элемент «закрывающий крестик». Добавляет отступы блоку, освобождая место крестика.</p><img src="/bem-method/images/b-popup-close.png" alt="Modificator for adding close icon to b-popup"/><h3>Контекстом</h3><p>Блок при размещении в другом блоке может менять свой внешний вид или поведение.</p><p><b>Пример</b><br/> Цвет текста вложенного блока меняется с зеленого на красный, если он помещен в блок с синим фоном с красными буквами.</p><p><b>Примеры</b></p><p>Переключатель языков (<tt>b-lang-switcher</tt>)<br/></p><img src="/bem-method/images/lang-switcher.png" alt="Language switcher block"/><p>Переключатель языков (<tt>b-lang-switcher</tt>) в подвале страницы (<tt>b-foot</tt>), уменьшается размер шрифта.<br/></p><img src="/bem-method/images/lang-switcher-foot.png" alt="b-lang-switcher with small text"/><h3>Уровнем переопределения</h3><p>Изменения создаются на следующем уровне переопределения и добавляют или изменяют функциональность блока.</p><p><b>Пример</b><br/> Блок может выглядеть на разных проектах по-разному. При этом его общая часть лежит в одном файле (например, в репозитории фреймворка), а частная для проекта в другом (в репозитории проекта). Блок доопределяется дополнительными проектными файлами.</p><p>Модификация уровнем переопределения используется, например, в тестовом проекте <tt><a href="https://github.com/toivonen/bem-bl-test">bem-bl-test</a></tt>, где в папке <tt>blocks</tt> содержится код, доопределяющий поведение блока <tt>b-link</tt>. Это позволяет изменить <a href="https://github.com/toivonen/bem-bl/tree/master/blocks-desktop/b-link">основную реализацию блока</a> (из библиотеки <tt><a href="https://github.com/toivonen/bem-bl-test">bem-bl</a></tt>) под нужды проекта.</p><h2>Структура блока на файловой системе</h2><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li>HTML-разметка обеспечивает нужную разметку (<tt>XML</tt> + <tt>XSL</tt> = <tt>HTML</tt> или <tt>bemjson</tt> + <tt>bemhtml</tt> = <tt>HTML</tt>)</li><li>CSS-правила внешнего вида блока</li><li>JS-правила поведения блока</li></ul><p>Этот набор технологий может быть разным в зависимости от блока, его назначения, и удобства использования.</p><p>В файловой системе реализации в разных технологиях записаны в соответствующие файлы. Имена файлов соответствуют соглашению об именовании.</p><h3>Каждый блок в директории, элементы и модификаторы в отдельных директорияx</h3><pre>
+    blocks/
+        b-menu/
+            _layout/
+                b-menu_layout_horiz.css
+                b-menu_layout_horiz.bemhtml
+                b-menu_layout_vertical.css
+                b-menu_layout_vertical.bemhtml
+            __elem/
+                b-menu__elem.css
+                b-menu__elem.bemhtml
+            b-menu.css
+            b-menu.js
+            b-menu.bemhtml
+</pre><h3>Каждый блок в директории, элементы и модификаторы в отдельных файлах без директорий</h3><pre>
+    blocks/
+        b-menu/
+            b-menu_layout_horiz.css
+            b-menu_layout_horiz.bemhtml
+            b-menu_layout_vertical.css
+            b-menu_layout_vertical.bemhtml
+            b-menu__elem.css
+            b-menu__elem.bemhtml
+            b-menu.css
+            b-menu.js
+            b-menu.bemhtml
+</pre><h3>Каждый блок в директории, элементы и модификаторы в файлах блока</h3><pre>
+    blocks/
+        b-menu/
+            b-menu.css
+            b-menu.js
+            b-menu.bemhtml
+</pre><h3>Директории не используются, элементы и модификаторы в отдельных файлах</h3><pre>
+    blocks/
+        b-menu_layout_horiz.css
+        b-menu_layout_horiz.bemhtml
+        b-menu_layout_vertical.css
+        b-menu_layout_vertical.bemhtml
+        b-menu__elem.css
+        b-menu__elem.bemhtml
+        b-menu.css
+        b-menu.js
+        b-menu.bemhtml
+</pre><h3>Директории не используются, элементы и модификаторы в файлах блока</h3><pre>
+    blocks/
+        b-menu.css
+        b-menu.js
+        b-menu.bemhtml
+</pre><h2>Технологии реализации</h2><p>БЭМ-метод подразумевает реализацию блока в различных технологиях.</p>    <img src="/bem-method/images/levels.tech.png" alt="Level can include different techs"/><h3>HTML</h3><p>Реализация возможна в нескольких вариантах.</p><p>http:<i>clubs.ya.ru/bem/replies.xml?item_no=712</i></p><h4>Тэги HTML и классы</h4><p>В HTML-е каждая БЭМ-сущность определяется тегом и своим классом или классами.</p><pre class="ohl ohl-xml"><code>    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>i <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name__elem<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span><span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>i<span class="ohl-punctuation">&gt;</span></span>
+        ...
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name block-name_modifier<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>...<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span></code></pre><h4>Кастомные тэги</h4><p>Можно пойти дальше и сократить использование классов, заменив теги по умолчанию на кастомные.</p><pre class="ohl ohl-xml"><code>    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>copyright<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>copyright-elem<span class="ohl-punctuation">&gt;</span></span>...<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>copyright-elem<span class="ohl-punctuation">&gt;</span></span>
+        ...
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>copyright<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>copyright <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>block-name_modifier<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>...<span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>copyright<span class="ohl-punctuation">&gt;</span></span></code></pre><h3>CSS</h3><p>Каждая БЭМ-сущность должна иметь класс, чтобы при необходимости изменить или дописать или переопредлить для них CSS-свойства.</p><p>Опираясь на то, что любой блок, возможно, придется использовать повторно, т.е. блок не является уникальным, CSS-свойства для блоков и его елементов описываются только через классы.</p><p><b>Важно</b>: CSS-свойства не описываются через <tt>id</tt>, а именно вот так *НЕ ПИШЕМ*:</p><pre class="ohl ohl-xml"><code>    #header {}</code></pre><p>CSS-классы для БЭМ-сущностей соответствуют полным именам этих сущностей<br/> См. [соглашение об именовании](#naming)</p><p><b>Примеры именования CSS-классов</b></p><pre class="ohl ohl-xml"><code> .b-popup {}                 // CSS-класс блока
+ .b-popup__content {}        // CSS-класс элемента блока
+ .b-popupa_theme_yellow {}   // CSS-класс модификатора блока</code></pre><p>По возможности отказываемся от <a href="http://www.w3.org/TR/css3-selectors/#type-selectors">Селекторов типа</a>. Селекторы типа — селекторы, которые применяются к <tt>DOM</tt>-узлам без <tt>CSS</tt>-класса (элементо-зависимые селекторы).</p><p><b>Например</b>, вот так <b>НЕ ПИШЕМ</b>:</p><pre class="ohl ohl-xml"><code>    p
+    {
+    	color: #ccc;
+    }
+
+    table.news td
+    {
+    	border-bottom: 1px solid #ccc;
+    }
+
+    .list li
+    {
+    	float: left;
+    }</code></pre><p>Отказ от использования Селекторов типа и <tt>CSS</tt>-каскада уменьшает <tt>Reflow Time</tt> — чистое время наложения стилей на сформированный <tt>DOM</tt>.<br/> <a href="http://clubs.ya.ru/bem/replies.xml?item_no=712">Ссылка на запись с более подробным описанием</a></p><h3>JavaScript</h3><p>В <tt>JS</tt> мы также работаем в терминах &quot;Блок-Элемент-Модификатор&quot;. <tt>DOM</tt>-представление блоков рассматривается как более низкий уровень реализации.<br/> Допустимы блоки без <tt>DOM</tt>-представления. Обычно это блоки-хелперы.</p><p><b>Пример блоков без <tt>DOM</tt>-представления:</b></p><pre class="ohl ohl-xml"><code>    i-request                // Конструктор запросов
+    i-request_type_ajax      //Конструктор AJAX-запросов</code></pre><p>Клиентским JS-фреймворком для работы со страницей в терминах БЭМ является JS-реализация блока <tt>i-bem</tt> библиотеки <tt>bem-bl</tt>:</p><ul><li><a href="https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem">код в репозитории на GitHub</a></li><li><a href="https://github.com/bem/bem-bl/">библиотека блоков bem-bl</a>.</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=900">Доклад Дмитрия Филатова и Сергея Бережного об i-bem.js</a></li></ul><h3>Шаблоны</h3><p>Одной из реализаций блока может быть его шаблон, который по входным данным строит HTML.</p><p>В бибилиотеке <tt>bem-bl</tt> в качестве шаблонной технологии используется <tt>bemhtml</tt>. Это надмножество JS-шаблонизатора xjst, написанные на нём шаблоны блоков компилируются в JavaScript и могут быть выполнены как на сервере (через Node.js), так и на клиенте (браузере).</p><ul><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=898">Доклад Сергея Бережного (veged) bemhtml</a></li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=899">Доклад Андрея Мищенко (druxa) и Сергея Бережного (veged) об xjst</a></li></ul><h2>Представление в DOM</h2><p>В простейшем случае блок соответствует <tt>DOM</tt>-узлу, один к одному. Но важно понимать, что <tt>DOM</tt>-узел и блок — это не всегда одно и тоже.</p><h3>Микс</h3><p>Под миксом подразумевается смешивание на одном DOM-узле разных блоков и элементов.</p><p>На одном DOM-узле может быть:</p><ul><li>несколько блоков<br/>
+   <tt>b-menu b-head-menu</tt></li><li>блок и элемент этого же блока<br/>
+   <tt>b-menu b-menu_<span>_</span>layout</tt></li><li>блок и элемент другого блока<br/>
+   <tt>b-link b-menu_<span>_</span>link</tt></li><li>элемент одного блока и элемент другого блока<br/>
+   <tt>b-menu_<span>_</span>item b-head-menu_<span>_</span>item</tt></li><li>блок с модификатором и другой блок<br/>
+   <tt>b-menu b-menu_layout_horiz b-head-menu</tt></li><li>блок с модификатором и другой блок с модификатором<br/>
+   <tt>b-menu b-menu_layout_horiz b-head-toolbar b-head-toolbar_theme_black</tt></li></ul><p><b>Пример</b></p><p>Переключатель панелей имеет элементами табы (<tt>b-tabbed-pane_<span>_</span>tabs</tt>) и панели (<tt>b-tabbed-pane_<span>_</span>panels</tt>). Эти два элемента находятся на одном <tt>DOM</tt>-узле одновременно, что позволяет легко менять расположение элементов на странице с вертикального на горизонтальное.</p><p>Вертикальное расположение элементов</p><img src="/bem-method/images/tab-panel-v.png" alt="Tabbed pane with vertical tabs"/><pre class="ohl ohl-xml"><code>    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-tabbed-pane b-tabbed-pane__tabs<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+        ...
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-tabbed-pane b-tabbed-pane__panels<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+        ...
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span></code></pre><p>Горизонтальное расположение элементов</p><img src="/bem-method/images/tab-panel-h.png" alt="Tabbed pane with horizaontal tabs"/><pre class="ohl ohl-xml"><code>    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>table <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-layout-table<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>tr<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>td <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-layout-table__column b-layout-table__column_side_left<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+            <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-tabbed-pane b-tabbed-pane__tabs<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+                ...
+            <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>td<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>td <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-layout-table__column b-layout-table__column_side_right<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+            <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;</span>div <span class="ohl-name ohl-name-attribute">class<span class="ohl-punctuation">=</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-tabbed-pane b-tabbed-pane__panels<span class="ohl-punctuation">&quot;</span></span></span><span class="ohl-punctuation">&gt;</span></span>
+                ...
+            <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>div<span class="ohl-punctuation">&gt;</span></span>
+        <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>td<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>tr<span class="ohl-punctuation">&gt;</span></span>
+    <span class="ohl-name ohl-name-tag"><span class="ohl-punctuation">&lt;/</span>table<span class="ohl-punctuation">&gt;</span></span></code></pre><h2>Структура БЭМ-проекта на файловой системе</h2><p>Проект, реализованный на БЭМ, состоит из одного или нескольких уровней переопределения и кода страниц.</p><p>Приведенные ниже примеры структуры не жесткие и могут быть изменены в зависимости от потребностей проекта.</p><h3>Страница</h3><p>Совокупность файлов, которые определяют внешний вид и поведение конкретной страницы.</p><p><b>Пример</b></p><pre>
+    pages/
+        index/
+            index.css
+            index.js
+            index.bemhtml
+            index.bemdecl.js
+            index.bemjson.js
+</pre><p>Страница состоит из описания блоков, которые на ней используются (<tt>.bemdecl</tt>), и конкретного их расположения (<tt>.bemjson</tt>). Это исходный код страницы. Из него генерируются все необходимые для отображения файлы (<tt>.css</tt>, <tt>.js</tt>, etc)</p><h4>Исходный код страницы</h4><h5>index.bemdecl.js</h5><p>На странице b-page используем b-menu и b-link</p><p><b>Пример</b></p><pre class="ohl ohl-js"><code>    <span class="ohl-name">exports</span><span class="ohl-operator">.</span><span class="ohl-name">blocks</span> <span class="ohl-operator">=</span> <span class="ohl-punctuation">[</span>
+        <span class="ohl-punctuation">{</span>
+            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-page<span class="ohl-punctuation">&quot;</span></span>
+        <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+        <span class="ohl-punctuation">{</span>
+            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-menu<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">,</span>
+            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>mods<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>layout<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>vals<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                        <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>horiz<span class="ohl-punctuation">&quot;</span></span>
+                    <span class="ohl-punctuation">]</span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>theme<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>vals<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                        <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>red<span class="ohl-punctuation">&quot;</span></span>
+                    <span class="ohl-punctuation">]</span>
+                <span class="ohl-punctuation">}</span>
+            <span class="ohl-punctuation">]</span><span class="ohl-punctuation">,</span>
+            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>elems<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>item<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>mods<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                        <span class="ohl-punctuation">{</span>
+                            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>state<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">,</span>
+                            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>vals<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                                <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>current<span class="ohl-punctuation">&quot;</span></span>
+                            <span class="ohl-punctuation">]</span>
+                        <span class="ohl-punctuation">}</span>
+                    <span class="ohl-punctuation">]</span>
+                <span class="ohl-punctuation">}</span>
+            <span class="ohl-punctuation">]</span>
+        <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+        <span class="ohl-punctuation">{</span>
+            <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>name<span class="ohl-punctuation">&quot;</span></span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>b-link<span class="ohl-punctuation">&quot;</span></span>
+        <span class="ohl-punctuation">}</span>
+    <span class="ohl-punctuation">]</span></code></pre><h5>index.bemjson.js</h5><p>На странице b-page используем b-menu и b-link</p><p><b>Пример</b></p><pre class="ohl ohl-js"><code>    <span class="ohl-punctuation">(</span><span class="ohl-punctuation">{</span>
+        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-page<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+            <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-menu<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+            <span class="ohl-name">mods</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span> <span class="ohl-name">layout</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>horiz<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span> <span class="ohl-name">theme</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>red<span class="ohl-punctuation">&apos;</span></span> <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+            <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">[</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">elemMods</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span> <span class="ohl-name">state</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>current<span class="ohl-punctuation">&apos;</span></span> <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Главная<span class="ohl-punctuation">&apos;</span></span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+                        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>/<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Находки<span class="ohl-punctuation">&apos;</span></span>
+                    <span class="ohl-punctuation">}</span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+                        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>/<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>Поиск<span class="ohl-punctuation">&apos;</span></span>
+                    <span class="ohl-punctuation">}</span>
+                <span class="ohl-punctuation">}</span><span class="ohl-punctuation">,</span>
+                <span class="ohl-punctuation">{</span>
+                    <span class="ohl-name">elem</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>item<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                    <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-punctuation">{</span>
+                        <span class="ohl-name">block</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>b-link<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">url</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>/<span class="ohl-punctuation">&apos;</span></span><span class="ohl-punctuation">,</span>
+                        <span class="ohl-name">content</span><span class="ohl-operator">:</span> <span class="ohl-string ohl-string-single"><span class="ohl-punctuation">&apos;</span>О проекте<span class="ohl-punctuation">&apos;</span></span>
+                    <span class="ohl-punctuation">}</span>
+                <span class="ohl-punctuation">}</span>
+            <span class="ohl-punctuation">]</span>
+        <span class="ohl-punctuation">}</span>
+    <span class="ohl-punctuation">}</span><span class="ohl-punctuation">)</span></code></pre><h4>Генерируемые файлы</h4><h5>index.css</h5><p>На странице b-page используем b-menu и b-link</p><p><b>Пример</b></p><pre class="ohl ohl-xml"><code>    @import url(../../bem-bl/blocks-desktop/b-menu/b-menu.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/b-menu__item.css);
+    @import url(../../bem-bl/blocks-desktop/b-menu/item/_state/b-menu__item_state_current.css);
+    @import url(../../bem-bl/blocks-desktop/blocks/b-menu/_layout/b-menu_layout_horiz.css);
+    @import url(../../bem-bl/blocks-desktop/b-link/b-link.css);
+    @import url(blocks/b-menu/_theme/b-menu_theme_red.css);</code></pre><h5>index.js</h5><p>На странице b-page используем b-menu и b-link</p><pre class="ohl ohl-js"><code>    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__inherit/i-jquery__inherit.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__identify/i-jquery__identify.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__is-empty-object/i-jquery__is-empty-object.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktopery/__debounce/i-jquery__debounce.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__observable/i-jquery__observable.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/i-bem.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__internal/i-bem__internal.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__stringify/i-jquery__stringify.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/html/i-bem__html.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-jquery/__leftclick/i-jquery__leftclick.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/i-bem__dom.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span>
+    <span class="ohl-name">include</span><span class="ohl-punctuation">(</span><span class="ohl-string ohl-string-double"><span class="ohl-punctuation">&quot;</span>../../bem-bl/blocks-desktop/i-bem/__dom/_init/i-bem__dom_init_auto.js<span class="ohl-punctuation">&quot;</span></span><span class="ohl-punctuation">)</span><span class="ohl-punctuation">;</span></code></pre><h3>Уровни переопределения проекта</h3><p>Проект состоит из уровней переопределения. Количество уровней переопределения зависит от проекта, всегда есть минимум 1 уровень.</p>    <img src="/bem-method/images/levels.tech.png"/><p>Реализация блока может быть на нескольких уровнях. Для каждой страницы можно настроить свое используемое множество уровней. Финальная реализация блока на странице собирается со всех уровней для этой страницы.</p><h4>Расположение уровней на проектах</h4><h5>Только блоки проекта</h5><pre>
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+</pre><h5>Блоки проекта и отдельных страниц проекта</h5><pre>
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css
+                        # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/
+                    # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+</pre><h5>Блоки фреймворка и проекта</h5><pre>
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+            # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+</pre><h5>Блоки фреймворка, проекта и страниц</h5><pre>
+    project/
+        framework/
+            b-menu/
+                b-menu.css
+                b-menu.bemhtml
+            b-page/
+                b-page.css
+                b-page.bemhtml
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+            # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css
+                        # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/
+                    # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+</pre><h5>Блоки проекта, страниц и темы</h5><pre>
+    project/
+        blocks/
+            b-head/
+                b-head.css
+                b-head.bemhtml
+            b-foot/
+                b-foot.css
+                b-foot.bemhtml
+            b-page/
+            # переопределение шаблонов b-page из уровня framework'а
+                b-page.bemhtml
+            b-sidebar/
+                b-sidebar.css
+                b-sidebar.bemhtml
+        pages/
+            index/
+                blocks/
+                    b-head/
+                        b-head.css
+                        # переопределили вид шапки на заглавной странице
+            about/
+                blocks/
+                    b-about-text/
+                    # добавили новый блок
+                        b-about-text.css
+                        b-about-text.bemhtml
+        themes/
+            black/
+            # не раскладываем файлы по директориям, кладем их рядом
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+            yellow/
+                b-head.css
+                b-foot.css
+                b-sidebar.css
+</pre><h2>Реализация блока</h2><p>Реализация блока состоит из набора технологий, к примеру:</p><ul><li><tt>HTML</tt>-разметка обеспечивает нужную структуру блока (<tt>XML</tt> + <tt>XSL</tt> или <tt>JSON</tt> + <tt>JS</tt>)</li><li><tt>CSS</tt>-правила внешнего вида блока</li><li><tt>JS</tt>-правила поведения блока</li></ul><p>Этот набор технологий может быть разным в зависимости от блока, его назначения, и удобства использования.<br/> Структура блока первична, а реализация блока вторична.</p><p><b>Пример реализации блока b-domik</b></p><table>
+<tr><td>
+<b>Домик на странице</b><br/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-onpage.png" alt="Login house on page"/>
+</td>
+<td>
+<b>Домик в попапе</b><br/>
+<img src="https://github.com/bem/bem-method/raw/master/images/domik-popup.png" alt="Login house in popup"/>
+</td></tr>
+</table><pre>
+    b-domik/
+        # общие файлы реализации для всех типов домика
+        b-domik.css
+        b-domik.ie.css
+        b-domik.js
+        b-domik.xsl
+        _type/
+        # папка с модификаторами для блока
+            b-domik_type_onpage.css    # домик, прибитый на странице
+            b-domik_type_onpage.ie.css
+            b-domik_type_onpage.js
+            b-domik_type_onpage.xsl
+            b-domik_type_popup.css    # домик как всплывающее окно
+            b-domik_type_popup.ie.css
+            b-domik_type_popup.js
+            b-domik_type_popup.xsl
+        __lock/
+        # замочек — элемент блока
+            b-domik__lock.css
+            b-domik__lock.png
+            b-domik__lock.xsl
+            _visibility/
+            # модификатор элемента lock, делает его видимым
+                b-domik__lock_visibility_visible.css
+        __shadow/
+        # тень — элемент блока
+            b-domik__shadow.css
+            b-domik__shadow.ie.css
+            b-domik__shadow.png
+</pre><h2>Инструменты</h2><p>Для работы с файлами по БЭМ-методу разрабатываются специальные инструменты <tt>bem-tools</tt>. Они позволяют создавать файлы БЭМ-сущностей в различных технологиях и сборки для страниц.</p><p>Разработка ведется в репозитории <a href="https://github.com/bem/bem-tools">bem-tools</a></p><h1>Полезные ссылки</h1><h2>Доклады с конференций</h2><ul><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=840">БЭМ!</a><br/>
+   Виталий Харисов и Сергей Бережной 22 апреля 2011 на пЯТЬнице (внутренний семинар Яндекса)</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=898">bemhtml — bem js-шаблонизатор</a><br/>
+   Сергей Бережной 21 апреля 2011 на пЯТЬнице</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=899">xjst — низкоуровневый js-шаблонизатор</a><br/>
+   Андрей Мищенко и Сергей Бережной 21 апреля 2011 на пЯТЬнице</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=900">i-bem.js — javascript блок, помогающий-делать-другие-блоки</a><br/>
+   Дмитрий Филатов и Сергей Бережной 22 апреля 2011 на пЯТЬнице</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=859">БЭМ!</a><br/>
+   Сергей Бережной 25 апреля 2011 на РИТ</li><li><a href="http://clubs.ya.ru/bem/replies.xml?item_no=864">БЭМ, или как разрабатывать веб-проекты</a><br/>
+   Сергей Бережной 2 июля 2011 на Я.Субботнике в Екатеринбурге</li></ul><h2>Связанные ссылки</h2><h3>Репозитории</h3><ul><li><a href="https://github.com/bem/bem-bl">Библиотека блоков bem-bl</a></li><li><a href="https://github.com/bem/bem-tools">Инструменты для работы с файлами</a></li></ul></div>
+</body></html>
