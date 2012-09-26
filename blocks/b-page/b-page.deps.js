@@ -1,5 +1,0 @@
-({
-    shouldDeps: [
-        { block: 'b-wiki' }
-    ]
-})
