@@ -1,55 +1,14 @@
 ﻿== What is BEM?
-This article describes the theory and practice of building web sites at
-((http://company.yandex.com/ Yandex)), a large Internet company.
-
-There are plenty of sites under development here, thousands in fact. The approaches
-we use for HTML/CSS markup and other front-end technologies are in constant evolution.
-
-Developing for a big portal has a range of specifics and the process should be able
-to accommodate them:
-
- * Fast-to-develop, long-lived projects\\
-   It should be possible to develop and launch the first version quickly with an
-   architecture that helps maintain it in the long run.
- * Numerous people working on a project\\
-   We should be able to organize work efficiently in teams of 2 or more developers.
- * Team scalability\\
-   Adding new people to a product team should improve its productivity. We need to be
-   able to assign new members to a team without a steep learning curve.\\
-   Code should be well-structured for a project to remain maintainable over time and
-   team changes.
- * Code reuse\\
-   To maintain UI consistency and minimize development effort on typical interface
-   components, those components have to be easily reusable.
-
-For years we kept looking for solutions to our problems, and at one point they became
-##BEM methodology##.\\
-##BEM## stands for Block, Element, Modifier. The meaning of these terms will be described further
-in the article. Right now, let us put BEM in some historical perspective.
-
-We first began sketching out our internal front-end framework around year 2007, starting
-with a robust CSS naming convention and a file system layout associated with it. Since
-the naming convention was well-structured, it seemed suitable to develop certain JavaScript
-helpers to work with the DOM and CSS classes in particular on a higher level of abstraction.
-We then used those approaches to build an internal library of UI components that could be
-shared among our various websites and rich applications, built using different technology
-stacks (XML/XSLT, Python/Django, Perl/TT2). As our ambitions, complexity, and performance
-requirements grew, we aimed at replacing XSLT and Perl templates with a JS-based declarative
-templating DSL, built on top of Node.js. Along with those efforts we looked into simplifying
-development workflow and developed a bunch of command-line tools that already help us manage
-front-end code on the file system, preprocess CSS and JavaScript code, and so on, and so forth.
-
-Some parts of the BEM stack started as open source projects, others (like the UI component library)
-are being gradually open sourced. Our goal is to publish most of it during 2012.
+##BEM## stands for Block, Element, Modifier. The meaning of these terms will be described
+further in the article.
 
 One of the most common examples of a methodology in  programming is Object-Oriented Programming.
 It's a programming paradigm embodied by many languages. In some ways, BEM
 is similar to OOP. It's a way of describing reality in code, a range of patterns, and
-a way of thinking about program entities regardless of programming languages being used.\\
+a way of thinking about program entities regardless of programming languages being used.
+
 We used BEM principles to create a set of front-end development techniques and tools, that
 allow us to build websites quickly and maintain them over a long time.
-
-The principles are the following:
 
 === Unified Data Domain
 Imagine an ordinary website, like the one pictured below.
@@ -60,7 +19,8 @@ Imagine an ordinary website, like the one pictured below.
 </div>
 %%
 
-While developing such a site it is useful to mark out "blocks" of which the site consists.\\
+While developing such a site it is useful to mark out "blocks" of which the site consists.
+
 For example, in this picture there are ##Head##, ##Main Layout## and ##Foot## blocks. The
 ##Head## in turn consists of ##Logo##, ##Search##, ##Auth block## and ##Menu##. ##Main
 Layout## contains a ##Page Title## and a ##Text Block##.
@@ -71,7 +31,8 @@ Layout## contains a ##Page Title## and a ##Text Block##.
 </div>
 %%
 
-Giving each part of the page a name is very useful when it comes to team communication.\\
+Giving each part of the page a name is very useful when it comes to team communication.
+
 A project manager could ask:
  * to make the ##Head## bigger or
  * to create a page without a ##Search## form in the ##Head##
