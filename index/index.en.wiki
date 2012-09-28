@@ -1,0 +1,39 @@
+Обычно при вёрстке и программировании сайта разработчики опираются на допущение,
+что дизайн и технические требования к странице не изменятся в процессе разработки.
+
+Дизайнер, верстальщик и программист каждый работает в своей области, часто не пересекаясь друг с другом:
+  1. Дизайнер создаёт дизайн в виде набора макетов
+  2. Из этих макетов делается статическая HTML/CSS вёрстка
+  3. Она передаётся программисту для создания шаблонов на каком-то серверном языке и оживлении сайта с помощью JavaScript
+
+Такой подход хорошо работает только в том случае, если дизайн сайта остаётсся неизменным всё время его жизни и изменения только добавляют контент.
+
+Но обычно так не происходит, сайт начинает жить своей жизнью и развиваться. Дизайн страниц постепенно меняется, добавляются новые страницы или новые блоки на них.
+
+Если в код сайта не заложена определённая структура, если он делается не по фиксированным правилам, то постепенно его становится всё сложнее и сложнее разрабатывать, код сайта становится неподвластным разработчикам.
+
+При БЭМ-подходе все люди, принимающие участие в разработке сайта, работают с единым кодом и общаются в одних и тех же терминах, на одном языке:
+  1. Дизайн сайта может измениться в любой момент, надо быть к этому готовым
+  2. HTML/CSS разметка развивается вместе с дизайном, готова к его изменению
+  3. Программист вместе в верстальщиком работают над кодом сайта, дополняя код друг друга
+
+=== Условия появления методологии
+БЭМ-методология была разработана в ((http://company.yandex.com Yandex)) при разработке большого количества сервисов для решения следующих задач:
+
+ * Fast-to-develop, long-lived projects\\
+   It should be possible to develop and launch the first version quickly with an
+   architecture that helps maintain it in the long run.
+ * Numerous people working on a project\\
+   We should be able to organize work efficiently in teams of 2 or more developers.
+ * Team scalability\\
+   Adding new people to a product team should improve its productivity. We need to be
+   able to assign new members to a team without a steep learning curve.\\
+   Code should be well-structured for a project to remain maintainable over time and
+   team changes.
+ * Code reuse\\
+   To maintain UI consistency and minimize development effort on typical interface
+   components, those components have to be easily reusable.
+   У кода не должно быть контекстной зависимости, его нужно уметь легко переносить в другое место.
+
+For years we kept looking for solutions to our problems, and at one point they became ##BEM methodology##.
+
