@@ -1,0 +1,282 @@
+﻿== File System Representation for a Block
+=== Unequivocal placement of code
+==== File naming
+When a project is
+ * long-lived and under constant development
+
+If the development team
+ * consists of several people
+ * grows and changes
+
+Then, being able to navigate the code base quickly is crucial.
+
+Block code is easiest to find when it's placed in files using the same naming scheme as the one we
+use for naming our entities:
+
+%%html
+<pre>
+menu.xsl
+menu.js
+menu.css
+</pre>
+%%
+
+==== Expressing blocks on a file system
+There could be a task to reuse some blocks from a previous project in a new one.
+
+We want the procedure of block reuse to be as simple as possible - like simply copying the files,
+or using partial checkout of a repository from a "donor" project.
+
+In both cases it is useful to have all of the files under the same directory:
+
+%%html
+<pre>
+menu/
+  menu.xsl
+  menu.js
+  menu.css
+</pre>
+%%
+
+==== File structure of a block
+When working on a project we might need to change a block at some point.
+
+A manager could ask:
+ * to change the color of the ##Current Menu Item##
+or
+ * to make the ##Menu## react on hover
+
+A developer could ask their colleague:
+ * to help with ##Search Form## styling for IE
+
+To understand where the relevant code is located, follow these (or similar) rules:
+ * Block code is placed in a separate directory
+   * Directory name matches block name
+   * Implementation is placed under this directory
+ * Elements are placed in subdirectories under the block directory
+   * Directory name matches element name
+   * Implementation is placed under this directory
+ * Modifiers are placed in subdirectories under the block directory
+   * Directory name matches modifier name
+   * Implementation is placed under this directory
+   * File name includes both key and value of the modifier (again, for programmatic access)
+
+**Example**\\
+File structure of a ##Menu## block
+
+%%html
+<pre>
+menu/
+  __item/
+    _state/
+      menu__item_state_current.css
+      menu__item_state_current.xsl
+    menu__item.css
+    menu__item.xsl
+  menu.css
+  menu.js
+  menu.xsl
+</pre>
+%%
+
+Maintaining such file structure manually is, quite obviously, not convenient. So we've developed
+((https://github.com/bem/bem-tools BEM tools)) to handle the burden. These tools help with
+creating the directory structure, placing files, generating placeholder content, etc.
+
+==== Grouping blocks in directories
+Big internet portals often need to reuse the same blocks across different sites.
+
+There could be a task:
+ * to create the same ##Footer## on //all the portal's sites// or
+ * to create a //new project// using blocks from the existing sites
+
+Working for a web design agency often means that one has to use typical solutions for typical web pages.
+
+A project manager could ask you:
+ * to create an order page with a web form //as on the previous project//
+
+We have to do these tasks while, preferably, avoiding copying blocks around manually. So it's
+nice to have a repository of shared blocks that can be linked to a project. Blocks then should
+be united under a single directory for that.
+
+Such a directory is usually called ##blocks##.
+
+**E.g.**
+
+%%html
+<pre>
+blocks/
+  foot/
+  head/
+  menu/
+  page/
+  search/
+</pre>
+%%
+
+That directory can be linked to another project straight from the version control system, so
+that we can make changes to shared blocks in a single location.
+
+=== Levels of Definition
+If a group of blocks (united under one directory) is linked to a project directly (via a partial
+checkout, svn:externals, etc.), then every change committed for these blocks influences all projects.
+
+When developing a site based on an existing one we might want:
+ * to enlarge the font in the ##Head## on site A without affecting site B
+ * to add animation when showing a dropdown menu.
+
+To do so, we need to be able to define or redefine blocks in different technologies for
+a specific site only, or for certain pages only. It can be achieved using ##definition levels##.
+
+A ##definition level## is a set of blocks grouped in one directory.
+
+%%html
+<div style="text-align:center;">
+<img src="images/levels-schema.png"/>
+</div>
+%%
+
+An implementation of every block from the library can be changed (or completely redefined)
+at project level.
+
+%%html
+<div style="text-align:center;">
+<img src="images/block-levels.png"/>
+</div>
+%%
+
+From page-building process' perspective:
+ * When building a page we can set a list of levels (directories) to use their blocks on
+   the page. E.g.,
+   ##build-page -l blocks-common -l blocks-my my-page.html##
+
+From the file structure point of view:
+ * A project can have any number of levels. But only the levels that are evaluated during the build
+   will be present on the page. It is possible to specify different sets of definition levels
+   for different parts of the site.
+
+On the JavaScript side:
+ * We need to define dynamic behavior of a page in declarative style.
+   Final behavior is gathered from different definition levels. E.g.,
+
+%%hl js
+/* blocks-common/dropdown/dropdown.js */
+Block('dropdown', {
+  init: function() {
+    …
+  }
+});
+
+/* blocks-my/dropdown/dropdown.js */
+Block('dropdown', {
+  init: function() {
+    this.__base();
+    …
+  }
+});
+%%
+
+From the viewpoint of a template engine:
+ * To be able not only to define but to redefine a template, one needs to
+   apply a preceding template implementation.\\
+   E.g., for XSL:
+
+%%hl xml
+<xsl:template match="b:head">
+  <div> <!-- Node for extra design -->
+    <xsl:apply-imports/>
+  </div>
+</xsl:template>
+%%
+
+From the architectural point of view:
+ * When developing a portal of several sites we can extract a block library that serves as one of the
+   definition levels for all the sites which are part of the portal. The blocks for a specific
+   site will form another level.
+ * The same repo can hold blocks of both desktop and mobile versions.\\
+   Such a project will have the following levels: common, mobile, desktop.
+   Different combinations of these levels give the resulting implementation, required by specific pages.
+
+((https://github.com/bem/bem-bl Open source block library bem-bl)) is an example of
+having several definition levels in one repository.
+
+=== Building a Page
+Working in terms of blocks means having a ##subject-matter abstraction##. This abstraction is for
+developers only, browsers will get a compiled version of the code.
+
+So we have ##code for people## and ##code for browsers## - they are not the same.
+ * Programmers code blocks - browsers get the code for the whole page
+
+To turn ##code for people## into ##code for browsers## we ##build## a page.
+
+##Building a page## means generating HTML, CSS, and JavaScript code from a page declaration
+(written in XML or JSON) by applying implementations of declared blocks.
+
+On the CSS side:
+
+ * All CSS files are combined into a single "page" CSS file\\
+   Despite the fact that CSS for every block, element or modifier is stored in separate
+   files, we don't have to link these files to the page as-is. It is possible to
+   collect all the required CSS implementations in one file.\\
+   This also solves the well-known 'number of imports' issue in IE and decreases the number of HTTP requests.
+   For combining CSS we use ((https://github.com/veged/borschik borschik)).
+ * Browser gets minimized code\\
+   When building CSS, we can minimize and optimize CSS code using the
+   ((https://github.com/afelix/csso CSSO)) utility, for example.
+ * Each browser can get CSS code written especially for it\\
+   It is also possible to divide CSS implementations for different browsers and deliver
+   only the code needed for each browser.\\
+   ((https://github.com/afelix/setochka setochka - currently in prototype)) can be used for that.
+
+From the JavaScript point of view:
+ * Similarly to CSS, JavaScript files can be combined into one.
+
+From the template engine's point of view:
+ * Only needed templates are included\\
+   Final set of templates that are used for displaying a page includes only the templates
+   for required blocks. This boosts template performance and reduces the likelihood of side effects.
+
+From the viewpoint of development process:
+ * Robots serve people (not the other way around)\\
+   Developer writes code as they sees fit. "Robots" take (some) care of performance by optimizing the
+   code (together with making it unreadable) when building a page.
+
+In terms of work organization:
+ * Division of labor\\
+   We have developers working on the core framework (compilers, tools, performance); library developers, who maintain
+   the block library; application developers, who develop sites using the framework.
+
+We use ((https://github.com/bem/bem-tools BEM tools)) to build pages.
+
+==== How to automate the building process?
+The usage of ((https://github.com/bem/bem-tools bem tools)) require to run several
+commands for each page whenever page input data or blocks implementation are changed.
+As a result of these commands you get CSS and JavaScript files for the page, page's template
+and, if you are developing static pages, HTML code of your page.
+
+To avoid to run these commands manually, there is also the
+((http://www.gnu.org/software/make/manual/make.html GNUmakefile)) written for a project that
+includes the instructions how to build pages.\\
+You can find an example of such a file in the test project ((https://github.com/bem/bem-bl-test/blob/master/GNUmakefile bem-bl-test)).
+
+But the usage of GNU make has a list of problems:
+
+ * You have to run it every time you have changed something;
+ * Every time you run gmake it reads the infromation on a disk. So the compilation
+   process could not be fast.
+ * The pages you build depend not only on the content of block files but on their file structure
+   as well. But it is impossible to write a gmake goal dependency in these terms.
+
+So we would like to create something to replace GNU make for the process of page building.
+This will be both a development server and a tool to build production files.
+##bem server## will be run in a project root directory and give http response with
+page files built
+(so you won't need to run gmake manually after every changing).\\
+Besides, it will be able to watch files (adding and removing of them) via
+ ((http://nodemanual.org/latest/nodejs_ref_guide/fs.FSWatcher.html fs.FSWatcher))
+ that helps to chache results efficiently.
+
+##bem server## is a subcommand of ((https://github.com/bem/bem-tools bem-tools)). Currently it can
+run a HTTP server, apply ##bemhtml## templates to ##bemjson## data and inline CSS imports using
+((https://github.com/veged/borschik borschik)) utility.
+
