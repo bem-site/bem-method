@@ -626,26 +626,7 @@ More examples:
  * ((http://futurecolors.ru/tnkracing/ TNK Racing Team))
 
 You may also be interested in sites that use ((http://bem.github.com/bem-bl/index.ru.html bem-bl)) block library:
+ * ((http://form.dev.eot.su/ BEM based web form with JZ validation))
  * ((http://mishanga.pro/ Mikhail Troshev vCard))\\
    Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))
- * ((http://form.dev.eot.su/ BEM based web form with JZ validation))
-
-=== Related Links
-==== Libraries
- * ((http://bem.github.com/bem-bl/index.en.html An open source block library bem-bl))
-
-==== Tools
- * ((https://github.com/bem/bem-tools Tools for working with files according to BEM methodology))
- * ((https://github.com/veged/borschik Borschik))\\
-   A utility for building static files into one.
- * ((https://github.com/afelix/setochka Setochka, a working prototype))\\
-   A tool for dividing CSS into several browser-specific files.
- * ((https://github.com/afelix/csso CSSO))\\
-   A utility that performs advanced, structural optimizations of CSS code
-
-==== Additional information
- * ((http://www.youtube.com/watch?v=pjPMTrhciUI&feature=youtu.be How to Install BEM tools on Mac, screencast))
- * ((http://clubs.ya.ru/bem/posts.xml?tag=64664080 Presentations and workshops video)) (in Russian)
- * ((http://clubs.ya.ru/bem/ BEM club on Ya.Ru)) (in Russian)
- * ((http://www.facebook.com/#!/groups/209713935765634/ BEM on Facebook))
 
