@@ -1,7 +1,0 @@
-﻿== Useful links (all in Russian)
-
-=== Related links
-
-==== Source code repositories
- * ((https://github.com/bem/bem-bl bem-bl Block library))
- * ((https://github.com/bem/bem-tools CLI tools))
