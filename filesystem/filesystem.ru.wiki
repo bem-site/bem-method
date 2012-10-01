@@ -377,3 +377,8 @@ Block('dropdown', {
 инлайнить import`ы в CSS-файлах при помощи ((https://github.com/veged/borschik утилиты borschik)).\\
 Подробности можно прочесть в ((http://clubs.ya.ru/bem/replies.xml?item_no=1261 анонс на Я.ру)).
 
+=== Читать дальше
+  * ((definitions/definitions.ru.wiki Определения))
+  * Организация файловой системы
+  * ((history/history.ru.wiki История создания))
+

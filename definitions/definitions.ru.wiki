@@ -626,3 +626,8 @@ CSS и JavaScript коде и XSL шаблонах страниц. Наприм�
  * ((http://mishanga.pro/ Mikhail Troshev vCard))\\
    Код проекта на GitHub: ((https://github.com/mishanga/bem-vcard))
 
+=== Читать дальше
+  * Определения
+  * ((filesystem/filesystem.ru.wiki Организация файловой системы))
+  * ((history/history.ru.wiki История создания))
+

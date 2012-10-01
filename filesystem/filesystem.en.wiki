@@ -371,3 +371,7 @@ Besides, it will be able to watch files (adding and removing of them) via
 run a HTTP server, apply ##bemhtml## templates to ##bemjson## data and inline CSS imports using
 ((https://github.com/veged/borschik borschik)) utility.
 
+=== Read more
+  * ((definitions/definitions.en.wiki Definitions))
+  * Filesystem organization
+  * ((history/history.en.wiki History))

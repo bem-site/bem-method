@@ -882,3 +882,8 @@ auto/
 
 О вариантах расположения на файловой системе, ((../filesystem/filesystem.ru.wiki читайте отдельно)).
 
+=== Читать дальше
+  * ((definitions/definitions.ru.wiki Определения))
+  * ((filesystem/filesystem.ru.wiki Организация файловой системы))
+  * История создания
+
