@@ -1,27 +1,116 @@
 ﻿== File System Representation for a Block
-=== Unequivocal placement of code
-==== File naming
-When a project is
- * long-lived and under constant development
+BEM is a collection of ideas and methods, a *methodology*. Each company and each team may integrate
+it into an existing workflow gradually, finding out what works best for them.
 
-If the development team
- * consists of several people
- * grows and changes
+Being able to navigate the code base quickly is crucial, when 
+ * a project is long-lived and under constant development
+ * the development team consists of several people, grows and changes
 
-Then, being able to navigate the code base quickly is crucial.
+=== File naming
+==== Blocks in one file
+I assume you've got a web project and want to give BEM a try by using it here and there in your HTML and CSS.
 
-Block code is easiest to find when it's placed in files using the same naming scheme as the one we
-use for naming our entities:
+Have a single file per each techonology you use (html, css, js) and put all block declarations together:
 
 %%html
 <pre>
-menu.xsl
-menu.js
-menu.css
+myfacebook/
+  myfacebook.css
+  myfacebook.js
+  myfacebook.html
 </pre>
 %%
 
-==== Expressing blocks on a file system
+TRANSLATE: Файлы ##myfacebook.css## и ##myfacebook.js## содержат весь CSS/JS код проекта и подключаются в HTML как есть.
+
+TRANSLATE: Нет процесса сборки и оптимизации этих файлов. Это самый простой вариант, чтобы попробовать.
+
+TRANSLATE: Фактически, БЭМ применяется только для именования CSS-классов.
+
+==== TRANSLATE: Блоки в файлах
+TRANSLATE: Когда весь CSS код блоков лежит в одном файле, то по этому файлу приходится всё время перемещаться.
+
+TRANSLATE: Если проект большой, делать это не удобно.
+TRANSLATE: Код блока легко искать, если он расположен в файлах, одноимённых ключевому слову блока.
+
+%%html
+<pre>
+blocks/
+  head.css
+  menu.css
+
+all.css
+
+index.html
+about.html
+</pre>
+%%
+
+TRANSLATE: Файл ##all.css## может состоять из ##@import## соответствующих файлов из директории ##blocks##:
+
+%%hl xml
+@import url(blocks/head.css);
+@import url(blocks/menu.css);
+…
+%%
+
+==== TRANSLATE: Не обязательное в отдельных файлах
+TRANSLATE: Если в ваших блоках есть элементы/модификаторы, которые используются не на всех страницах,
+TRANSLATE: можно вынести их реализацию в отдельные файлы, чтобы подключать только то, что нужно.
+
+TRANSLATE: При этом можно использовать такую схему расположения на файловой системе:
+
+ * TRANSLATE: Основной код блока размещён в файлах ##имя-блока##
+   * TRANSLATE: Имя файла совпадает с именем блока
+   * TRANSLATE: Техническая реализация блока размещена в файлах с соответствующими расширениями
+ * TRANSLATE: Элементу соответствует файл ##имя-блока__имя-элемента##
+   * TRANSLATE: Имя файла совпадает с именем элемента
+   * TRANSLATE: Техническая реализация элемента располагается в файлах с соответствующими расширениями
+ * TRANSLATE: Модификатору соответствует файл ##имя-блока_имя-модификатора_тип##
+   * TRANSLATE: Имя файла содержит как имя модификатора, так и его тип
+   * TRANSLATE: Техническая реализация модификатора размещается в файлах в этой директории
+
+TRANSLATE: Вы можете использовать другую схему отделения имени блока от имени элемента и модификатора.
+
+**Example**\\
+
+%%html
+<pre>
+blocks/
+  head.css
+  head__search.css
+  head_size_big.css
+  menu.css
+
+about.css
+about.html
+
+index.css
+index.html
+</pre>
+%%
+
+TRANSLATE: Файл ##index.css## содержит увеличенную в размере шапку, но без поискового поля:
+
+%%hl xml
+@import url(blocks/head.css);
+@import url(blocks/head_size_big.css);
+@import url(blocks/menu.css);
+…
+%%
+
+TRANSLATE: A в файле ##about.css## шапка обычного размера и есть поле поиска:
+
+%%hl xml
+@import url(blocks/head.css);
+@import url(blocks/head__search.css);
+@import url(blocks/menu.css);
+…
+%%
+
+TRANSLATE: В этом случае можно начинать использовать ((https://github.com/bem/bem-tools bem-tools)) для сборки проекта.
+
+==== TRANSLATE: Каждый блок в своей директории
 There could be a task to reuse some blocks from a previous project in a new one.
 
 We want the procedure of block reuse to be as simple as possible - like simply copying the files,
@@ -31,25 +120,26 @@ In both cases it is useful to have all of the files under the same directory:
 
 %%html
 <pre>
-menu/
-  menu.xsl
-  menu.js
-  menu.css
+blocks/
+  menu/
+    menu.xsl
+    menu.js
+    menu.css
 </pre>
 %%
 
-==== File structure of a block
+==== TRANSLATE: Элементы/модификаторы в отдельных директориях
 When working on a project we might need to change a block at some point.
 
 A manager could ask:
- * to change the color of the ##Current Menu Item##
-or
+ * to change the color of the ##Current Menu Item## or
  * to make the ##Menu## react on hover
 
 A developer could ask their colleague:
  * to help with ##Search Form## styling for IE
 
 To understand where the relevant code is located, follow these (or similar) rules:
+
  * Block code is placed in a separate directory
    * Directory name matches block name
    * Implementation is placed under this directory
@@ -60,6 +150,8 @@ To understand where the relevant code is located, follow these (or similar) rule
    * Directory name matches modifier name
    * Implementation is placed under this directory
    * File name includes both key and value of the modifier (again, for programmatic access)
+
+TRANSLATE: Этот вариант очень наглядный, при взгляде на файловую систему можно увидеть всю структуру блока.
 
 **Example**\\
 File structure of a ##Menu## block
@@ -213,7 +305,6 @@ To turn ##code for people## into ##code for browsers## we ##build## a page.
 (written in XML or JSON) by applying implementations of declared blocks.
 
 On the CSS side:
-
  * All CSS files are combined into a single "page" CSS file\\
    Despite the fact that CSS for every block, element or modifier is stored in separate
    files, we don't have to link these files to the page as-is. It is possible to
