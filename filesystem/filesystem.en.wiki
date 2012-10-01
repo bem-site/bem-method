@@ -151,7 +151,7 @@ To understand where the relevant code is located, follow these (or similar) rule
    * Implementation is placed under this directory
    * File name includes both key and value of the modifier (again, for programmatic access)
 
-TRANSLATE: Этот вариант очень наглядный, при взгляде на файловую систему можно увидеть всю структуру блока.
+You'l be able to understand a block structure just from its folder structure, without even reading a single line of code. This is an unprecedented level of transparency, although it comes at a cost.
 
 **Example**\\
 File structure of a ##Menu## block
