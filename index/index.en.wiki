@@ -1,24 +1,32 @@
-Обычно при вёрстке и программировании сайта разработчики опираются на допущение,
-что дизайн и технические требования к странице не изменятся в процессе разработки.
+Usually the process of development of a website is based on the assumption,
+that design and technical requirements will not change during development.
 
-Дизайнер, верстальщик и программист каждый работает в своей области, часто не пересекаясь друг с другом:
-  1. Дизайнер создаёт дизайн в виде набора макетов
-  2. Из этих макетов делается статическая HTML/CSS вёрстка
-  3. Она передаётся программисту для создания шаблонов на каком-то серверном языке и оживлении сайта с помощью JavaScript
+Designer, front-end developer and programmer all work in their field, often
+without interfering with each other:
+  1. Designer creates a site design in the form of design layout
+  2. Front-end developer create static HTML/CSS pages based on the design layout
+  3. Programmer creates templates from these static pages and then writes some JavaScript
 
-Такой подход хорошо работает только в том случае, если дизайн сайта остаётсся неизменным всё время его жизни и изменения только добавляют контент.
+Such an approach works well only in a case if the website design remains the same
+all the time of his life and the changes only add more content.
 
-Но обычно так не происходит, сайт начинает жить своей жизнью и развиваться. Дизайн страниц постепенно меняется, добавляются новые страницы или новые блоки на них.
+But usually that is not happening, the website begins to live its own life and is constantly
+developing. The design of the pages is gradually changing, new pages and new blocks are
+being added on them.
 
-Если в код сайта не заложена определённая структура, если он делается не по фиксированным правилам, то постепенно его становится всё сложнее и сложнее разрабатывать, код сайта становится неподвластным разработчикам.
+If the source code of the website is not following a defined structure, it its development
+is not based on fixes rules, then it gradually becomes more and more difficult to develop
+such a website. The website code gets beyond the control of its developers.
 
-При БЭМ-подходе все люди, принимающие участие в разработке сайта, работают с единым кодом и общаются в одних и тех же терминах, на одном языке:
-  1. Дизайн сайта может измениться в любой момент, надо быть к этому готовым
-  2. HTML/CSS разметка развивается вместе с дизайном, готова к его изменению
-  3. Программист вместе в верстальщиком работают над кодом сайта, дополняя код друг друга
+In a BEM-methodology all people taking part in the development of the website are working
+with a single codebase and are using the same terms to communicate, the same language:
+  1. Design of the website can change at any time, we must be ready for this
+  2. HTML/CSS code is developing together with the design, ready to its changes
+  3. Programmer and front-end developers are working together on the website codebase,
+     contributing to the each other code
 
-=== Условия появления методологии
-БЭМ-методология была разработана в ((http://company.yandex.com Yandex)) при разработке большого количества сервисов для решения следующих задач:
+=== The conditions of the methodology emergence
+BEM-methodology was developed at ((http://company.yandex.com Yandex)) in the development of a large number of web services to solve these tasks:
 
  * Fast-to-develop, long-lived projects\\
    It should be possible to develop and launch the first version quickly with an
@@ -33,7 +41,8 @@
  * Code reuse\\
    To maintain UI consistency and minimize development effort on typical interface
    components, those components have to be easily reusable.
-   У кода не должно быть контекстной зависимости, его нужно уметь легко переносить в другое место.
+   The source code should not have contextual dependency on the other code, it should be
+   easy to move that code to another place.
 
 For years we kept looking for solutions to our problems, and at one point they became ##BEM methodology##.
 
