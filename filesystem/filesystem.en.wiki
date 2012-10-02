@@ -345,31 +345,16 @@ commands for each page whenever page input data or blocks implementation are cha
 As a result of these commands you get CSS and JavaScript files for the page, page's template
 and, if you are developing static pages, HTML code of your page.
 
-To avoid to run these commands manually, there is also the
-((http://www.gnu.org/software/make/manual/make.html GNUmakefile)) written for a project that
-includes the instructions how to build pages.\\
-You can find an example of such a file in the test project ((https://github.com/bem/bem-bl-test/blob/master/GNUmakefile bem-bl-test)).
+To avoid running these commands manually we added ##bem make## and ##bem server## commands to the
+((https://github.com/bem/bem-tools bem-tools)).
 
-But the usage of GNU make has a list of problems:
+##bem make## is a command to build project statically. It builds all the files which dependencies were
+changed since the last run of this command.
 
- * You have to run it every time you have changed something;
- * Every time you run gmake it reads the infromation on a disk. So the compilation
-   process could not be fast.
- * The pages you build depend not only on the content of block files but on their file structure
-   as well. But it is impossible to write a gmake goal dependency in these terms.
+##bem server## is a command to launch HTTP server, which build project files on the fly during handling
+of the requests. When the build finishes server serves just built files to the client.
 
-So we would like to create something to replace GNU make for the process of page building.
-This will be both a development server and a tool to build production files.
-##bem server## will be run in a project root directory and give http response with
-page files built
-(so you won't need to run gmake manually after every changing).\\
-Besides, it will be able to watch files (adding and removing of them) via
- ((http://nodemanual.org/latest/nodejs_ref_guide/fs.FSWatcher.html fs.FSWatcher))
- that helps to chache results efficiently.
-
-##bem server## is a subcommand of ((https://github.com/bem/bem-tools bem-tools)). Currently it can
-run a HTTP server, apply ##bemhtml## templates to ##bemjson## data and inline CSS imports using
-((https://github.com/veged/borschik borschik)) utility.
+Have a look at the ((https://github.com/bem/bem-tools/#bem-make documentation)) to learn more on this topic.
 
 === Read more
   * ((definitions/definitions.en.wiki Definitions))
