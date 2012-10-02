@@ -173,9 +173,9 @@ menu/
 </pre>
 %%
 
-TRANSLATE: Maintaining such file structure manually is, quite obviously, not convenient. So we've developed
-((https://github.com/bem/bem-tools BEM tools)) to handle the burden. These tools help with
-creating the directory structure, placing files, generating placeholder content, etc.
+Поддержка такой файловой структуры в ручном режиме, очевидно, неудобна. Чтобы с этим справиться мы
+сделали ((https://github.com/bem/bem-tools BEM tools)). Этот пакет инструментов помогает создавать
+и поддерживать файловую структуру, создавать файлы по шаблонам и т.д.
 
 ==== Группировка блоков в папки
 На большом портале необходимо реализовывать одни и те же блоки на разных проектах.
