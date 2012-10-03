@@ -203,7 +203,7 @@ JavaScript) to a BEM tree.
 If a developer needs to move a block to a different place on a page, he does so by
 changing the BEM tree. Templates generate the final view themselves.
 
-TRANSLATE: You can use any format to describe the BEM tree and any template engine.
+You can use any format to describe the BEM tree and any template engine.
 
 We went with JSON as a page description format.
 It is then turned into HTML by a JS-based template engine BEMHTML.
@@ -239,7 +239,7 @@ From the CSS point of view it means that
  * Cascading selectors should be avoided.
 
 ===== Naming for independent CSS classes
-TRANSLATE: Одна из возможных схем именования CSS-классов, удовлетворяющая требованиям, такая:
+Here's one of the possible CSS class naming scheme:
 
  * CSS class for a block coincides with its ##block name##
 %%hl xml
@@ -261,13 +261,10 @@ It is necessary to include block name into a CSS class for an element to minimiz
 It is also important to use separators consistently to allow the tools and helpers (described
 further) unambiguous programmatic access to the elements.
 
-TRANSLATE: Мы используем дефис для разделения слов в длинных именах (например, ##block-name##) и два
-подчёркивания для отделения имени блока от имени элемента (##block-name_~_element-name##).
+We use hyphen to separate words in long names (for example, ##block-name##) and two underscores
+to separate the name of the block form the name of the element (##block-name_~_element-name##).
 
-TODO: ссылка на naming.en.wiki
-
-TRANSLATE: Но вы можете использовать другую схему отделения слов в именах и отделения имени блока от
-имени элемента.
+But you can use any other separators for it.
 
 E.g.:
   * ##block-name-~-element-name## or
@@ -310,7 +307,7 @@ We write our templates using a domain-specific language called BEMHTML, which is
 ((http://clubs.ya.ru/bem/replies.xml?item_no=992 The main ideas of BEMHTML)) are published
 in the BEM club on Ya.Ru (in Russian).
 
-TODO: ссылка на BEMHTML reference
+((https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem/__html BEMHTML))
 
 === Blocks Reiteration
 The second ##Menu Block## can occur in the ##Foot Block## of a site. Or, a ##Text Block##
@@ -409,8 +406,6 @@ A modifier is an additional CSS class for a block or an element.
 Мы используем одно подчёркивание для отделение имени модификатора от имени блока и
 ещё одно подчёркивание для отделения значения модификатора от его имени.
 
-TODO: ссылка на naming.ru.wiki
-
 === Element modifiers
 Element modifiers are implemented in the same fashion.
 
@@ -448,7 +443,7 @@ E.g., current menu item can be marked with a modifier:
 }
 %%
 
-TRANSLATE: Что может быть представлено в HTML так:
+Which could be represented in HTML as follows:
 
 %%hl xml
 <ul class="menu">
@@ -458,7 +453,7 @@ TRANSLATE: Что может быть представлено в HTML так:
 </ul>
 %%
 
-TRANSLATE: Или так, чтобы сделать классы меню независимым от деталей реализации его раскладки:
+Or to make menu classes independent of the implementation details of its layout:
 
 %%hl xml
 <div class="menu">
@@ -548,8 +543,6 @@ block('menu').toggleMod('size', 'big', 'small');
 The code above is abstract. In real life we use the JavaScript core of ##i-bem## block
 from the ##bem-bl## block library:
  ((http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.en.html))
-
-TODO: проверить ссылку
 
 === Blocks consistency
 A site has a ##Button## block with certain dynamic behavior.
