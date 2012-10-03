@@ -47,7 +47,7 @@ BEM-methodology was developed at ((http://company.yandex.com Yandex)) in the dev
 For years we kept looking for solutions to our problems, and at one point they became ##BEM methodology##.
 
 === Read more
-  * ((definitions/definitions.en.wiki Definitions))
-  * ((filesystem/filesystem.en.wiki Filesystem organization))
-  * ((history/history.en.wiki History))
+  * ((definitions/ Definitions))
+  * ((filesystem/ Filesystem organization))
+  * ((history/ History))
 

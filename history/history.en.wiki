@@ -1,4 +1,4 @@
-﻿== The History of BEM
+== The History of BEM
 Once upon a time, in a distant country far-far away, an IT company named Yandex started developing web search
 and affiliated services. Time went by and services were growing, and more and more frontend developers put
 their tireless efforts into improving the ecosystem of Yandex.
@@ -901,6 +901,7 @@ This is a perfect opportunity to try BEM concepts, and since we don't really hav
 Read more about putting blocks to filesystem in ((../filesystem/filesystem.en.wiki a separate article)).
 
 === Read more
-  * ((definitions/definitions.en.wiki Definitions))
-  * ((filesystem/filesystem.en.wiki Filesystem organization))
+  * ((definitions/ Definitions))
+  * ((filesystem/ Filesystem organization))
   * History
+

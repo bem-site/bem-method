@@ -1,4 +1,4 @@
-﻿== File System Representation for a Block
+== File System Representation for a Block
 BEM is a collection of ideas and methods, a *methodology*. Each company and each team may integrate
 it into an existing workflow gradually, finding out what works best for them.
 
@@ -357,6 +357,7 @@ of the requests. When the build finishes server serves just built files to the c
 Have a look at the ((https://github.com/bem/bem-tools/#bem-make documentation)) to learn more on this topic.
 
 === Read more
-  * ((definitions/definitions.en.wiki Definitions))
+  * ((definitions/ Definitions))
   * Filesystem organization
-  * ((history/history.en.wiki History))
+  * ((history/ History))
+
