@@ -1,9 +1,9 @@
-Usually the process of development of a website is based on the assumption,
-that design and technical requirements will not change during development.
+Usually the website development process is based on the assumption
+that design and technical requirements will not change.
 
-Designer, front-end developer and programmer all work in their field, often
-without interfering with each other:
-  1. Designer creates a site design in the form of design layout
+A designer, a front-end developer and a programmer work each in their field, often
+without interfering each other:
+  1. A designer creates a site design in the form of design layout
   2. Front-end developer create static HTML/CSS pages based on the design layout
   3. Programmer creates templates from these static pages and then writes some JavaScript
 
