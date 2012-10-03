@@ -236,8 +236,8 @@ at project level.
 
 From page-building process' perspective:
   * When building a page we can set a list of levels (directories) to use their blocks on
-    the page. E.g.,
-    ##build-page -l blocks-common -l blocks-my my-page.html##
+    the page.\\
+    E.g., ##build-page -l blocks-common -l blocks-my my-page.html##
 
 From the file structure point of view:
   * A project can have any number of levels. But only the levels that are evaluated during the build
