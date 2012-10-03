@@ -11,13 +11,11 @@
 
 Используйте самую простую схему на файловой системе, когда реализация блоков лежит в файлах с разделением по технологиям: html, css, js.
 
-%%html
-<pre>
+%%
 myfacebook/
   myfacebook.css
   myfacebook.js
   myfacebook.html
-</pre>
 %%
 
 Файлы ##myfacebook.css## и ##myfacebook.js## содержат весь CSS/JS код проекта и подключаются в HTML как есть.
