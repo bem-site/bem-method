@@ -110,7 +110,7 @@ We could start using ((https://github.com/bem/bem-tools bem-tools)) to build the
 ==== Each block in its own directory
 There could be a task to reuse some blocks from a previous project in a new one.
 
-We want the procedure of block reuse to be as simple as possible - like simply copying the files,
+We want the procedure of block reuse to be as simple as possible — like simply copying the files,
 or using partial checkout of a repository from a "donor" project.
 
 In both cases it is useful to have all of the files under the same directory:
@@ -293,8 +293,8 @@ having several definition levels in one repository.
 Working in terms of blocks means having a ##subject-matter abstraction##. This abstraction is for
 developers only, browsers will get a compiled version of the code.
 
-So we have ##code for people## and ##code for browsers## - they are not the same.
-  * Programmers code blocks - browsers get the code for the whole page
+So we have ##code for people## and ##code for browsers## — they are not the same.
+  * Programmers code blocks — browsers get the code for the whole page
 
 To turn ##code for people## into ##code for browsers## we ##build## a page.
 
@@ -314,7 +314,7 @@ On the CSS side:
   * Each browser can get CSS code written especially for it\\
     It is also possible to divide CSS implementations for different browsers and deliver
     only the code needed for each browser.\\
-    ((https://github.com/afelix/setochka setochka - currently in prototype)) can be used for that.
+    ((https://github.com/afelix/setochka setochka — currently in prototype)) can be used for that.
 
 From the JavaScript point of view:
   * Similarly to CSS, JavaScript files can be combined into one.
