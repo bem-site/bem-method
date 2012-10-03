@@ -2,7 +2,7 @@
 BEM is a collection of ideas and methods, a **methodology**. Each company and each team may integrate
 it into an existing workflow gradually, finding out what works best for them.
 
-Being able to navigate the code base quickly is crucial, when 
+Being able to navigate the code base quickly is crucial, when
   * a project is long-lived and under constant development
   * the development team consists of several people, grows and changes
 
