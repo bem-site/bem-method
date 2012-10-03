@@ -58,7 +58,7 @@ You can use this scheme of file location on the file system for this:
   * Block's main code is in the file named ##block-name##
     * File name coincides with the name of the block
     * Technical implementation of the block is placed in the files with the appropriate extensions
-  * An element corresponds to a file ##block-name__element-name##
+  * An element corresponds to a file ##block-name_~_element-name##
     * File name coincides with the name of the element
     * Technical implementation of the element is placed in the files with the appropriate extensions
   * A modifier corresponds to a file ##block-name_name-of-the-modifier_value-of-the-modifier##
