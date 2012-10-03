@@ -262,18 +262,18 @@ It is also important to use separators consistently to allow the tools and helpe
 further) unambiguous programmatic access to the elements.
 
 TRANSLATE: Мы используем дефис для разделения слов в длинных именах (например, ##block-name##) и два
-подчёркивания для отделения имени блока от имени элемента (##block-name__element-name##).
+подчёркивания для отделения имени блока от имени элемента (##block-name_~_element-name##).
 
 TODO: ссылка на naming.en.wiki
 
 TRANSLATE: Но вы можете использовать другую схему отделения слов в именах и отделения имени блока от
 имени элемента.
 
-TRANSLATE: Например:
-  * ##block-name--element-name## или
+E.g.:
+  * ##block-name-~-element-name## or
   * ##blockName-elementName##
 
-====Independent templates
+==== Independent templates
 From the template engine's perspective, block independence means that:
 
  * Blocks and elements must be described in the input data\\
