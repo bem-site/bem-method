@@ -7,34 +7,29 @@ without interfering each other:
   2. Front-end developer create static HTML/CSS pages based on the design layout
   3. Programmer creates templates from these static pages and then writes some JavaScript
 
-Such an approach works well only in a case if the website design remains the same
-all the time of his life and the changes only add more content.
+Such an approach works well only if the design remains the same
+for all the lifetime of the site. Alas, usually that's not the case. 
+The design keeps evolving, new blocks and pages are being added.
 
-But usually that is not happening, the website begins to live its own life and is constantly
-developing. The design of the pages is gradually changing, new pages and new blocks are
-being added on them.
+If the source code layout and development process don't follow a strict set of rules, it gradually becomes more and more
+problematic to work efficiently.
 
-If the source code of the website is not following a defined structure, it its development
-is not based on fixes rules, then it gradually becomes more and more difficult to develop
-such a website. The website code gets beyond the control of its developers.
-
-In a BEM-methodology all people taking part in the development of the website are working
-with a single codebase and are using the same terms to communicate, the same language:
-  1. Design of the website can change at any time, we must be ready for this
-  2. HTML/CSS code is developing together with the design, ready to its changes
-  3. Programmer and front-end developers are working together on the website codebase,
-     contributing to the each other code
+In a BEM-methodology all people taking part in the development of a website are working
+with a single codebase and are using the same terms of communication, the same language:
+  1. Design of the website can change at any time, we should be ready for it
+  2. HTML/CSS code is developed along with the design, ready for its changes
+  3. Back-end and front-end developers are working together on the same codebase,
+     contributing to each other's code
 
 === The conditions of the methodology emergence
-BEM-methodology was developed at ((http://company.yandex.com Yandex)) in the development of a large number of web services to solve these tasks:
+BEM-methodology was developed at ((http://company.yandex.com Yandex)) 
+while workig on a large number of web services, and is aimed to achieve following:
 
  * Fast-to-develop, long-lived projects\\
-   It should be possible to develop and launch the first version quickly with an
-   architecture that helps maintain it in the long run.
- * Numerous people working on a project\\
-   We should be able to organize work efficiently in teams of 2 or more developers.
+   It should be possible to develop and launch the first version of a website quickly with an
+   architecture that helps to maintain it in the long run.
  * Team scalability\\
-   Adding new people to a product team should improve its productivity. We need to be
+   Adding new people to a product team should improve speed, not decrease it. We need to be
    able to assign new members to a team without a steep learning curve.\\
    Code should be well-structured for a project to remain maintainable over time and
    team changes.
