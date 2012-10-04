@@ -7,18 +7,18 @@ without interfering each other:
   2. Front-end developer create static HTML/CSS pages based on the design layout
   3. Programmer creates templates from these static pages and then writes some JavaScript
 
-Such an approach works well only in a case if the website design remains the same
+Such an approach works well only in the case if the website design remains the same
 all the time of his life and the changes only add more content.
 
-But usually that is not happening, the website begins to live its own life and is constantly
-developing. The design of the pages is gradually changing, new pages and new blocks are
+But usually that is not happening. The website begins to live its own life being constantly
+developed. The design of the pages is gradually changing, new pages and new blocks are
 being added on them.
 
-If the source code of the website is not following a defined structure, it its development
-is not based on fixes rules, then it gradually becomes more and more difficult to develop
-such a website. The website code gets beyond the control of its developers.
+If the website source code is not following the defined structure, if its development
+is not based on fixes rules, it gradually becomes more and more difficult to maintain.
+The website code gets beyond the control of its developers.
 
-In a BEM-methodology all people taking part in the development of the website are working
+In accord to BEM-methodology all the people taking part in the development of the website are working
 with a single codebase and are using the same terms to communicate, the same language:
   1. Design of the website can change at any time, we must be ready for this
   2. HTML/CSS code is developing together with the design, ready to its changes
