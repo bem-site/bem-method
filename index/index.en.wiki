@@ -1,8 +1,8 @@
-Usually the website development process is based on the assumption
-that design and technical requirements will not change.
+Usually the website development process is based on the assumption that design and
+technical requirements will not change.
 
-A designer, a front-end developer and a programmer work each in their field, often
-without interfering each other:
+A designer, a front-end developer and a programmer work each in their field,
+often without interfering each other:
   1. A designer creates a site design in the form of design layout
   2. Front-end developer create static HTML/CSS pages based on the design layout
   3. Programmer creates templates from these static pages and then writes some JavaScript
@@ -18,23 +18,22 @@ If the website source code is not following the defined structure, if its develo
 is not based on fixes rules, it gradually becomes more and more difficult to maintain.
 The website code gets beyond the control of its developers.
 
-In accord to BEM-methodology all the people taking part in the development of the website are working
-with a single codebase and are using the same terms to communicate, the same language:
+In accord to BEM-methodology all the people taking part in the development of the website are
+working with a single codebase and are using the same terms to communicate, the same language:
   1. Design of the website can change at any time, we must be ready for this
   2. HTML/CSS code is developing together with the design, ready to its changes
   3. Programmer and front-end developers are working together on the website codebase,
      contributing to the each other code
 
 === The conditions of the methodology emergence
-BEM-methodology was developed at ((http://company.yandex.com Yandex)) in the development of a large number of web services to solve these tasks:
+BEM-methodology was developed at ((http://company.yandex.com Yandex)) 
+while workig on a large number of web services, and is aimed to achieve following:
 
  * Fast-to-develop, long-lived projects\\
-   It should be possible to develop and launch the first version quickly with an
-   architecture that helps maintain it in the long run.
- * Numerous people working on a project\\
-   We should be able to organize work efficiently in teams of 2 or more developers.
+   It should be possible to develop and launch the first version of a website quickly with an
+   architecture that helps to maintain it in the long run.
  * Team scalability\\
-   Adding new people to a product team should improve its productivity. We need to be
+   Adding new people to a product team should improve speed, not decrease it. We need to be
    able to assign new members to a team without a steep learning curve.\\
    Code should be well-structured for a project to remain maintainable over time and
    team changes.
