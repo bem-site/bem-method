@@ -625,5 +625,5 @@ You may also be interested in sites that use ((http://bem.github.com/bem-bl/inde
 
 === Read more
   * Definitions
-  * ((filesystem/ Filesystem organization))
-  * ((history/ History))
+  * ((../filesystem/ Filesystem organization))
+  * ((../history/ History))

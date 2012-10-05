@@ -352,7 +352,7 @@ Block('dropdown', {
 Чтобы узнать больше, смотрите в ((https://github.com/bem/bem-tools/blob/master/README.ru.md#bem-make документацию)).
 
 === Читать дальше
-  * ((definitions/ Определения))
+  * ((../definitions/ Определения))
   * Организация файловой системы
-  * ((history/ История создания))
+  * ((../history/ История создания))
 
