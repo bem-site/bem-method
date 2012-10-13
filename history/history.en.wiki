@@ -773,7 +773,7 @@ All Lego blocks were refactored to follow the completely independent blocks rest
 %%hl xml
 <div class="b-head-logo">
     <span class="b-head-logo__name">
-        Авто
+        Auto
     </span>
 </div>
 %%
