@@ -401,7 +401,7 @@ TODO: ссылка на BEMHTML reference
 </ul>
 %%
 
-%%hl js
+%%hl css
 .menu_size_big {
   // CSS code to specify height
 }
@@ -444,7 +444,7 @@ TODO: ссылка на BEMHTML reference
 }
 %%
 
-%%hl js
+%%hl css
 .menu__item_state_current
 {
   font-weight: bold;
@@ -511,7 +511,7 @@ TODO: ссылка на BEMHTML reference
  * CSS блоков и элементов можно описывать на псевдоязыке, который затем компилируется в чистый
    CSS согласно принятой схеме именования.
 
-%%hl js
+%%hl css
   .menu {
     __layout {
       display: inline;

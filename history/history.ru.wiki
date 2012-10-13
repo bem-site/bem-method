@@ -40,7 +40,7 @@ i/
 Все стили были в одном файле и для отделения стилей разных частей страницы использовались комментарии
 с указанием начала и конца:
 
-%%hl xml
+%%hl css
 /* Content container (begin) */
     #body
     {
@@ -81,7 +81,7 @@ i/
 
 Типичный код того времени:
 
-%%hl xml
+%%hl css
     /* Albums (begin) */
         .result .albums .info
         {
@@ -117,7 +117,7 @@ i/
 
 Или вот ещё пример.
 
-%%hl xml
+%%hl css
     /* Картинки на фоне (begin) */
         #foot div
         {
@@ -205,7 +205,7 @@ TRANSLATE: At first, elements could have been defined only inside their parent b
 
 Элементы, у которых много кода, выделялись комментариями.
 
-%%hl xml
+%%hl css
     /* Head (begin) */
         .b-head { … }
 
@@ -260,7 +260,7 @@ i/
 
 Валидные хаки для MSIE писали в основном CSS-файле ##yaru.css##.
 
-%%hl xml
+%%hl css
     /* Common definitions (begin) */
         body
         {
@@ -278,7 +278,7 @@ i/
 
 Невалидные — в файле ##yaru-ie.css##.
 
-%%hl xml
+%%hl css
     /* Common blocks (begin) */
         /* Artist (begin) */
             .b-artist .i i
@@ -305,7 +305,7 @@ i/
 
 Cтили с него подключались в основной проектный файл с помощью импортов непосредственно с сервера:
 
-%%hl xml
+%%hl css
 @import url(http://common.cloudkill.yandex.ru/css/global.css);
 @import url(http://common.cloudkill.yandex.ru/css/head/common.css);
 @import url(http://common.cloudkill.yandex.ru/css/static-text.css);
@@ -524,7 +524,7 @@ xsl/
 ===== Файлы страниц
 Файлы, подключавшиеся на страницах, состояли из @import'ов реализации блоков.
 
-%%hl xml
+%%hl css
 @import url(../../block/l-head/l-head.css);
 @import url(../../block/b-head-logo/b-head-logo.css);
 @import url(../../block/b-head-logo/b-head-logo_name.css);
@@ -707,7 +707,7 @@ common/
 
 Из него генерируются CSS-файлы.
 
-%%hl xml
+%%hl css
 @import url(../../common/block/global/_type/global_reset.css);
 @import url(../../common/block/l-head/l-head.css);
 @import url(../../common/block/b-head-logo/b-head-logo.css);

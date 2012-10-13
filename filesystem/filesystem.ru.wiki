@@ -43,7 +43,7 @@ about.html
 
 Файл ##all.css## может состоять из ##@import## соответствующих файлов из директории ##blocks##:
 
-%%hl xml
+%%hl css
 @import url(blocks/head.css);
 @import url(blocks/menu.css);
 …
@@ -85,7 +85,7 @@ index.html
 
 Файл ##index.css## содержит увеличенную в размере шапку, но без поискового поля:
 
-%%hl xml
+%%hl css
 @import url(blocks/head.css);
 @import url(blocks/head_size_big.css);
 @import url(blocks/menu.css);
@@ -94,7 +94,7 @@ index.html
 
 A в файле ##about.css## шапка обычного размера и есть поле поиска:
 
-%%hl xml
+%%hl css
 @import url(blocks/head.css);
 @import url(blocks/head__search.css);
 @import url(blocks/menu.css);

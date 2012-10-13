@@ -394,7 +394,7 @@ A modifier is an additional CSS class for a block or an element.
 </ul>
 %%
 
-%%hl js
+%%hl css
 .menu_size_big {
   // CSS code to specify height
 }
@@ -436,7 +436,7 @@ E.g., current menu item can be marked with a modifier:
 }
 %%
 
-%%hl js
+%%hl css
 .menu__item_state_current
 {
   font-weight: bold;
@@ -503,7 +503,7 @@ From the CSS point of view:
  * CSS for blocks and elements can be written in a pseudo language that compiles
    down to CSS according to the naming convention.
 
-%%hl js
+%%hl css
   .menu {
     __layout {
       display: inline;

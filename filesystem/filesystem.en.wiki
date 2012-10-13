@@ -44,7 +44,7 @@ about.html
 
 File ##all.css## could consist of ##@import## of appropriate files from the ##blocks## directory:
 
-%%hl xml
+%%hl css
 @import url(blocks/head.css);
 @import url(blocks/menu.css);
 …
@@ -85,7 +85,7 @@ index.html
 
 File ##index.css## contains enlarged header but without the search form:
 
-%%hl xml
+%%hl css
 @import url(blocks/head.css);
 @import url(blocks/head_size_big.css);
 @import url(blocks/menu.css);
@@ -94,7 +94,7 @@ File ##index.css## contains enlarged header but without the search form:
 
 And file ##about.css## contains header of the usual size and the search form:
 
-%%hl xml
+%%hl css
 @import url(blocks/head.css);
 @import url(blocks/head__search.css);
 @import url(blocks/menu.css);

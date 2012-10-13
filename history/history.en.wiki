@@ -42,7 +42,7 @@ web developers would probably believe me :-)).
 To keep some structure, style definitions for different page sections were separated using plain
 CSS comments like this:
 
-%%hl xml
+%%hl css
 /* Content container (begin) */
     #body
     {
@@ -80,7 +80,7 @@ dependencies spread along the project — all that had been calling for a better
 
 Typical piece of CSS code from those days:
 
-%%hl xml
+%%hl css
     /* Albums (begin) */
         .result .albums .info
         {
@@ -116,7 +116,7 @@ See that long cascade rules are used throughout the code.
 
 Have another look:
 
-%%hl xml
+%%hl css
     /* Background images (begin) */
         #foot div
         {
@@ -203,7 +203,7 @@ At first, elements could have been defined only inside their parent block's cont
 
 In stylesheets, elements with lots of CSS got extra indentation and were wrapped in comments:
 
-%%hl xml
+%%hl css
     /* Head (begin) */
         .b-head { … }
 
@@ -258,7 +258,7 @@ i/
 
 MSIE-specific hacks could have gone into the main CSS file (##yaru.css##) if they were in compliance with the CSS standards:
 
-%%hl xml
+%%hl css
     /* Common definitions (begin) */
         body
         {
@@ -276,7 +276,7 @@ MSIE-specific hacks could have gone into the main CSS file (##yaru.css##) if the
 
 Non-valid workarounds were put in a standalone ##yaru-ie.css## (loaded with IE-only conditional comments).
 
-%%hl xml
+%%hl css
     /* Common blocks (begin) */
         /* Artist (begin) */
             .b-artist .i i
@@ -303,7 +303,7 @@ This was the very beginning of our unified framework.
 
 Styles could be imported directly from that server:
 
-%%hl xml
+%%hl css
 @import url(http://common.cloudkill.yandex.ru/css/global.css);
 @import url(http://common.cloudkill.yandex.ru/css/head/common.css);
 @import url(http://common.cloudkill.yandex.ru/css/static-text.css);
@@ -512,7 +512,7 @@ This simple technique proved quite flexible and is employed up to this day by ma
 ===== Per-Page Files
 Files linked from web pages were mostly importing corresponding block implementations from the Lego folder structure.
 
-%%hl xml
+%%hl css
 @import url(../../block/l-head/l-head.css);
 @import url(../../block/b-head-logo/b-head-logo.css);
 @import url(../../block/b-head-logo/b-head-logo_name.css);
@@ -686,7 +686,7 @@ All Lego components used in a project are described in an XML file:
 
 This XML allows for CSS imports to be generated:
 
-%%hl xml
+%%hl css
 @import url(../../common/block/global/_type/global_reset.css);
 @import url(../../common/block/l-head/l-head.css);
 @import url(../../common/block/b-head-logo/b-head-logo.css);
