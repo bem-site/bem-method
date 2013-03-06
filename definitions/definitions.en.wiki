@@ -423,15 +423,15 @@ E.g., current menu item can be marked with a modifier:
 
 %%hl js
 {
-  block: 'menu',
-  content: [
-    { elem: 'item', content: 'Index' },
+  "block": "menu",
+  "content": [
+    { "elem": "item", "content": "Index" },
     {
-      elem: 'item',
-      mods: { 'state' : 'current' },
-      content: 'Products'
+      "elem": "item",
+      "mods": { "state" : "current" },
+      "content": "Products"
     },
-    { elem: 'item', content: 'Contact' }
+    { "elem": "item", "content": "Contact" }
   ]
 }
 %%
