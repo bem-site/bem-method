@@ -898,7 +898,7 @@ Find CSS prefixes too long to type? Remove them!
 
 This is a perfect opportunity to try BEM concepts, and since we don't really have those strict rules, you're not really breaking anything as long as you hold on to the main principle of blocks, elements and modifiers.
 
-Read more about putting blocks to filesystem in ((../filesystem/filesystem.en.wiki a separate article)).
+Read more about putting blocks to filesystem in ((../filesystem/ a separate article)).
 
 === Read more
   * ((../definitions/ Definitions))
