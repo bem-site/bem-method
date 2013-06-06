@@ -12,7 +12,7 @@ I assume you've got a web project and want to give BEM a try by using it here an
 
 Have a single file per each techonology you use (html, css, js) and put all block declarations together:
 
-%%xml
+%%
 myfacebook/
   myfacebook.css
   myfacebook.js
@@ -31,7 +31,7 @@ If the whole CSS code is inside one large file it is necessary to scroll all the
 When the project is big it is not convenient.
 And the code is much easier to find if it's located in the files of the same name as the block itself.
 
-%%xml
+%%
 blocks/
   head.css
   menu.css
@@ -69,7 +69,7 @@ And you can use any different scheme for naming.
 
 **Example**\\
 
-%%xml
+%%
 blocks/
   head.css
   head__search.css
@@ -111,7 +111,7 @@ or using partial checkout of a repository from a "donor" project.
 
 In both cases it is useful to have all of the files under the same directory:
 
-%%xml
+%%
 blocks/
   menu/
     menu.xsl
@@ -147,7 +147,7 @@ You'l be able to understand a block structure just from its folder structure, wi
 **Example**\\
 File structure of a ##Menu## block
 
-%%xml
+%%
 menu/
   __item/
     _state/
@@ -184,7 +184,7 @@ Such a directory is usually called ##blocks##.
 
 **E.g.**
 
-%%xml
+%%
 blocks/
   foot/
   head/
