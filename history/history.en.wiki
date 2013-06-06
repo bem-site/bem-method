@@ -8,7 +8,7 @@ and times now have come to share that knowledge with the community, to embrace t
 of Open Source and benefit all good people around.
 
 This article tells about Yandex frontend developers constantly revising and improving the way they build web pages.
-Frontend developers are well known for their enormous curiosuty (that often brings innovation) and their remarkable
+Frontend developers are well known for their enormous curiosity (that often brings innovation) and their remarkable
 lazyness that makes them devise sophisticated systems to save precious time, to unify and automate everything.
 
 This is how many exciting things were born into life, but now let's travel back in time to 2005 and sneak a peek over
