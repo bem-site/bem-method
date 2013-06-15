@@ -27,7 +27,7 @@ working with a single codebase and are using the same terms to communicate, the 
 
 === The conditions of the methodology emergence
 BEM-methodology was developed at ((http://company.yandex.com Yandex)) 
-while workig on a large number of web services, and is aimed to achieve following:
+while working on a large number of web services, and is aimed to achieve following:
 
  * Fast-to-develop, long-lived projects\\
    It should be possible to develop and launch the first version of a website quickly with an
