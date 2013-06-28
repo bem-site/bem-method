@@ -162,31 +162,31 @@
 
 %%hl js
 {
-  block: 'page',
-  content: {
-    block: 'head',
-    content: [
-      { block: 'menu', content: … },
+  "block": "page",
+  "content": {
+    "block": "head",
+    "content": [
+      { "block": "menu", "content": … },
       {
-        elem: 'column',
-        content: { block: 'logo' }
+        "elem": "column",
+        "content": { "block": "logo" }
       },
       {
-        elem: 'column',
-        content: [
+        "elem": "column",
+        "content": [
           {
-            block: 'search',
-            content: [
-              { elem: 'input' },
-              { elem: 'button', content: 'Search' }
+            "block": "search",
+            "content": [
+              { "elem": "input" },
+              { "elem": "button", "content": "Search" }
             ]
           }
         ]
       },
       {
-        elem: 'column',
-        content: {
-          block: 'auth', content: …
+        "elem": "column",
+        "content": {
+          "block": "auth", "content": …
         }
       }
     ]
@@ -384,10 +384,10 @@ TODO: ссылка на BEMHTML reference
 
 %%hl js
 {
-  block: 'menu',
-  mods: [
-   { size: 'big' },
-   { type: 'buttons' }
+  "block": "menu",
+  "mods": [
+   { "size": "big" },
+   { "type": "buttons" }
   ]
 }
 %%
@@ -431,15 +431,15 @@ TODO: ссылка на BEMHTML reference
 
 %%hl js
 {
-  block: 'menu',
-  content: [
-    { elem: 'item', content: 'Index' },
+  "block": "menu",
+  "content": [
+    { "elem": "item", "content": "Index" },
     {
-      elem: 'item',
-      mods: { 'state' : 'current' },
-      content: 'Products'
+      "elem": "item",
+      "mods": { "state" : "current" },
+      "content": "Products"
     },
-    { elem: 'item', content: 'Contact' }
+    { "elem": "item", "content": "Contact" }
   ]
 }
 %%
