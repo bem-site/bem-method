@@ -310,9 +310,7 @@ JavaScript-based шаблонного движка ((https://github.com/veged/xj
 
 Мы пишем шаблоны для блоков на предметно-ориентированном языке (domain specific language) BEMHTML, в
 основе которого лежит XJST.
-((http://clubs.ya.ru/bem/replies.xml?item_no=992 Основные понятия шаблонизатора BEMHTML)) опубликованы в клубе БЭМ.
-
-TODO: ссылка на BEMHTML reference
+((/articles/bemhtml-reference/ Основные понятия шаблонизатора BEMHTML)).
 
 === Повторяемость блоков
 На сайте может появиться второй блок ##Меню##, например, в ##Подвале##. Или два блока ##Текст##,
