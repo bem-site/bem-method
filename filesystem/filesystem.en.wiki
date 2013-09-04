@@ -342,9 +342,3 @@ changed since the last run of this command.
 of the requests. When the build finishes server serves just built files to the client.
 
 Have a look at the ((https://github.com/bem/bem-tools/#bem-make documentation)) to learn more on this topic.
-
-=== Read more
-  * ((../definitions/ Definitions))
-  * Filesystem organization
-  * ((../history/ History))
-

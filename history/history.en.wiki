@@ -763,9 +763,9 @@ Client-side (in-browser) XSL transformations were employed as a main templating 
 While studying various factors that could have affected the rendering speed, CSS selectors were identified as a major source of the slowdown. The bigger the DOM tree and the CSS stylesheet, the longer it takes for all CSS rules to be applied.
 
 These's a summary of our study available (in Russian):
-((http://clubs.ya.ru/bem/replies.xml?item_no=338)).
+((http://clubs.ya.ru/bem/replies.xml?item_no=338 completely independent blocks)).
 
-It turned out there is a way to make CSS many times faster: switching to simple selectors and eliminating CSS cascade wherever possible. Selectors based on a single classname are quick and browser handles them with ease. We already had a solution that could use such selectors: the so-called 
+It turned out there is a way to make CSS many times faster: switching to simple selectors and eliminating CSS cascade wherever possible. Selectors based on a single classname are quick and browser handles them with ease. We already had a solution that could use such selectors: the so-called
 ((http://clubs.ya.ru/bem/replies.xml?item_no=338 completely independent blocks)).
 
 All Lego blocks were refactored to follow the completely independent blocks restrictions. As soon as all classnames become unique, most rules require a single class query and work way faster.
@@ -812,7 +812,7 @@ Typical redefinition levels may be defined like this:
  1. public bem-bl library pulled from github, extended by...
  1. internal block library (such as Lego), extended by..
  1. project-specific block library
- 
+
 You're free to go and add more levels. You might need some page-specific block improvements... oh, I believe you got the idea.
 
 Example:
@@ -898,10 +898,4 @@ Find CSS prefixes too long to type? Remove them!
 
 This is a perfect opportunity to try BEM concepts, and since we don't really have those strict rules, you're not really breaking anything as long as you hold on to the main principle of blocks, elements and modifiers.
 
-Read more about putting blocks to filesystem in ((../filesystem/ a separate article)).
-
-=== Read more
-  * ((../definitions/ Definitions))
-  * ((../filesystem/ Filesystem organization))
-  * History
-
+Read more about putting blocks to filesystem in ((/method/filesystem/ a separate article)).
