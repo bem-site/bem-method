@@ -16,7 +16,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/site.png"/>
+<img src="http://img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png"/>
 </div>
 %%
 
@@ -28,7 +28,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/site-marked.png"/>
+<img src="http://img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png"/>
 </div>
 %%
 
@@ -53,7 +53,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/search-block.png"/>
+<img src="http://img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png"/>
 </div>
 %%
 
@@ -66,7 +66,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/search-block-marked.ru.png"/>
+<img src="http://img-fotki.yandex.ru/get/9515/221798411.0/0_babd4_efd80a69_XXL.png"/>
 </div>
 %%
 
@@ -80,7 +80,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/goods-list.png"/>
+<img src="http://img-fotki.yandex.ru/get/9109/221798411.0/0_babcc_d935a8ec_XXL.png"/>
 </div>
 %%
 
@@ -88,7 +88,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/menu-items.png"/>
+<img src="http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png"/>
 </div>
 %%
 
@@ -98,7 +98,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/head-marked.png"/>
+<img src="http://img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png"/>
 </div>
 %%
 
@@ -125,7 +125,7 @@
 
 %%html
 <div style="text-align:center">
-<img src="images/menu-items.png"/>
+<img src="http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png"/>
 </div>
 %%
 
@@ -219,13 +219,13 @@
 
 %%html
 <div style="text-align: center">
-<img src="images/head.png"/>
+<img src="http://img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png"/>
 </div>
 %%
 
 %%html
 <div style="text-align: center">
-<img src="images/head-changed.png"/>
+<img src="http://img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png"/>
 </div>
 %%
 
@@ -338,7 +338,7 @@ JavaScript-based шаблонного движка ((https://github.com/veged/xj
 
 %%html
 <div style="text-align: center">
-<img src="images/site-footer-menu.png"/>
+<img src="http://img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png"/>
 </div>
 %%
 
@@ -354,7 +354,7 @@ JavaScript-based шаблонного движка ((https://github.com/veged/xj
 
 %%html
 <div style="text-align: center">
-<img src="images/search-background.png"/>
+<img src="http://img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png"/>
 </div>
 %%
 
@@ -363,7 +363,7 @@ JavaScript-based шаблонного движка ((https://github.com/veged/xj
 
 %%html
 <div style="text-align: center">
-<img src="images/menu-current-item.png"/>
+<img src="http://img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png"/>
 </div>
 %%
 
@@ -553,7 +553,7 @@ block('menu').toggleMod('size', 'big', 'small');
 
 %%html
 <div style="text-align: center">
-<img src="images/button.png"/>
+<img src="http://img-fotki.yandex.ru/get/6728/221798411.0/0_babcb_d1c8832d_M.png"/>
 </div>
 %%
 
@@ -561,7 +561,7 @@ block('menu').toggleMod('size', 'big', 'small');
 
 %%html
 <div style="text-align: center">
-<img src="images/button-cursor.png"/>
+<img src="http://img-fotki.yandex.ru/get/9110/221798411.0/0_babca_47ce403c_M.png"/>
 </div>
 %%
 

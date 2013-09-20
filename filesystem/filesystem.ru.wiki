@@ -216,7 +216,7 @@ blocks/
 
 %%html
 <div style="text-align:center;">
-<img src="images/levels-schema.png"/>
+<img src="http://img-fotki.yandex.ru/get/9107/221798411.0/0_babc3_6eb2cfbf_XXL.png"/>
 </div>
 %%
 
@@ -224,7 +224,7 @@ blocks/
 
 %%html
 <div style="text-align:center;">
-<img src="images/block-levels.png"/>
+<img src="http://img-fotki.yandex.ru/get/9515/221798411.0/0_babc2_3e8566e4_XXL.png"/>
 </div>
 %%
 
