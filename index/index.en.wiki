@@ -45,8 +45,4 @@ while working on a large number of web services, and is aimed to achieve followi
 
 For years we kept looking for solutions to our problems, and at one point they became ##BEM methodology##.
 
-=== Read more
-  * ((definitions/ Definitions))
-  * ((filesystem/ Filesystem organization))
-  * ((history/ History))
 

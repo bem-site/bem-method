@@ -304,7 +304,7 @@ we like about XSLT (we are fans of declarative programming), and implements it w
 productivity on either client or server side.
 
 We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
-((/articles/bemhtml-reference/ The main ideas of BEMHTML)).
+((/libs/bem-core/1.0.0/bemhtml/rationale/ The main ideas of BEMHTML)).
 
 ((https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem/__html BEMHTML))
 
@@ -621,8 +621,3 @@ You may also be interested in sites that use ((http://bem.github.com/bem-bl/inde
  * ((http://form.dev.eot.su/ BEM based web form with JZ validation))
  * ((http://mishanga.pro/ Mikhail Troshev vCard))\\
    Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))
-
-=== Read more
-  * Definitions
-  * ((../filesystem/ Filesystem organization))
-  * ((../history/ History))
