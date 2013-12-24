@@ -1,3 +1,20 @@
-See detailed information on <a href="http://bem.info">bem.info</a>.
+Это основной репозиторий данных для сайта <a href="http://bem.info">bem.info</a>
 
-<img src="//mc.yandex.ru/watch/12831025" style="position:absolute;left:-9999px" alt=""/>
+####Разделы
+
+* articles - материалы содержащие статьи по BEM.
+* documentation
+    * method
+    * platform
+    * libs
+    * tools
+* events - материалы содержащие описание событий в BEM-комьюнити.
+* faq - материалы содержащие ответы на часто задаваемые вопросы по BEM.
+* news - материалы для новостей/блога.
+* pages - контент для страниц общего значения, таких как вакансии или благодарности.
+* people - данные по людям, состоящим в команде BEM или являющимися авторами статей.
+* tutorials - обучающие материалы.
+* video - видео с конференций и пр.
+* videocasts - видеокасты.
+
+
