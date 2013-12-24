@@ -1,0 +1,13 @@
+{
+    "title": "API Яндекс.Карт и БЭМ",
+    "createDate": "17-07-2013",
+    "editDate": "19-07-2013",
+    "summary": "Cоздание меню для показа на карте организаций различных типов используя API Яндекс.Карт и БЭМ методологию.",
+    "thumbnail": "",
+    "authors": ["hananein-denis"],
+    "tags": ["BEM", "API"],
+    "categories": [],
+    "translators": [],
+    "url": "/yamapsbem/",
+    "type": "articles"
+}

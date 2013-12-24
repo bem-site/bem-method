@@ -1,0 +1,13 @@
+{
+    "title": "JavaScript for BEM: The Main Terms",
+    "createDate": "16-07-2013",
+    "editDate": "",
+    "summary": "How to write client side JS using i-bem.js from bem-bl library.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "categories": [{"name": "bem-core/1.0.0/i-bem.js", "url": "bem-core/1.0.0/i-bem.js"}],
+    "translators": ["nekhaieva-aleksandra"],
+    "url": "/bem-articles/bem-js-main-terms/",
+    "type": "libs"
+}
