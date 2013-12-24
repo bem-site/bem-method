@@ -384,7 +384,7 @@ CSS для блока можно скопировать отсюда: https://gi
 Понадобится и CSS для IE. Он не входит в список технологий по умолчанию.
 
 ```js
-    $ bem create block -l desktop.blocks/ -T ie.css goods
+    $ bem create -l desktop.blocks/ -T ie.css -b goods
 ```
 
 Содержание для получившегося файла `desktop.blocks/goods/goods.ie.css` можно взять на Gist:

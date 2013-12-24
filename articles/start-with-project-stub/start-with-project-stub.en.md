@@ -384,7 +384,7 @@ You also need some extra CSS for our dearest friend, the IE browser, since it is
 list of default block technologies.
 
 ```js
-    $ bem create block -l desktop.blocks/ -T ie.css goods
+    $ bem create -l desktop.blocks/ -T ie.css -b goods
 ```
 
 Again, contents for the resulting `desktop.blocks/goods/goods.ie.css` file is
