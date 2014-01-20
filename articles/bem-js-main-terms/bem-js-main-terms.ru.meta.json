@@ -6,8 +6,8 @@
     "thumbnail": "",
     "authors": ["stepanova-varvara"],
     "tags": ["i-bem.js", "JavaScript"],
-    "categories": [{"name": "bem-core/1.0.0/i-bem.js", "url": "bem-core/1.0.0/i-bem.js"}],
+    "categories": [],
     "translators": [],
     "url": "/bem-articles/bem-js-main-terms/",
-    "type": "libs"
+    "type": "articles"
 }
