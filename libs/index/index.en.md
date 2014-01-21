@@ -5,7 +5,7 @@
 
 Repo on github: [github.com/bem/bem-core/](http://github.com/bem/bem-core/).
 
-Main difference bettween bem-core and bem-bl is described in [migration guide](http://bem.info/libs/bem-core/1.1.0/migration/).
+Main difference between bem-core and bem-bl is described in [migration guide](http://bem.info/libs/bem-core/1.1.0/migration/).
 
 ### bem-bl
 
