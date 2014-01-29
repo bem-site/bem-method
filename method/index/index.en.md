@@ -4,8 +4,8 @@ technical requirements will not change.
 A designer, a front-end developer and a programmer work each in their field,
 often without interfering each other:
   1. A designer creates a site design in the form of design layout
-  2. Front-end developer create static HTML/CSS pages based on the design layout
-  3. Programmer creates templates from these static pages and then writes some JavaScript
+  1. Front-end developer create static HTML/CSS pages based on the design layout
+  1. Programmer creates templates from these static pages and then writes some JavaScript
 
 Such an approach works well only in the case if the website design remains the same
 all the time of his life and the changes only add more content.
@@ -25,24 +25,22 @@ working with a single codebase and are using the same terms to communicate, the 
   3. Programmer and front-end developers are working together on the website codebase,
      contributing to the each other code
 
-=== The conditions of the methodology emergence
-BEM-methodology was developed at ((http://company.yandex.com Yandex)) 
+### The conditions of the methodology emergence
+BEM-methodology was developed at [Yandex](http://company.yandex.com) 
 while working on a large number of web services, and is aimed to achieve following:
 
- * Fast-to-develop, long-lived projects\\
+ * Fast-to-develop, long-lived projects  
    It should be possible to develop and launch the first version of a website quickly with an
    architecture that helps to maintain it in the long run.
- * Team scalability\\
+ * Team scalability  
    Adding new people to a product team should improve speed, not decrease it. We need to be
-   able to assign new members to a team without a steep learning curve.\\
+   able to assign new members to a team without a steep learning curve.  
    Code should be well-structured for a project to remain maintainable over time and
    team changes.
- * Code reuse\\
+ * Code reuse  
    To maintain UI consistency and minimize development effort on typical interface
    components, those components have to be easily reusable.
    The source code should not have contextual dependency on the other code, it should be
    easy to move that code to another place.
 
-For years we kept looking for solutions to our problems, and at one point they became ##BEM methodology##.
-
-
+For years we kept looking for solutions to our problems, and at one point they became `BEM methodology`.
