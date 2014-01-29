@@ -209,12 +209,12 @@ a specific site only, or for certain pages only. It can be achieved using `defin
 
 A `definition level` is a set of blocks grouped in one directory.
 
-![](http://img-fotki.yandex.ru/get/9107/221798411.0/0_babc3_6eb2cfbf_XXL.png)
+![Blocks grouped in one directory](http://img-fotki.yandex.ru/get/9107/221798411.0/0_babc3_6eb2cfbf_XXL.png)
 
 An implementation of every block from the library can be changed (or completely redefined)
 at project level.
 
-![](http://img-fotki.yandex.ru/get/9515/221798411.0/0_babc2_3e8566e4_XXL.png)
+![Block redefining](http://img-fotki.yandex.ru/get/9515/221798411.0/0_babc2_3e8566e4_XXL.png)
 
 From page-building process' perspective:
   * When building a page we can set a list of levels (directories) to use their blocks on

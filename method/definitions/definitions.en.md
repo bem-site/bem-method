@@ -13,15 +13,15 @@ allow us to build websites quickly and maintain them over a long time.
 ### Unified Data Domain
 Imagine an ordinary website, like the one pictured below.
 
-![](http://img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png)
+![Ordinary website](http://img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png)
 
 While developing such a site it is useful to mark out "blocks" of which the site consists.
 
 For example, in this picture there are `Head`, `Main Layout` and `Foot` blocks. The
-`Head` in turn consists of `Logo`, `Search`, `Auth block` and `Menu`. `Main
-Layout` contains a `Page Title` and a `Text Block`.
+`Head` in turn consists of `Logo`, `Search`, `Auth block` and `Menu`. `Main Layout`
+ contains a `Page Title` and a `Text Block`.
 
-![](http://img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png)
+![site's blocks](http://img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png)
 
 Giving each part of the page a name is very useful when it comes to team communication.
 
@@ -41,7 +41,7 @@ A block can be either simple or compound (containing other blocks).
 **Example**  
 Search form block  
 
-![](http://img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png)
+![Search form block](http://img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png)
 
 #### Element
 An `element` is a part of a block that performs a certain function. Elements are
@@ -50,7 +50,7 @@ context-dependent: they only make sense in the context of the block they belong 
 **Example**  
 An input field and a button are elements of the Search Block
 
-![](http://img-fotki.yandex.ru/get/5013/221798411.0/0_babd3_d1278b96_XXL.png)
+![An input field and a button](http://img-fotki.yandex.ru/get/5013/221798411.0/0_babd3_d1278b96_XXL.png)
 
 ### Means of describing pages and templates
 Blocks and elements constitute page content. Besides simply being present on a page,
@@ -60,17 +60,17 @@ Blocks (or elements) may follow each other in a certain order.
 
 For example, a list of goods on a commerce website:
 
-![](http://img-fotki.yandex.ru/get/9109/221798411.0/0_babcc_d935a8ec_XXL.png)
+![List of goods](http://img-fotki.yandex.ru/get/9109/221798411.0/0_babcc_d935a8ec_XXL.png)
 
 …or menu items:
 
-![](http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
+![Menu items](http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
 
 Blocks may also be contained inside other blocks.
 
 For example, a `Head Block` includes other blocks:
 
-![](http://img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png)
+![Head block](http://img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png)
 
 Besides our building blocks we need a way to describe page layout in plain text.
 To do so, every block and element should have a keyword that identifies it.
@@ -93,7 +93,7 @@ An element can be repeated several times.
 
 For example, menu items:
 
-![](http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
+![Menu items](http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
 
 Keywords should be put in certain order.
 Any data format that supports nesting (XML, JSON) will do:
@@ -181,16 +181,16 @@ As projects grow, blocks tend to be added, removed, or moved around the page. Fo
 you may want to swap the `Logo` and `Auth Block` or to place the `Menu` under the
 `Search Block`.
 
-![](http://img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png)
+![Swap blocks](http://img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png)
 
-![](http://img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png)
+![Swap blocks](http://img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png)
 
 To make this process easier, blocks must be `independent`.
 
 An `independent` block is implemented in a way that allows arbitrary placement —
 anywhere on the page, including nesting inside another block.
 
-====Independent CSS
+#### Independent CSS
 From the CSS point of view it means that
 
  * A block (or an element) must have a unique "name" (a CSS class) that could be used in a CSS rule.
@@ -198,7 +198,7 @@ From the CSS point of view it means that
    not context-free.
  * Cascading selectors should be avoided.
 
-===== Naming for independent CSS classes
+##### Naming for independent CSS classes
 Here's one of the possible CSS class naming scheme:
 
  * CSS class for a block coincides with its `block name`
@@ -292,7 +292,7 @@ its appearance or behavior.
 Let's say, we have a task:
  * Add another `Menu` in the `Footer` with a *different layout*.
 
-![](http://img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png)
+![Add another menu](http://img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png)
 
 To avoid developing another block that is only minimally different from an existing one,
 we can use a `modifier`.
@@ -304,12 +304,12 @@ A modifier has a name and a value. Several modifiers can be used at once.
 **Example**  
 A block modifier specifies background color
 
-![](http://img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png)
+![Change background color](http://img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png)
 
 **Example**  
 An element modifier changes the look of the "current" item
 
-![](http://img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png)
+![Change the look of the item](http://img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png)
 
 #### From the input data point of view
 In a BEM tree, modifiers are properties of an entity that describes a block or an element.
@@ -493,11 +493,11 @@ from the `bem-bl` block library:
 ### Blocks consistency
 A site has a `Button` block with certain dynamic behavior.
 
-![](http://img-fotki.yandex.ru/get/6728/221798411.0/0_babcb_d1c8832d_M.png)
+![Button block](http://img-fotki.yandex.ru/get/6728/221798411.0/0_babcb_d1c8832d_M.png)
 
 When a block is hovered, it changes its appearance.
 
-![](http://img-fotki.yandex.ru/get/9110/221798411.0/0_babca_47ce403c_M.png)
+![Button on hover](http://img-fotki.yandex.ru/get/9110/221798411.0/0_babca_47ce403c_M.png)
 
 A manager could ask to use the same button on another page.
 
