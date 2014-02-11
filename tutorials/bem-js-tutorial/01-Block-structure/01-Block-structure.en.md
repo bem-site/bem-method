@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "Block structure",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "Any BEM block can be equipped with JavaScript.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": ["stepanova-varvara"]
+}
+#META_LABEL-->
+
 # Tutorial on JavaScript in BEM terms
 
 ### Links

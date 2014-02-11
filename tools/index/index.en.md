@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Tools Overview",
+    "createDate": "03-10-2012",
+    "editDate": "",
+    "summary": "",
+    "thumbnail": "",
+    "authors": ["grinenko-vladimir"],
+    "tags": ["tools"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 ## bem-tools
 [bem-tools](/tools/bem/bem-tools) is a toolkit to work with files
 based on BEM methodology.

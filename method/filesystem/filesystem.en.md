@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Filesystem",
+    "createDate": "02-10-2012",
+    "editDate": "06-08-2013",
+    "summary": "Filesystem according to BEM methodology.",
+    "thumbnail": "",
+    "authors": ["harisov-vitaly"],
+    "tags": ["BEM"],
+    "translators": ["belov-sergey"],
+    "type": "method"
+} 
+#META_LABEL-->
+
 ## File System Representation for a Block
 BEM is a collection of ideas and methods, a **methodology**. Each company and each team may integrate
 it into an existing workflow gradually, finding out what works best for them.

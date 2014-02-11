@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Версия bem-tools 0.6.4",
+    "createDate": "02-07-2013",
+    "editDate": "21-08-2013",
+    "summary": "Стабильная версия bem-tools 0.6.4 доступна.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","bem-tools"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
 #Версия bem-tools 0.6.4
 
 Стабильная версия [bem-tools](http://ru.bem.info/tools/bem/) 0.6.4 доступна. 

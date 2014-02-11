@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "bem-tools v0.6.4",
+    "createDate": "02-07-2013",
+    "editDate": "21-08-2013",
+    "summary": "The stable bem-tools v0.6.4 is available.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","bem-tools"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
 #bem-tools v0.6.4
 
 The stable [bem-tools](http://bem.info/tools/bem/) v0.6.4 is available.
@@ -98,8 +112,7 @@ exports.techMixin = {
 
 In the old technologies to specify the suffix, which and from which the technology will 
 construct the result, the methods `getSuffixes()` and `getBuildSuffixes()` were used. 
-In the new version it's possible to use the same methods, 
-but for better flexibility and understanding it's preferable to use `getBuildSuffixesMap()`.
+In the new version it's possible to use the same methods, but for better flexibility and understanding it's preferable to use `getBuildSuffixesMap()`.
 
 ```js
 {
@@ -134,7 +147,7 @@ The number of keys in the returned object may be greater than one if the technol
     * `absPath` - the absolute path to the file.
     * `lastUpdated` - modification date of the file.
     * `suffix` - the suffix of the file.
-  * `getBuildPaths()` using the passed declaration (decl) and a list of levels returns a list of existing files which fall under the declaration. The list is represented as a hash in which the files are grouped by the suffix of the technology. For example: 
+  * `getBuildPaths()` using the passed declaration (decl) and a list of levels returns a list of existing files which fall under the declaration. The list is represented as a hash in which the files are grouped by the suffix of the technology. 
   
 For example: 
 
@@ -166,8 +179,7 @@ The standard way of the v2 methods execution looks like this:
 To build the hash `getBuildResults()` receives a list of files by calling `getBuildPaths()`. 
 The list contains all files that are contained at the levels of definition which are used, and that are appropriate for the build technology. 
 That is the suffixes which correspond to what is written in the technology `getBuildSuffixesMap()`. 
-Then for each suffix (in the case of i18n.js it is en.js, ru.js, etc) `storeBuildResults()` is called and 
-a list of files filtered by a specific suffix is passed to it.
+Then for each suffix (in the case of i18n.js it is en.js, ru.js, etc) `storeBuildResults()` is called and a list of files filtered by a specific suffix is passed to it.
 
 Each file path is processed by `getBuildResultChunk`. The output is a string with the file content.
 

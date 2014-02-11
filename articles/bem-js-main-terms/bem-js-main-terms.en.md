@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "JavaScript for BEM: The Main Terms",
+    "createDate": "16-07-2013",
+    "editDate": "",
+    "summary": "How to write client side JS using i-bem.js from bem-bl library.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": ["nekhaieva-aleksandra"],
+    "type": "articles"
+}
+#META_LABEL-->
+
 # JavaScript for BEM: The Main Terms
 
 Stack of BEM technologies contains a block [i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html).

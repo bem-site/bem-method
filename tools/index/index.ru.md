@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Краткий обзор инструментов",
+    "createDate": "03-10-2012",
+    "editDate": "",
+    "summary": "",
+    "thumbnail": "",
+    "authors": ["grinenko-vladimir"],
+    "tags": ["tools"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 ## bem-tools
 [bem-tools](/tools/bem/bem-tools) - это инструмент для работы с файлами, написанными по БЭМ-методу.
 

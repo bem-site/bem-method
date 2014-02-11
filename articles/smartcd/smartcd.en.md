@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "smartcd: how to launch tools locally",
+    "createDate": "19-06-2013",
+    "editDate": "25-06-2013",
+    "summary": "Find out how you can launch bem-tools faster right from the command line using smartcd.",
+    "thumbnail": "",
+    "authors": ["belov-sergey"],
+    "tags": ["bem-tools","tools"],
+    "translators": ["nekhaieva-aleksandra"],
+    "type": "articles"
+}
+#META_LABEL-->
+
 # smartcd: how to launch tools locally
 
 We recommend installing all the dependencies including [bem-tools](http://bem.info/tools/bem/) locally in each project. We describe them in `package.json` at the project root - install them with the command `npm install`.

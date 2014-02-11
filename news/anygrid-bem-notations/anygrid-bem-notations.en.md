@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "AnyGrid – CSS Grids Generator that Uses BEM-Notations and etc!",
+    "createDate": "18-06-2013",
+    "editDate": "",
+    "summary": "Vasya Aksyonov developed a great project — CSS Grids Generator called AnyGrid.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["css","news"],
+    "translators": [""],
+    "type": "news"
+} 
+#META_LABEL-->
+
 # AnyGrid – CSS Grids Generator that uses BEM-notations and etc!
 
 [Vasya Aksyonov](https://twitter.com/outring) developed a great project — **CSS Grids Generator** called [AnyGrid](http://anygrid.net/). 

@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Syntax deps.js",
+    "createDate": "12-06-2013",
+    "editDate": "25-08-2013",
+    "summary": "A brief guide to the syntax of deps.js.",
+    "thumbnail": "",
+    "authors": ["varankin-vladimir","bashinsky-pavel"],
+    "tags": ["bem-tools","tools"],
+    "translators": ["shirshin-maxim"],
+    "type": "display:none"
+}
+#META_LABEL-->
+
 # deps.js — a technology to declare dependencies in BEM
 
 Building a page in different technologies is based on declaring BEM entities in a BEM tree.
@@ -96,7 +110,7 @@ As all the fields for the current entity can be read from its file name, the fol
 ```
 
 `mustDeps`, `shouldDeps`, and `noDeps` parameters accept these BEM entities as values: `block`, `elem`, `mods`. Alternatively, you can use an extended syntax where elements and modifiers can accept an array:
-  
+
   * `elems` (array) — allows to connect several block elements, as well as the block itself;
   * `mods` (object) — an object with arrays as key values.
 

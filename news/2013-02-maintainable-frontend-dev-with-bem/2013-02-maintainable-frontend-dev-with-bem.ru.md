@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "БЭМ на MetaRefresh 2013",
+    "createDate": "22-02-2013",
+    "editDate": "",
+    "summary": "Подробности о том, что такое БЭМ и как работает этот подход, вы узнаете из доклада Варвары Степановой на конференции MetaRefresh 2013 в Бангалоре.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","BEM"],
+    "translators": [],
+    "type": "news"
+} 
+#META_LABEL-->
+
 # БЭМ на конференции MetaRefresh 2013
 
 БЭМ — это подход к модульной разработке веб-страниц.

@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "History",
+    "createDate": "02-10-2012",
+    "editDate": "06-06-2013",
+    "summary": "The history of BEM.",
+    "thumbnail": "",
+    "authors": ["harisov-vitaly"],
+    "tags": ["BEM"],
+    "translators": [],
+    "type": "method"
+} 
+#META_LABEL-->
+
 ## The History of BEM
 Once upon a time, in a distant country far-far away, an IT company named Yandex started developing web search
 and affiliated services. Time went by and services were growing, and more and more frontend developers put

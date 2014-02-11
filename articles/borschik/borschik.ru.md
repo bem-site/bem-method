@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "borschik",
+    "createDate": "22-04-2013",
+    "editDate": "04-07-2013",
+    "summary": "borschik — простой, но мощный сборщик файлов текстовых форматов.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools","borschik"],
+    "translators": [],
+    "type": "articles"
+}
+#META_LABEL-->
+
 # borschik
 
 borschik — это простой, но мощный сборщик файлов текстовых форматов.

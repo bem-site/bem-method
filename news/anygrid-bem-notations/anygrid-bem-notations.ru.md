@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Генератор сеток AnyGrid для CSS в БЭМ-нотациях и многого другого!",
+    "createDate": "18-06-2013",
+    "editDate": "",
+    "summary": "Вася Аксёнов написал вот такой крутой проект — генератор сеток AnyGrid.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","css"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
 # Генератор сеток AnyGrid для CSS в БЭМ-нотациях и многого другого!
 
 [Вася Аксёнов](https://twitter.com/outring) написал вот такой крутой проект — **генератор сеток** [AnyGrid](http://anygrid.net/). 

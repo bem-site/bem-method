@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "What you can borrow from Yandex frontend dev",
+    "createDate": "18-02-2013",
+    "editDate": "30-04-2013",
+    "summary": "The article sums up Yandex over 7-year experience in finding solutions for efficient frontend development.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["BEM"],
+    "translators": [],
+    "type": "articles"
+}
+#META_LABEL-->
+
 # What you can borrow from Yandex frontend dev
 
 This article is a text version of a [presentation](https://vimeo.com/53219242)

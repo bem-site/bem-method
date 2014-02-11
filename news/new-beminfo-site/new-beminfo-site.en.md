@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "New bem.info",
+    "createDate": "21-11-2013",
+    "editDate": "",
+    "summary": "Brand new bem.info with node.js and bemtree inside",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news"],
+    "translators": [],
+    "type": "news"
+}
+#META_LABEL-->
+
 # Brand new bem.info with node.js and bemtree inside
 
 Today we launched brand new [bem.info](http://bem.info).

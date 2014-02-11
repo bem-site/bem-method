@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "BEM-JS TUTORIAL",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "How to write client side JS using i-bem.js.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": ["stepanova-varvara"]
+}
+#META_LABEL-->
+
 # Tutorial on JavaScript in BEM terms
 
 One of the key issues of the BEM stack, the [bem-core

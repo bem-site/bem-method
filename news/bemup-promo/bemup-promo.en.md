@@ -1,4 +1,18 @@
-# BEMup — watch it, feel it! 
+<!--
+{
+    "title": "BEMup — Watch It, Feel It!",
+    "createDate": "13-08-2013",
+    "editDate": "20-08-2013",
+    "summary": "BEMup, our first meetup about BEM was on August 2, in the Moscow office of Yandex.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","BEM","BEMup"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
+# BEMup — watch it, feel it!
 
 [BEMup](http://bitly.com/bemup), our first meetup about BEM was on August 2, in the Moscow office of Yandex.
 
@@ -90,6 +104,3 @@ Follow our news on [facebook](http://bit.ly/fb-bem), in [twitter]( http://bit.ly
 site [bem.info]( http://bit.ly/en-beminfo).
 
 **Stay BEMed!**
-
-
-

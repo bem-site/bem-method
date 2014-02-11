@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "Live-инициализация",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "Перед началом работы блок инициализируется ядром.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": []
+}
+#META_LABEL-->
+
 # Туториал по JavaScript в терминах БЭМ
 
 ### Ссылки

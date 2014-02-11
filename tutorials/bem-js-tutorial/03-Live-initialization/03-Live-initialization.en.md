@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "Live-initialization",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "Before a block starts to function the core initializes it.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": ["stepanova-varvara"]
+}
+#META_LABEL-->
+
 # Tutorial on JavaScript in BEM terms
 
 ### Links

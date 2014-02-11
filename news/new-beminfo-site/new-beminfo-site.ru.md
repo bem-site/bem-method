@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Новый bem.info",
+    "createDate": "21-11-2013",
+    "editDate": "",
+    "summary": "Новый bem.info: теперь на node.js и bemtree",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news"],
+    "translators": [],
+    "type": "news"
+}
+#META_LABEL-->
+
 # Новый bem.info: теперь на node.js и bemtree
 
 Запустили [ru.bem.info](http://ru.bem.info) в новом виде.

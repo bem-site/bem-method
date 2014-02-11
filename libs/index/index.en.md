@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Libs Overview",
+    "createDate": "16-01-2014",
+    "editDate": "",
+    "summary": "",
+    "thumbnail": "",
+    "authors": ["grinenko-vladimir"],
+    "tags": ["libs"],
+    "translators": [],
+    "type": "libs"
+}
+#META_LABEL-->
+
 ## BEM libraries
 
 ### bem-core

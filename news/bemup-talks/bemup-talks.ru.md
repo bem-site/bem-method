@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Видео докладов первого BEMup'а",
+    "createDate": "20-08-2013",
+    "editDate": "",
+    "summary": "2 августа 2013 года в московском Яндексе прошел первый митап по БЭМ — BEMup!.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","BEM","BEMup"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
 # Видео докладов первого BEMup'а
 
 <img src="http://img-fotki.yandex.ru/get/9150/44214498.7d/0_8abd4_b440dc62_L.png" al="BEMup — митап по БЭМ!" class="image image_pos_right">

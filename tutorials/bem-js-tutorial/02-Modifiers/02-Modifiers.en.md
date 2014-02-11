@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "Modifiers",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "In BEM, modifiers express block states.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": ["stepanova-varvara"]
+}
+#META_LABEL-->
+
 # Tutorial on JavaScript in BEM terms
 
 ### Links

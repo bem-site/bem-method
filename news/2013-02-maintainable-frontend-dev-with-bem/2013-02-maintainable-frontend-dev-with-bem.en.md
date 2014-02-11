@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "BEM at MetaRefresh 2013",
+    "createDate": "22-02-2013",
+    "editDate": "",
+    "summary": "In this presentation given at MetaRefresh 2013 in Bangalore you will learn more about BEM and how this actually works.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","BEM"],
+    "translators": [],
+    "type": "news"
+} 
+#META_LABEL-->
+
 # BEM at MetaRefresh 2013
 
 BEM is a way to modularize the development of pages. 

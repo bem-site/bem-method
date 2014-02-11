@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "BEM-JS ТУТОРИАЛ",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "Блок i-bem реализован в нескольких технологиях, и одна из них — JavaScript.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": []
+}
+#META_LABEL-->
+
 # Туториал по JavaScript в БЭМ терминах
 
 Библиотека [bem-core](https://github.com/bem/bem-core) — один из ключевых

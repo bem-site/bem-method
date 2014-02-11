@@ -1,3 +1,16 @@
+<!--
+{
+    "title": "Модификаторы блока",
+    "createDate": "04-02-2014",
+    "editDate": "",
+    "summary": "В БЭМ модификаторы выражают состояние блока.",
+    "thumbnail": "",
+    "authors": ["stepanova-varvara"],
+    "tags": ["i-bem.js", "JavaScript"],
+    "translators": []
+}
+#META_LABEL-->
+
 # Туториал по JavaScript в терминах БЭМ
 
 ### Ссылки

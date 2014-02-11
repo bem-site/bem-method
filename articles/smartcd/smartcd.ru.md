@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "smartcd: локальный запуск инструментов",
+    "createDate": "13-06-2013",
+    "editDate": "25-06-2013",
+    "summary": "Узнайте, как с помощью smartcd можно быстрее запустить bem-tools из коммандной строки.",
+    "thumbnail": "",
+    "authors": ["belov-sergey"],
+    "tags": ["bem-tools","tools"],
+    "translators": [],
+    "type": "articles"
+}
+#META_LABEL-->
+
 # smartcd: локальный запуск инструментов
 
 Мы рекомендуем ставить зависимости, в том числе утилиту

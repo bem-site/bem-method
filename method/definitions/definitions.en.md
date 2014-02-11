@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Definitions",
+    "createDate": "03-10-2012",
+    "editDate": "06-08-2013",
+    "summary": "Definitions of BEM methodology.",
+    "thumbnail": "",
+    "authors": ["harisov-vitaly"],
+    "tags": ["BEM"],
+    "translators": ["grinenko-vladimir"],
+    "type": "method"
+} 
+#META_LABEL-->
+
 ## What is BEM?
 `BEM` stands for Block, Element, Modifier. The meaning of these terms will be described
 further in the article.

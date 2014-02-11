@@ -1,4 +1,18 @@
-#Версия bem-tools 0.5.33 
+<!--
+{
+    "title": "Версия bem-tools 0.5.33",
+    "createDate": "02-07-2013",
+    "editDate": "03-07-2013",
+    "summary": "Стабильная версия bem-tools 0.5.33.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","bem-tools"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
+#Версия bem-tools 0.5.33
 
 Особенно актуальна для любителей Windows.
 
@@ -21,4 +35,3 @@
 Постараемся реагировать по возможности.
 
 Репозиторий на [Github](https://github.com/bem/bem-tools/).
- 

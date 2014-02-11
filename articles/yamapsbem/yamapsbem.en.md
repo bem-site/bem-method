@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Yandex.Maps API and BEM",
+    "createDate": "17-07-2013",
+    "editDate": "18-07-2013",
+    "summary": "Creation of the menu to show on a map different types of POI (geoobject collections) with help of Yandex.Maps API and BEM methodology.",
+    "thumbnail": "",
+    "authors": ["hananein-denis"],
+    "tags": ["BEM", "API"],
+    "translators": [],
+    "type": "articles"
+}
+#META_LABEL-->
+
 # Yandex.Maps API and BEM
 
 One of the most frequent use cases for the Yandex.Maps API is to create a menu to show different types of PoI (Points of Interest - geoobject collections). Such a menu helps an end user to choose which types of POI to see at any given time, rather than cluttering the map with everything. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM.

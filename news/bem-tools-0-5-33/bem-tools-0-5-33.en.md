@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "bem-tools v0.5.33",
+    "createDate": "02-07-2013",
+    "editDate": "",
+    "summary": "Stable release bem-tools v0.5.33.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","bem-tools"],
+    "translators": [""],
+    "type": "news"
+}
+#META_LABEL-->
+
 #bem-tools v0.5.33
 
 Particularly relevant for Windows users.

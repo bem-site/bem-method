@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "BEM goes to India",
+    "createDate": "12-02-2013",
+    "editDate": "",
+    "summary": "Maintainable Fronted Development with BEM at Meta Refresh 2013 in India.",
+    "thumbnail": "",
+    "authors": ["jetpyspayeva-yelena"],
+    "tags": ["news","BEM"],
+    "translators": [],
+    "type": "news"
+} 
+#META_LABEL-->
+
 # Maintainable Fronted Development with BEM at Meta Refresh 2013 in India
 
 BEM as a way of frontend development and BEM as a set of technical solutions, being tested in Yandex, BEM-tools, history of development and introduction as well as a lot more are such areas of experience and expertise that BEM-team brought on stage during last few years of conference talks in Russia, CIS and Europe. Moscow, Saint-Petersburg, Kiev, Minsk, Riga, Amsterdam. Ya.Subbotnik, YaC, RIT, WebConf, Fronteers.

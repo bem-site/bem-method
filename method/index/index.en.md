@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Methodology",
+    "createDate": "02-10-2012",
+    "editDate": "15-06-2012",
+    "summary": "Foreword to BEM methodology.",
+    "thumbnail": "",
+    "authors": ["harisov-vitaly"],
+    "tags": ["BEM"],
+    "translators": ["belov-sergey"],
+    "type": "method"
+} 
+#META_LABEL-->
+
 Usually the website development process is based on the assumption that design and
 technical requirements will not change.
 
