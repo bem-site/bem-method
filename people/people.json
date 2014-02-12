@@ -1,0 +1,498 @@
+{
+    "alaev-vladimir": {
+        "en": {
+            "firstName": "Vladimir",
+            "lastName": "Alaev",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/alaev-vladimir.png",
+            "github": "scf2k",
+            "email": [],
+            "twitter": "scf2k",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Владимир",
+            "lastName": "Алаев",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/alaev-vladimir.png",
+            "github": "scf2k",
+            "email": [],
+            "twitter": "scf2k",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "androsov-alexey": {
+        "en": {
+            "firstName": "Alexey",
+            "lastName": "Androsov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/androsov-alexey.png",
+            "github": "doochik",
+            "email": [],
+            "twitter": "doochik",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Алексей",
+            "lastName": "Андросов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/androsov-alexey.png",
+            "github": "doochik",
+            "email": [],
+            "twitter": "doochik",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "bashinsky-pavel": {
+        "en": {
+            "firstName": "Pavel",
+            "lastName": "Bashinsky",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/bashinsky-pavel.png",
+            "github": "levonet",
+            "email": [],
+            "twitter": "pavel_bashinsky",
+            "skype": "",
+            "info": "Project Manager, Yandex"
+        },
+        "ru": {
+            "firstName": "Павел",
+            "lastName": "Башинский",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/bashinsky-pavel.png",
+            "github": "levonet",
+            "email": [],
+            "twitter": "pavel_bashinsky",
+            "skype": "",
+            "info": "Менеджер проектов в Яндексе"
+        }
+    },
+    "belevich-kir": {
+        "en": {
+            "firstName": "Kir",
+            "lastName": "Belevich",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belevich-kir.png",
+            "github": "deepsweet",
+            "email": [],
+            "twitter": "deepsweet",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Кирилл",
+            "lastName": "Белевич",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belevich-kir.png",
+            "github": "deepsweet",
+            "email": [],
+            "twitter": "deepsweet",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "belov-sergey": {
+        "en": {
+            "firstName": "Sergey",
+            "lastName": "Belov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belov-sergey.png",
+            "github": "arikon",
+            "email": [],
+            "twitter": "arik0n",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Сергей",
+            "lastName": "Белов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belov-sergey.png",
+            "github": "arikon",
+            "email": [],
+            "twitter": "arik0n",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "berezhnoy-sergey": {
+        "en": {
+            "firstName": "Sergey",
+            "lastName": "Berezhnoy",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/berezhnoy-sergey.png",
+            "github": "veged",
+            "email": [],
+            "twitter": "veged",
+            "skype": "",
+            "info": "http://veged.ru"
+        },
+        "ru": {
+            "firstName": "Сергей",
+            "lastName": "Бережной",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/berezhnoy-sergey.png",
+            "github": "veged",
+            "email": [],
+            "twitter": "veged",
+            "skype": "",
+            "info": "http://veged.ru"
+        }
+    },
+    "filatov-dmitry": {
+        "en": {
+            "firstName": "Dmitry",
+            "lastName": "Filatov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/filatov-dmitry.png",
+            "github": "dfilatov",
+            "email": [],
+            "twitter": "dfilatov_",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Дмитрий",
+            "lastName": "Филатов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/filatov-dmitry.png",
+            "github": "dfilatov",
+            "email": [],
+            "twitter": "dfilatov_",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "geonya-andrey": {
+        "en": {
+            "firstName": "Andrey",
+            "lastName": "Geonya",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/geonya-andrey.png",
+            "github": "AndreyGeonya",
+            "email": [],
+            "twitter": "AndreyGeonya",
+            "skype": "",
+            "info": "\"2GIS\" DevGroup - Team Leader"
+        },
+        "ru": {
+            "firstName": "Андрей",
+            "lastName": "Геоня",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/geonya-andrey.png",
+            "github": "AndreyGeonya",
+            "email": [],
+            "twitter": "AndreyGeonya",
+            "skype": "",
+            "info": "Руководитель группы разработки, компания \"2GIS\""
+        }
+    },
+    "grinenko-vladimir": {
+        "en": {
+            "firstName": "Vladimir",
+            "lastName": "Grinenko",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/grinenko-vladimir.png",
+            "github": "tadatuta",
+            "email": [],
+            "twitter": "tadatuta",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Владимир",
+            "lastName": "Гриненко",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/grinenko-vladimir.png",
+            "github": "tadatuta",
+            "email": [],
+            "twitter": "tadatuta",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "hananein-denis": {
+        "en": {
+            "firstName": "Denis",
+            "lastName": "Hananein",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/hananein-denis.png",
+            "github": "zloylos",
+            "email": [],
+            "twitter": "kandasoft",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Денис",
+            "lastName": "Хананеин",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/hananein-denis.png",
+            "github": "zloylos",
+            "email": [],
+            "twitter": "kandasoft",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "harisov-vitaly": {
+        "en": {
+            "firstName": "Vitaly",
+            "lastName": "Harisov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/harisov-vitaly.png",
+            "github": "vithar",
+            "email": [],
+            "twitter": "harisov",
+            "skype": "vitaly.harisov",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Виталий",
+            "lastName": "Харисов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/harisov-vitaly.png",
+            "github": "vithar",
+            "email": [],
+            "twitter": "harisov",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "indutny-fedor": {
+        "en": {
+            "firstName": "Fedor",
+            "lastName": "Indutny",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/indutny-fedor.png",
+            "github": "indutny",
+            "email": [],
+            "twitter": "indutny",
+            "skype": "",
+            "info": "Engineer, node.js core team member."
+        },
+        "ru": {
+            "firstName": "Федор",
+            "lastName": "Индутный",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/indutny-fedor.png",
+            "github": "indutny",
+            "email": [],
+            "twitter": "indutny",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "ishimoto-koji": {
+        "en": {
+            "firstName": "Koji",
+            "lastName": "Ishimoto",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ishimoto-koji.png",
+            "github": "t32k",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "ivanichenko-sergey": {
+        "en": {
+            "firstName": "Sergey",
+            "lastName": "Ivanichenko",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ivanichenko-sergey.png",
+            "github": "murdalay",
+            "email": ["murdalay@gmail.com"],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Сергей",
+            "lastName": "Иваниченко",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ivanichenko-sergey.png",
+            "github": "murdalay",
+            "email": ["murdalay@gmail.com"],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "jetpyspayeva-yelena": {
+        "en": {
+            "firstName": "Yelena",
+            "lastName": "Jetpyspayeva",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/jetpyspayeva-yelena.png",
+            "github": "mursya",
+            "email": [],
+            "twitter": "mursya",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Елена",
+            "lastName": "Джетпыспаева",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/jetpyspayeva-yelena.png",
+            "github": "mursya",
+            "email": [],
+            "twitter": "mursya",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "khachaturov-leonid": {
+        "en": {
+            "firstName": "Leonid",
+            "lastName": "Khachaturov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/khachaturov-leonid.png",
+            "github": "Leonya",
+            "email": [],
+            "twitter": "leonya",
+            "skype": "",
+            "info": "http://leonidkhachaturov.tumblr.com/"
+        },
+        "ru": {
+            "firstName": "Леонид",
+            "lastName": "Хачатуров",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/khachaturov-leonid.png",
+            "github": "Leonya",
+            "email": [],
+            "twitter": "leonya",
+            "skype": "",
+            "info": "http://leonidkhachaturov.tumblr.com/"
+        }
+    },
+    "kryzhanovsky-sergey": {
+        "en": {
+            "firstName": "Sergey",
+            "lastName": "Kryzhanovsky",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kryzhanovsky-sergey.png",
+            "github": "afelix",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Сергей",
+            "lastName": "Крыжановский",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kryzhanovsky-sergey.png",
+            "github": "afelix",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "maslinsky-kirill": {
+        "en": {
+            "firstName": "Kirill",
+            "lastName": "Maslinsky",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/maslinsky-kirill.png",
+            "github": "maslinych",
+            "email": [],
+            "twitter": "maslinych",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Кирилл",
+            "lastName": "Маслинский",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/maslinsky-kirill.png",
+            "github": "maslinych",
+            "email": [],
+            "twitter": "maslinych",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "nekhaieva-aleksandra": {
+        "en": {
+            "firstName": "Aleksandra",
+            "lastName": "Nekhaieva",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/nekhaieva-aleksandra.png",
+            "github": "lesanra",
+            "email": [],
+            "twitter": "Lesanra",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Александра",
+            "lastName": "Нехаева",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/nekhaieva-aleksandra.png",
+            "github": "lesanra",
+            "email": [],
+            "twitter": "Lesanra",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "shirshin-maxim": {
+        "en": {
+            "firstName": "Maxim",
+            "lastName": "Shirshin",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.png",
+            "github": "ingdir",
+            "email": [],
+            "twitter": "ingdir",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Максим",
+            "lastName": "Ширшин",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.png",
+            "github": "ingdir",
+            "email": [],
+            "twitter": "ingdir",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "stepanova-varvara": {
+        "en": {
+            "firstName": "Varvara ",
+            "lastName": "Stepanova",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/stepanova-varvara.png",
+            "github": "varya",
+            "email": [],
+            "twitter": "toivonens",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Варвара",
+            "lastName": "Степанова",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/stepanova-varvara.png",
+            "github": "varya",
+            "email": [],
+            "twitter": "toivonens",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "tatarincev-sergej": {
+        "en": {
+            "firstName": "Sergej",
+            "lastName": "Tatarincev",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/tatarincev-sergej.png",
+            "github": "SevInf",
+            "email": [],
+            "twitter": "SevInf",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Сергей",
+            "lastName": "Татаринцев",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/tatarincev-sergej.png",
+            "github": "SevInf",
+            "email": [],
+            "twitter": "SevInf",
+            "skype": "",
+            "info": ""
+        }
+    },
+    "varankin-vladimir": {
+        "en": {
+            "firstName": "Vladimir",
+            "lastName": "Varankin",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/varankin-vladimir.png",
+            "github": "narqo",
+            "email": [],
+            "twitter": "tvii",
+            "skype": "",
+            "info": "Lead Interface Developer, Yandex"
+        },
+        "ru": {
+            "firstName": "Владимир",
+            "lastName": "Варанкин",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/varankin-vladimir.png",
+            "github": "https://github.com/narqo",
+            "email": [],
+            "twitter": "tvii",
+            "skype": "",
+            "info": "Ведущий разработчик интерфейсов в Яндексе"
+        }
+    }
+}
