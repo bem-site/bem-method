@@ -12,10 +12,10 @@
 Этот туториал подробно описывает, как использовать возможности блока `i-bem` в
 JavaScript для ваших собственных интерфейсных компонент.
 
- * [**Структура блока**](../01-Block-structure/01-Block-structure.ru.md): HTML и
+ * [**Структура блока**](/tutorials/articles/bem-js-tutorial/01-block-structure): HTML и
 JavaScript структура блока, самый простой пример.
- * [**Модификаторы**](../02-Modifiers/02-Modifiers.ru.md): Установка и удаление
+ * [**Модификаторы**](/tutorials/articles/bem-js-tutorial/02-modifiers): Установка и удаление
 модификаторов, переключение (toogle). Реакция на назначение нового модификатора
 и другая магия.
- * [**Живая (или ленивая) инициализация**](../03-Live-initialization/03-Live-initialization.ru.md):
+ * [**Живая (или ленивая) инициализация**](/tutorials/articles/bem-js-tutorial/03-live-initialization):
 Особенности живой инициализации и good parts.

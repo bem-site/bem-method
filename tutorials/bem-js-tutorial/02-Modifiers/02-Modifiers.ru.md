@@ -1,8 +1,8 @@
 # Туториал по JavaScript в терминах БЭМ
 
 ### Ссылки
- * [Содержание](../00-Intro/00-Intro.ru.md)
- * [Ранее. Структура блока](../01-Block-structure/01-Block-structure.ru.md)
+ * [Содержание](/tutorials/articles/bem-js-tutorial)
+ * [Ранее. Структура блока](/tutorials/articles/bem-js-tutorial/01-block-structure)
 
 ----------------------------------
 
@@ -511,7 +511,7 @@ provide(DOM);
 
 ---------------------------------------
 ### Ссылки
- * [Содержание](../00-Intro/00-Intro.ru.md)
- * [Ранее. Структура блока](../01-Block-structure/01-Block-structure.ru.md)
+ * [Содержание](/tutorials/articles/bem-js-tutorial)
+ * [Ранее. Структура блока](/tutorials/articles/bem-js-tutorial/01-block-structure)
  * [Далее. Живая (ленивая)
-инициализация](../03-Live-initialization/03-Live-initialization.ru.md)
+инициализация](/tutorials/articles/bem-js-tutorial/03-live-initialization)

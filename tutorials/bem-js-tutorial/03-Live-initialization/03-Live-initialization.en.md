@@ -1,8 +1,8 @@
 # Tutorial on JavaScript in BEM terms
 
 ### Links
- * [Core document](../00-Intro/00-Intro.en.md)
- * [Previous chapter. Modifiers](../02-Modifiers/02-Modifiers.en.md)
+ * [Core document](/tutorials/articles/bem-js-tutorial)
+ * [Previous chapter. Modifiers](/tutorials/articles/bem-js-tutorial/02-modifiers)
 
 ----------------------------------
 
@@ -658,5 +658,5 @@ provide(DOM);
 
 ---------------------------------------
 ### Links
- * [Core document](../00-Intro/00-Intro.en.md)
- * [Previous chapter. Modifiers](../02-Modifiers/02-Modifiers.en.md)
+ * [Core document](/tutorials/articles/bem-js-tutorial)
+ * [Previous chapter. Modifiers](/tutorials/articles/bem-js-tutorial/02-modifiers)

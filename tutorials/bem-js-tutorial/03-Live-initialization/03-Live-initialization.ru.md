@@ -1,8 +1,8 @@
 # Туториал по JavaScript в терминах БЭМ
 
 ### Ссылки
- * [Содержание](../00-Intro/00-Intro.ru.md)
- * [Ранее. Модификаторы](../02-Modifiers/02-Modifiers.ru.md)
+ * [Содержание](/tutorials/articles/bem-js-tutorial)
+ * [Ранее. Модификаторы](/tutorials/articles/bem-js-tutorial/02-modifiers)
 
 ----------------------------------
 
@@ -670,5 +670,5 @@ provide(DOM);
 
 ---------------------------------------
 ### Ссылки
- * [Содержание](../00-Intro/00-Intro.ru.md)
- * [Ранее. Модификаторы](../02-Modifiers/02-Modifiers.ru.md)
+ * [Содержание](/tutorials/articles/bem-js-tutorial)
+ * [Ранее. Модификаторы](/tutorials/articles/bem-js-tutorial/02-modifiers)

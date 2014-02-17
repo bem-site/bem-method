@@ -1,7 +1,7 @@
 # Туториал по JavaScript в терминах БЭМ
 
 ### Links
- * [Содержание](../00-Intro/00-Intro.ru.md)
+ * [Содержание](/tutorials/articles/bem-js-tutorial)
 
 ----------------------------------
 
@@ -182,5 +182,5 @@ function(modName, modVal, curModVal) {
 
 ---------------------------------------
 ### Links
- * [Содержание](../00-Intro/00-Intro.ru.md)
- * [Далее. Модификаторы](../02-Modifiers/02-Modifiers.ru.md)
+ * [Содержание](/tutorials/articles/bem-js-tutorial)
+ * [Далее. Модификаторы](/tutorials/articles/bem-js-tutorial/02-modifiers)
