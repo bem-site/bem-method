@@ -1,10 +1,4 @@
-# Tutorial on JavaScript in BEM terms
-
-### Links
- * [Core document](/tutorials/articles/bem-js-tutorial)
-
-----------------------------------
-
+# Block structure
 ## JavaScript-enriched block
 ### Prerequisites
 Block `i-bem` and its `dom` element, with all their dependencies, must be included
