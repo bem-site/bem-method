@@ -1,17 +1,9 @@
-# Tutorial on JavaScript in BEM terms
-
-### Links
- * [Core document](/tutorials/articles/bem-js-tutorial)
- * [Previous chapter. Block structure](/tutorials/articles/bem-js-tutorial/01-block-structure)
-
-----------------------------------
-
-## Modifiers
+# Modifiers
 In BEM, modifiers express block states. To put a block into a special state we
 set a modifier on it. Then a block runs a callback associated with
 this modifier.
 
-### Setting a modifier on a block and reacting to it
+## Setting a modifier on a block and reacting to it
 
 <pre>├── pure.bundles/
 │   ├── 002-change-modifier/
@@ -111,7 +103,7 @@ Modifiers are described in a declarative manner, which empowers a programmer to 
 the code with further implementations or to redefine it completely, as is shown
 in the tutorial below.
 
-### Setting a modifier on an element
+## Setting a modifier on an element
 
 <pre>├── pure.bundles/
 │   ├── 003-element-modifier/
@@ -280,7 +272,7 @@ provide(DOM);
 This makes a browser play a traffic light sound when an element is switched into
 `status_on` and to keep silent when the modifier goes off.
 
-### Toggling a modifier
+## Toggling a modifier
 
 <pre>├── pure.bundles/
 │   ├── 004-toggle-mod/
@@ -330,7 +322,7 @@ provide(DOM);
 Indeed, the same goes for elements which an additional first parameter for the
 helper method.
 
-### Deleting a modifier
+## Deleting a modifier
 
 <pre>├── pure.bundles/
 │   ├── 005-modifier-removing/
@@ -403,7 +395,7 @@ here.
 > in the `live` section. Make sure you have learnt it before starting with a
 > real powerful application.
 
-### Before a modifier is set
+## Before a modifier is set
 
 <pre>├── pure.bundles/
 │   ├── 006-before-set-mod/
@@ -501,9 +493,3 @@ provide(DOM);
 
 Here it checks if the clicked item is disabled and prevents such an item to be
 `current`.
-
----------------------------------------
-### Links
- * [Core document](/tutorials/articles/bem-js-tutorial)
- * [Previous chapter. Block structure](/tutorials/articles/bem-js-tutorial/01-block-structure)
- * [Next chapter. Live initialization](/tutorials/articles/bem-js-tutorial/03-live-initialization)
