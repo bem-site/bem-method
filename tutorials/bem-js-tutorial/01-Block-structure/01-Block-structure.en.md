@@ -48,7 +48,7 @@ The `data-bem` attribute stores block parameters in JSON, which structure is:
 }
 ```
 
-## The console.log example
+## Console.log example
 
 <pre>├── pure.bundles/
 │   ├── 001-simple-block/
@@ -162,8 +162,3 @@ write a code to be run after the block starts functioning by
 defining a callback to the `js_inited` modifier.
 
 In the example presented above, this code is a `console.log` call with the block's `outerHTML`.
-
----------------------------------------
-### Links
- * [Core document](/tutorials/articles/bem-js-tutorial)
- * [Next chapter. Modifiers](/tutorials/articles/bem-js-tutorial/02-modifiers)
