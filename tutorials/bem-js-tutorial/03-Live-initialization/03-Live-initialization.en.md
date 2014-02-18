@@ -1,12 +1,4 @@
-# Tutorial on JavaScript in BEM terms
-
-### Links
- * [Core document](/tutorials/articles/bem-js-tutorial)
- * [Previous chapter. Modifiers](/tutorials/articles/bem-js-tutorial/02-modifiers)
-
-----------------------------------
-
-## Live initialization
+# Live initialization
 Before a block starts to function the core initializes it. At the end of this
 process the block gets `js_inited` modifier, which you are already familiar
 with.
@@ -23,7 +15,7 @@ initializing block only when a user starts operating on them.
 
 This is the so-called `live initialization` (or `lazy`).
 
-### `live` static method
+## `live` static method
 The instructions to initialize a block lazy can be given in a predefined `live`
 static method.
 
@@ -53,7 +45,7 @@ Here, as it is a function, the core understands that the instances of this block
 should not be initialized before something special happens. This can be that a
 DOM event fires of the block DOM node or on an element.
 
-### Initializing a block on DOM event
+## Initializing a block on DOM event
 
 <pre>├── pure.bundles/
 │   ├── 010-live-init-on-event/
@@ -161,7 +153,7 @@ page.<br/>
 Besides saving browser forces, this way provides some flexibility for
 dynamically changed pages. This you can see with the following example.
 
-### Delegated initialization
+## Delegated initialization
 <pre>
 
 >> <a href="http://bem.github.io/bem-js-tutorial/pure.bundles/010_2-delegation/010_2-delegation.html">010_2-delegation.html</a></pre>
@@ -177,7 +169,7 @@ The core of `i-bem` framework listens to the events on the `document` object. So
 when a user clicks any `translate` block, this click bubbles up to the `document`
 and core initializes the block as it was instructed it its `live` section.
 
-### Binding to live events
+## Binding to live events
 <pre>├── pure.bundles/
 │   ├── 011-live-bind-to/
 │   │   ├── blocks/
@@ -252,7 +244,7 @@ provide(DOM);
 });
 ```
 
-### Live initialization on many events
+## Live initialization on many events
 <pre>├── pure.bundles/
 │   ├── 012-live-init-many-events/
 │   │   ├── blocks/
@@ -471,7 +463,7 @@ be able to change if checked
 as well as saves time for parsing selectors and bringing architectural
 consistency to the code.
 
-### BEM events
+## BEM events
 
 Besides DOM events, `i-bem.js` operates with custom JavaScript events on the
 JavaScript objects corresponding to the blocks. These events are named `BEM
@@ -537,7 +529,7 @@ This event fires on the JavaScript object corresponding to the menu block instan
 With that, any other block subscribed to the `current` BEM event of the menu can
 learn when it changes its current item and react on it.
 
-### Live initialization on BEM a event of an inner block
+## Live initialization on BEM a event of an inner block
 
 <pre>├── components.bundles/
 │   ├── 014-live-init-bem-event/
@@ -597,66 +589,4 @@ provide(DOM);
 The `liveInitOnBlockInsideEvent` methods requests the names of an event and the
 included block s well as a callback.
 
-Once a user clicks a menu item, it becomes current and the menu block emits
-`current` event. Being catched, it initializes the `map-marks` block, which means
-it gets `js_inited` modifier ans the related method runs:
-
-```js
-modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
-
-DOM.decl('map-marks', {
-
-  onSetMod: {
-      'js' : {
-          'inited' : function () {
-              this._menu = this.findBlockInside('menu');
-              this._map = this.findBlockInside('map');
-          }
-      }
-  },
-
-  ...
-
-}, {
-    live: function() {
-        ...
-    }
-});
-
-provide(DOM);
-
-});
-```
-
-Then the callback runs the `_showMap` method of the block instance. This shows a
-mark on a map using the `map` block.
-
-```js
-modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
-
-DOM.decl('map-marks', {
-
-    ...
-
-    _showMap: function(e, elem) {
-        var params = this._menu.elemParams(elem);
-        this._map.showAddress(params['address']);
-    }
-
-    ...
-
-}, {
-    live: function() {
-        ...
-    }
-});
-
-provide(DOM);
-
-});
-```
-
----------------------------------------
-### Links
- * [Core document](/tutorials/articles/bem-js-tutorial)
- * [Previous chapter. Modifiers](/tutorials/articles/bem-js-tutorial/02-modifiers)
+O
