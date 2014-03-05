@@ -588,5 +588,3 @@ provide(DOM);
 
 The `liveInitOnBlockInsideEvent` methods requests the names of an event and the
 included block s well as a callback.
-
-O
