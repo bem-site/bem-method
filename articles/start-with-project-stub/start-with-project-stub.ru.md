@@ -283,13 +283,14 @@ BEMJSON-декларация - это структура страницы, оп�
                 content: [
                     {
                         block: 'icon',
-                        url: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
+                        tag: 'img',
+                        attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
+                    },
+                    {
+                        elem: 'slogan',
+                        content: 'A new way of thinking'
                     }
                 ]
-            },
-            {
-                elem: 'slogan',
-                content: 'A new way of thinking'
             }
         ] 
     }    
