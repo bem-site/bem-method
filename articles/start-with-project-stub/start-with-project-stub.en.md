@@ -275,16 +275,17 @@ Use a **link** block from the same library to render an **icon** block as a link
                 content: [
                     {
                         block: 'icon',
-                        url: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
+                        tag: 'img',
+                        attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
+                    },
+                    {
+                        elem: 'slogan',
+                        content: 'A new way of thinking'
                     }
                 ]
-            },
-            {
-                elem: 'slogan',
-                content: 'A new way of thinking'
             }
-        ] 
-    }    
+        ]
+    }
 }
 ```
 [Code sample](https://gist.github.com/innabelaya/9345693) index.bemjson.js.
