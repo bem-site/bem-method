@@ -12,8 +12,8 @@ which provides the framework for coding in BEM terms.
 This tutorial details how to use `i-bem` features for JavaScript in your
 components.
 
- * [**Block structure**](/tutorials/articles/bem-js-tutorial/01-block-structure): Block HTML and JavaScript
+ * [**Block structure**](tutorials/bem-js-tutorial/01-Block-structure/01-Block-structure.en.md): Block HTML and JavaScript
  * structure. The very first example.
- * [**Modifiers**](/tutorials/articles/bem-js-tutorial/02-modifiers): Setting, toggling and removing modifiers.
+ * [**Modifiers**](tutorials/bem-js-tutorial/02-Modifiers/02-Modifiers.en.md): Setting, toggling and removing modifiers.
 Reacting on a block being assigned a modifier and further tricks.
- * [**Live initialization**](/tutorials/articles/bem-js-tutorial/03-live-initialization): Initialization features and good practices.
+ * [**Live initialization**](tutorials/bem-js-tutorial/03-Live-initialization/03-Live-initialization.en.md): Initialization features and good practices.
