@@ -4,7 +4,7 @@ Today we are happy to announce two latest technology releases for you. They all 
 
 First of all, we released **new borschik version** - 1.0.0.
 
-Major news is that we switched to semver. We also added wildcard support for freeze_path, freeze support for nesting paths and option support for technologies. Besides, we added JS-syntax for include. Please, pay attention to the fact that some changes partially breake compatibility.
+Major news is that we switched to semver. We also added new features: wildcards for freeze_path, freeze nesting paths, options for technologies. Besides, we added JS-syntax for include. Please, pay attention to the fact that some changes partially breake compatibility.
 
 Detailed changelog is available [here](http://bem.info/tools/optimizers/borschik/changelog/).
 
