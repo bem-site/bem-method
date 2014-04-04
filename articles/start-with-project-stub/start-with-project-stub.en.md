@@ -10,7 +10,7 @@ All tools that we are going to use work crossplatform.
 
 Be aware that you use suitable versions of bem-tools and libraries to run through this tutorial:  
 * [bem-tools v.0.7.x](https://github.com/bem/bem-tools)  
-* [bem-core v.2.0.0](https://github.com/bem/bem-core)  
+* [bem-core v.2.1.0](https://github.com/bem/bem-core)  
 
 To get started with BEM-based project you need to install the latest version of [Node.js](http://nodejs.org/).
 
@@ -494,39 +494,19 @@ You can use moderate dependency type codenamed `shouldDeps` and declare that you
 It would be nice to have each item in the list of goods rendered as a rectangle with a shadow. We can borrow a block from a third-party block library called `j`.
 It provides just one block **box** that does all we need.
 
-You should declare a library name and its version (if available) in a `.bem/make.js` file.
+You should declare a library name, its version (if available) and its repository URL in a `bower.json` file.
 
 ```
-libraries: [
-        'bem-core @ v2.0.0',
-        'bem-components @ 79ca4740c605339941e2a560c6681bfea02f00b3',
-        'j'
-    ]
+    "dependencies": {
+     "bem-core": "v2.1.0",
+     "bem-components": "git://github.com/bem/bem-components.git#0658def60efe2043f907131db9899b3dda70693f",
+     "j": "https://github.com/innabelaya/j#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```    
-[Code sample](https://gist.github.com/innabelaya/8915341) .bem/make.js.
+[Code sample](https://gist.github.com/innabelaya/8915341) bower.json.
 
-Declare a library repository URL in a `.bem/repo.db.js` file to get its code into your project.
+Install a new library by running the following command:
 
-    module.exports = {
-
-    'bem-components' : {
-        type     : 'git',
-        url      : 'git://github.com/bem/bem-components.git'
-    },
-    'bem-core' : {
-        type     : 'git',
-        url      : 'git://github.com/bem/bem-core.git'
-    },
-      
-        //...
-       
-        'j': {
-        type     : 'git',
-        url      : 'git://github.com/innabelaya/j.git'
-    }
-
-    };
-[Code sample](https://gist.github.com/innabelaya/8915389) .bem/repo.db.js.
+    ./node_modules/.bin/bower-npm-install
 
 Next make your pages take blocks from the block level provided by the library. Do this by tuning a bundle configuration in a `desktop.bundles/.bem/level.js`.
 
@@ -708,7 +688,7 @@ This tutorial just lets us to open a door to the BEM world. The entire informati
 This tutorial is based on the [Full stack quick start](http://bem.info/articles/start-with-project-stub/) publication by Varvara Stepanova.
 
 The current release includes:
-* bem-core v2.0.0;
+* bem-core v2.1.0;
 * bem-tools v0.7.x;
 * updated bem-components library;
 * new JavaScript syntax of BEMHTML.
