@@ -11,7 +11,7 @@
 
 Обратите внимание на актуальность версий инструментов и библиотек:  
 * [bem-tools v.0.7.x](https://github.com/bem/bem-tools)  
-* [bem-core v.2.0.0](https://github.com/bem/bem-core)  
+* [bem-core v.2.1.0](https://github.com/bem/bem-core)  
 
 Для начала работы с любым БЭМ-проектом вам необходимо установить [Node.js](http://nodejs.org/).
 
@@ -505,39 +505,19 @@ CSS-правила для блока можно скопировать [отсю
 Представим шапку и каждый товар модными прямоугольниками с тенью. Блок для этого мы позаимствуем из сторонней библиотеки `j`.
 Там есть всего один блок, который называется **box** – он делает то, что нам нужно.
 
-Чтобы получить код библиотеки, нужно указать ее имя в файле `.bem/make.js`.
+Чтобы получить код библиотеки, нужно указать ее имя, версию и адрес в файле `bower.json`, который лежит в корне проекта.
 
 ```
-libraries: [
-        'bem-core @ v2.0.0',
-        'bem-components @ 79ca4740c605339941e2a560c6681bfea02f00b3',
-        'j'
-    ]
+    "dependencies": {
+     "bem-core": "v2.1.0",
+     "bem-components": "git://github.com/bem/bem-components.git#0658def60efe2043f907131db9899b3dda70693f",
+     "j": "https://github.com/innabelaya/j#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```    
-[Пример кода](https://gist.github.com/innabelaya/8915341) .bem/make.js.
+[Пример кода](https://gist.github.com/innabelaya/8915341) bower.json.
 
-Адрес библиотеки прописываем в `.bem/repo.db.js` файле:
-
-    module.exports = {
-
-    'bem-components' : {
-        type     : 'git',
-        url      : 'git://github.com/bem/bem-components.git'
-    },
-    'bem-core' : {
-        type     : 'git',
-        url      : 'git://github.com/bem/bem-core.git'
-    },
-      
-        //...
-       
-        'j': {
-        type     : 'git',
-        url      : 'git://github.com/innabelaya/j.git'
-    }
-
-    };
-[Пример кода](https://gist.github.com/innabelaya/8915389) .bem/repo.db.js.
+Установим зависимую библиотеку. Сделаем это с помщью следующей команды:
+    
+    ./node_modules/.bin/bower-npm-install
 
 Необходимо указать, что данная библиотека должна использоваться при сборке страниц. Это делается в файле `desktop.bundles/.bem/level.js`.
 
@@ -726,7 +706,7 @@ libraries: [
 Статья подготовлена на базе публикации [Попробуй БЭМ на вкус](http://ru.bem.info/articles/start-with-project-stub/) Варвары Степановой.  
 
 Текущий релиз включает в себя:
-* использование библиотеки bem-core v2.0.0;
+* использование библиотеки bem-core v2.1.0;
 * использование bem-tools v0.7.x;
 * обновление библиотеки bem-components;
 * переход на новый js-синтаксис шаблонизатора BEMHTML.
