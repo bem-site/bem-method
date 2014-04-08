@@ -6,7 +6,7 @@
 
 **Где**: Минск, Startup Hub «Imaguru», ул. Фабрициуса, 4
 
-Для участия в митапе необходимо [зарегистрироваться](http://tech.yandex.ru/events/bemup/minsk-bemup/register?_openstat=QkVNdXBfTWluc2s7QkVNLUlORk9fcmVnaXN0ZXI7Ow). Регистрация продлится до 18:00 московского времени 17 апреля.
+Для участия в митапе необходимо [зарегистрироваться](http://tech.yandex.ru/events/bemup/minsk-bemup/register?_openstat=QkVNdXBfTWluc2s7QkVNLUlORk9fcmVnaXN0ZXI7Ow). Регистрация на мероприятие заканчивается 17 апреля в 18:00 по московскому времени.
 
 **Программа**:
 
