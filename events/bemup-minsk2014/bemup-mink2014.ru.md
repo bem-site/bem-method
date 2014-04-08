@@ -1,6 +1,6 @@
 # BEMup в Минске
 
-<img style="float: right" src="http://img-fotki.yandex.ru/get/6730/44214498.92/0_90538_a5e6ae8d_M.jpg" alt="фотография разработчиков с питерского BEMup" title="BEMup в Санкт-Петербурге" />
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/6730/44214498.92/0_90538_a5e6ae8d_M.jpg" alt="фотография разработчиков с питерского BEMup" title="BEMup в Санкт-Петербурге" />
 
 *Когда*: 18 апреля 2014 года, пятница, начало в 16:00
 
