@@ -9,7 +9,7 @@ We work with BEM technologies in its entirety and are looking for frontend devel
 
 **Common requirements**
 
-Working knowledge of JavaScript, HTML and CSS as well as development across browsers.
+Working knowledge of JavaScript, HTML and CSS as well as cross-browser development.
 
 **Obligatory:**
   * BEM technologies, of course;
