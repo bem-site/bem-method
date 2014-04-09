@@ -21,30 +21,30 @@ Working knowledge of JavaScript, HTML and CSS as well as development across brow
   * proficiency in HTML and CSS.
 
 **Would be great if you have:**
-  * наличие собственных опенсорс-разработок;
-  * опыт написания тестов для JavaScript-кода;
-  * владение Unix command line и скриптовыми языками;
-  * умение и любовь к написанию статей на технические темы;
-  * хороший письменный и устный английский.
+  * own open-source projects or you take part in anyone's;
+  * JavaScript code tests writing experience;
+  * Unix command line and script languages knowledge;
+  * desire and skills to write technical articles and documentation;
+  * proficiency in spoken and written English.
 
-**Помимо опыта нам важны:**
-  * ответственность;
-  * самостоятельность;
-  * организованность;
-  * умение работать в команде.
+**We value:**
+  * responsibility;
+  * self-sufficiency;
+  * self-support;
+  * being a team player.
 
-**Условия:**
-  * полный рабочий день в офисах Яндекса;
-  * свободный график (в разумных пределах).
+**Working conditions:**
+  * full-time employment in Yandex office;
+  * free working schedule up to certain limits is possible upon agreement.
 
-Вас ждет хороший кондиционируемый офис, бесплатные обеды, оплата необходимой технической литературы. Иногородним кандидатам мы оплатим дорогу на собеседование и при необходимости поможем с переездом. Гражданам других государств поможем в получении разрешения на работу в РФ и Украине.
+You will be working in the well-conditioned office with a free meals and paid working literature included. We also cover travel and accomodation expences for forein candidates traveling to onside interview. We help with relocation as well. If you are a foreign citizen requiring a working permit, we help in gaining it for Russian and Ukraine.
 
-Если вы узнали в этом разработчике себя, присылайте свое резюме со ссылкой на [GitHub](https://github.com/) и текущие проекты на [info@bem.info](mailto:info@bem.info) в любое время.
+If you recognize yourself in this portrait, please submit your CV with a link to your [GitHub](https://github.com/) profile and current projects to [info@bem.info](mailto:info@bem.info) any time you like.
 
 Current Yandex openings:
 -----------------
-  * [Senior Frontend Develope](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
-  * [Search Interfaces Frontend Develope](http://company.yandex.ru/job/vacancies/dev_int_kiev.xml) in Yandex.Simferopol;
+  * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
+  * [Search Interfaces Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_kiev.xml) in Yandex.Simferopol;
   * [Yandex.Direct Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_direct.xml) in Yandex.Simferopol;
   * [Islands Frontend Developer](http://company.yandex.ru/job/vacancies/dev_islands_minsk.xml) in Yandex.Minsk.
   
