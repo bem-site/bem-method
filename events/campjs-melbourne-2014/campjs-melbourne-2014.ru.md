@@ -2,7 +2,7 @@
 
 <img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9088/127846884.248/0_cd7f7_768f5d36_M.jpg" alt="Сamp JS III logo" title="Сamp JS III logo" />
 
-**Когда**: 23 — 26 мая 2014
+**Когда**: 23 — 26 мая 2014 года
 
 **Где**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Виктория, Австралия.
 
