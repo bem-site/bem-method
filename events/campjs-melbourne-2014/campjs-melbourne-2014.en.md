@@ -10,8 +10,8 @@
 
 More information about the event could be found on [it's official web page](http://campjs.com). 
 
-There is quite a bunch of brilliant [speakers and mentors](http://campjs.com/), as well as [interesting talks, practical 
-workshops and sessions](http://campjs.com/#sessions), panel discussions. 
+There is quite a bunch of brilliant [speakers and mentors](http://campjs.com/) as well as interesting [talks, practical 
+workshops and sessions](http://campjs.com/#sessions) together with panel discussions. 
 
 ## BEM for JS
 
