@@ -1,12 +1,12 @@
-# BEM for JS Talk on Camp JS
+# BEM for JS Talk on CampJS
 
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9088/127846884.248/0_cd7f7_768f5d36_M.jpg" alt="Сamp JS III logo" title="Сamp JS III logo" />
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9088/127846884.248/0_cd7f7_768f5d36_M.jpg" alt="CampJS III logo" title="CampJS III logo" />
 
 **When**: May 23 — 26, 2014
 
 **Where**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Victoria, Australia.
 
-**Camp JS III** is a weekend-long hack-retreat with JavaScript developers, that takes place biannually in Australia. 
+**CampJS III** is a weekend-long hack-retreat with JavaScript developers, that takes place biannually in Australia. 
 
 More information about the event could be found on [it's official web page](http://campjs.com). 
 
@@ -15,13 +15,13 @@ workshops and sessions](http://campjs.com/#sessions) together with panel discuss
 
 ## BEM for JS
 
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for Сamp JS III" title="Vladimir Grinenko photo for Сamp JS III" />
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for CampJS III" title="Vladimir Grinenko photo for CampJS III" />
 
 We are more than happy to participate with [a talk](http://campjs.com/#bem) and be a part of a panel discussion. 
 
 **Abstract**
 
-Introducing BEM Block Libraries - a set of blocks build on top of same ideas that inspired Web Components 
+Introducing BEM Block Libraries — a set of blocks build on top of same ideas that inspired Web Components 
 creators but long long time ago. Being developed in 2008 by Yandex, Russian Search Engine, they are very helpful 
 in building websites fast and flexible. Why so? Because of the years of experience put in them while working in 
 large rapidly changing services.
