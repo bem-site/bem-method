@@ -77,7 +77,7 @@ A BEMJSON declaration describes a page structure in BEM terms: blocks, elements 
 
 Blocks are our building materials for each page. You can use the already created blocks from the libraries or create a new one by yourself.
 
-Every block can be implemented in the following technologies: `css`, `js`, `bemhtml`, `deps.js`, `bemjson.js`. We will call them **block's implementation technology files**. 
+Every block can be implemented in the following technologies: `css`/`roo`, `js`, `bemhtml`, `deps.js`, `bemjson.js`. We will call them **block's implementation technology files**. 
 
 Blocks' implementation sets are stored in one directory called **redefinition level**.  
 
@@ -108,6 +108,8 @@ First of all the two main parts of our web page will be defined: a *head* and it
 You have just one page in your project to begin with: `index.html`.  
 Try and open it in your browser: `http://localhost:8080/desktop.bundles/index/index.html`. 
 
+The `index.html` is a demo page that shows blocks variety of the `bem-components` library linked to the project-stub.
+
 **Note!**  
 Make sure that you specify the full path to the `index.html` page: `http://localhost:8080/desktop.bundles/index/index.html`, otherwise some problems with relative paths could occur and all CSS rules will be ignored. 
 
@@ -122,7 +124,7 @@ From this point on find code snapshots on [Gist](https://gist.github.com/innabel
 Refresh the page to see the corresponding `<div>` with a `"head"` class:
    
     <!DOCTYPE html>
-    <html class="ua_js_no">
+    <html class="ua_js_yes">
         <head>...</head>
         <body class="page">
             <div class="head"></div>
@@ -171,6 +173,8 @@ Refresh the page to view the new corresponding `<div>`'s:
     </html>
     
 This markup requires CSS rules to be added. In BEM terms you have to implement a **layout** block in CSS.
+
+**Note** A [Roole](http://roole.org/documentation/) – CSS preprocessor based on JavaScript – is linked to the project-stub by default, thus you can create css rules both in `.css` and `.roo` formats.
 
 ## Creating a new block
 
@@ -472,7 +476,31 @@ Notice that you do not need to create CSS file for this block because it had alr
 
 You also need some extra CSS for an IE browser since it is not among the list of default block technologies.
 
+You need to specify `ie.css` technology usage in `.bem/make.js` file ([code sample](https://gist.github.com/innabelaya/10642906)). 
+Also you have to link ie.css style to `index.bemjson.js`:
+
+    ({
+    block: 'page',
+    title: 'Title of the page',
+    favicon: '/favicon.ico',
+    head: [
+        { elem: 'meta', attrs: { name: 'description', content: '' }},
+        { elem: 'css', url: '_index.css' },
+        { elem: 'css', url: '_index.ie.css', ie: 'IE' }
+    ],
+    scripts: [{ elem: 'js', url: '_index.js' }],
+    content: [
+        {  
+            // ...
+        }]
+    })   
+            
+[Code sample](https://gist.github.com/innabelaya/10643114)) index.bemjson.js.
+
+CSS rules for Internet Explorer should be created in separate  `ie.css` file.  
+
     $ bem create -l desktop.blocks -b goods -T ie.css
+    
 Again, content for the resulting `desktop.blocks/goods/goods.ie.css` file is available on [Gist](https://gist.github.com/innabelaya/8915092).
 
 # Blocks' dependencies
@@ -500,27 +528,32 @@ You should declare a library name, its version (if available) and its repository
     "dependencies": {
      "bem-core": "v2.1.0",
      "bem-components": "git://github.com/bem/bem-components.git#0658def60efe2043f907131db9899b3dda70693f",
-     "j": "https://github.com/innabelaya/j#695d479fbdd7c97e61bd89953ef095e2e567e70e"
+     "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```    
-[Code sample](https://gist.github.com/innabelaya/8915341) bower.json.
+[Code sample](https://gist.github.com/innabelaya/10652710) bower.json.
 
 Install a new library by running the following command:
 
     ./node_modules/.bin/bower-npm-install
 
-Next make your pages take blocks from the block level provided by the library. Do this by tuning a bundle configuration in a `desktop.bundles/.bem/level.js`.
+Next make your pages take blocks from the block level provided by the library. Do this by tuning a bundle configuration in a `.bem/make.js`.
 
-    exports.getConfig = function() {
-
-    return BEM.util.extend(this.__base() || {}, {
-        bundleBuildLevels: this.resolvePaths([
-                'bem-core/common.blocks',
-                'bem-core/desktop.blocks',
-                'bem-components/common.blocks',
-                'bem-components/desktop.blocks',
-                'j/blocks'
+    getLevelsMap : function() {
+        return {
+            desktop : [
+                'libs/bem-core/common.blocks',
+                'libs/bem-core/desktop.blocks',
+                'libs/bem-components/common.blocks',
+                'libs/bem-components/desktop.blocks',
+                'libs/bem-components/design/common.blocks',
+                'libs/bem-components/design/desktop.blocks',
+                'libs/j/blocks',
+                'common.blocks',
+                'desktop.blocks'   
             ]
-[Code sample](https://gist.github.com/innabelaya/8915431) desktop.bundles/.bem/level.js.
+        };
+    }
+[Code sample](https://gist.github.com/innabelaya/8915431) .bem/make.js.
 
 You need to restart BEM server after changing the configuration to apply all changes. Kill the current process (`Ctrl+C`) and run `bem server` again.
 
