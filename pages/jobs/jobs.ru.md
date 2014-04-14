@@ -50,6 +50,7 @@
   
 Текущие вакансии, где требуется знание БЭМ:
 -----------------
+  * [Разработчик интерфейсов](http://bit.ly/EmomFrontEnd) — удаленная работа в команде Emom;
   * [Senior Frontend Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) в Берлин, Германия;
   * [Senior Frontend Developer](https://www.linkedin.com/jobs2/view/10839316?trk=vsrp_jobs_res_name&trkInfo=VSRPsearchId%3A1973313181394033367979%2CVSRPtargetId%3A10839316%2CVSRPcmpt%3Aprimary) в Берлин, Германия;
   * [Web Developer — Front-end, HTML5, CSS3, jQuery, JavaScript](http://www.dice.com/job/result/ceiam/JMJO032170) в Аллентаун, штат Пенсильвания, США.
