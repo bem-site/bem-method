@@ -15,7 +15,9 @@ workshops and sessions](http://campjs.com/#sessions), panel discussions.
 
 ## BEM for JS
 
-We are more than happy to participate with a talk and be a part of a panel discussion. 
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for Сamp JS III" title="Vladimir Grinenko photo for Сamp JS III" />
+
+We are more than happy to participate with [a talk](http://campjs.com/#bem) and be a part of a panel discussion. 
 
 **Abstract**
 
@@ -29,8 +31,6 @@ Roberts and Nicolas Gallagher, so-called BEM CSS is spread far ahead in the rest
 we aim to share what we have in BEM Methodology to cover JS coding with and introduce Australian developers to 
 a new chapter in BEM, partly not always easy to understand, open-sourced and handy for maintaining complexity of 
 web development you could grow in.
-
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for Сamp JS III" title="Vladimir Grinenko photo for Сamp JS III" />
 
 **Speaker's biography**
 
