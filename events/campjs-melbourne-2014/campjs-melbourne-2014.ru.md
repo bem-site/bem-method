@@ -4,7 +4,7 @@
 
 **Когда**: 23 — 26 мая 2014 года
 
-**Где**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Виктория, Австралия.
+**Где**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Виктория, Австралия
 
 **Camp JS III** — трехдневный хак-ритрит для JS разработчиков, который проходит два раза в год в Австралии. 
 
