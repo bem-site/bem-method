@@ -1,12 +1,12 @@
-# БЭМ для JavaScript на конференции Camp JS
+# БЭМ для JavaScript на конференции CampJS
 
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9088/127846884.248/0_cd7f7_768f5d36_M.jpg" alt="Сamp JS III logo" title="Сamp JS III logo" />
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9088/127846884.248/0_cd7f7_768f5d36_M.jpg" alt="CampJS III logo" title="CampJS III logo" />
 
 **Когда**: 23 — 26 мая 2014 года.
 
 **Где**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Виктория, Австралия.
 
-**Camp JS III** — трехдневный хак-ритрит для разработчиков, пишущих на JavaScript, который проходит два раза в год в Австралии. 
+**CampJS III** — трехдневный хак-ритрит для разработчиков, пишущих на JavaScript, который проходит два раза в год в Австралии. 
 
 Больше информации про мероприятие можно найти на [официальном сайте конференции](http://campjs.com). 
 
@@ -14,7 +14,7 @@
 
 ## БЭМ для JavaScript
 
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for Сamp JS III" title="Vladimir Grinenko photo for Сamp JS III" />
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for CampJS III" title="Vladimir Grinenko photo for CampJS III" />
 
 Мы очень рады тому, что попали в программу конференции с [докладом](http://campjs.com/#bem), а также будем принимать участие в панельной дискуссии. 
 
