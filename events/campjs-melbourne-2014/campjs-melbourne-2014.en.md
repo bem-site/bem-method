@@ -1,4 +1,4 @@
-# BEM for JS Talk on CAMPJS III
+# BEM for JS Talk on Camp JS
 
 <img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9088/127846884.248/0_cd7f7_768f5d36_M.jpg" alt="Сamp JS III logo" title="Сamp JS III logo" />
 
@@ -13,11 +13,9 @@ More information about the event could be found on [it's official web page](http
 There is quite a bunch of brilliant [speakers and mentors](http://campjs.com/), as well as [interesting talks, practical 
 workshops and sessions](http://campjs.com/#sessions), panel discussions. 
 
-## BEM for JS — Talk
+## BEM for JS
 
 We are more than happy to participate with a talk and be a part of a panel discussion. 
-
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for Сamp JS III" title="Vladimir Grinenko photo for Сamp JS III" />
 
 **Abstract**
 
@@ -32,6 +30,8 @@ we aim to share what we have in BEM Methodology to cover JS coding with and intr
 a new chapter in BEM, partly not always easy to understand, open-sourced and handy for maintaining complexity of 
 web development you could grow in.
 
+<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for Сamp JS III" title="Vladimir Grinenko photo for Сamp JS III" />
+
 **Speaker's biography**
 
 Vladimir Grinenko is a web developer with more than 10 years of fronted experience and a deep expertise in 
@@ -42,6 +42,6 @@ large scale web sites architecture, modular frontend applications development, e
 
 Follow [@bem_en](http://twitter.com/bem_en) for updates and live tweets. 
 
-Hopefully, there will be video available after the conference, that we can share with you. 
+Hopefully, there will be video available after the conference that we can share with you. 
 
 **Stay BEMed!**
