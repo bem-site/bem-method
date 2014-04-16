@@ -1,6 +1,6 @@
 # Full stack quick start
 
-Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/rationale/). While developing we will use command-line application: [bem-tools](http://en.bem.info/tools/bem/bem-tools/). 
+Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/rationale/). While developing we will use command-line application: [bem-tools](http://en.bem.info/tools/bem/bem-tools/).
 
 **Note:** this tutorial requires JavaScript programming language knowledge.
 
@@ -8,90 +8,90 @@ Within this tutorial we are going to develop an [online shop web page](http://va
 
 All tools that we are going to use work crossplatform.
 
-Be aware that you use suitable versions of bem-tools and libraries to run through this tutorial:  
-* [bem-tools v.0.7.x](https://github.com/bem/bem-tools)  
-* [bem-core v.2.1.0](https://github.com/bem/bem-core)  
+Be aware that you use suitable versions of bem-tools and libraries to run through this tutorial:
+* [bem-tools v.0.7.x](https://github.com/bem/bem-tools)
+* [bem-core v.2.1.0](https://github.com/bem/bem-core)
 
 To get started with BEM-based project you need to install the latest version of [Node.js](http://nodejs.org/).
 
 # BEM in short
 
-BEM is an abbreviation of three entities: a **Block**, an **Element** and a **Modifier**. 
- 
+BEM is an abbreviation of three entities: a **Block**, an **Element** and a **Modifier**.
+
 BEM is a [methodology](http://en.bem.info/method/) of web projects development, that allows you to divide an interface into logically independent blocks. At the same time BEM contains specific tools for the typical web developers' tasks automatization. And finally BEM gives us opportunity to create libraries of web-components for fast and efficient web-development.
 
 # Starting with a new project repository
 
-The quickest and easiest way to start with your own BEM project is to use an existing template project repository – [project-stub](https://github.com/bem/project-stub). It contains the minimal configuration files and folders you will need for quick start from scratch.  
+The quickest and easiest way to start with your own BEM project is to use an existing template project repository – [project-stub](https://github.com/bem/project-stub). It contains the minimal configuration files and folders you will need for quick start from scratch.
 
 We need to create a local copy of a `project-stub`. You can choose any of your favorite tools to clone the project. We are going to use Git.
 
-    $ git clone git://github.com/bem/project-stub.git start-pretty-project   
-	
+    $ git clone git://github.com/bem/project-stub.git start-pretty-project
+
 Go to a new project directory:
 
     $ cd start-pretty-project/
 Remove the versions history of the origin repository:
 
     $ rm -rf .git
-    
+
 Create a git repository from that directory:
-    
+
     $ git init
-    
+
 Install all npm dependances and bem-tools:
 
-    $ npm install  
-	
-Now you can run any bem-tools commands from a `node_modules/bem/bin/bem` directory.  
+    $ npm install
+
+Now you can run any bem-tools commands from a `node_modules/bem/bin/bem` directory.
 To be able to run bem-tools commands without typing a full path to an executable file (`node_modules/bem/bin/bem`), use `bem-cli` npm package:
 
     $ sudo npm install bem-cli -g
-Now you can use bem-tools from any point of your project. 
-	 
+Now you can use bem-tools from any point of your project.
+
 Build the project:
 
     $ bem make
-The first launch may take some time as required npm packages and dependencies are being installed in background.  
+The first launch may take some time as required npm packages and dependencies are being installed in background.
 Project's build process configuration is determined in `.bem/make.js` file. It defines all the technologies of blocks implementation (templates, dependencies, CSS rules and JavaScript functionality) that have to be connected to the project's pages by bem-tools. `desktop.bundles/.bem/level.js` configuration file contains a list of libraries to be used in the project.
 
 Starting BEM server for development:
 
-    $ bem server  
+    $ bem server
 Upon completion you will see the following message:
-`info: Server is listening on port 8080. Point your browser to http://localhost:8080/`  
+`info: Server is listening on port 8080. Point your browser to http://localhost:8080/`
 
 This means that [BEM server](https://github.com/bem/project-stub#usage) is up and running. From this point on a solicited part of your project will be rebuilt automatically every time you reload a web page.
 
-**Getting stuck?** 
- 
+**Getting stuck?**
+
 If port:8080 is already in use by another program, you can redefine it using `-p` option.
 
 		$ bem server -p portNum
 
-# Brief overview of the project structure 
+# Brief overview of the project structure
 
-HTML layout and CSS rules of each page depend on its BEMJSON description in a `pageName.bemjson.js` file called **BEMJSON declaration**. All blocks declared in a BEMJSON file are automatically stored in a `desktop.bundles` directory by bem-tools. Every page has its own directory and inside it you can find different files needed for a page to function.   
+HTML layout and CSS rules of each page depend on its BEMJSON description in a `pageName.bemjson.js` file called **BEMJSON declaration**. All blocks declared in a BEMJSON file are automatically stored in a `desktop.bundles` directory by bem-tools. Every page has its own directory and inside it you can find different files needed for a page to function.
 
 A BEMJSON declaration describes a page structure in BEM terms: blocks, elements and modifiers. A **BEMHTML template engine** processes a BEMJSON declaration to create HTML layout of a web page.
 
 Blocks are our building materials for each page. You can use the already created blocks from the libraries or create a new one by yourself.
 
-Every block can be implemented in the following technologies: `css`/`roo`, `js`, `bemhtml`, `deps.js`, `bemjson.js`. We will call them **block's implementation technology files**. 
+Every block can be implemented in the following technologies: `css`/`roo`, `js`, `bemhtml`, `deps.js`, `bemjson.js`. We will call them **block's implementation technology files**.
 
-Blocks' implementation sets are stored in one directory called **redefinition level**.  
+Blocks' implementation sets are stored in one directory called **redefinition level**.
 
-[Project structure](http://en.bem.info/method/filesystem/) presumes that all newly created and redefined blocks are stored in a `desktop.blocks` directory. The web pages' blocks and all blocks that are mentioned in BEMJSON declarations are stored in a `desktop.bundles` directory.  
+[Project structure](http://en.bem.info/method/filesystem/) presumes that all newly created and redefined blocks are stored in a `desktop.blocks` directory. The web pages' blocks and all blocks that are mentioned in BEMJSON declarations are stored in a `desktop.bundles` directory.
 
 # Step-by-step
 
 This section provides you with a step-by-step diving into BEM-based development of a web page. Previewing the steps of this tutorial will give you a clear insight into the developing process.
 
 First of all the two main parts of our web page will be defined: a *head* and its main part – *body*.
- 
-1. We will declare a **head** block in a BEMJSON file of a page and assign the first CSS rules to provide a correct markup within this block. 
 
-2. The **head** block will be extended by a search form and a logo. In the search form we will add **input** and **button** blocks. A **Logo** block will be rendered as a link to [bem.info](http://en.bem.info/) site. Using [bem-tools commands](http://en.bem.info/tools/bem/bem-tools/commands/) we will create new blocks and redefine some blocks from a library. 
+1. We will declare a **head** block in a BEMJSON file of a page and assign the first CSS rules to provide a correct markup within this block.
+
+2. The **head** block will be extended by a search form and a logo. In the search form we will add **input** and **button** blocks. A **Logo** block will be rendered as a link to [bem.info](http://en.bem.info/) site. Using [bem-tools commands](http://en.bem.info/tools/bem/bem-tools/commands/) we will create new blocks and redefine some blocks from a library.
 
 3. A list of goods will be added to a page's body. We will declare it in BEMJSON as a **goods** block and create corresponding BEMHTML template for it. New CSS rules for this block will provide correct layout for a list of goods.
 
@@ -99,19 +99,19 @@ First of all the two main parts of our web page will be defined: a *head* and it
 
 5. We will link a third-party library to the project and extend JavaScript functionality of the block we are going to use.
 
-6. We will find out how to extend the block functionality using a mix of blocks and elements.  
+6. We will find out how to extend the block functionality using a mix of blocks and elements.
 
-7. And finally we will show you how to create a new page and start a whole project build procedure.  
+7. And finally we will show you how to create a new page and start a whole project build procedure.
 
 # Changing pages
 
-You have just one page in your project to begin with: `index.html`.  
-Try and open it in your browser: `http://localhost:8080/desktop.bundles/index/index.html`. 
+You have just one page in your project to begin with: `index.html`.
+Try and open it in your browser: `http://localhost:8080/desktop.bundles/index/index.html`.
 
 The `index.html` is a demo page that shows blocks variety of the `bem-components` library linked to the project-stub.
 
-**Note!**  
-Make sure that you specify the full path to the `index.html` page: `http://localhost:8080/desktop.bundles/index/index.html`, otherwise some problems with relative paths could occur and all CSS rules will be ignored. 
+**Note!**
+Make sure that you specify the full path to the `index.html` page: `http://localhost:8080/desktop.bundles/index/index.html`, otherwise some problems with relative paths could occur and all CSS rules will be ignored.
 
 ## Declaring a block in BEMJSON
 
@@ -119,10 +119,10 @@ Let's add a **head** block to the page. To do this declare it in a BEMJSON file 
 
     { block: 'head' }
 
-From this point on find code snapshots on [Gist](https://gist.github.com/innabelaya/8885713).  
+From this point on find code snapshots on [Gist](https://gist.github.com/innabelaya/8885713).
 
 Refresh the page to see the corresponding `<div>` with a `"head"` class:
-   
+
     <!DOCTYPE html>
     <html class="ua_js_yes">
         <head>...</head>
@@ -131,7 +131,7 @@ Refresh the page to see the corresponding `<div>` with a `"head"` class:
             <script src="_index.js"></script>
         </body>
     </html>
-    
+
 A **Head** block consists of a search form, a logo and a layout block. The last one provides correct markup within the  **head**.
 
 First of all put a **layout** block along with its two elements (**left** and **right**) inside the **head** block.
@@ -154,7 +154,7 @@ First of all put a **layout** block along with its two elements (**left** and **
             }
         }
     ]
-[Code sample](https://gist.github.com/innabelaya/8885938) index.bemjson.js. 
+[Code sample](https://gist.github.com/innabelaya/8885938) index.bemjson.js.
 
 Refresh the page to view the new corresponding `<div>`'s:
 
@@ -171,7 +171,7 @@ Refresh the page to view the new corresponding `<div>`'s:
             <script src="_index.js"></script>
         </body>
     </html>
-    
+
 This markup requires CSS rules to be added. In BEM terms you have to implement a **layout** block in CSS.
 
 **Note** A [Roole](http://roole.org/documentation/) – CSS preprocessor based on JavaScript – is linked to the project-stub by default, thus you can create css rules both in `.css` and `.roo` formats.
@@ -181,19 +181,19 @@ This markup requires CSS rules to be added. In BEM terms you have to implement a
 To implement a block using CSS technology you have to create a CSS file for this block in a corresponding block directory. For this use `bem create` command of [bem-tools](http://en.bem.info/tools/bem/bem-tools/commands/):
 
     $ bem create -l desktop.blocks -b layout -T css
-where:  
-`-l directoryName` – defines a redefinition level;  
-`-b blockName` – defines a name of the block's directory for which a technology file will be created.  
-`-T technogyName` – creates technology file for block's implementation.   
+where:
+`-l directoryName` – defines a redefinition level;
+`-b blockName` – defines a name of the block's directory for which a technology file will be created.
+`-T technogyName` – creates technology file for block's implementation.
 
-Running this command creates a `desktop.blocks/layout/layout.css` file. Inside you will find a CSS selector that matches the **layout** block. It is where you step in and fill the selector up with CSS properties. 
+Running this command creates a `desktop.blocks/layout/layout.css` file. Inside you will find a CSS selector that matches the **layout** block. It is where you step in and fill the selector up with CSS properties.
 Or just copy and paste from [Gist](https://gist.github.com/innabelaya/8906070).
- 
+
 You can create the blocks manually. To do so just create `desktop.blocks/layout/` directory and put there all required block's implementation technology files.
 
 A **Logo** block will consist of an icon with a slogan. To insert it into the **head** block we have to declare a **logo** block in an `index.bemjson.js` file and add CSS rules for it.
 
-You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png) for the logo or pick any other image you like :-) 
+You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png) for the logo or pick any other image you like :-)
 
     {
         elem: 'right',
@@ -201,8 +201,7 @@ You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.block
             block: 'logo',
             content: [
                 {
-                    block: 'icon',
-                    tag: 'img',
+                    block: 'image',
                     attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
                 },
                 {
@@ -212,11 +211,11 @@ You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.block
             ]
         }
     }
-[Code sample](https://gist.github.com/innabelaya/9345355) index.bemjson.js. 
+[Code sample](https://gist.github.com/innabelaya/9345355) index.bemjson.js.
 
 ![Блок logo](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a63_7fdb19bb_M.png)
 
-## Using a block library  
+## Using a block library
 
 You do not need to implement an **input** and a **button** blocks yourself. They are provided by the [bem-components library](https://github.com/bem/bem-components) which is linked to the project-stub by default. So you can just declare these blocks in a `desktop.bundles/index/index.bemjson.js` file.
 
@@ -260,17 +259,17 @@ Let's add Yandex.Browser search results to the search form.
         ]
     }
 }
-``` 
+```
 [Code sample](https://gist.github.com/innabelaya/9391751) index.bemjson.js.
 
 ![Search form](http://img-fotki.yandex.ru/get/9796/248553438.0/0_d4a68_25bceae6_L.png)
 
-Use a **link** block from the same library to render an **icon** block as a link to [bem.info](http://en.bem.info/) site. 
+Use a **link** block from the same library to render an icon with a slogan as a link to [bem.info](http://en.bem.info/) site.
 
 ```
 {
     elem: 'right',
-    content: {                                   
+    content: {
         block: 'logo',
         content: [
             {
@@ -278,8 +277,7 @@ Use a **link** block from the same library to render an **icon** block as a link
                 url: 'http://ru.bem.info',
                 content: [
                     {
-                        block: 'icon',
-                        tag: 'img',
+                        block: 'image',
                         attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
                     },
                     {
@@ -292,7 +290,7 @@ Use a **link** block from the same library to render an **icon** block as a link
     }
 }
 ```
-[Code sample](https://gist.github.com/innabelaya/9345693) index.bemjson.js.
+[Code sample](https://gist.github.com/dmytroyarmak/10934301) index.bemjson.js.
 
 ## Modifying the library blocks
 
@@ -302,24 +300,24 @@ The blocks **input** and **button** can be modified using additional CSS rules.
 
 The CSS files for each block have to be stored in a `desktop.blocks` redefinition level:
 
-    $ bem create -l desktop.blocks -b input -T css 
+    $ bem create -l desktop.blocks -b input -T css
 [Code sample](https://gist.github.com/innabelaya/8906605) input.css.
 
 Run the same command for a **button** block:
 
-    $ bem create -l desktop.blocks -b button -T css 
+    $ bem create -l desktop.blocks -b button -T css
 [Code sample](https://gist.github.com/innabelaya/8906646) button.css.
 
 The same can be done for a **link** block:
 
-    $ bem create -l desktop.blocks -b link -T css 
+    $ bem create -l desktop.blocks -b link -T css
 [Code sample](https://gist.github.com/innabelaya/8906451) link.css.
 
 ![Search form](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a64_d24f6e0_L.png)
 
 ### Modifying BEMHTML
 
-You need an additional HTML element – a container – to center the page. It is not necessary to create a specific block for it. The more correct way rather be to modify a **page** block's template at a `desktop.blocks` redefinition level. This template will generate an output HTML for the entire page. 
+You need an additional HTML element – a container – to center the page. It is not necessary to create a specific block for it. The more correct way rather be to modify a **page** block's template at a `desktop.blocks` redefinition level. This template will generate an output HTML for the entire page.
 
 We are going to use [BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/reference/) as a template language.
 
@@ -355,12 +353,12 @@ Add some code to wrap the page contents in additional container node; put it int
 
 Then implement the **page** block in CSS technology to apply style to resulting markup:
 
-    $ bem create -l desktop.blocks -b page -T css 
+    $ bem create -l desktop.blocks -b page -T css
 Copy CSS code for a newborn `desktop.blocks/page/page.css` file from [here](https://gist.github.com/innabelaya/8906698).
 
 Define a border property for the **head** block to make it visible on a page.
 
-    $ bem create -l desktop.blocks -b head -T css 
+    $ bem create -l desktop.blocks -b head -T css
 Once again, you can borrow contents for a `desktop.blocks/head/head.css` file from [here](https://gist.github.com/innabelaya/8906724).
 
 ![Head block with a frame](http://img-fotki.yandex.ru/get/9930/248553438.0/0_d4a65_c4dc0f3d_L.png)
@@ -386,7 +384,7 @@ A web page we are going to develop contains a list of some goods. To be able to 
             },
             //...
     }
-[Code sample](https://gist.github.com/innabelaya/8913801) index.bemjson.js.
+[Code sample](https://gist.github.com/dmytroyarmak/10935438) index.bemjson.js.
 
 This block has to be implemented in BEMHTML technology in order to be turned into an appropriate piece of HTML. It needs to be styled with CSS as well. So you can create this block with all the default technologies just by removing `-T` flag.
 
@@ -395,7 +393,7 @@ Then write BEMHTML code in a `desktop.blocks/goods/goods.bemhtml` file that proc
 
     block('goods')(
 		tag()('ul'),
-		
+
 		//...
 
 	    	elem('item')(
@@ -409,7 +407,7 @@ Then write BEMHTML code in a `desktop.blocks/goods/goods.bemhtml` file that proc
     		elem('image')(
         	tag()('img'),
 
-        	attrs()({ src: this.ctx.url })   
+        	attrs()({ src: this.ctx.url })
     		),
 
 			elem('price')(
@@ -463,20 +461,20 @@ An extra trick: if you would like to avoid cascade when styling the block, mark 
             <a class="link goods__link" href="/">259</a>
         </li>
         //...
-        <li class="goods__item">...</li> 
         <li class="goods__item">...</li>
-    </ul> 
+        <li class="goods__item">...</li>
+    </ul>
 
-You need to identify new goods on a page. To implement this add a verification of a `new` modifier to the template: [code sample](https://gist.github.com/innabelaya/8914048). 
+You need to identify new goods on a page. To implement this add a verification of a `new` modifier to the template: [code sample](https://gist.github.com/innabelaya/8914048).
 
-Use this code snapshot for [CSS rules](https://gist.github.com/innabelaya/8915049).  
+Use this code snapshot for [CSS rules](https://gist.github.com/innabelaya/8915049).
 Notice that you do not need to create CSS file for this block because it had already been generated using `bem create` command, and CSS is one of the block's default technologies.
 
-![List of goods](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a66_9f679754_L.png) 
+![List of goods](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a66_9f679754_L.png)
 
 You also need some extra CSS for an IE browser since it is not among the list of default block technologies.
 
-You need to specify `ie.css` technology usage in `.bem/make.js` file ([code sample](https://gist.github.com/innabelaya/10642906)). 
+You need to specify `ie.css` technology usage in `.bem/make.js` file ([code sample](https://gist.github.com/innabelaya/10642906)).
 Also you have to link ie.css style to `index.bemjson.js`:
 
     ({
@@ -490,24 +488,24 @@ Also you have to link ie.css style to `index.bemjson.js`:
     ],
     scripts: [{ elem: 'js', url: '_index.js' }],
     content: [
-        {  
+        {
             // ...
         }]
-    })   
-            
-[Code sample](https://gist.github.com/innabelaya/10643114)) index.bemjson.js.
+    })
 
-CSS rules for Internet Explorer should be created in separate  `ie.css` file.  
+[Code sample](https://gist.github.com/dmytroyarmak/10936158) index.bemjson.js.
+
+CSS rules for Internet Explorer should be created in separate  `ie.css` file.
 
     $ bem create -l desktop.blocks -b goods -T ie.css
-    
+
 Again, content for the resulting `desktop.blocks/goods/goods.ie.css` file is available on [Gist](https://gist.github.com/innabelaya/8915092).
 
 # Blocks' dependencies
 
 Besides declaring blocks within input BEMJSON data you need to make sure that the corresponding templates, CSS and JavaScript are linked to the page. You can do this using a special `deps.js` block technology which is used to describe block dependencies.
 
-    $ bem create -l desktop.blocks -b goods -T deps.js 
+    $ bem create -l desktop.blocks -b goods -T deps.js
 You can use moderate dependency type codenamed `shouldDeps` and declare that you need a **link** block.
 
     ({
@@ -529,7 +527,7 @@ You should declare a library name, its version (if available) and its repository
      "bem-core": "v2.1.0",
      "bem-components": "git://github.com/bem/bem-components.git#0658def60efe2043f907131db9899b3dda70693f",
      "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
-```    
+```
 [Code sample](https://gist.github.com/innabelaya/10652710) bower.json.
 
 Install a new library by running the following command:
@@ -549,7 +547,7 @@ Next make your pages take blocks from the block level provided by the library. D
                 'libs/bem-components/design/desktop.blocks',
                 'libs/j/blocks',
                 'common.blocks',
-                'desktop.blocks'   
+                'desktop.blocks'
             ]
         };
     }
@@ -561,7 +559,7 @@ You need to restart BEM server after changing the configuration to apply all cha
 
 Having linked the library you can use a **box** block. To add a white background with a shadow to the **head** block you need to mix it with the **box** block.
 
-One of the possible ways to mix blocks is to declare this mix in BEMJSON input data.  
+One of the possible ways to mix blocks is to declare this mix in BEMJSON input data.
 
 Here you can mix **head** and **box** blocks:
 
@@ -570,7 +568,7 @@ Here you can mix **head** and **box** blocks:
         mix: [ { block: 'box' } ],
         content: ...
     }
-[Code sample](https://gist.github.com/innabelaya/8931642) index.bemjson.js.
+[Code sample](https://gist.github.com/dmytroyarmak/10937483) index.bemjson.js.
 
     <!DOCTYPE html>
     <html class="ua_js_yes">
@@ -587,7 +585,7 @@ Here you can mix **head** and **box** blocks:
     </html>
 Do not forget to define that a **head** block requires the **box** block.
 
-    $ bem create -l desktop.blocks -b head -T deps.js 
+    $ bem create -l desktop.blocks -b head -T deps.js
 
 ```
 ({
@@ -598,9 +596,9 @@ Do not forget to define that a **head** block requires the **box** block.
 ```
 [Code sample](https://gist.github.com/innabelaya/8930709) head.deps.js.
 
-![mix of blocks](http://img-fotki.yandex.ru/get/9796/248553438.0/0_d4a67_d0bb01c8_L.png)  
+![mix of blocks](http://img-fotki.yandex.ru/get/9796/248553438.0/0_d4a67_d0bb01c8_L.png)
 
-You can also mix an element with a block using BEMHTML templates of a block.  
+You can also mix an element with a block using BEMHTML templates of a block.
 Let's specify that each item element from a **goods** block has the same formatting as a **head** block. For this you need to mix each **item** from a **goods** block with a **box** block from `j` library.
 
 ```
@@ -609,7 +607,7 @@ Let's specify that each item element from a **goods** block has the same formatt
         mix: [{ block: 'box' }],
         content: ...
 ```
-        
+
 [Code sample](https://gist.github.com/innabelaya/8930835) goods.bemhtml.
 
     <!DOCTYPE html>
@@ -624,9 +622,9 @@ Let's specify that each item element from a **goods** block has the same formatt
                     <li class="goods__item box">...</li>
                     <li class="goods__item goods__item_new_yes box">...</li>
                     <li class="goods__item box">...</li>
-                    
+
                     //...
-                    
+
                 </ul>
                 <script src="_index.js"></script>
             </div>
@@ -644,7 +642,7 @@ The **Box** block borrowed from a third-party library supports roll up animation
 To use this functionality in a **head** block you need to change the a block BEMJSON declaration and set JavaScript property to `true` for the mixed **box** block.
 
     mix: [{ block: 'box', js: true }]
-[Code sample](https://gist.github.com/innabelaya/8930981) index.bemjson.js.
+[Code sample](https://gist.github.com/dmytroyarmak/10937757) index.bemjson.js.
 
 It is required to have a `switcher` element in the block.
 
@@ -653,16 +651,16 @@ It is required to have a `switcher` element in the block.
     content: [
         {
             block: 'layout',
-            
+
         //...
-        
+
         },
         {
             block: 'box',
             elem: 'switcher'
         }
     ]
-[Code sample](https://gist.github.com/innabelaya/8931082) index.bemjson.js.
+[Code sample](https://gist.github.com/dmytroyarmak/10937850) index.bemjson.js.
 
 With that you have a block with a clickable arrow-shaped element which rolls the block up.
 
@@ -673,7 +671,7 @@ With that you have a block with a clickable arrow-shaped element which rolls the
 What if you are not satisfied with the dynamic functionality provided by the **box** block? Maybe you would like it to roll up and left. Usually you cannot alter the code of the library you borrowed your block from as it is not yours.
 But thanks to using the i-bem.js declarative framework you can change JavaScript implementation of a block.
 
-    $ bem create -l desktop.blocks -b box -T js 
+    $ bem create -l desktop.blocks -b box -T js
 You need to use the `onSetMod` property to specify a block reaction depending on modifier's state change.
 
 In this example the block is told to respond to setting up and removing a `closed` modifier.
@@ -688,7 +686,7 @@ In this example the block is told to respond to setting up and removing a `close
                 // some functionality here
             }
         }
-        
+
     }
 [Code sample](https://gist.github.com/innabelaya/9503213) box.js.
 
