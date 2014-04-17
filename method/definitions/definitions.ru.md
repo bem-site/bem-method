@@ -543,7 +543,7 @@ CSS и JavaScript коде и XSL шаблонах страниц. Наприм�
 
 Некоторые сервисы вместо XSL шаблонов используют упомянутые в статье `bemhtml` шаблоны:
  * [Поиск Яндекса](http://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213)  
-   [Поиск на английском](http://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213)
+ * [Поиск на английском](http://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213)
  * [Поиск по мобильным приложениям](http://apps.yandex.ru/)  
     Сайт для смартфонов
 
@@ -558,6 +558,5 @@ CSS и JavaScript коде и XSL шаблонах страниц. Наприм�
  * [TNK Racing Team](http://futurecolors.ru/tnkracing/)
 
 Сайты, разработанные на основе [библиотеки bem-bl](http://bem.github.com/bem-bl/index.ru.html):
- * [Форма с JZ валидацией](http://form.dev.eot.su/)
  * [Mikhail Troshev vCard](http://mishanga.pro/)  
     Код проекта на GitHub: <https://github.com/mishanga/bem-vcard>
