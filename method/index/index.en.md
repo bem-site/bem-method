@@ -23,7 +23,7 @@ working with a single codebase and are using the same terms to communicate, the 
   1. Design of the website can change at any time, we must be ready for this
   2. HTML/CSS code is developing together with the design, ready to its changes
   3. Programmer and front-end developers are working together on the website codebase,
-     contributing to the each other code
+     contributing to each other's code
 
 ### The conditions of the methodology emergence
 BEM-methodology was developed at [Yandex](http://company.yandex.com) 
