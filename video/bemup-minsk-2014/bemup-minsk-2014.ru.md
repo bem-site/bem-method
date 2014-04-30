@@ -58,6 +58,10 @@ PandaDoc — веб-приложение на Angular.js, написанное �
 
 <iframe width="450" height="225" src="http://video.yandex.ru/iframe/ya-events/44nrtf21c9.1205/" frameborder="0" allowfullscreen="1"></iframe>
 
+Мы также собрали все фотографии в один альбом, он доступен по [ссылке](http://fotki.yandex.ru/users/ya-events/album/150630/) и в слайдшоу:
+
+<object width="500" height="375"><param name="flashvars" value="author=ya-events&mode=album&effects=1&time=5&id=150630" /><param name="bgcolor" value="#000000" /><param name="movie" value="http://fotki.yandex.ru/swf/slideshow" /><param name="allowFullScreen" value="true" /><embed src="http://fotki.yandex.ru/swf/slideshow" allowFullScreen="true" width="500" height="375" flashvars="author=ya-events&mode=album&effects=1&time=5&id=150630" type="application/x-shockwave-flash" bgcolor="#000000" /></object>
+
 После митапа мы провели опрос, где выяснилось, что большинство разработчиков сообщества БЭМ на будущих встречах хотят услышать об опыте внедрения БЭМ вне Яндекса, пообщаться с командой БЭМ и с другими участниками сообщества вживую, а также найти единомышленников. 
 
 Мы обязательно будем работать в этом направлении, а вы помогайте нам своим фидбеком!
