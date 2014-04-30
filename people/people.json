@@ -319,6 +319,28 @@
             "info": ""
         }
     },
+    "dulin-marat": {
+        "en": {
+            "firstName": "Marat",
+            "lastName": "Dulin",
+            "avatar": "https://avatars2.githubusercontent.com/u/176898?s=120",
+            "github": "mdevils",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Марат",
+            "lastName": "Дулин",
+            "avatar": "https://avatars2.githubusercontent.com/u/176898?s=120",
+            "github": "mdevils",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
     "khachaturov-leonid": {
         "en": {
             "firstName": "Leonid",
