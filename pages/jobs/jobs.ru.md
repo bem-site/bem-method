@@ -43,6 +43,7 @@
 
 Текущие вакансии в офисы Яндекса:
 -----------------
+  * [Разработчик инфраструктуры на JavaScript (БЭМ)](http://company.yandex.ru/job/vacancies/dev_infra_bem.xml) в офис Яндекса в Москве;
   * [Старший разработчик веб-интерфейсов](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) в офис Яндекса в Симферополе;
   * [Разработчик поисковых интерфейсов](http://company.yandex.ru/job/vacancies/dev_int_kiev.xml) в офис Яндекса в Симферополе;
   * [Разработчик интерфейсов Яндекс.Директа](http://company.yandex.ru/job/vacancies/dev_int_direct.xml) в офис Яндекса в Симферополе;
