@@ -43,7 +43,7 @@ If you recognize yourself in the description above, please submit your CV with a
 
 Current Yandex openings:
 -----------------
-  * [Java Script/BEM Infrastructure Developer](http://company.yandex.ru/job/vacancies/dev_infra_bem.xml) in Yandex.Moscow;
+  * [JavaScript/BEM Infrastructure Developer](http://company.yandex.ru/job/vacancies/dev_infra_bem.xml) in Yandex.Moscow;
   * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
   * [Search Interfaces Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_kiev.xml) in Yandex.Simferopol;
   * [Yandex.Direct Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_direct.xml) in Yandex.Simferopol;
