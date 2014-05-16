@@ -1,5 +1,5 @@
 # Модификаторы
-В БЭМ модификаторы выражают состояние блока. Чтобы привести блок в новое
+В БЭМ-модификаторы выражают состояние блока. Чтобы привести блок в новое
 состояние, ему назначают модификатор. Это запускает соответствующий модификатору
 коллбэк.
 
@@ -22,14 +22,14 @@
 [002-change-modifier](http://bem.github.io/bem-js-tutorial/pure.bundles/002-change-modifier/002-change-modifier.html)
 вы можете увидеть кнопку, меняющую свое состояние по клику на нее.
 
-Кнопка — это БЭМ блок `call-button`, представленный CSS, JavaScript и шаблонами.
+Кнопка — это БЭМ-блок `call-button`, представленный CSS, JavaScript и шаблонами.
 Все эти технологии находятся в
 [папке
 блока](https://github.com/bem/bem-js-tutorial/tree/master/pure.bundles/002-change-modifier/blocks/call-button).
 
-В JavaScript файле
+В JavaScript-файле
 [blocks/call-button/call-button.js](https://github.com/bem/bem-js-tutorial/blob/master/pure.bundles/002-change-modifier/blocks/call-button/call-button.js)
-— стандартная декларация для DOM блока.
+— стандартная декларация для DOM-блока.
 
 Коллбэк, соответствующий модификатору `js_inited`, запускается, когда ядро
 инициализирует блок. В этом примере все начинается с назначения обработчика для
@@ -125,7 +125,7 @@ provide(DOM);
 
 >> <a href="http://bem.github.io/bem-js-tutorial/pure.bundles/003-element-modifier/003-element-modifier.html">003-element-modifier.html</a></pre>
 
-Согласно БЭМ модификаторы могут быть не только у блоков, но и у элементов.
+Согласно БЭМ-модификаторы могут быть не только у блоков, но и у элементов.
 Используемые для этого методы похожи.
 
 Посмотрите на следующем примере
