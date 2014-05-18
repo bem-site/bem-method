@@ -119,7 +119,7 @@
       <b:auth>
         …
       </b:auth>
-    <e:column>
+    </e:column>
   </b:head>
 </b:page>
 ```
