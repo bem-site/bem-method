@@ -16,6 +16,6 @@
 Репозиторий на github: [github.com/bem/bem-bl/](http://github.com/bem/bem-bl/).
 
 ### bem-components
-[https://github.com/bem/bem-components/](bem-components) — библиотека блоков для управления формами. Содержит абстрагированные от дизайна базовые реализации и опциональные стилевых темы: новый островной дизайн Яндекса и тему simple.
+[bem-components](https://github.com/bem/bem-components/) — библиотека блоков для управления формами. Содержит абстрагированные от дизайна базовые реализации и опциональные стилевых темы: новый островной дизайн Яндекса и тему simple.
 
 Репозиторий на github: [github.com/bem/bem-components/](https://github.com/bem/bem-components/).
