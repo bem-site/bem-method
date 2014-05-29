@@ -14,3 +14,8 @@
 На данный момент развитие библиотеки новыми блоками приостановлено, проект в статусе поддержки. Новые проекты рекомендуется разрабатывать на базе библиотеки bem-core.
 
 Репозиторий на github: [github.com/bem/bem-bl/](http://github.com/bem/bem-bl/).
+
+### bem-components
+[https://github.com/bem/bem-components/](bem-components) — библиотека блоков для управления формами. Содержит абстрагированные от дизайна базовые реализации и опциональные стилевых темы: новый островной дизайн Яндекса и тему simple.
+
+Репозиторий на github: [github.com/bem/bem-components/](https://github.com/bem/bem-components/).
