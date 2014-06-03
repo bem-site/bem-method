@@ -72,7 +72,7 @@ A block is an independent interface piece that preserves a design point and some
 functionality. Anything that can be taken as a solid piece and can be put into a
 page is an interface block.
 
-<table border="0">
+<table>
   <tr>
       <td colspan="2" align="center">
           <img
@@ -108,7 +108,7 @@ blocks.
 Futhermore, some blocks are large. They usually preserve other blocks. But they
 still are solid independent pieces.
 
-<table border="0">
+<table>
     <tr>
         <td colspan="2">
             <img
@@ -599,7 +599,7 @@ write the import instruction linking it to your page.
 ##Modifier
 Now to the last notion, a `modifier`.
 
-<table border="0">
+<table>
     <tr>
         <td>
             <img
