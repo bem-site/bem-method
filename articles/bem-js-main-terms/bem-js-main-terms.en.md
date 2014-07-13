@@ -1,11 +1,11 @@
-# JavaScript for BEM: The Main Terms
+# JavaScript for BEM: main terms
 
 Stack of BEM technologies contains a block [i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html).
 
 It's JavaScript implementation uses BEM data domain. The use of this library allows one to manipulate the client-side JavaScript/DOM in *BEM-Style* according to *BEM-Principles*, not only in the design of visible components, but also their behavior.
 
 
-## Why Do We Need One More Framework?
+## Why do we need one more framework?
 
 Principally, all existent JavaScript libraries can be divided into the following categories:
 
@@ -30,7 +30,7 @@ The same thing happened to BEM.  Initially, we understood that we wanted to have
 
 This is why the JavaScript was written for the *helper block* [i-bem.js](https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem) which lives over at GitHub.  It is the core framework for writing JavaScript in `BEM Terminology`.
 
-## Connection With HTML Code
+## Connection with HTML code
 As all JavaScript components, code for `i-bem.js` has to be coupled with some HTML, eventually intended to be the functional code behind some part of an interface.  In order to use `i-bem` all you have to do is add the CSS-Class `i-bem`, and define the `onclick` attribute to contain the parameters of the block.
 
 ```js
@@ -48,7 +48,7 @@ If you are curious about why `onclick` attribute is used, see Sergey Berezhnoy's
 
 Usually, the blocks initialization starts on `domReady` event.  Thanks to the ability to read the `onclick` attribute and receive a native javascript object we don't need any `id` components or parse CSS classes.  All blocks marked with `i-bem` CSS class will be transformed according to their parameter's components.
 
-## Behavior Declaration
+## Behavior declaration
 A block's behavior is described in a JavaScript file which has the same name as the block it's self (`myblock.js`).
 
 From an OOP point of view, similar blocks form classes.  Furthermore, for every block on the page an instance of each corresponding "class" is generated.
@@ -96,7 +96,7 @@ BEM.DOM.decl('myblock', {
 
 Other than inheritance by definition levels, a block has the possibility to inherit one from another block.  Because of the possibility of inheritance from one level to another, it's better to understand this of the merging of implementations.
 
-## Selectors of Blocks
+## Selectors of blocks
 To find other blocks it is possible to use of the `find*` methods, it depends on where the desirable block is located relative to the current block:
 
 ```js
