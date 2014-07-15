@@ -1,3 +1,5 @@
+Originally published by <a href="http://www.smashingmagazine.com/">Smashing Magazine</a>. 
+
 Front-end development is no longer about individual frameworks. Tools are available — we merely have to choose. To make the right choices for your project, you need to start with a general approach, or <strong>methodology</strong>. But most methodologies have been created by big companies? Are they still useful for small companies, or do we need to reinvent them at a small scale?
 
 You probably already know of <a href="http://bem.info">BEM</a>, one of those methodologies developed by a big company — namely, <a href="http://yandex.com">Yandex</a>. BEM posits that three basic entities (<strong>b</strong>locks, <strong>e</strong>lements and <strong>m</strong>odifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
