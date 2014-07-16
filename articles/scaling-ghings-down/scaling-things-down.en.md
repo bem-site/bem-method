@@ -207,7 +207,7 @@ We’ll go through a development paradigm using as little code as possible. It w
 The first step is to embrace a <strong>declarative paradigm</strong>. Declarative programming is an approach that concentrates on the “what,” not the “how.” Regular expressions, SQL and XSLT are all declarative, and they specify not the control flow, but rather the logic behind it. When doing declarative programming, you’d start by describing a set of <strong>conditions</strong>, each of them mapped to specific <strong>actions</strong>.
 
 In BEM, conditions are represented by <strong>modifiers</strong>, and <strong>any action can only happen on a block or element</strong>. The code examples in this article will use the <code>i-bem.js</code> framework, written and open-sourced by Yandex, but your favorite framework might be able to do similar or better things because declarative programming is not tied to a specific implementation.
-<pre><code class="language-javascript">
+```js
 BEM.DOM.decl('b-dropdown', {
    onSetMod: {
       disabled: function(modName, modVal) {
@@ -224,13 +224,13 @@ BEM.DOM.decl('b-dropdown', {
       }
    },
    /* … */
-</code></pre>
+```
 The code snippet above defines actions for two modifiers on a <code>b-dropdown</code> block.
 
 These are similar to event handlers, but all states get immediately reflected in the CSS. Modifiers are still stored as class names on the corresponding block and element entities.
 
 Enabling and disabling different key bindings on a <code>b-editor</code> block is another example of how to use modifiers:
-<pre><code class="language-javascript">
+```js
 BEM.DOM.decl('b-editor', {
    onSetMod: {
       hotkeys: {
@@ -252,21 +252,21 @@ BEM.DOM.decl('b-editor', {
       }
    }
    /* … */
-</code></pre>
+```
 In this example, we see how modifiers bring logic to our transitions in state.
 <h4>Methods</h4>
 With a declarative approach, methods are not always “tied” to a component automatically. Instead, they, too, can be <strong>declared</strong> to belong to some instances under certain circumstances:
-<pre><code class="language-javascript">
+```js
 BEM.DOM.decl({ name : 'b-popup', modName : 'type', modVal : 'inplace' }, {
    appear: function() {
       // makeYouHappy();
    }
 });
-</code></pre>
+```
 This method is defined only for blocks that have the specific <code>type</code> modifier: <code>inplace</code>.
 
 As in classic object-oriented programming, you can extend semantically defined methods by providing even more specific <strong>declarations</strong> and reuse the original code if necessary. So, both overrides and extensions are possible. For example:
-<pre><code class="language-javascript">
+```js
 BEM.DOM.decl({'name': 'b-link', 'modName': 'pseudo', 'modVal': 'yes'}, {
    _onClick : function() {
       // runs the basic _onClick defined
@@ -278,13 +278,13 @@ BEM.DOM.decl({'name': 'b-link', 'modName': 'pseudo', 'modVal': 'yes'}, {
       this.setMod('status', 'clicked');
    }
 });
-</code></pre>
+```
 As specified by this definition, the extended <code>_onClick</code> method runs only on <code>b-link</code> instances with a <code>_pseudo_yes</code> modifier. In all other cases, the “original” method is implemented.
 
 Semantics will slowly migrate from your markup (where it’s not needed anymore) to your code (where it supports modularity and readability, making it easier to work with).
 <h4>“… Sitting in a (BEM) tree”</h4>
 What is the practical use of a declarative approach if it is way too abstract? The idea is to work with a BEM tree, which is semantic and controlled by you, instead of a DOM tree, which is tied to the markup and specifics of implementation:
-<pre><code class="language-javascript">
+```js
 BEM.DOM.decl('b-checkbox-example', {
    onSetMod: {
       js: {
@@ -300,11 +300,11 @@ BEM.DOM.decl('b-checkbox-example', {
    }
 }
 );
-</code></pre>
+```
 Other APIs exist, like <code>this.elem('name')</code> and <code>this.findBlockOutside('b-block')</code>. Instead of providing a complete reference, I’d just highlight BEM trees as the API’s foundation.
 <h4>Modify modifiers to control controls</h4>
 The previous section leaves the important subject of <strong>application state changes</strong> unaddressed. When app states are declared, you need a way to perform transitions. This should be done by operating on a BEM tree, with the help of modifiers. BEM modifiers can be set directly on DOM nodes (as class names), but we cannot effectively monitor that (for technical reasons). Instead, <code>i-bem.js</code> provides a simple API that you can use as inspiration:
-<pre><code class="language-javascript">
+```js
 // setter
 this.setMod(modName, modVal);
 // getter
@@ -315,7 +315,7 @@ this.hasMod(modName, modVal);
 this.toggleMod(modName, modVal);
 // remove modifier
 this.delMod(modName);
-</code></pre>
+```
 Thus, we can internally hook into the modifier change call and run all of the actions specified for this particular case.
 <h4>BEM-oriented code explained</h4>
 Many JavaScript libraries provide enough power to support the BEM methodology without introducing a completely new tool chain. Here’s a check list to see whether the one you’re looking at does so:
@@ -358,7 +358,7 @@ Documentation helps a lot, but let’s be honest, it usually doesn’t exist. Wh
 	<li>element modifiers for fine-grained control.</li>
 </ul>
 Explaining with examples is easier. What would you say about the following block?
-<pre><code class="language-markup">
+```
 b-popup
   _hidden
   _size _big
@@ -377,7 +377,7 @@ b-popup
 	__controls
 	__ok
 	__cancel
-</code></pre>
+```
 By now, <em>you</em> can tell <em>me</em> what this block is about!
 
 Remember, you’ve seen zero documentation. This block could be a structure that you’ve defined in a CSS preprocessor or a YAML meta description.
@@ -385,30 +385,30 @@ Remember, you’ve seen zero documentation. This block could be a structure that
 In a growing project, an inconsistent file structure could slow you down. The structure will only become more complex and less flexible with time. Unfortunately, tools and frameworks do not solve the problem because they either deal with their own internal data or offer no specific structure at all. You and only you must define a structure for the project. Here, BEM can help as well.
 <h4>Block library</h4>
 A block’s folder is the basis of all BEM-based file structures. Block names are unique within the project, as are folder names. Because blocks do not define any hierarchies, keep block folders as a flat structure:
-<pre><code class="language-markup">
+```
 /blocks
   /b-button
   /b-heading
   /b-flyout
   /b-menu
   /b-text-field
-</code></pre>
+```
 Libraries and other dependencies may be defined as blocks, too. For example:
-<pre><code class="language-markup">
+```
 /blocks
   …
   /b-jquery
   /b-model
-</code></pre>
+```
 Inside each folder, the easiest arrangement would be to give each “technology” a distinct file:
-<pre><code class="language-markup">
+```
 /b-menu
   b-menu.js
   b-menu.css
   b-menu.tpl
-</code></pre>
+```
 A more advanced approach would be to store some definitions of elements and modifiers in separate subfolders and then implement in a modular way:
-<pre><code class="language-markup">
+```
 /b-menu
   /__item
 	b-menu__item.css
@@ -424,7 +424,7 @@ A more advanced approach would be to store some definitions of elements and modi
   b-menu.css
   b-menu.js
   b-menu.tpl
-</code></pre>
+```
 This gives you control, but it also requires more time and effort to support the structure. The choice is yours.
 <h4>Redefinition levels</h4>
 What if you need to extend the styles and functionality of components or share code between projects without changing (or copying and pasting) the original source?
@@ -432,7 +432,7 @@ What if you need to extend the styles and functionality of components or share c
 Big web apps, sections and pages could be significantly different, as could be the blocks they use. At the same time, a shared block library often has to be extended, individual items redefined and new items added. BEM addresses this with the concept of redefinition levels. As long as you’ve chosen a file structure, it should be the <strong>same for any block</strong>. That’s why several block libraries can be on different levels of an application.
 
 For example, you could have a common block library as well as several specific libraries for individual pages:
-<pre><code class="language-markup">
+```
 /common
   /blocks
     /b-heading
@@ -447,7 +447,7 @@ For example, you could have a common block library as well as several specific l
 	  /b-demo
 	  /b-wizard
 	  …
-</code></pre>
+```
 Now, <code>/common/blocks</code> will aggregate blocks used across the whole app.
 
 For each page (as for <code>/pages/intro</code> in our example), we define a new <strong>redefinition level</strong>: A specific library, <code>/pages/intro/blocks</code>, adds new blocks and extends some common ones (see the extra <code>_decorated</code> modifier for the common <code>b-heading</code> block).
@@ -455,11 +455,11 @@ For each page (as for <code>/pages/intro</code> in our example), we define a new
 Your build tool can use these levels to provide page-specific builds.
 
 Separation of libraries can be based on the form factors of devices:
-<pre><code class="language-markup">
+```
 /common.blocks
 /desktop.blocks
 /mobile.blocks
-</code></pre>
+```
 The <code>common</code> library stays “on top,” while the <code>mobile</code> or <code>desktop</code> block bundle extends it, being the next redefinition level. The same mechanism applies when several different projects need to share blocks or when a cross-project common block library exists to unify the design and behavior across several services.
 <h4>The build process</h4>
 We’ve ended up with many small files, which is good for development but a disaster for production! In the end, we want all of the stuff to be loaded in several big chunks. So, we need a build process.
