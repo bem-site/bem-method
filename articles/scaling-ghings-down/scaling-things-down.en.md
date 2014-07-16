@@ -8,7 +8,7 @@ I’ve spent some time with Yandex and BEM, and I know that this methodology wor
 
 Would smaller teams benefit from BEM? I wasn’t sure. BEM is a layer of abstraction, offered with other tools and technologies. A small agile team switching to a full BEM stack would be questionable. Could the idea — the approach itself — be useful?
 
-<figure><img title="" src="http://www.smashingmagazine.com/wp-content/uploads/2014/06/bem-methodology-opt.png" alt="" width="500" height="316" /></figure>I had to revisit this question when my career recently took me from Yandex to Deltamethod, a mid-sized startup in Berlin. Facing ambitious development plans, we decided to try BEM on a smaller scale. We wanted the same benefits that Yandex gets from BEM: code sharing, a live style guide, scalability, faster development. We also wanted to keep our toolchain and upgrade the existing code base gradually, rather than start from scratch.
+I had to revisit this question when my career recently took me from Yandex to Deltamethod, a mid-sized startup in Berlin. Facing ambitious development plans, we decided to try BEM on a smaller scale. We wanted the same benefits that Yandex gets from BEM: code sharing, a live style guide, scalability, faster development. We also wanted to keep our toolchain and upgrade the existing code base gradually, rather than start from scratch.
 
 For some time, we’ve been focusing on architecture and the basics, trying aspects of BEM one by one, assessing the results, then moving forward. We keep writing down ideas, guidelines, useful tips and short tutorials. I am now convinced that BEM applies to small projects as well. I’ve written down my findings, in case you find them useful.
 <h3>BEM 101</h3>
@@ -44,13 +44,13 @@ How do you work with BEM while still using HTML? You do it by mapping DOM nodes 
 BEM uses CSS class names to denote blocks, elements and modifiers. Blocks, elements or modifiers cannot claim any “exclusive ownership” of DOM nodes. One DOM node may host several blocks. A node may be an element within one block and (at the same time) a container for another block.
 
 A DOM node being reused to host more than one BEM entity is called a “BEM mixin.” Please note that this is just a feature of convenience: Only combine things that can be combined — don’t turn a mix into a mess.
-<h4>The BEM Tree</h4>
+<h4>The BEM tree</h4>
 By consistently marking up a document with BEM entities, from the root block (i.e. <code>&lt;body&gt;</code> or even <code>&lt;html&gt;</code>) down to the innermost blocks, you form a <strong>semantic overlay</strong> to the DOM’s existing structure.
 
 This overlay is called a BEM tree.
 
 The BEM tree gives you the power to manipulate the whole document in BEM terms consistently, focusing on semantics and not on a DOM-specific implementation.
-<h3>Making Your First Move</h3>
+<h3>Making your first move</h3>
 You might be thinking, “I’ll give BEM a try. How do I start migrating my project to BEM? Can I do it incrementally?”
 
 Sure. Let’s start by defining some blocks. We will only cover semantics; we’ll proceed with specific technologies (like CSS and JavaScript) later on.
@@ -102,11 +102,11 @@ Select boxes don’t really need labels, and anything else here is more or less 
 Try to find more examples of blocks in your web projects.
 
 Classifying things according to BEM takes some practice. Feel free to share your findings, or <a href="mailto:info@bem.info">ask the BEM team your questions</a>!
-<h3>Let Your CSS Speak Out Loud</h3>
+<h3>Let your CSS speak out loud</h3>
 Perhaps you’ve heard a lot about BEM as a way to optimize CSS and are wondering how it works?
 
 As mentioned, BEM uses CSS class names to store information about blocks, elements and modifiers. With a simple naming convention, BEM teaches your CSS to speak, and it adds meaning that makes it simpler, faster, more scalable and easier to maintain.
-<h4>BEM Naming Conventions for CSS</h4>
+<h4>BEM naming conventions for CSS</h4>
 Here are the prerequisites:
 <ul>
 	<li>Keep the names of blocks, elements and modifiers short and semantic.</li>
@@ -140,10 +140,10 @@ Modifier classes are used together with the block and element class, like so:
 <pre><code class="language-html">
 &lt;div class="b-heading b-heading_level_alpha"&gt;BEM&lt;/div&gt;
 </code></pre>
-<h3>Why Choose BEM CSS Over Other Approaches</h3>
-<h4>One Class to Rule Them All</h4>
+<h3>Why Choose BEM CSS over other approaches</h3>
+<h4>One class to rule them all</h4>
 CSS sometimes depends a lot on the document’s structure — if you change the structure, you break the CSS. With BEM, you can drop tag names and IDs from your CSS completely, using only class names. This mostly frees you from structural dependencies.
-<h4>Specificity Problems Solved</h4>
+<h4>Specificity problems solved</h4>
 Big chunks of CSS are hard to maintain because they keep redefining themselves unpredictably.
 
 This issue is called CSS specificity. The original problem is that both tag names and element IDs change selector specificity in such a way that if you rely on inheritance (the most common thing to expect from CSS), then you can only override it with selectors of the same or higher specificity. BEM projects are least affected by this problem. Let’s see why.
@@ -164,7 +164,7 @@ You would add a tag name to the rule to make it work:
 td.final-summary { background-color: green }
 </code></pre>
 Because BEM provides unique class names for most styles, you would depend only on the order of rules.
-<h4>Bye-Bye Cascade?!</h4>
+<h4>Bye-Bye cascade?!</h4>
 Nested CSS selectors aren’t fast enough in old browsers and can create unintended overrides that break the styles of other elements. Eliminating a lot of the cascade from CSS is possible with BEM.
 
 How is this possible, and why is it important? Isn’t the cascade <em>supposed</em> to be there? Isn’t it the “C” in CSS)?
@@ -187,23 +187,23 @@ So, no cascade?! Well, almost. In some cases, you might need two class names in 
 }
 </code></pre>
 The nice thing is that any rule that redefines this one will likely depend on another modifier (because of the unified semantics!), which means that specificity is still the same and only the rule order matters. Surely, we can invent more cases that require even more cascading (internal element dependencies, nested modifiers, etc.). While the BEM methodology allows for that, you’ll hardly ever need it in real code.
-<h4>Absolutely Independent Blocks</h4>
+<h4>Absolutely independent blocks</h4>
 If blocks depend on each other’s styles, how do we express that in CSS? The answer is, they shouldn’t. Each block must contain all styles necessary for its presentation. The overhead is minimal, but this ensures that you can move blocks freely within a page or even between projects without extra dependencies. Avoid project-wide CSS resets for the same reason.
 
 This is not the case for elements because they are guaranteed to stay within their parent block and, thus, inherit block styles accordingly.
-<h3>Alternative BEM Naming Conventions</h3>
+<h3>Alternative BEM naming conventions</h3>
 A number of alternative BEM naming conventions exist. Which should we use?
 
 BEM’s “official” naming convention for CSS is not the only one possible. <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Nicolas Gallagher once proposed</a> some improvements, and other adopters have, too. One idea is to use attributes to represent modifiers, and CSS prefixes aren’t “standardized” at all.
 
 The biggest advantage of the syntax proposed by the team behind BEM is that it’s the one supported in open-source tools distributed by Yandex, which you might find handy at some point. In the end, the methodology is what matters, not the naming convention; if you decide to use a different convention, just make sure you do it for a reason.
-<h3>Semantic JavaScript: BEM-Oriented Code</h3>
+<h3>Semantic JavaScript: BEM-oriented code</h3>
 How do you apply the BEM model to JavaScript code?
 
 Many publishers and authors view BEM as a naming convention only for CSS, but that brings only half of the benefits to a project. The BEM methodology was designed to fix (i.e. polyfill) non-semantic DOM structures at all levels (HTML, CSS, JavaScript, templates and UX design), similar to how jQuery “fixes” broken DOM APIs. HTML was designed as a text markup language, but we use it to build the most interactive interfaces around. Experimental efforts such as Web Components strive to bring semantics back into our markup and code, but BEM can be used in a full range of browsers now, while retaining compatibility with future approaches, because it does not depend on any particular API or library.
 
 We’ll go through a development paradigm using as little code as possible. It will be really high-level and abstract, but the abstractness will help us to understand the idea more clearly. You’ll notice another term in the heading above: “BEM-oriented code.” Before explaining what’s behind that, let’s go over some ideas that are useful to know when applying BEM to JavaScript.
-<h4>Learning to Declare</h4>
+<h4>Learning to declare</h4>
 The first step is to embrace a <strong>declarative paradigm</strong>. Declarative programming is an approach that concentrates on the “what,” not the “how.” Regular expressions, SQL and XSLT are all declarative, and they specify not the control flow, but rather the logic behind it. When doing declarative programming, you’d start by describing a set of <strong>conditions</strong>, each of them mapped to specific <strong>actions</strong>.
 
 In BEM, conditions are represented by <strong>modifiers</strong>, and <strong>any action can only happen on a block or element</strong>. The code examples in this article will use the <code>i-bem.js</code> framework, written and open-sourced by Yandex, but your favorite framework might be able to do similar or better things because declarative programming is not tied to a specific implementation.
@@ -282,7 +282,7 @@ BEM.DOM.decl({'name': 'b-link', 'modName': 'pseudo', 'modVal': 'yes'}, {
 As specified by this definition, the extended <code>_onClick</code> method runs only on <code>b-link</code> instances with a <code>_pseudo_yes</code> modifier. In all other cases, the “original” method is implemented.
 
 Semantics will slowly migrate from your markup (where it’s not needed anymore) to your code (where it supports modularity and readability, making it easier to work with).
-<h4>“… Sitting in a (BEM) Tree”</h4>
+<h4>“… Sitting in a (BEM) tree”</h4>
 What is the practical use of a declarative approach if it is way too abstract? The idea is to work with a BEM tree, which is semantic and controlled by you, instead of a DOM tree, which is tied to the markup and specifics of implementation:
 <pre><code class="language-javascript">
 BEM.DOM.decl('b-checkbox-example', {
@@ -302,7 +302,7 @@ BEM.DOM.decl('b-checkbox-example', {
 );
 </code></pre>
 Other APIs exist, like <code>this.elem('name')</code> and <code>this.findBlockOutside('b-block')</code>. Instead of providing a complete reference, I’d just highlight BEM trees as the API’s foundation.
-<h4>Modify Modifiers to Control Controls</h4>
+<h4>Modify modifiers to control controls</h4>
 The previous section leaves the important subject of <strong>application state changes</strong> unaddressed. When app states are declared, you need a way to perform transitions. This should be done by operating on a BEM tree, with the help of modifiers. BEM modifiers can be set directly on DOM nodes (as class names), but we cannot effectively monitor that (for technical reasons). Instead, <code>i-bem.js</code> provides a simple API that you can use as inspiration:
 <pre><code class="language-javascript">
 // setter
@@ -317,7 +317,7 @@ this.toggleMod(modName, modVal);
 this.delMod(modName);
 </code></pre>
 Thus, we can internally hook into the modifier change call and run all of the actions specified for this particular case.
-<h4>BEM-Oriented Code Explained</h4>
+<h4>BEM-oriented code explained</h4>
 Many JavaScript libraries provide enough power to support the BEM methodology without introducing a completely new tool chain. Here’s a check list to see whether the one you’re looking at does so:
 <ul>
 	<li><strong>Embraces a declarative approach</strong></li>
@@ -335,7 +335,7 @@ jQuery users could try these lightweight plugins to extend their code with BEM m
 	<li><a href="http://xslc.org/jquery-bem/">jQuery BEM</a> plugin</li>
 	<li><a href="http://github.com/ingdir/jquery-bemhelpers/">jQuery BEM Helpers</a> (<code>setMod</code> and <code>getMod</code>)</li>
 </ul>
-<h3>From A Naming Convention To A Style Guide</h3>
+<h3>From a naming convention to a style guide</h3>
 If you work a lot with designers, your team would also benefit from a BEM approach.
 
 Imagine that you had a style guide created by a Real Designer™. You would usually get it as a PDF file and be able to learn everything about the project’s typefaces, color schemes, interface interaction principles and so on. It serves perfectly as a graphic book that is interesting to look at in your spare time. However, it would be of little to no use to most front-end developers — at the level of code, front-end developers operate with totally different entities.
@@ -347,7 +347,7 @@ Once the designer is familiar with BEM’s terms, they can iterate towards desig
 The biggest change, however, is closing the gap between screen and code by operating on the same entities in the UI design and development. Like the famous Babel fish, BEM enables you to understand people who have no idea how your code works.
 
 On a bigger team, working on individual blocks is easier because it can be done in parallel, and big features do not end up being owned by any one developer. Instead, you share the code and help each other. The more you align the JavaScript HTML and CSS with BEM, the less time you need to become familiar with new code.
-<h3>BEM As High-Level Documentation</h3>
+<h3>BEM as high-level documentation</h3>
 Despite all advice, developers still don’t write enough documentation. Moving projects between developers and teams is non-trivial. Code maintenance is all about minimizing the time a developer needs to grasp a component’s structure.
 
 Documentation helps a lot, but let’s be honest, it usually doesn’t exist. When it does exist, it usually covers methods, properties and APIs, but hardly anything about the flow of components, states or transitions. With minimally structured BEM-oriented code, you will immediately see the following:
@@ -381,9 +381,9 @@ b-popup
 By now, <em>you</em> can tell <em>me</em> what this block is about!
 
 Remember, you’ve seen zero documentation. This block could be a structure that you’ve defined in a CSS preprocessor or a YAML meta description.
-<h3>BEM And File Structure</h3>
+<h3>BEM and file structure</h3>
 In a growing project, an inconsistent file structure could slow you down. The structure will only become more complex and less flexible with time. Unfortunately, tools and frameworks do not solve the problem because they either deal with their own internal data or offer no specific structure at all. You and only you must define a structure for the project. Here, BEM can help as well.
-<h4>Block Library</h4>
+<h4>Block library</h4>
 A block’s folder is the basis of all BEM-based file structures. Block names are unique within the project, as are folder names. Because blocks do not define any hierarchies, keep block folders as a flat structure:
 <pre><code class="language-markup">
 /blocks
@@ -426,7 +426,7 @@ A more advanced approach would be to store some definitions of elements and modi
   b-menu.tpl
 </code></pre>
 This gives you control, but it also requires more time and effort to support the structure. The choice is yours.
-<h4>Redefinition Levels</h4>
+<h4>Redefinition levels</h4>
 What if you need to extend the styles and functionality of components or share code between projects without changing (or copying and pasting) the original source?
 
 Big web apps, sections and pages could be significantly different, as could be the blocks they use. At the same time, a shared block library often has to be extended, individual items redefined and new items added. BEM addresses this with the concept of redefinition levels. As long as you’ve chosen a file structure, it should be the <strong>same for any block</strong>. That’s why several block libraries can be on different levels of an application.
@@ -461,7 +461,7 @@ Separation of libraries can be based on the form factors of devices:
 /mobile.blocks
 </code></pre>
 The <code>common</code> library stays “on top,” while the <code>mobile</code> or <code>desktop</code> block bundle extends it, being the next redefinition level. The same mechanism applies when several different projects need to share blocks or when a cross-project common block library exists to unify the design and behavior across several services.
-<h4>The Build Process</h4>
+<h4>The build process</h4>
 We’ve ended up with many small files, which is good for development but a disaster for production! In the end, we want all of the stuff to be loaded in several big chunks. So, we need a build process.
 
 Yandex has an open-source build tool, <a href="http://bem.info/articles/borschik">Borschik</a>, which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> and <a href="https://github.com/css/csso">CSS Optimizer</a>. Tools like <a href="http://requirejs.org">RequireJS</a> can also facilitate the building process, taking care of dependency tracking.
@@ -469,7 +469,7 @@ Yandex has an open-source build tool, <a href="http://bem.info/articles/borschik
 For a more comprehensive approach, have a look at <a href="http://bem.info/tools/bem/">bem-tools</a>.
 
 The clearest lesson I’ve learned from BEM is not to be afraid of granularity, as long as you know how to build the whole picture.
-<h3>Beyond Frameworks</h3>
+<h3>Beyond frameworks</h3>
 For a while, I was pretty skeptical that BEM is suitable for small projects. My recent experience in a startup environment proved me wrong. BEM is not just for big companies. It works for everyone by bringing unified semantics across all of the front-end technologies that you use.
 
 But that is not the biggest impact of the BEM methodology on my projects. BEM enables you to see beyond frameworks. I remember times when people seriously discussed the best ways to bind event handlers to elements, and when DOM libraries competed for world dominance, and when frameworks were the next big buzz. Today, we can no longer depend on a single framework, and BEM takes the next step by providing a design foundation, giving us a lot of freedom to implement.
@@ -478,4 +478,3 @@ Visit the <a href="http://bem.info">BEM</a> website for extra resources, GitHub 
 
 Long story short, BEM it!
 
-<em>(al)</em>
