@@ -1,4 +1,4 @@
-Originally published by <a href="http://www.smashingmagazine.com/">Smashing Magazine</a>. 
+Originally published by <a href="https://h.yandex-team.ru/?http%3A%2F%2Fwww.smashingmagazine.com%2F2014%2F07%2F17%2Fbem-methodology-for-small-projects%2F">Smashing Magazine</a>. 
 
 Front-end development is no longer about individual frameworks. Tools are available — we merely have to choose. To make the right choices for your project, you need to start with a general approach, or <strong>methodology</strong>. But most methodologies have been created by big companies? Are they still useful for small companies, or do we need to reinvent them at a small scale?
 
