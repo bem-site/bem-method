@@ -72,7 +72,7 @@ and get the result
 }
 
 /* b-footer/b-footer.css begin */
-.b-header
+.b-footer
 {
     border-top: 1px solid #000;
     background: url("b-footer/bg.png");
