@@ -39,6 +39,6 @@ We deleted outdated versions of bem-core library's documentation in the “Libra
 
 We also checked “Tutorials” and “Articles” sections. First now gathers materials about how to do something step by step, containing instructions or practical knowledge. Second will contain more common materials about BEM including those that are written not by our team but by BEM-community developers including those that were published in some place else. 
 
-If you know such articles and think they might be handy to be published at bem.info; moreover, you wrote such articles by yourself and want them to be published here — email us at info@bem.info, and we will be happy to do so.
+If you know such articles and think they might be handy to be published at bem.info; moreover, you wrote such articles by yourself and want them to be published here — email us at [info@bem.info](mailto:info@bem.info), and we will be happy to do so.
 
-If you notice a mistake, 404 or know how to improve usability on the site, do not stay silent, our mailbox info@bem.info is waiting for your emails!
+If you notice a mistake, 404 or know how to improve usability on the site, do not stay silent, our mailbox [info@bem.info](mailto:info@bem.info) is waiting for your emails!
