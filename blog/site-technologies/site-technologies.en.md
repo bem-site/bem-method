@@ -1,5 +1,3 @@
-# Explaining, guiding
-
 Hi! 
 
 We are frequently asked about what do we mean by “technologies” in BEM, what kind of them we have, how do they work and so on. Let us explain :)
