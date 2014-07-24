@@ -407,6 +407,22 @@
             "info": ""
         }
     },
+    "belaya-inna": {
+        "en": {
+            "firstName": "Inna",
+            "lastName": "Belaya",
+            "avatar": "https://avatars1.githubusercontent.com/u/6286656?u=0b634ab661a1fb65ff312010387b066bfcb88aa1",
+            "github": "innabelaya",
+            "twitter": "inna__neige"
+        },
+        "ru": {
+            "firstName": "Инна",
+            "lastName": "Белая",
+            "avatar": "https://avatars1.githubusercontent.com/u/6286656?u=0b634ab661a1fb65ff312010387b066bfcb88aa1",
+            "github": "innabelaya",
+            "twitter": "inna__neige"
+        }
+    },
     "nekhaieva-aleksandra": {
         "en": {
             "firstName": "Aleksandra",
