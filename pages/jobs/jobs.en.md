@@ -44,7 +44,8 @@ If you recognize yourself in the description above, please submit your CV with a
 Current Yandex openings:
 -----------------
   * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
-  * [Senior Frontend Developer](https://h.yandex-team.ru/?http%3A%2F%2Fcompany.yandex.ru%2Fjob%2Fvacancies%2Fsendevweb.xml) in Yandex.Moscow.
+  * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/sendevweb.xml) in Yandex.Moscow;
+  * [Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) in Yandex.Moscow.
 
 Current non-Yandex openings requiring BEM knowledge:
 -----------------
