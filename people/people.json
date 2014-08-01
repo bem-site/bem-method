@@ -451,9 +451,31 @@
             "info": ""
         }
     },
+    "abramov-andrey": {
+        "en": {
+            "firstName": "Andrey",
+            "lastName": "Abramov",
+            "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/abramov-andrey/abramov-andrey.jpg",
+            "github": "andrewblond",
+            "email": [],
+            "twitter": "blond_ru",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Андрей",
+            "lastName": "Абрамов",
+            "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/abramov-andrey/abramov-andrey.jpg",
+            "github": "andrewblond",
+            "email": [],
+            "twitter": "blond_ru",
+            "skype": "",
+            "info": ""
+        }
+    },
     "gavryushin-evgeny": {
         "en": {
-            "firstName": "Eugeny",
+            "firstName": "Evgeny",
             "lastName": "Gavryushin",
             "avatar": "https://avatars1.githubusercontent.com/u/6376693?v=1&s=400",
             "github": "egavr",
