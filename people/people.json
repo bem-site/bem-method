@@ -451,6 +451,28 @@
             "info": ""
         }
     },
+    "gavryushin-evgeny": {
+        "en": {
+            "firstName": "Eugeny",
+            "lastName": "Gavryushin",
+            "avatar": "https://avatars1.githubusercontent.com/u/6376693?v=1&s=400",
+            "github": "egavr",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Евгений",
+            "lastName": "Гаврюшин",
+            "avatar": "https://avatars1.githubusercontent.com/u/6376693?v=1&s=400",
+            "github": "egavr",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
     "shirshin-maxim": {
         "en": {
             "firstName": "Maxim",
