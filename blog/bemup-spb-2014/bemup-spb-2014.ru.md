@@ -1,6 +1,6 @@
 ## BEMup в Санкт-Петербурге
 
-<img src="https://github.com/bem/bem-method/blob/bem-info-data/blog/bemup-spb-2014/keep-calm-and-bem.png" alt="Keep Calm and BEM" style="float:left;padding:0 0 20px 20px">
+<img src="https://raw.githubusercontent.com/bem/bem-method/bem-info-data/blog/bemup-spb-2014/keep-calm-and-bem.png" alt="Keep Calm and BEM" style="float:right;padding:0 0 20px 20px">
 
 **Когда**: 6 сентября 2014 года, суббота, начало в 9:00
 
@@ -10,7 +10,7 @@
 
 **Программа**:
 
-  * Мастер-класс наоброт: вы пишете БЭМ-проект, а мы подсказываем — Жека Константинов, Дима Белицкий
+  * Мастер-класс наоборот: вы пишете БЭМ-проект, а мы подсказываем — Жека Константинов, Дима Белицкий
   * БЭМ: новости проектов и последние релизы — Владимир Гриненко
   * bem-history и опыт контрибьюта в БЭМ — Алексей Кондратов
   * Прототипирование с БЭМ — Антон Виноградов
