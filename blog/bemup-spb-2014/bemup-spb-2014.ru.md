@@ -1,6 +1,6 @@
 ## BEMup в Санкт-Петербурге
 
-<img src="https://raw.githubusercontent.com/bem/bem-method/bem-info-data/blog/bemup-spb-2014/keep-calm-and-bem.png" alt="Keep Calm and BEM" style="float:right;padding:0 0 20px 20px">
+<img src="https://raw.githubusercontent.com/bem/bem-method/bem-info-data/blog/bemup-spb-2014/keep-calm-and-bem.png" alt="Keep Calm and BEM" style="float:right;padding:0 0 20px 20px;width:320px;height:auto;">
 
 **Когда**: 6 сентября 2014 года, суббота, начало в 9:00
 
