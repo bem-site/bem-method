@@ -1,5 +1,7 @@
 ## BEMup в Санкт-Петербурге
 
+<img src="https://github.com/bem/bem-method/blob/bem-info-data/blog/bemup-spb-2014/keep-calm-and-bem.png" alt="Keep Calm and BEM" style="float:left;padding:0 0 20px 20px">
+
 **Когда**: 6 сентября 2014 года, суббота, начало в 9:00
 
 **Где**: Санкт-Петербург, Пискаревский проспект, дом 2, корпус 2, литер Щ, [бизнес-центр «Бенуа»](http://company.yandex.ru/contacts/spb/)
