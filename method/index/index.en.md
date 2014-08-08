@@ -1,46 +1,30 @@
-Usually the website development process is based on the assumption that design and
-technical requirements will not change.
+A typical website development process is based on the assumption that the design and technical specification for a website do not change in the course of its development.
 
-A designer, a front-end developer and a programmer work each in their field,
-often without interfering each other:
-  1. A designer creates a site design in the form of design layout
-  1. Front-end developer create static HTML/CSS pages based on the design layout
-  1. Programmer creates templates from these static pages and then writes some JavaScript
+The designer, front-end developer and programmer each work in their respective areas, with little or no interaction between them:
 
-Such an approach works well only in the case if the website design remains the same
-all the time of his life and the changes only add more content.
+1. The designer prepares a series of mock-ups visualizing the design of the website.
+1. Based on the mock-ups, a static HTML/CSS layout is created.
+1. The result is passed on to the programmer, who develops templates in a server-side language and brings the site alive using JavaScript.
 
-But usually that is not happening. The website begins to live its own life being constantly
-developed. The design of the pages is gradually changing, new pages and new blocks are
-being added on them.
+This approach works wells only if the design of the website remains unchanged throughout its life, and any changes that occur are limited to content.
 
-If the website source code is not following the defined structure, if its development
-is not based on fixes rules, it gradually becomes more and more difficult to maintain.
-The website code gets beyond the control of its developers.
+However that is rarely the case, as normally the website begins to take a life of its own and evolve. The design of the pages gradually changes, new pages or new page blocks are added.
 
-In accord to BEM-methodology all the people taking part in the development of the website are
-working with a single codebase and are using the same terms to communicate, the same language:
-  1. Design of the website can change at any time, we must be ready for this
-  2. HTML/CSS code is developing together with the design, ready to its changes
-  3. Programmer and front-end developers are working together on the website codebase,
-     contributing to each other's code
+A website whose source code has no structure to it, and whose development is not based on following specifically defined rules, becomes more and more difficult to maintain. The website code eventually becomes unmanageable.
 
-### The conditions of the methodology emergence
-BEM-methodology was developed at [Yandex](http://company.yandex.com) 
-while working on a large number of web services, and is aimed to achieve following:
+The BEM approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language.
 
- * Fast-to-develop, long-lived projects  
-   It should be possible to develop and launch the first version of a website quickly with an
-   architecture that helps to maintain it in the long run.
- * Team scalability  
-   Adding new people to a product team should improve speed, not decrease it. We need to be
-   able to assign new members to a team without a steep learning curve.  
-   Code should be well-structured for a project to remain maintainable over time and
-   team changes.
- * Code reuse  
-   To maintain UI consistency and minimize development effort on typical interface
-   components, those components have to be easily reusable.
-   The source code should not have contextual dependency on the other code, it should be
-   easy to move that code to another place.
+1. You need to be prepared for the design of the website to change at any moment.
+1. The HTML/CSS code is built to accommodate any changes in the design, so the layout gets updated along with the design. 
+1. The programmer and the front-end developer collaborate on the website codebase, contributing to each other’s code.
 
-For years we kept looking for solutions to our problems, and at one point they became `BEM methodology`.
+
+### The origins of the BEM methodology
+The BEM methodology was developed at [Yandex](http://company.yandex.com), to address the following challenges identified in the creation of numerous services.
+
+- Standard projects should be developed fast and the results last long: a product created in a short time, built on an architecture that ensures its maintainability and longevity for years.
+- A project involves many people. The ability to efficiently organize people’s work in a team is important, whether it’s a team of two or dozens of developers.  
+- Scalable teams. Adding more people to a team should improve the team’s performance. A process must be in place that ensures that new developers are brought up to speed quickly and are duly allocated their specific areas of responsibility. Code must be carefully structured to ensure its maintainability over time and through team changes.
+- Code reuse. Each new project or interface element should not be started from scratch. Code reuse between similar tasks should be maximized within the company. Code should not be context-dependent but be easily transferable to different contexts.
+
+We were trying to find solutions to our problems. The solutions we found eventually became the `BEM methodology`.
