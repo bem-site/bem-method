@@ -18,11 +18,23 @@
 
 Короткий способ всё настроить выглядит так:
 
-- устанавливаем `smartcd` (если не хотите тонко настраивать `smartcd`, отвечайте на первый вопрос `Configure now? [Y/n]` — `N`):
+- устанавливаем `smartcd`:
 
     ```
     curl -L http://smartcd.org/install | bash
     ```
+    
+- создаем конфиг `~/.smartcd_config`, для этого при установке необходимо отвечать так:
+
+    ```
+    Configure now? [Y/n] y
+    Use all default settings? [Y/n] y
+    Would you like to configure smartcd in /Users/%username%/.smartcd_config? (recommended) [Y/n] y
+    Would you like to load your config file now? [Y/n] y
+    ```
+    
+    После вы увидите `Congratulations, you have installed smartcd!`, установка прошла успешно. Если вы используете `zsh`,
+    возможно, вам нужно будет вручную добавить строку `source ~/.smartcd_config` в ваш `.zshrc` файл для активации `smartcd` при загрузке.
 
 - создаём шаблон `npm-module` для `smartcd`:
 
