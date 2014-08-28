@@ -12,10 +12,23 @@ The tool [smartcd](https://github.com/cxreg/smartcd) can configure any directory
 
 Set up everything as follows:
 
-  - install `smartcd` (if you don't want to configure the smartcd, just answer the first question `Configure now? [Y/n]` — `N`)
+  - install `smartcd`:
     ```
     curl -L http://smartcd.org/install | bash
     ```
+    
+  - create config `~/.smartcd_config`, for this just answer to installer:
+
+    ```
+    Configure now? [Y/n] y
+    Use all default settings? [Y/n] y
+    Would you like to configure smartcd in /Users/%username%/.smartcd_config? (recommended) [Y/n] y
+    Would you like to load your config file now? [Y/n] y
+    ```
+    
+    Next, you will see `Congratulations, you have installed smartcd!`. Probably, if you use `zsh`, you should add `source ~/.smartcd_config` into
+    your `.zshrc` file manually.
+    
 
   - make template `npm-module` for `smartcd`
     ```
