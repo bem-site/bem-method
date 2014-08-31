@@ -13,7 +13,7 @@ allow us to build websites quickly and maintain them over a long time.
 ### Unified Data Domain
 Imagine an ordinary website, like the one pictured below.
 
-![Ordinary website](http://img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png)
+![Ordinary website](//img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png)
 
 While developing such a site it is useful to mark out "blocks" of which the site consists.
 
@@ -21,7 +21,7 @@ For example, in this picture there are `Head`, `Main Layout` and `Foot` blocks. 
 `Head` in turn consists of `Logo`, `Search`, `Auth block` and `Menu`. `Main Layout`
  contains a `Page Title` and a `Text Block`.
 
-![site's blocks](http://img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png)
+![site's blocks](//img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png)
 
 Giving each part of the page a name is very useful when it comes to team communication.
 
@@ -41,7 +41,7 @@ A block can be either simple or compound (containing other blocks).
 **Example**  
 Search form block  
 
-![Search form block](http://img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png)
+![Search form block](//img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png)
 
 #### Element
 An `element` is a part of a block that performs a certain function. Elements are
@@ -50,7 +50,7 @@ context-dependent: they only make sense in the context of the block they belong 
 **Example**  
 An input field and a button are elements of the Search Block
 
-![An input field and a button](http://img-fotki.yandex.ru/get/5013/221798411.0/0_babd3_d1278b96_XXL.png)
+![An input field and a button](//img-fotki.yandex.ru/get/5013/221798411.0/0_babd3_d1278b96_XXL.png)
 
 ### Means of describing pages and templates
 Blocks and elements constitute page content. Besides simply being present on a page,
@@ -60,17 +60,17 @@ Blocks (or elements) may follow each other in a certain order.
 
 For example, a list of goods on a commerce website:
 
-![List of goods](http://img-fotki.yandex.ru/get/9109/221798411.0/0_babcc_d935a8ec_XXL.png)
+![List of goods](//img-fotki.yandex.ru/get/9109/221798411.0/0_babcc_d935a8ec_XXL.png)
 
 …or menu items:
 
-![Menu items](http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
+![Menu items](//img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
 
 Blocks may also be contained inside other blocks.
 
 For example, a `Head Block` includes other blocks:
 
-![Head block](http://img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png)
+![Head block](//img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png)
 
 Besides our building blocks we need a way to describe page layout in plain text.
 To do so, every block and element should have a keyword that identifies it.
@@ -93,7 +93,7 @@ An element can be repeated several times.
 
 For example, menu items:
 
-![Menu items](http://img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
+![Menu items](//img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
 
 Keywords should be put in certain order.
 Any data format that supports nesting (XML, JSON) will do:
@@ -181,9 +181,9 @@ As projects grow, blocks tend to be added, removed, or moved around the page. Fo
 you may want to swap the `Logo` and `Auth Block` or to place the `Menu` under the
 `Search Block`.
 
-![Swap blocks](http://img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png)
+![Swap blocks](//img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png)
 
-![Swap blocks](http://img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png)
+![Swap blocks](//img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png)
 
 To make this process easier, blocks must be `independent`.
 
@@ -261,14 +261,14 @@ For example, a template can look like this in XSL:
 ```
 
 We are gradually discarding XSLT in our products in favor of our own JavaScript-based
-template engine [XJST](https://github.com/veged/xjst). This template engine absorbs everything
+template engine [XJST](https://bem.info/tools/templating-engines/xjst/). This template engine absorbs everything
 we like about XSLT (we are fans of declarative programming), and implements it with JavaScript's
 productivity on either client or server side.
 
 We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
-[The main ideas of BEMHTML](/libs/bem-core/1.0.0/bemhtml/rationale/).
+[The main ideas of BEMHTML](https://bem.info/technology/bemhtml/current/rationale/).
 
-[BEMHTML](https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem/__html)
+[BEMHTML](https://github.com/bem/bem-core/blob/v2/common.blocks/i-bem/i-bem.bemhtml)
 
 ### Blocks Reiteration
 The second `Menu Block` can occur in the `Foot Block` of a site. Or, a `Text Block`
@@ -292,7 +292,7 @@ its appearance or behavior.
 Let's say, we have a task:
  * Add another `Menu` in the `Footer` with a *different layout*.
 
-![Add another menu](http://img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png)
+![Add another menu](//img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png)
 
 To avoid developing another block that is only minimally different from an existing one,
 we can use a `modifier`.
@@ -304,12 +304,12 @@ A modifier has a name and a value. Several modifiers can be used at once.
 **Example**  
 A block modifier specifies background color
 
-![Change background color](http://img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png)
+![Change background color](//img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png)
 
 **Example**  
 An element modifier changes the look of the "current" item
 
-![Change the look of the item](http://img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png)
+![Change the look of the item](//img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png)
 
 #### From the input data point of view
 In a BEM tree, modifiers are properties of an entity that describes a block or an element.
@@ -488,16 +488,16 @@ block('menu').toggleMod('size', 'big', 'small');
 
 The code above is abstract. In real life we use the JavaScript core of `i-bem` block
 from the `bem-bl` block library:
- <http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.en.html>
+ <https://bem.info/libs/bem-bl/current/desktop/i-bem/>
 
 ### Blocks consistency
 A site has a `Button` block with certain dynamic behavior.
 
-![Button block](http://img-fotki.yandex.ru/get/6728/221798411.0/0_babcb_d1c8832d_M.png)
+![Button block](//img-fotki.yandex.ru/get/6728/221798411.0/0_babcb_d1c8832d_M.png)
 
 When a block is hovered, it changes its appearance.
 
-![Button on hover](http://img-fotki.yandex.ru/get/9110/221798411.0/0_babca_47ce403c_M.png)
+![Button on hover](//img-fotki.yandex.ru/get/9110/221798411.0/0_babca_47ce403c_M.png)
 
 A manager could ask to use the same button on another page.
 
@@ -520,29 +520,29 @@ To have a block present on a page as a UI element we need to implement it in the
 Everything that constitutes a block is a block technology.
 
 ### Real examples
-[Yandex](http://company.yandex.ru) is a large (mostly Russian) company that
+[Yandex](https://company.yandex.ru) is a large (mostly Russian) company that
 use BEM methodology to develop its services.
 
 BEM methodology does not request you to use certain framework. You also don't
 have to use BEM for all the technologies you have on your pages (but that would
 be the most efficient).
 
-[All the services of Yandex](http://www.yandex.ru/all) have BEM in their
+[All the services of Yandex](https://www.yandex.ru/all) have BEM in their
 CSS and JavaScript code and XSL templates of the pages. E.g.,
- * [Yandex.Maps](http://maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&sll=37.609218%2C55.753559&ll=37.609218%2C55.753563&spn=2.570801%2C0.884460&z=9&l=map)
- * [Yandex.Images](http://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)  
+ * [Yandex.Maps](https://maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&sll=37.609218%2C55.753559&ll=37.609218%2C55.753563&spn=2.570801%2C0.884460&z=9&l=map)
+ * [Yandex.Images](https://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)  
     This is a service for searching images in the Internet.
- * [Yandex.Video](http://video.yandex.ru/#search?text=yac%202011)  
+ * [Yandex.Video](https://video.yandex.ru/#search?text=yac%202011)  
     This is a service for both hosting and searching images.
- * [Yandex.Auto](http://auto.yandex.ru/)
- * [Turkish Yandex](http://www.yandex.com.tr/)
+ * [Yandex.Auto](https://auto.yandex.ru/)
+ * [Turkish Yandex](https://www.yandex.com.tr/)
 
 Some services don't use XSL templates and build their pages with our newest template
 product, `bemhtml` template engine which was mentioned above. These are the following
 services:
- * [Yandex Search](http://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213)  
-    or [Yandex Search in English](http://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213)
- * [Mobile Apps Search](http://apps.yandex.ru/)  
+ * [Yandex Search](https://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213)  
+    or [Yandex Search in English](https://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213)
+ * [Mobile Apps Search](http://appsearch.yandex.ru/)  
     This site is to look under smartphones.
 
 There are also other companies that use BEM methodology.
@@ -557,6 +557,5 @@ More examples:
  * [TNK Racing Team](http://futurecolors.ru/tnkracing/)
 
 You may also be interested in sites that use [bem-bl](http://bem.github.com/bem-bl/index.ru.html) block library:
- * [BEM based web form with JZ validation](http://form.dev.eot.su/)
  * [Mikhail Troshev vCard](http://mishanga.pro/)  
     Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))
