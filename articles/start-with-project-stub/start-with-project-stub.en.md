@@ -413,7 +413,7 @@ Then write BEMHTML code in a `desktop.blocks/goods/goods.bemhtml` file that proc
 			elem('price')(
         	tag()('span')
         	)
-[Code sample](https://gist.github.com/innabelaya/8913843) goods.bemhtml.
+[Code sample](https://gist.github.com/rbecher/7e7c5aec26e1bb5ea8d9) goods.bemhtml.
 
     <!DOCTYPE html>
     <html class="ua_js_yes">
