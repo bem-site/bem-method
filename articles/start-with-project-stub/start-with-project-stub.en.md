@@ -407,7 +407,7 @@ Then write BEMHTML code in a `desktop.blocks/goods/goods.bemhtml` file that proc
     		elem('image')(
         	tag()('img'),
 
-        	attrs()({ src: this.ctx.url })
+        	attrs()(function() { return { "src": this.ctx.url}; })
     		),
 
 			elem('price')(
