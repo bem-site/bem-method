@@ -45,7 +45,8 @@ Current Yandex openings:
 -----------------
   * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
   * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/sendevweb.xml) in Yandex.Moscow;
-  * [Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) in Yandex.Moscow.
+  * [Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) in Yandex.Moscow;
+  * [Frontend Developer](http://company.yandex.ru/job/vacancies/devint_kinopoisk.xml) in Yandex.Moscow.
 
 Current non-Yandex openings requiring BEM knowledge:
 -----------------
