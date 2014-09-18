@@ -1,3 +1,5 @@
+Оригинал статьи опубликован на [Habrahabr](http://habrahabr.ru/company/alfa/blog/235853/).
+
 ![](https://raw.githubusercontent.com/bem/bem-method/bem-info-data/blog/alfa-lab-seminar-2014/alfa-lab-1.jpg)
 
 Всем привет! У нас отличная новость!
