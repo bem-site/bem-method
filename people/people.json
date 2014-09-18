@@ -583,6 +583,28 @@
             "info": "Ведущий разработчик интерфейсов в Яндексе"
         }
     },
+    "vinogradov-anton": {
+        "en": {
+            "firstName": "Anton",
+            "lastName": "Vinogradov",
+            "avatar": "https://avatars.yandex.net/get-yaevents/ba2cae70289f27d7e4bc34ad1a36239f/365x365",
+            "github": "verybigman",
+            "email": [],
+            "twitter": "awinogradov",
+            "skype": "",
+            "info": "Interface Developer at Alfa Lab, Moscow."
+        },
+        "ru": {
+            "firstName": "Антон",
+            "lastName": "Виноградов",
+            "avatar": "https://avatars.yandex.net/get-yaevents/ba2cae70289f27d7e4bc34ad1a36239f/365x365",
+            "github": "verybigman",
+            "email": [],
+            "twitter": "awinogradov",
+            "skype": "",
+            "info": "Работает в московском подразделении Альфа-Лаб разработчиком интерфейсов. Много читает, верстает и пишет на JavaScript. Занимается внедрением и развитием БЭМ-методологии и даже папки именует по БЭМ."
+        }
+    },
     "shirshin-maxim": {
         "en": {
             "firstName": "Maxim",
