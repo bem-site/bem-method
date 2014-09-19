@@ -602,14 +602,14 @@
             "email": [],
             "twitter": "awinogradov",
             "skype": "",
-            "info": "Работает в московском подразделении Альфа-Лаб разработчиком интерфейсов. Много читает, верстает и пишет на JavaScript. Занимается внедрением и развитием БЭМ-методологии и даже папки именует по БЭМ."
+            "info": "Работает в московском подразделении Альфа-Лаб разработчиком интерфейсов. Занимается внедрением и развитием БЭМ-методологии и даже папки именует по БЭМ."
         }
     },
     "shirshin-maxim": {
         "en": {
             "firstName": "Maxim",
             "lastName": "Shirshin",
-            "avatar": "https://raw.github.com/bem/bem-method/eGavr/people/avatars/shirshin-maxim.jpg",
+            "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.jpg",
             "github": "ingdir",
             "email": [],
             "twitter": "ingdir",
@@ -619,7 +619,7 @@
         "ru": {
             "firstName": "Максим",
             "lastName": "Ширшин",
-            "avatar": "https://raw.github.com/bem/bem-method/eGavr/people/avatars/shirshin-maxim.jpg",
+            "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.jpg",
             "github": "ingdir",
             "email": [],
             "twitter": "ingdir",
