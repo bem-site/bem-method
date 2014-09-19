@@ -1,6 +1,6 @@
 # Full stack quick start
 
-Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/rationale/). While developing we will use command-line application: [bem-tools](http://en.bem.info/tools/bem/bem-tools/).
+Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](http://bem.info/libs/bem-core/current/bemhtml/rationale/). While developing we will use command-line application: [bem-tools](http://en.bem.info/tools/bem/bem-tools/).
 
 **Note:** this tutorial requires JavaScript programming language knowledge.
 
@@ -10,7 +10,7 @@ All tools that we are going to use work crossplatform.
 
 Be aware that you use suitable versions of bem-tools and libraries to run through this tutorial:
 * [bem-tools v.0.9.x](https://github.com/bem/bem-tools)
-* [bem-core v.2.3.0](https://github.com/bem/bem-core)
+* [bem-core v.2.4.0](https://github.com/bem/bem-core)
 
 To get started with BEM-based project you need to install the latest version of [Node.js](http://nodejs.org/).
 
@@ -542,7 +542,7 @@ You should declare a library name, its version (if available) and its repository
 
 ```
     "dependencies": {
-     "bem-core": "v2.3.0",
+     "bem-core": "v2.4.0",
      "bem-components": "git://github.com/bem/bem-components.git#3b41cd9d817f51b94bead414409a099913509299",
      "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```
@@ -739,7 +739,7 @@ This tutorial just lets us to open a door to the BEM world. The entire informati
 This tutorial is based on the “Full stack quick start” publication by Varvara Stepanova.
 
 The current release includes:
-* bem-core v2.3.0;
+* bem-core v2.4.0;
 * bem-tools v0.9.x;
 * updated bem-components library;
 * new JavaScript syntax of BEMHTML;
