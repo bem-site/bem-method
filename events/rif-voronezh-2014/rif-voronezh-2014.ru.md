@@ -2,7 +2,7 @@
 
 <img src="http://www.rifvrn.ru/img/rif_logo.png" alt="RIF Voronezh" style="float:right;padding:0 0 20px 20px;width:200px;height:auto;">
 
-**Когда**: 3 октября 2014 года, в 14:00 в секции «Клиентское программирование и верст
+**Когда**: 3 октября 2014 года, в 14:00 в секции «Клиентское программирование и верстка»
 
 **Где**: Конгресс-отель «Benefit Plaza», Воронеж, Россия 
 
