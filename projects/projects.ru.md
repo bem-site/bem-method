@@ -22,7 +22,7 @@
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-grid).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/ololobus), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bem-ng
 
@@ -30,7 +30,7 @@
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-ng).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/ololobus), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ##generator-bem
 
@@ -38,7 +38,7 @@
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/generator-bem).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/ololobus), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ##gem 'bem-on-rails’
 
@@ -46,6 +46,6 @@
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-on-rails).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/ololobus), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 **Присоединяйтесь и вы!**
