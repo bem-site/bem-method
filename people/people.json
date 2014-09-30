@@ -495,6 +495,28 @@
             "info": ""
         }
     },
+    "troshev-mihail": {
+        "en": {
+            "firstName": "Mihail",
+            "lastName": "Troshev",
+            "avatar": "https://avatars2.githubusercontent.com/u/521273?v=2&s=400",
+            "github": "mishanga",
+            "email": [],
+            "twitter": "ya_mishanga",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Михаил",
+            "lastName": "Трошев",
+            "avatar": "https://avatars2.githubusercontent.com/u/521273?v=2&s=400",
+            "github": "mishanga",
+            "email": [],
+            "twitter": "ya_mishanga",
+            "skype": "",
+            "info": ""
+        }
+    },
     "shirshin-maxim": {
         "en": {
             "firstName": "Maxim",
@@ -618,7 +640,6 @@
         },
         "ru": {
             "firstName": "Максим",
-            "lastName": "Ширшин",
             "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.jpg",
             "github": "ingdir",
             "email": [],
