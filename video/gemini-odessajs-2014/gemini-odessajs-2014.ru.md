@@ -5,6 +5,7 @@
 В 2014 году мы создали Gemini — инструмент для модульного тестирования вёрстки для нашей [библиотеки компонентов](http://ru.bem.info/libs/bem-components/v2/). Мы используем его для тестирования внутренней библиотеки компонентов Яндекса, которая лежит в основе большинства наших сервисов (например, [Поиска](https://yandex.com/yandsearch?text=lxjs%202014&redircnt=1411391689.1) и [Картинок](http://yandex.com/images/search?text=lisboa%20portugal)).
 
 5-6 июля в Одессе на «Тусовке для front-end разработчиков» OdessaJS 2014 разработчик Яндекса [Сергей Татаринцев](https://tech.yandex.ru/people/158302/) рассказал, как использовать этот инструмент — как разрабатывать тесты и запускать их на локальной машине или в уже существующей экосистеме (Travis CI, Sauce Labs).
+
 ##Видео доклада
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/k0RDoEBqeU8" frameborder="0" allowfullscreen></iframe>
