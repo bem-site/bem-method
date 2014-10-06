@@ -1,4 +1,4 @@
-#Проекты на БЭМ
+# Проекты на БЭМ
 
 В этом разделе мы собрали полезные и интересные проекты на БЭМ. 
 
@@ -18,7 +18,7 @@
 
 ## bem-grid
 
-Библиотека для описания CSS-сеток. Настраивается любое количество колонок и ширина страницы через переменные. Используются относительные единицы и суперскоростной Stylus. Основана на библиотеке bem-core.
+Библиотека для описания CSS-сеток. CSS-сетка построена на flexbox'ах и имеет деградацию для старых браузеров, а также она полностью настраивается под любые нужды через переменные, используют rem единицы и суперскоростной Stylus. Основана на библиотеке bem-core.
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-grid).
 
@@ -26,21 +26,21 @@
 
 ## bem-ng
 
-Библиотека для совместного использования БЭМ-методологии и AngularJS. Позволяет писать view-ориентированный BEMJSON и базируется на MEAN-стеке.
+Библиотека для совместного использования БЭМ-методологии и AngularJS. Позволяет писать view-ориентированный BEMJSON.
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-ng).
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
-##generator-bem
+## generator-bem-ng
 
-Необыкновенный генератор БЭМ-проектов. С ним вы сможете создать удобную структуру для БЭМ-проекта, расширить его до AngularJS-приложения, создать новые модули для AngularJS, расширить ваш БЭМ-Angular-проект до NodeJS-приложения.
+Необыкновенный генератор БЭМ-проектов, использующих AngularJS. С ним вы сможете создать базовую структуру БЭМ-проекта и модули AngularJS приложения. Генератор использует непривычную, на первый взгляд, парадигму модулей, но очень удобную и правильную для тех, кто знаком с БЭМ.
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/generator-bem).
+Репозиторий проекта на [GitHub](https://github.com/verybigman/generator-bem-ng).
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
-##gem 'bem-on-rails’
+## gem 'bem-on-rails’
 
 Позволяет работать с БЭМ-методологией в проектах на Ruby on Rails.
 
