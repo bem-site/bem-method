@@ -16,7 +16,7 @@
 
 Существует еще ряд решений, например, [smartcd](http://ru.bem.info/articles/smartcd/).
 
-Вдохновившись проектом [Grunt.js](v), Миша написал [bem-cli](https://github.com/bem/bem-cli/blob/master/bin/bem) - 
+Вдохновившись проектом [Grunt.js](http://gruntjs.com/), Миша написал [bem-cli](https://github.com/bem/bem-cli/blob/master/bin/bem) - 
 инструмент, который находит локальный/глобальный bem-tools и запускает его, как если бы данная версия bem-tools была установлена глобально. 
 
 Достаточно один раз установить bem-cli командой `npm i -g bem-cli` и забыть про магию с длинными 
