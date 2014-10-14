@@ -37,7 +37,7 @@ as to ask questions and even troll. Personally I was asked more about processes 
 is a good choice to my colleagues? How many projects we do using BEM? How to agree with each other? How 
 to start with a block library out of your project? 
 
-> I кeally hope you will continue this start, and BEMups will be regular events. Because this is a great option to 
+> I really hope you will continue this start, and BEMups will be regular events. Because this is a great option to 
 exchange experience and motivate yourself to achieve the next BEM level. I, for instance, was inspired to 
 finish a something I postponed for half a year! Thanks to Yandex and you guys for such an event. Staying BEMed, 
 Vasya.
