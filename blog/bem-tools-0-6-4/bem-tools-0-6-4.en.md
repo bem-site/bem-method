@@ -17,7 +17,7 @@ In the new bem-tools version 0.6.4 the speed of bem make / server was increased.
 The speed gain depends on the project. 
 In tests the speed improvement varies from a few percent to dozens of times.
 
-For example project-stub is using v2, see on [Github](https://github.com/bem/project-stub/tree/v2).
+For example project-stub is using v2, see on [Github](https://bem.info/tutorials/project-stub).
 
 To accelerate bem make, the modules of new technologies (v2) should be used for the project.
 
