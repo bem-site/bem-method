@@ -48,4 +48,12 @@
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
+## atom-bemjson-snippets
+
+Набор сниппетов для быстрого набора BEMJSON в свободном редакторе Atom. Устанавливается из менеджера пакетов Atom.
+
+Репозиторий проекта на [GitHub](https://github.com/verybigman/atom-bemjson-snippets)
+
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+
 **Присоединяйтесь и вы!**
