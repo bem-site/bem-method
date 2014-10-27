@@ -56,4 +56,12 @@
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
+## bem-social
+
+Библиотека блоков социальных виджетов для сайтов, использующих БЭМ-стек технологий. Share, Like, Follow, Yandex.Share API и другие. Содержит SVG-иконки социальных сетей и несколько тем оформления. Библиотека использует некоторые блоки библиотеки [bem-components](https://ru.bem.info/libs/bem-components/).
+
+Репозиторий проекта на [GitHub](https://github.com/voischev/bem-social)
+
+Автор проекта — Иван Воищев, [gh: voischev](https://github.com/voischev), [@voischev](https://twitter.com/voischev), [voischev.ivan@ya.ru](mailto:voischev.ivan@ya.ru).
+
 **Присоединяйтесь и вы!**
