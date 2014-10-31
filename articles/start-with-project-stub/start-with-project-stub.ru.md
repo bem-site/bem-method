@@ -3,7 +3,7 @@
 Эта статья рассказывает о том, как быстро создать свой проект с использованием БЭМ-технологий.
 Для изучения материала, представленного в статье, необходимо знание JavaScript'а.
 
-Мы шаг за шагом создадим [страничку каталога товаров](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html), пользуясь принципами БЭМ в CSS, возможностью писать декларативный JavaScript с использованием фреймворка [i-bem.js](http://ru.bem.info/articles/bem-js-main-terms/) и шаблонизатора [BEMHTML](http://ru.bem.info/libs/bem-core/2.0.0/bemhtml/reference/). Делать это будем с помощью инструментов для работы с файлами по БЭМ-методолгии – [bem-tools](http://ru.bem.info/tools/bem/bem-tools/).
+Мы шаг за шагом создадим [страничку каталога товаров](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html), пользуясь принципами БЭМ в CSS, возможностью писать декларативный JavaScript с использованием фреймворка [i-bem.js](http://ru.bem.info/articles/bem-js-main-terms/) и шаблонизатора [BEMHTML](http://ru.bem.info/technology/bemhtml/current/reference/). Делать это будем с помощью инструментов для работы с файлами по БЭМ-методолгии – [bem-tools](http://ru.bem.info/tools/bem/bem-tools/).
 
 ![каталог товаров](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a6b_a4ba957a_L.png)
 
@@ -11,7 +11,7 @@
 
 Обратите внимание на актуальность версий инструментов и библиотек:
 * [bem-tools v.0.9.x](https://github.com/bem/bem-tools)
-* [bem-core v.2.3.0](https://github.com/bem/bem-core)
+* [bem-core v.2.4.0](https://github.com/bem/bem-core)
 
 Для начала работы с любым БЭМ-проектом вам необходимо установить [Node.js](http://nodejs.org/).
 
@@ -544,7 +544,7 @@ CSS-правила для Internet Explorer создаются в специал
 
 ```
     "dependencies": {
-     "bem-core": "v2.3.0",
+     "bem-core": "v2.4.0",
      "bem-components": "git://github.com/bem/bem-components.git#3b41cd9d817f51b94bead414409a099913509299",
      "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```
@@ -755,7 +755,7 @@ CSS-правила для Internet Explorer создаются в специал
 
 Текущий релиз включает в себя:
 
-* использование библиотеки bem-core v2.3.0;
+* использование библиотеки bem-core v2.4.0;
 * использование bem-tools v0.9.x;
 * обновление библиотеки bem-components;
 * переход на новый js-синтаксис шаблонизатора BEMHTML;
