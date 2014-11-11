@@ -11,7 +11,7 @@ cd shopsList
 npm install
 ````
 
-Теперь проект у нас на компьютере. Давайте протестируем, все ли работает. Для этого нужно перейти в папку, запустить make, подождать пока проект соберется и открыть в браузере страницу: [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html)
+Теперь проект у нас на компьютере. Давайте протестируем, все ли работает. Для этого нужно перейти в папку, запустить `enb server` и открыть в браузере страницу: [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html)
 Перед глазами должно быть что-то вроде:
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="Скомпилированная страница BEM project stub" border="0"/>
@@ -29,7 +29,7 @@ npm install
 Здесь всё просто. Мы изначально продумали структуру страницы, основные блоки и теперь осталось все это записать в json-подобном виде. Не буду вдаваться в подробности, вы всегда можете посмотреть исходный код. Структура страницы будет такой:
 
 ````
-    b-page
+    page
     == container
     ==== map
     ==== sidebar
@@ -43,7 +43,7 @@ npm install
 В bemjson:
 ````js
 {
-    block: 'b-page',
+    block: 'page',
     content: [
         {
             block: 'container',
@@ -66,7 +66,7 @@ npm install
 }
 ````
 
-Более подробно можно посмотреть здесь: [desktop.bundles/index/index.bemjson.js](https://github.com/zloylos/ymaps-and-bem/blob/master/desktop.bundles/index/index.bemjson.js)
+Более подробно можно посмотреть здесь: [desktop.bundles/index/index.bemjson.js](https://github.com/dab/ymapsbem/blob/master/desktop.bundles/index/index.bemjson.js)
 
 ## Блок map
 

@@ -11,7 +11,7 @@ cd shopsList
 npm install
 ````
 
-Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
+Now we can use the project locally. Let’s test that everything works properly. Open the folder and run `enb server` and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="Defaut page with dummy values for title, header/main/footer content" border="0"/>
 
@@ -26,7 +26,7 @@ We need to create a block «map» for the map itself, block «sidebar» — righ
 As we thought about the page structure and main blocks from the very beginning, now we just write it in json-style code. Of course, you can see the sourcecode for better understanding. The page structure will be:
 
 ````
-    b-page
+    page
     == container
     ==== map
     ==== sidebar
@@ -40,7 +40,7 @@ As we thought about the page structure and main blocks from the very beginning, 
 And in bemjson:
 ````js
 {
-    block: 'b-page',
+    block: 'page',
     content: [
         {
             block: 'container',
@@ -63,7 +63,7 @@ And in bemjson:
 }
 ````
 
-Look at the details: [desktop.bundles/index/index.bemjson.js](https://github.com/zloylos/ymaps-and-bem/blob/master/desktop.bundles/index-en/index-en.bemjson.js).
+Look at the details: [desktop.bundles/index/index.bemjson.js](https://github.com/dab/ymapsbem/blob/master/desktop.bundles/index/index.bemjson.js).
 
 ## Map block
 
