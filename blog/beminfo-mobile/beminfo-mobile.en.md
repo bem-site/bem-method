@@ -25,5 +25,5 @@ Respectfully yours,
 
 BEM Development Team
 
-!!//Mobile version screenshot https://img-fotki.yandex.ru/get/15599/127846884.248/0_f2dbc_8c683494_XL//!!
+![Mobile version screenshot](https://img-fotki.yandex.ru/get/15599/127846884.248/0_f2dbc_8c683494_XL/)
 
