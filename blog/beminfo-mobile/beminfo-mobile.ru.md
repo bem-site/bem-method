@@ -25,4 +25,4 @@
 
 Команда разработки БЭМ
 
-!!//Скриншот на русском https://img-fotki.yandex.ru/get/16187/127846884.248/0_f2dbd_ec360a78_XL//!!
+![Скриншот мобильной версии bem.info](https://img-fotki.yandex.ru/get/16187/127846884.248/0_f2dbd_ec360a78_XL/)
