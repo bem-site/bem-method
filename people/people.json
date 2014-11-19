@@ -297,6 +297,28 @@
             "info": ""
         }
     },
+    "konstantinova-gela": {
+        "en": {
+            "firstName": "Gela",
+            "lastName": "Konstantinova",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinova-gela.jpg",
+            "github": "gela-d",
+            "email": [],
+            "twitter": "gela_dd",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Гела",
+            "lastName": "Константинова",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinova-gela.jpg",
+            "github": "gela-d",
+            "email": [],
+            "twitter": "gela_dd",
+            "skype": "",
+            "info": ""
+        }
+    },
     "jetpyspayeva-yelena": {
         "en": {
             "firstName": "Yelena",
