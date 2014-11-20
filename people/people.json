@@ -385,6 +385,28 @@
             "info": "http://leonidkhachaturov.tumblr.com/"
         }
     },
+    "ksirov-rasul": {
+        "en": {
+            "firstName": "Rasul",
+            "lastName": "Ksirov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ksirov-rasul.jpg",
+            "github": "",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Расул",
+            "lastName": "Ксиров",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ksirov-rasul.jpg",
+            "github": "",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
     "kryzhanovsky-sergey": {
         "en": {
             "firstName": "Sergey",
