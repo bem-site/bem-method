@@ -13,7 +13,7 @@ allow us to build websites quickly and maintain them over a long time.
 ### Unified Data Domain
 Imagine an ordinary website, like the one pictured below.
 
-![Ordinary website](//img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png)
+![Ordinary website](https://img-fotki.yandex.ru/get/15561/158800653.0/0_111fbc_61755fac_orig)
 
 While developing such a site it is useful to mark out "blocks" of which the site consists.
 
@@ -21,7 +21,7 @@ For example, in this picture there are `Head`, `Main Layout` and `Foot` blocks. 
 `Head` in turn consists of `Logo`, `Search`, `Auth block` and `Menu`. `Main Layout`
  contains a `Page Title` and a `Text Block`.
 
-![site's blocks](//img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png)
+![site's blocks](https://img-fotki.yandex.ru/get/15592/158800653.0/0_111fbb_2bb44507_orig)
 
 Giving each part of the page a name is very useful when it comes to team communication.
 
@@ -38,19 +38,19 @@ Let's now take a closer look at what constitutes BEM:
 A `block` is an independent entity, a "building block" of an application.
 A block can be either simple or compound (containing other blocks).
 
-**Example**  
-Search form block  
+**Example**
+Search form block
 
-![Search form block](//img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png)
+![Search form block](https://img-fotki.yandex.ru/get/15569/158800653.0/0_111fb9_8ae85b15_orig)
 
 #### Element
 An `element` is a part of a block that performs a certain function. Elements are
 context-dependent: they only make sense in the context of the block they belong to.
 
-**Example**  
+**Example**
 An input field and a button are elements of the Search Block
 
-![An input field and a button](//img-fotki.yandex.ru/get/5013/221798411.0/0_babd3_d1278b96_XXL.png)
+![An input field and a button](https://img-fotki.yandex.ru/get/15527/158800653.0/0_111fb8_2537137c_orig)
 
 ### Means of describing pages and templates
 Blocks and elements constitute page content. Besides simply being present on a page,
@@ -60,17 +60,17 @@ Blocks (or elements) may follow each other in a certain order.
 
 For example, a list of goods on a commerce website:
 
-![List of goods](//img-fotki.yandex.ru/get/9109/221798411.0/0_babcc_d935a8ec_XXL.png)
+![List of goods](https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fb0_fbb195e9_orig)
 
 …or menu items:
 
-![Menu items](//img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
+![Menu items](https://img-fotki.yandex.ru/get/15588/158800653.0/0_111fb6_192672cf_orig)
 
 Blocks may also be contained inside other blocks.
 
 For example, a `Head Block` includes other blocks:
 
-![Head block](//img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png)
+![Head block](https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig)
 
 Besides our building blocks we need a way to describe page layout in plain text.
 To do so, every block and element should have a keyword that identifies it.
@@ -93,7 +93,7 @@ An element can be repeated several times.
 
 For example, menu items:
 
-![Menu items](//img-fotki.yandex.ru/get/6726/221798411.0/0_babd1_f14000fa_XL.png)
+![Menu items](https://img-fotki.yandex.ru/get/15588/158800653.0/0_111fb6_192672cf_orig)
 
 Keywords should be put in certain order.
 Any data format that supports nesting (XML, JSON) will do:
@@ -181,9 +181,9 @@ As projects grow, blocks tend to be added, removed, or moved around the page. Fo
 you may want to swap the `Logo` and `Auth Block` or to place the `Menu` under the
 `Search Block`.
 
-![Swap blocks](//img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png)
+![Swap blocks](https://img-fotki.yandex.ru/get/16156/158800653.0/0_111fb3_2fec3fed_orig)
 
-![Swap blocks](//img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png)
+![Swap blocks](https://img-fotki.yandex.ru/get/15542/158800653.0/0_111fb1_bcbc3c6a_orig)
 
 To make this process easier, blocks must be `independent`.
 
@@ -235,7 +235,7 @@ E.g.:
 #### Independent templates
 From the template engine's perspective, block independence means that:
 
- * Blocks and elements must be described in the input data  
+ * Blocks and elements must be described in the input data
     Blocks (or elements) must have unique "names" to make things like "`Menu` should be
     placed here" expressible in our templates.
  * Blocks may appear anywhere in a BEM tree
@@ -277,11 +277,11 @@ can turn into two, separated by an advertisement.
 Even if a block was developed as a singular unit, the same one can appear on a page at any moment.
 
 In CSS related terms, it means:
- * ID-based CSS selectors must not be used  
+ * ID-based CSS selectors must not be used
     Only class selectors satisfy our non-uniqueness requirement.
 
 On the JavaScript side it means:
- * Blocks with similar behavior are detected unequivocally: they have the same CSS classes  
+ * Blocks with similar behavior are detected unequivocally: they have the same CSS classes
     Using CSS class selectors allow picking all blocks with a given name to apply the required
     dynamic behavior.
 
@@ -292,7 +292,7 @@ its appearance or behavior.
 Let's say, we have a task:
  * Add another `Menu` in the `Footer` with a *different layout*.
 
-![Add another menu](//img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png)
+![Add another menu](https://img-fotki.yandex.ru/get/16183/158800653.0/0_111fba_921b3c47_orig)
 
 To avoid developing another block that is only minimally different from an existing one,
 we can use a `modifier`.
@@ -301,15 +301,15 @@ A `modifier` is a property of a block or an element that alters its look or beha
 
 A modifier has a name and a value. Several modifiers can be used at once.
 
-**Example**  
+**Example**
 A block modifier specifies background color
 
-![Change background color](//img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png)
+![Change background color](https://img-fotki.yandex.ru/get/16155/158800653.0/0_111fb7_46771936_orig)
 
-**Example**  
+**Example**
 An element modifier changes the look of the "current" item
 
-![Change the look of the item](//img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png)
+![Change the look of the item](https://img-fotki.yandex.ru/get/16102/158800653.0/0_111fb4_6b15e133_orig)
 
 #### From the input data point of view
 In a BEM tree, modifiers are properties of an entity that describes a block or an element.
@@ -493,11 +493,11 @@ from the `bem-bl` block library:
 ### Blocks consistency
 A site has a `Button` block with certain dynamic behavior.
 
-![Button block](//img-fotki.yandex.ru/get/6728/221798411.0/0_babcb_d1c8832d_M.png)
+![Button block](https://img-fotki.yandex.ru/get/16130/158800653.0/0_111faf_308d2206_orig)
 
 When a block is hovered, it changes its appearance.
 
-![Button on hover](//img-fotki.yandex.ru/get/9110/221798411.0/0_babca_47ce403c_M.png)
+![Button on hover](https://img-fotki.yandex.ru/get/15574/158800653.0/0_111fae_1e5a7498_orig)
 
 A manager could ask to use the same button on another page.
 
@@ -530,9 +530,9 @@ be the most efficient).
 [All the services of Yandex](https://www.yandex.ru/all) have BEM in their
 CSS and JavaScript code and XSL templates of the pages. E.g.,
  * [Yandex.Maps](https://maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&sll=37.609218%2C55.753559&ll=37.609218%2C55.753563&spn=2.570801%2C0.884460&z=9&l=map)
- * [Yandex.Images](https://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)  
+ * [Yandex.Images](https://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)
     This is a service for searching images in the Internet.
- * [Yandex.Video](https://video.yandex.ru/#search?text=yac%202011)  
+ * [Yandex.Video](https://video.yandex.ru/#search?text=yac%202011)
     This is a service for both hosting and searching images.
  * [Yandex.Auto](https://auto.yandex.ru/)
  * [Turkish Yandex](https://www.yandex.com.tr/)
@@ -540,9 +540,9 @@ CSS and JavaScript code and XSL templates of the pages. E.g.,
 Some services don't use XSL templates and build their pages with our newest template
 product, `bemhtml` template engine which was mentioned above. These are the following
 services:
- * [Yandex Search](https://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213)  
+ * [Yandex Search](https://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213)
     or [Yandex Search in English](https://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213)
- * [Mobile Apps Search](http://appsearch.yandex.ru/)  
+ * [Mobile Apps Search](http://appsearch.yandex.ru/)
     This site is to look under smartphones.
 
 There are also other companies that use BEM methodology.
@@ -557,5 +557,5 @@ More examples:
  * [TNK Racing Team](http://futurecolors.ru/tnkracing/)
 
 You may also be interested in sites that use [bem-bl](http://bem.github.com/bem-bl/index.ru.html) block library:
- * [Mikhail Troshev vCard](http://mishanga.pro/)  
+ * [Mikhail Troshev vCard](http://mishanga.pro/)
     Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))

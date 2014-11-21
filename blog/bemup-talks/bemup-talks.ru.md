@@ -1,6 +1,6 @@
 # Видео докладов первого BEMup'а
 
-<img style="float: right" src="http://img-fotki.yandex.ru/get/9150/44214498.7d/0_8abd4_b440dc62_M.png" alt="фотография участников и докладчиков BEMup в Москве" title="Первый BEMup в Москве" />
+<img style="float: right" src="https://img-fotki.yandex.ru/get/17934/158800653.1/0_112002_52a889b2_orig" alt="фотография участников и докладчиков BEMup в Москве" title="Первый BEMup в Москве" />
 
 **2 августа 2013 года** в [московском Яндексе](http://company.yandex.ru/contacts/redrose/) прошел первый
 митап по БЭМ — BEMup!

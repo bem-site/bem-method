@@ -4,7 +4,7 @@ Within this tutorial we are going to develop an [online shop web page](http://va
 
 **Note:** this tutorial requires JavaScript programming language knowledge.
 
-![web page](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a6b_a4ba957a_L.png)
+![web page](https://img-fotki.yandex.ru/get/15514/158800653.0/0_111fcd_57a9d718_orig)
 
 All tools that we are going to use work crossplatform.
 
@@ -219,7 +219,7 @@ You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.block
 
 [Code sample](https://gist.github.com/innabelaya/9345355) index.bemjson.js.
 
-![Блок logo](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a63_7fdb19bb_M.png)
+![logo block](https://img-fotki.yandex.ru/get/15582/158800653.0/0_111fce_fe11809a_orig)
 
 ### Using a block library
 
@@ -268,7 +268,7 @@ Let's add Yandex.Browser search results to the search form.
 ```
 [Code sample](https://gist.github.com/innabelaya/9391751) index.bemjson.js.
 
-![Search form](http://img-fotki.yandex.ru/get/9796/248553438.0/0_d4a68_25bceae6_L.png)
+![Search form](https://img-fotki.yandex.ru/get/15499/158800653.0/0_111fd4_74d6387_orig)
 
 Use a **link** block from the same library to render an icon with a slogan as a link to [bem.info](http://en.bem.info/) site.
 
@@ -320,7 +320,7 @@ The same can be done for a **link** block:
     $ bem create -l desktop.blocks -b link -T css
 [Code sample](https://gist.github.com/innabelaya/8906451) link.css.
 
-![Search form](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a64_d24f6e0_L.png)
+![Search form](https://img-fotki.yandex.ru/get/15550/158800653.0/0_111fcf_8ea9b445_orig)
 
 #### Modifying BEMHTML
 
@@ -371,7 +371,7 @@ Define a border property for the **head** block to make it visible on a page.
 
 Once again, you can borrow contents for a `desktop.blocks/head/head.css` file from [here](https://gist.github.com/innabelaya/8906724).
 
-![Head block with a frame](http://img-fotki.yandex.ru/get/9930/248553438.0/0_d4a65_c4dc0f3d_L.png)
+![Head block with a frame](https://img-fotki.yandex.ru/get/15545/158800653.0/0_111fd0_803be79c_orig)
 
 ## BEMHTML templates
 
@@ -486,7 +486,7 @@ You need to identify new goods on a page. To implement this add a verification o
 Use this code snapshot for [CSS rules](https://gist.github.com/innabelaya/8915049).
 Notice that you do not need to create CSS file for this block because it had already been generated.
 
-![List of goods](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a66_9f679754_L.png)
+![List of goods](https://img-fotki.yandex.ru/get/15567/158800653.0/0_111fd1_4225b600_orig)
 
 You also need some extra CSS for an IE browser since it is not among the list of default block technologies.
 
@@ -603,7 +603,7 @@ Here you can mix **head** and **box** blocks:
         </body>
     </html>
 
-![mix of blocks](http://img-fotki.yandex.ru/get/9796/248553438.0/0_d4a67_d0bb01c8_L.png)
+![mix of blocks](https://img-fotki.yandex.ru/get/16103/158800653.0/0_111fd2_4b3e0831_orig)
 
 You can also mix an element with a block using BEMHTML templates of a block.
 Let's specify that each item element from a **goods** block has the same formatting as a **head** block. For this you need to mix each **item** from a **goods** block with a **box** block from `j` library.
@@ -651,7 +651,7 @@ Do not forget to define that a **goods** block requires the **box** block.
 
 [Code sample](https://gist.github.com/innabelaya/8930709) head.deps.js.
 
-![Список товаров в блоке box](http://img-fotki.yandex.ru/get/9930/248553438.0/0_d4a69_34525ebc_L.png)
+![List of goods in a box block](https://img-fotki.yandex.ru/get/15556/158800653.0/0_111fd3_a4dcdc58_orig)
 
 ## Declarative JavaScript
 
@@ -684,7 +684,7 @@ It is required to have a `switcher` element in the block.
 
 With that you have a block with a clickable arrow-shaped element which rolls the block up.
 
-![Arrow](http://img-fotki.yandex.ru/get/9800/248553438.0/0_d4a6a_5354e5b0_M.png)
+![Arrow](https://img-fotki.yandex.ru/get/15543/158800653.0/0_111fcc_8b20e834_orig)
 
 ### Modifying JavaScript
 

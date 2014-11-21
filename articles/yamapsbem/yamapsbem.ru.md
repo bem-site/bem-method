@@ -14,7 +14,7 @@ npm install
 Теперь проект у нас на компьютере. Давайте протестируем, все ли работает. Для этого нужно перейти в папку, запустить make, подождать пока проект соберется и открыть в браузере страницу: [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html)
 Перед глазами должно быть что-то вроде:
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="Скомпилированная страница BEM project stub" border="0"/>
+<img src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ffe_3ea40a10_orig" alt="Скомпилированная страница BEM project stub" border="0"/>
 
 Готово, можно переходить к следующему этапу.
 
@@ -37,7 +37,7 @@ npm install
     ======== items
 ````
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="Структура страницы">
+<img src="https://img-fotki.yandex.ru/get/15494/158800653.1/0_111ffd_4459f77d_orig" alt="Структура страницы">
 
 
 В bemjson:
@@ -138,7 +138,7 @@ npm install
 Кроме того, чтобы правильно взаимодействовать с картой, блок-контроллер должен знать, готова ли карта к тому, чтобы объектами на ней можно было управлять. Для этого блок map у себя будет пробрасывать событие «map-inited», а i-geo-controller — слушать его и запоминать ссылку на экземпляр карты.
 
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme.png" alt="Схема взаимодействия блоков">
+<img src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ffc_fd2c1482_orig" alt="Схема взаимодействия блоков">
 
 
 ## Заключение
@@ -147,7 +147,7 @@ npm install
 
 Возможно, с использованием методологии БЭМ пример и получился более громоздким, чем без неё, но зато у нас есть более структурированный и удобный для поддержки код. А главное, его довольно просто масштабировать и расширять, что без использования методологии вызвало бы значительные проблемы и чаще всего привело бы к полному переписыванию кода.
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/ready.png" alt="Готовый пример">
+<img src="https://img-fotki.yandex.ru/get/15507/158800653.1/0_111fff_34059551_orig" alt="Готовый пример">
 
 Спасибо [Александру Тармолову](http://twitter.com/tarmolov) за ценные советы и помощь.
 
