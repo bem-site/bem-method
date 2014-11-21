@@ -1,6 +1,6 @@
 # BEMup в Москве
 
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9320/44214498.9a/0_94a39_66ca0b69_M.jpg" alt="фотография программы с минского BEMup" title="BEMup в Минске" />
+<img style="float:right;padding: 0 0 10px 10px" src="https://img-fotki.yandex.ru/get/15483/158800653.1/0_111ff6_bcf15529_orig" alt="фотография программы с минского BEMup" title="BEMup в Минске" />
 
 **Когда**: 17 мая 2014 года, суббота, начало в 10:00
 
@@ -34,5 +34,5 @@
 Для тех, кто не сможет присутствовать на конференции, мы организуем онлайн-трансляцию.
 
 **Stay BEMed!**
- 
+
 

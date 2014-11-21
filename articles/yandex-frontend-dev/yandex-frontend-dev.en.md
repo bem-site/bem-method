@@ -9,7 +9,7 @@ Yandex, as a search engine and the larges Internet company in Russia, enjoys
 the maijor share of the local market and provides over a hundred of associated
 services with the help of 2500 developers and 150 frontend engineers among them.
 
-<img src="http://img-fotki.yandex.ru/get/5645/14441195.26/0_711d5_b2ab18c0_orig"/>
+<img src="https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fd5_a2f2c78d_orig"/>
 
 Yandex developers jointly produce solutions for the problems they run into. At
 the same time, Yandexoids are truly nerds connected to the world outside Yandex
@@ -20,7 +20,7 @@ Here is a piece of such sharing.
 ## Web Interface
 
 <img
-src="http://img-fotki.yandex.ru/get/6429/14441195.26/0_711d6_9a3f328a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15501/158800653.0/0_111fd6_98369013_orig"
 width="800" height="558" title="" alt="" border="0"/>
 
 Look at the draft for an online shop. As you can see, it's nothing special.
@@ -50,7 +50,7 @@ Also, besides the page is really combination of HTML and CSS, it's also a set of
 interface pieces.
 
 <img
-src="http://img-fotki.yandex.ru/get/6427/14441195.26/0_711d7_e0975803_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15583/158800653.0/0_111fd7_89ba2adf_orig"
 width="800" height="600" title="" alt="" border="0"/>
 
 Each piece is to do something. It provides to a user a functional or design
@@ -76,26 +76,26 @@ page is an interface block.
   <tr>
       <td colspan="2" align="center">
           <img
-          src="http://img-fotki.yandex.ru/get/5645/14441195.26/0_711d9_9d9c6157_XL.jpg"
+          src="https://img-fotki.yandex.ru/get/15539/158800653.1/0_111fec_51ab4190_orig"
           width="800" height="52" title="" alt="" border="0"/>
       </td>
   </tr>
   <tr>
       <td rowspan="2">
           <img
-          src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+          src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd9_ee72b2e6_orig"
           width="300" height="259" title="" alt="" border="0"/>
       </td>
       <td align="center">
           <img
-          src="http://img-fotki.yandex.ru/get/4122/14441195.26/0_711da_e8f6dee7_M.jpg"
+          src="https://img-fotki.yandex.ru/get/16121/158800653.1/0_111fe9_6d9dab72_orig"
           width="300" height="271" title="" alt="" border="0"/>
       </td>
   </tr>
   <tr>
       <td>
           <img
-          src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
+          src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd8_ae26507f_orig"
           width="500" height="47" title="" alt="" border="0"/>
       </td>
   </tr>
@@ -112,33 +112,33 @@ still are solid independent pieces.
     <tr>
         <td colspan="2">
             <img
-            src="http://img-fotki.yandex.ru/get/4120/14441195.26/0_711dd_3d4b199_XL.jpg"
+            src="https://img-fotki.yandex.ru/get/15515/158800653.1/0_111fed_3fb7a94f_orig"
             width="800" height="77" title="" alt="" border="0"/>
         </td>
     </tr>
     <tr>
         <td>
             <img
-            src="http://img-fotki.yandex.ru/get/5647/14441195.26/0_711de_ac603720_M.jpg"
+            src="https://img-fotki.yandex.ru/get/15576/158800653.1/0_111fee_8f37482a_orig"
             width="300" height="81" title="" alt="" border="0"/>
         </td>
         <td>
             <img
-            src="http://img-fotki.yandex.ru/get/6440/14441195.26/0_711df_12538ac_M.jpg"
+            src="https://img-fotki.yandex.ru/get/16116/158800653.1/0_111fef_387149f1_orig"
             width="300" height="72" title="" alt="" border="0"/>
         </td>
     </tr>
     <tr>
         <td colspan="2" align="center">
             <img
-            src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
+            src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd8_ae26507f_orig"
             width="500" height="47" title="" alt="" border="0"/>
         </td>
     </tr>
     <tr>
         <td colspan="2" align="center">
             <img
-            src="http://img-fotki.yandex.ru/get/4128/14441195.26/0_711e0_8beaa73d_M.jpg"
+            src="https://img-fotki.yandex.ru/get/16173/158800653.1/0_111ff0_54aa92a7_orig"
             width="300" height="33" title="" alt="" border="0"/>
         </td>
     </tr>
@@ -151,7 +151,7 @@ Here you can see the `Header` block that contains some others.
 *Indeed, behind the scenes there are our dear HTML and CSS.*
 
 <img
-src="http://img-fotki.yandex.ru/get/5626/14441195.26/0_711e1_e0ab223a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/16173/158800653.0/0_111fda_c77be79f_orig"
 width="645" height="46" title="" alt="" border="0"/>
 
 Each block is represented by a piece of HTML markup. To style the block you can
@@ -167,7 +167,7 @@ write the CSS rules, as usual.<br/>
 ````
 
 <img
-src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
+src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd8_ae26507f_orig"
 width="500" height="47" title="" alt="" border="0"/>
 
 The same works for the `Search` block, that is represented by `div` tag with
@@ -184,7 +184,7 @@ The last example is the `Tabbed Pane` block, which is also a combination of HTML
 and CSS.
 
 <img
-src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd9_ee72b2e6_orig"
 width="300" style="float: left" height="259" title="" alt="" border="0"/>
 
 ````js
@@ -245,7 +245,7 @@ The same block can appear on the page. For example, one more `Menu` block can be
 placed into the `Foot` block.
 
 <img
-src="http://img-fotki.yandex.ru/get/4135/14441195.26/0_711e2_5b1a2232_XL.jpg"
+src="https://img-fotki.yandex.ru/get/16155/158800653.0/0_111fdb_3cfac464_orig"
 width="800" height="600" title="" alt="" border="0"/>
 
 Since now the `Menu` block is not a unique within a page. Because of that you
@@ -321,11 +321,11 @@ said above, you should guarantee that it works correctly regardless of its
 environment. This is what you achieve due to avoiding cascade.
 
 <img
-src="http://img-fotki.yandex.ru/get/6426/14441195.26/0_711e3_3579af38_XL.jpg"
+src="https://img-fotki.yandex.ru/get/17914/158800653.0/0_111fdc_bc02157_orig"
 width="800" height="600" title="" alt="" border="0"/>
 
 <img
-src="http://img-fotki.yandex.ru/get/5632/14441195.26/0_711e4_bf58fb79_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15567/158800653.0/0_111fdd_38615561_orig"
 width="800" height="600" title="" alt="" border="0"/>
 
 Again, even if a block *now* is a single one within a whole site, that does not
@@ -337,7 +337,7 @@ The other point is that when you are developing and maintaining, the block set o
 every page changes.
 
 <img
-src="http://img-fotki.yandex.ru/get/4122/14441195.26/0_711e5_77eb4431_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15481/158800653.0/0_111fde_abca5e55_orig"
 width="800" height="491" title="" alt="" border="0"/>
 
 We, developers, should think about keeping associated CSS in the actual state.
@@ -354,7 +354,7 @@ Everything else is distributed per pages.
 But let us look a bit closer to this practice.
 
 <img
-src="http://img-fotki.yandex.ru/get/4137/14441195.26/0_711e6_bc435d6a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15500/158800653.0/0_111fdf_be412df_orig"
 width="800" height="600" title="" alt="" border="0"/>
 
 As you see in the picture, the `Header` block contains the `Search` block. This
@@ -364,7 +364,7 @@ But not. The page providing advanced search form doesn't have this `Search` bloc
 in the `Header`.
 
 <img
-src="http://img-fotki.yandex.ru/get/4115/14441195.26/0_711e7_a1df577a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15571/158800653.0/0_111fe0_d99b8591_orig"
 width="800" height="600" title="" alt="" border="0"/>
 
 So, should we include the `Search` block code into `common.css` file? Seems like
@@ -378,7 +378,7 @@ On the other hand, copy paste is even worse.
 So, there should be a way out.
 
 <img
-src="http://img-fotki.yandex.ru/get/4122/14441195.26/0_711e5_77eb4431_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15481/158800653.0/0_111fde_abca5e55_orig"
 width="800" height="491" title="" alt="" border="0"/>
 
 What about turning these drawn sets of blocks into code?
@@ -417,14 +417,14 @@ And some pages that use these blocks.
 Looks cool, but
 
 <img
-src="http://img-fotki.yandex.ru/get/6442/14441195.26/0_711e8_ec41e632_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15550/158800653.0/0_111fe1_d7238b94_orig"
 width="570" height="311" title="" alt="" border="0"/>
 
 ## Inside a Block
 So, let's have a look what is inside our blocks.
 
 <img
-src="http://img-fotki.yandex.ru/get/5626/14441195.26/0_711e1_e0ab223a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/16173/158800653.0/0_111fda_c77be79f_orig"
 width="645" height="46" title="" alt="" border="0"/>
 
 The `Menu` block is going to be the first example.
@@ -461,7 +461,7 @@ But even inside such a small interface piece like a menu item there can be a lot
 of HTML markup in the future.
 
 <img
-src="http://img-fotki.yandex.ru/get/6426/14441195.26/0_711e9_8881d49a_-1-L.jpg"
+src="https://img-fotki.yandex.ru/get/15573/158800653.0/0_111fe2_a93d2af1_orig"
 width="500" height="101" title="" alt="" border="0"/>
 
 Here you can see that a `Dropdown` block with its own list was placed into the
@@ -469,7 +469,7 @@ menu item and immediately got broken because of this CSS instruction affects it.
 We got the long menu sausage instead of a nice dropdown.
 
 <img
-src="http://img-fotki.yandex.ru/get/4138/14441195.26/0_711ea_f392c569_L.jpg"
+src="https://img-fotki.yandex.ru/get/15592/158800653.1/0_111fe3_fcd66eba_orig"
 width="500" height="174" title="" alt="" border="0"/>
 
 As you can see, except of avoiding cascade there appears even more specific
@@ -492,7 +492,7 @@ However we still need a solution to style menu items inside the `Menu` block.
 First, let's clarify a definition and call the things inside a block — `elements`.
 
 <img
-src="http://img-fotki.yandex.ru/get/5641/14441195.27/0_711eb_80c1b241_L.jpg"
+src="https://img-fotki.yandex.ru/get/15524/158800653.1/0_111fe5_b0ee14ea_orig"
 width="304" height="500" title="" alt="" border="0"/>
 
 This is a clear picture of what elements are.<br/>
@@ -501,20 +501,20 @@ sense on their own, but are to be used within their parent block.
 
 For example, the `Search` block has an `input` element and a `button` element.
 <img
-src="http://img-fotki.yandex.ru/get/5641/14441195.27/0_711ec_b4fa229f_L.jpg"
+src="https://img-fotki.yandex.ru/get/15498/158800653.1/0_111fe4_5c9c5573_orig"
 width="500" height="80" title="" alt="" border="0"/>
 
 The `Tabbed Pane` block has 2 `tab` elements (and can have more if necessary)
 and the `pane` element to keep its content.
 
 <img
-src="http://img-fotki.yandex.ru/get/6426/14441195.27/0_711ed_5b70323b_M.jpg"
+src="https://img-fotki.yandex.ru/get/15520/158800653.1/0_111fe6_8ff76b52_orig"
 width="300" height="264" title="" alt="" border="0"/>
 
 Styling elements you should think about them as self-reliant entities.
 
 <img
-src="http://img-fotki.yandex.ru/get/5626/14441195.26/0_711e1_e0ab223a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/16173/158800653.0/0_111fda_c77be79f_orig"
 width="645" height="46" title="" alt="" border="0"/>
 
 To apply CSS rules to the elements you will need to mark them with classes.<br/>
@@ -557,15 +557,15 @@ If you don't like 2 underscores, maybe you'll be pleased with 3 ;-)
 So far so good, a block can be different from page to page.
 
 <img
-src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
+src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd8_ae26507f_orig"
 width="500" height="47" title="" alt="" border="0"/>
 
 <img
-src="http://img-fotki.yandex.ru/get/4127/14441195.27/0_711ef_421e1e8c_L.jpg"
+src="https://img-fotki.yandex.ru/get/15509/158800653.1/0_111ff3_f4d7c87f_orig"
 width="500" height="88" title="" alt="" border="0"/>
 
 <img
-src="http://img-fotki.yandex.ru/get/5642/14441195.27/0_711ee_5370e90b_L.jpg"
+src="https://img-fotki.yandex.ru/get/15550/158800653.1/0_111ff2_5205ed7e_orig"
 width="500" height="177" title="" alt="" border="0"/>
 
 The difference you can see in the slide is that it comprises different sets of
@@ -603,17 +603,17 @@ Now to the last notion, a `modifier`.
     <tr>
         <td>
             <img
-            src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
+            src="https://img-fotki.yandex.ru/get/15502/158800653.0/0_111fd9_ee72b2e6_orig"
             width="300" height="259" title="" alt="" border="0"/>
         </td>
         <td>
             <img
-            src="http://img-fotki.yandex.ru/get/5627/14441195.27/0_71207_4cfc639a_M.jpg"
+            src="https://img-fotki.yandex.ru/get/15485/158800653.1/0_111fe7_ce685c24_orig"
             width="300" height="259" title="" alt="" border="0"/>
         </td>
         <td>
             <img
-            src="http://img-fotki.yandex.ru/get/5632/14441195.27/0_71206_5fb7bc50_M.jpg"
+            src="https://img-fotki.yandex.ru/get/15509/158800653.1/0_111ff4_17922e46_orig"
             width="300" height="259" title="" alt="" border="0"/>
         </td>
     </tr>
@@ -697,7 +697,7 @@ it needs.
 ### Modifying elements
 Elements can be modified in the same way.
 
-<img src="http://img-fotki.yandex.ru/get/4120/14441195.27/0_71214_cff3fb1_M.jpg"
+<img src="https://img-fotki.yandex.ru/get/15566/158800653.1/0_111fe8_cd87f5ff_orig"
 width="300" height="259" title="" alt="" border="0"/>
 
 The famous examples of modified elements are active tabs and menu items. They
@@ -715,10 +715,10 @@ element. Similar to what we was doing for blocks.
 ````
 
 ### Block Modifier DOES Affect Element
-Now I'm going to show you where cascade is posible.
+Now I'm going to show you where cascade is possible.
 
 <img
-src="http://img-fotki.yandex.ru/get/5627/14441195.27/0_71207_4cfc639a_M.jpg"
+src="https://img-fotki.yandex.ru/get/15485/158800653.1/0_111fe7_ce685c24_orig"
 width="300" height="259" title="" alt="" border="0"/>
 
 You can see a modified block here. It has a blue theme. Of course, when having a
@@ -836,7 +836,7 @@ bad should happen since the blocks are independent.
 
 ## BEM
 
-<img src="http://img-fotki.yandex.ru/get/9558/221798411.0/0_b9ee0_87aa2593_M.png"/>
+<img src="https://img-fotki.yandex.ru/get/15516/158800653.1/0_111feb_84f03e55_orig"/>
 
 Now, that the three terms are introduced, I am happy to present you BEM methodology.
 You've just learnt its parts related to independent CSS blocks.
@@ -923,7 +923,7 @@ JavaScript logic we can paint it with colours.
 
 We should code that the `Tabbed Pane` block reacts on leftclick.
 
-<img src="http://img-fotki.yandex.ru/get/4120/14441195.27/0_71214_cff3fb1_M.jpg"
+<img src="https://img-fotki.yandex.ru/get/15566/158800653.1/0_111fe8_cd87f5ff_orig"
 width="300" height="259" title="" alt="" border="0"/>
 
 The `Dropdown` block functionality is that it is hidden when a page is just
@@ -936,11 +936,11 @@ too close to the bottom.
 
 <div style="width: 800px; height: 500px; border: #000 1px solid; position: relative;">
 <img
-src="http://img-fotki.yandex.ru/get/4116/14441195.27/0_71220_33b9df76_M.jpg"
+src="https://img-fotki.yandex.ru/get/16121/158800653.1/0_111fe9_6d9dab72_orig"
 width="300" height="271" title="" alt="" border="0" style="position: absolute;
 top: 20px; left: 20px"/>
 <img
-src="http://img-fotki.yandex.ru/get/5641/14441195.27/0_71225_daf55cf9_M.jpg"
+src="https://img-fotki.yandex.ru/get/11/158800653.1/0_111ff5_80f3ca60_orig"
 width="300" height="271" title="" alt="" border="0" style="position: absolute;
 bottom: 20px; right: 20px"/>
 </div>
@@ -1094,7 +1094,7 @@ Actually it is a monkey job that definitely can be automated.
 The images shows us what are the blocks on the page and which ones contain others.
 
 <img
-src="http://img-fotki.yandex.ru/get/6429/14441195.26/0_711d6_9a3f328a_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15500/158800653.0/0_111fdf_be412df_orig"
 width="800" height="558" title="" alt="" border="0"/>
 
 We got this information with a visual language the picture provides. But the
@@ -1244,7 +1244,7 @@ BEM methodology enables you to create reusable code libraries. That, in turn,
 allows to develop faster and better.
 
 <img
-src="http://img-fotki.yandex.ru/get/5642/14441195.27/0_71226_17dfd887_XL.jpg"
+src="https://img-fotki.yandex.ru/get/15523/158800653.1/0_111fea_834829b3_orig"
 width="800" height="481" title="" alt="" border="0"/>
 
 We, here at Yandex, have a bunch of our in-house BEM-based libraries helping us

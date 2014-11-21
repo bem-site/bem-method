@@ -13,7 +13,7 @@ npm install
 
 Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="Defaut page with dummy values for title, header/main/footer content" border="0"/>
+<img src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ffe_3ea40a10_orig" alt="Defaut page with dummy values for title, header/main/footer content" border="0"/>
 
 Now we can proceed to the next step.
 
@@ -34,7 +34,7 @@ As we thought about the page structure and main blocks from the very beginning, 
     ======== items
 ````
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="[Visual schematic of the above page structure]">
+<img src="https://img-fotki.yandex.ru/get/15494/158800653.1/0_111ffd_4459f77d_orig" alt="[Visual schematic of the above page structure]">
 
 ￼
 And in bemjson:
@@ -136,12 +136,12 @@ In our example this block has the following tasks:
 Besides interacting with the map properly the block-controller has to know if the map is ready for manipulating objects. So our block «map» will fire the event «map-inited» and «i-geo-controller» will listen for this event and remember the link to the map.
 ￼
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="[Visual scheme of above event flow]">
+<img src="https://img-fotki.yandex.ru/get/15554/158800653.1/0_112000_7fb8a3b0_orig" alt="[Visual scheme of above event flow]">
 
 
 For example [http://zloylos.github.io/ymapsbem/index-en.html](http://zloylos.github.io/ymapsbem/index-en.html).
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="Example">
+<img src="https://img-fotki.yandex.ru/get/15587/158800653.1/0_112001_26cf8f80_orig" alt="Example">
 
 It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code.
 

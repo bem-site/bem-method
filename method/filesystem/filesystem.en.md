@@ -144,7 +144,7 @@ To understand where the relevant code is located, follow these (or similar) rule
 
 You'l be able to understand a block structure just from its folder structure, without even reading a single line of code. This is an unprecedented level of transparency, although it comes at a cost.
 
-**Example**  
+**Example**
 File structure of a `Menu` block
 
 ```
@@ -209,12 +209,12 @@ a specific site only, or for certain pages only. It can be achieved using `defin
 
 A `definition level` is a set of blocks grouped in one directory.
 
-![Blocks grouped in one directory](http://img-fotki.yandex.ru/get/9107/221798411.0/0_babc3_6eb2cfbf_XXL.png)
+![Blocks grouped in one directory](https://img-fotki.yandex.ru/get/16135/158800653.0/0_111fcb_d9a605b5_orig)
 
 An implementation of every block from the library can be changed (or completely redefined)
 at project level.
 
-![Block redefining](http://img-fotki.yandex.ru/get/9515/221798411.0/0_babc2_3e8566e4_XXL.png)
+![Block redefining](https://img-fotki.yandex.ru/get/15506/158800653.0/0_111fca_4f068470_orig)
 
 From page-building process' perspective:
   * When building a page we can set a list of levels (directories) to use their blocks on
@@ -284,35 +284,35 @@ To turn `code for people` into `code for browsers` we `build` a page.
 (written in XML or JSON) by applying implementations of declared blocks.
 
 On the CSS side:
-  * All CSS files are combined into a single "page" CSS file  
+  * All CSS files are combined into a single "page" CSS file
     Despite the fact that CSS for every block, element or modifier is stored in separate
     files, we don't have to link these files to the page as-is. It is possible to
-    collect all the required CSS implementations in one file.  
+    collect all the required CSS implementations in one file.
     This also solves the well-known 'number of imports' issue in IE and decreases the number of HTTP requests.
     For combining CSS we use [borschik](https://github.com/veged/borschik).
-  * Browser gets minimized code  
+  * Browser gets minimized code
     When building CSS, we can minimize and optimize CSS code using the
     [CSSO](https://github.com/afelix/csso) utility, for example.
-  * Each browser can get CSS code written especially for it  
+  * Each browser can get CSS code written especially for it
     It is also possible to divide CSS implementations for different browsers and deliver
-    only the code needed for each browser.  
+    only the code needed for each browser.
     [setochka — currently in prototype](https://github.com/afelix/setochka) can be used for that.
 
 From the JavaScript point of view:
   * Similarly to CSS, JavaScript files can be combined into one.
 
 From the template engine's point of view:
-  * Only needed templates are included  
+  * Only needed templates are included
     Final set of templates that are used for displaying a page includes only the templates
     for required blocks. This boosts template performance and reduces the likelihood of side effects.
 
 From the viewpoint of development process:
-  * Robots serve people (not the other way around)  
+  * Robots serve people (not the other way around)
     Developer writes code as they sees fit. "Robots" take (some) care of performance by optimizing the
     code (together with making it unreadable) when building a page.
 
 In terms of work organization:
-  * Division of labor  
+  * Division of labor
     We have developers working on the core framework (compilers, tools, performance); library developers, who maintain
     the block library; application developers, who develop sites using the framework.
 
