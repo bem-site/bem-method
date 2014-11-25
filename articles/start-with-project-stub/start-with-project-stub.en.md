@@ -1,6 +1,6 @@
 # Full stack quick start
 
-Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/rationale/). While developing we will use command-line application: [bem-tools](http://en.bem.info/tools/bem/bem-tools/).
+Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](http://bem.info/libs/bem-core/current/bemhtml/rationale/).
 
 **Note:** this tutorial requires JavaScript programming language knowledge.
 
@@ -9,8 +9,9 @@ Within this tutorial we are going to develop an [online shop web page](http://va
 All tools that we are going to use work crossplatform.
 
 Be aware that you use suitable versions of bem-tools and libraries to run through this tutorial:
+* [enb v.0.13.9](https://github.com/enb-make/enb)
 * [bem-tools v.0.9.x](https://github.com/bem/bem-tools)
-* [bem-core v.2.3.0](https://github.com/bem/bem-core)
+* [bem-core v.2.5.0](https://github.com/bem/bem-core)
 
 To get started with BEM-based project you need to install the latest version of [Node.js](http://nodejs.org/).
 
@@ -26,12 +27,13 @@ The quickest and easiest way to start with your own BEM project is to use an exi
 
 We need to create a local copy of a `project-stub`. You can choose any of your favorite tools to clone the project. We are going to use Git.
 
-    $ git clone git://github.com/bem/project-stub.git start-pretty-project
+    $ git clone https://github.com/bem/project-stub test-project
 
 Go to a new project directory:
 
-    $ cd start-pretty-project/
-Remove the versions history of the origin repository:
+    $ cd test-project
+
+Remove the versions history of the origin:
 
     $ rm -rf .git
 
@@ -39,23 +41,40 @@ Create a git repository from that directory:
 
     $ git init
 
-Install all npm dependances and bem-tools:
+Install all dependencies, including `bem-tools` and `ENB`:
 
     $ npm install
 
-Now you can run any bem-tools commands from a `node_modules/bem/bin/bem` directory.
-To be able to run bem-tools commands without typing a full path to an executable file (`node_modules/bem/bin/bem`), use `bem-cli` npm package:
+Build the project using `ENB`:
+
+    $ node_modules/.bin/enb make
+
+Project's build process configuration is determined in `.enb/make.js` file. It defines all the technologies of blocks implementation (templates, dependencies, CSS rules and JavaScript functionality) that have to be connected to the project's pages by `bem-tools`.
+
+Run a server mode for development:
+
+    $ node_modules/.bin/enb server
+
+As a result, the following message appears:
+
+`Server started at 0.0.0.0:8080`
+
+This means that the server mode is up and running. From this point on a solicited part of your project will be rebuilt automatically every time you reload a web page. The result is available on [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+
+Instead of `ENB` you may use `bem-tools` project builder. The result files are the same in both cases, though `ENB` is more rapid and flexible. Configuration files for `bem-tools` are located in `.bem` directory.
+
+You can run any `bem-tools` commands from a `node_modules/bem/bin/bem` directory.
+To be able to run `bem-tools` commands without typing a full path to an executable file (`node_modules/bem/bin/bem`), use `bem-cli` npm package:
 
     $ sudo npm install bem-cli -g
 
-Now you can use bem-tools from any point of your project.
+Now you can use `bem-tools` from any point of your project.
 
 Build the project:
 
     $ bem make
 
 The first launch may take some time as required npm packages and dependencies are being installed in background.
-Project's build process configuration is determined in `.bem/make.js` file. It defines all the technologies of blocks implementation (templates, dependencies, CSS rules and JavaScript functionality) that have to be connected to the project's pages by bem-tools. `desktop.bundles/.bem/level.js` configuration file contains a list of libraries to be used in the project.
 
 Starting BEM server for development:
 
@@ -64,13 +83,17 @@ Starting BEM server for development:
 Upon completion you will see the following message:
 `info: Server is listening on port 8080. Point your browser to http://localhost:8080/`
 
-This means that [BEM server](https://github.com/bem/project-stub#usage) is up and running. From this point on a solicited part of your project will be rebuilt automatically every time you reload a web page.
-
 **Getting stuck?**
 
 If port:8080 is already in use by another program, you can redefine it using `-p` option.
 
-		$ bem server -p portNum
+For `ENB`:
+
+    $ node_modules/.bin/enb server -p portNum
+
+For `bem-tools`:
+
+    $ bem server -p portNum
 
 ## Brief overview of the project structure
 
@@ -404,29 +427,29 @@ This block has to be implemented in BEMHTML technology in order to be turned int
 Then write BEMHTML code in a `desktop.blocks/goods/goods.bemhtml` file that processes BEMJSON input data into the block's elements. Use a `tag` mode to define an HTML representation of a **goods** block and its elements as well.
 
     block('goods')(
-		tag()('ul'),
+        tag()('ul'),
 
-		//...
+        //...
 
-	    	elem('item')(
-				tag()('li')
-    		),
+            elem('item')(
+                tag()('li')
+            ),
 
-			elem('title')(
-        	   tag()('h3')
-    		),
+            elem('title')(
+               tag()('h3')
+            ),
 
-    		elem('image')(
-        	   tag()('img'),
+            elem('image')(
+               tag()('img'),
 
-            	attrs()(function() {
+                attrs()(function() {
                     return { src: this.ctx.url };
                 })
-    		),
+            ),
 
-			elem('price')(
-        	   tag()('span')
-        	)
+            elem('price')(
+               tag()('span')
+            )
 
 [Code sample](https://gist.github.com/innabelaya/8913843) goods.bemhtml.
 
@@ -572,7 +595,7 @@ Next make your pages take blocks from the block level provided by the library. D
     }
 [Code sample](https://gist.github.com/innabelaya/8915431) .bem/make.js.
 
-You need to restart BEM server after changing the configuration to apply all changes. Kill the current process (`Ctrl+C`) and run `bem server` again.
+You need to restart the server after changing the configuration to apply all changes. Kill the current process (`Ctrl+C`) and run the server again.
 
 ## Mix of blocks and elements
 
@@ -720,13 +743,17 @@ As you can see there is no `-T` flag here. That is because the `desktop.bundles`
 As a result in a `desktop.bundles/contact/contact.bemjson.js` file being filled with dummy page contents.
 
 Load a new page in a browser: `http://localhost:8080/desktop.bundles/contact/contact.html`.
-BEM server builds it for us upon the first access.
+Server builds it for us upon the first access.
 
 ## Starting building the project
 
-While developing every time you reload a page in a browser a `bem server` rebuilds what has to be rebuilt following your changes.
+While developing every time you reload a page in a browser the server rebuilds what has to be rebuilt following your changes.
 
-To rebuild the entire project you can use a `bem make` command:
+To rebuild the entire project you can use the following `ENB` command:
+
+    $ node_modules/.bin/enb make
+
+For `bem-tools` use:
 
     $ bem make
 
@@ -739,7 +766,7 @@ This tutorial just lets us to open a door to the BEM world. The entire informati
 This tutorial is based on the “Full stack quick start” publication by Varvara Stepanova.
 
 The current release includes:
-* bem-core v2.3.0;
+* bem-core v2.5.0;
 * bem-tools v0.9.x;
 * updated bem-components library;
 * new JavaScript syntax of BEMHTML;
