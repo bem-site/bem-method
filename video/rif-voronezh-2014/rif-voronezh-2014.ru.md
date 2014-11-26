@@ -6,7 +6,7 @@
 
 ## БЭМ: от методологии до full stack платформы
 
-<iframe width="450" height="225" src="http://video.yandex.ru/iframe/ya-events/q7a6n84g1r.7020/" frameborder="0" allowfullscreen="1"></iframe>
+<iframe width="450" height="225" src="//video.yandex.ru/iframe/ya-events/q7a6n84g1r.7020/" frameborder="0" allowfullscreen="1"></iframe>
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/41650709" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
@@ -18,7 +18,7 @@
 
 ## Как мы жили до БЭМа и к чему пришли с ним
 
-<iframe width="450" height="225" src="http://video.yandex.ru/iframe/ya-events/tjknf667hs.6933/" frameborder="0" allowfullscreen="1"></iframe>
+<iframe width="450" height="225" src="//video.yandex.ru/iframe/ya-events/tjknf667hs.6933/" frameborder="0" allowfullscreen="1"></iframe>
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/41649658" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
@@ -26,4 +26,4 @@
 
 ## Секция вопросов и ответов
 
-<iframe width="450" height="225" src="http://video.yandex.ru/iframe/ya-events/fvdbsnbiq1.6843/" frameborder="0" allowfullscreen="1"></iframe>
+<iframe width="450" height="225" src="//video.yandex.ru/iframe/ya-events/fvdbsnbiq1.6843/" frameborder="0" allowfullscreen="1"></iframe>

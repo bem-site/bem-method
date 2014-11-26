@@ -8,7 +8,7 @@ Watch the video what it is all about:
 
 BEM Team was also invited to talk at Camp JS.
 
-[Vladimir Grinenko](http://bem.info/authors/grinenko-vladimir/) talked about what we have in BEM for JavaScript developers and introduced blocks libraries.
+[Vladimir Grinenko](https://bem.info/authors/grinenko-vladimir/) talked about what we have in BEM for JavaScript developers and introduced blocks libraries.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/2r72EjALq2s" frameborder="0" allowfullscreen></iframe>
 
@@ -22,7 +22,7 @@ Unfortunately it is very well known only here in Russia and ex-Soviet countries,
 
 ### Speaker's biography
 
-<img style="float:right;padding: 0 0 10px 10px" src="http://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for CampJS III" title="Vladimir Grinenko photo for CampJS III">
+<img style="float:right;padding: 0 0 10px 10px" src="//img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for CampJS III" title="Vladimir Grinenko photo for CampJS III">
 
 Vladimir Grinenko is a web developer with more than 10 years of fronted experience and a deep expertise in HTML5, CSS3 and JavaScript. He works for Yandex, Russian Search engine, and leads a team that develops BEM technologies. He also evangelizes a lot both in Russian and English and gives live coding sessions as well as maintains and contributs to few opensource projects. His area of speaking experience includes such topics as BEM technologies, large scale web sites architecture, modular frontend applications development, etc.
 
