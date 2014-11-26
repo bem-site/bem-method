@@ -109,6 +109,28 @@
             "info": ""
         }
     },
+    "baranov-mihail": {
+        "en": {
+            "firstName": "Mihail",
+            "lastName": "Baranov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/baranov-mihail.png",
+            "github": "h4",
+            "email": [],
+            "twitter": "_h4_",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Михаил",
+            "lastName": "Баранов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/baranov-mihail.png",
+            "github": "h4",
+            "email": [],
+            "twitter": "_h4_",
+            "skype": "",
+            "info": "Работает разработчиком интерфейсов в Эдстер. Проводит WebStandards Days в Санкт-Петербурге."
+        }
+    },
     "berezhnoy-sergey": {
         "en": {
             "firstName": "Sergey",
