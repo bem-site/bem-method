@@ -43,9 +43,9 @@
 
 Текущие вакансии в офисы Яндекса:
 -----------------
-  * [Старший разработчик веб-интерфейсов](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) в офис Яндекса в Симферополе;
-  * [Старший разработчик веб-интерфейсов](http://company.yandex.ru/job/vacancies/sendevweb.xml) в офис Яндекса в Москве;
-  * [Разработчик веб-интерфейсов](http://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) в офис Яндекса в Москве;
+  * [Старший разработчик веб-интерфейсов](https://company.yandex.ru/job/vacancies/dev_int_simf.xml) в офис Яндекса в Симферополе;
+  * [Старший разработчик веб-интерфейсов](https://company.yandex.ru/job/vacancies/sendevweb.xml) в офис Яндекса в Москве;
+  * [Разработчик веб-интерфейсов](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) в офис Яндекса в Москве;
 
 Текущие вакансии, где требуется знание БЭМ:
 -----------------

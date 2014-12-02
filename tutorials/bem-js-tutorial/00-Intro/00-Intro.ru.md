@@ -1,8 +1,8 @@
 # Туториал по JavaScript в БЭМ-терминах
 
-Библиотека [bem-core](https://github.com/bem/bem-core) — один из ключевых
+Библиотека [bem-core](https://ru.bem.info/libs/bem-core/) — один из ключевых
 продуктов БЭМ — это набор полезных блоков, среди которых есть блок
-[i-bem](https://github.com/bem/bem-core/tree/v1/common.blocks/i-bem).
+[i-bem](https://github.com/bem/bem-core/tree/v2/common.blocks/i-bem).
 Его часто называют «блок, помогающий делать блоки», потому что он используется
 для создания других интерфейсных компонент по принципам БЭМ.
 

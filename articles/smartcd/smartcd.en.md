@@ -1,6 +1,6 @@
 # smartcd: how to launch tools locally
 
-We recommend installing all the dependencies including [bem-tools](http://bem.info/tools/bem/) locally in each project. We describe them in `package.json` at the project root - install them with the command `npm install`.
+We recommend installing all the dependencies including [bem-tools](https://bem.info/tools/bem/bem-tools/) locally in each project. We describe them in `package.json` at the project root - install them with the command `npm install`.
 
 We would like to use locally installed tools inside project directories (at any level) just by calling their names: `bem make`, `borschik path/to/file.css`, etc.
 
@@ -16,7 +16,7 @@ Set up everything as follows:
     ```
     curl -L http://smartcd.org/install | bash
     ```
-    
+
   - create config `~/.smartcd_config`, for this just answer to installer:
 
     ```
@@ -25,10 +25,10 @@ Set up everything as follows:
     Would you like to configure smartcd in /Users/%username%/.smartcd_config? (recommended) [Y/n] y
     Would you like to load your config file now? [Y/n] y
     ```
-    
+
     Next, you will see `Congratulations, you have installed smartcd!`. Probably, if you use `zsh`, you should add `source ~/.smartcd_config` into
     your `.zshrc` file manually.
-    
+
 
   - make template `npm-module` for `smartcd`
     ```

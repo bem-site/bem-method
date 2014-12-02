@@ -2,13 +2,13 @@
 
 Front-end development is no longer about individual frameworks. Tools are available — we merely have to choose. To make the right choices for your project, **you need to start with a general approach, or methodology**. But most methodologies have been created by big companies? Are they still useful for small companies, or do we need to reinvent them at a small scale?
 
-You probably already know of [BEM](http://bem.info/), one of those methodologies developed by a big company — namely, [Yandex](http://www.yandex.com/). BEM posits that three basic entities (blocks, elements and modifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
+You probably already know of [BEM](https://bem.info/), one of those methodologies developed by a big company — namely, [Yandex](https://www.yandex.com/). BEM posits that three basic entities (blocks, elements and modifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
 
 I’ve spent some time with Yandex and BEM, and I know that this methodology works for large projects. Yandex uses BEM to develop CSS and JavaScript components; Yandex also optimizes templates and tracks dependencies in BEM, develops BEM utilities, supports code experiments and researches the field. On a large scale, this investment pays off and allows Yandex to develop hundreds of its services faster.
 
 Would smaller teams benefit from BEM? I wasn’t sure. BEM is a layer of abstraction, offered with other tools and technologies. A small agile team switching to a full BEM stack would be questionable. Could the idea — the approach itself — be useful?
 
-<img src="http://img-fotki.yandex.ru/get/5104/89480655.0/0_1007d7_b4828ad0_L.png" width="800" height="320"/>
+<img src="https://img-fotki.yandex.ru/get/16146/158800653.1/0_11383e_78659b03_orig" width="800" height="320"/>
 
 I had to revisit this question when my career recently took me from Yandex to Deltamethod, a mid-sized startup in Berlin. Facing ambitious development plans, we decided to try BEM on a smaller scale. We wanted the same benefits that Yandex gets from BEM: **code sharing, a live style guide, scalability, faster development**. We also wanted to keep our toolchain and upgrade the existing code base gradually, rather than start from scratch.
 
@@ -550,9 +550,9 @@ The `common` library stays “on top”, while the `mobile` or `desktop` block b
 
 We’ve ended up with many small files, which is good for development but a disaster for production! In the end, we want all of the stuff to be loaded in several big chunks. So, we need a build process.
 
-Yandex has an open-source build tool, [Borschik](http://bem.info/articles/borschik/), which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as [UglifyJS](https://github.com/mishoo/UglifyJS) and [CSS Optimizer](https://github.com/css/csso). Tools like [RequireJS](http://requirejs.org/) can also facilitate the building process, taking care of dependency tracking.
+Yandex has an open-source build tool, [borschik](https://bem.info/tools/optimizers/borschik/), which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as [UglifyJS](https://github.com/mishoo/UglifyJS) and [CSS Optimizer](https://bem.info/tools/optimizers/csso/). Tools like [RequireJS](http://requirejs.org/) can also facilitate the building process, taking care of dependency tracking.
 
-For a more comprehensive approach, have a look at [bem-tools](http://bem.info/tools/bem/bem-tools/).
+For a more comprehensive approach, have a look at [bem-tools](https://bem.info/tools/bem/bem-tools/).
 
 The clearest lesson I’ve learned from BEM is not to be afraid of granularity, as long as you know how to build the whole picture.
 
@@ -562,4 +562,4 @@ For a while, I was pretty skeptical that BEM is suitable for small projects. My 
 
 But that is not the biggest impact of the BEM methodology on my projects. BEM enables you to see beyond frameworks. I remember times when people seriously discussed the best ways to bind event handlers to elements, and when DOM libraries competed for world dominance, and when frameworks were the next big buzz. Today, we can no longer depend on a single framework, and BEM takes the next step by providing a design foundation, giving us a lot of freedom to implement.
 
-Visit the [BEM](http://bem.info/) website for extra resources, GitHub links, downloads and articles.
+Visit the [BEM](https://bem.info/) website for extra resources, GitHub links, downloads and articles.

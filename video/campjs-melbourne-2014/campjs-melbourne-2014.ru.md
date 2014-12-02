@@ -8,7 +8,7 @@
 
 Выступить на Camp JS пригласили и команду БЭМ.
 
-[Владимир Гриненко](http://ru.bem.info/authors/grinenko-vladimir/) рассказал, что такое БЭМ для JavaScript и представил библиотеки БЭМ-блоков.
+[Владимир Гриненко](https://ru.bem.info/authors/grinenko-vladimir/) рассказал, что такое БЭМ для JavaScript и представил библиотеки БЭМ-блоков.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/2r72EjALq2s" frameborder="0" allowfullscreen></iframe>
 

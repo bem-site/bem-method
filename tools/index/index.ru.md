@@ -14,7 +14,7 @@
 без изменения структуры, так и структурную минимизацию с целью получить как можно меньший текст.
 
 ### SVGO
-[SVGO](https://github.com/svg/svgo/#readme) (SVGO Optimizer) — это инструмент для оптимизации векторной графики в формате SVG, написанный на Node.js.
+[SVGO](/tools/optimizers/svgo) (SVGO Optimizer) — это инструмент для оптимизации векторной графики в формате SVG, написанный на Node.js.
 
 SVG файлы, особенно экспортированные из различных редакторов, содержат много избыточной и бесполезной информации,
 комментариев, скрытых элементов и другой мусор, удаление которого безопасно и не влияет на конечный результат
@@ -40,7 +40,7 @@ language for pattern matching.
 This is a Node.js module for developing and using such pattern matching grammars.
 
 ### XJST
-[XJST](https://github.com/veged/xjst#extensible-javascript-transformations-) is a DSL for universal data transformations
+[XJST](http://en.bem.info/tools/templating-engines/xjst/) is a DSL for universal data transformations
 with compiler written on top of the node.js and ometajs and output code working in any browser or on server-side.
 
 ### Shmakowiki

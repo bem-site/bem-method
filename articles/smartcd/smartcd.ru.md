@@ -1,7 +1,7 @@
 # smartcd: локальный запуск инструментов
 
 Мы рекомендуем ставить зависимости, в том числе утилиту
-[bem-tools](http://ru.bem.info/tools/bem/), локально в проект. Описываем зависимости
+[bem-tools](https://ru.bem.info/tools/bem/bem-tools/), локально в проект. Описываем зависимости
 в `package.json` в корне проекта, устанавливаем их командой `npm install`.
 
 Хочется, чтобы локально установленные инструменты можно было использовать в директории
@@ -23,7 +23,7 @@
     ```
     curl -L http://smartcd.org/install | bash
     ```
-    
+
 - создаем конфиг `~/.smartcd_config`, для этого при установке необходимо отвечать так:
 
     ```
@@ -32,7 +32,7 @@
     Would you like to configure smartcd in /Users/%username%/.smartcd_config? (recommended) [Y/n] y
     Would you like to load your config file now? [Y/n] y
     ```
-    
+
     После вы увидите `Congratulations, you have installed smartcd!`, установка прошла успешно. Если вы используете `zsh`,
     возможно, вам нужно будет вручную добавить строку `source ~/.smartcd_config` в ваш `.zshrc` файл для активации `smartcd` при загрузке.
 
@@ -89,5 +89,4 @@ smartcd: running /Users/arikon/.smartcd/scripts/Users/arikon/projects/bem-www/ba
 
 Если вы используете `zsh` с включенной опцией `autocd`, раскомментируйте строку `smartcd setup prompt-hook` в `~/.smartcd_config`.
 
-Статья подготовлена на основе оригинальной статьи «[Использование локально установленных инструментов
-из командной строки](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» в Я.ру.
+Статья подготовлена на основе оригинальной статьи «[Использование локально установленных инструментов из командной строки](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» в Я.ру.

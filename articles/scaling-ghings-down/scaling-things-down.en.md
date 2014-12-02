@@ -1,8 +1,8 @@
-Originally published by <a href="https://h.yandex-team.ru/?http%3A%2F%2Fwww.smashingmagazine.com%2F2014%2F07%2F17%2Fbem-methodology-for-small-projects%2F">Smashing Magazine</a>. 
+Originally published by <a href="http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/">Smashing Magazine</a>.
 
 Front-end development is no longer about individual frameworks. Tools are available — we merely have to choose. To make the right choices for your project, you need to start with a general approach, or <strong>methodology</strong>. But most methodologies have been created by big companies? Are they still useful for small companies, or do we need to reinvent them at a small scale?
 
-You probably already know of <a href="http://bem.info">BEM</a>, one of those methodologies developed by a big company — namely, <a href="http://yandex.com">Yandex</a>. BEM posits that three basic entities (<strong>b</strong>locks, <strong>e</strong>lements and <strong>m</strong>odifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
+You probably already know of <a href="http://bem.info">BEM</a>, one of those methodologies developed by a big company — namely, <a href="https://yandex.com">Yandex</a>. BEM posits that three basic entities (<strong>b</strong>locks, <strong>e</strong>lements and <strong>m</strong>odifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
 
 I’ve spent some time with Yandex and BEM, and I know that this methodology works for large projects. Yandex uses BEM to develop CSS and JavaScript components; Yandex also optimizes templates and tracks dependencies in BEM, develops BEM utilities, supports code experiments and researches the field. On a large scale, this investment pays off and allows Yandex to develop hundreds of its services faster.
 
@@ -274,7 +274,7 @@ BEM.DOM.decl({'name': 'b-link', 'modName': 'pseudo', 'modVal': 'yes'}, {
       this.__base.apply(this, arguments);
 
       // redefine the appearance from within CSS,
-      // this code only gives you a semantic basis! 
+      // this code only gives you a semantic basis!
       this.setMod('status', 'clicked');
    }
 });
@@ -333,7 +333,7 @@ If your framework of choice can do this, then you are all set for BEM-oriented c
 jQuery users could try these lightweight plugins to extend their code with BEM methods:
 <ul>
 	<li><a href="http://xslc.org/jquery-bem/">jQuery BEM</a> plugin</li>
-	<li><a href="http://github.com/ingdir/jquery-bemhelpers/">jQuery BEM Helpers</a> (<code>setMod</code> and <code>getMod</code>)</li>
+	<li><a href="https://github.com/ingdir/jquery-bemhelpers/">jQuery BEM Helpers</a> (<code>setMod</code> and <code>getMod</code>)</li>
 </ul>
 <h3>From a naming convention to a style guide</h3>
 If you work a lot with designers, your team would also benefit from a BEM approach.
@@ -464,9 +464,9 @@ The <code>common</code> library stays “on top,” while the <code>mobile</code
 <h4>The build process</h4>
 We’ve ended up with many small files, which is good for development but a disaster for production! In the end, we want all of the stuff to be loaded in several big chunks. So, we need a build process.
 
-Yandex has an open-source build tool, <a href="http://bem.info/articles/borschik">Borschik</a>, which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> and <a href="https://github.com/css/csso">CSS Optimizer</a>. Tools like <a href="http://requirejs.org">RequireJS</a> can also facilitate the building process, taking care of dependency tracking.
+Yandex has an open-source build tool, <a href="https://bem.info/tools/optimizers/borschik/">borschik</a>, which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> and <a href="https://bem.info/tools/optimizers/csso/">CSS Optimizer</a>. Tools like <a href="http://requirejs.org">RequireJS</a> can also facilitate the building process, taking care of dependency tracking.
 
-For a more comprehensive approach, have a look at <a href="http://bem.info/tools/bem/">bem-tools</a>.
+For a more comprehensive approach, have a look at <a href="https://bem.info/tools/bem/bem-tools/">bem-tools</a>.
 
 The clearest lesson I’ve learned from BEM is not to be afraid of granularity, as long as you know how to build the whole picture.
 <h3>Beyond frameworks</h3>
@@ -474,7 +474,7 @@ For a while, I was pretty skeptical that BEM is suitable for small projects. My 
 
 But that is not the biggest impact of the BEM methodology on my projects. BEM enables you to see beyond frameworks. I remember times when people seriously discussed the best ways to bind event handlers to elements, and when DOM libraries competed for world dominance, and when frameworks were the next big buzz. Today, we can no longer depend on a single framework, and BEM takes the next step by providing a design foundation, giving us a lot of freedom to implement.
 
-Visit the <a href="http://bem.info">BEM</a> website for extra resources, GitHub links, downloads and articles.
+Visit the <a href="https://bem.info">BEM</a> website for extra resources, GitHub links, downloads and articles.
 
 Long story short, BEM it!
 

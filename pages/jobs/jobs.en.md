@@ -43,15 +43,15 @@ If you recognize yourself in the description above, please submit your CV with a
 
 Current Yandex openings:
 -----------------
-  * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
-  * [Senior Frontend Developer](http://company.yandex.ru/job/vacancies/sendevweb.xml) in Yandex.Moscow;
-  * [Frontend Developer](http://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) in Yandex.Moscow;
+  * [Senior Frontend Developer](https://company.yandex.ru/job/vacancies/dev_int_simf.xml) in Yandex.Simferopol;
+  * [Senior Frontend Developer](https://company.yandex.ru/job/vacancies/sendevweb.xml) in Yandex.Moscow;
+  * [Frontend Developer](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml?from=dev_int_yaservices_sn) in Yandex.Moscow;
 
 Current non-Yandex openings requiring BEM knowledge:
 -----------------
   * [Frontend openings requiring BEM knowledge](https://bitbucket.org/manufactura/jobs/) — join frontend team at Interactive Agency [Manufacture](http://factory.mn/) in Voronezh, Russia;
   * [Frontend Developer](http://bit.ly/EmomFrontEnd) — remote position within the Emom team;
-  * [Senior Frontend Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) in Berlin, Germany; 
+  * [Senior Frontend Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) in Berlin, Germany;
   * [Senior Frontend Developer](https://www.linkedin.com/jobs2/view/10839316?trk=vsrp_jobs_res_name&trkInfo=VSRPsearchId%3A1973313181394033367979%2CVSRPtargetId%3A10839316%2CVSRPcmpt%3Aprimary) in Berlin, Germany;
   * [Web Developer — Front-end, HTML5, CSS3, jQuery, JavaScript](http://www.dice.com/job/result/ceiam/JMJO032170) in Allentown, PA, USA.
 

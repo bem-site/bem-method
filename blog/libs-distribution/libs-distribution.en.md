@@ -1,6 +1,6 @@
 # Ways we distribute bem-components
 
-We are often asked about how we distribute [bem-components](https://ru.bem.info/libs/bem-components/v2/). Here is the answer.
+We are often asked how we distribute [bem-components](https://bem.info/libs/bem-components/). Here is the answer.
 
 What do we mean by “distribution”?
 

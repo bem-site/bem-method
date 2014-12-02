@@ -130,7 +130,7 @@ prj.STATIC_HOST = "//yandex.st";
 
 ## Минимизация CSS и JS
 
-По умолчанию borschik минимизирует CSS посредством [CSSO](https://github.com/css/csso)
+По умолчанию borschik минимизирует CSS посредством [CSSO](https://ru.bem.info/tools/optimizers/csso/)
 , а JS с помощью [UglifyJS](https://github.com/mishoo/UglifyJS) v1.2.
 
 Чтобы отключить минимизацию, используйте опцию `--minimize=no`. По умолчанию, она включена.

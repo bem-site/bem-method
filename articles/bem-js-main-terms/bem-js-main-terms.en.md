@@ -44,7 +44,7 @@ As all JavaScript components, code for `i-bem.js` has to be coupled with some HT
 </div>
 ```
 
-If you are curious about why `onclick` attribute is used, see Sergey Berezhnoy's talk (Russian only) "[Different ways of creating components for the client-side](http://events.yandex-team.ru/events/yasubbotnik/msk-jul-2012/talks/302/)" - presented at [Ya.Subbotnik (Yandex Developer Day)](http://events.yandex-team.ru/events/yasubbotnik/) in July 2012.
+If you are curious about why `onclick` attribute is used, see Sergey Berezhnoy's talk (Russian only) "[Different ways of creating components for the client-side](https://events.yandex-team.ru/events/yasubbotnik/msk-jul-2012/talks/302/)" - presented at [Ya.Subbotnik (Yandex Developer Day)](https://events.yandex-team.ru/events/yasubbotnik/) in July 2012.
 
 Usually, the blocks initialization starts on `domReady` event.  Thanks to the ability to read the `onclick` attribute and receive a native javascript object we don't need any `id` components or parse CSS classes.  All blocks marked with `i-bem` CSS class will be transformed according to their parameter's components.
 
@@ -255,4 +255,4 @@ onSetMod : {
 `i-bem` makes possible lazy initialization for the blocks, and creation of blocs without DOM-representation. <br/>
 More information can be found at [the `i-bem` block's page ](http://bem.github.io/bem-bl/sets/common-desktop/i-bem/i-bem.en.html).
 
-This article is based on [Vladimir Varankin's](https://github.com/narqo) talk ["BEM and JavaScript: Why Did We Created a JS-framework?"](http://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow September 8, 2012.
+This article is based on [Vladimir Varankin's](https://github.com/narqo) talk ["BEM and JavaScript: Why Did We Created a JS-framework?"](https://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow September 8, 2012.

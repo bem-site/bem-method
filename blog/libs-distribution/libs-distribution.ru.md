@@ -1,6 +1,6 @@
 # Варианты поставки bem-components
 
-Нас часто спрашивают про варианты поставки [bem-components](https://ru.bem.info/libs/bem-components/v2/). Отвечаем.
+Нас часто спрашивают про варианты поставки [bem-components](https://ru.bem.info/libs/bem-components/). Отвечаем.
 
 Что на деле мы представляем под вариантами поставки?
 

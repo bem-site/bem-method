@@ -54,6 +54,6 @@
 
 [**Регистрация проектов и участия**](https://tech.yandex.ru/events/bemup/15-november-2014/register/) продлится до 18:00 московского времени 30 октября.
 
-Наш twitter [@bem_ru](http://twitter.com/bem_ru/) и [форум на bem.info](http://ru.bem.info/forum/)
+Наш twitter [@bem_ru](https://twitter.com/bem_ru/) и [форум на bem.info](https://ru.bem.info/forum/)
 
 **Stay BEMed!**

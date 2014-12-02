@@ -253,7 +253,7 @@
 ```
 
 В своих разработках мы постепенно отказываемся от XSL в пользу собственного
-JavaScript-based шаблонного движка [XJST](https://ru.bem.info/tools/templating-engines/xjst/). Этот шаблонизатор вобрал в себя всё то, что нам нравилось в XSL, но реализует это с производительностью JavaScript как на
+JavaScript-based шаблонного движка [XJST](https://bem.info/tools/templating-engines/xjst/). Этот шаблонизатор вобрал в себя всё то, что нам нравилось в XSL, но реализует это с производительностью JavaScript как на
 сервере, так и на клиенте.
 
 Мы пишем шаблоны для блоков на предметно-ориентированном языке (domain specific language) BEMHTML, в основе которого лежит XJST.
@@ -469,7 +469,7 @@ block('menu').toggleMod('size', 'big', 'small');
 ```
 
 Приведенный здесь код - абстрактный. В реальных разработках мы используем JavaScript-ядро блока
-[i-bem](http://ru.bem.info/technology/i-bem/current/i-bem-js/) из библиотеки [bem-bl](http://ru.bem.info/libs/bem-bl/dev/).
+[i-bem](https://ru.bem.info/technology/i-bem/current/i-bem-js/) из библиотеки [bem-bl](https://ru.bem.info/libs/bem-bl/).
 
 ### Консистентность блока
 На нашем сайте реализован блок `Кнопка`, для которого задано динамическое поведение.
@@ -507,7 +507,7 @@ block('menu').toggleMod('size', 'big', 'small');
 это было бы наиболее эффективным решением).
 
 [Все сервисы Яндекса](https://www.yandex.ru/all) применяют методологию БЭМ в своем CSS и JavaScript-коде и XSL-шаблонах страниц. Например,
- * [Яндекс.Карты](https://maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&sll=37.609218%2C55.753559&ll=37.609218%2C55.753563&spn=2.570801%2C0.884460&z=9&l=map)
+ * [Яндекс.Карты](https://maps.yandex.ru/)
  * [Яндекс.Картинки](https://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)
  * [Яндекс.Видео](https://video.yandex.ru/#search?text=yac%202011)
  * [Яндекс.Авто](https://auto.yandex.ru/)
