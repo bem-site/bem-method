@@ -17,7 +17,7 @@ In addition to usual minification techniques it can perform structural optimizat
 resulting in smaller file size compared to other minifiers.
 
 ### SVGO
-[SVGO](https://github.com/svg/svgo/#readme) (SVG Optimizer) is a NodeJS-based tool for optimizing SVG vector graphics files.
+[SVGO](/tools/optimizers/svgo) (SVG Optimizer) is a NodeJS-based tool for optimizing SVG vector graphics files.
 
 SVG files, especially exported from various editors, usually contain a lot of redundant and useless information
 such as editor metadata, comments, hidden elements and other stuff that can be safely removed without affecting
@@ -44,7 +44,7 @@ language for pattern matching.
 This is a Node.js module for developing and using such pattern matching grammars.
 
 ### XJST
-[XJST](https://github.com/veged/xjst#extensible-javascript-transformations-) is a DSL for universal data transformations
+[XJST](http://en.bem.info/tools/templating-engines/xjst/) is a DSL for universal data transformations
 with compiler written on top of the node.js and ometajs and output code working in any browser or on server-side.
 
 ### Shmakowiki

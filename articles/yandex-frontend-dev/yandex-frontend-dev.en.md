@@ -1233,11 +1233,7 @@ it's declarative feature and implemented it with JavaScript speed.<br/>
 The result can be run on both client or server size. Sometimes we produce HTML
 output on server under Node.js and sometimes directly in a browser.
 
-If you are insriped, you can check out [BEMHTML
-reference](https://raw.github.com/bem/bem-bl/0.3/blocks-common/i-bem/__html/i-bem__html.wiki).<br/>
-However, the document is in Russian only, so you might need to use
-http://translate.yandex.com/. Official document's translation is still in
-progress.
+If you are insriped, you can check out [BEMHTML reference](https://bem.info/technology/bemhtml/current/reference/).<br/>
 
 ## Libraries
 BEM methodology enables you to create reusable code libraries. That, in turn,
@@ -1256,8 +1252,7 @@ library was turned into [bem-bl](http://bem.github.com/bem-bl/index.en.html).<br
 `bem-bl` stands for `BEM block library` and provides some common blocks for
 building web interfaces.
 
-All the available blocks are represented at the [bem-bl documentation web
-site](http://bem.github.com/bem-bl/index.en.html).
+All the available blocks are represented in the [bem-bl documentation](https://bem.info/libs/bem-bl/dev/).
 
 Each block is represented by a documentation page where you can find its
 description and some examples. Significant that all these examples are alive.
@@ -1266,8 +1261,7 @@ pages with blocks.<br/>
 Using the block page you can try how the block works in your browser and then
 proceed to the code in order to see how to use it.
 
-Also, you can explore block code since they all are in the [GitHub
-repository](https://github.com/bem/bem-bl).
+Also, you can explore block code since they all are in the [GitHub repository](https://github.com/bem/bem-bl).
 
 Such exploration helps when you need to create your own block library.
 
@@ -1297,9 +1291,9 @@ So, this is a cool opportunity to touch BEM stack.
 
 Besides, BEM team also produces many very nice development tools.
 
-[borschik](https://github.com/veged/borschik) has already been introduced.
+[borschik](https://bem.info/tools/optimizers/borschik/) has already been introduced.
 
-Also, you might be interested in [CSSO](http://bem.info/tools/csso/), which is
+Also, you might be interested in [CSSO](https://bem.info/tools/optimizers/csso/), which is
 CSS optimizer unlike others. It does usual minification, but what is more,
 preforms structural optimizations, which no one of existing optimizers can do.
 
@@ -1334,9 +1328,9 @@ preforms structural optimizations, which no one of existing optimizers can do.
 
 These two small pieces of code give a taste how smart CSSO is. Indeed the full
 list of the transformations it makes on CSS cannot be listed because of it's
-really huge. But you can find them all with the link http://bem.info/tools/csso/.
+really huge.
 
-One more optimizer, called [SVGO](https://github.com/svg/svgo), cleans SVG files
+One more optimizer, called [SVGO](https://bem.info/tools/optimizers/svgo/how-it-works/), cleans SVG files
 from many useless information which different graphic editors leave inside.
 
 ### Upshort
@@ -1347,8 +1341,7 @@ So, BEM is
  - A toolkit to automate development and optimize production code, and
  - Libraries helping to develop faster and better.
 
-Please address your questions to the comminuty asking in [BEM Facebook
-group](http://www.facebook.com/groups/209713935765634/) or in Twitter
+Please address your questions to the comminuty asking in [BEM Facebook group](https://www.facebook.com/groups/209713935765634/) or in Twitter
 [@bem_tw](https://twitter.com/bem_tw).
 
 <!--(Begin) Article author block
@@ -1372,4 +1365,4 @@ group](http://www.facebook.com/groups/209713935765634/) or in Twitter
 </div>
 (End) Article author block-->
 
-This information is also available as a talk "[BEM. What you can borrow from Yandex frontend dev](https://vimeo.com/53219242)" given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.
+This information is also available as a talk [BEM. What you can borrow from Yandex frontend dev](https://vimeo.com/53219242) given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.

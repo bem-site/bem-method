@@ -67,7 +67,7 @@ Look at the details: [desktop.bundles/index/index.bemjson.js](https://github.com
 
 ## Map block
 
-Let’s start from the main block — «map». First we have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create a modifier «api» with value «ymaps». In our example we’ll use the [JavaScript maps API](http://api.yandex.ru/maps/doc/jsapi/), but we could also use the [Static maps API](http://api.yandex.ru/maps/doc/staticapi/) with modifiers.
+Let’s start from the main block — «map». First we have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create a modifier «api» with value «ymaps». In our example we’ll use the [JavaScript maps API](https://tech.yandex.ru/maps/doc/jsapi/index-docpage/), but we could also use the [Static maps API](https://tech.yandex.ru/maps/doc/staticapi/index-docpage/) with modifiers.
 
 To make our work with the map easier, we have to think about the interface for adding placemarks. We should add a field «geoObjects», where we’ll put [placemarks or placemark collections](http://api.yandex.com/maps/doc/jsapi/2.x/dg/concepts/geoobjects.xml). The following interface is for the placemark:
 
@@ -139,13 +139,13 @@ Besides interacting with the map properly the block-controller has to know if th
 <img src="https://img-fotki.yandex.ru/get/15554/158800653.1/0_112000_7fb8a3b0_orig" alt="[Visual scheme of above event flow]">
 
 
-For example [http://zloylos.github.io/ymapsbem/index-en.html](http://zloylos.github.io/ymapsbem/index-en.html).
+For additional information see the [example](http://zloylos.github.io/ymapsbem/index-en.html).
 
 <img src="https://img-fotki.yandex.ru/get/15587/158800653.1/0_112001_26cf8f80_orig" alt="Example">
 
 It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code.
 
-Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support.
+Thanks to [Alexander Tarmolov](https://twitter.com/tarmolov) for advice and support.
 
 <!--(Begin) Article author block
 <div class="article-author">

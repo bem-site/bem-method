@@ -1,5 +1,5 @@
 ## The History of BEM
-Once upon a time, in a distant country far-far away, an IT company named Yandex started developing web search
+Once upon a time, in a distant country far-far away, an IT company named [Yandex](https://company.yandex.com) started developing web search
 and affiliated services. Time went by and services were growing, and more and more frontend developers put
 their tireless efforts into improving the ecosystem of Yandex.
 
@@ -180,16 +180,16 @@ Then its HTML container gets a unique CSS class, which is also used as a block n
 CSS classes for blocks got prefixes (`b-`, `c-`, `g-`) to provide sort of a namespace emulation in CSS.
 
 The naming convention itself was changed later, here's the initial list explained:
- * **b-**  block  
+ * **b-**  block
    an independent block, placed on a page wherever you need it
- * **с-**  control  
+ * **с-**  control
    a control (an independent block) with a JavaScript object bound to it
- * **g-**  global  
+ * **g-**  global
    a global definition, used sparingly and always defined for a specific, unique reason;
    the number of these definitions kept at a minimum.
 
 Some suffixes were employed as well, e.g.:
- * **-nojs**   no javascript  
+ * **-nojs**   no javascript
    style rule to be applied with JavaScript turned off. The onload callback may contain an `init()`
    function call that removes these suffixes from all objects, thus semantically marking them
    up as "JavaScript-enabled".
@@ -326,7 +326,7 @@ Obviousy, too many imports, page loads slowly! So, we decided to pre-compile sty
 The compilation replaces `@import` directives with the actual contents of external files (this is called `inlining`)
 and performs more optimizations, e.g. unrequired to browser whitespaces and comments.
 
-Our internal inlining tool evolved from a simple wrapper perl script into an open source project [borschik](https://github.com/veged/borschik); try it out!
+Our internal inlining tool evolved from a simple wrapper perl script into an open source project [borschik](https://bem.info/tools/optimizers/borschik/); try it out!
 
 ### Independent Blocks As a Concept
 By the fall of 2007, our everyday practice got some theory behind it.
@@ -366,9 +366,9 @@ Tagname-based CSS rules may match more tags than we intended them to.
 As soon as we had to fight these and similar bugs in production, a strict version of an independent block
 (named Absolutely Independept Block, abbreviated AIB) was defined with the following extra rules:
 
-  1. never match CSS to tagnames, use classnames for everything:  
+  1. never match CSS to tagnames, use classnames for everything:
     `.b-user b -> .b-user .first-letter`
-  2. classnames for block elements must be prefixed with the parent block name:  
+  2. classnames for block elements must be prefixed with the parent block name:
     `.b-user .first-letter -> .b-user-first_letter`
 
 Such classnames tend to be much longer, and the resulting HTML code is considerably bigger in size.
@@ -380,13 +380,13 @@ As everybody is aware nowadays, giving names to variables is one of the most dif
 
 We approached it cautiously, and invented four prefixes allowed for block names, each one with its own semantics:
 
-  * **b-**  
+  * **b-**
     common blocks
-  * **h-**  
+  * **h-**
     holsters, used for gluing several elements together
-  * **l-**  
+  * **l-**
     layout grids
-  * **g-**  
+  * **g-**
     global styles
 
 ##### Modifications
@@ -398,9 +398,9 @@ Instead of creating 3 different blocks, you should assign a `modification` to yo
 a name (e.g. `size`) and a value (`small`, `normal` or `big`).
 
 There are two reasons for a block to get a modification:
-  1. Block may alter its presentation according to its placement in the layout.  
+  1. Block may alter its presentation according to its placement in the layout.
      Such modification is called `context-dependent`.
-  1. An additional (postfixed) classname may change block's appearance. This is a context-independent (postfix-based) modification.  
+  1. An additional (postfixed) classname may change block's appearance. This is a context-independent (postfix-based) modification.
      `class="b-block b-block-postfix"`
 
 ### Unified Portal-Wide Framework
@@ -798,11 +798,11 @@ This change turned out to be useful when working with modifiers from JavaScript.
 In 2010, we had published some code on [our GitHub account](https://github.com/bem) to continue growing as an open source project.
 
 #### Creating bem-bl Library
-Blocks from Lego are being gradually ported to [bem-bl](https://github.com/bem/bem-bl), a library of blocks we consider useful for any web site, not just a Yandex project. As blocks are gradually open-sourced, we improve code and add new features.
+Blocks from Lego are being gradually ported to [bem-bl](https://bem.info/libs/bem-bl/), a library of blocks we consider useful for any web site, not just a Yandex project. As blocks are gradually open-sourced, we improve code and add new features.
 
 This is very much a work in progress, and we invite everybody to make pull requests :-)
 
-We also develop [bem-tools](https://github.com/bem/bem-tools), a set of helper scripts and automation utilities that make working with BEM files easier. This is mostly done with Node.js, to keep the barriers low for front-end people familiar with JavaScript and willing to contribute.
+We also develop [bem-tools](https://bem.info/tools/bem/bem-tools/), a set of helper scripts and automation utilities that make working with BEM files easier. This is mostly done with Node.js, to keep the barriers low for front-end people familiar with JavaScript and willing to contribute.
 
 #### Redefinition Levels In BEM
 One size never fits all... but one BEM does! Because blocks and elements are represented on a file system as files and folders, and BEM file structure is unified and based mostly on semantical criteria, we can easily redefine a part of a BEM block, or add more functionality. Similar to the way we extend objects in JavaScript, BEM blocks can be extended using so-called "redefinition levels".
@@ -898,4 +898,4 @@ Find CSS prefixes too long to type? Remove them!
 
 This is a perfect opportunity to try BEM concepts, and since we don't really have those strict rules, you're not really breaking anything as long as you hold on to the main principle of blocks, elements and modifiers.
 
-Read more about putting blocks to filesystem in [a separate article](/method/filesystem/).
+Read more about [putting blocks to filesystem](/method/filesystem/).

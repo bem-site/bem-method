@@ -268,8 +268,6 @@ productivity on either client or server side.
 We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
 [The main ideas of BEMHTML](https://bem.info/technology/bemhtml/current/rationale/).
 
-[BEMHTML](https://github.com/bem/bem-core/blob/v2/common.blocks/i-bem/i-bem.bemhtml)
-
 ### Blocks Reiteration
 The second `Menu Block` can occur in the `Foot Block` of a site. Or, a `Text Block`
 can turn into two, separated by an advertisement.
@@ -529,7 +527,7 @@ be the most efficient).
 
 [All the services of Yandex](https://www.yandex.ru/all) have BEM in their
 CSS and JavaScript code and XSL templates of the pages. E.g.,
- * [Yandex.Maps](https://maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&sll=37.609218%2C55.753559&ll=37.609218%2C55.753563&spn=2.570801%2C0.884460&z=9&l=map)
+ * [Yandex.Maps](https://maps.yandex.ru)
  * [Yandex.Images](https://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)
     This is a service for searching images in the Internet.
  * [Yandex.Video](https://video.yandex.ru/#search?text=yac%202011)
@@ -556,6 +554,6 @@ More examples:
  * [HeadHunter](http://hh.ru/)
  * [TNK Racing Team](http://futurecolors.ru/tnkracing/)
 
-You may also be interested in sites that use [bem-bl](http://bem.github.com/bem-bl/index.ru.html) block library:
+You may also be interested in sites that use [bem-bl](https://bem.info/libs/bem-bl/) block library:
  * [Mikhail Troshev vCard](http://mishanga.pro/)
     Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))

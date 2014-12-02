@@ -1,3 +1,5 @@
+Currently available in Russian only.
+
 # О проекте
 
 Лего — это внутренний сервис Яндекса, основные задачи которого:
@@ -15,11 +17,11 @@
 
 ## Клубы
 ### [clubs.at.yandex-team.ru/lego](http://clubs.at.yandex-team.ru/lego/)
-Этот клуб для анонсов и отчётов о разработке Лего-платформы.  
+Этот клуб для анонсов и отчётов о разработке Лего-платформы.
 Записи в клубе дублируются на рассылку lego@.
 
 ### [clubs.at.yandex-team.ru/lego-dev](http://clubs.at.yandex-team.ru/lego-dev/)
-Этот клуб для общения на тему использования Лего-платформы разработчиками.  
+Этот клуб для общения на тему использования Лего-платформы разработчиками.
 Записи в клубе дублируются на рассылку lego-dev@yandex-team.ru.
 
 # БЭМ
@@ -28,17 +30,17 @@
 ## Технологии
 
 #### BEMHTML
-[Rationale](http://ru.bem.info/libs/bem-core/1.0.0/rationale/)  
-[Быстрый старт](http://ru.bem.info/libs/bem-core/1.0.0/intro/)  
-[Референс](http://ru.bem.info/libs/bem-core/1.0.0/reference/)
+[Описание](https://ru.bem.info/technology/bemhtml/current/rationale/)
+[Быстрый старт](https://ru.bem.info/technology/bemhtml/current/intro/)
+[Руководство](https://ru.bem.info/technology/bemhtml/current/reference/)
 
 #### i-bem.js
-[Руководство пользователя](http://ru.bem.info/libs/bem-core/1.1.0/i-bem-js/)
+[Руководство пользователя](https://ru.bem.info/technology/i-bem/current/i-bem-js/)
 
 
 # Дизайн
 
-[Интерфейс 3.x (будущее)](http://guide.yandex-team.ru/)  
-[Интерфейс 3.4 (стабильный)](http://guide-3-4.kovchiy.isam.yandex.ru/pages/home.xml)  
-[Интерфейс 2.x (Острова)](http://islands.yandex-team.ru/)  
-[Версионирование дизайна](kovchiy.at.yandex-team.ru/2728)
+[Интерфейс 3.x (будущее)](http://guide.yandex-team.ru/)
+[Интерфейс 3.4 (стабильный)](http://guide-3-4.kovchiy.isam.yandex.ru/pages/home.xml)
+[Интерфейс 2.x (Острова)](http://islands.yandex-team.ru/)
+[Версионирование дизайна](http://kovchiy.at.yandex-team.ru/2728)
