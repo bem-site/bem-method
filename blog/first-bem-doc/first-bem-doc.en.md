@@ -27,8 +27,8 @@ I drafted the following:
 
 So, these problems were set to priority as possible tasks for hackathon, and 
   * To revise **bem.info structure** in order to give complete understanding of BEM methodology, platform – libraries, tools, technologies – and product community, to simplify search and understanding of the information;
-  * To develop basic principles for providing information on the site;
-  * Possibly to translate missing parts of the documents.
+  * To develop **basic principles** for providing information on the site;
+  * Possibly to **translate missing parts** of the documents.
 
 ![](https://img-fotki.yandex.ru/get/15539/44214498.bc/0_9bbeb_1b0515f0_XL.jpg)
 
@@ -78,7 +78,7 @@ What we have found out:
 * The following content of bem.info is popular: «Technologies» – 24%, «Libraries» – 24%, «Forum (only Russian version is available in the meantime)» – 16%, «Tools» – 11%, «Talks» – 10%, «Articles» – 8%, «Methodology» – 6%;
 * The majority of questioned think that BEM documentation is hard to understand – 74% vs. 26%;
 * Developers choose big volumes of documentation if they structured well (36%) and workshops (26%). Some are willing to watch lessons (19%). Short documentation needed only by 17%;
-* Almost all questioned agree that the site lacks interactive samples and manuals, video lessons and graphical support of the text.
+* Almost all questioned agree that the site lacks interactive samples and manuals, video lessons and graphical support of the text;
 * We were pleased to hear that "we did a great job on restructuring and complementing documentation, it is now MORE BETTER, thank you!».
 
 The task delegation approach was efficient: before a dinner time we had ready-to-go brand a new structure of the site and basic rules for the content forming, that we want to follow in the future. Of course, it is a proposition that needs to be developed well and agreed with BEM team.
