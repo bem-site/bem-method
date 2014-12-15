@@ -46,4 +46,28 @@ Our main goal was not to compete for significant trophies but to work together o
 
 ![](https://img-fotki.yandex.ru/get/15575/44214498.bc/0_9bbdf_2fb3664_XL.jpg)
 
+## What counts
+
+We announced our hackathon 2,5 months prior to its execution. It is a long period of time to keep registration open. However we could not avoid it. We had to choose participants carefully, they had to prepare their own products on BEM or pass the test, we had to review code, ask for what is missing or start to communicate with potential participants. In other words, get them accepted, cover travel expences, sort out accomodation. Mentors of the projects had to think of the tasks and goals, plan the team work, suggest questions and find possible answers. We were not bored at all.
+
+As the result, we had **34 calls for participation**. 23 invitations were sent after the review, 15 participants came to take part in the event. Five of them were not from Moscow but came from **Saint Petersburg, Orenburg, Voronezh, Ekaterinburg**. Our colleagues at Yandex were interested as well and came to code with us. 13 Yandex developers were in teams. We had **14 mentors** (some of the teams had two mentors at the same time), 4 of them were not from Yandex.
+
+![](https://img-fotki.yandex.ru/get/16115/44214498.bc/0_9bbed_a19cf4db_XL.jpg)
+
+During our hackathon we have worked on the projects. **We had 12 projects**. 7 was created by BEM team, 
+5 — by developers from BEM community.
+
+After the introduction session we had 8 left to work on:
+
+- Blocks
+- Modular building of BEM projects
+- Forum on BEM
+- Dashboard
+- Documentation
+- A service that converts code into images with syntax highlighted written on BEM
+- MaximeOnline: content management system on BEM
+- BEM application for Smart-TV
+
+How it was, what developers wanted to code and what they have got at the end will be written by mentors and published in our blog in the nearest future!
+
 //To be continued//
