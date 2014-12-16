@@ -319,6 +319,28 @@
             "info": ""
         }
     },
+    "kondratov-alexey": {
+        "en": {
+            "firstName": "Alexey",
+            "lastName": "Kondratov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kondratov-alexey.jpg",
+            "github": "ololobus",
+            "email": [],
+            "twitter": "ololobuss",
+            "skype": "",
+            "info": "Graduated from Moscow Research Nuclear University, theoretical physics department. Ruby and Ruby on Rails developer with over 2 years experience, took part in the variety of projects from social gaming, dating services to travel meta-search service. Worked in Yandex as an interface developer for SERP and dealt with AJAX and History API connected development."
+        },
+        "ru": {
+            "firstName": "Алексей",
+            "lastName": "Кондратов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kondratov-alexey.jpg",
+            "github": "ololobus",
+            "email": [],
+            "twitter": "ololobuss",
+            "skype": "",
+            "info": "Закончил кафедру теоретической физики МИФИ. Около 2 с половиной лет занимался разработкой на Ruby и Ruby on Rails, участвовал в различных проектах, начиная от социальных игр, сайта знакомств и заканчивая мета-поисковиком туров. В Яндексе был разработчиком интерфейсов SERP и занимался всем, что касается AJAX и работы с History API."
+        }
+    },
     "konstantinova-gela": {
         "en": {
             "firstName": "Gela",
