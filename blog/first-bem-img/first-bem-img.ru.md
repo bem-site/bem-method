@@ -2,7 +2,7 @@
 
 <img style="float: right" src="https://dl.dropboxusercontent.com/u/1122837/src2img.png" alt="фотография офиса Яндекса в Санкт-Петербурге" width="200" title="BEMup в Санкт-Петербурге" />
 
-Привет, меня зовут [Алексей Кондратов](https://ru.bem.info/authors/alexey-kondratov) и я представлял на хакатоне проект «[src2img](http://src2img.com/)».
+Привет, меня зовут [Алексей Кондратов](https://ru.bem.info/authors/kondratov-alexey) и я представлял на хакатоне проект «[src2img](http://src2img.com/)».
 
 ## Предыстория
 
