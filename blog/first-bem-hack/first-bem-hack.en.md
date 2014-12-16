@@ -70,4 +70,20 @@ After the introduction session we had 8 left to work on:
 
 How it was, what developers wanted to code and what they have got at the end will be written by mentors and published in our blog in the nearest future!
 
+## Exit pull results
+
+Once we are done with the event, we like to get developer's opinion on it. We value your meaning and constantly improve our events because of that.
+
+We have got so called **exit pull results** on our hackathon too and would like to share it with you!
+
+Thus, we have got mentors and participants both taking part in the survey in a proportion 40 to 60. **100% of answered felt satisfied** with their teams, mentors, participants. Little less than 100% were also satisfied with the level of preparation in the area of technology. So to speak, we have paid a lot of attention to the level of BEM and JS knowledge that participants have at registration because the project required to code not to learn JS.
+
+We were worried however almost all teams passed planning period fast enough. They also planned tasks together as teams. At the end 80% of developers though of their work during hackathon as «realised everything we planned to code».
+
+**Hackathon as a format** was found very comfortable and optimal. However there were developers that liked to start earlier or to sleep in the venue or to work more than two days or even not to leave it at all. We will listen to you definitely in the future!
+
+This time most of the projects were created by our team. Therefore we wanted to find out whether participants find our ideas interesting and useful for realisation. 90% of those answered find them so. We are happy about that and will continue to bring our ideas and projects into BEM world!
+
+![](https://img-fotki.yandex.ru/get/15595/44214498.bc/0_9bbf9_f5dae655_XL.jpg)
+
 //To be continued//
