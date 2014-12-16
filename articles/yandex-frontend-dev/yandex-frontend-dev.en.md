@@ -6,7 +6,7 @@ given at [Riga WebConf](http://webconf.lv/) in November 2012.
 The article sums up [Yandex](http://www.yandex.com/) over 7-year experience
 in finding solutions for efficient frontend development.<br/>
 Yandex, as a search engine and the larges Internet company in Russia, enjoys
-the maijor share of the local market and provides over a hundred of associated
+the major share of the local market and provides over a hundred of associated
 services with the help of 2500 developers and 150 frontend engineers among them.
 
 <img src="https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fd5_a2f2c78d_orig"/>
