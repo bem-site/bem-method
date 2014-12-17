@@ -10,22 +10,22 @@ The BEM team talked about latest releases in [bem-tools](https://bem.info/tools/
 future, and discussed their thoughts on opensource development and the community we are building around BEM.
 
 We also explained technical details of contributing to the project, what “well-written pull requests” are,
-the workflow in BEM development, how to test changes in BEM-project correctly, and what you can do to
+the workflow in BEM development, how to test changes in BEM project correctly, and what you can do to
 help develop BEM.
 
 During the preparation time we got talk proposals from other developers outside Yandex.
 
 We ended up with 2 developers sharing their BEM implementation experience:
-[Vassily Chernov](https://twitter.com/bivihoba), lead frontend developer at **Softline**, came from Orenburg,
-and [Vladimir Dovydenko](https://twitter.com/dovyden), frontend developer from **TKS Bank**, Moscow.
+[Vassily Chernov](https://twitter.com/bivihoba), lead front-end developer at **Softline**, came from Orenburg,
+and [Vladimir Dovydenko](https://twitter.com/dovyden), front-end developer from **TKS Bank**, Moscow.
 
 They talked about the conditions under which they implement BEM in their projects, what cases they solve using
-BEM-methodology, how they use tools and write CSS, their difficulties and the costs they have because of large-scale changes, what results they have achieved and what plans they have.
+BEM methodology, how they use tools and write CSS, their difficulties and the costs they have because of large-scale changes, what results they have achieved and what plans they have.
 
 As a bonus we had talks about [bem-mvc](https://bem.info/libs/bem-mvc/) library, with Todo written as an
 example, and implementation of BEM technologies in Islands platform that Yandex launched recently.
 
-[Vassily Chernov](https://twitter.com/bivihoba), lead frontend developer at **Softline** and speaker,
+[Vassily Chernov](https://twitter.com/bivihoba), lead front-end developer at **Softline** and speaker,
 shared what he liked about BEMup:
 
 > The meetup was a success. I do not know how such events should be, but everything went pretty well.  I had
@@ -76,7 +76,7 @@ improvement of the product and sharing this with you during future BEMups.
 
 Such events and your feedback help us a lot to see those we can not see because of specifics of work. Thank you so much!
 
-More than **50 frontend developers** and IT leaders from Moscow, Ekaterinburg, Orenburg, Ivanovo, Serpukhov, Obninsk, Volgograd came to meetup.
+More than **50 front-end developers** and IT leaders from Moscow, Ekaterinburg, Orenburg, Ivanovo, Serpukhov, Obninsk, Volgograd came to meetup.
 
 Watch how we did it in a promo video with English subtitles.
 

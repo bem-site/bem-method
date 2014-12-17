@@ -24,7 +24,7 @@ To accelerate bem make, the modules of new technologies (v2) should be used for 
 The API of new technologies is slightly different from the old one. When inheriting technologies all
 modules in the chain should have the same version (the old modules shouldn't be mixed with the new ones).
 
-For moving to the new technologies one needs to declare them in the bundles' file `.bem/level.js`, for example:
+For moving to the new technologies one needs to declare them in the bundles file `.bem/level.js`, for example:
 
 ```js
 exports.getTechs = function() {
@@ -71,9 +71,9 @@ MAKE.decl('Arch', {
 });
 ```
 
-Here `cache:false` says that by default levels' cache is off.
+Here `cache:false` says that by default levels cache is off.
 
-`except` is an array of levels' paths (or directories containing levels) treated as exceptions,
+`except` is an array of levels paths (or directories containing levels) treated as exceptions,
 e.g. in this case the cache is enabled.
 
 The cache will be regenerated if the build was run with the option `--force`.
@@ -171,4 +171,4 @@ a list of files filtered by a specific suffix is passed to it.
 
 Each file path is processed by `getBuildResultChunk`. The output is a string with the file content.
 
-Depending on the technology it may be or obtained file path wrapped in connection directive or the file's content read from the disk.
+Depending on the technology it may be or obtained file path wrapped in connection directive or the file content read from the disk.

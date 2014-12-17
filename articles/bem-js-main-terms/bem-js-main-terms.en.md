@@ -1,4 +1,4 @@
-# JavaScript for BEM: main terms
+# JavaScript for BEM: the main terms
 
 Stack of BEM technologies contains a block [i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html).
 
@@ -9,7 +9,7 @@ It's JavaScript implementation uses BEM data domain. The use of this library all
 
 Principally, all existent JavaScript libraries can be divided into the following categories:
 
- * Libraries that responsible for the normalization of the browser's API (shims)<br/>
+ * Libraries that responsible for the normalization of the browser API (shims)<br/>
    For example jQuery and base2 (a long time ago, at the dawn of stack frameworks, it was very popular).
  * Ready-made Widget Sets
  * Complicated Libraries
@@ -46,14 +46,14 @@ As all JavaScript components, code for `i-bem.js` has to be coupled with some HT
 
 If you are curious about why `onclick` attribute is used, see Sergey Berezhnoy's talk (Russian only) "[Different ways of creating components for the client-side](https://events.yandex-team.ru/events/yasubbotnik/msk-jul-2012/talks/302/)" - presented at [Ya.Subbotnik (Yandex Developer Day)](https://events.yandex-team.ru/events/yasubbotnik/) in July 2012.
 
-Usually, the blocks initialization starts on `domReady` event.  Thanks to the ability to read the `onclick` attribute and receive a native javascript object we don't need any `id` components or parse CSS classes.  All blocks marked with `i-bem` CSS class will be transformed according to their parameter's components.
+Usually, the blocks initialization starts on `domReady` event.  Thanks to the ability to read the `onclick` attribute and receive a native javascript object we don't need any `id` components or parse CSS classes.  All blocks marked with `i-bem` CSS class will be transformed according to their parameter components.
 
 ## Behavior declaration
-A block's behavior is described in a JavaScript file which has the same name as the block it's self (`myblock.js`).
+A block behavior is described in a JavaScript file which has the same name as the block it's self (`myblock.js`).
 
 From an OOP point of view, similar blocks form classes.  Furthermore, for every block on the page an instance of each corresponding "class" is generated.
 
-The `decl` method is used for describing the block's behaviour, it receives 3 parameters:
+The `decl` method is used for describing the block behaviour, it receives 3 parameters:
  1. The `name` of the block we're talking about.
  2. This specific instance properties.
  3. The static properties of the class to which the block belongs.
@@ -78,7 +78,7 @@ Inside JavaScript, the reference to the instance you can always get with help of
   Perform a `super call`, which means to call the base method implementation.
 
 The last one allows us to operate within different `levels`.
-When extending functionality of a current block, a developer always has access to the block's behaviour as defined on the previous level.
+When extending functionality of a current block, a developer always has access to the block behaviour as defined on the previous level.
 In other words, methods can be fully overwritten or they can be extended with additional behavior.
 
 ```js
@@ -100,10 +100,10 @@ Other than inheritance by definition levels, a block has the possibility to inhe
 To find other blocks it is possible to use of the `find*` methods, it depends on where the desirable block is located relative to the current block:
 
 ```js
-// Search within the current block's context.
+// Search within the current block context.
 this.findBlockInside([elem], block)
 
-// Search outside of the current block's context.
+// Search outside of the current block context.
 this.findBlockOutside([elem], block)
 
 // Search DOM-node of the named block.
@@ -115,10 +115,10 @@ All these methods return a JavaScript object, an instance of the block which was
 In a similar way a collection of blocks can be found:
 
 ```js
-// Search inside the current block's context.
+// Search inside the current block context.
 this.findBlocksInside([elem], block)
 
-// Search outside of the current block's context.
+// Search outside of the current block context.
 this.findBlocksOutside([elem], block)
 
 // Search DOM-node of the named block
@@ -126,7 +126,7 @@ this.findBlocksOn([elem], block)
 ```
 
 ## Elements
-There are methods for accessing a block's `elements`: `elem` and `findElem`.
+There are methods for accessing a block `elements`: `elem` and `findElem`.
 The difference between them is that the `elem` method cashes its result when it's called at the firs time, therefore there is no need to store a result of `elem` method in a variable.  It's already implemented for this method.
 
 ```js
@@ -147,10 +147,10 @@ The methods for working with modifiers are the same for blocks and for elements.
 The first(optional) parameter shows what is going on.
 
 ```js
-// Get the value of the block's modifier
+// Get the value of the block modifier
 this.getMod(modName)
 
-// Get the value of the the element's modifier
+// Get the value of the the element modifier
 this.getMod(elem, modName)
 
 // Verify the modifier
@@ -162,13 +162,13 @@ this.setMod([elem], modName, modVal)
 // Delete modifiers
 this.delMod([elem], modName)
 
-// Toggle the modifier's value
+// Toggle the modifier value
 this.toggleMod([elem], modName,
     modVal1, modVal2, [condition])
 ```
 
 
-Modifiers describe a block's state.  Every block has `onSetMod` property that specifies what should be done when the block's state is changed.
+Modifiers describe a block state.  Every block has `onSetMod` property that specifies what should be done when the block state is changed.
 
 ```js
 BEM.DOM.decl('myblock', {
@@ -212,7 +212,7 @@ BEM.DOM.decl('myblock', {
 ```
 
 ## Events
-Events play a key-role in JavaScript.  There are special methods which allow us to work with events on the DOM nodes corresponding to blocks, and with events on BEM-objects. (JavaScript objects that are the block's instances).
+Events play a key-role in JavaScript.  There are special methods which allow us to work with events on the DOM nodes corresponding to blocks, and with events on BEM-objects. (JavaScript objects that are the block instances).
 
 ```js
 // DOM-event
@@ -227,7 +227,7 @@ this
     .trigger(event, [data])
 ```
 
-A DOM-event doesn't need any explanations, it the result of a user's action: click, key press, scroll, etc.
+A DOM-event doesn't need any explanations, it the result of a user action: click, key press, scroll, etc.
 
 BEM-events are like "custom events", they exist for the possibility to create an API for blocks.
 
@@ -245,7 +245,7 @@ onSetMod : {
 
         'inited' : function(){
 
-            // The block's "constructor"
+            // The block "constructor"
 
         }
     }
@@ -253,6 +253,6 @@ onSetMod : {
 ```
 
 `i-bem` makes possible lazy initialization for the blocks, and creation of blocs without DOM-representation. <br/>
-More information can be found at [the `i-bem` block's page ](http://bem.github.io/bem-bl/sets/common-desktop/i-bem/i-bem.en.html).
+More information can be found at [the `i-bem` block page ](http://bem.github.io/bem-bl/sets/common-desktop/i-bem/i-bem.en.html).
 
-This article is based on [Vladimir Varankin's](https://github.com/narqo) talk ["BEM and JavaScript: Why Did We Created a JS-framework?"](https://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow September 8, 2012.
+This article is based on [Vladimir Varankin's](https://github.com/narqo) talk ["BEM and JavaScript: Why Did We Created a JS-framework?"](https://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer Day) in Moscow September 8, 2012.

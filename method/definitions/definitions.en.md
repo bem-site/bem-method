@@ -10,7 +10,7 @@ a way of thinking about program entities regardless of programming languages bei
 We used BEM principles to create a set of front-end development techniques and tools, that
 allow us to build websites quickly and maintain them over a long time.
 
-### Unified Data Domain
+### Unified data domain
 Imagine an ordinary website, like the one pictured below.
 
 ![Ordinary website](https://img-fotki.yandex.ru/get/15561/158800653.0/0_111fbc_61755fac_orig)
@@ -21,7 +21,7 @@ For example, in this picture there are `Head`, `Main Layout` and `Foot` blocks. 
 `Head` in turn consists of `Logo`, `Search`, `Auth block` and `Menu`. `Main Layout`
  contains a `Page Title` and a `Text Block`.
 
-![site's blocks](https://img-fotki.yandex.ru/get/15592/158800653.0/0_111fbb_2bb44507_orig)
+![site blocks](https://img-fotki.yandex.ru/get/15592/158800653.0/0_111fbb_2bb44507_orig)
 
 Giving each part of the page a name is very useful when it comes to team communication.
 
@@ -176,7 +176,7 @@ You can use any format to describe the BEM tree and any template engine.
 We went with JSON as a page description format.
 It is then turned into HTML by a JS-based template engine BEMHTML.
 
-### Block Independence
+### Block independence
 As projects grow, blocks tend to be added, removed, or moved around the page. For example,
 you may want to swap the `Logo` and `Auth Block` or to place the `Menu` under the
 `Search Block`.
@@ -233,7 +233,7 @@ E.g.:
   * `blockName-elementName`
 
 #### Independent templates
-From the template engine's perspective, block independence means that:
+From the template engine perspective, block independence means that:
 
  * Blocks and elements must be described in the input data
     Blocks (or elements) must have unique "names" to make things like "`Menu` should be
@@ -268,7 +268,7 @@ productivity on either client or server side.
 We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
 [The main ideas of BEMHTML](https://bem.info/technology/bemhtml/current/rationale/).
 
-### Blocks Reiteration
+### Blocks reiteration
 The second `Menu Block` can occur in the `Foot Block` of a site. Or, a `Text Block`
 can turn into two, separated by an advertisement.
 
@@ -283,7 +283,7 @@ On the JavaScript side it means:
     Using CSS class selectors allow picking all blocks with a given name to apply the required
     dynamic behavior.
 
-### Modifiers for Blocks
+### Modifiers for blocks
 We often need to create a block very similar to an existing one, but with slightly altered
 its appearance or behavior.
 
@@ -346,7 +346,7 @@ A modifier is an additional CSS class for a block or an element.
   // CSS code to specify height
 }
 .menu_type_buttons .menu__item {
-  // CSS code to change item's look
+  // CSS code to change item look
 }
 ```
 
@@ -433,7 +433,7 @@ Or to make menu classes independent of the implementation details of its layout:
 </div>
 ```
 
-### Subject-Matter Abstraction
+### Subject-matter abstraction
 When many people work on a project they should agree on a data domain and use it
 when naming their blocks and elements.
 

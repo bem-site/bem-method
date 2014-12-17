@@ -61,7 +61,7 @@ DOM.decl('call-button', {
 
 Take into account that here we use a `boolean modifier`, which has no value. But
 as you will see below, modifiers are very often used as key-value pairs. In that
-case, both modifier's name and its value have to be passed to the `setMod`
+case, both modifier name and its value have to be passed to the `setMod`
 helper:
 
 ```js
@@ -70,7 +70,7 @@ this.setMod('status', 'on');
 this.setMod('status', 'off');
 ```
 
-The `setMod` method applies a modifier's CSS class to the blocks which makes the
+The `setMod` method applies a modifier CSS class to the blocks which makes the
 block change its appearance. If you need additional changes on a block,
 place them into a function corresponding to the modifier. Like the following:
 
@@ -91,7 +91,7 @@ provide(DOM);
 });
 ```
 Here you can run your calculations, or code any functionality of the block. As
-there is access to the block's DOM node and its children, the DOM structure can
+there is access to the block DOM node and its children, the DOM structure can
 also be changed.<br/>
 With the `elem` helper you can select the elements of the block by their names.
 

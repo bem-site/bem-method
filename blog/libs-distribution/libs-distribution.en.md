@@ -6,7 +6,7 @@ What do we mean by “distribution”?
 
 ## Source
 
-Classic way. You need to check out the library from GitHub and use build tools in a way it is supported in the library itself, within the project-stub or project’s generator for the chosen library.
+Classic way. You need to check out the library from GitHub and use build tools in a way it is supported in the library itself, within the project-stub or project generator for the chosen library.
 
 ## Compiled
 

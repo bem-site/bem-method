@@ -15,7 +15,7 @@ First of all, common web-technologies that are used to implement behavior or app
 * images related to BEM entity;
 * documentation.
 
-For instance, when we have my-block.css file that declares block's appearance, we say that block was implemented using CSS technology.
+For instance, when we have my-block.css file that declares block appearance, we say that block was implemented using CSS technology.
 
 Second of all, we have a number of own technologies — ([BEMHTML](https://bem.info/technology/bemhtml/current/reference/), [BEMTREE](https://bem.info/technology/bemtree/current/bemtree/), [BEMJSON](https://bem.info/technology/bemjson/current/bemjson/), [i-bem.js](https://bem.info/tutorials/bem-js-tutorial/)) that are our implementation of [BEM methodology](https://bem.info/method/).
 
@@ -33,7 +33,7 @@ From now on everything about technologies listed in the second paragraph will ap
 
 Besides the new section “Technologies” on site we have made some more changes.
 
-We deleted outdated versions of bem-core library's documentation in the “Libraries” section, because it was not covering everything, and added subparagraph called “Documentation”. It leads us on click to the page with tags selection corresponding with the selected version of the chosen library.
+We deleted outdated versions of bem-core library documentation in the “Libraries” section, because it was not covering everything, and added subparagraph called “Documentation”. It leads us on click to the page with tags selection corresponding with the selected version of the chosen library.
 
 ## Publishing at bem.info
 

@@ -94,7 +94,7 @@ This expression must be in a block comment `/*borschik:include:file.js*/` or str
 Comment and string have several semantic.
 
 
-If `include` is in a comment it will be replaced by the file's content without any transformation.
+If `include` is in a comment it will be replaced by the file content without any transformation.
 `page.js`
 ```js
 var prj = {};
@@ -118,7 +118,7 @@ prj.cookie = {
 /* components/cookie.js end */
 ```
 
-If `include` is in a string it will be replaced with the result of applying `JSON.stringify` to the file's content. `page.js`
+If `include` is in a string it will be replaced with the result of applying `JSON.stringify` to the file content. `page.js`
 ```js
 prj.STATIC_HOST = "borschik:include:components/host.txt";
 ```
@@ -160,7 +160,7 @@ The URL will be transform to `background-image: url("/a/b.gif");` because of `.b
 
 There is a `follow_symlinks` rule in configuration. You can indicate which files and directories must be followed by symlinks.
 
-Example,
+Example:
 
 ```js
     "follow_symlinks" : {
@@ -250,7 +250,7 @@ borschik freezes these links, changing their path to `../../_` and creates image
 Object key — directories whose files will be frozen.
 Key value - directory for resulting frozen files, relative to their initial path.
 
-Examaple
+Example:
 ```json
 {
     "freeze_paths": {
@@ -450,7 +450,7 @@ $ borschik freeze \
   --output=freeze-info.json # JSON wit path-mapping original file -> frozen file
 ```
 
-Example
+Example:
 ```sh
 $ borschik freeze --input=js > freeze-info.json
 ```
