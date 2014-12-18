@@ -65,6 +65,28 @@
             "info": "Менеджер проектов в Яндексе"
         }
     },
+    "belyanskii-alexandr": {
+        "en": {
+            "firstName": "Alexandr",
+            "lastName": "Belyanskii",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belyanskii-alexandr.jpg",
+            "github": "belyanskii",
+            "email": [],
+            "twitter": "belyanskii",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Александр",
+            "lastName": "Белянский",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belyanskii-alexandr.jpg",
+            "github": "belyanskii",
+            "email": [],
+            "twitter": "belyanskii",
+            "skype": "",
+            "info": ""
+        }
+    },
     "belevich-kir": {
         "en": {
             "firstName": "Kir",
