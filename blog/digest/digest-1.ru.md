@@ -12,7 +12,7 @@
 
   * Большая новость для разработчиков на Windows — ENB теперь, наконец, работает и на этой ОС. Подробности в [релизе v0.13.11](https://github.com/enb-make/enb/releases/tag/v0.13.11)
   * Выпустили версию [enb-bem-techs v1.0.0](https://github.com/enb-bem/enb-bem-techs/releases/tag/v1.0.0)
-  * Выпустили версию [Gemini v0.9.4](https://github.com/bem/gemini/releases/tag/v0.9.4)
+  * Выпустили версию [Gemini v0.9.5](https://github.com/bem/gemini/releases/tag/v0.9.5)
   * Выпустили версию [generator-bem-stub 0.2.0](https://github.com/bem/generator-bem-stub/blob/master/CHANGELOG.ru.md)
   * Улучшили быстродействие в библиотеке bem-bl. Подробности в [релизе v2.5.1](https://github.com/bem/bem-bl/releases/tag/v2.5.1)
   * Появился прототип библиотеки компонент для создания форм — [bem-forms](https://github.com/bem/bem-forms). Присоединяйтесь к [обсуждению](https://github.com/bem/bem-forms/issues) и разработке
