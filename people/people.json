@@ -87,6 +87,28 @@
             "info": ""
         }
     },
+    "belitsky-dmitry": {
+        "en": {
+            "firstName": "Dmitry",
+            "lastName": "Belitsky",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belitsky-dmitry.jpg",
+            "github": "dab",
+            "email": [],
+            "twitter": "dabelitsky",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Дмитрий",
+            "lastName": "Белицкий",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belitsky-dmitry.jpg",
+            "github": "dab",
+            "email": [],
+            "twitter": "dabelitsky",
+            "skype": "",
+            "info": ""
+        }
+    },
     "belevich-kir": {
         "en": {
             "firstName": "Kir",
