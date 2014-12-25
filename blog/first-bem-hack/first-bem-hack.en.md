@@ -86,4 +86,32 @@ This time most of the projects were created by our team. Therefore we wanted to 
 
 ![](https://img-fotki.yandex.ru/get/15595/44214498.bc/0_9bbf9_f5dae655_XL.jpg)
 
+Among the reasons that stopped teams from finishing were lack of technical skills of one or more team players, lack of time, risk of launching services on different platforms, not sufficient architecture planning, wrong estimation of  tasks complexity vs. team power.
+
+**What would be great to solve in future events**:
+
+- Train yourself beforehand in order no to stop the team
+- Configure the environment beforehand in order not to stop the team
+- Think of architecture beforehand in order not to stop the team
+- Value the level of tasks given, needed quantity of people to solve them, deadlines; plan and split tasks into subtasks when needed in order not to stop the team
+- Prepare projects with different levels of complexity — for beginners, to make something useful or to make it cool
+- Code BEM full stack projects
+- Vote for the ideas if there are too many, exclude unpopular to form teams of 5 developers for more productive realization of tasks
+- Look for more community-driven projects
+
+Some of answers are be worth quoting:
+
+> «The main idea of any Hackathon is to have this atmosphere of creativeness and healthy competition. Therefore would be great to have more original projects from the community».
+
+> «I mush say that prescreening of developers' skills was good enough and there was no need to explain BEM anymore.  Ideal situation was in Blocks team: every block is a separate task, project is already configured, there are examples of of other blocks and a format. As a result everyone had a task according to his skills and completed it before the presentation. Of course one solid task is much more interesting than several small but having 8-10 hours of pure time this will be ideal».
+
+> «We should send at least one BEM-friend in any project we have. There were teams lacking people from BEM-team/Yandex. And it was hard enough to code and to answer questions at the same time».
+
+> «We need to have more independent projects in the future. Similar to what developers from "Pictures" team did».
+
+> «BEM Hackathon was supercool! However, I think we should have less blocks oriented projects. I think that people who is not that deep into BEM, they are not interested in projects like bem-ide or building tools :(»
+
+> «I am a hackathon nymphomaniac. I love to hack and can do nothing with it. ^_______^»
+
+![](https://img-fotki.yandex.ru/get/15526/44214498.bc/0_9bbfc_3f7ab8a0_XL.jpg)
 //To be continued//
