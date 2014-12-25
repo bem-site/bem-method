@@ -114,4 +114,17 @@ Some of answers are be worth quoting:
 > «I am a hackathon nymphomaniac. I love to hack and can do nothing with it. ^_______^»
 
 ![](https://img-fotki.yandex.ru/get/15526/44214498.bc/0_9bbfc_3f7ab8a0_XL.jpg)
+
+However, we have not only positive comments. **Two developers were sad** about some parts and we would like to adress this to them.
+
+One complain that there was a project the essence of which was not clear from the presentation and that the mentor of this project spent two days doing nothing. The result showed nothing as well. He advises us to avoid such projects in the future. And we agree. We will stop such intentions in the future. For the first time we were hoping that developers were more respectfull and interested to help the community, and that rulles we declared are for everyone — «if there were none to join your team, and you will not be able to finish your project in time during these two days, you should team up with the others to help them finish». After few reminders, questions and advises to join the others we gave up and tried not to push these guys and see what will happen. This will not happen again.
+
+Another wrote us that "there was sad enough situation: only two teams outside of Yandex that were trying to code something and got 0 on voting". He suggested that we had to support them somehow. In his point of view, ideas were ok, but there were no technical skills and marketing. He also think that blocks and existing project development are strange ideas fot a hackathon".
+
+And here we fully disagree. Our hackathon was a project for the community where we could code together and opensource projects helping other BEM-developers. Half of 8 projects was exactly about it — Blocks (that needed by everyone), Building (modules for external building tools to build BEM-projects comfortably), Documentation (for the technologies that everyone use) and Forum (through which we communicate). These teams got the most of participants from the community. They were followed by 4 external projects — Dashboard, Pictures, Maxim Online and SmartTV.
+
+According to the [voting results](http://instagram.com/p/vdvuzDjYhP/?modal=true) Dashboard got the first place with 11 votes,  Pictures got the 4th place together with Documentation team. Maxim Online and SmartTV got 0. It is unpleasant indeed, but not biased. The results that these teams presented were palpably lower than the others. We wish these teams next time to concentrate on better planning and better presenting, or to join other teams. It has sense — you will know more, will train your skills, will do better for the community, will bring efficiency to the project.
+
+![](https://img-fotki.yandex.ru/get/16122/44214498.bb/0_9bb8d_139fee96_XL.jpg)
+
 //To be continued//
