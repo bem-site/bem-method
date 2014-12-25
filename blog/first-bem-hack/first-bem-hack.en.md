@@ -127,4 +127,68 @@ According to the [voting results](http://instagram.com/p/vdvuzDjYhP/?modal=true)
 
 ![](https://img-fotki.yandex.ru/get/16122/44214498.bb/0_9bb8d_139fee96_XL.jpg)
 
-//To be continued//
+
+We had no prizes for hackathon. While planning we thought that **our idea of making BEM world better** will drive us. Do you think the same way? Answers say that you do. Many said that they could code without prizes because they are happy to commit or that promotional prizes are enough. However, we will try to encourage you more in the future.
+
+Thank you so much for the ideas and that you came to our hackathon!
+
+We were very happy that the majority valued
+
+- Skills and experience exchange
+- Ability to write blocks correctly
+- Get skills fast enough during their work on hackathon and from experienced developers
+- Get to know each other
+- Find answers on their BEM questions and commit to BEM development
+- Find necessary information about further development and plans
+- Go deeper into the community and make contacts
+- Take part in real BEM projects
+- Observe how the others deal with hackathon
+- Learn how to manage working process
+
+Somebody wrote us that "he learnt to find answers about i-bem.js, tried to write tests, got useful comments on codestyle, learnt to notice things that thought unnecessary before. Because of hackathon he understood finally what needed to be improved and defined his professional direction for the next one to two years. Got a lot of benefits. Finished his part even though it was a biut small for the experienced developers".
+
+And that is cool!
+
+![](https://img-fotki.yandex.ru/get/16142/44214498.bc/0_9bbf6_afb95b1_XL.jpg)
+
+## Afterword
+
+As an afterword I would like to quote some more of your emotions. Because that is exactly what has made our weekend!
+
+> "It was very friendly and interesting. Thank you so much, colleagues from BEM forum team! It is a pity that I could not be with you on the second day. Please, invite me more, I will visit any BEM event with pleasure. Looking forward for new pull-requests! I very much waiting to see the results in production! Good luck and all good to you!", — Yura Malakhov.
+
+> "Thank you! :) It was cool to see how many cool stuff was made only during two days",
+> — Kolya Mendyaev.
+
+> "You are great! Achievements idea is cool indeed!",
+> — Pasha Akhmetchanov.
+
+> "It was the best hackathon! Thank you",
+> — Zhenya Solovyev.
+
+> "Thank you for hackathon! Let's make it every quarter!",
+> — Lesha Yaroshevich.
+
+> "I will remember the most how friendly great soulful atmosphere we had. It helped new interesting meetings and experience exchange to happen. It was smothly organized. We felt BEM team spirit — everyone was commited to create useful and original projects. There were many cool ideas and people! I felt friendly atmosphere in teams, they supported each other and tried their best to show great results. Competition was high but healthy as well",
+> — [Inna Belaya](https://bem.info/authors/belaya-inna/).
+
+> "Not every team made it to the very good result as they wanted. But the most important is that everyone got their precious prize — experience! What is sad is that BEM hackathon was not long enough",
+> — Sasha Tikvach.
+
+> "Unexpectedly many developers from BEM community showed up for hackathon, and they did really great! So many tasks finished in two days that normally would be done in weeks. I liked team work and results everyone showed up. You are great! Let us continue",
+> — [Vitaly Harisov](https://bem.info/authors/harisov-vitaly/).
+
+> "All expectations from the first BEM hackathon came 120% true. Organizers did their best to create an atmosphere that made us code, rich for the goals, share experience and get feedback from BEM community that uses our technology and tools. I was pleasantly surprised by the level participants showed in knowing BEM. All developers from BEM Forum team proved they learn BEM, use it and want to continue. They helped a lot, completed a number of important tasks and with our help increased their BEM knowledge level. I am very much satisfied and hope we will have it again!"
+> — Kolya Ilchenko.
+
+> "I liked a lot how our hackathon was organized — our meeting everyone dinner beforehand, food and water during the whole hackathon, working space with good internet connection. Because of that all our attention was concentrated on working. Team was great, everyone helped each other. Written blocks was a prize for me",
+> — Evgeny Konstantinov.
+
+> "Guys, thank you so much for this hackathon! That you trusted us, was interested, wanted to work your weekend without prizes and gifts, for understanding of goals and sharing our views! You did and do a lot. And please, keep on doing!"
+> — [Mursya](https://bem.info/authors/jetpyspayeva-yelena/).
+
+A lot more posts on hackathon results are coming soon. Our [photostory](http://bit.ly/bem-hack-photo) is already published.
+
+Do not switch and **Stay BEMed**!
+
+![](https://img-fotki.yandex.ru/get/15538/44214498.be/0_9bc46_64c50266_XL.jpg)
