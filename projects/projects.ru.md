@@ -64,4 +64,10 @@
 
 Автор проекта — Иван Воищев, [gh: voischev](https://github.com/voischev), [@voischev](https://twitter.com/voischev), [voischev.ivan@ya.ru](mailto:voischev.ivan@ya.ru).
 
+## [getbem.com](http://getbem.com)
+
+Сайт о самой методологии БЭМ. Используется сборка через [gulpjs](http://gulpjs.com) и библиотеку компонент [bem-bootstrap](https://github.com/matmuchrapna/bem-bootstrap).
+
+Авторы проекта - [floatdrop](https://github.com/floatdrop), [matmuchrapna](https://github.com/matmuchrapna)
+
 **Присоединяйтесь и вы!**
