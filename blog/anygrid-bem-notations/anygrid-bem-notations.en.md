@@ -1,6 +1,6 @@
 # AnyGrid – CSS Grids Generator that uses BEM-notations and etc!
 
-[Vasya Aksyonov](https://twitter.com/outring) developed a great project — **CSS Grids Generator** called [AnyGrid](http://axyonov.com/).
+[Vasya Aksyonov](https://twitter.com/outring) developed a great project — **CSS Grids Generator** called [AnyGrid](http://outring.github.io/anygrid/).
 
 You give it a number of columns, gutter width, check a box if legacy IE support, container context respore or [BEM-notations usage for CSS](https://bem.info/method/definitions/) is needed, than press a button and, voila, your code is ready to use!
 
