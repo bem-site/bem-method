@@ -64,4 +64,12 @@
 
 Автор проекта — Иван Воищев, [gh: voischev](https://github.com/voischev), [@voischev](https://twitter.com/voischev), [voischev.ivan@ya.ru](mailto:voischev.ivan@ya.ru).
 
+## bnsf
+
+Фреймворк для создания одностраничных приложений по методологии БЭМ. Позволяет легко использовать единожды написанный код, в первую очередь шаблоны и маршрутизацию, как на клиенте, так и на сервере. Дружелюбен к поисковым системам. Зависит от [bem-core](https://ru.bem.info/libs/bem-core), для шаблонизации использует `BEMHTML` и `BEMTREE`, сборка через `bem-tools`.
+
+Репозиторий проекта на [GitHub](https://github.com/apsavin/bnsf)
+
+Автор проекта — Александр Савин, [gh: apsavin](https://github.com/apsavin), [@apsavin](https://twitter.com/ap_savin), [a.p.savin@yandex.ru](mailto:a.p.savin@yandex.ru).
+
 **Присоединяйтесь и вы!**
