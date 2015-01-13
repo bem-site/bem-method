@@ -10,7 +10,7 @@ And I am going to tell you everything step-by-step.
 
 First of all, I will tell you about myself:
 
-My name is [Inna Belaya](http://bem.info/authors/belaya-inna/), and I manage a team that develops our technical documentation for BEM. Almost a year we, technical writers, together with development team are leading BEM documentation to its bright future. The way is thorny and bumpy, but we try our best :) We write, translate, follow users feedback and move towards being understandable. 
+My name is [Inna Belaya](http://bem.info/authors/belaya-inna/), and I manage a team that develops our technical documentation for BEM. Almost a year we, technical writers, together with development team are leading BEM documentation to its bright future. The way is thorny and bumpy, but we try our best :) We write, translate, follow users feedback and move towards being understandable.
 
 When the opportunity to meet in person and even better to work with BEM community developers appeared, I agreed with pleasure. This event allowed us
 * To get feedback on current state of the documentation — what developers lack, what might be improved and needed to be improved;
@@ -25,7 +25,7 @@ I drafted the following:
   * Complex, difficult-to-understand language of written documentation that makes understanding of complex technologies even more difficult;
   * Billingualism.
 
-So, these problems were set to priority as possible tasks for hackathon, and 
+So, these problems were set to priority as possible tasks for hackathon, and
   * To revise **bem.info structure** in order to give complete understanding of BEM methodology, platform – libraries, tools, technologies – and product community, to simplify search and understanding of the information;
   * To develop **basic principles** for providing information on the site;
   * Possibly to **translate missing parts** of the documents.
@@ -40,7 +40,7 @@ Hackathon was planned accordingly: all participants meet and get to know each ot
 
 ### Project presentation and forming the teams
 
-Mentors were supposed to create an idea, form a team and lead it to production. When the registration for hackathon was opened, we could see who and how many developers are interested in the topic. However to know for sure how many of them finally join the team, we could only after the presentation itself. Every mentor had to present his project in any convenient way and compete for the developers with the other mentors. There were no corporate templates or rules how to present, everyone decided for himself. However, all the presentations resulted in interesting and often humorous performances :) 
+Mentors were supposed to create an idea, form a team and lead it to production. When the registration for hackathon was opened, we could see who and how many developers are interested in the topic. However to know for sure how many of them finally join the team, we could only after the presentation itself. Every mentor had to present his project in any convenient way and compete for the developers with the other mentors. There were no corporate templates or rules how to present, everyone decided for himself. However, all the presentations resulted in interesting and often humorous performances :)
 
 After the presentations there were time for the participants to decide which team to join. Many were in two minds about what group to choose. Because all of the projects were challenging. I was worried, would the developers join my team, would the documentation problems be interesting for the developers. But it ended better then ever, and I finally had a team of:
 * [Vitaly Harisov](https://bem.info/authors/harisov-vitaly/), who created BEM
@@ -51,7 +51,7 @@ After the presentations there were time for the participants to decide which tea
 
 Once teams were set, everyone get himself a place and started working. Long hours of silence with short friendly breaks on coffeepoints, pizza time and sweets breaks began.
 
-Let me go into details about the place of hackathon: organizers did their best to make it comfortable. Here were working places for everyone's taste: openspaces with big marker board walls, small meeting rooms with round tables, bigger rooms, where teams got together to discuss work. Behind glass doors you could oftenly hear lively discussions of the projects. Work was in full swing. And who was tired, could get some privacy in hammock room. 
+Let me go into details about the place of hackathon: organizers did their best to make it comfortable. Here were working places for everyone taste: openspaces with big marker board walls, small meeting rooms with round tables, bigger rooms, where teams got together to discuss work. Behind glass doors you could oftenly hear lively discussions of the projects. Work was in full swing. And who was tired, could get some privacy in hammock room.
 
 ### Team work, tasks, the process
 
@@ -69,7 +69,7 @@ Faced the problem of inefficiency working all together on every other task. We u
 
 We overcame difficulties and went further on. Started to work on the new structure but everyone from his side (we split roles) – somebody analyzed materials on the other sites, somebody decided how to formalize text, somebody worked on the structure itself. We decided to take not only our own preferences, but to hear out the developers that use our documentation. This is how our survey was born.
 
-First of all we questioned hackathon participants, than asked the community. We created a survey and asked everyone to fill it in. Many thanks to everyone who found 5 minutes and helped us with answers! Surprisingly the majority did it. Data continued to come during the whole hackathon, even at 3 a.m. and 8 a.m! 
+First of all we questioned hackathon participants, than asked the community. We created a survey and asked everyone to fill it in. Many thanks to everyone who found 5 minutes and helped us with answers! Surprisingly the majority did it. Data continued to come during the whole hackathon, even at 3 a.m. and 8 a.m!
 
 What we have found out:
 * Current amount of documentation is enough for almost a half of developers (Yes – 41% / No – 59%);
@@ -83,11 +83,11 @@ What we have found out:
 
 The task delegation approach was efficient: before a dinner time we had ready-to-go brand a new structure of the site and basic rules for the content forming, that we want to follow in the future. Of course, it is a proposition that needs to be developed well and agreed with BEM team.
 
-In terms of hackathon we had not so much time left to solve all the problems. We decided to translate documentation that everyone was waiting for. Misha Baranov started to translate! And we added his profile to the [author's page](https://bem.info/authors/baranov-mikhail/), because all the translations were published under his name :) Thank you so much!
+In terms of hackathon we had not so much time left to solve all the problems. We decided to translate documentation that everyone was waiting for. Misha Baranov started to translate! And we added his profile to the [author page](https://bem.info/authors/baranov-mikhail/), because all the translations were published under his name :) Thank you so much!
 
 First hard hack-day went to an end. People started leaving after 10 p.m., but there were developers working up to 3 a.m. and even until morning comes.
 
-Next day morning was sleepy. We met on coffeepoint, talked about projects. Time was running out and we needed to finish our work and prepare the presentation of the project. 
+Next day morning was sleepy. We met on coffeepoint, talked about projects. Time was running out and we needed to finish our work and prepare the presentation of the project.
 
 But.. we decided to start working on the next document. The idea came right after the answers we got in our survey. Developers told us that our current BEM quick start is not that quick. We worked all together to get done as much as we could! Vika wrote a text, Misha coded, I put two days work in the final slides.
 

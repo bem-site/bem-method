@@ -140,14 +140,14 @@ Block containers get a CSS class of a prefix and a block name:
 
 That `b-` prefix stands for “block” and is the default in many BEM implementations. You can use your own — just keep it short. Prefixes are optional, but they emulate much-anticipated (and missing!) CSS namespaces.
 
-Element containers within a block get CSS classes consisting of their block class, two underscores and the element’s name:
+Element containers within a block get CSS classes consisting of their block class, two underscores and the element name:
 
 ```
 .b-text-input__label
 .b-text-input__text-field
 ```
 
-Element names do not reflect the block’s structure. Regardless of nested levels within, it’s always just the block name and the element name (so, never `.b-block__elem1__elem2`).
+Element names do not reflect the block structure. Regardless of nested levels within, it’s always just the block name and the element name (so, never `.b-block__elem1__elem2`).
 
 Modifiers belong to a block or an element. Their CSS class is the class name of their “owner,” one underscore and a modifier name:
 
@@ -229,7 +229,7 @@ The nice thing is that any rule that redefines this one will likely depend on an
 
 ### Absolutely independent blocks
 
-If blocks depend on each other’s styles, how do we express that in CSS? The answer is, they shouldn’t. Each block must contain all styles necessary for its presentation. The overhead is minimal, but this ensures that you can move blocks freely within a page or even between projects without extra dependencies. Avoid project-wide CSS resets for the same reason.
+If blocks depend on each other styles, how do we express that in CSS? The answer is, they shouldn’t. Each block must contain all styles necessary for its presentation. The overhead is minimal, but this ensures that you can move blocks freely within a page or even between projects without extra dependencies. Avoid project-wide CSS resets for the same reason.
 
 This is not the case for elements because they are guaranteed to stay within their parent block and, thus, inherit block styles accordingly.
 
@@ -383,7 +383,7 @@ Many JavaScript libraries provide enough power to support the BEM methodology wi
 
  * **Embraces a declarative approach**
  * **Defines your website or app in BEM’s terms**<br>
- Can many of the project’s existing entities be “mapped” to blocks, elements and modifier properties?
+ Can many of the project existing entities be “mapped” to blocks, elements and modifier properties?
  * **Allows you to drop the DOM tree for the BEM tree**<br>
  Regardless of any particular framework API, wipe out as much of the raw DOM interaction as you can, replacing it with BEM’s tree interaction. During this process, some of the nodes you work with will be redefined as blocks or elements; name them, and see how the true semantic structure of your application reveals itself.
  * **Uses modifiers to work with state transitions**<br>
@@ -398,7 +398,7 @@ jQuery users could try these lightweight plugins to extend their code with BEM m
 
 ## From a naming convention to a style guide
 
-If you work a lot with designers, your team would also benefit from a BEM approach. Imagine that you had a style guide created by a Real Designer™. You would usually get it as a PDF file and be able to learn everything about the project’s typefaces, color schemes, interface interaction principles and so on. It serves perfectly as a graphic book that is interesting to look at in your spare time. However, it would be of little to no use to most front-end developers — at the level of code, front-end developers operate with totally different entities.
+If you work a lot with designers, your team would also benefit from a BEM approach. Imagine that you had a style guide created by a Real Designer™. You would usually get it as a PDF file and be able to learn everything about the project typefaces, color schemes, interface interaction principles and so on. It serves perfectly as a graphic book that is interesting to look at in your spare time. However, it would be of little to no use to most front-end developers — at the level of code, front-end developers operate with totally different entities.
 
 But what if you and the designer could speak with each other using the same language? Of course, this would require some training, but the benefits are worth it. Your style guide would be an interactive block library, expressed in BEM terms. Such a library would consist of blocks that are ready to be used to build your product.
 
@@ -412,7 +412,7 @@ On a bigger team, working on individual blocks is easier because it can be done 
 
 ## BEM as high-level documentation
 
-Despite all advice, developers still don’t write enough documentation. Moving projects between developers and teams is non-trivial. Code maintenance is all about minimizing the time a developer needs to grasp a component’s structure.
+Despite all advice, developers still don’t write enough documentation. Moving projects between developers and teams is non-trivial. Code maintenance is all about minimizing the time a developer needs to grasp a component structure.
 
 Documentation helps a lot, but let’s be honest, it usually doesn’t exist. When it does exist, it usually covers methods, properties and APIs, but hardly anything about the flow of components, states or transitions. With minimally structured BEM-oriented code, you will immediately see the following:
 
@@ -454,7 +454,7 @@ In a growing project, an inconsistent file structure could slow you down. The st
 
 ### Block library
 
-A block’s folder is the basis of all BEM-based file structures. Block names are unique within the project, as are folder names. Because blocks do not define any hierarchies, keep block folders as a flat structure:
+A block folder is the basis of all BEM-based file structures. Block names are unique within the project, as are folder names. Because blocks do not define any hierarchies, keep block folders as a flat structure:
 
 ```
 /blocks

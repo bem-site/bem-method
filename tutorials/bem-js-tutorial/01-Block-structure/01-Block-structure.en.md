@@ -2,13 +2,13 @@
 ## JavaScript-enriched block
 ### Prerequisites
 Block `i-bem` and its `dom` element, with all their dependencies, must be included
-into your page's js file if you are going to enjoy BEM. This happens
+into your page js file if you are going to enjoy BEM. This happens
 automatically if you borrow the project structure from the
 [project-stub repository](https://github.com/bem/project-stub/tree/bem-core).
 
 ### HTML structure
 Any BEM block can be equipped with JavaScript. To do this, you just need to place
-a JavaScript file into your block's directory.
+a JavaScript file into your block directory.
 
 ```
 ├── desktop.blocks/
@@ -60,7 +60,7 @@ The `data-bem` attribute stores block parameters in JSON, which structure is:
 
 >> <a href="http://bem.github.io/bem-js-tutorial/pure.bundles/001-simple-block/001-simple-block.html">001-simple-block.html</a></pre>
 
-The first example is the most simple. It demonstrates the block's structure and
+The first example is the most simple. It demonstrates the block structure and
 shows how the JavaScript starts working.<br/>
 Load the example page
 [001-simple-block](http://bem.github.io/bem-js-tutorial/pure.bundles/001-simple-block/001-simple-block.html)
@@ -143,10 +143,10 @@ These callbacks get following parameters:
 function(modName, modVal, curModVal) {
 
     // modName
-    // Modifier's name is operated
+    // Modifier name is operated
 
     // modVal
-    // Modifier's value to be set. It is a `String` for modifiers with values
+    // Modifier value to be set. It is a `String` for modifiers with values
     // or `true`/`false` for boolean modifiers
 
     // curModVal
@@ -158,7 +158,7 @@ function(modName, modVal, curModVal) {
 The first modifier any block gets is a `js` modifier with its `inited` value.
 The framework core reads all the `i-bem` marked blocks on a page and then initializes
 them and sets the `js_inited` modifier on each block. Thus, you can
-write a code to be run after the block starts functioning by 
+write a code to be run after the block starts functioning by
 defining a callback to the `js_inited` modifier.
 
-In the example presented above, this code is a `console.log` call with the block's `outerHTML`.
+In the example presented above, this code is a `console.log` call with the block `outerHTML`.

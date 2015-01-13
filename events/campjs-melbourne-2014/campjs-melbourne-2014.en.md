@@ -1,4 +1,4 @@
-# BEM for JS Talk on CampJS
+# BEM for JS talk on CampJS
 
 <img style="float:right;padding: 0 0 10px 10px" src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ff7_6b7d579c_orig" alt="CampJS III logo" title="CampJS III logo" />
 
@@ -32,13 +32,13 @@ we aim to share what we have in BEM Methodology to cover JS coding with and intr
 a new chapter in BEM, partly not always easy to understand, open-sourced and handy for maintaining complexity of
 web development you could grow in.
 
-**Speaker's biography**
+**Speaker biography**
 
-Vladimir Grinenko is a web developer with more than 10 years of fronted experience and a deep expertise in
+Vladimir Grinenko is a web developer with more than 10 years of front-end experience and a deep expertise in
 HTML5, CSS3 and JavaScript. He works for Yandex, Russian Search engine, and leads a team that develops BEM technologies.
 He also evangelizes a lot both in Russian and English and gives live coding sessions as well as maintains
 and contributs to few opensource projects. His area of speaking experience includes such topics as BEM technologies,
-large scale web sites architecture, modular frontend applications development, etc.
+large scale web sites architecture, modular front-end applications development, etc.
 
 Follow [@bem_en](http://twitter.com/bem_en) for updates and live tweets.
 

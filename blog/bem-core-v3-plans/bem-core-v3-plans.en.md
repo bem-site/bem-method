@@ -4,15 +4,15 @@ Hi!
 
 If you are subscribed to our repositories, you already know that we defined [a preliminary scope](https://github.com/bem/bem-core/issues?milestone=6&state=open) of tasks that would be developed in bem-core v3.
 
-The major focus we will have on i-bem.js API improvement. 
+The major focus we will have on i-bem.js API improvement.
 
 How we plan to do this?
 
 **First of all**, we plan fairly [divide i-bem and i-bem__dom](https://github.com/bem/bem-core/issues/413) into 2 different block-modules. This will increase the accuracy of the API, in particular its methods-helpers will be separated from JS classes.
 
-**Second of all**, we plan to support an ability to work with blocks' elements as with i-bem-objects on core level instead of treating them as jQuery-collections. Currently similar functionality is available with `elem-instances` modifier of `i-bem`. This will allow us to escape odds with simultaneous existence of elements as jQuery-objects and BEM-instances and create better API (instead of `this.setMod(this.elem('e1'), 'm1', 'v1')` we will have `this.elem('e1').setMod('m1', 'v1')`). This will also allow to escape the difficult polymorphism of a number of methods inside the core.
+**Second of all**, we plan to support an ability to work with blocks elements as with i-bem-objects on core level instead of treating them as jQuery-collections. Currently similar functionality is available with `elem-instances` modifier of `i-bem`. This will allow us to escape odds with simultaneous existence of elements as jQuery-objects and BEM-instances and create better API (instead of `this.setMod(this.elem('e1'), 'm1', 'v1')` we will have `this.elem('e1').setMod('m1', 'v1')`). This will also allow to escape the difficult polymorphism of a number of methods inside the core.
 
-**In third place**, we will improve implementation of [collection's support](https://github.com/bem/bem-core/issues/582) for blocks and elements.
+**In third place**, we will improve implementation of [collection support](https://github.com/bem/bem-core/issues/582) for blocks and elements.
 
 **Fourthly**, `ym` module system integration will become more tight — block search methods (for instance, `.findBlockInside('b1')`) instead of strings will receive concrete classes of blocks (not clear «magic» will disappear and there will be less potential mistakes).
 

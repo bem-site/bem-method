@@ -120,12 +120,12 @@ Block containers get a CSS class of a prefix and a block name:
 </code></pre>
 That <code>b-</code> prefix stands for “block” and is the default in many BEM implementations. You can use your own — just keep it short. Prefixes are optional, but they emulate much-anticipated (and missing!) CSS namespaces.
 
-Element containers within a block get CSS classes consisting of their block class, two underscores and the element’s name:
+Element containers within a block get CSS classes consisting of their block class, two underscores and the element name:
 <pre><code class="language-markup">
 .b-text-input__label
 .b-text-input__text-field
 </code></pre>
-Element names do not reflect the block’s structure. Regardless of nested levels within, it’s always just the block name and the element name (so, never <code>.b-block__elem1__elem2</code>).
+Element names do not reflect the block structure. Regardless of nested levels within, it’s always just the block name and the element name (so, never <code>.b-block__elem1__elem2</code>).
 
 Modifiers belong to a block or an element. Their CSS class is the class name of their “owner,” one underscore and a modifier name:
 <pre><code class="language-markup">
@@ -142,7 +142,7 @@ Modifier classes are used together with the block and element class, like so:
 </code></pre>
 <h3>Why Choose BEM CSS over other approaches</h3>
 <h4>One class to rule them all</h4>
-CSS sometimes depends a lot on the document’s structure — if you change the structure, you break the CSS. With BEM, you can drop tag names and IDs from your CSS completely, using only class names. This mostly frees you from structural dependencies.
+CSS sometimes depends a lot on the document structure — if you change the structure, you break the CSS. With BEM, you can drop tag names and IDs from your CSS completely, using only class names. This mostly frees you from structural dependencies.
 <h4>Specificity problems solved</h4>
 Big chunks of CSS are hard to maintain because they keep redefining themselves unpredictably.
 
@@ -188,7 +188,7 @@ So, no cascade?! Well, almost. In some cases, you might need two class names in 
 </code></pre>
 The nice thing is that any rule that redefines this one will likely depend on another modifier (because of the unified semantics!), which means that specificity is still the same and only the rule order matters. Surely, we can invent more cases that require even more cascading (internal element dependencies, nested modifiers, etc.). While the BEM methodology allows for that, you’ll hardly ever need it in real code.
 <h4>Absolutely independent blocks</h4>
-If blocks depend on each other’s styles, how do we express that in CSS? The answer is, they shouldn’t. Each block must contain all styles necessary for its presentation. The overhead is minimal, but this ensures that you can move blocks freely within a page or even between projects without extra dependencies. Avoid project-wide CSS resets for the same reason.
+If blocks depend on each other styles, how do we express that in CSS? The answer is, they shouldn’t. Each block must contain all styles necessary for its presentation. The overhead is minimal, but this ensures that you can move blocks freely within a page or even between projects without extra dependencies. Avoid project-wide CSS resets for the same reason.
 
 This is not the case for elements because they are guaranteed to stay within their parent block and, thus, inherit block styles accordingly.
 <h3>Alternative BEM naming conventions</h3>
@@ -322,7 +322,7 @@ Many JavaScript libraries provide enough power to support the BEM methodology wi
 <ul>
 	<li><strong>Embraces a declarative approach</strong></li>
 	<li><strong>Defines your website or app in BEM’s terms</strong>
-Can many of the project’s existing entities be “mapped” to blocks, elements and modifier properties?</li>
+Can many of the project existing entities be “mapped” to blocks, elements and modifier properties?</li>
 	<li><strong>Allows you to drop the DOM tree for the BEM tree</strong>
 Regardless of any particular framework API, wipe out as much of the raw DOM interaction as you can, replacing it with BEM’s tree interaction. During this process, some of the nodes you work with will be redefined as blocks or elements; name them, and see how the true semantic structure of your application reveals itself.</li>
 	<li><strong>Uses modifiers to work with state transitions</strong>
@@ -338,7 +338,7 @@ jQuery users could try these lightweight plugins to extend their code with BEM m
 <h3>From a naming convention to a style guide</h3>
 If you work a lot with designers, your team would also benefit from a BEM approach.
 
-Imagine that you had a style guide created by a Real Designer™. You would usually get it as a PDF file and be able to learn everything about the project’s typefaces, color schemes, interface interaction principles and so on. It serves perfectly as a graphic book that is interesting to look at in your spare time. However, it would be of little to no use to most front-end developers — at the level of code, front-end developers operate with totally different entities.
+Imagine that you had a style guide created by a Real Designer™. You would usually get it as a PDF file and be able to learn everything about the project typefaces, color schemes, interface interaction principles and so on. It serves perfectly as a graphic book that is interesting to look at in your spare time. However, it would be of little to no use to most front-end developers — at the level of code, front-end developers operate with totally different entities.
 
 But what if you and the designer could speak with each other using the same language? Of course, this would require some training, but the benefits are worth it. Your style guide would be an interactive <strong>block library</strong>, expressed in BEM terms. Such a library would consist of blocks that are ready to be used to build your product.
 
@@ -348,7 +348,7 @@ The biggest change, however, is closing the gap between screen and code by opera
 
 On a bigger team, working on individual blocks is easier because it can be done in parallel, and big features do not end up being owned by any one developer. Instead, you share the code and help each other. The more you align the JavaScript HTML and CSS with BEM, the less time you need to become familiar with new code.
 <h3>BEM as high-level documentation</h3>
-Despite all advice, developers still don’t write enough documentation. Moving projects between developers and teams is non-trivial. Code maintenance is all about minimizing the time a developer needs to grasp a component’s structure.
+Despite all advice, developers still don’t write enough documentation. Moving projects between developers and teams is non-trivial. Code maintenance is all about minimizing the time a developer needs to grasp a component structure.
 
 Documentation helps a lot, but let’s be honest, it usually doesn’t exist. When it does exist, it usually covers methods, properties and APIs, but hardly anything about the flow of components, states or transitions. With minimally structured BEM-oriented code, you will immediately see the following:
 <ul>
@@ -384,7 +384,7 @@ Remember, you’ve seen zero documentation. This block could be a structure that
 <h3>BEM and file structure</h3>
 In a growing project, an inconsistent file structure could slow you down. The structure will only become more complex and less flexible with time. Unfortunately, tools and frameworks do not solve the problem because they either deal with their own internal data or offer no specific structure at all. You and only you must define a structure for the project. Here, BEM can help as well.
 <h4>Block library</h4>
-A block’s folder is the basis of all BEM-based file structures. Block names are unique within the project, as are folder names. Because blocks do not define any hierarchies, keep block folders as a flat structure:
+A block folder is the basis of all BEM-based file structures. Block names are unique within the project, as are folder names. Because blocks do not define any hierarchies, keep block folders as a flat structure:
 ```
 /blocks
   /b-button

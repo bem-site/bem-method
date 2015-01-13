@@ -10,7 +10,7 @@ This approach works well only if the design of the website remains unchanged thr
 
 However that is rarely the case, as normally the website begins to evolve and take on a life of its own. The design of the pages gradually changes, new pages or sections are added.
 
-If the website's source code is poorly structured, and development does not follow an established set of rules, the site becomes more and more difficult to maintain.
+If the website source code is poorly structured, and development does not follow an established set of rules, the site becomes more and more difficult to maintain.
 
 The BEM approach ensures that everyone participating in the development of a website is working with the same codebase and using the same terminology:
 

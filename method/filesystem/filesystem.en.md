@@ -1,4 +1,4 @@
-## File System Representation for a Block
+## File system representation for a block
 BEM is a collection of ideas and methods, a **methodology**. Each company and each team may integrate
 it into an existing workflow gradually, finding out what works best for them.
 
@@ -55,7 +55,7 @@ If there are elements/modifiers in your blocks which are not used on all pages, 
 
 You can use this scheme of file location on the file system for this:
 
-  * Block's main code is in the file named `block-name`
+  * Block main code is in the file named `block-name`
     * File name coincides with the name of the block
     * Technical implementation of the block is placed in the files with the appropriate extensions
   * An element corresponds to a file `block-name_~_element-name`
@@ -168,7 +168,7 @@ creating the directory structure, placing files, generating placeholder content,
 Big internet portals often need to reuse the same blocks across different sites.
 
 There could be a task:
-  * to create the same `Footer` on *all the portal's sites* or
+  * to create the same `Footer` on *all the portal sites* or
   * to create a *new project* using blocks from the existing sites
 
 Working for a web design agency often means that one has to use typical solutions for typical web pages.
@@ -197,7 +197,7 @@ That directory can be linked to another project straight from the version contro
 that we can make changes to shared blocks in a single location.
 
 <a name="levels"></a>
-### Levels of Definition
+### Levels of definition
 If a group of blocks (united under one directory) is linked to a project directly (via a partial
 checkout, svn:externals, etc.), then every change committed for these blocks influences all projects.
 
@@ -217,7 +217,7 @@ at project level.
 
 ![Block redefining](https://img-fotki.yandex.ru/get/15506/158800653.0/0_111fca_4f068470_orig)
 
-From page-building process' perspective:
+From page-building process perspective:
   * When building a page we can set a list of levels (directories) to use their blocks on
     the page.
     E.g., `build-page -l blocks-common -l blocks-my my-page.html`
@@ -272,7 +272,7 @@ From the architectural point of view:
 [Open source block library bem-bl](https://bem.info/libs/bem-bl/dev/) is an example of
 having several definition levels in one repository.
 
-### Building a Page
+### Building a page
 Working in terms of blocks means having a `subject-matter abstraction`. This abstraction is for
 developers only, browsers will get a compiled version of the code.
 
@@ -302,7 +302,7 @@ On the CSS side:
 From the JavaScript point of view:
   * Similarly to CSS, JavaScript files can be combined into one.
 
-From the template engine's point of view:
+From the template engine point of view:
   * Only needed templates are included
     Final set of templates that are used for displaying a page includes only the templates
     for required blocks. This boosts template performance and reduces the likelihood of side effects.
@@ -322,7 +322,7 @@ We use [bem-tools](https://bem.info/tools/bem/bem-tools/) to build pages.
 #### How to automate the building process?
 The usage of [bem-tools](https://bem.info/tools/bem/bem-tools/) require to run several
 commands for each page whenever page input data or blocks implementation are changed.
-As a result of these commands you get CSS and JavaScript files for the page, page's template
+As a result of these commands you get CSS and JavaScript files for the page, page template
 and, if you are developing static pages, HTML code of your page.
 
 To avoid running these commands manually we added `bem make` and `bem server` commands to the

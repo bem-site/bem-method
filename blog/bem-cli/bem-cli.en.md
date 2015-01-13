@@ -3,11 +3,11 @@
 Mikhail Davydov wrote a tool called [bem-cli](https://github.com/bem/bem-cli) that launches locally
 installed [bem-tools](https://bem.info/tools/bem/bem-tools/).
 
-Sometimes BEM-projects have different versions of bem-tools, and you can not simply run `npm i -g bem`
+Sometimes BEM projects have different versions of bem-tools, and you can not simply run `npm i -g bem`
 to install bem-tools globally. Also there may be other reasons such as lack of root privileges.
 
 We also recommend you [to install bem-tools locally](https://bem.info/tools/bem/bem-tools/installation/) with `npm i bem`
-to prevent conflicts with other BEM-projects.
+to prevent conflicts with other BEM projects.
 
 Locally installed bem can seem inconvenient to use. You have to run bem from project root, typing the full path to the
 bin/bem script `./node_modules/.bin/bem make`. You may also create a symbolic link `ln -s ./node_modules/.bin/bem`

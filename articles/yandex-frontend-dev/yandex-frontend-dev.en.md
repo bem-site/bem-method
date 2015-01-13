@@ -1,13 +1,13 @@
-# What you can borrow from Yandex frontend dev
+# What you can borrow from Yandex front-end dev
 
 This article is a text version of a [presentation](https://vimeo.com/53219242)
 given at [Riga WebConf](http://webconf.lv/) in November 2012.
 
 The article sums up [Yandex](http://www.yandex.com/) over 7-year experience
-in finding solutions for efficient frontend development.<br/>
+in finding solutions for efficient front-end development.<br/>
 Yandex, as a search engine and the larges Internet company in Russia, enjoys
 the major share of the local market and provides over a hundred of associated
-services with the help of 2500 developers and 150 frontend engineers among them.
+services with the help of 2500 developers and 150 front-end engineers among them.
 
 <img src="https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fd5_a2f2c78d_orig"/>
 
@@ -17,7 +17,7 @@ via conferences, hackatons and meetups. So, the solutions produced by Yandex
 developers perfectly work outside and can be easily shared.<br/>
 Here is a piece of such sharing.
 
-## Web Interface
+## Web interface
 
 <img
 src="https://img-fotki.yandex.ru/get/15501/158800653.0/0_111fd6_98369013_orig"
@@ -279,7 +279,7 @@ Even if you think *now* that the block is unique within a page, this can be
 changed in the future. So, the best practice is to avoid id selectors at all and
 use classes.
 
-### Moving within a Page
+### Moving within a page
 
 The next that can happen with a block is its movement within a page.
 
@@ -311,9 +311,9 @@ So, you should use cascade only when it's really necessary.<br/>
 I'll show below the situation when cascade is possible. But in general the
 suggestion is to avoid it.
 
-### Moving within a Site
+### Moving within a site
 
-The next block's adventure is to be moved from page to page.
+The next block adventure is to be moved from page to page.
 
 The already familiar `Tabbed pane` block can be widely adopted. We can use it on
 many pages. Of course, on a different page it has another parent block. As I've
@@ -332,7 +332,7 @@ Again, even if a block *now* is a single one within a whole site, that does not
 mean it should depend on its surroundings.<br/>
 The recommendation about avoiding cascade works for all the blocks.
 
-#### Pages are Sets of Blocks
+#### Pages are sets of blocks
 The other point is that when you are developing and maintaining, the block set of
 every page changes.
 
@@ -420,7 +420,7 @@ Looks cool, but
 src="https://img-fotki.yandex.ru/get/15550/158800653.0/0_111fe1_d7238b94_orig"
 width="570" height="311" title="" alt="" border="0"/>
 
-## Inside a Block
+## Inside a block
 So, let's have a look what is inside our blocks.
 
 <img
@@ -488,7 +488,7 @@ article](http://mzl.la/UuwZql), from Mozilla.
 
 However we still need a solution to style menu items inside the `Menu` block.
 
-##Element
+## Element
 First, let's clarify a definition and call the things inside a block — `elements`.
 
 <img
@@ -553,7 +553,7 @@ choose another symbol or a group of symbols.
 
 If you don't like 2 underscores, maybe you'll be pleased with 3 ;-)
 
-###Optional elements
+### Optional elements
 So far so good, a block can be different from page to page.
 
 <img
@@ -596,7 +596,7 @@ Similar to blocks, elements can be stored separately.
 That enables you to take element code only if you want. If not, you just won't
 write the import instruction linking it to your page.
 
-##Modifier
+## Modifier
 Now to the last notion, a `modifier`.
 
 <table>
@@ -656,7 +656,7 @@ as many modifiers as we need.
 ````
 
 You can use different modifiers to change different properties. For example, the
-`theme` modifier can change block's background color and the `size` modifier
+`theme` modifier can change block background color and the `size` modifier
 fixes all the dimensions of the block.
 
 **block-name_mod-name_mod-val**
@@ -714,7 +714,7 @@ element. Similar to what we was doing for blocks.
     </div>
 ````
 
-### Block Modifier DOES Affect Element
+### Block modifier does affect element
 Now I'm going to show you where cascade is possible.
 
 <img
@@ -733,7 +733,7 @@ this situation you allow the block affect its elements.
     }
 ````
 
-Here cascade is possible because the tabs' appearance DOES depend on block's
+Here cascade is possible because the tabs appearance DOES depend on block
 modifier.
 
 *************
@@ -744,7 +744,7 @@ And just to wrap up, to make your blocks independent, be sure that
  * avoid cascade
  * no "tag" selectors
 
-##Block File Structure
+## Block file structure
 All the previously shown examples used flat variant when CSS files for blocks,
 elements and modifiers are placed into one folder `blocks`.
 
@@ -948,7 +948,7 @@ bottom: 20px; right: 20px"/>
 This needs JavaScript logic which you have to provide for a page. Pages are
 usually supplied with JavaScript logic by linking a `.js` file to it.
 
-### Sets of Block in JavaScript
+### Sets of block in JavaScript
 Again, for small projects all the magic can fit comfortably into a single one
 JavaScript file.
 
@@ -1008,7 +1008,7 @@ what you've done with CSS before.
 
 Each line in the file refers to a particular block.
 
-##CSS and JavaScript flattening with borschik
+## CSS and JavaScript flattening with borschik
 
 Don't be confused with an unfamiliar `include` instruction. Of course, we are
 not going to supply a browser with such a strange file but flatten each include.
@@ -1081,7 +1081,7 @@ So, it's not just stupid inlining.
     }
 ````
 
-## Building Page Files
+## Building page files
 
 The page which a browser gets is not one piece of code. As you've already seen,
 it is a bunch of at least 4 files, which are HTML, 2 CSS files and JavaScript.
@@ -1174,7 +1174,7 @@ Moreover, there is no strict requirement to a naming convention and a file
 structure of your block stack. You are free to intent your own and configure
 tools to take block code from the right folders or files.
 
-## BEM is Multi-lingual
+## BEM is multi-lingual
 
 I'd like to highlight that BEM methodology is multi technological. You can
 divide any technology into blocks and then build pages.
@@ -1265,7 +1265,7 @@ Also, you can explore block code since they all are in the [GitHub repository](h
 
 Such exploration helps when you need to create your own block library.
 
-### Examples of BEM Libraries
+### Examples of BEM libraries
 
 Here there are some libraries implemented with BEM:
 
@@ -1279,7 +1279,7 @@ jQuery-UI, you can still use it but with the nice BEM stack.
 a small repository that represents the Modernizr library, which many of you I'm
 sure are familiar with, with BEM terms.
 
-## How to Try?
+## How to try?
 There is a project skeleton hosted on GitHub,
 [bem-project-stub](https://github.com/bem/project-stub).<br/>
 This is a repository that can be a base for your own project using `bem-bl`,
@@ -1287,7 +1287,7 @@ other necessary libraries and, of course, your own blocks. It's README gives all
 the explanations.<br/>
 So, this is a cool opportunity to touch BEM stack.
 
-### BEM Satellite Development Tools
+### BEM satellite development tools
 
 Besides, BEM team also produces many very nice development tools.
 
@@ -1365,4 +1365,4 @@ Please address your questions to the comminuty asking in [BEM Facebook group](ht
 </div>
 (End) Article author block-->
 
-This information is also available as a talk [BEM. What you can borrow from Yandex frontend dev](https://vimeo.com/53219242) given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.
+This information is also available as a talk [BEM. What you can borrow from Yandex front-end dev](https://vimeo.com/53219242) given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.

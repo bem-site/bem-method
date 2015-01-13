@@ -8,7 +8,7 @@ Right now we are in the middle of v1 development of bem-forum that uses [github 
 
 Current status of the development already allows using bem-forum (for instance, creating topics, commenting them, using tag filtering), however it lacks few important features (such as server content generation support for search indexing), it’s code was not yet reviewed and there are few sharp corners (for example, we would very much like to get done with a pagenator, allow opening an exact topic via direct link, make sorting work) that we would like to “round” before launching it public. Despite we plan to transfer there all the posts we have now in [our BEM club at Ya.ru](http://clubs.ya.ru/bem).
 
-Forum’s architecture is built the way that it can be used as well as a separate service and as one of the routes for [express](http://expressjs.com/). In our case we use exactly the second variant — our forum will become a part of [bem.info](https://bem.info/).
+Forum architecture is built the way that it can be used as well as a separate service and as one of the routes for [express](http://expressjs.com/). In our case we use exactly the second variant — our forum will become a part of [bem.info](https://bem.info/).
 
 We develop it in opensource at github — [bem-forum](https://github.com/bem/bem-forum). Local copy installation instruction could be found in [readme](https://github.com/bem/bem-forum/blob/master/README.ru.md).
 

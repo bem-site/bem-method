@@ -368,7 +368,7 @@ provide(DOM);
 As you can see, it is possible to bind to more than one event with the same
 callback if list their names separated with a space.
 
-Then, with adding modifiers' functionality to the components, it can be finished.
+Then, with adding modifiers functionality to the components, it can be finished.
 
 ```js
 modules.define('i-bem__dom', function(provide, DOM) {
@@ -529,7 +529,7 @@ This event fires on the JavaScript object corresponding to the menu block instan
 With that, any other block subscribed to the `current` BEM event of the menu can
 learn when it changes its current item and react on it.
 
-## Live initialization on BEM a event of an inner block
+## Live initialization on BEM event of an inner block
 
 <pre>├── components.bundles/
 │   ├── 014-live-init-bem-event/
