@@ -2,7 +2,7 @@
 
 Hi everyone,
 
-The first BEM hackathon took place in Moscow, on 14 - 16 November, 2014. It took us long to go from an idea to the actual realization, and we would now like to share our experience, achievements and plans for the future with you.
+The first BEM hackathon took place in Moscow, on 14 - 16 November, 2014. It took us long to go from an idea to the actual realization, and we would now like to share our experience, achievements, and plans for the future with you.
 
 ## A little background history
 
