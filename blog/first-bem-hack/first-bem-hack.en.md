@@ -31,7 +31,7 @@ We ended up with 8 teams out of 12 projects presented, which proceeded to work o
 
 On the Sunday afternoon the teams presented their projects and results of the two-day hackathon. The goal was to get the maximum number of tasks up to production level. Many teams finished their job at 75-80% ”done“ level — we have scheduled the publication of the results on [bem.info/blog](https://bem.info/blog).
 
-Successfull teamwork was rewarded with some books published by [«Манн, Иванов и Фербер»](http://www.mann-ivanov-ferber.ru/), presents from Yandex, cheers and laughter, photo-taking to preserve the memory of the event, and a dinner for all.
+Successfull teamwork was rewarded with some books published by [Mann, Ivanov & Ferber](http://www.mann-ivanov-ferber.ru/), presents from Yandex, cheers and laughter, photo-taking to preserve the memory of the event, and a dinner for all.
 
 The main idea and point of the hackathon were not to compete for some material trophies but to collaborate on something that would contribute to the BEM community development and help other projects. And it looks like we managed to achieve just that!
 
