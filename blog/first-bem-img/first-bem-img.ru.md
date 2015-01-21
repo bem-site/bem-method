@@ -1,4 +1,4 @@
-#Хакатон: проект «Картинки» (src2img)
+#Хакатон по БЭМ: проект «Картинки» (src2img)
 
 <img style="float: right" src="https://dl.dropboxusercontent.com/u/1122837/src2img.png" alt="фотография офиса Яндекса в Санкт-Петербурге" width="200" title="BEMup в Санкт-Петербурге" />
 
