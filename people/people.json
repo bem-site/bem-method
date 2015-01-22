@@ -263,6 +263,50 @@
             "info": ""
         }
     },
+    "ilchenko-nikolay": {
+        "en": {
+            "firstName": "Nikolay",
+            "lastName": "Ilchenko",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ilchenko-nikolay.jpg",
+            "github": "tavriaforever",
+            "email": [],
+            "twitter": "tavriaforever",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Николай",
+            "lastName": "Ильченко",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/ilchenko-nikolay.jpg",
+            "github": "tavriaforever",
+            "email": [],
+            "twitter": "tavriaforever",
+            "skype": "",
+            "info": "Работает в группе разработки БЭМ в симферопольском офисе Яндекса с 2013 года. Разрабатывает фронтэнд сайта bem.info и внутреннего сайта документации блоков. Является одним из авторов форума на полном БЭМ-стеке."
+        }
+    },
+    "kuznetsov-andrey": {
+        "en": {
+            "firstName": "Andrey",
+            "lastName": "Kuznetsov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kuznetsov-andrey.jpg",
+            "github": "tormozz48",
+            "email": [],
+            "twitter": "kuznetsov48",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Андрей",
+            "lastName": "Кузнецов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kuznetsov-andrey.jpg",
+            "github": "tormozz48",
+            "email": [],
+            "twitter": "kuznetsov48",
+            "skype": "",
+            "info": "Работает в группе разработки БЭМ в симферопольском офисе Яндекса с 2013 года. Разрабатывает серверную часть приложений на БЭМ с использованием node.js. Выпускник кафедры теоретической физики Таврического национального университета им. В.И. Вернадского, кандидат физико-математических наук."
+        }
+    },
     "hananein-denis": {
         "en": {
             "firstName": "Denis",
