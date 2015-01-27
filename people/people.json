@@ -263,6 +263,28 @@
             "info": ""
         }
     },
+    "mikulyanets-anfisa": {
+        "en": {
+            "firstName": "Anfisa",
+            "lastName": "Mikulyanets",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/mikulyanets-anfisa.jpg",
+            "github": "4exova",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Анфиса",
+            "lastName": "Микулянец",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/mikulyanets-anfisa.jpg",
+            "github": "4exova",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
     "ilchenko-nikolay": {
         "en": {
             "firstName": "Nikolay",
