@@ -28,7 +28,7 @@
 
   * Обновили сборку документации в [bem-components v2](https://ru.bem.info/libs/bem-components/v2/).
   * Обновили всю документацию к [bem-components v2](https://ru.bem.info/libs/bem-components/v2/) на английском языке.
-  * Появились рабочие примеры для блоков [modal](https://ru.bem.info/libs/bem-components/v2.0.0/desktop/modal/examples/) и [popup](/libs/bem-components/v2.0.0/desktop/popup/examples/).
+  * Появились рабочие примеры для блоков [modal](https://ru.bem.info/libs/bem-components/v2.0.0/desktop/modal/examples/) и [popup](https://ru.bem.info/libs/bem-components/v2.0.0/desktop/popup/examples/).
 
 ## Последнее в блоге
 
