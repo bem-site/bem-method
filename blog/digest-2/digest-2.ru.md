@@ -60,7 +60,7 @@
   * Советы  разработчика про БЭМ и SMACSS — в статье «[BEM and SMACSS: Advice From Developers Who’ve Been There](http://www.sitepoint.com/bem-smacss-advice-from-developers/)» от Патрика Катанцарити (Patrick Catanzariti).
   * Почему стоит избегать CSS наследований и всегда использовать БЭМ — рассказывается в статье «[Forget CSS Specificity, Always use BEM](http://blog.swapnilsingh.me/forget-css-specificity-always-use-bem/)» от Свапнила Сингха (Swapnil Singh). 
   * [skyline.is](http://skyline.is)  — новая базовая библиотека для постройки своих CSS-фреймворков. Она пропагандирует объектно-ориентированный CSS, написанный на SCSS с использованием БЭМ-нотации.
-  * bem-react — модуль для React от [Дмитрия Филатова](http://ru.bem.info/authors/filatov-dmitry/, автора [YModules](http://ru.bem.info/tools/bem/modules/, который объединяет в себе важные особенности React с некоторыми преимуществами БЭМ.))
+  * [bem-react](https://github.com/dfilatov/bem-react) — модуль для React от [Дмитрия Филатова](http://ru.bem.info/authors/filatov-dmitry/), автора [YModules](http://ru.bem.info/tools/bem/modules/), который объединяет в себе важные особенности React с некоторыми преимуществами БЭМ.
   * [b_](https://github.com/azproduction/b_) — форматтер для БЭМ-специфичных имен классов от Михаила Давыдова.
 
 Приятного чтения, использования и **Stay BEMed**!
