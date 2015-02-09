@@ -305,7 +305,7 @@ all.
 Trying to fix, developers usually add even more connections into the system. That
 seems to work at first. But each addition just increase uncontrolable mess.
 
-The more cascade code you bring into the service, we more is risk of future damages.<br/>
+The more cascade code you bring into the service, the more is the risk of future damages.<br/>
 So, you should use cascade only when it's really necessary.<br/>
 
 I'll show below the situation when cascade is possible. But in general the
