@@ -672,7 +672,7 @@ Do not forget to define that a **goods** block requires the **box** block.
 })
 ```
 
-[Code sample](https://gist.github.com/innabelaya/8930709) head.deps.js.
+[Code sample](https://gist.github.com/innabelaya/8930709) goods.deps.js.
 
 ![List of goods in a box block](https://img-fotki.yandex.ru/get/15556/158800653.0/0_111fd3_a4dcdc58_orig)
 
