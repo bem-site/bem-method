@@ -675,7 +675,7 @@ CSS-правила для Internet Explorer создаются в специал
 })
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/8930709) head.deps.js.
+[Пример кода](https://gist.github.com/innabelaya/8930709) goods.deps.js.
 
 ![Список товаров в блоке box](https://img-fotki.yandex.ru/get/15556/158800653.0/0_111fd3_a4dcdc58_orig)
 
