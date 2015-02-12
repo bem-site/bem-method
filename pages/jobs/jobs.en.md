@@ -49,7 +49,7 @@ Current Yandex openings:
 Current non-Yandex openings requiring BEM knowledge:
 -----------------
   * [Front-end openings requiring BEM knowledge](https://bitbucket.org/manufactura/jobs/) — join front-end team at Interactive Agency [Manufacture](http://factory.mn/) in Voronezh, Russia;
-  * [Front-end Developer](http:////giftd.ru/jobs/frontend-lead.html) — remote position/work in the office of Giftd, Saint Petersburg, Russia;
+  * [Front-end Developer](http://giftd.ru/jobs/frontend-lead.html) — remote position/work in the office of Giftd, Saint Petersburg, Russia;
   * [Senior Front-end Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) in Berlin, Germany;
   * [Senior Front-end Developer](https://www.linkedin.com/jobs2/view/10839316?trk=vsrp_jobs_res_name&trkInfo=VSRPsearchId%3A1973313181394033367979%2CVSRPtargetId%3A10839316%2CVSRPcmpt%3Aprimary) in Berlin, Germany;
   * [Web Developer — Front-end, HTML5, CSS3, jQuery, JavaScript](http://www.dice.com/job/result/ceiam/JMJO032170) in Allentown, PA, USA.
