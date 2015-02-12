@@ -715,6 +715,28 @@
             "info": ""
         }
     },
+    "tikvach-alexandr": {
+        "en": {
+            "firstName": "Alexandr",
+            "lastName": "Tikvach",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/tikvach-alexandr.jpg",
+            "github": "unlok",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Александр",
+            "lastName": "Тиквач",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/tikvach-alexandr.jpg",
+            "github": "unlok",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
     "shirshin-maxim": {
         "en": {
             "firstName": "Maxim",
