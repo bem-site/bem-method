@@ -2,7 +2,7 @@
 
 Привет!
 
-Меня зовут [Саша Тиквач](https://ru.bem.info/people/tikvach-alexandr).
+Меня зовут [Саша Тиквач](https://ru.bem.info/authors/tikvach-alexandr).
 
 На прошедшем хакатоне по БЭМ я и мой коллега [Антон Усманский](https://events.yandex.ru/lib/people/683392/) были менторами проекта «Приборная панель».
 
