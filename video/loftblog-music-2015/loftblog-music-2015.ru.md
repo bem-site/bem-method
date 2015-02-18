@@ -80,19 +80,20 @@
 Да, правильно, большая часть сервисов Яндекса используем БЭМ. Однако этим мы не ограничиваемся. 
 
 Вот еще несколько ссылок на проекты комьюнити: 
-— http://www.appcurl.com/
-— http://rest-trip.com/
-— http://tadadom.com/
-— http://ugyalta.com/
-— http://vrachi.ru/
-— http://myweddy.ru/
-— http://ashifin-gubernator.ru/
-— http://posmotri-vrn.ru/
-— http://polavkam.ru/
-— http://domjourvrn.ru/
-— http://voronezharts.ru/ru
-— http://elkanomer.ru/
-— http://new.factory.mn/
+
+  - http://www.appcurl.com/
+  - http://rest-trip.com/
+  - http://tadadom.com/
+  - http://ugyalta.com/
+  - http://vrachi.ru/
+  - http://myweddy.ru/
+  - http://ashifin-gubernator.ru/
+  - http://posmotri-vrn.ru/
+  - http://polavkam.ru/
+  - http://domjourvrn.ru/
+  - http://voronezharts.ru/ru
+  - http://elkanomer.ru/
+  - http://new.factory.mn/
 
 #### Есть ли у вас нечто наподобие плагина для редактора по вашим библиотекам, с автодополнением и подсказками?
 
