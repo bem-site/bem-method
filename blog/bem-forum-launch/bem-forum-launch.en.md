@@ -26,7 +26,7 @@ The repository could be found [here](https://github.com/bem/bem-forum/). Local c
 
 Forum's architecture allows using it well as a separate service and as a route for [express](http://expressjs.com/). We use it in a second capacity — it is a part of bem.info site.
 
-We use github API as a source of data, node.js for backend and full stack of BEM ([BEMTREE](https://en.bem.info/technology/bemtree/v2/bemtree/), [BEMHTML](https://en.bem.info/technology/bemhtml/v2/intro/), i-bem.js for frontend.
+We use github API as a source of data, node.js for backend and full stack of BEM ([BEMTREE](https://en.bem.info/technology/bemtree/v2/bemtree/), [BEMHTML](https://en.bem.info/technology/bemhtml/v2/intro/), i-bem.js) for frontend.
 
 Right now it is possible on BEM forum to open a topic, comment it and filter posts using labels. We already made few necessary for you there. Attention: we ask you to use our forum via bem.info interface, because here you can have it labeled and found by others.
 
