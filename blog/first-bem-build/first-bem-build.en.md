@@ -1,4 +1,4 @@
-# BEM Hackathon: the ”Build“ project
+# BEM Hackathon: BEM Build
 
 Hi,
 
@@ -14,7 +14,7 @@ My area of work at Yandex necessarily influenced my choice of project for the ha
 
 Building projects is one of the tasks that just about every BEM developer has to deal with.
 
-BEM has two build tools in its arsenal — good ol' bem-tools and ENB, complete with multiple packages and extensions. Both solutions are supported and are functional.
+BEM has two build tools in its arsenal — good old bem-tools and ENB, complete with multiple packages and extensions. Both solutions are supported and are functional.
 
 Yet they both have one drawback — they lack simplicity.
 
@@ -51,7 +51,7 @@ the nature of the project. Fortunately, my concerns proved ill-founded, as I fou
 
 Our team:
 
-  * [Sasha Belyanskii](https://events.yandex.ru/lib/people/610407/) (@belyanskii) works in the Yandex.Direct team in the Simferopol office; presented the [BEM IDE](https://bem.info/blog/first-bem-ide/) project at the hackathon, but ended up with us once the teams were formed. Sasha's bem-info profile can be found [here](https://bem.info/authors/belyanskii-alexandr/).
+  * [Sasha Belyanskii](https://events.yandex.ru/lib/people/610407/) (@belyanskii) works in the Yandex.Direct team in the Simferopol office; presented the [BEM IDE](https://bem.info/blog/first-bem-ide/) project at the hackathon, but ended up with us once the teams were formed. Sasha's bem.info profile can be found [here](https://bem.info/authors/belyanskii-alexandr/).
   * [Vsevolod Strukchinskii](https://events.yandex.ru/lib/people/9466/) (@floatdrop) works in the Yandex office in Yekaterinburg and is the author of [gulp-bem](http://github.com/floatdrop/gulp-bem) and maintainer of [getbem.com](https://getbem.com).
   * [Evgeniy Gavryushin](https://events.yandex.ru/lib/people/423628/) (@egavr) works on tools development in the Yandex office in Simferopol and is the author of `generator-bem-stub`. Evgeniy's bem.info profile can be seen [here](https://bem.info/authors/gavryushin-evgeny/).
 
@@ -62,7 +62,7 @@ Unlike most other mentors' plans, my plan consisted of just two items:
   1. Come up with a plan.
   2. Proceed according to plan.
 
-So the first thing we did was book a conference room and have a several hours' discussion about what tasks each of us considered to be main priority and how they should be done.
+So the first thing we did was book a conference room and have a several-hour discussion about what tasks each of us considered to be main priority and how they should be done.
 
 ![](https://img-fotki.yandex.ru/get/16115/44214498.bc/0_9bbed_a19cf4db_XL.jpg)
 
