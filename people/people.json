@@ -605,6 +605,28 @@
             "info": ""
         }
     },
+    "psanina-iryna": {
+        "en": {
+            "firstName": "Iryna",
+            "lastName": "Psanina",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/psanina-iryna.png",
+            "github": "Tolkera",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Ирина",
+            "lastName": "Псанина",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/psanina-iryna.png",
+            "github": "Tolkera",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
+    },
     "belaya-inna": {
         "en": {
             "firstName": "Inna",
