@@ -1,10 +1,10 @@
-# BEM Hackathon: the ”Blog“ project
+# BEM Hackathon: BEM Blog
 
 Hi everyone!
 
-My name is [Volodya Grinenko](https://bem.info/authors/grinenko-vladimir/), I live in Simferopol, I am the head of the BEM Development service, I write code 24/7, I love my wife, and I don't like meat. You can find lots of my BEM talks at this [link](https://events.yandex.ru/lib/people/68132/).
+My name is [Volodya Grinenko](https://bem.info/authors/grinenko-vladimir/), I live in Simferopol, I am the head of the BEM Development service, I write code 24/7, love my wife and don't like meat. You can find lots of my BEM talks at this [link](https://events.yandex.ru/lib/people/68132/).
 
-But on with the post. It's now my turn to share my thoughts and impressions of the [BEM hackathon](https://ru.bem.info/events/bem-hackaton-2014/) that we held last November in Moscow.
+It's now my turn to share my thoughts and impressions of the [BEM hackathon](https://ru.bem.info/events/bem-hackaton-2014/) that we held last November in Moscow.
 
 I'm not one to wax lyrical, but our "first outing" has left some fond memories, not least of the  great turnout, with people from different cities coming to spend a weekend with the BEM team at our own hackathon.
 
@@ -23,7 +23,6 @@ We saw that many enjoyed "on the spot" coding and were good at it. Why not then 
 So it was settled. We recorded a [fun promo video](https://video.yandex.ru/iframe/ya-events/hu2lbazfiz.5125/?player-type=custom&show-info=false&show-logo=false&hd=1) and it was off from there! 
 
 The next few months were spent in preparation: we had to find people to lead the projects, decide what those projects would be, select participants for the hackathon, help some of them get to Moscow. There was a lot of work involved but I think we managed. 
-
 ![](https://img-fotki.yandex.ru/get/15516/44214498.bd/0_9bc04_fe943d27_XL.jpg)
 
 ## Why hackathons are good
@@ -33,7 +32,6 @@ All the details of the project presentations, of people forming teams, working h
 What were those two days like? The participants gave different descriptions: strenuous, fun, interesting, enlightening, exhausting. The main answer though is that they were productive! There was not a project that didn't make it to the end. Some people may not have been able to achieve their original goals but everyone did their best.
 
 Our hackathon took place in a very friendly atmosphere. Everyone already knew each other either from the BEMups or through previous online communication. Participants didn't hesitate to offer assistance to or seek advice from members of "rival" teams. 
-
 I am not sure if that was because our chosen event format didn't imply competition as such or because the event attracted the right kind of people or  if it's just the way BEM influences people :) It's something that everyone can judge for themselves.
 
 ## What did we all get out of the hackathon?
@@ -70,6 +68,6 @@ The project description can be found in the [repository](https://github.com/tada
 
 Further plans for the project are presented on [wiki](https://github.com/tadatuta/bb/wiki).
 
-Let's code the blog together and let's all stay a little bit **BEMed**!
+Let's code the blog together and stay all a little bit **BEMed**!
 
 ![](https://img-fotki.yandex.ru/get/15538/44214498.be/0_9bc46_64c50266_XL.jpg)
