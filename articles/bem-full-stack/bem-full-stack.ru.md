@@ -85,8 +85,8 @@ desktop.blocks/
 
 Пройдемся по вопросам:
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/1-sssr-yo-bem-stub.png)
-https://github.com/bem/bem-method/raw/bem-info-data/articles/
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/1-sssr-yo-bem-stub.png)
+
 На скриншоте результаты ответов на вопросы. Первые три вопроса очевидны, после начинается интересное:
 
 * `Choose a toolkit to build the project`: (какой сборщик использовать) — мы используем инструмент [ENB](https://ru.bem.info/tools/bem/enb-bem-techs/). Это утилита, которая будет собирать наш проект — склеивать стили, скрипты, шаблоны, компилировать и оптимизировать в соответствии с декларацией страницы, зависимостями блоков и файлами конфигурации.
@@ -148,7 +148,7 @@ Cоберём сгенерированный проект и посмотрим,
 Теперь страницу можно открыть по адресу: [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
 Наш сборщик соберёт все необходимые зависимости, а по ним соберёт файлы нужных блоков и технологий.
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/2-sssr-hello-world.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/2-sssr-hello-world.png)
 
 Откройте инспектор в браузере и посмотрите на DOM-дерево. Хоть мы ещё не написали ни строчки кода, но на этой странице уже есть сгенерированный HTML. Это потому, что используются шаблоны из наших библиотек. Например, шаблон блока `page` из библиотеки `bem-core` генерирует обвязку страницы (`doctype`, `html`, `head`, `body` и т.д.).
 
@@ -228,7 +228,7 @@ Cоберём сгенерированный проект и посмотрим,
 }
 ```
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/3-sssr-header.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/3-sssr-header.png)
 
 Используем блоки `input`, `button`, `spin` и `checkbox` из библиотеки `bem-components`. В нашем проекте эта библиотека лежит в папке `./libs/bem-components`. У каждого из этих блоков есть свой API, который можно посмотреть [в документации](https://ru.bem.info/libs/bem-components/v2.0.0/desktop/input/)
 .
@@ -651,7 +651,7 @@ Cоберём сгенерированный проект и посмотрим,
 
 Давайте посмотрим на результат:
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/4-sssr-mock.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/4-sssr-mock.png)
 
 ### Шаблонизатор BEMHTML
 
@@ -735,7 +735,7 @@ block('form')(
 
 Посмотрим на DOM-дерево в инспекторе — наш блок `form` теперь выводится как тег `<form>` с классом `i-bem`. Этот класс говорит о том, что у блока есть реализация в JavaScript.
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/5-sssr-form-js.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/5-sssr-form-js.png)
 
 Мы описали то, как должны преобразовываться наши БЭМ-блоки в HTML. Теперь давайте рассмотрим, как будут получены и обработаны данные twitter'а
 
@@ -1037,7 +1037,7 @@ app.get('/search', function(req, res) {
 По адресу [http://localhost:3000/search?query=%23b_&twitter=on](http://localhost:3000/search?query=%23b_&twitter=on) откроется
 страница с JSON-объектом данных, которые отдает блок `service_type_twitter`.
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/6-sssr-server-json.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/6-sssr-server-json.png)
 
 Теперь добавим преобразование этих данных в BEMJSON с помощью BEMTREE. Отредактируем `server.node.js`:
 
@@ -1166,7 +1166,7 @@ BEMTREE.apply(dataEntries.map(function(dataEntry) {
 
 Если использовать ключ `json=on` — откроется содержимое BEMJSON-файла — [http://localhost:3000/search?query=%23b_&twitter=on&json=on](http://localhost:3000/search?query=%23b_&twitter=on&json=on).
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/7-sssr-server-html.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/7-sssr-server-html.png)
 
 ### Клиентский JavaScript с `i-bem.js`
 
@@ -1311,7 +1311,7 @@ $ enb make && node ./desktop.bundles/index/index.node.js
 
 Теперь мы можем протестировать его работу. Для этого перейдем на страницу [localhost:3000](http://localhost:3000/), введем что-нибудь в поле ввода, отметим нужные чекбоксы и попробуем отправить форму. Если все сделано верно, то под шапкой мы увидим результаты поиска по заданному запросу.
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/8-sssr-server-ajax-no-static.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/8-sssr-server-ajax-no-static.png)
 
 Как вы видите у нас не загрузилась статика, потому что для сервера пути до картинок неизвестны. Чтобы это исправить нам нужно зафризить картинки с помощью `borschik`. Для этого добавим файл конфигурации `.borschik` в корень нашего проекта:
 
@@ -1332,7 +1332,7 @@ $ enb make && node ./desktop.bundles/index/index.node.js
 
 Отрыв страницу в браузере мы можем убедиться что картинки на странице заработали.
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/8-sssr-server-ajax-static.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/8-sssr-server-ajax-static.png)
 
 ### Добавим интерактивности. Блок `spin`
 
@@ -1346,7 +1346,7 @@ modules.require(['jquery'], function($) {
 });
 ```
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/9-sssr-server-spinner-test.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/9-sssr-server-spinner-test.png)
 
 Мы выставили булевый модификатор `spin_visible` в значение `true` и должны увидеть вращающийся спинер рядом с полем ввода.
 
@@ -1420,7 +1420,7 @@ modules.define('sssr', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
 Протестируем наше приложение: [localhost:3000](http://localhost:3000/). Во время отправки запроса и загрузки данных
 должен показываться блок `spin`, а содержимое страницы — затеняться.
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/10-sssr-server-spinner-mod.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/10-sssr-server-spinner-mod.png)
 
 #### Проверка полей формы
 
@@ -1596,7 +1596,7 @@ modules.define('form', ['i-bem__dom'], function(provide, BEMDOM) {
 
 Можно проверить отправку запросов при изменении формы с помощью консоли браузера:
 
-![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/raw/master/11-sssr-server-onchange-network.png)
+![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/11-sssr-server-onchange-network.png)
 
 Сейчас при вводе слова мы можем отправить множество лишних запросов после ввода каждого нового символа. Давайте сделаем задержку на отправку запроса. Для этого воспользуемся модулем `debounce` из пакета `bem-core`. Добавим его в зависимости к блоку `sssr` в файле `sssr.deps.js`:
 
