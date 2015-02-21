@@ -868,27 +868,5 @@
             "skype": "",
             "info": "Работает в московском подразделении Альфа-Лаб разработчиком интерфейсов. Занимается внедрением и развитием БЭМ-методологии и даже папки именует по БЭМ."
         }
-    },
-    "shirshin-maxim": {
-        "en": {
-            "firstName": "Maxim",
-            "lastName": "Shirshin",
-            "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.jpg",
-            "github": "ingdir",
-            "email": [],
-            "twitter": "ingdir",
-            "skype": "",
-            "info": "Professional front-end developer with 10+ years"
-        },
-        "ru": {
-            "firstName": "Максим",
-            "lastName": "Ширшин",
-            "avatar": "https://raw.githubusercontent.com/bem/bem-method/bem-info-data/people/avatars/shirshin-maxim.jpg",
-            "github": "ingdir",
-            "email": [],
-            "twitter": "ingdir",
-            "skype": "",
-            "info": "Фронт-энд разработчик с опытом работы более 10 лет"
-        }
     }
 }
