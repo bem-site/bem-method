@@ -135,7 +135,7 @@ We'll be telling you about each of them separately as they are completed.
 
 And [this here](https://github.com/belyanskii/gulp-bem-stub) is what our `gulp`-based build prototype looks like.
 
-As always, your comments and suggestions for the projects are welcome on our [forum](httsp://ru.bem.info).
+As always, your comments and suggestions for the projects are welcome on our [forum](https://ru.bem.info).
 
 Build with ease and **Stay BEMed**!
 
