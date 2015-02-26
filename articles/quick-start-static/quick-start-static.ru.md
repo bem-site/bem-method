@@ -77,31 +77,31 @@
 
     ```js
     {
-        block: 'page',
-        title: 'hello',
-        head: [
-            { elem: 'css', url: '_hello.css' }
+        block : 'page',
+        title : 'hello',
+        head : [
+            { elem : 'css', url : '_hello.css' }
         ],
-        scripts: [{ elem: 'js', url: '_hello.js' }],
-        mods: { theme: 'islands' }
-        content: [
+        scripts : [{ elem : 'js', url : '_hello.js' }],
+        mods : { theme : 'islands' },
+        content : [
             {
-                block: 'hello'
+                block : 'hello'
             }
-         ]
+        ]
     }
     ```
 
 2. Поместите элемент `greeting` с текстом приветствия пользователя (поле **content**) в блок **hello**.
 
     ```js
-    content: [
+    content : [
         {
-            block: 'hello',
-            content: [
+            block : 'hello',
+            content : [
                 {
-                    elem: 'greeting',
-                    content: 'Привет, %пользователь%!'
+                    elem : 'greeting',
+                    content : 'Привет, %пользователь%!'
                 }
             ]
         }
@@ -111,31 +111,31 @@
 3. Чтобы создать поле ввода и кнопку, возьмите готовые реализации блоков `input` и `button` из библиотеки `bem-components` и добавьте их в элемент `greeting`.
 
     ```js
-    content: [
+    content : [
         {
-            block: 'hello',
-            content: [
+            block : 'hello',
+            content : [
                 {
-                    elem: 'greeting',
-                    content: 'Привет, %пользователь%!'
+                    elem : 'greeting',
+                    content : 'Привет, %пользователь%!'
                 },
                 {
-                        block: 'input',
-                        mods: { theme: 'islands', size: 'm' },
-                        name: 'name',
-                        placeholder: 'Имя пользователя'
+                    block : 'input',
+                    mods : { theme: 'islands', size : 'm' },
+                    name : 'name',
+                    placeholder : 'Имя пользователя'
                 },
                 {
-                        block : 'button',
-                        mods : { theme : 'islands', size : 'm', type : 'submit' },
-                        text : 'Нажать'
+                    block : 'button',
+                    mods : { theme : 'islands', size : 'm', type : 'submit' },
+                    text : 'Нажать'
                 }
             ]
         }
     ]
     ```
 
-[Полный код](https://gist.github.com/4exova/1c2bdb1c2a2dbb2cb649) BEMJSON-файла.
+[Полный код](https://gist.github.com/innabelaya/837a96299de6fd488223) BEMJSON-файла.
 
 Чтобы убедиться, что страница отображает все необходимые объекты, откройте [http://localhost:8080/desktop.bundles/hello/hello.html](http://localhost:8080/desktop.bundles/hello/hello.html).
 
@@ -150,9 +150,9 @@
 1.  Создайте вручную каталог блока `hello` на уровне `desktop.blocks`.
 2.  Разместите в нем необходимые для проекта [файлы технологий реализации блока](https://ru.bem.info/method/filesystem/) (`CSS`, `JS`, `BEMHTML`). Название каталога блока и вложенных в него файлов должны совпадать с именем блока, которое прописано в BEMJSON-файле.
 
-    *   `hello.js` – описывает динамическую функциональность страниц;
-    *   `hello.bemhtml` – шаблоны для генерации HTML-представления блока;
-    *   `hello.css` – изменяет внешний вид объектов на странице.
+    * `hello.js` – описывает динамическую функциональность страниц;
+    * `hello.bemhtml` – шаблоны для генерации HTML-представления блока;
+    * `hello.css` – изменяет внешний вид объектов на странице.
 
 <a name="block-hello-modification"></a>
 
@@ -251,14 +251,14 @@ block('hello')(
 
 ```js
 {
-    block: 'input',
-    mods: { theme: 'islands', size: 'm' },
-    mix: { block: 'hello', elem: 'input' }, // подмешиваем элемент для добавления CSS-правил
-    name: 'name',
-    placeholder: 'Имя пользователя'
+    block : 'input',
+    mods : { theme : 'islands', size : 'm' },
+    mix : { block : 'hello', elem : 'input' }, // подмешиваем элемент для добавления CSS-правил
+    name : 'name',
+    placeholder : 'Имя пользователя'
 }
 ```
-[Полный код](https://gist.github.com/4exova/981a36cedceffa472742) BEMJSON-файла.
+[Полный код](https://gist.github.com/innabelaya/045ddfb063af3b262182) BEMJSON-файла.
 
 <a name="result"></a>
 

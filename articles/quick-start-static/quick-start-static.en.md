@@ -77,31 +77,31 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
 
     ```js
     {
-        block: 'page',
-        title: 'hello',
-        head: [
-            { elem: 'css', url: '_hello.css' }
+        block : 'page',
+        title : 'hello',
+        head : [
+            { elem : 'css', url : '_hello.css' }
         ],
-        scripts: [{ elem: 'js', url: '_hello.js' }],
-        mods: { theme: 'islands' }
-        content: [
+        scripts : [{ elem : 'js', url : '_hello.js' }],
+        mods : { theme : 'islands' },
+        content : [
             {
-                block: 'hello'
+                block : 'hello'
             }
-         ]
+        ]
     }
     ```
 
 2. Place the `greeting` element with the greeting text (**content** field) into the `hello` block.
 
     ```js
-    content: [
+    content : [
         {
-            block: 'hello',
-            content: [
+            block : 'hello',
+            content : [
                 {
-                    elem: 'greeting',
-                    content: 'Hello, %user%!'
+                    elem : 'greeting',
+                    content : 'Hello, %user%!'
                 }
             ]
         }
@@ -111,30 +111,30 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
 3. To create an input field and a button, use `input` and `button` blocks from the `bem-components` library. Add these blocks to the `greeting` element.
 
     ```js
-    content: [
+    content : [
         {
-            block: 'hello',
-            content: [
+            block : 'hello',
+            content : [
                 {
-                    elem: 'greeting',
-                    content: 'Hello, %user%!'
+                    elem : 'greeting',
+                    content : 'Hello, %user%!'
                 },
                 {
-                        block: 'input',
-                        mods: { theme: 'islands', size: 'm' },
-                        name: 'name',
-                        placeholder: 'User name'
+                    block : 'input',
+                    mods : { theme : 'islands', size : 'm' },
+                    name : 'name',
+                    placeholder : 'User name'
                 },
                 {
-                        block : 'button',
-                        mods : { theme : 'islands', size : 'm', type : 'submit' },
-                        text : 'Click'
+                    block : 'button',
+                    mods : { theme : 'islands', size : 'm', type : 'submit' },
+                    text : 'Click'
                 }
             ]
         }
     ]
     ```
-[Code sample](https://gist.github.com/4exova/ffdd0dcaa40f14f13c5f) hello.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/08405997f823d842e9e2) hello.bemjson.js.
 
 To verify that the page shows all necessary objects, open [http://localhost:8080/desktop.bundles/hello/hello.html](http://localhost:8080/desktop.bundles/hello/hello.html).
 
@@ -150,9 +150,9 @@ In order for all objects on the page to work correctly, it is necessary to speci
 2.  Create the [implementation technology files](https://bem.info/method/filesystem/) (`CSS`, `JS`, `BEMHTML`) required by the block in the `hello` directory.
     The block directory name and its nested files must coincide with the block name specified in the BEMJSON file.
 
-   *  `hello.js` – describes dynamic page functionality
-   *  `hello.bemhtml` – a template for generation of the block HTML representation
-   *  `hello.css` – changes the design on the page
+   * `hello.js` – describes dynamic page functionality.
+   * `hello.bemhtml` – a template for generation of the block HTML representation.
+   * `hello.css` – changes the design on the page.
 
 <a name="block-hello-modification"></a>
 
@@ -250,14 +250,14 @@ To add to `input` element CSS rules that are already implemented in the `hello` 
 
 ```js
 {
-    block: 'input',
-    mods: { theme: 'islands', size: 'm' },
-    mix: { block: 'hello', elem: 'input' }, // mix element to add CSS rules
-    name: 'name',
-    placeholder: 'User name'
+    block : 'input',
+    mods : { theme : 'islands', size : 'm' },
+    mix : { block : 'hello', elem : 'input' }, // mix element to add CSS rules
+    name : 'name',
+    placeholder : 'User name'
 }
 ```
-[Code sample](https://gist.github.com/4exova/683b6da16aa7aa0399f3) hello.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/e15b6b11dbe68dd9be73) hello.bemjson.js.
 
 <a name="result"></a>
 
