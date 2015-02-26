@@ -12,20 +12,22 @@ A page that contains an input field, a button, and a greeting text. The value fr
 
 ### Minimal requirements
 
-An installed platform [Node.js 0.10](http://nodejs.org).
+* [Node.js 0.10+](http://nodejs.org/) or [io.js](https://iojs.org/en/index.html).
+* [Git Bash](http://msysgit.github.io/) if you use Windows OS.
 
 ### A local copy and environment setting
 
 A [template repository](https://github.com/bem/project-stub) is the quickest and easiest way to start your BEM project. It contains the minimal configuration files and folders.
 
+**NB** If your operating system is Windows, you must run the following commands in Git Bash with administrator rights.
+
 1.  Make a local copy of `project-stub`.
 
-    **NB** The document describes an installation procedure based on the revision [13ae0e18ef8f48bc552b4944f7e5971c5b5f4768](https://github.com/bem/project-stub/commit/13ae0e18ef8f48bc552b4944f7e5971c5b5f4768). The installation procedure may differ for future versions.
+    **NB** Do not use root rights to install npm and bower dependencies. bower dependencies are installed in the `libs` directory by npm postinstall.
 
     ```bash
-    git clone https://github.com/bem/project-stub.git start-project
+    git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 start-project
     cd start-project
-    git checkout 13ae0e18ef8f48bc552b4944f7e5971c5b5f4768
     npm install
     ```
 
