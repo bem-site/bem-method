@@ -6,14 +6,18 @@ Within this tutorial we are going to develop an [online shop web page](http://va
 
 ![web page](https://img-fotki.yandex.ru/get/15514/158800653.0/0_111fcd_57a9d718_orig)
 
+## Setting up the environment
+
 All tools that we are going to use work crossplatform.
 
 Be aware that you use suitable versions of bem-tools and libraries to run through this tutorial:
 * [enb v.0.13.9](https://github.com/enb-make/enb)
 * [bem-tools v.0.9.x](https://github.com/bem/bem-tools)
-* [bem-core v.2.5.0](https://github.com/bem/bem-core)
+* [bem-core v.2.5.1](https://github.com/bem/bem-core)
 
-To get started with BEM-based project you need to install the latest version of [Node.js](http://nodejs.org/).
+To get started with BEM-based project you need to install:
+* [Node.js 0.10+](http://nodejs.org/) or [io.js](https://iojs.org/en/index.html).
+* [Git Bash](http://msysgit.github.io/) if you use Windows OS.
 
 ## BEM in short
 
@@ -27,7 +31,9 @@ The quickest and easiest way to start with your own BEM project is to use an exi
 
 We need to create a local copy of a `project-stub`. You can choose any of your favorite tools to clone the project. We are going to use Git.
 
-    $ git clone https://github.com/bem/project-stub test-project
+**Note** If your operating system is Windows, you must run the following commands in Git Bash with administrator rights.
+
+    $ git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 test-project
 
 Go to a new project directory:
 
@@ -42,6 +48,8 @@ Create a git repository from that directory:
     $ git init
 
 Install all dependencies, including `bem-tools` and `ENB`:
+
+**Note** Do not use root rights to install npm and bower dependencies. bower dependencies are installed in the `libs` directory by npm postinstall.
 
     $ npm install
 
@@ -63,6 +71,10 @@ This means that the server mode is up and running. From this point on a solicite
 
 Instead of `ENB` you may use `bem-tools` project builder. The result files are the same in both cases, though `ENB` is more rapid and flexible. Configuration files for `bem-tools` are located in `.bem` directory.
 
+-----------------------------------------------
+
+**Build the project with bem-tools**
+
 You can run any `bem-tools` commands from a `node_modules/bem/bin/bem` directory.
 To be able to run `bem-tools` commands without typing a full path to an executable file (`node_modules/bem/bin/bem`), use `bem-cli` npm package:
 
@@ -82,6 +94,8 @@ Starting BEM server for development:
 
 Upon completion you will see the following message:
 `info: Server is listening on port 8080. Point your browser to http://localhost:8080/`
+
+--------------------------------------------
 
 **Getting stuck?**
 
@@ -565,8 +579,7 @@ You should declare a library name, its version (if available) and its repository
 
 ```
     "dependencies": {
-     "bem-core": "v2.3.0",
-     "bem-components": "git://github.com/bem/bem-components.git#3b41cd9d817f51b94bead414409a099913509299",
+     "bem-components": "2.0.0",
      "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```
 

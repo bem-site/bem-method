@@ -12,20 +12,22 @@
 
 ### Минимальные требования
 
-Установленная платформа [Node.js 0.10](http://nodejs.org).
+* [Node.js 0.10+](http://nodejs.org/) или [io.js](https://iojs.org/en/index.html);
+* [Git Bash](http://msysgit.github.io/) – для пользователей операционной системы Windows.
 
 ### Локальная копия и настройка окружения
 
 Для быстрого и простого создания БЭМ-проекта потребуется [шаблонный репозиторий](https://github.com/bem/project-stub), содержащий необходимый минимум конфигурационных файлов и папок.
 
+**Важно!** Пользователям Windows необходимо выполнять все команды в Git Bash. Убедитесь, что Git Bash запущен от имени администратора.
+
 1.  Сделайте локальную копию `project-stub`.
 
-    **NB** В данном документе описана процедура установки для ревизии [13ae0e18ef8f48bc552b4944f7e5971c5b5f4768](https://github.com/bem/project-stub/commit/13ae0e18ef8f48bc552b4944f7e5971c5b5f4768). Процесс установки последующих версий может отличаться.
+    **NB** Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей. bower-зависимости ставятся при выполнении npm postinstall в папку `libs`.
 
     ```bash
-    git clone https://github.com/bem/project-stub.git start-project
+    git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 start-project
     cd start-project
-    git checkout 13ae0e18ef8f48bc552b4944f7e5971c5b5f4768
     npm install
     ```
 
