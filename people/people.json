@@ -847,6 +847,28 @@
             "info": "Ведущий разработчик интерфейсов в Яндексе"
         }
     },
+    "savin-alexandr": {
+        "en": {
+            "firstName": "Alexandr",
+            "lastName": "Savin",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/savin-a.jpg",
+            "github": "apsavin",
+            "email": [],
+            "twitter": "ap_savin",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Александр",
+            "lastName": "Савин",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/savin-a.jpg",
+            "github": "apsavin",
+            "email": [],
+            "twitter": "ap_savin",
+            "skype": "",
+            "info": ""
+        }
+    }
     "vinogradov-anton": {
         "en": {
             "firstName": "Anton",
