@@ -890,5 +890,27 @@
             "skype": "",
             "info": "Работает в московском подразделении Альфа-Лаб разработчиком интерфейсов. Занимается внедрением и развитием БЭМ-методологии и даже папки именует по БЭМ."
         }
+    },
+    "vetrov-yury": {
+        "en": {
+            "firstName": "Yury",
+            "lastName": "Vetrov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/vetrov-yury.jpg",
+            "github": "jvetrau",
+            "email": [],
+            "twitter": "jvetrau",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Юрий",
+            "lastName": "Ветров",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/vetrov-yury.jpg",
+            "github": "jvetrau",
+            "email": [],
+            "twitter": "jvetrau",
+            "skype": "",
+            "info": ""
+        }
     }
 }
