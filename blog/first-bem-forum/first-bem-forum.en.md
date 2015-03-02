@@ -2,7 +2,7 @@
 
 Hi,
 
-My name is [Kolya Ilchenko](/authors/ilchenko-nikolay) and I, together with my colleague [Andrey Kuznecov](/authors/kuznetsov-andrey), represented the BEM Forum team at the hackathon.
+My name is [Kolya Ilchenko](https://bem.info/authors/ilchenko-nikolay/) and I, together with my colleague [Andrey Kuznecov](https://bem.info/authors/kuznetsov-andrey/), represented the BEM Forum team at the hackathon.
 
 Here we want to share our impressions of the BEM hackathon and tell you about the results our team was able to achieve.
 
@@ -79,7 +79,7 @@ As soon as the tasks were assigned, everyone started typing away at their laptop
 
 Both Andrey and I were really pleased with the results of this first BEM hackathon. We'd hardly expected to produce so many lines of useful code.
 
-At the time of writing (January 2015), we have been able to release some of the solutions to production, onto the bem.info site. The time constraints of the hackathon didn't permit us to complete some of the more complicated and time-consuming tasks though, such as authorization via passport.js or using a database instead of GitHub for data storage. 
+At the time of writing (January 2015), we have been able to release some of the solutions to production, onto the bem.info site. The time constraints of the hackathon didn't permit us to complete some of the more complicated and time-consuming tasks though, such as authorization via passport.js or using a database instead of GitHub for data storage.
 
 The guys had hardly slept, working on the code right up to the start of the project presentations. Their code will form a solid foundation for completing the task, and we will try to find the necessary resources to do this in 2015.
 
