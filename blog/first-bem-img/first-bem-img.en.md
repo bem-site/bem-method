@@ -1,6 +1,6 @@
 #BEM Hackathon: Images (src2img)
 
-<img style="float: right" src="https://dl.dropboxusercontent.com/u/1122837/src2img.png" alt="фотография офиса Яндекса в Санкт-Петербурге" width="200" title="BEMup в Санкт-Петербурге" />
+<img style="float: right" src="https://dl.dropboxusercontent.com/u/1122837/src2img.png" alt="photo of the Yandex office in Saint Petersburg" width="200" title="BEMup in Saint Petersburg" />
 
 Hi, my name is [Alexey Kondratov](https://bem.info/authors/kondratov-alexey/) and I presented the [src2img](http://src2img.com/) project at the hackathon.
 
