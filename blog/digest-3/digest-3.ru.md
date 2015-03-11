@@ -35,12 +35,12 @@
 #### enb-bem-tmpl-specs
 
 Для любителей писать тесты на шаблоны вышло целых 5 минорных релизов, в которые вошли следующие крупные изменения:
-— Добавили поддержку асинхронных шаблонизаторов. Теперь можно писать тесты для [bh-php](https://github.com/bem/bh-php).
-— Добавили возможность задавать дополнительный уровень переопределения для тестов.
-— Добавили поддержку [масок](https://github.com/bem/html-differ/blob/master/README.ru.md#Маски) для HTML-эталонов.
-— Добавили возможность фильтровать запускаемые тесты с помощью опции `grep` (аналог `mocha --grep`) или переменной окружения `BEM_TMPL_SPECS_GREP`.
-— Добавили опцию `htmlDiffer`, которая позволяет переопределять настройки сравнения HTML.
-— Добавили поддержку коментариев `/ istanbul ignore next */` для игнорирования участков кода при подсчёте покрытия тестами.
+* Добавили поддержку асинхронных шаблонизаторов. Теперь можно писать тесты для [bh-php](https://github.com/bem/bh-php).
+* Добавили возможность задавать дополнительный уровень переопределения для тестов.
+* Добавили поддержку [масок](https://github.com/bem/html-differ/blob/master/README.ru.md#Маски) для HTML-эталонов.
+* Добавили возможность фильтровать запускаемые тесты с помощью опции `grep` (аналог `mocha --grep`) или переменной окружения `BEM_TMPL_SPECS_GREP`.
+* Добавили опцию `htmlDiffer`, которая позволяет переопределять настройки сравнения HTML.
+* Добавили поддержку коментариев `/ istanbul ignore next */` для игнорирования участков кода при подсчёте покрытия тестами.
 
 Подробности написали в [истории изменений](https://github.com/enb-bem/enb-bem-tmpl-specs/blob/master/CHANGELOG.md).
 
@@ -67,12 +67,12 @@
  
 С момента прошлого дайджеста обновили блог и выложили новые статьи и видео в разделы «Статьи» и «Выступления». 
 Делимся с вами ссылками:
-* Видео [вебинара для Loftschool](https://ru.bem.info/talks/loftschool-music-2015/) про верстку Яндекс.Музыки на полном БЭМ-стеке и [обсуждение его](https://ru.bem.info/forum/issues/193/) на форуме.
- * Итоги [конкурса разработки проектов на БЭМ](https://ru.bem.info/blog/bem-competition-results/), который мы провели после вебинара для Loftschool и непоследние его итоги.
- * Итоги проекта [Приборная панель](http://ru.bem.info/blog/first-bem-board/) на нашем Хакатоне.
- * Статья [Александра Савина](https://ru.bem.info/authors/savin-alexandr/) про [изоморфный БЭМ](https://ru.bem.info/articles/isomorphic-bem/).
- * Статья [Димы Белицкого](https://ru.bem.info/authors/belitsky-dmitry/) про [разработку сайта с нуля на полном стеке БЭМ-технологий](https://ru.bem.info/articles/bem-full-stack-site/).
- * Статья [Юрия Ветрова](https://ru.bem.info/authors/vetrov-yury/) про [унификацию дизайна: Фреймворк Mail.Ru Group для мобильного веба](https://ru.bem.info/articles/mailru-unified-design/).
+* Видео [вебинара для Loftschool](https://ru.bem.info/talks/loftschool-music-2015/) про верстку Яндекс. Музыки на полном БЭМ-стеке и [обсуждение его](https://ru.bem.info/forum/issues/193/) на форуме.
+* Итоги [конкурса разработки проектов на БЭМ](https://ru.bem.info/blog/bem-competition-results/), который мы провели после вебинара для Loftschool и непоследние его итоги.
+* Итоги проекта [Приборная панель](http://ru.bem.info/blog/first-bem-board/) на нашем Хакатоне.
+* Статья [Александра Савина](https://ru.bem.info/authors/savin-alexandr/) про [изоморфный БЭМ](https://ru.bem.info/articles/isomorphic-bem/).
+* Статья [Димы Белицкого](https://ru.bem.info/authors/belitsky-dmitry/) про [разработку сайта с нуля на полном стеке БЭМ-технологий](https://ru.bem.info/articles/bem-full-stack-site/).
+* Статья [Юрия Ветрова](https://ru.bem.info/authors/vetrov-yury/) про [унификацию дизайна: Фреймворк Mail.Ru Group для мобильного веба](https://ru.bem.info/articles/mailru-unified-design/).
  
 ## Интересное на форуме
 
@@ -90,11 +90,11 @@
 
 ## В мире БЭМ
 В этом разделе мы собрали интересные ссылки на статьи и репозитории из мира БЭМ, найденные в поиске или социальных сетях:
- * Статья: [Generating BEM selectors with CSS preprocessors](http://frontendbabel.info/articles/bem-with-css-preprocessors/).
- * Статья: [How we built the new BBC Homepage](http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d?PageSpeed=off).
+* Статья: [Generating BEM selectors with CSS preprocessors](http://frontendbabel.info/articles/bem-with-css-preprocessors/).
+* Статья: [How we built the new BBC Homepage](http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d?PageSpeed=off).
 * Пост в блоге инженера из Google Филипа Уолтона: [Side Effects in CSS](http://philipwalton.com/articles/side-effects-in-css/).
 * Пост на сайте css-tricks.com от Chris Coyier: [BEM Mixins](https://css-tricks.com/snippets/sass/bem-mixins/).
-• Пост Harry Roberts на его сайте csswizardry.com: [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/). К слову, мы этот путь [уже проходили](https://en.bem.info/method/history/#prefixes) и решили, что нам и без префиксов вполне удобно.
+* Пост Harry Roberts на его сайте csswizardry.com: [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/). К слову, мы этот путь [уже проходили](https://en.bem.info/method/history/#prefixes) и решили, что нам и без префиксов вполне удобно.
 
 Приятного чтения, использования и **Stay BEMed**!
 
