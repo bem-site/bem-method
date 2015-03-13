@@ -307,6 +307,28 @@
             "info": "Работает в группе разработки БЭМ в симферопольском офисе Яндекса с 2013 года. Разрабатывает фронтэнд сайта bem.info и внутреннего сайта документации блоков. Является одним из авторов форума на полном БЭМ-стеке."
         }
     },
+    "konstantinov-eugeny": {
+        "en": {
+            "firstName": "Eugeny",
+            "lastName": "Konstantinov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinov-eugeny.png",
+            "github": "sipayRT",
+            "email": [],
+            "twitter": "sipayRT",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Евгений",
+            "lastName": "Константинов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinov-eugeny.png",
+            "github": "sipayRT",
+            "email": [],
+            "twitter": "sipayRT",
+            "skype": "",
+            "info": ""
+        }
+    },
     "kuznetsov-andrey": {
         "en": {
             "firstName": "Andrey",
