@@ -781,7 +781,7 @@ All Lego blocks were refactored to follow the completely independent blocks rest
 ### Establishing naming conventions
 After taking several attempts to modify naming conventions, we agreed on some naming principles that hadn't changed since then.
 
-In file names, the dot separator was replaced by double underscore __. Before: `b-block.elem.css`,
+In file names, the dot separator was replaced by double underscore `__`. Before: `b-block.elem.css`,
 after: `b-block__elem.css`; thus, file names were made consistent with CSS selectors.
 
 Block elements were allowed to have their own modifiers, too.
