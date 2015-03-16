@@ -6,12 +6,10 @@ If your projects are not yet included here, email us at [info@bem.info](mailto:i
 
 ## bem-flashcards
 
-Small project based on project-stub and built using bem-core and bem-history libraries. Contains of a set of English words with 
-translations that are shown as tipping cards. Has an option to change its dictionary for any other dictionary or for a set of 
-random phrases.
+A small project based on project-stub and built using bem-core and bem-history libraries. Contains of a set of English words with translations that are shown as tipping cards. Has an option to change its dictionary for any other dictionary or for a set of random phrases.
 
 To prepare a dictionary from an XLS-file use [ruby-script](https://gist.github.com/ololobus/11f222d1fc48f2efef56). 
-Input XLS-file shall contain of three columns (A, B, C): a word, its transcript and its translation.
+Input XLS-file shall contain three columns (A, B, C): a word, its transcript and its translation.
 
 Project is ready to use. Fork, change and fill the dictionary up. 
 
@@ -21,7 +19,7 @@ Authored by Aleksey Kondratov, [gh: ololobus](https://github.com/ololobus), [@ol
 
 ## bem-grid
 
-A library to define CSS grids. CSS-grid is built using flexbox and has a degradation for old browsers. It is fully customizable
+A library to define CSS grids. CSS grid is built using flexbox and has a degradation for old browsers. It is fully customizable
 for any needs using variables, uses rem units and superfast Stylus. Based on bem-core library.
 
 Project repository on [GitHub](https://github.com/verybigman/bem-grid).
@@ -38,15 +36,14 @@ Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [
 
 ## generator-bem-ng
 
-Unusual generator of BEM-projects that use AngularJS. Using it you can easily create a basic structure of a BEM-project and 
-modules of an AngularJS application. Generator uses unusual for the first sight paradigm of modules but a very comfortable
-and correct for those who knows how BEM works.
+An unusual generator of BEM projects that use AngularJS. Using it you can easily create a basic structure of a BEM project and 
+modules of an AngularJS application. Generator uses a module paradigm that may appear rather unconventional, but that is in fact very convenient and appropriate if you're familiar with BEM.
 
 Project repository on [GitHub](https://github.com/verybigman/generator-bem-ng).
 
 Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
-## gem 'bem-on-rails’
+## gem bem-on-rails
 
 Allows working with BEM methodology in Ruby on Rails projects.
 
@@ -64,8 +61,7 @@ Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [
 
 ## bem-social
 
-A library of social widgets blocks for sites built with BEM stack of technologies. Share, Like, Follow, Yandex.Share API and some others. 
-Contains of social networks SVG icons together with a few design themes. Library uses few blocks of [bem-components](https://ru.bem.info/libs/bem-components/) library.
+A library of social widget blocks for sites built with BEM stack of technologies. Share, Like, Follow, Yandex.Share API and some others. Contains social networks SVG icons together with a few design themes. Library uses a few blocks of [bem-components](https://ru.bem.info/libs/bem-components/) library.
 
 Project repository on [GitHub](https://github.com/voischev/bem-social)
 
@@ -73,8 +69,8 @@ Authored by Ivan Voischev, [gh: voischev](https://github.com/voischev), [@voisch
 
 ## bnsf
 
-A framework to create one page application according to BEM methodology. Allows easy usage of once written code, especially 
-templates and routing, on both client-side and server-side. Friendly to search engines. Depends on [bem-core](https://ru.bem.info/libs/bem-core) library, 
+A framework to create one-page application according to BEM methodology. Allows easy reuse of the same code, especially 
+templates and routing, on both the client side and server side. Search engine friendly. Depends on [bem-core](https://ru.bem.info/libs/bem-core) library, 
 for templating uses `BEMHTML` and `BEMTREE`, building with `bem-tools`.
 
 Project repository on [GitHub](https://github.com/apsavin/bnsf)
