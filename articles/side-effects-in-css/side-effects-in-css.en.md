@@ -86,9 +86,9 @@ Consider the following example:
 }
 ```
 
-    While it’s true that `.title` elements not inside `.article` or `.widget` subtrees will not get either of these styles, there’s still the possibility that a `.title` element will be inside _both_ `.article` and `.widget` subtrees at the same time.
+While it's true that `.title` elements not inside `.article` or `.widget` subtrees will not get either of these styles, there’s still the possibility that a `.title` element will be inside _both_ `.article` and `.widget` subtrees at the same time.
 
-    Given the CSS above, the widget title in this example is going to render with an unexpected bottom border:
+Given the CSS above, the widget title in this example is going to render with an unexpected bottom border:
 
 ```html
 <!-- The .article module -->
@@ -107,13 +107,13 @@ Consider the following example:
 </article>
 ```
 
-    In real-world development, HTML structures are complex and if everyone on your team is writing CSS this way, it’s only a matter of time before two of them pick the same name and put it in the same subtree.
+In real-world development, HTML structures are complex and if everyone on your team is writing CSS this way, it’s only a matter of time before two of them pick the same name and put it in the same subtree.
 
-    I should also point out that using scoped type selectors makes this problem much worse. Writing rules like `.article h3` is just asking for trouble.
+I should also point out that using scoped type selectors makes this problem much worse. Writing rules like `.article h3` is just asking for trouble.
 
-    ## How BEM eliminates side effects
+## How BEM eliminates side effects
 
-    I said above that all CSS rules are global and every rule has the potential to conflict with every other rule on the page. This means side effects cannot be prevented by the language; however, they _can_ be prevented via a disciplined and enforceable naming convention. And that’s exactly what BEM provides.
+I said above that all CSS rules are global and every rule has the potential to conflict with every other rule on the page. This means side effects cannot be prevented by the language; however, they _can_ be prevented via a disciplined and enforceable naming convention. And that’s exactly what BEM provides.
 
 *   **Base rule changes:**
     Strict BEM conventions require the sole use of class selectors. You start with a global reset, and then you use blocks to style everything on the page. In other words, adding a class to an element is the only way to style it, which means all styling is opt-in rather than de facto. Blocks encapsulate all of their styling and rely on no external dependencies.<sup>[[3]](#footnote-3)</sup>
@@ -122,13 +122,13 @@ Consider the following example:
 *   **Subtree matches:**
     The subtree matching example in the previous section used the selectors `.article .title` and `.widget .title`. Since the class name “title” was used in both cases, there’s a risk of subtree matching. BEM avoids this risk by requiring that all element classes be prefixed with the block name. The BEM equivalents of these two title selectors would be `.Article-title` and `.Widget-title` (or `.article__title` and `.widget__title`, depending on your preference).<sup>[[4]](#footnote-4)</sup> Since the class names are different, their styles won’t ever conflict, and thus it’s impossible to have unintended subtree matches.
 
-    ### Enforcing conventions
+### Enforcing conventions
 
-    A strict adherence to BEM conventions will prevent side effects in CSS, but how do you make sure the conventions are always followed? If the reemergence of side effects can be due to something as simple as a new developer not knowing (or fully understanding) the rules, how is that any better than before?
+A strict adherence to BEM conventions will prevent side effects in CSS, but how do you make sure the conventions are always followed? If the reemergence of side effects can be due to something as simple as a new developer not knowing (or fully understanding) the rules, how is that any better than before?
 
-    Luckily, unlike most CSS methodologies, proper usage of BEM’s naming convention is very easy to test and enforce, both on the CSS side and on the HTML side. The following are a few rules you can test for in a linter of your choice.
+Luckily, unlike most CSS methodologies, proper usage of BEM’s naming convention is very easy to test and enforce, both on the CSS side and on the HTML side. The following are a few rules you can test for in a linter of your choice.
 
-    In the CSS:
+In the CSS:
 
 *   With the exception of a reset stylesheet, all other files must only contain class selectors.
 *   All class selectors must begin with the name of the file.
@@ -146,15 +146,15 @@ Consider the following example:
 *   [Suit Conformance](https://github.com/suitcss/rework-suit-conformance)
 *   [PostCSS BEM Linter](https://github.com/necolas/postcss-bem-linter)
 
-    ## Making exceptions
+## Making exceptions
 
-    In the real world there are cases where the strict adherence to BEM conventions is either impractical or impossible. This is common when using third-party plugins or tools that generate part of your HTML for you, or when building an application where content is going to be generated by an end user.
+In the real world there are cases where the strict adherence to BEM conventions is either impractical or impossible. This is common when using third-party plugins or tools that generate part of your HTML for you, or when building an application where content is going to be generated by an end user.
 
-    There are also cases where, for convenience, developers choose to ignore BEM conventions. A common example of this is in the content area of a site. A developer may choose to favor tag selectors over having to put a class on every single `<p>` or `<a>` tag.
+There are also cases where, for convenience, developers choose to ignore BEM conventions. A common example of this is in the content area of a site. A developer may choose to favor tag selectors over having to put a class on every single `<p>` or `<a>` tag.
 
-    By now I hope it’s obvious that making exceptions or ignoring BEM conventions will incur risk. And after reading this article it should be apparent exactly what those risks are. You can decide for yourself the level of risk you are willing to take, given your situation.
+By now I hope it’s obvious that making exceptions or ignoring BEM conventions will incur risk. And after reading this article it should be apparent exactly what those risks are. You can decide for yourself the level of risk you are willing to take, given your situation.
 
-    If your exceptions are limited to just one area of your site (say, the content area), and if you don’t have to support older browsers, you could adopt a strategy like this:
+If your exceptions are limited to just one area of your site (say, the content area), and if you don’t have to support older browsers, you could adopt a strategy like this:
 
 ```css
 .Content h1:not([class]) { }
@@ -162,9 +162,9 @@ Consider the following example:
 .Content a:not([class]) { }
 ```
 
-    While I haven’t tested this approach in a real-world scenario, I mention it because it’s an example of a variation on BEM conventions that doesn’t compromise its guarantee of no side effects. Since all BEM blocks are styled via classes, styling elements that don’t have a class is “safe”, at least from conflict with the rest of your CSS (obviously if you’re using classes for other things, this can still be risky as adding a class to such an element would prevent it from matching the selector).
+While I haven’t tested this approach in a real-world scenario, I mention it because it’s an example of a variation on BEM conventions that doesn’t compromise its guarantee of no side effects. Since all BEM blocks are styled via classes, styling elements that don’t have a class is “safe”, at least from conflict with the rest of your CSS (obviously if you’re using classes for other things, this can still be risky as adding a class to such an element would prevent it from matching the selector).
 
-    Another example I encounter frequently is using site-wide state or support classes. [Modernizr](http://modernizr.com/) is a good example. Though this technique _does_ increase the specificity of the selectors it’s used on, the increased specificity should only affect other rules defined within the same block file (assuming you’ve followed all the other BEM conventions).
+Another example I encounter frequently is using site-wide state or support classes. [Modernizr](http://modernizr.com/) is a good example. Though this technique _does_ increase the specificity of the selectors it’s used on, the increased specificity should only affect other rules defined within the same block file (assuming you’ve followed all the other BEM conventions).
 
 ```css
 .GridRow {
@@ -207,4 +207,5 @@ In my opinion if your team is larger than just you, the risk is not worth the re
 1.  [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/) brings real, two-way subtree scoping to CSS, though it’s not currently supported by all browsers.
 2.  With [custom elements](http://w3c.github.io/webcomponents/spec/custom/), you can create additional tags, which partially solves this problem.
 3.  The only exception to this is [inheritable properties](http://dev.w3.org/csswg/css-cascade/#inheriting) like `font-size` and `line-height`. Blocks may depend on these styles being defined outside of the block because it allows them to be more adaptable to their host environment. If blocks choose to not reset inheritable properties, they should be flexible enough to adapt to whatever properties they may receive.
-4.  There are several [different variations](https://github.com/philipwalton/html-inspector/blob/0.8.2/src/rules/convention/bem-conventions.js#L1-L27) on the traditional BEM naming conventions. I personally prefer the flavor [advocated for](https://github.com/suitcss/suit/issues/80) by [SUIT CSS](https://suitcss.github.io).</aside>
+4.  There are several [different variations](https://github.com/philipwalton/html-inspector/blob/0.8.2/src/rules/convention/bem-conventions.js#L1-L27) on the traditional BEM naming conventions. I personally prefer the flavor [advocated for](https://github.com/suitcss/suit/issues/80) by [SUIT CSS](https://suitcss.github.io).
+</aside>
