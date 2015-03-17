@@ -935,4 +935,26 @@
             "info": ""
         }
     }
+    "walton-philip": {
+        "en": {
+            "firstName": "Philip",
+            "lastName": "Walton",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/walton-philip.jpg",
+            "github": "philipwalton",
+            "email": [],
+            "twitter": "philwalton",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Филип",
+            "lastName": "Волтон",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/walton-philip.jpg",
+            "github": "philipwalton",
+            "email": [],
+            "twitter": "philwalton",
+            "skype": "",
+            "info": ""
+        }
+    }
 }
