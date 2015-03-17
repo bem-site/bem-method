@@ -1,5 +1,3 @@
-## Side effects in CSS
-
 Permission to publish granted. Originally posted in Philip's [blog](http://philipwalton.com/articles/side-effects-in-css/).
 
 It feels like every few days I read about some shiny new way people are writing CSS. Many of these “new” ways are not actually new, they’re variations on one or more well-known methodologies, but with a few changes sprinkled on top.
