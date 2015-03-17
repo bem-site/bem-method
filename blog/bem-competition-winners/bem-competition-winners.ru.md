@@ -16,7 +16,7 @@
 
 [Демо](http://phamap.github.io/bem-card-world/ ) | [Репозиторий](https://github.com/phamap/bem-card-world ) | [Полная версия ревью](https://github.com/bem-events/competition-with-loftblog/blob/master/review-1-gela-d.md )
 
-![Превью верстки набора карточек в стиле материального (material) дизайна от Google](https://img-fotki.yandex.ru/get/6300/246231603.0/0_149896_df1e623c_orig.jpg «Превью верстки набора карточек в стиле material (material) дизайна от Google»)
+![Превью верстки набора карточек в стиле материального (material) дизайна от Google](https://img-fotki.yandex.ru/get/6300/246231603.0/0_149896_df1e623c_orig.jpg «Превью верстки набора карточек в стиле материального дизайна от Google»)
 
 **Ревьюер** проекта — [Гела Константинова](https://ru.bem.info/authors/konstantinova-gela/ ). В Яндексе с 2011 года. Руководит группой разработки сайта БЭМ. Участвует в развитии технологии. У Гелы сильно развито чувство прекрасного, поэтому проект, который напрямую связан с дизайном, лучше нее никто бы не оценил.
 
@@ -167,4 +167,4 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-7-bel
 
 И конечно же, всем **Stay BEMed**!
 
-P.S. На всякий случай – в репозитории [bem-events](https://github.com/bem-events ) вы сможете найти список всех ревью и форки проектов.
+P.S. На всякий случай – в репозитории [bem-events](https://github.com/bem-events/competition-with-loftblog/) вы сможете найти список всех ревью и форки проектов.
