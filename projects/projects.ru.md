@@ -72,4 +72,16 @@
 
 Автор проекта — Александр Савин, [gh: apsavin](https://github.com/apsavin), [@apsavin](https://twitter.com/ap_savin), [a.p.savin@yandex.ru](mailto:a.p.savin@yandex.ru).
 
+## sails-bem-project-stub
+
+Заготовка проекта на nodejs MVC-фреймворке [Sails](http://sailsjs.org).
+
+В качестве фронтенда используется полный стек технологий БЭМ: BEMTREE, BEMHTML, i-bem.js, библиотеки bem-core и bem-components. БЭМ-блоки интерфейса находятся в папке views. 
+
+Проект настроен на использование mongoDB, но предоставляет возможность использовать произвольную базу данных.
+
+Репозиторий проекта на [GitHub](https://github.com/alexbaumgertner/sails-bem-project-stub).
+
+Автор проекта — Александр Баумгертнер, [gh: alexbaumgertner](https://github.com/alexbaumgertner), [@alexbaumgertner](https://twitter.com/alexbaumgertner), [alexbaumgertner@yandex.ru](mailto:alexbaumgertner@yandex.ru).
+
 **Присоединяйтесь и вы!**

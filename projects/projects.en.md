@@ -77,4 +77,16 @@ Project repository on [GitHub](https://github.com/apsavin/bnsf)
 
 Authored by Alexander Savin, [gh: apsavin](https://github.com/apsavin), [@apsavin](https://twitter.com/ap_savin), [a.p.savin@yandex.ru](mailto:a.p.savin@yandex.ru).
 
+## sails-bem-project-stub
+
+A project-stub based on [Sails](http://sailsjs.org) nodejs MVC framework.
+
+Frontend part of the project-stub is built using full stack of BEM technologies including BEMTREE, BEMHTML, i-bem.js, bem-core and bem-components libraries. BEM-blocks of the interface are located within the views folder. 
+
+The project is configured to work with mongoDB, however allows an option to use any database.
+
+Project repository on [GitHub](https://github.com/alexbaumgertner/sails-bem-project-stub).
+
+Authored by Alexander Baumgertner, [gh: alexbaumgertner](https://github.com/alexbaumgertner), [@alexbaumgertner](https://twitter.com/alexbaumgertner), [alexbaumgertner@yandex.ru](mailto:alexbaumgertner@yandex.ru).
+
 **Join us with your projects!**
