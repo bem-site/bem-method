@@ -199,12 +199,12 @@ While 100% predictable code may never be possible, it’s important to understan
 
 In my opinion if your team is larger than just you, the risk is not worth the reward.
 
-<aside class="Footnotes">
+<h1><a id="user-content-footnotes" class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes:</h1>
 
-# Footnotes:
-
-  1.  [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/) brings real, two-way subtree scoping to CSS, though it’s not currently supported by all browsers.
-  2.  With [custom elements](http://w3c.github.io/webcomponents/spec/custom/), you can create additional tags, which partially solves this problem.
-  3.  The only exception to this is [inheritable properties](http://dev.w3.org/csswg/css-cascade/#inheriting) like `font-size` and `line-height`. Blocks may depend on these styles being defined outside of the block because it allows them to be more adaptable to their host environment. If blocks choose to not reset inheritable properties, they should be flexible enough to adapt to whatever properties they may receive.
-  4.  There are several [different variations](https://github.com/philipwalton/html-inspector/blob/0.8.2/src/rules/convention/bem-conventions.js#L1-L27) on the traditional BEM naming conventions. I personally prefer the flavor [advocated for](https://github.com/suitcss/suit/issues/80) by [SUIT CSS](https://suitcss.github.io).
-</aside>
+<ol class="task-list">
+<li> <a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a> brings real, two-way subtree scoping to CSS, though it’s not currently supported by all browsers.</li>
+<li> With <a href="http://w3c.github.io/webcomponents/spec/custom/">custom elements</a>, you can create additional tags, which partially solves this problem.</li>
+<li> The only exception to this is <a href="http://dev.w3.org/csswg/css-cascade/#inheriting">inheritable properties</a> like <code>font-size</code> and <code>line-height</code>. Blocks may depend on these styles being defined outside of the block because it allows them to be more adaptable to their host environment. If blocks choose to not reset inheritable properties, they should be flexible enough to adapt to whatever properties they may receive.</li>
+<li> There are several <a href="https://github.com/philipwalton/html-inspector/blob/0.8.2/src/rules/convention/bem-conventions.js#L1-L27">different variations</a> on the traditional BEM naming conventions. I personally prefer the flavor <a href="https://github.com/suitcss/suit/issues/80">advocated for</a> by <a href="https://suitcss.github.io">SUIT CSS</a>.
+</li>
+</ol>
