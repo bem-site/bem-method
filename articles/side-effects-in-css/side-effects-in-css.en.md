@@ -1,4 +1,4 @@
-Permission to publish granted. Originally posted in Philip's [blog](http://philipwalton.com/articles/side-effects-in-css/).
+_Permission to publish granted. Originally posted in Philip's [blog](http://philipwalton.com/articles/side-effects-in-css/)._
 
 It feels like every few days I read about some shiny new way people are writing CSS. Many of these “new” ways are not actually new, they’re variations on one or more well-known methodologies, but with a few changes sprinkled on top.
 
@@ -200,10 +200,11 @@ While 100% predictable code may never be possible, it’s important to understan
 In my opinion if your team is larger than just you, the risk is not worth the reward.
 
 <aside class="Footnotes">
+
 # Footnotes:
 
-1.  [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/) brings real, two-way subtree scoping to CSS, though it’s not currently supported by all browsers.
-2.  With [custom elements](http://w3c.github.io/webcomponents/spec/custom/), you can create additional tags, which partially solves this problem.
-3.  The only exception to this is [inheritable properties](http://dev.w3.org/csswg/css-cascade/#inheriting) like `font-size` and `line-height`. Blocks may depend on these styles being defined outside of the block because it allows them to be more adaptable to their host environment. If blocks choose to not reset inheritable properties, they should be flexible enough to adapt to whatever properties they may receive.
-4.  There are several [different variations](https://github.com/philipwalton/html-inspector/blob/0.8.2/src/rules/convention/bem-conventions.js#L1-L27) on the traditional BEM naming conventions. I personally prefer the flavor [advocated for](https://github.com/suitcss/suit/issues/80) by [SUIT CSS](https://suitcss.github.io).
+  1.  [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/) brings real, two-way subtree scoping to CSS, though it’s not currently supported by all browsers.
+  2.  With [custom elements](http://w3c.github.io/webcomponents/spec/custom/), you can create additional tags, which partially solves this problem.
+  3.  The only exception to this is [inheritable properties](http://dev.w3.org/csswg/css-cascade/#inheriting) like `font-size` and `line-height`. Blocks may depend on these styles being defined outside of the block because it allows them to be more adaptable to their host environment. If blocks choose to not reset inheritable properties, they should be flexible enough to adapt to whatever properties they may receive.
+  4.  There are several [different variations](https://github.com/philipwalton/html-inspector/blob/0.8.2/src/rules/convention/bem-conventions.js#L1-L27) on the traditional BEM naming conventions. I personally prefer the flavor [advocated for](https://github.com/suitcss/suit/issues/80) by [SUIT CSS](https://suitcss.github.io).
 </aside>
