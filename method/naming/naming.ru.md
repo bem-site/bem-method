@@ -22,6 +22,11 @@
 
 >[Почему мы используем CSS-классы и какие есть альтернативы](faq.ru.md).
 
+<div style="background: #f7f7f7; padding: 12px;font-size: 20px; line-height: 30px; font-weight: bold;">
+    <p><span style="color: #2e8aca">block-name</span><span style="color: #279186">_mod-name</span><span style="color: #d02227">_mod-val</span></p>
+    <p><span style="color: #2e8aca">block-name</span><span style="color: #a4782b">__elem-name</span><span style="color: #279186">_elem-mod-name</span><span style="color: #d02227">_elem-mod-val</span></p>
+</div>
+
 Правила формирования имен:
 
 * [блоков](#bem-block-name)
@@ -31,7 +36,13 @@
 <a name="bem-block-name"></a>
 ### Имя блока
 
-Имя блока формируется по схеме `block-name` и служит [неймспейсом](https://ru.wikipedia.org/wiki/Пространство_имён) для элементов и модификаторов.
+Имя блока формируется по схеме:
+
+<div style="background: #f7f7f7; padding: 12px;font-size: 20px; line-height: 30px; font-weight: bold;">
+    <p><span style="color: #2e8aca">block-name</span></p>
+</div>
+
+Оно служит [неймспейсом](https://ru.wikipedia.org/wiki/Пространство_имён) для элементов и модификаторов.
 
 Иногда к именам блоков могут добавляться различные префиксы. Подробнее о нашем опыте использования префиксов рассказывается в статье [История создания БЭМ](https://ru.bem.info/method/history/#Появление-блоков).
 
@@ -60,7 +71,9 @@
 
 Полное имя элемента создается по схеме:
 
-`block-name__elem-name`
+<div style="background: #f7f7f7; padding: 12px;font-size: 20px; line-height: 30px; font-weight: bold;">
+    <p><span style="color: #2e8aca">block-name</span><span style="color: #a4782b">__elem-name</span></p>
+</div>
 
 Если блок имеет несколько одинаковых элементов, как в случае пунктов меню, то все они будут иметь одинаковые имена `menu__item`.
 
@@ -102,9 +115,17 @@ _________________________________________________
 
 Полное имя модификатора создается по схеме:
 
-* Для булевых модификаторов — `owner-name_mod-name`.
+* Для булевых модификаторов
 
-* Для модификаторов вида «ключ-значение» — `owner-name_mod-name_mod-val`.
+<div style="background: #f7f7f7; padding: 12px;font-size: 20px; line-height: 30px; font-weight: bold;">
+    <p><span style="color: #2e8aca">owner-name</span><span style="color: #279186">_mod-name</span></p>
+</div>
+
+* Для модификаторов вида «ключ-значение»
+
+<div style="background: #f7f7f7; padding: 12px;font-size: 20px; line-height: 30px; font-weight: bold;">
+    <p><span style="color: #2e8aca">owner-name</span><span style="color: #279186">_mod-name</span><span style="color: #d02227">_elem-mod-val</span></p>
+</div>
 
 #### Модификатор блока
 
