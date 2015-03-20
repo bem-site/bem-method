@@ -24,9 +24,9 @@
 
 Правила формирования имен:
 
-* [блоков](#bem-block-name);
-* [элементов](#bem-elem-name);
-* [модификаторов](#bem-mod-name).
+* [блоков](#bem-block-name)
+* [элементов](#bem-elem-name)
+* [модификаторов](#bem-mod-name)
 
 <a name="bem-block-name"></a>
 ### Имя блока
@@ -122,7 +122,7 @@ _________________________________________________
 
 ```html
 <div class="menu menu_hidden">...</div>
-<div class="menu menu_theme_forest">...</div>
+<div class="menu menu_theme_morning-forest">...</div>
 ```
 
 >*Неверно*
@@ -137,7 +137,7 @@ _________________________________________________
 
 ```css
 .menu_hidden { display: none }
-.menu_theme_forest { color: green; }
+.menu_theme_morning-forest { color: green; }
 ```
 
 #### Модификатор элемента
