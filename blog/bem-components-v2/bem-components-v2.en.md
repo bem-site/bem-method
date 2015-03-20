@@ -82,11 +82,11 @@ Before announcing v2.0.0 we wanted to test it in the real world, cover all use c
 
 Now, we can say — bem-components v2.0.0 is a stable version. And it could be used for a wide range of tasks on projects of all sizes with no risk.
 
-One more good news: bem-components library uses [semantic versioning](http://semver.org/lang/ru/). Now, you could use corresponding tags instead of definite commit number.
+One more good news: bem-components library uses [semantic versioning](http://semver.org/). Now, you could use corresponding tags instead of definite commit number.
 
 All future updates of the library will be more transparent and understandable. 
 
-From now on you may check two information sources – [semantic versioning] (http://semver.org/lang/en/) and a changelog file with detailed description of all changes. It will definitely give you a picture of all new features and compatibility between different versions.
+From now on you may check two information sources – [semantic versioning](http://semver.org/) and a changelog file with detailed description of all changes. It will definitely give you a picture of all new features and compatibility between different versions.
 
 We would love to hear your stories about [bem-components v2.0.0](https://en.bem.info/libs/bem-components/v2.0.0/) library usage in the ”wild“, meaning – in your projects :) 
 
