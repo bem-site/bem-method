@@ -185,7 +185,7 @@ These days, almost no libraries modify native prototypes. In fact, I’ve seen s
 
 The class naming systems used by pretty much every popular CSS framework are just as bad if not worse than modifying native prototypes in JavaScript. They litter the global namespace with base styles, they choose class names so common they’re almost guaranteed to conflict with your existing code, and they make almost no effort to encapsulate their components.
 
-Consider Bootstrap. Every single one of its JavaScript plugins uses a namespace and comes with a `.noConflict()` method to avoid naming collisions. Its CSS, on the other hand, makes no such effort despite [numerous](https://github.com/twbs/bootstrap/issues/1235) [requests](https://github.com/twbs/bootstrap/issues/1287) for it, and [easy solutions](/articles/dynamic-selectors/) that people have been suggesting for a long time.
+Consider Bootstrap. Every single one of its JavaScript plugins uses a namespace and comes with a `.noConflict()` method to avoid naming collisions. Its CSS, on the other hand, makes no such effort despite [numerous](https://github.com/twbs/bootstrap/issues/1235) [requests](https://github.com/twbs/bootstrap/issues/1287) for it, and [easy solutions](http://philipwalton.com/articles/dynamic-selectors/) that people have been suggesting for a long time.
 
 I don’t mean to call out Bootstrap specifically because pretty much every mainstream CSS framework does this. My hope is that the CSS community will start demanding better from their tools the same way the JavaScript community has.
 
