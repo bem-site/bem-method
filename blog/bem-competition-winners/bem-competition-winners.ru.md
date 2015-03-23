@@ -14,7 +14,7 @@
 
 ### Набор карточек в стиле материального (material) дизайна от Google
 
-[Демо](http://phamap.github.io/bem-card-world/ ) | [Репозиторий](https://github.com/phamap/bem-card-world ) | [Полная версия ревью](https://github.com/bem-events/competition-with-loftblog/blob/master/review-1-gela-d.md )
+[Демо](http://phamap.github.io/bem-card-world/ ) | [Репозиторий](https://github.com/phamap/bem-card-world ) | [Полная версия ревью](https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-1-gela-d.md )
 
 ![Превью верстки набора карточек в стиле материального (material) дизайна от Google](https://img-fotki.yandex.ru/get/6300/246231603.0/0_149896_df1e623c_orig.jpg «Превью верстки набора карточек в стиле материального дизайна от Google»)
 
@@ -35,7 +35,7 @@
 ### Вёрстка шаблона посадочной страницы Halcyon Days
 
 [Демо](http://104.236.43.137/halcyon/index.html ) | [Репозиторий](https://github.com/oozywaters/Halcyon ) | [Полная версия ревью](
-https://github.com/bem-events/competition-with-loftblog/blob/master/review-2-dab.md )
+https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-2-dab.md )
 
 ![Превью вёрстки шаблона посадочной страницы Halcyon Days](https://img-fotki.yandex.ru/get/5306/246231603.0/0_149895_af8d3827_orig.jpg «Превью вёрстки шаблона посадочной страницы Halcyon Days»)
 
@@ -52,7 +52,7 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-2-dab
 ### Альтернативный вариант главной страницы bem.info
 
 [Демо](https://1vank1n.github.io/bem-landing/ ) | [Репозиторий](https://github.com/1vank1n/bem-landing ) | [Полная версия ревью](
-https://github.com/bem-events/competition-with-loftblog/blob/master/review-3-tavria.md )
+https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-3-tavria.md )
 
 ![Превью альтернативного варианта главной страницы bem.info](https://img-fotki.yandex.ru/get/4114/246231603.0/0_149894_59173ace_orig.jpg «Превью альтернативного варианта главной страницы bem.info)
 
@@ -71,7 +71,7 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-3-tav
 ### БЭМ-библиотека для подключения шрифтовых иконок Font Awesome
 
 [Демо](https://1vank1n.github.io/bem-fa/ ) | [Репозиторий](https://github.com/1vank1n/bem-fa ) | [Полная версия ревью](
-https://github.com/bem-events/competition-with-loftblog/blob/master/review-4-blond.md )
+https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-4-blond.md )
 
 ![Превью шрифтов Font Awesome в БЭМ-библиотеке bem-fa](https://img-fotki.yandex.ru/get/6832/246231603.0/0_149893_21aad3b8_orig.jpg «Превью шрифтов Font Awesome в БЭМ-библиотеке bem-fa»)
 
@@ -87,7 +87,7 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-4-blo
 
 ### Аналог jQuery UI слайдера в виде БЭМ-блока
 
-[Демо](http://bem-range-demo.bitballoon.com ) | [Репозиторий](https://github.com/kuflash/bem-range ) | [Полная версия ревью](https://github.com/bem-events/competition-with-loftblog/blob/master/review-5-sipayrt.md )
+[Демо](http://bem-range-demo.bitballoon.com ) | [Репозиторий](https://github.com/kuflash/bem-range ) | [Полная версия ревью](https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-5-sipayrt.md )
 
 ![Превью аналога jQuery UI слайдера в виде БЭМ-блока](https://img-fotki.yandex.ru/get/15597/246231603.0/0_149891_e9b17c86_orig.jpg «Превью аналога jQuery UI слайдера в виде БЭМ-блока»)
 
@@ -106,7 +106,7 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-4-blo
 ### Компонент выезжающего двухуровневого меню в виде БЭМ-библиотеки
 
 [Демо](http://guria.github.io/bem-drawer-menu/kg-menu-demo.html ) | [Репозиторий](https://github.com/Guria/bem-drawer-menu ) | [Полная версия ревью](
-https://github.com/bem-events/competition-with-loftblog/blob/master/review-6-tadatuta.md )
+https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-6-tadatuta.md )
 
 ![Превью компонента выезжающего двухуровневого меню в виде БЭМ-библиотеки](https://img-fotki.yandex.ru/get/15508/246231603.0/0_149892_c67c2f5b_orig.jpg "Превью компонента выезжающего двухуровневого меню в виде БЭМ-библиотеки")
 
@@ -125,7 +125,7 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-6-tad
 ### Верстка макета Velo Dashboard на базе заготовки БЭМ-проектов
 
 [Демо](http://gcor.ru/bem-psd/ ) | [Репозиторий](https://github.com/gcor/bem-testpage ) | [Полная версия ревью](
-https://github.com/bem-events/competition-with-loftblog/blob/master/review-7-belyanskii.md )
+https://github.com/bem-projects-competition-2015/competition-with-loftblog/blob/master/review-7-belyanskii.md )
 
 ![Превью верстки макета Velo Dashboard на базе заготовки БЭМ-проектов project-stub](https://img-fotki.yandex.ru/get/17911/246231603.0/0_149890_486c9591_orig.jpg "Превью верстки макета Velo Dashboard на базе заготовки БЭМ-проектов project-stub")
 
@@ -167,4 +167,4 @@ https://github.com/bem-events/competition-with-loftblog/blob/master/review-7-bel
 
 И конечно же, всем **Stay BEMed**!
 
-P.S. На всякий случай – в репозитории [bem-events](https://github.com/bem-events/competition-with-loftblog/) вы сможете найти список всех ревью и форки проектов.
+P.S. На всякий случай – в организации [bem-projects-competition-2015](https://github.com/bem-projects-competition-2015/competition-with-loftblog/) вы сможете найти список всех ревью и форки проектов.
