@@ -43,6 +43,28 @@
             "info": ""
         }
     },
+    "aristov-slava": {
+        "en": {
+            "firstName": "Slava",
+            "lastName": "Aristov",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/aristov-slava.jpg",
+            "github": "aristov",
+            "email": [],
+            "twitter": "aristov7",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Слава",
+            "lastName": "Аристов",
+            "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/aristov-slava.jpg",
+            "github": "aristov",
+            "email": [],
+            "twitter": "aristov7",
+            "skype": "",
+            "info": ""
+        }
+    },
     "bashinsky-pavel": {
         "en": {
             "firstName": "Pavel",
