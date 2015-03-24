@@ -1,4 +1,4 @@
-Оригина статьи опубликован в [блоге Яндекса](//habrahabr.ru/company/yandex/blog/251473/) на Хабрахабр.
+Оригинал статьи опубликован в [блоге Яндекса](//habrahabr.ru/company/yandex/blog/251473/) на Хабрахабр.
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/0-intro.jpg)
 
@@ -1136,7 +1136,7 @@ block('island').mod('type', 'twitter').content()(function() {
 
 В `this.ctx.data` лежат данные, которые мы передали в `BEMTREE.apply()`.
 
-Пересоберем проекта и снова откроем страницу [http://localhost:3000/search?query=%23b_&twitter=on](http://localhost:3000/search?query=%23b_&twitter=on). В браузере должен отображаться BEMJSON, сформированный с помощью BEMTREE.
+Пересоберем проект и снова откроем страницу [http://localhost:3000/search?query=%23b_&twitter=on](http://localhost:3000/search?query=%23b_&twitter=on). В браузере должен отображаться BEMJSON, сформированный с помощью BEMTREE.
 
 Осталось преобразовать BEMJSON в HTML с помощью `BEMHTML.apply()`. Для этого добавим в server.node.js следующий код:
 
@@ -1160,7 +1160,7 @@ BEMTREE.apply(dataEntries.map(function(dataEntry) {
 //…
 ```
 
-Если обновить нашу страницу в браузере, мы получим HTML, который и будем в дальнейшем использовать на клиенте — подгружать с помощью AJAX.
+Если заново пересобрать проект и обновить нашу страницу в браузере, мы получим HTML, который и будем в дальнейшем использовать на клиенте — подгружать с помощью AJAX.
 
 Если использовать ключ `json=on` — откроется содержимое BEMJSON-файла — [http://localhost:3000/search?query=%23b_&twitter=on&json=on](http://localhost:3000/search?query=%23b_&twitter=on&json=on).
 
@@ -1214,8 +1214,7 @@ block('form').js()(true);
 <div class="form i-bem" data-bem="{form: {p1: 'v1', p2 : 'v2'}}"></div>
 ```
 
-Класс `i-bem` говорит о том, что на этом узле DOM-дерева есть блок с js-представлением. А в дата-атрибуте `data-bem`
-передается объект, ключами которого являются имена блоков с js-представлением, а значениями — параметры, передаваемые этим блокам.
+Класс `i-bem` говорит о том, что на этом узле DOM-дерева есть блок с js-представлением. А в дата-атрибуте `data-bem` передается объект, ключами которого являются имена блоков с js-представлением, а значениями — параметры, передаваемые этим блокам.
 
 ### Пишем клиентский `js`
 
@@ -1408,7 +1407,7 @@ modules.define('sssr', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
         vertical-align: middle;
     }
 
-    &_loading .content
+    &_loading &__content
     {
         opacity: 0.5;
     }
@@ -1772,7 +1771,7 @@ provide(BEMDOM.decl(this.name, {
             inited: function() {
                 this._spin = this.findBlockInside('spin');
                 this._form = this.findBlockInside('form')
-                    .on('submit', this._doRequest, this);
+                    .on('submit change', this._doRequest, this);
                 this._debounceRequest = debounce(this._sendRequest, 500, this);
             }
         },
