@@ -28,8 +28,8 @@
 
 Ниже презентации докладов от наших коллег:
 
-<div class="slideshow"><iframe src="http://www.slideshare.net/slideshow/embed_code/38824836" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+<div class="slideshow"><iframe src="https://www.slideshare.net/slideshow/embed_code/38824836" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
 
-<div class="slideshow"><iframe src="http://www.slideshare.net/slideshow/embed_code/38824845" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+<div class="slideshow"><iframe src="https://www.slideshare.net/slideshow/embed_code/38824845" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
 
 Stay BEMed!

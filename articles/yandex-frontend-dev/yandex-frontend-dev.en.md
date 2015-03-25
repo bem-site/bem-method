@@ -283,7 +283,7 @@ use classes.
 
 The next that can happen with a block is its movement within a page.
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/suLQEIcc68g"
+<iframe width="560" height="315" src="https://www.youtube.com/embed/suLQEIcc68g"
 frameborder="0" allowfullscreen></iframe>
 
 As you can see in the video, the `Tabbed Pane` block was moved to he right side
@@ -1141,7 +1141,7 @@ changes, you can fix `BEM tree`, run transformation process again and get update
 files.
 
 These transformations are possible with a toolkit called [BEM
-tools](http://bem.info/tools/bem/). It's open sourced and hosted on GitHub,
+tools](https://en.bem.info/tools/bem/). It's open sourced and hosted on GitHub,
 where you can find its installing instructions and a full description.
 
 It already supports many fashionable technologies you might want to use, such as
@@ -1248,7 +1248,7 @@ to build a new Yandex-style web service much faster than from the scratch and
 making maintaining process easier.
 
 When we started to open source our magic stuff, a small part of the internal
-library was turned into [bem-bl](http://bem.github.com/bem-bl/index.en.html).<br/>
+library was turned into [bem-bl](https://bem.github.com/bem-bl/index.en.html).<br/>
 `bem-bl` stands for `BEM block library` and provides some common blocks for
 building web interfaces.
 
