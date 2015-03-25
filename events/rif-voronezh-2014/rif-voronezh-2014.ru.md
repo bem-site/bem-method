@@ -1,6 +1,6 @@
 #БЭМ на конференции РИФ-Воронеж 2014
 
-<img src="http://www.rifvrn.ru/img/rif_logo.png" alt="RIF Voronezh" style="float:right;padding:0 0 20px 20px;width:200px;height:auto;">
+<img src="https://img-fotki.yandex.ru/get/3607/246231603.0/0_14ae54_3b59c928_orig.png" alt="RIF Voronezh" style="float:right;padding:0 0 20px 20px;width:200px;height:auto;">
 
 **Когда**: 3 октября 2014 года в 14:00 в секции «Клиентское программирование и верстка»
 

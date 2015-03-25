@@ -1,6 +1,6 @@
 #БЭМ на конференции РИФ-Воронеж 2014
 
-<img src="https://raw.githubusercontent.com/bem/bem-method/bem-info-data/video/rif-voronezh-2014/rif_logo.png" alt="RIF Voronezh" style="float:right;padding:0 0 20px 20px;width:200px;height:auto;">
+<img src="https://img-fotki.yandex.ru/get/3607/246231603.0/0_14ae54_3b59c928_orig.png" alt="RIF Voronezh" style="float:right;padding:0 0 20px 20px;width:200px;height:auto;">
 
 **3 октября 2014 года** на конференции [РИФ-Воронеж](http://www.rifvrn.ru/program#) в секции «Клиентское программирование и верстка» Владимир Гриненко и Елена Джетпыспаева из Яндекса и Иван Воищев из студии «Мануфактура» рассказали о том, зачем БЭМу опенсорс и как он прошел **путь от методологии до full stack платформы**, а также **как разработчики воронежском студии «Мануфактура» жили до БЭМа и к чему пришли с ним**.
 
