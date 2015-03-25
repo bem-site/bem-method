@@ -73,7 +73,7 @@ Create a new page to start your own project.
 A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structure in BEM terms: blocks, elements and modifiers.
 
 1. Add a description of the `hello` block in the `desktop.bundles/hello/hello.bemjson.js` file. <br>
-  **hello** block is an entity that will contain all necessary elements for the project.
+  `hello` block is an entity that will contain all necessary elements for the project.
 
     ```js
     {
@@ -92,7 +92,7 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
     }
     ```
 
-2. Place the `greeting` element with the greeting text (**content** field) into the `hello` block.
+2. Place the `greeting` element with the greeting text (`content` field) into the `hello` block.
 
     ```js
     content : [
@@ -108,7 +108,7 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
     ]
     ```
 
-3. To create an input field and a button, use `input` and `button` blocks from the `bem-components` library. Add these blocks to the `greeting` element.
+3. To create an input field and a button, use `input` and `button` blocks from the `bem-components` library. Add these blocks to the `hello` block`.
 
     ```js
     content : [
