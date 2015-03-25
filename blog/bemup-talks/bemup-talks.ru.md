@@ -37,7 +37,7 @@ _С 2011 года в Яндексе. Занималась развитием п�
 
 **БЭМ–сообщество**
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/clg24o8tu3.7046/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/clg24o8tu3.7046/"></iframe>
 
 #### **Василий Чернов, Softline**
 
@@ -51,7 +51,7 @@ _В докладе я расскажу о том, как в Softline пришл�
 расскажем о своих планах. Поговорим о возникавших проблемах, интересных решениях, об особенностях построения процессов в нашей компании. Я покажу, как мы используем bem-tools,
 как пишем CSS по БЭМ-методу, а также разберу несколько примеров исходного кода XML и CSS._
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/5d5hqas0ke.7738/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/5d5hqas0ke.7738/"></iframe>
 
 #### **Владимир Довыденко, ТКС-банк**
 
@@ -64,7 +64,7 @@ _Небольшой рассказ о том, чего стоят и как да
 том, как в «Тинькофф» выбирали между SMACSS и БЭМ, с какими проблемами мы столкнулись при «быстрой разработке» фронтенда
 и как их решали. Покажем также этапы внедрения и немного расскажем о планах._
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/duvj77zefw.4901/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/duvj77zefw.4901/"></iframe>
 
 #### **Владимир Гриненко, Яндекс**
 
@@ -74,7 +74,7 @@ _Разработчик интерфейсов в симферопольском
 
 **bem-tools: новости в проекте**
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/7j227eb4zn.7421/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/7j227eb4zn.7421/"></iframe>
 
 #### **Сергей Бережной, Яндекс**
 
@@ -84,7 +84,7 @@ _С 2005 года работает в Яндексе веб-разработчи
 
 **bem-core, bem-bl: новости и планы**
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/aqkp3cyp9n.7311/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/aqkp3cyp9n.7311/"></iframe>
 
 #### **Сергей Максимов, Яндекс**
 
@@ -93,7 +93,7 @@ _Руководитель группы интерфейсов Справочни
 
 **Приложение Todo MVC с помощью bem-mvc**
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/twbx6fn68b.2120/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/twbx6fn68b.2120/"></iframe>
 
 #### **Михаил Трошев, Яндекс**
 
@@ -101,19 +101,19 @@ _Первую программу написал в первом классе. Р
 
 **БЭМ в Островах**
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/9d5vhty7ef.2118/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/9d5vhty7ef.2118/"></iframe>
 
 #### **Сергей Бережной, Яндекс**
 
 **Контрибьютинг, пул-реквесты, флоу, тестирование и задачи**
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/4yztrka7n2.7304/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/4yztrka7n2.7304/"></iframe>
 
 #### **Секция вопросов и ответов после BEMup**
 
 Отвечают Владимир Гриненко, Михаил Трошев, Сергей Бережной и Сергей Максимов, Яндекс
 
-<iframe width="450" height="254" frameborder="0" src="http://video.yandex.ru/iframe/ya-events/el33khwu48.2216/"></iframe>
+<iframe width="450" height="254" frameborder="0" src="https://video.yandex.ru/iframe/ya-events/el33khwu48.2216/"></iframe>
 
 В митапе приняли участие **более 50 фронтенд-разработчиков** и руководителей из IT-компаний и веб-студий Москвы,
 Екатеринбурга, Оренбурга, Иваново, Серпухова, Обнинска, Волгограда.
@@ -137,7 +137,7 @@ _Первую программу написал в первом классе. Р
 
 Проект на сайте [event.yandex.ru](https://events.yandex.ru/events/bemup/2-august-2013/).
 
-[Фотоотчет](http://fotki.yandex.ru/users/ya-events/album/145885/?&p=1) с мероприятия.
+[Фотоотчет](https://fotki.yandex.ru/users/ya-events/album/145885/?&p=1) с мероприятия.
 
 Следите за новостями на [Facebook](http://bit.ly/fb-bem), в [Твиттере](http://bit.ly/ru-twi), [клубе на Я.Ру](http://bit.ly/ru-club)
 и сайте [bem.info](https://ru.bem.info/).

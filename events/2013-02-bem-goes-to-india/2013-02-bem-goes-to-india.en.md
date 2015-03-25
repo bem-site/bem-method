@@ -14,6 +14,6 @@ While preparing for the conference we publish material that might be interesting
 
 Video preview that we were asked to make while preparing to Meta Refresh 2013.
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/nrn1fH69PGk" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nrn1fH69PGk" frameborder="0" allowfullscreen></iframe>
 
-Varya Stepanova is a front-end engineer working for Yandex in Moscow since 2008. She is the Lead Developer of the UI Framework Team which provides HTML, CSS and Javascript components used to build over 100 different Yandex services. She participates in the BEM project (http://bem.info) which is open-sourcing technologies behind Yandex UI framework. When she is not coding, she is interested in travel and new cities. She dreams of visiting every country in the world.
+Varya Stepanova is a front-end engineer working for Yandex in Moscow since 2008. She is the Lead Developer of the UI Framework Team which provides HTML, CSS and Javascript components used to build over 100 different Yandex services. She participates in the BEM project (https://en.bem.info) which is open-sourcing technologies behind Yandex UI framework. When she is not coding, she is interested in travel and new cities. She dreams of visiting every country in the world.
