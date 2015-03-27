@@ -11,7 +11,7 @@ cd shopsList
 npm install
 ````
 
-Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
+Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to `http://localhost:8080/desktop.bundles/index/index.html`. You’ll see something like this:
 
 <img src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ffe_3ea40a10_orig" alt="Defaut page with dummy values for title, header/main/footer content" border="0"/>
 

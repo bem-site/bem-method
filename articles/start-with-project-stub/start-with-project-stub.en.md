@@ -67,7 +67,7 @@ As a result, the following message appears:
 
 `Server started at 0.0.0.0:8080`
 
-This means that the server mode is up and running. From this point on a solicited part of your project will be rebuilt automatically every time you reload a web page. The result is available on [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+This means that the server mode is up and running. From this point on a solicited part of your project will be rebuilt automatically every time you reload a web page. The result is available on `http://localhost:8080/desktop.bundles/index/index.html`.
 
 Instead of `ENB` you may use `bem-tools` project builder. The result files are the same in both cases, though `ENB` is more rapid and flexible. Configuration files for `bem-tools` are located in `.bem` directory.
 
@@ -146,7 +146,7 @@ First of all the two main parts of our web page will be defined: a *head* and it
 ## Changing pages
 
 You have just one page in your project to begin with: `index.html`.
-Try and open it in your browser: [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+Try and open it in your browser: `http://localhost:8080/desktop.bundles/index/index.html`.
 
 The `index.html` is a demo page that shows blocks variety of the `bem-components` library linked to the project-stub.
 
