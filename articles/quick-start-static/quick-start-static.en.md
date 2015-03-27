@@ -76,7 +76,7 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
   `hello` block is an entity that will contain all necessary elements for the project.
 
     ```js
-    {
+    ({
         block : 'page',
         title : 'hello',
         head : [
@@ -89,7 +89,7 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
                 block : 'hello'
             }
         ]
-    }
+    })
     ```
 
 2. Place the `greeting` element with the greeting text (`content` field) into the `hello` block.
