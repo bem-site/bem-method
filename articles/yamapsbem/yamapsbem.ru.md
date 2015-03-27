@@ -11,7 +11,7 @@ cd shopsList
 npm install
 ````
 
-Теперь проект у нас на компьютере. Давайте протестируем, все ли работает. Для этого нужно перейти в папку, запустить make, подождать пока проект соберется и открыть в браузере страницу: [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html)
+Теперь проект у нас на компьютере. Давайте протестируем, все ли работает. Для этого нужно перейти в папку, запустить make, подождать пока проект соберется и открыть в браузере страницу: `http://localhost:8080/desktop.bundles/index/index.html`.
 Перед глазами должно быть что-то вроде:
 
 <img src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ffe_3ea40a10_orig" alt="Скомпилированная страница BEM project stub" border="0"/>

@@ -37,7 +37,7 @@ A [template repository](https://github.com/bem/project-stub) is the quickest and
     npm start
     ```
 
-3.  Check the result on [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+3.  Check the result on `http://localhost:8080/desktop.bundles/index/index.html`.
 
     A page with library blocks examples should open:
 
@@ -136,7 +136,7 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
     ```
 [Code sample](https://gist.github.com/innabelaya/08405997f823d842e9e2) hello.bemjson.js.
 
-To verify that the page shows all necessary objects, open [http://localhost:8080/desktop.bundles/hello/hello.html](http://localhost:8080/desktop.bundles/hello/hello.html).
+To verify that the page shows all necessary objects, open `http://localhost:8080/desktop.bundles/hello/hello.html`.
 
 You can make additional changes to existing blocks on your [redefinition level](https://bem.info/tools/bem/bem-tools/levels/).
 

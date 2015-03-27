@@ -37,7 +37,7 @@
     npm start
     ```
 
-3.  Проверьте результат по ссылке [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+3.  Проверьте результат по ссылке `http://localhost:8080/desktop.bundles/index/index.html`.
 
     Должна открыться страница с примерами блоков библиотеки:
 
@@ -137,7 +137,7 @@
 
 [Полный код](https://gist.github.com/innabelaya/837a96299de6fd488223) BEMJSON-файла.
 
-Чтобы убедиться, что страница отображает все необходимые объекты, откройте [http://localhost:8080/desktop.bundles/hello/hello.html](http://localhost:8080/desktop.bundles/hello/hello.html).
+Чтобы убедиться, что страница отображает все необходимые объекты, откройте `http://localhost:8080/desktop.bundles/hello/hello.html`.
 
 Если вы хотите внести какие-либо изменения в существующие блоки, это можно сделать на своем [уровне переопределения](https://ru.bem.info/tools/bem/bem-tools/levels/).
 

@@ -145,7 +145,7 @@ Cоберём сгенерированный проект и посмотрим,
 > enb server
 ```
 
-Теперь страницу можно открыть по адресу: [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+Теперь страницу можно открыть по адресу: `http://localhost:8080/desktop.bundles/index/index.html`.
 Наш сборщик соберёт все необходимые зависимости, а по ним соберёт файлы нужных блоков и технологий.
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/2-sssr-hello-world.png)
@@ -1032,7 +1032,7 @@ app.get('/search', function(req, res) {
 > enb make && node ./desktop.bundles/index/index.node.js
 ```
 
-По адресу [http://localhost:3000/search?query=%23b_&twitter=on](http://localhost:3000/search?query=%23b_&twitter=on) откроется
+По адресу `http://localhost:3000/search?query=%23b_&twitter=on` откроется
 страница с JSON-объектом данных, которые отдает блок `service_type_twitter`.
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/6-sssr-server-json.png)
@@ -1136,7 +1136,7 @@ block('island').mod('type', 'twitter').content()(function() {
 
 В `this.ctx.data` лежат данные, которые мы передали в `BEMTREE.apply()`.
 
-Пересоберем проект и снова откроем страницу [http://localhost:3000/search?query=%23b_&twitter=on](http://localhost:3000/search?query=%23b_&twitter=on). В браузере должен отображаться BEMJSON, сформированный с помощью BEMTREE.
+Пересоберем проект и снова откроем страницу `http://localhost:3000/search?query=%23b_&twitter=on`. В браузере должен отображаться BEMJSON, сформированный с помощью BEMTREE.
 
 Осталось преобразовать BEMJSON в HTML с помощью `BEMHTML.apply()`. Для этого добавим в server.node.js следующий код:
 
@@ -1162,7 +1162,7 @@ BEMTREE.apply(dataEntries.map(function(dataEntry) {
 
 Если заново пересобрать проект и обновить нашу страницу в браузере, мы получим HTML, который и будем в дальнейшем использовать на клиенте — подгружать с помощью AJAX.
 
-Если использовать ключ `json=on` — откроется содержимое BEMJSON-файла — [http://localhost:3000/search?query=%23b_&twitter=on&json=on](http://localhost:3000/search?query=%23b_&twitter=on&json=on).
+Если использовать ключ `json=on` — откроется содержимое BEMJSON-файла — `http://localhost:3000/search?query=%23b_&twitter=on&json=on`.
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/7-sssr-server-html.png)
 
@@ -1306,7 +1306,7 @@ block('sssr').js()(true);
 $ enb make && node ./desktop.bundles/index/index.node.js
 ```
 
-Теперь мы можем протестировать его работу. Для этого перейдем на страницу [localhost:3000](http://localhost:3000/), введем что-нибудь в поле ввода, отметим нужные чекбоксы и попробуем отправить форму. Если все сделано верно, то под шапкой мы увидим результаты поиска по заданному запросу.
+Теперь мы можем протестировать его работу. Для этого перейдем на страницу `http://localhost:3000/`, введем что-нибудь в поле ввода, отметим нужные чекбоксы и попробуем отправить форму. Если все сделано верно, то под шапкой мы увидим результаты поиска по заданному запросу.
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/8-sssr-server-ajax-no-static.png)
 
@@ -1414,7 +1414,7 @@ modules.define('sssr', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
 }
 ```
 
-Протестируем наше приложение: [localhost:3000](http://localhost:3000/). Во время отправки запроса и загрузки данных
+Протестируем наше приложение: `http://localhost:3000/`. Во время отправки запроса и загрузки данных
 должен показываться блок `spin`, а содержимое страницы — затеняться.
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/10-sssr-server-spinner-mod.png)
