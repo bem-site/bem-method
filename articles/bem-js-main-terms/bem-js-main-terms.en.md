@@ -1,6 +1,6 @@
 # JavaScript for BEM. The main terms
 
-Stack of BEM technologies contains an [i-bem](http://bem.info/technology/i-bem/2.3.0/i-bem-js/) block of the [bem-core](https://bem.info/libs/bem-core/current/) library.
+Stack of BEM technologies contains an `i-bem` block of the [bem-core](https://en.bem.info/libs/bem-core) library.
 
 The JavaScript implementation of this block uses BEM data domain. The use of the `i-bem` block allows one to manipulate the client-side JavaScript/DOM in *BEM-style* according to *BEM-Principles*, not only in the design of visible components, but also their behavior.
 
@@ -14,7 +14,7 @@ That was the evolution of JavaScript frameworks.
 
 The same thing happened to BEM.  Initially, we understood that we wanted to have `blocks`, which were `Interface Modules`, their elements and modifiers implemented only in CSS.  Later the JavaScript developers wanted to work using a similar structure. They also wanted to include the key-concept of `levels` which allows one to build upon and improve the behavior of the blocks from project to project.
 
-So, the [i-bem](https://bem.info/technology/i-bem/current/i-bem-js/) helper-block was implemented in JavaScript. `i-bem.js` is the core framework for writing JavaScript in BEM terms.
+So, the i-bem` helper-block was implemented in JavaScript. `i-bem.js` is the core framework for writing JavaScript in BEM terms.
 
 ## Connection with HTML code
 As all JavaScript components, code for `i-bem.js` has to be matched for some HTML, eventually intended to be the functional code behind some part of an interface. In order to use `i-bem`, you have to add the `i-bem` CSS class and define the `onclick` field to contain the parameters of the block.
@@ -29,8 +29,6 @@ As all JavaScript components, code for `i-bem.js` has to be matched for some HTM
 
 </div>
 ```
-
-To get information why we use `onclick` attribute, see Sergey Berezhnoy's talk (Russian only) [Different ways of creating components for the client-side](http://events.yandex-team.ru/events/yasubbotnik/msk-jul-2012/talks/302/) presented at [Ya.Subbotnik (Yandex Developer Day)](http://events.yandex-team.ru/events/yasubbotnik/), July, 2012.
 
 Usually, the blocks initialization starts at the `domReady` event. Due to the ability to read the `onclick` attribute and receive a native JavaScript object we do not need any `id` components or parse CSS classes. All blocks marked with `i-bem` CSS class will be transformed according to their parameter components.
 
@@ -248,7 +246,5 @@ onSetMod : {
 ```
 
 `i-bem` makes possible the lazy initialization for the blocks, and creation of blocks without DOM representation.
-
-For more information see [the `i-bem` block page ](https://bem.info/technology/i-bem/current/i-bem-js/).
 
 This article is based on [Vladimir Varankin's](https://github.com/narqo) talk [BEM and JavaScript: Why Did We Created a JS-framework?](https://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow, September 8, 2012.
