@@ -20,13 +20,8 @@ So, the `i-bem` helper-block was implemented in JavaScript. `i-bem.js` is the co
 As all JavaScript components, code for `i-bem.js` has to be matched for some HTML, eventually intended to be the functional code behind some part of an interface. In order to use `i-bem`, you have to add the `i-bem` CSS class and define the `data-bem` field to contain the parameters of the block.
 
 ```js
-<div
-    class="myblock i-bem"
-    data-bem="return {
-        myblock: { }}">
-
+<div lass="myblock i-bem" data-bem="{ myblock: { }}">
     <span class="myblock__item"></span>
-
 </div>
 ```
 
