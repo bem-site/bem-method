@@ -29,13 +29,8 @@
 CSS-класс `i-bem` и указать в атрибуте `data-bem` параметры блока.
 
 ```js
-<div
-    class="myblock i-bem"
-    data-bem="return {
-        myblock: { }}">
-
+<div lass="myblock i-bem" data-bem="{ myblock: { }}">
     <span class="myblock__item"></span>
-
 </div>
 ```
 
