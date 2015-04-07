@@ -56,6 +56,15 @@
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
+## sublime-bemjson-snippets
+
+Набор сниппетов для быстрого набора BEMJSON в редакторе Sublime (v2, v3).
+[Установка](https://github.com/1vank1n/sublime-bemjson-snippets#install) возможна как вручную, так и через Package Control.
+
+Репозиторий проекта на [GitHub](https://github.com/1vank1n/sublime-bemjson-snippets)
+
+Автор проекта — Иван Лукьянец, [gh: 1vank1n](https://github.com/1vank1n), [@1vank1n](https://twitter.com/1vank1n), [lukyanets.ivan@gmail.com](mailto:lukyanets.ivan@gmail.com).
+
 ## bem-social
 
 Библиотека блоков социальных виджетов для сайтов, использующих БЭМ-стек технологий. Share, Like, Follow, Yandex.Share API и другие. Содержит SVG-иконки социальных сетей и несколько тем оформления. Библиотека использует некоторые блоки библиотеки [bem-components](https://ru.bem.info/libs/bem-components/).
