@@ -32,6 +32,14 @@
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
+## bemy
+
+Приложение на Node.js для манипуляций с БЭМ-структурой. Позволяет создавать и переименовывать БЭМ-сущности в файловой системе (аналог команды `bem create`). Умеет создавать файловую структуру блока по `deps.js`-файлам сборщика [ENB](http://enb-make.info). Интегрируется посредством командной строки в Webstorm, Sublime и другие редакторы.
+
+Репозиторий проекта на [GitHub](https://github.com/f0rmat1k/bemy).
+
+Автор проекта — Антон Грищенко, [gh: f0rmat1k](https://github.com/f0rmat1k), [f0rmateg@yandex.ru](mailto:f0rmateg@yandex.ru).
+
 ## generator-bem-ng
 
 Необыкновенный генератор БЭМ-проектов, использующих AngularJS. С ним вы сможете создать базовую структуру БЭМ-проекта и модули AngularJS приложения. Генератор использует непривычную, на первый взгляд, парадигму модулей, но очень удобную и правильную для тех, кто знаком с БЭМ.
