@@ -84,4 +84,16 @@
 
 Автор проекта — Александр Баумгертнер, [gh: alexbaumgertner](https://github.com/alexbaumgertner), [@alexbaumgertner](https://twitter.com/alexbaumgertner), [alexbaumgertner@yandex.ru](mailto:alexbaumgertner@yandex.ru).
 
+## bem-site-engine
+
+Заготовка проекта с использованием технологий `bem-core@v2*`. Проект предназначен для простого запуска сайта с набором статей. 
+
+В проекте используются блоки из библиотеки [bem-components](https://ru.bem.info/libs/bem-components/). Более подробно про проект рассказывается в [докладе](https://events.yandex.ru/lib/talks/2191/) на BEMup'е в Санкт-Петербурге.
+
+На данный момент ветка dev стабилизирована и заморожена для разработки. Баги принимаем в [issues](https://github.com/bem/bem-site-engine/issues) проекта на GitHub.
+
+Репозиторий проекта на [GitHub](https://github.com/bem/bem-site-engine).
+
+Автор проекта –  Андрей Кузнецов, [gh: tormozz48](https://github.com/tormozz48), [@kuznetsov48](https://twitter.com/@kuznetsov48), [andrey.kuznetsov48@yandex.ua](mailto:andrey.kuznetsov48@yandex.ua).
+
 **Присоединяйтесь и вы!**
