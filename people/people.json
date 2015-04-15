@@ -27,7 +27,7 @@
             "lastName": "Androsov",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/androsov-alexey.png",
             "github": "doochik",
-            "email": [],
+            "email": ["doochik@ya.ru"],
             "twitter": "doochik",
             "skype": "",
             "info": ""
@@ -37,7 +37,7 @@
             "lastName": "Андросов",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/androsov-alexey.png",
             "github": "doochik",
-            "email": [],
+            "email": ["doochik@ya.ru"],
             "twitter": "doochik",
             "skype": "",
             "info": ""
@@ -49,7 +49,7 @@
             "lastName": "Aristov",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/aristov-slava.jpg",
             "github": "aristov",
-            "email": [],
+            "email": ["einstain@yandex-team.ru"],
             "twitter": "aristov7",
             "skype": "",
             "info": ""
@@ -59,7 +59,7 @@
             "lastName": "Аристов",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/aristov-slava.jpg",
             "github": "aristov",
-            "email": [],
+            "email": ["einstain@yandex-team.ru"],
             "twitter": "aristov7",
             "skype": "",
             "info": ""
@@ -93,7 +93,7 @@
             "lastName": "Belyanskii",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belyanskii-alexandr.jpg",
             "github": "belyanskii",
-            "email": [],
+            "email": ["belyanskii@ya.ru"],
             "twitter": "belyanskii",
             "skype": "",
             "info": ""
@@ -103,7 +103,7 @@
             "lastName": "Белянский",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/belyanskii-alexandr.jpg",
             "github": "belyanskii",
-            "email": [],
+            "email": ["belyanskii@ya.ru"],
             "twitter": "belyanskii",
             "skype": "",
             "info": ""
@@ -203,7 +203,7 @@
             "lastName": "Berezhnoy",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/berezhnoy-sergey.jpg",
             "github": "veged",
-            "email": [],
+            "email": ["veged@ya.ru"],
             "twitter": "veged",
             "skype": "",
             "info": "http://veged.ru"
@@ -213,7 +213,7 @@
             "lastName": "Бережной",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/berezhnoy-sergey.jpg",
             "github": "veged",
-            "email": [],
+            "email": ["veged@ya.ru"],
             "twitter": "veged",
             "skype": "",
             "info": "http://veged.ru"
@@ -269,7 +269,7 @@
             "lastName": "Grinenko",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/grinenko-vladimir.png",
             "github": "tadatuta",
-            "email": [],
+            "email": ["i@tadatuta.com"],
             "twitter": "tadatuta",
             "skype": "",
             "info": ""
@@ -279,7 +279,7 @@
             "lastName": "Гриненко",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/grinenko-vladimir.png",
             "github": "tadatuta",
-            "email": [],
+            "email": ["i@tadatuta.com"],
             "twitter": "tadatuta",
             "skype": "",
             "info": ""
@@ -335,7 +335,7 @@
             "lastName": "Konstantinov",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinov-eugeny.png",
             "github": "sipayRT",
-            "email": [],
+            "email": ["sipayrt@yandex-team.ru"],
             "twitter": "sipayRT",
             "skype": "",
             "info": ""
@@ -345,7 +345,7 @@
             "lastName": "Константинов",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinov-eugeny.png",
             "github": "sipayRT",
-            "email": [],
+            "email": ["sipayrt@yandex-team.ru"],
             "twitter": "sipayRT",
             "skype": "",
             "info": ""
@@ -357,7 +357,7 @@
             "lastName": "Kuznetsov",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kuznetsov-andrey.jpg",
             "github": "tormozz48",
-            "email": [],
+            "email": ["tormozz48@gmail.com"],
             "twitter": "kuznetsov48",
             "skype": "",
             "info": ""
@@ -367,7 +367,7 @@
             "lastName": "Кузнецов",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/kuznetsov-andrey.jpg",
             "github": "tormozz48",
-            "email": [],
+            "email": ["tormozz48@gmail.com"],
             "twitter": "kuznetsov48",
             "skype": "",
             "info": "Работает в группе разработки БЭМ в симферопольском офисе Яндекса с 2013 года. Разрабатывает серверную часть приложений на БЭМ с использованием node.js. Выпускник кафедры теоретической физики Таврического национального университета им. В.И. Вернадского, кандидат физико-математических наук."
@@ -379,7 +379,7 @@
             "lastName": "Hananein",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/hananein-denis.png",
             "github": "zloylos",
-            "email": [],
+            "email": ["i@zloylos.me"],
             "twitter": "kandasoft",
             "skype": "",
             "info": ""
@@ -389,7 +389,7 @@
             "lastName": "Хананеин",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/hananein-denis.png",
             "github": "zloylos",
-            "email": [],
+            "email": ["i@zloylos.me"],
             "twitter": "kandasoft",
             "skype": "",
             "info": ""
@@ -401,7 +401,7 @@
             "lastName": "Harisov",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/harisov-vitaly.png",
             "github": "vithar",
-            "email": [],
+            "email": ["vitaly@harisov.name"],
             "twitter": "harisov",
             "skype": "vitaly.harisov",
             "info": ""
@@ -411,7 +411,7 @@
             "lastName": "Харисов",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/harisov-vitaly.png",
             "github": "vithar",
-            "email": [],
+            "email": ["vitaly@harisov.name"],
             "twitter": "harisov",
             "skype": "",
             "info": ""
@@ -501,7 +501,7 @@
             "lastName": "Konstantinova",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinova-gela.jpg",
             "github": "gela-d",
-            "email": [],
+            "email": ["gela-d@yandex-team.ru"],
             "twitter": "gela_dd",
             "skype": "",
             "info": ""
@@ -511,7 +511,7 @@
             "lastName": "Константинова",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/konstantinova-gela.jpg",
             "github": "gela-d",
-            "email": [],
+            "email": ["gela-d@yandex-team.ru"],
             "twitter": "gela_dd",
             "skype": "",
             "info": ""
@@ -523,7 +523,7 @@
             "lastName": "Jetpyspayeva",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/jetpyspayeva-yelena.png",
             "github": "mursya",
-            "email": [],
+            "email": ["mursya@gmail.com"],
             "twitter": "mursya",
             "skype": "",
             "info": ""
@@ -533,7 +533,7 @@
             "lastName": "Джетпыспаева",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/jetpyspayeva-yelena.png",
             "github": "mursya",
-            "email": [],
+            "email": ["mursya@gmail.com"],
             "twitter": "mursya_ru",
             "skype": "",
             "info": ""
@@ -633,7 +633,7 @@
             "lastName": "Maslinsky",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/maslinsky-kirill.png",
             "github": "maslinych",
-            "email": [],
+            "email": ["maslinsky@yandex-team.ru"],
             "twitter": "maslinych",
             "skype": "",
             "info": ""
@@ -643,7 +643,7 @@
             "lastName": "Маслинский",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/maslinsky-kirill.png",
             "github": "maslinych",
-            "email": [],
+            "email": ["maslinsky@yandex-team.ru"],
             "twitter": "maslinych",
             "skype": "",
             "info": ""
@@ -721,7 +721,7 @@
             "lastName": "Abramov",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/abramov-andrey.jpg",
             "github": "andrewblond",
-            "email": [],
+            "email": ["andrewblond@yandex.com"],
             "twitter": "blond_ru",
             "skype": "",
             "info": ""
@@ -731,7 +731,7 @@
             "lastName": "Абрамов",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/abramov-andrey.jpg",
             "github": "andrewblond",
-            "email": [],
+            "email": ["andrewblond@yandex.com"],
             "twitter": "blond_ru",
             "skype": "",
             "info": ""
@@ -765,7 +765,7 @@
             "lastName": "Troshev",
             "avatar": "https://avatars2.githubusercontent.com/u/521273?v=2&s=400",
             "github": "mishanga",
-            "email": [],
+            "email": ["mishanga@yandex-team.ru"],
             "twitter": "ya_mishanga",
             "skype": "",
             "info": ""
@@ -775,7 +775,7 @@
             "lastName": "Трошев",
             "avatar": "https://avatars2.githubusercontent.com/u/521273?v=2&s=400",
             "github": "mishanga",
-            "email": [],
+            "email": ["mishanga@yandex-team.ru"],
             "twitter": "ya_mishanga",
             "skype": "",
             "info": ""
@@ -853,7 +853,7 @@
             "lastName": "Tatarincev",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/tatarincev-sergej.png",
             "github": "SevInf",
-            "email": [],
+            "email": ["tatarincev.serg@yandex.ua"],
             "twitter": "SevInf",
             "skype": "",
             "info": ""
@@ -863,7 +863,7 @@
             "lastName": "Татаринцев",
             "avatar": "https://raw.github.com/bem/bem-method/bem-info-data/people/avatars/tatarincev-sergej.png",
             "github": "SevInf",
-            "email": [],
+            "email": ["tatarincev.serg@yandex.ua"],
             "twitter": "SevInf",
             "skype": "",
             "info": ""
