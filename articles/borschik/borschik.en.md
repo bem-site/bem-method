@@ -309,7 +309,7 @@ new Image().src = borschik.link('i/bg/main.png')
 
 Then run the command
 ```
-borschik --tech=js-link --freeze=yes --input=1.js
+borschik --tech=js --freeze=yes --input=1.js
 ```
 
 And get the result
