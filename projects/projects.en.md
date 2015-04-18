@@ -1,6 +1,6 @@
 # Built with BEM
 
-We have gathered here useful and interesting projects built with BEM. 
+We have gathered here useful and interesting projects built with BEM.
 
 If your projects are not yet included here, email us at [info@bem.info](mailto:info@bem.info).
 
@@ -8,10 +8,10 @@ If your projects are not yet included here, email us at [info@bem.info](mailto:i
 
 A small project based on project-stub and built using bem-core and bem-history libraries. Contains of a set of English words with translations that are shown as tipping cards. Has an option to change its dictionary for any other dictionary or for a set of random phrases.
 
-To prepare a dictionary from an XLS-file use [ruby-script](https://gist.github.com/ololobus/11f222d1fc48f2efef56). 
+To prepare a dictionary from an XLS-file use [ruby-script](https://gist.github.com/ololobus/11f222d1fc48f2efef56).
 Input XLS-file shall contain three columns (A, B, C): a word, its transcript and its translation.
 
-Project is ready to use. Fork, change and fill the dictionary up. 
+Project is ready to use. Fork, change and fill the dictionary up.
 
 Project repository on [GitHub](https://github.com/ololobus/bem-flashcards/), [demonstration](http://ololobus.github.io/bem-flashcards).
 
@@ -44,7 +44,7 @@ Authored by Anton Grischenko, [gh: f0rmat1k](https://github.com/f0rmat1k), [f0rm
 
 ## generator-bem-ng
 
-An unusual generator of BEM projects that use AngularJS. Using it you can easily create a basic structure of a BEM project and 
+An unusual generator of BEM projects that use AngularJS. Using it you can easily create a basic structure of a BEM project and
 modules of an AngularJS application. Generator uses a module paradigm that may appear rather unconventional, but that is in fact very convenient and appropriate if you're familiar with BEM.
 
 Project repository on [GitHub](https://github.com/verybigman/generator-bem-ng).
@@ -77,8 +77,8 @@ Authored by Ivan Voischev, [gh: voischev](https://github.com/voischev), [@voisch
 
 ## bnsf
 
-A framework to create one-page application according to BEM methodology. Allows easy reuse of the same code, especially 
-templates and routing, on both the client side and server side. Search engine friendly. Depends on [bem-core](https://ru.bem.info/libs/bem-core) library, 
+A framework to create one-page application according to BEM methodology. Allows easy reuse of the same code, especially
+templates and routing, on both the client side and server side. Search engine friendly. Depends on [bem-core](https://ru.bem.info/libs/bem-core) library,
 for templating uses `BEMHTML` and `BEMTREE`, building with `bem-tools`.
 
 Project repository on [GitHub](https://github.com/apsavin/bnsf)
@@ -89,12 +89,24 @@ Authored by Alexander Savin, [gh: apsavin](https://github.com/apsavin), [@apsavi
 
 A project-stub based on [Sails](http://sailsjs.org) nodejs MVC framework.
 
-Frontend part of the project-stub is built using full stack of BEM technologies including BEMTREE, BEMHTML, i-bem.js, bem-core and bem-components libraries. BEM-blocks of the interface are located within the views folder. 
+Frontend part of the project-stub is built using full stack of BEM technologies including BEMTREE, BEMHTML, i-bem.js, bem-core and bem-components libraries. BEM-blocks of the interface are located within the views folder.
 
 The project is configured to work with mongoDB, however allows an option to use any database.
 
 Project repository on [GitHub](https://github.com/alexbaumgertner/sails-bem-project-stub).
 
 Authored by Alexander Baumgertner, [gh: alexbaumgertner](https://github.com/alexbaumgertner), [@alexbaumgertner](https://twitter.com/alexbaumgertner), [alexbaumgertner@yandex.ru](mailto:alexbaumgertner@yandex.ru).
+
+## bem-site-engine
+
+A project stub based on the technologies of `bem-core@v2*`. This project is built to create a web site for different articles publishing.
+
+The project uses block of the [bem-components](https://en.bem.info/libs/bem-components/) library.
+
+Now, the `dev` branch of the project repo is stable and freezed. If you find some bugs, report us with [issues](https://github.com/bem/bem-site-engine/issues) on GitHub.
+
+Project repository on [GitHub](https://github.com/bem/bem-site-engine).
+
+Authored by Andrey Kuznetsov [gh: tormozz48](https://github.com/tormozz48), [@kuznetsov48](https://twitter.com/@kuznetsov48), [andrey.kuznetsov48@yandex.ua](mailto:andrey.kuznetsov48@yandex.ua).
 
 **Join us with your projects!**
