@@ -99,14 +99,15 @@ Authored by Alexander Baumgertner, [gh: alexbaumgertner](https://github.com/alex
 
 ## bem-site-engine
 
-A project stub based on the technologies of `bem-core@v2*`. This project is built to create a web site for different articles publishing.
+A `bem-core@v2*`-based project developed to collect and store documentation. The project is designed to create a site with a set of articles presented in an easy-to-navigate and easy-to-search form.
 
 The project uses block of the [bem-components](https://en.bem.info/libs/bem-components/) library.
 
-Now, the `dev` branch of the project repo is stable and freezed. If you find some bugs, report us with [issues](https://github.com/bem/bem-site-engine/issues) on GitHub.
+Now, the `dev` branch of the project repo is stable and frozen. If you find some bugs, report us with [issues](https://github.com/bem/bem-site-engine/issues) on GitHub.
 
 Project repository on [GitHub](https://github.com/bem/bem-site-engine).
 
 Authored by Andrey Kuznetsov [gh: tormozz48](https://github.com/tormozz48), [@kuznetsov48](https://twitter.com/@kuznetsov48), [andrey.kuznetsov48@yandex.ua](mailto:andrey.kuznetsov48@yandex.ua).
 
+____________________________________
 **Join us with your projects!**
