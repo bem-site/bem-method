@@ -22,7 +22,7 @@
 
 ### Биография спикера
 
-<img style="float:right;padding: 0 0 10px 10px" src="//img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for CampJS III" title="Vladimir Grinenko photo for CampJS III">
+<img style="float:right;padding: 0 0 10px 10px" src="https://img-fotki.yandex.ru/get/9805/127846884.248/0_cd7fa_cfde5056_M.jpg" alt="Vladimir Grinenko photo for CampJS III" title="Vladimir Grinenko photo for CampJS III">
 
 Владимир Гриненко — веб-разработчик с более чем 10-летним стажем. Он обладает глубокой экспертизой в области HTML5, CSS3 и JavaScript. В данный момент Владимир работает в Яндексе, где руководит группой разработки БЭМ. Он много рассказывает о БЭМ-технологиях на русском и английском языках в докладах и на практических мастер-классах. Он также является активным контрибьютором в опен-сорс проекты. В область его профессиональной экспертизы входят БЭМ-технологии, разработка фронтенда для крупных проектов, разработка модульной архитектуры фронтенда и так далее.
 
