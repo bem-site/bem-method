@@ -2,7 +2,7 @@
 
 **When**: June 8 — 9, 2015
 
-**Where**: [The Cameri Theatre of Tel Aviv](http://yougottalovefrontend.com/#venue), Tel Aviv, Israel.
+**Where**: [The Cameri Theatre of Tel Aviv](http://yougottalovefrontend.com/#venue), Tel Aviv, Israel
 
 **You Gotta Love Frontend** is the first international conference of its kind to be held in Israel. 
 
