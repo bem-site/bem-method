@@ -2,7 +2,7 @@
 
 <img style="float:right;padding: 0 0 10px 10px" src="https://img-fotki.yandex.ru/get/15483/158800653.1/0_111ff6_bcf15529_orig" alt="фотография программы с минского BEMup" title="BEMup в Минске" />
 
-**Когда**: 17 мая 2014 года, суббота, начало в 10:00
+**Когда**: 17 мая 2014 года
 
 **Где**: [московский офис Яндекса](https://company.yandex.ru/contacts/redrose/), ул. Льва Толстого 16, зал «Экстрополис».
 
