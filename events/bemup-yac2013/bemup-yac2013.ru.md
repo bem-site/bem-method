@@ -32,6 +32,4 @@
 
 Чтобы попасть на митап слушателями, нужно [зарегистрироваться](https://events.yandex.ru/events/yac/2013/register/) на YaC 2013.
 
-Stay BEMed!
-
-Наш twitter [@bem_ru](http://bit.ly/ru-twi), [facebook](http://bit.ly/fb-bem), [клуб БЭМ](http://clubs.ya.ru/bem/) на Я.Ру
+**Stay BEMed!**
