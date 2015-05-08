@@ -2,7 +2,7 @@
 
 <img style="float:right;padding: 0 0 10px 10px" src="https://img-fotki.yandex.ru/get/15541/158800653.1/0_111ff9_983ededd_orig" alt="фотография разработчиков с питерского BEMup" title="BEMup в Санкт-Петербурге" />
 
-**Когда**: 18 апреля 2014 года, пятница, начало в 16:00
+**Когда**: 18 апреля 2014 года
 
 **Где**: Минск, Startup Hub «Imaguru», ул. Фабрициуса, 4
 
