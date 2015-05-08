@@ -2,9 +2,9 @@
 
 <img style="float:right;padding: 0 0 10px 10px" src="https://img-fotki.yandex.ru/get/17917/158800653.1/0_111ff7_6b7d579c_orig" alt="CampJS III logo" title="CampJS III logo" />
 
-**Когда**: 23 — 26 мая 2014 года.
+**Когда**: 23 — 26 мая 2014 года
 
-**Где**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Виктория, Австралия.
+**Где**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Виктория, Австралия
 
 **CampJS III** — трехдневный хак-ритрит для разработчиков, пишущих на JavaScript, который проходит два раза в год в Австралии.
 
