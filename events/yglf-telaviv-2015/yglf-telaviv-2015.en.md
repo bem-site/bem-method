@@ -32,7 +32,7 @@ of the problems that developers face.
 
 During our talk we start from the beginning that covers CSS and design and will go on as far as you would wish to.
 
-**Speaker biography**
+**Speakers' biography**
 
 [Vladimir Grinenko](https://en.bem.info/authors/grinenko-vladimir/), the head of BEM development team. HTML/CSS/JS-professional. 
 BEM-addict. Answers BEM questions 24/7. Outside Yandex runs his own web development agency, consults projects and helps them 
