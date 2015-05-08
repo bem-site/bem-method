@@ -4,7 +4,7 @@
 
 **When**: May 23 — 26, 2014
 
-**Where**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Victoria, Australia.
+**Where**: [Lord Somers Camp](http://www.lordsomerscamp.com/), Victoria, Australia
 
 **CampJS III** is a weekend-long hack-retreat with JavaScript developers, that takes place biannually in Australia.
 
@@ -32,7 +32,7 @@ we aim to share what we have in BEM Methodology to cover JS coding with and intr
 a new chapter in BEM, partly not always easy to understand, open-sourced and handy for maintaining complexity of
 web development you could grow in.
 
-**Speaker biography**
+**Speaker's biography**
 
 Vladimir Grinenko is a web developer with more than 10 years of front-end experience and a deep expertise in
 HTML5, CSS3 and JavaScript. He works for Yandex, Russian Search engine, and leads a team that develops BEM technologies.
