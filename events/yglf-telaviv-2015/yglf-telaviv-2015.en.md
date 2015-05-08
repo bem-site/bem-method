@@ -25,8 +25,8 @@ and was even described as a W3C standard Web Components.
 But how exactly new are the new ideas and how useful is its realization?
 
 In the frontend world since Internet Explorer 5.5 a lot of developers know and use BEM methodology that was created to 
-solve exactly the same problems. During years of use it formed its own huge ecosystem that includes technologies, tools, 
-libraries and active community. It is built and developed by developers within Yandex and outside that use it everywhere 
+solve exactly the same problems. During years of use it formed its own huge ecosystem that includes [technologies](https://en.bem.info/technology/), [tools](https://en.bem.info/tools/), 
+[libraries](https://en.bem.info/libs/) and [active community](https://en.bem.info/forum/). It is built and developed by developers within Yandex and outside that use it everywhere 
 both in small such as promo page for a cat and high loaded projects such as Yandex services and Mail.ru. They are well aware 
 of the problems that developers face.  
 
@@ -43,7 +43,7 @@ with coordination of an open source activity inside and outside Yandex and the c
 Outside Yandex volunteers for open source and helps developers run developer events. Dreamer of the better web and believer 
 in true power of open source. 
 
-Follow [@bem_en](http://twitter.com/bem_en) for updates and live tweets.
+Follow [@bem_en](https://twitter.com/bem_en) for updates and live tweets.
 
 Hopefully, there will be video available after the conference that we can share with you.
 
