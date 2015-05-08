@@ -1,4 +1,4 @@
-# BEM — Build ‘em Modular! talk on You Gotta Love Frontend 2015
+# BEM talk on You Gotta Love Frontend 2015
 
 **When**: June 8 — 9, 2015
 
