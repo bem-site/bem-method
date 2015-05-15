@@ -1,5 +1,5 @@
 # BEM talk on You Gotta Love Frontend Conference
-
+<img src="https://img-fotki.yandex.ru/get/5500/246231603.0/0_151090_d51ff18f_orig.png" style="width: 400px; height: auto; float: right; padding: 0 0 20px 20px;" alt="You Gotta Love Frontend"/>
 **When**: June 8 — 9, 2015
 
 **Where**: [The Cameri Theatre of Tel Aviv](http://yougottalovefrontend.com/#venue), Tel Aviv, Israel
