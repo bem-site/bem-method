@@ -1,5 +1,5 @@
 # БЭМ на конференции You Gotta Love Frontend
-
+<img src="https://img-fotki.yandex.ru/get/5500/246231603.0/0_151090_d51ff18f_orig.png" style="width: 400px; height: auto; float: right; padding: 0 0 20px 20px;" alt="You Gotta Love Frontend"/>
 **Когда**: 8 — 9 июня 2015 года.
 
 **Где**: [Cameri Theatre](http://yougottalovefrontend.com/#venue), Тель-авив, Израиль.
