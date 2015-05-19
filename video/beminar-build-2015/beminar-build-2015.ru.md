@@ -31,11 +31,11 @@ git, Node.js и npm, а также знания, полученные на пр�
 
 ##  Видео вебинара
 
-<iframe src="https://www.slideshare.net/slideshow/embed_code/key/iDv4gVl8hEFwJ4" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe width="450" height="225" src="https://video.yandex.ru/iframe/ya-events/vuvreu3orq.6137/" frameborder="0" allowfullscreen="1"></iframe>
 
 ##  Презентация вебинара
 
-<iframe width="450" height="225" src="https://video.yandex.ru/iframe/ya-events/vuvreu3orq.6137/" frameborder="0" allowfullscreen="1"></iframe>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/iDv4gVl8hEFwJ4" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 ## Ответы на вопросы
 
