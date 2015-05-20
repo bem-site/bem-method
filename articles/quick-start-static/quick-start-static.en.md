@@ -1,4 +1,4 @@
-## Quick start for static page creation with BEM
+# Quick start for static page creation with BEM
 
 This article describes step-by-step implementation of a static page using [BEM methodology](https://bem.info/method/).
 
