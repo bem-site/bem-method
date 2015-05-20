@@ -1,5 +1,7 @@
 # Scaling down the BEM methodology for small projects
 
+_Originally published by <a href="http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/">Smashing Magazine</a>._
+
 Front-end development is no longer about individual frameworks. Tools are available — we merely have to choose. To make the right choices for your project, **you need to start with a general approach, or methodology**. But most methodologies have been created by big companies? Are they still useful for small companies, or do we need to reinvent them at a small scale?
 
 You probably already know of [BEM](https://bem.info/), one of those methodologies developed by a big company — namely, [Yandex](https://www.yandex.com/). BEM posits that three basic entities (blocks, elements and modifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
@@ -563,3 +565,5 @@ For a while, I was pretty skeptical that BEM is suitable for small projects. My 
 But that is not the biggest impact of the BEM methodology on my projects. BEM enables you to see beyond frameworks. I remember times when people seriously discussed the best ways to bind event handlers to elements, and when DOM libraries competed for world dominance, and when frameworks were the next big buzz. Today, we can no longer depend on a single framework, and BEM takes the next step by providing a design foundation, giving us a lot of freedom to implement.
 
 Visit the [BEM](https://bem.info/) website for extra resources, GitHub links, downloads and articles.
+
+Long story short, BEM it!
