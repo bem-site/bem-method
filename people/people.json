@@ -978,5 +978,27 @@
             "skype": "",
             "info": ""
         }
+    },
+    "johan-ronsse": {
+        "en": {
+            "firstName": "Johan",
+            "lastName": "Ronsse",
+            "avatar": "https://avatars2.githubusercontent.com/u/12690?v=3&s=460",
+            "github": "Wolfr",
+            "email": ["github@wolfslittlestore.be"],
+            "twitter": "johan_ronsse",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Йохан",
+            "lastName": "Ронссе",
+            "avatar": "https://avatars2.githubusercontent.com/u/12690?v=3&s=460",
+            "github": "Wolfr",
+            "email": ["github@wolfslittlestore.be"],
+            "twitter": "johan_ronsse",
+            "skype": "",
+            "info": ""
+        }
     }
 }
