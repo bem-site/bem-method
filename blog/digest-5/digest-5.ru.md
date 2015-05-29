@@ -18,13 +18,10 @@
 
 ### ENB
 
-  * Выпустили [enb-bem-i18n@0.3.0](https://github.com/enb-bem/enb-bem-i18n/releases/tag/v0.3.0) c новой технологией 
-  `i18n-bemjson-to-html`. Добавили поддержку Node.js версии 0.12 и io.js, а так же Windows.
-  * Выпустили [enb-bem-docs@0.8.0](https://github.com/enb-bem/enb-bem-docs/releases/tag/v0.8.0) с улучшениями обработки JSDoc'а.
-  * Выпустили [enb-bem-tmpl-specs@0.11.1](https://github.com/enb-bem/enb-bem-tmpl-specs/releases/tag/v0.11.1) с исправлениями 
-  ошибок.
-  * Выпустили [enb-magic-platform@0.5.0](https://github.com/enb-bem/enb-magic-platform/releases/tag/v0.5.0), где было снижено 
-  потребление памяти и добавлена поддержка не magic-тасков.
+  * Выпустили [enb-bem-i18n@0.3.0](https://ru.bem.info/tools/bem/enb-bem-i18n/changelog/#030) c новой технологией `i18n-bemjson-to-html`. Добавили поддержку Node.js версии 0.12 и io.js, а так же Windows.
+  * Выпустили [enb-bem-docs@0.8.0](https://ru.bem.info/tools/bem/enb-bem-docs/changelog/#080) с улучшениями обработки JSDoc'а.
+  * Выпустили [enb-bem-tmpl-specs@0.11.1](https://ru.bem.info/tools/bem/enb-bem-tmpl-specs/changelog/#0111) с исправлениями ошибок.
+  * Выпустили [enb-magic-platform@0.5.0](https://ru.bem.info/tools/bem/enb-magic-platform/changelog/#050), где было снижено потребление памяти и добавлена поддержка не magic-тасков.
 
 ## Новости сайта bem.info
 
