@@ -38,7 +38,7 @@ Modules can be enabled via packages that are described below.
 
 ## How to get started?
 
-Use the [project-stub installation guide](https://en.bem.info/tutorials/project-stub/) to create a BEM project that is configured for using [ENB](http://enb-make.info/) as a build tool.
+Use the [project-stub installation guide](https://en.bem.info/tutorials/project-stub/) to create a BEM project that is configured for using ENB as a build tool.
 
 To create a customized project, follow the instructions of [BEM projects generator](https://en.bem.info/tools/bem/bem-stub/) based on [Yeoman](http://yeoman.io/).
 
