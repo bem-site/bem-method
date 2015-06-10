@@ -1,8 +1,8 @@
 # ENB
 
-[ENB](https://github.com/enb-make) — a tool for building web projects based on [BEM methodology](https://en.bem.info/method/).
+[ENB](https://github.com/enb-make) — a tool for building web projects.
 
-To build different technologies ENB uses special modules with a knowledge about an each technology.
+To build projects based on [BEM methodology](https://en.bem.info/method/), ENB uses special modules with a knowledge about an each technology.
 
 Modules can be enabled via packages that are described below.
 
