@@ -41,4 +41,4 @@
 
 Квартирник на [сайте конференции](http://2015.codefest.ru/lecture/1019).
 
-**Stay BEMed!**
+**Stay BEMed!** 
