@@ -13,7 +13,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/icAwYLLb3Qs" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/EhpcZOcO30Phzh" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/codefest/7-harisovvoischev" title="От БЭМ-методологии до Мануфактуры проектов" target="_blank">От БЭМ-методологии до Мануфактуры проектов</a> </strong> from <strong><a href="//www.slideshare.net/codefest" target="_blank">CodeFest</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/EhpcZOcO30Phzh" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
 Больше пятнадцати лет Яндекс делает разные интернет-сервисы. В процессе их разработки мы научились многому, о чем с радостью 
 рассказываем разработчикам на разных конференциях и встречах. Большое количество примеров из реальной практики побудило нас 
