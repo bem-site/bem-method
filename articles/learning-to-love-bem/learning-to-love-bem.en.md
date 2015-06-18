@@ -4,7 +4,7 @@ _Permission to publish granted. Originally posted at Mono company's [website](ht
 
 I have to admit: when I first heard about BEM, I thought it was a bad idea. Why make your CSS naming so complicated? 
 Surely you can get by with simple class names like .form-group or .accordion. Why do you have to get all crazy with classes 
-like .accordion__child and .accordion__child--highlighted?
+like `.accordion__child` and `.accordion__child--highlighted`?
 
 In a project in January, I worked with [Jelle](http://jelledesramaults.be/) who was using BEM-style syntax in his code. At first I was hesitant but since 
 he was the lead HTML/CSS guy on the project I let him do his thing.
@@ -15,9 +15,9 @@ Think about an admin interface with a lot of widgets and screens with different 
 
 The logic for BEM (Block – Element – Modifier) is:
 
-*   There is a block e.g. .my-element
-*   There is a element e.g. .my-element__sub-element (the 2 underscores denote sub elements)
-*   There might be a modifier e.g. .my-element__sub-elelement—highlighted (the 2 hyphens denote a modifier state).
+*   There is a block e.g. `.my-element`
+*   There is a element e.g. `.my-element__sub-element` (the 2 underscores denote sub elements)
+*   There might be a modifier e.g. `.my-element__sub-elelement—highlighted` (the 2 hyphens denote a modifier state).
 
 A longer explanation is [here](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 
