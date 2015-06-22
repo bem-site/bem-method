@@ -1,12 +1,14 @@
-# Building a website from scratch with the full BEM technology stack
-
-This article was originally published on the [Yandex blog](//habrahabr.ru/company/yandex/blog/251473/) at Habrhabr.
+# Building BEM-powered website using technology's full stack
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/0-intro.jpg)
 
-Earlier this year [the BBC wrote](http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d) about using the Yandex-developed BEM methodology for the new version of their home page. This provides an occasion for us to revisit our master class **Developing a website from scratch with the full BEM technology stack** and tell you how to introduce the full BEM technology stack into your projects.
+Earlier this year [the BBC wrote](http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d) about using the Yandex-developed BEM methodology for the new version of their home page. And BBC was not the only company or individual writing about BEM as a methodology for frontend development and rules for scalable architecture build. 
 
-BEM facilitates the development of websites that have to be built quickly and maintained over a long time. Nearly all of Yandex's services have the front end built on this technology. These days it comes complete with numerous libraries and tools, which we want to share with you. With BEM's extensive toolkit, with all its modularity and power, all you need to do is ”just“ come up with an idea and implement it.
+Smashing Magazine itself had a several pieces on BEM, including [A New Front-End Methodology: BEM](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/) by [Varvara Stepanova](http://www.smashingmagazine.com/author/varvara-stepanova/) and [The Evolution Of The BEM Methodology](http://www.smashingmagazine.com/2013/02/21/the-history-of-the-bem-methodology/) and [Scaling Down The BEM Methodology For Small Projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/) both by [Maxim Shirshin](http://www.smashingmagazine.com/author/maksim-shirshin/).
+
+And now we think it is time to go more practical and tell you how to introduce the full BEM technology stack into your projects.
+
+BEM facilitates the development of websites that have to be built quickly and maintained over a long time. Nearly all of [Yandex](https://company.yandex.com/)'s services have the front end built on this technology. These days it comes complete with numerous libraries and tools, which we want to share with you. With BEM's extensive toolkit, with all its modularity and power, all you need to do is ”just“ come up with an idea and implement it.
 
 In this article we will discuss the benefits of front-end development based on independent blocks, find out about redefinition levels, look at ready-made block libraries and build automation tools. We will see how tools like [autoprefixer](https://github.com/postcss/autoprefixer), the CSS preproccesor [Stylus](http://learnboost.github.io/stylus/) or the modular system [YModules](https://en.bem.info/tools/bem/modules/) can make the developer's life easier and provide a truly useful platform when incorporated in the BEM development process.
 
@@ -14,7 +16,7 @@ We will use a real-life example to explain the advantages of a declarative appro
 
 We will be using the Twitter API for our project. In the end we will have a functional website built on the full BEM technology stack and a step-by-step guide to the implementation process.
 
-Specifically for the master class we created a mini-service that searches various social networking sites and presents search results in an orderdly manner. We have put it on GitHub in the [github.com/bem/sssr](https://github.com/bem/sssr/) repository — you are welcome to [have a look](https://sssr.bem.yandex.net/).
+Specifically for the article we created a mini-service that searches various social networking sites and presents search results in an orderdly manner. We have put it on GitHub in the [github.com/bem/sssr](https://github.com/bem/sssr/) repository — you are welcome to [have a look](https://sssr.bem.yandex.net/).
 
 And now let's start from the beginning.
 
@@ -46,9 +48,9 @@ desktop.blocks/
 …
 ```
 
-If you are interested in the details of how and why BEM came into being, please read Vitaly Harisov's article [The History of BEM](https://en.bem.info/method/history/) and watch the [videos](https://events.yandex.ru/lib/talks/95/).
+If you are interested in the details of how and why BEM came into being, please read [The History of BEM](https://en.bem.info/method/history/).
 
-You can find the detailed description of the BEM methodology on our [website](https://en.bem.info/method/).
+You can find the detailed description of the BEM methodology on [bem.info](https://en.bem.info/method/) as well.
 
 ### Creating a project stub
 
@@ -697,7 +699,7 @@ A mode is a step in the output HTML generation process. Each mode is responsible
 
 The `default` mode defines the set and order of all other modes. The following chart shows what each mode is responsible for:
 
-![Схема мод при генерации HTML](https://raw.githubusercontent.com/bem/bem-core/v2/common.docs/reference/reference_mode_default.png)
+![Mod scheme on HTML generation](https://raw.githubusercontent.com/bem/bem-core/v2/common.docs/reference/reference_mode_default.png)
 
 We recommend you take time to peruse the BEMHTML documentation presented in the [Guide to the BEMHTML template engine](https://en.bem.info/technology/bemhtml/current/reference/).
 
@@ -1934,4 +1936,4 @@ We hope this article is useful for you and fulfils its purpose of walking you th
 
 We will be glad to hear your opinion of this article and to help you with anything you are still struggling with.
 
-Feel free to email your comments and suggestions to [info@bem.info](mailto:info@bem.info).
+Feel free to share your thoughts and suggestions as well as ask questions you might have here or on our [forum](https://en.bem.info/forum/).
