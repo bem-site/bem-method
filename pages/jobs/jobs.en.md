@@ -43,7 +43,6 @@ If you recognize yourself in the description above, please submit your CV with a
 
 Current Yandex openings:
 -----------------
-  * [Tools Developer (JavaScript)](https://company.yandex.ru/job/vacancies/js_developer_simferopol.xml) in Yandex.Simferopol;
   * [Frontend Developer](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml) in Yandex.Moscow.
 
 Current non-Yandex openings requiring BEM knowledge:
