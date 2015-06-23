@@ -43,7 +43,6 @@
 
 Текущие вакансии в офисы Яндекса:
 -----------------
-  * [Разработчик инструментов (JavaScript)](https://company.yandex.ru/job/vacancies/js_developer_simferopol.xml) в офис Яндекса в Симферополе;
   * [Разработчик интерфейсов](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml) в офис Яндекса в Москве.
 
 Текущие вакансии, где требуется знание БЭМ:
