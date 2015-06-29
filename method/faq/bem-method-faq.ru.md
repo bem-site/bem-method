@@ -261,7 +261,7 @@ blocks/
     button.png
 ```
 
-<a href="i-bem-vs-JS"></a>
+<a name="i-bem-vs-JS"></a>
 ## Зачем использовать `i-bem.js`, если можно писать на jQuery?
 
 [i-bem.js](https://ru.bem.info/technology/i-bem/v2/i-bem-js/) это специализированный фреймворк для разработки проектов на JavaScript в терминах блоков, элементов и модификаторв.
