@@ -48,9 +48,9 @@ An `element` is a part of a block that performs a certain function. Elements are
 context-dependent: they only make sense in the context of the block they belong to.
 
 **Example**
-An input field and a button are elements of the Search Block
+An input field and a button are elements of the `Search Block`
 
-![An input field and a button](https://img-fotki.yandex.ru/get/15527/158800653.0/0_111fb8_2537137c_orig)
+![An input field and a button](https://img-fotki.yandex.ru/get/5111/246231603.0/0_15e949_f021683f_orig.png)
 
 ### Means of describing pages and templates
 Blocks and elements constitute page content. Besides simply being present on a page,
@@ -77,7 +77,7 @@ To do so, every block and element should have a keyword that identifies it.
 
 A keyword designating a specific block is called `block name`.
 
-For example, `menu` can be a keyword for the `Menu Block`, `head` can be a
+For example, `menu` can be a keyword for the `Menu block`, `head` can be a
 keyword for the `Head` block.
 
 A keyword designating an element is called `element name`.
