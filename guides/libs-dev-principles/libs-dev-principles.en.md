@@ -69,7 +69,7 @@ Everything that can be expressed as a finalized set of values should be implemen
 
 #### Composition vs. inheritance vs. delegation
 
-Use object oriented programming only where it is justified. In all other cases, use a mix of delegation and composition.
+Use object oriented programming only where it is justified. In all other cases, use mixins, delegation and composition.
 
 #### Hierarchy of blocks
 
