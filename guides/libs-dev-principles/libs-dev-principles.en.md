@@ -1,4 +1,5 @@
-# Principles of BEM library development
+Principles of BEM library development
+=====================================
 
 These principles are based on the combined experience of our team. We took all the best approaches from the past, in order to avoid repeating previous mistakes when developing new libraries. We encourage the community to follow these guidelines when using and developing BEM libraries.
 
@@ -69,7 +70,7 @@ Everything that can be expressed as a finalized set of values should be implemen
 
 #### Composition vs. inheritance vs. delegation
 
-Use object oriented programming only where it is justified. In all other cases, use a mix of delegation and composition.
+Use object oriented programming only where it is justified. In all other cases, use mixes, delegation, and composition.
 
 #### Hierarchy of blocks
 
@@ -85,7 +86,7 @@ Automate all repeated processes, such as inserting images, arranging prefixes, o
 
 #### Mobile platforms without adaptive layout
 
-The library must support mobile platforms. We do not recommend using an adaptive layout. The library must work on all browsers that you declare supported: the only degradation allowed is in the formatting style of components, but not in functionality. Code at the ”common“ and ”desktop“ levels must work on touch devices. For an example, review the [list of supported browsers](https://en.bem.info/libs/bem-components/current/#supported-browsers) for the [bem-components](https://en.bem.info/libs/bem-components/) library.
+The library must support mobile platforms. We do not recommend using an adaptive layout. The library must work on all browsers that you declare supported: the only degradation allowed is in the styling of components, but not in functionality. Code at the ”common“ and ”desktop“ levels must work on touch devices. For an example, review the [list of supported browsers](https://en.bem.info/libs/bem-components/current/#supported-browsers) for the [bem-components](https://en.bem.info/libs/bem-components/) library.
 
 #### Accessibility
 
