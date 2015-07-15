@@ -1,3 +1,5 @@
+# Definitions
+
 ## What is BEM?
 `BEM` stands for Block, Element, Modifier. The meaning of these terms will be described
 further in the article.
