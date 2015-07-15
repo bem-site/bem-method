@@ -1,3 +1,5 @@
+# Methodology
+
 A typical website development process is based on the assumption that the design and technical specification for a website do not change in the course of its development.
 
 The designer, front-end developer and programmer each work in their respective areas, with little or no interaction between them:
