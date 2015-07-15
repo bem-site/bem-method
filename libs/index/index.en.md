@@ -1,4 +1,4 @@
-## BEM libraries
+# Libs overview
 
 ### bem-core
 [bem-core](https://bem.info/libs/bem-core/) is a core library required for starting your own BEM-powered project. It provides sufficient number of blocks necessary for client-side JavaScript coding and templating.
