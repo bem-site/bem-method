@@ -29,6 +29,6 @@
 Ваши пожелания и замечания мы принимаем на [форуме](https://ru.bem.info/forum/) с меткой [documentation](https://ru.bem.info/forum/?labels=documentation), 
 в твиттере с тегом #b_ и по электронной почте на адрес [info@bem.info](mailto:info@bem.info)!
 
-**Документируем для вас,
+**Документируем для вас,**
 
-Команда БЭМ**
+**Команда БЭМ**
