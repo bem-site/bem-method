@@ -1,6 +1,6 @@
 # Brand new bem.info with node.js and bemtree inside
 
-Today we launched brand new [bem.info](https://bem.info).
+Today we launched brand new [bem.info](https://en.bem.info).
 We consider this launch as technologic, important and very much awaited by us as a team. However, we already have a lot in mind to improve!
 New in it: we reconsidered our design, tried to sort out the content including small bug-fixes such as adding a date for a publication or the day it was changed, changed server side stack for node.js and bemtree (async declarative templates written in BEM terms) that ode day allows us moving fast forward and adding in perspective different types of useful functionality.
 
@@ -10,6 +10,6 @@ We hope very much for your help in bem.info site development. Because most of al
 
 Feel free to send all bug reports, suggestions and feature requests to [info@bem.info](mailto:info@bem.info).
 
-Kudos go to our great site development team: [Andrew Kuznetsov](https://github.com/tormozz48/), [Aleksandra Nekhaieva](https://github.com/lesanra), [Pavel Bashinsky](https://bem.info/authors/bashinsky-pavel/), [Danila Kovchiy](https://twitter.com/kovchiy) and [Vladimir Grinenko](https://bem.info/authors/grinenko-vladimir/).
+Kudos go to our great site development team: [Andrew Kuznetsov](https://github.com/tormozz48/), [Aleksandra Nekhaieva](https://github.com/lesanra), [Pavel Bashinsky](https://en.bem.info/authors/bashinsky-pavel/), [Danila Kovchiy](https://twitter.com/kovchiy) and [Vladimir Grinenko](https://en.bem.info/authors/grinenko-vladimir/).
 
 PS: Don't stop refreshing ;)

@@ -1,6 +1,6 @@
 # Full stack quick start
 
-Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](https://bem.info/technology/bemhtml/current/intro/).
+Within this tutorial we are going to develop an [online shop web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html) using BEM principles in CSS-writing, JavaScript and [BEMHTML](https://en.bem.info/technology/bemhtml/current/intro/).
 
 **Note:** this tutorial requires JavaScript programming language knowledge.
 
@@ -23,7 +23,7 @@ To get started with BEM-based project you need to install:
 
 BEM is an abbreviation of three entities: a **Block**, an **Element** and a **Modifier**.
 
-BEM is a [methodology](https://bem.info/method/) of web projects development, that allows you to divide an interface into logically independent blocks. At the same time BEM contains specific tools for the typical web developers tasks automatization. And finally BEM gives us opportunity to create libraries of web-components for fast and efficient web-development.
+BEM is a [methodology](https://en.bem.info/method/) of web projects development, that allows you to divide an interface into logically independent blocks. At the same time BEM contains specific tools for the typical web developers tasks automatization. And finally BEM gives us opportunity to create libraries of web-components for fast and efficient web-development.
 
 ## Starting with a new project repository
 
@@ -121,7 +121,7 @@ Every block can be implemented in the following technologies: `css`/`styl`, `js`
 
 Blocks implementation sets are stored in one directory called **redefinition level**.
 
-[Project structure](https://bem.info/method/filesystem/) presumes that all newly created and redefined blocks are stored in a `desktop.blocks` directory. The web pages blocks and all blocks that are mentioned in BEMJSON declarations are stored in a `desktop.bundles` directory.
+[Project structure](https://en.bem.info/method/filesystem/) presumes that all newly created and redefined blocks are stored in a `desktop.blocks` directory. The web pages blocks and all blocks that are mentioned in BEMJSON declarations are stored in a `desktop.bundles` directory.
 
 ## Step-by-step
 
@@ -220,7 +220,7 @@ This markup requires CSS rules to be added. In BEM terms you have to implement a
 <a name="block-creation"></a>
 ### Creating a new block
 
-To implement a block using CSS technology you have to create a CSS file for this block in a corresponding block directory. For this use `bem create` command of [bem-tools](https://bem.info/tools/bem/bem-tools/commands/):
+To implement a block using CSS technology you have to create a CSS file for this block in a corresponding block directory. For this use `bem create` command of [bem-tools](https://en.bem.info/tools/bem/bem-tools/commands/):
 
     $ bem create -l desktop.blocks -b layout -T css
 
@@ -263,7 +263,7 @@ You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.block
 <a name="lib-block-usage"></a>
 ### Using a block library
 
-You do not need to implement an **input** and a **button** blocks yourself. They are provided by the [bem-components library](https://bem.info/libs/bem-components/) which is linked to the project-stub by default. So you can just declare these blocks in a `desktop.bundles/index/index.bemjson.js` file.
+You do not need to implement an **input** and a **button** blocks yourself. They are provided by the [bem-components library](https://en.bem.info/libs/bem-components/) which is linked to the project-stub by default. So you can just declare these blocks in a `desktop.bundles/index/index.bemjson.js` file.
 
     {
         elem: 'left',
@@ -310,7 +310,7 @@ Let's add Yandex.Browser search results to the search form.
 
 ![Search form](https://img-fotki.yandex.ru/get/15499/158800653.0/0_111fd4_74d6387_orig)
 
-Use a **link** block from the same library to render an icon with a slogan as a link to [bem.info](https://bem.info/) site.
+Use a **link** block from the same library to render an icon with a slogan as a link to [bem.info](https://en.bem.info/) site.
 
 ```
 {
@@ -320,7 +320,7 @@ Use a **link** block from the same library to render an icon with a slogan as a 
         content: [
             {
                 block: 'link',
-                url: 'https://bem.info',
+                url: 'https://en.bem.info',
                 content: [
                     {
                         block: 'image',
@@ -367,7 +367,7 @@ The same can be done for a **link** block:
 
 You need an additional HTML element – a container – to center the page. It is not necessary to create a specific block for it. The more correct way rather be to modify a **page** block template at a `desktop.blocks` redefinition level. This template will generate an output HTML for the entire page.
 
-We are going to use [BEMHTML](https://bem.info/technology/bemhtml/current/reference/) as a template language.
+We are going to use [BEMHTML](https://en.bem.info/technology/bemhtml/current/reference/) as a template language.
 
     $ bem create -l desktop.blocks -b page -T bemhtml
 
@@ -803,7 +803,7 @@ For `bem-tools` use:
 
 ## Key take-aways
 
-This tutorial just lets us to open a door to the BEM world. The entire information about BEM methodology is available at the [bem.info](https://bem.info/) site. You can find there a list of overview articles, tutorials, references, workshops and video presentations.
+This tutorial just lets us to open a door to the BEM world. The entire information about BEM methodology is available at the [bem.info](https://en.bem.info/) site. You can find there a list of overview articles, tutorials, references, workshops and video presentations.
 
 ## Releases
 

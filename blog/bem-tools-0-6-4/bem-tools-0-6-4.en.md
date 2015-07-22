@@ -1,6 +1,6 @@
 #bem-tools v0.6.4
 
-The stable [bem-tools](https://bem.info/tools/bem/bem-tools/) v0.6.4 is available.
+The stable [bem-tools](https://en.bem.info/tools/bem/bem-tools/) v0.6.4 is available.
 
 In this version
   * The new API for technologies was added;
@@ -17,7 +17,7 @@ In the new bem-tools version 0.6.4 the speed of bem make / server was increased.
 The speed gain depends on the project.
 In tests the speed improvement varies from a few percent to dozens of times.
 
-For example project-stub is using v2, see on [Github](https://bem.info/tutorials/project-stub).
+For example project-stub is using v2, see on [Github](https://en.bem.info/tutorials/project-stub).
 
 To accelerate bem make, the modules of new technologies (v2) should be used for the project.
 
@@ -42,7 +42,7 @@ exports.getTechs = function() {
 ```
 The only difference in file paths for the old technology and the new one is the prefix `v2/` (see example above).
 
-This applies to technologies that are already included in bem-tools, and those in [bem-bl](https://bem.info/libs/bem-bl/).
+This applies to technologies that are already included in bem-tools, and those in [bem-bl](https://en.bem.info/libs/bem-bl/).
 The old modules will work with the new version of bem-tools without any speed change.
 
 [bem-bl 0.3](https://github.com/bem/bem-bl/tree/0.3) already has everything necessary for using v2.

@@ -1233,7 +1233,7 @@ it's declarative feature and implemented it with JavaScript speed.<br/>
 The result can be run on both client or server size. Sometimes we produce HTML
 output on server under Node.js and sometimes directly in a browser.
 
-If you are insriped, you can check out [BEMHTML reference](https://bem.info/technology/bemhtml/current/reference/).<br/>
+If you are insriped, you can check out [BEMHTML reference](https://en.bem.info/technology/bemhtml/current/reference/).<br/>
 
 ## Libraries
 BEM methodology enables you to create reusable code libraries. That, in turn,
@@ -1252,7 +1252,7 @@ library was turned into [bem-bl](https://bem.github.com/bem-bl/index.en.html).<b
 `bem-bl` stands for `BEM block library` and provides some common blocks for
 building web interfaces.
 
-All the available blocks are represented in the [bem-bl documentation](https://bem.info/libs/bem-bl/dev/).
+All the available blocks are represented in the [bem-bl documentation](https://en.bem.info/libs/bem-bl/dev/).
 
 Each block is represented by a documentation page where you can find its
 description and some examples. Significant that all these examples are alive.
@@ -1291,9 +1291,9 @@ So, this is a cool opportunity to touch BEM stack.
 
 Besides, BEM team also produces many very nice development tools.
 
-[borschik](https://bem.info/tools/optimizers/borschik/) has already been introduced.
+[borschik](https://en.bem.info/tools/optimizers/borschik/) has already been introduced.
 
-Also, you might be interested in [CSSO](https://bem.info/tools/optimizers/csso/), which is
+Also, you might be interested in [CSSO](https://en.bem.info/tools/optimizers/csso/), which is
 CSS optimizer unlike others. It does usual minification, but what is more,
 preforms structural optimizations, which no one of existing optimizers can do.
 
@@ -1330,7 +1330,7 @@ These two small pieces of code give a taste how smart CSSO is. Indeed the full
 list of the transformations it makes on CSS cannot be listed because of it's
 really huge.
 
-One more optimizer, called [SVGO](https://bem.info/tools/optimizers/svgo/how-it-works/), cleans SVG files
+One more optimizer, called [SVGO](https://en.bem.info/tools/optimizers/svgo/how-it-works/), cleans SVG files
 from many useless information which different graphic editors leave inside.
 
 ### Upshort

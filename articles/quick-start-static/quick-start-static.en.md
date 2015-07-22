@@ -1,6 +1,6 @@
 # Quick start for static page creation with BEM
 
-This article describes step-by-step implementation of a static page using [BEM methodology](https://bem.info/method/).
+This article describes step-by-step implementation of a static page using [BEM methodology](https://en.bem.info/method/).
 
 ## Expected outcome
 
@@ -59,7 +59,7 @@ When all steps have been completed you can watch the [result](#result).
 
 ### 1.  Create a page
 
-Source code of pages is stored in the `start-project/desktop.bundles` directory. The main page `index` contains implementations of blocks for the [bem-components](https://bem.info/libs/bem-components/) library.
+Source code of pages is stored in the `start-project/desktop.bundles` directory. The main page `index` contains implementations of blocks for the [bem-components](https://en.bem.info/libs/bem-components/) library.
 
 Create a new page to start your own project.
 
@@ -70,7 +70,7 @@ Create a new page to start your own project.
 
 #### 1.1 Describe the page in a BEMJSON file
 
-A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structure in BEM terms: blocks, elements and modifiers.
+A [BEMJSON file](https://en.bem.info/technology/bemjson/) describes a page structure in BEM terms: blocks, elements and modifiers.
 
 1. Add a description of the `hello` block in the `desktop.bundles/hello/hello.bemjson.js` file. <br>
   `hello` block is an entity that will contain all necessary elements for the project.
@@ -138,7 +138,7 @@ A [BEMJSON file](https://bem.info/technology/bemjson/) describes a page structur
 
 To verify that the page shows all necessary objects, open `http://localhost:8080/desktop.bundles/hello/hello.html`.
 
-You can make additional changes to existing blocks on your [redefinition level](https://bem.info/tools/bem/bem-tools/levels/).
+You can make additional changes to existing blocks on your [redefinition level](https://en.bem.info/tools/bem/bem-tools/levels/).
 
 <a name="block-creation"></a>
 
@@ -147,7 +147,7 @@ You can make additional changes to existing blocks on your [redefinition level](
 In order for all objects on the page to work correctly, it is necessary to specify additional functionality of the `hello` block on your redefinition level.
 
 1.  Create a directory of the `hello` block on the `desktop.blocks` level.
-2.  Create the [implementation technology files](https://bem.info/method/filesystem/) (`CSS`, `JS`, `BEMHTML`) required by the block in the `hello` directory.
+2.  Create the [implementation technology files](https://en.bem.info/method/filesystem/) (`CSS`, `JS`, `BEMHTML`) required by the block in the `hello` directory.
     The block directory name and its nested files must coincide with the block name specified in the BEMJSON file.
 
    * `hello.js` – describes dynamic page functionality.
@@ -183,7 +183,7 @@ JavaScript code is written using [i-bem.js](https://ru.bem.info/technology/i-bem
 
     ```
 
-2. To represent the current JavaScript code, use the [YModules](https://bem.info/tools/bem/modules/) modular system .
+2. To represent the current JavaScript code, use the [YModules](https://en.bem.info/tools/bem/modules/) modular system .
 
     ```js
     modules.define(
@@ -211,9 +211,9 @@ JavaScript code is written using [i-bem.js](https://ru.bem.info/technology/i-bem
 
 #### 3.2 Implement the `hello` block in BEMHTML technology
 
-[BEMHTML](https://bem.info/technology/bemhtml/current/rationale/) is a technology that processes BEMJSON declarations to create HTML layout of a web page.
+[BEMHTML](https://en.bem.info/technology/bemhtml/current/rationale/) is a technology that processes BEMJSON declarations to create HTML layout of a web page.
 
-1. Write a [BEMHTML template](https://bem.info/technology/bemhtml/current/reference/) and specify that the `hello` block has JavaScript implementation.
+1. Write a [BEMHTML template](https://en.bem.info/technology/bemhtml/current/reference/) and specify that the `hello` block has JavaScript implementation.
 2. Implement the `hello` block with form, adding `tag` mode.
 
 ```js
@@ -267,4 +267,4 @@ To see the result of the project, please refresh the page:
 
     http://localhost:8080/desktop.bundles/hello/hello.html
 
-Since the project consists only of one page, there is no need for a full build. Description of a more complex project is in [Starting your own project](https://bem.info/tutorials/start-with-project-stub/) article.
+Since the project consists only of one page, there is no need for a full build. Description of a more complex project is in [Starting your own project](https://en.bem.info/tutorials/start-with-project-stub/) article.

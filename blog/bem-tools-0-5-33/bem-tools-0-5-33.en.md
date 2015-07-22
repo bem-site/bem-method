@@ -2,7 +2,7 @@
 
 Particularly relevant for Windows users.
 
-Stable release [bem-tools](https://bem.info/tools/bem/bem-tools/) v0.5.33 includes the following npm dependency updates:
+Stable release [bem-tools](https://en.bem.info/tools/bem/bem-tools/) v0.5.33 includes the following npm dependency updates:
 
 * package: q updated to 0.8.12
 * package: borschik updated to 0.3.1
@@ -10,7 +10,7 @@ Stable release [bem-tools](https://bem.info/tools/bem/bem-tools/) v0.5.33 includ
 * package: ometajs updated to 3.2.4
 * package: preferglobal set to false
 
-Most important — npm-dependancies refreshed including [Borshik](https://bem.info/tools/optimizers/borschik/) version with Windows build fixes.
+Most important — npm-dependancies refreshed including [Borshik](https://en.bem.info/tools/optimizers/borschik/) version with Windows build fixes.
 
 If you have experienced problems with bem-tools on Windows before, please try it again now.
 

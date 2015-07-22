@@ -2,7 +2,7 @@
 
 Hi,
 
-My name is [Kolya Ilchenko](https://bem.info/authors/ilchenko-nikolay/) and I, together with my colleague [Andrey Kuznecov](https://bem.info/authors/kuznetsov-andrey/), represented the BEM Forum team at the hackathon.
+My name is [Kolya Ilchenko](https://en.bem.info/authors/ilchenko-nikolay/) and I, together with my colleague [Andrey Kuznecov](https://en.bem.info/authors/kuznetsov-andrey/), represented the BEM Forum team at the hackathon.
 
 Here we want to share our impressions of the BEM hackathon and tell you about the results our team was able to achieve.
 
@@ -12,8 +12,8 @@ Here we want to share our impressions of the BEM hackathon and tell you about th
 
 A few words about the team members:
 
-* [Kolya Ilchenko](https://bem.info/authors/ilchenko-nikolay/) — the mentor. I have been with Yandex since 2013, working as an interfaces developer (or front end developer, in common parlance). I'm currently developing the bem.info site and BEM forum, I have knowledge of the full BEM stack and four years of experience in web development. My twitter name is [@tavriaforever](https://twitter.com/tavriaforever).
-- [Andrey Kuznecov](https://bem.info/authors/kuznetsov-andrey/) — my teammate at Yandex, interfaces developer, mostly on the server side which is developed with node.js. Has experience in server-side development using Java and Ruby. The times when Andrey first started to code already feature in history books. His twitter name is [@kuznetsov48](https://twitter.com/kuznetsov48).
+* [Kolya Ilchenko](https://en.bem.info/authors/ilchenko-nikolay/) — the mentor. I have been with Yandex since 2013, working as an interfaces developer (or front end developer, in common parlance). I'm currently developing the bem.info site and BEM forum, I have knowledge of the full BEM stack and four years of experience in web development. My twitter name is [@tavriaforever](https://twitter.com/tavriaforever).
+- [Andrey Kuznecov](https://en.bem.info/authors/kuznetsov-andrey/) — my teammate at Yandex, interfaces developer, mostly on the server side which is developed with node.js. Has experience in server-side development using Java and Ruby. The times when Andrey first started to code already feature in history books. His twitter name is [@kuznetsov48](https://twitter.com/kuznetsov48).
 - [Mikhail Shukshin](https://twitter.com/mikeshukshin), when he took part in the hackathon, was working as a front end developer in ”Sapato.ru“. As the mentor, I enjoyed working with Misha. He did really well. Without any hands-on experience of BEM stack development, he got stuck into the work right away and had no difficulty coding. A big thanks to him for the help, all the tasks that he planned were completed.
 - [Ivan Voischev](https://twitter.com/voischev) — one of the most active BEM community members, came to the hackathon from Voronezh. Works in the web studio Manufactura. As the BEM evangelist of the company, Ivan managed to persuade his co-workers to switch to using the full BEM stack in website development. As far as I'm aware, the studio benefited substantially from switching to the full BEM stack in terms of timelines and parallelizing tasks between server-side and client-side developement. Vanya got a difficult task at the hackathon. And he kept at it until the very end, passing through all the ”circles of hell“, which otherwise we would have had to face ourselves. So a big thanks to him for the help, our working together was just as fun as it was productive. Vanya's code will be used as the basis when the feature he worked on is brought up to production level.
 - [Anton Vinogradov](http://ru.bem.info/authors/vinogradov-anton/), interfaces developer in Alfa Lab's Moscow office. Works on the integration and development of the BEM methodology, having even adopted the BEM folder-naming conventions. Anton is an active member of the BEM community, a regular speaker at BEM events, and is developing a number of open-source BEM block libraries. With a lot of BEM stack development experience under his belt, he got down to working on the tasks at once, suggesting a number of improvements along the way. Together we discussed a lot of interesting aspects of BEM development. As the mentor, I'm satisfied with the result. It's nice to know there are people like Anton and Vanya in the BEM community. Anton's twitter name is [@AWinogradov](https://twitter.com/AWinogradov).
@@ -38,7 +38,7 @@ In the course of discussion we identified a number of separate tasks for every t
 
 **GitHub-like post sorting**
 
-Ever since the forum went live, the missing sorting functionality had been an issue. At the time GitHub already had its neatly implemented sorting function. We decided not to reinvent the wheel and follow GitHub's lead. So we used the block `select` from [bem-components](https://bem.info/libs/bem-components/v2/desktop/select/) and filled it with some JS magic to enable sorting by six different parameters.
+Ever since the forum went live, the missing sorting functionality had been an issue. At the time GitHub already had its neatly implemented sorting function. We decided not to reinvent the wheel and follow GitHub's lead. So we used the block `select` from [bem-components](https://en.bem.info/libs/bem-components/v2/desktop/select/) and filled it with some JS magic to enable sorting by six different parameters.
 
 **Preview of .md code for posts and comments**
 
@@ -56,7 +56,7 @@ We were so engrossed with interface features that we completely forgot about one
 
 **Post rating**
 
-[Vladimir Grinenko](https://bem.info/authors/grinenko-vladimir/) once suggested an idea for the rating of posts on the forum based on GitHub's emoji ”:+1“. It's a cool idea in that it'll help support post authors in different situations. We started to implement it at the hackathon but failed to estimate the task accurately. The work was already in progress when we realized how many possible conditions and exceptions must be taken into account when calculating a rating.
+[Vladimir Grinenko](https://en.bem.info/authors/grinenko-vladimir/) once suggested an idea for the rating of posts on the forum based on GitHub's emoji ”:+1“. It's a cool idea in that it'll help support post authors in different situations. We started to implement it at the hackathon but failed to estimate the task accurately. The work was already in progress when we realized how many possible conditions and exceptions must be taken into account when calculating a rating.
 Unfortunately, we failed to finish the task within the time constraints of the hackathon, but the massive amount of work we put in the task laid the groundwork for bringing it up to production level. We're looking to roll out the feature January — February 2015.
 
 ![](https://img-fotki.yandex.ru/get/15582/44214498.bc/0_9bbe8_d59e3acb_XL.jpg)

@@ -1,6 +1,6 @@
 # Ways we distribute bem-components
 
-We are often asked how we distribute [bem-components](https://bem.info/libs/bem-components/). Here is the answer.
+We are often asked how we distribute [bem-components](https://en.bem.info/libs/bem-components/). Here is the answer.
 
 What do we mean by “distribution”?
 
@@ -14,7 +14,7 @@ We assume that not every user will go for the full stack. For instance, one may 
 
 ## Library
 
-Here we include pre-compiled JS and CSS into the project, go to [bem.info](https://bem.info/), copy HTML from the examples, and everything works. To do so in the minimal variant we need to write a declaration that will list all the entities from the library. Then we can build resulting JS- and CSS-bundles.
+Here we include pre-compiled JS and CSS into the project, go to [bem.info](https://en.bem.info/), copy HTML from the examples, and everything works. To do so in the minimal variant we need to write a declaration that will list all the entities from the library. Then we can build resulting JS- and CSS-bundles.
 
 **Ideally** we would prefer to have a form on bem.info, where you can check needed entities and as a result get your final custom bundle. However, it’s all in plans for now.
 

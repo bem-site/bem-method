@@ -4,7 +4,7 @@ _Originally published by <a href="http://www.smashingmagazine.com/2014/07/17/bem
 
 Front-end development is no longer about individual frameworks. Tools are available — we merely have to choose. To make the right choices for your project, **you need to start with a general approach, or methodology**. But most methodologies have been created by big companies? Are they still useful for small companies, or do we need to reinvent them at a small scale?
 
-You probably already know of [BEM](https://bem.info/), one of those methodologies developed by a big company — namely, [Yandex](https://www.yandex.com/). BEM posits that three basic entities (blocks, elements and modifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
+You probably already know of [BEM](https://en.bem.info/), one of those methodologies developed by a big company — namely, [Yandex](https://www.yandex.com/). BEM posits that three basic entities (blocks, elements and modifiers) are enough to define how to author HTML and CSS, structure code and components, describe interfaces and scale a project up to an industry-leading service.
 
 I’ve spent some time with Yandex and BEM, and I know that this methodology works for large projects. Yandex uses BEM to develop CSS and JavaScript components; Yandex also optimizes templates and tracks dependencies in BEM, develops BEM utilities, supports code experiments and researches the field. On a large scale, this investment pays off and allows Yandex to develop hundreds of its services faster.
 
@@ -552,9 +552,9 @@ The `common` library stays “on top”, while the `mobile` or `desktop` block b
 
 We’ve ended up with many small files, which is good for development but a disaster for production! In the end, we want all of the stuff to be loaded in several big chunks. So, we need a build process.
 
-Yandex has an open-source build tool, [borschik](https://bem.info/tools/optimizers/borschik/), which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as [UglifyJS](https://github.com/mishoo/UglifyJS) and [CSS Optimizer](https://bem.info/tools/optimizers/csso/). Tools like [RequireJS](http://requirejs.org/) can also facilitate the building process, taking care of dependency tracking.
+Yandex has an open-source build tool, [borschik](https://en.bem.info/tools/optimizers/borschik/), which is capable of building JavaScript and CSS files and then compressing and optimizing them with external tools, such as [UglifyJS](https://github.com/mishoo/UglifyJS) and [CSS Optimizer](https://en.bem.info/tools/optimizers/csso/). Tools like [RequireJS](http://requirejs.org/) can also facilitate the building process, taking care of dependency tracking.
 
-For a more comprehensive approach, have a look at [bem-tools](https://bem.info/tools/bem/bem-tools/).
+For a more comprehensive approach, have a look at [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
 
 The clearest lesson I’ve learned from BEM is not to be afraid of granularity, as long as you know how to build the whole picture.
 
@@ -564,6 +564,6 @@ For a while, I was pretty skeptical that BEM is suitable for small projects. My 
 
 But that is not the biggest impact of the BEM methodology on my projects. BEM enables you to see beyond frameworks. I remember times when people seriously discussed the best ways to bind event handlers to elements, and when DOM libraries competed for world dominance, and when frameworks were the next big buzz. Today, we can no longer depend on a single framework, and BEM takes the next step by providing a design foundation, giving us a lot of freedom to implement.
 
-Visit the [BEM](https://bem.info/) website for extra resources, GitHub links, downloads and articles.
+Visit the [BEM](https://en.bem.info/) website for extra resources, GitHub links, downloads and articles.
 
 Long story short, BEM it!

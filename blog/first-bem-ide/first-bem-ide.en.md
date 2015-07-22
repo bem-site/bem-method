@@ -2,7 +2,7 @@
 
 Greetings, dear reader!
 
-My name is Sasha Belyanskii. I work in the Group of advertising technologies, in Simferopol. In addition to my regular job of developing interfaces for Yandex.Direct, I devote my time to nurturing and developing [Vitaly Harisov](https://bem.info/authors/harisov-vitaly/)'s ideas about how **source code editors' usability can be improved** by ”teaching“ them to work with BEM projects.
+My name is Sasha Belyanskii. I work in the Group of advertising technologies, in Simferopol. In addition to my regular job of developing interfaces for Yandex.Direct, I devote my time to nurturing and developing [Vitaly Harisov](https://en.bem.info/authors/harisov-vitaly/)'s ideas about how **source code editors' usability can be improved** by ”teaching“ them to work with BEM projects.
 
 I want to share my impressions of the recently held BEM hackathon, tell you about my own idea, the team-that-never-was, my project plans, and why I decided not to waste my time and help other people.
 
@@ -30,15 +30,15 @@ How did I get on? I am not exactly a master of eloquence but that was only half 
 
 That's precisely what happened. After the presentations, the developers chose to join other, more practical projects, which, in one way or another, involved working with blocks, documentation or the bem.info site.
 
-So my project had to be backburnered. I felt disappointed, but working on my own, I wouldn't be bringing much value to the hackathon. So I decided to continue working on BEM IDE after the hackathon and publish the results in a separate article on [bem.info](https://bem.info/articles/).
+So my project had to be backburnered. I felt disappointed, but working on my own, I wouldn't be bringing much value to the hackathon. So I decided to continue working on BEM IDE after the hackathon and publish the results in a separate article on [bem.info](https://en.bem.info/articles/).
 
-And in the meantime I could put my expertise and my time to good use as a team member on a different project — so I went and joined [Andrey](https://bem.info/authors/abramov-andrey/)'s "modular build" project.
+And in the meantime I could put my expertise and my time to good use as a team member on a different project — so I went and joined [Andrey](https://en.bem.info/authors/abramov-andrey/)'s "modular build" project.
 
 ![](https://img-fotki.yandex.ru/get/15498/44214498.bc/0_9bbee_6149623c_XL.jpg)
 
 ## Build?
 
-Andrey's idea consisted in making the build process for BEM projects transparent by breaking it down into modules that could be used indepedently of the existing build systems such as [ENB](https://ru.bem.info/tools/bem/enb-bem-examples/) or [bem-tools](https://bem.info/tools/bem/bem-tools/). I was not that clued up on the inner workings of the build tools, so I was just trying to take in what my more knowledgeable team mates had to say on the matter.
+Andrey's idea consisted in making the build process for BEM projects transparent by breaking it down into modules that could be used indepedently of the existing build systems such as [ENB](https://ru.bem.info/tools/bem/enb-bem-examples/) or [bem-tools](https://en.bem.info/tools/bem/bem-tools/). I was not that clued up on the inner workings of the build tools, so I was just trying to take in what my more knowledgeable team mates had to say on the matter.
 
 Towards the first day's evening we'd gone through the plans for what's required to build a BEM project using Gulp and got down to work. We went on to develop a number of modules during the hackathon, with bem-walker becoming Andrey's own pride and joy.
 

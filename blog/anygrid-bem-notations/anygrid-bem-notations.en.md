@@ -2,7 +2,7 @@
 
 [Vasya Aksyonov](https://twitter.com/outring) developed a great project — **CSS Grids Generator** called [AnyGrid](http://outring.github.io/anygrid/).
 
-You give it a number of columns, gutter width, check a box if legacy IE support, container context respore or [BEM notations usage for CSS](https://bem.info/method/definitions/) is needed, than press a button and, voila, your code is ready to use!
+You give it a number of columns, gutter width, check a box if legacy IE support, container context respore or [BEM notations usage for CSS](https://en.bem.info/method/definitions/) is needed, than press a button and, voila, your code is ready to use!
 
 Moreover, before Opera 12 release it was the only fluid grid, that worked correctly in that browser. By now it is the only grid that works closely to the way [CSS3 Grid](http://dev.w3.org/csswg/css-grid/) will work because of independant modules.
 

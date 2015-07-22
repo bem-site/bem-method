@@ -366,7 +366,7 @@ block('user-card')(
 
 [bem-components](https://github.com/bem/bem-components) — библиотека блоков, которая используется в проекте, созданном выше
 
-[bem.info](http://bem.info) — сайт про bem с документацией, в частности, там можно почитать про:
+[bem.info](http://ru.bem.info) — сайт про bem с документацией, в частности, там можно почитать про:
 
 [bemtree](http://ru.bem.info/technology/bemtree/v2/bemtree/) — технологию для построения входных данных для шаблонизатора по данным от API и 
 

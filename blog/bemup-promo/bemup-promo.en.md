@@ -5,8 +5,8 @@
 For 3 hours in a friendly atmosphere Yandex developers and programmers from other IT companies shared news,
 BEM implementation experience, discussed plans, difficulties and ways of solving them.
 
-The BEM team talked about latest releases in [bem-tools](https://bem.info/tools/bem/bem-tools/), shared details of
-[bem-core](https://bem.info/libs/bem-core/) development and plans about [bem-bl](https://bem.info/libs/bem-bl/)
+The BEM team talked about latest releases in [bem-tools](https://en.bem.info/tools/bem/bem-tools/), shared details of
+[bem-core](https://en.bem.info/libs/bem-core/) development and plans about [bem-bl](https://en.bem.info/libs/bem-bl/)
 future, and discussed their thoughts on opensource development and the community we are building around BEM.
 
 We also explained technical details of contributing to the project, what “well-written pull requests” are,
@@ -22,7 +22,7 @@ and [Vladimir Dovydenko](https://twitter.com/dovyden), front-end developer from 
 They talked about the conditions under which they implement BEM in their projects, what cases they solve using
 BEM methodology, how they use tools and write CSS, their difficulties and the costs they have because of large-scale changes, what results they have achieved and what plans they have.
 
-As a bonus we had talks about [bem-mvc](https://bem.info/libs/bem-mvc/) library, with Todo written as an
+As a bonus we had talks about [bem-mvc](https://en.bem.info/libs/bem-mvc/) library, with Todo written as an
 example, and implementation of BEM technologies in Islands platform that Yandex launched recently.
 
 [Vassily Chernov](https://twitter.com/bivihoba), lead front-end developer at **Softline** and speaker,
@@ -87,7 +87,7 @@ If you use BEM technologies in your projects and want to share your experience w
 [Photos](http://bitly.com/bemup-photo) from the event.
 
 Follow our news on [Facebook](http://bit.ly/fb-bem), in [Twitter](http://bit.ly/en-twi) or on
-site [bem.info](https://bem.info/).
+site [bem.info](https://en.bem.info/).
 
 **Stay BEMed!**
 

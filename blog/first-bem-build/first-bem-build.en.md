@@ -2,7 +2,7 @@
 
 Hi,
 
-My name is [Andrey Abramov](https://bem.info/authors/abramov-andrey/). At Yandex, I work on the development of BEM tools, most of which are build tools for projects based on the BEM methodology.
+My name is [Andrey Abramov](https://en.bem.info/authors/abramov-andrey/). At Yandex, I work on the development of BEM tools, most of which are build tools for projects based on the BEM methodology.
 
 It was my first hackathon, and already I was attending as a mentor. That, on the one hand, entailed a certain responsibility, but on the other hand, made for a special experience, which I'd like to tell you about.
 
@@ -51,9 +51,9 @@ the nature of the project. Fortunately, my concerns proved ill-founded, as I fou
 
 Our team:
 
-  * [Sasha Belyanskii](https://events.yandex.ru/lib/people/610407/) (@belyanskii) works in the Yandex.Direct team in the Simferopol office; presented the [BEM IDE](https://bem.info/blog/first-bem-ide/) project at the hackathon, but ended up with us once the teams were formed. Sasha's bem.info profile can be found [here](https://bem.info/authors/belyanskii-alexandr/).
+  * [Sasha Belyanskii](https://events.yandex.ru/lib/people/610407/) (@belyanskii) works in the Yandex.Direct team in the Simferopol office; presented the [BEM IDE](https://en.bem.info/blog/first-bem-ide/) project at the hackathon, but ended up with us once the teams were formed. Sasha's bem.info profile can be found [here](https://en.bem.info/authors/belyanskii-alexandr/).
   * [Vsevolod Strukchinskii](https://events.yandex.ru/lib/people/9466/) (@floatdrop) works in the Yandex office in Yekaterinburg and is the author of [gulp-bem](http://github.com/floatdrop/gulp-bem) and maintainer of [getbem.com](https://getbem.com).
-  * [Evgeniy Gavryushin](https://events.yandex.ru/lib/people/423628/) (@egavr) works on tools development in the Yandex office in Simferopol and is the author of `generator-bem-stub`. Evgeniy's bem.info profile can be seen [here](https://bem.info/authors/gavryushin-evgeny/).
+  * [Evgeniy Gavryushin](https://events.yandex.ru/lib/people/423628/) (@egavr) works on tools development in the Yandex office in Simferopol and is the author of `generator-bem-stub`. Evgeniy's bem.info profile can be seen [here](https://en.bem.info/authors/gavryushin-evgeny/).
 
 ## Planning
 

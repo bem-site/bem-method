@@ -2,7 +2,7 @@
 
 Hi everyone!
 
-My name is [Volodya Grinenko](https://bem.info/authors/grinenko-vladimir/), I live in Simferopol, I am the head of the BEM Development service, I write code 24/7, love my wife and don't like meat. You can find lots of my BEM talks at this [link](https://events.yandex.ru/lib/people/68132/).
+My name is [Volodya Grinenko](https://en.bem.info/authors/grinenko-vladimir/), I live in Simferopol, I am the head of the BEM Development service, I write code 24/7, love my wife and don't like meat. You can find lots of my BEM talks at this [link](https://events.yandex.ru/lib/people/68132/).
 
 It's now my turn to share my thoughts and impressions of the [BEM hackathon](https://ru.bem.info/events/bem-hackaton-2014/) that we held last November in Moscow.
 

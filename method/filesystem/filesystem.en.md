@@ -103,7 +103,7 @@ And file `about.css` contains header of the usual size and the search form:
 …
 ```
 
-We could start using [bem-tools](https://bem.info/tools/bem/bem-tools/) to build the project.
+We could start using [bem-tools](https://en.bem.info/tools/bem/bem-tools/) to build the project.
 
 #### Each block in its own directory
 There could be a task to reuse some blocks from a previous project in a new one.
@@ -163,7 +163,7 @@ menu/
 ```
 
 Maintaining such file structure manually is, quite obviously, not convenient. So we've developed
-[bem-tools](https://bem.info/tools/bem/bem-tools/) to handle the burden. These tools help with
+[bem-tools](https://en.bem.info/tools/bem/bem-tools/) to handle the burden. These tools help with
 creating the directory structure, placing files, generating placeholder content, etc.
 
 #### Grouping blocks in directories
@@ -271,7 +271,7 @@ From the architectural point of view:
     Such a project will have the following levels: common, mobile, desktop.
     Different combinations of these levels give the resulting implementation, required by specific pages.
 
-[Open source block library bem-bl](https://bem.info/libs/bem-bl/dev/) is an example of
+[Open source block library bem-bl](https://en.bem.info/libs/bem-bl/dev/) is an example of
 having several definition levels in one repository.
 
 ### Building a page
@@ -292,10 +292,10 @@ On the CSS side:
     files, we don't have to link these files to the page as-is. It is possible to
     collect all the required CSS implementations in one file.
     This also solves the well-known 'number of imports' issue in IE and decreases the number of HTTP requests.
-    For combining CSS we use [borschik](https://bem.info/tools/optimizers/borschik/).
+    For combining CSS we use [borschik](https://en.bem.info/tools/optimizers/borschik/).
   * Browser gets minimized code
     When building CSS, we can minimize and optimize CSS code using the
-    [CSSO](https://bem.info/tools/optimizers/csso/) utility, for example.
+    [CSSO](https://en.bem.info/tools/optimizers/csso/) utility, for example.
   * Each browser can get CSS code written especially for it
     It is also possible to divide CSS implementations for different browsers and deliver
     only the code needed for each browser.
@@ -319,16 +319,16 @@ In terms of work organization:
     We have developers working on the core framework (compilers, tools, performance); library developers, who maintain
     the block library; application developers, who develop sites using the framework.
 
-We use [bem-tools](https://bem.info/tools/bem/bem-tools/) to build pages.
+We use [bem-tools](https://en.bem.info/tools/bem/bem-tools/) to build pages.
 
 #### How to automate the building process?
-The usage of [bem-tools](https://bem.info/tools/bem/bem-tools/) require to run several
+The usage of [bem-tools](https://en.bem.info/tools/bem/bem-tools/) require to run several
 commands for each page whenever page input data or blocks implementation are changed.
 As a result of these commands you get CSS and JavaScript files for the page, page template
 and, if you are developing static pages, HTML code of your page.
 
 To avoid running these commands manually we added `bem make` and `bem server` commands to the
-[bem-tools](https://bem.info/tools/bem/bem-tools/).
+[bem-tools](https://en.bem.info/tools/bem/bem-tools/).
 
 `bem make` is a command to build project statically. It builds all the files which dependencies were
 changed since the last run of this command.
@@ -336,4 +336,4 @@ changed since the last run of this command.
 `bem server` is a command to launch HTTP server, which build project files on the fly during handling
 of the requests. When the build finishes server serves just built files to the client.
 
-Have a look at the [documentation](https://bem.info/tools/bem/bem-tools/commands/) to learn more on this topic.
+Have a look at the [documentation](https://en.bem.info/tools/bem/bem-tools/commands/) to learn more on this topic.

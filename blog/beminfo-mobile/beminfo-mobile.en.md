@@ -2,7 +2,7 @@
 
 Hi everyone!
 
-Sometime ago our users asked us to improve [bem.info](https://bem.info) for mobile devices. And while we are awaiting a new truly mobile design, we tried our best to improve our current version. You can check [bem.info](https://bem.info) from your mobile phone or tablet now and see what we have got for the meantime. 
+Sometime ago our users asked us to improve [bem.info](https://en.bem.info) for mobile devices. And while we are awaiting a new truly mobile design, we tried our best to improve our current version. You can check [bem.info](https://en.bem.info) from your mobile phone or tablet now and see what we have got for the meantime. 
 
 We concentrated on availability of the content (articles, documentation, etc.) on a small screen. To ease reading, we hid some elements that are available in our desktop version.
 

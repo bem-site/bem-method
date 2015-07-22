@@ -263,12 +263,12 @@ For example, a template can look like this in XSL:
 ```
 
 We are gradually discarding XSLT in our products in favor of our own JavaScript-based
-template engine [XJST](https://bem.info/tools/templating-engines/xjst/). This template engine absorbs everything
+template engine [XJST](https://en.bem.info/tools/templating-engines/xjst/). This template engine absorbs everything
 we like about XSLT (we are fans of declarative programming), and implements it with JavaScript's
 productivity on either client or server side.
 
 We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
-[The main ideas of BEMHTML](https://bem.info/technology/bemhtml/current/rationale/).
+[The main ideas of BEMHTML](https://en.bem.info/technology/bemhtml/current/rationale/).
 
 ### Blocks reiteration
 The second `Menu Block` can occur in the `Foot Block` of a site. Or, a `Text Block`
@@ -488,7 +488,7 @@ block('menu').toggleMod('size', 'big', 'small');
 
 The code above is abstract. In real life we use the JavaScript core of `i-bem` block
 from the `bem-bl` block library:
- <https://bem.info/libs/bem-bl/current/desktop/i-bem/>
+ <https://en.bem.info/libs/bem-bl/current/desktop/i-bem/>
 
 ### Blocks consistency
 A site has a `Button` block with certain dynamic behavior.
@@ -556,6 +556,6 @@ More examples:
  * [HeadHunter](http://hh.ru/)
  * [TNK Racing Team](http://futurecolors.ru/tnkracing/)
 
-You may also be interested in sites that use [bem-bl](https://bem.info/libs/bem-bl/) block library:
+You may also be interested in sites that use [bem-bl](https://en.bem.info/libs/bem-bl/) block library:
  * [Mikhail Troshev vCard](http://mishanga.pro/)
     Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))

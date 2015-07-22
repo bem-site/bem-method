@@ -1,6 +1,6 @@
 # Tutorial on JavaScript in BEM terms
 
-One of the key issues of the BEM stack, the [bem-core library](https://bem.info/libs/bem-core/) provides
+One of the key issues of the BEM stack, the [bem-core library](https://en.bem.info/libs/bem-core/) provides
 [i-bem](https://github.com/bem/bem-core/tree/v2/common.blocks/i-bem) block among others.
 It is often called a helper block since it's used to build other blocks and
 empowers them with BEM features.
