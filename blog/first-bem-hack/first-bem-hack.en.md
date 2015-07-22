@@ -29,7 +29,7 @@ We ended up with 8 teams out of 12 projects presented, which proceeded to work o
 
 ![](https://img-fotki.yandex.ru/get/15593/44214498.bc/0_9bbe3_ccfc51f8_XL.jpg)
 
-On the Sunday afternoon the teams presented their projects and results of the two-day hackathon. The goal was to get the maximum number of tasks up to production level. Many teams finished their job at 75-80% ”done“ level — we have scheduled the publication of the results on [bem.info/blog](https://bem.info/blog).
+On the Sunday afternoon the teams presented their projects and results of the two-day hackathon. The goal was to get the maximum number of tasks up to production level. Many teams finished their job at 75-80% ”done“ level — we have scheduled the publication of the results on [bem.info/blog](https://en.bem.info/blog).
 
 Successfull teamwork was rewarded with some books published by [Mann, Ivanov & Ferber](http://www.mann-ivanov-ferber.ru/), presents from Yandex, cheers and laughter, photo-taking to preserve the memory of the event, and a dinner for all.
 
@@ -161,13 +161,13 @@ By way of afterword I would like to quote some more of your emotions — in the 
 > — Lesha Yaroshevich.
 
 > ”The most vivid memory for me is the warm friendly atmosphere. It was conducive to making new acquintances, networking and active experience sharing. The event was very well organized. You could feel the presence of BEM team spirit — everyone was committed to creating useful and original products. There were a lot of top-notch ideas and cool people. You could see a collaborative spirit at work in the teams, everyone supported each other and tried their best to get good results. There competition was high but healthy as well“,
-> — [Inna Belaya](https://bem.info/authors/belaya-inna/).
+> — [Inna Belaya](https://en.bem.info/authors/belaya-inna/).
 
 > ”Not every team managed to achieve their original goals and get their project to its intended state. But everyone got their reward in the end, i.e. experience, and that's what really matters! The main drawback of the BEM hackathon is that it was too short“,
 > — Sasha Tikvach.
 
 > ”An unexpectedly high number of people from the BEM community showed up for the hackathon, and in just two days they managed to do something that in normal circumstances would take weeks to complete. I liked the well-coordinated team work and the end results. Well done to you all! Let's keep going“,
-> — [Vitaly Harisov](https://bem.info/authors/harisov-vitaly/).
+> — [Vitaly Harisov](https://en.bem.info/authors/harisov-vitaly/).
 
 > ”The first BEM hackathon met my expectations by 120 percent. The organizers did their best to create an atmosphere that inspires you to code, achieve goals, share your experience with the BEM community and learn about others' experience
 in using the methodology, technology and tools. I was pleasantly surpised by the participants' level. The guys in the BEM Forum team clearly study BEM, use it in their projects and intend to keep on using it. They helped a lot, completed a number of important tasks while also improving their knowledge of the BEM platform with our help. I'm very much satisfied and I hope there'll be more hackathons in the future!“
@@ -177,7 +177,7 @@ in using the methodology, technology and tools. I was pleasantly surpised by the
 > — Evgeny Konstantinov.
 
 > ”Guys, help you so much for the hackathon! Thanks for the trust, for your interest, for the willingness to work on a weekend with no money of gift incentive, for understanding the goals and sharing our views! You're really doing a lot. Please keep it up!“
-> — [Mursya](https://bem.info/authors/jetpyspayeva-yelena/).
+> — [Mursya](https://en.bem.info/authors/jetpyspayeva-yelena/).
 
 A lot more posts on the hackathon results are coming soon. Our [photostory](http://bit.ly/bem-hack-photo) is already published.
 

@@ -10,7 +10,7 @@ The 2013 edition is about letting go. It’s about learning the skills necessary
 
 BEM team will be among them. In her presentation Varya Stepanova will talk about our way of front-end development, how and for what reasons BEM was created, why BEM way of development, in our point of view, is the easiest and cheapest way, what are the benefits of BEM development.
 
-While preparing for the conference we publish material that might be interesting and useful to you: [Starting your own BEM project](https://bem.info/tutorials/start-with-project-stub/).
+While preparing for the conference we publish material that might be interesting and useful to you: [Starting your own BEM project](https://en.bem.info/tutorials/start-with-project-stub/).
 
 Video preview that we were asked to make while preparing to Meta Refresh 2013.
 

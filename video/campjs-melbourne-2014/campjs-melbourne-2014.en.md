@@ -8,7 +8,7 @@ Watch the video what it is all about:
 
 BEM Team was also invited to talk at Camp JS.
 
-[Vladimir Grinenko](https://bem.info/authors/grinenko-vladimir/) talked about what we have in BEM for JavaScript developers and introduced blocks libraries.
+[Vladimir Grinenko](https://en.bem.info/authors/grinenko-vladimir/) talked about what we have in BEM for JavaScript developers and introduced blocks libraries.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/2r72EjALq2s" frameborder="0" allowfullscreen></iframe>
 

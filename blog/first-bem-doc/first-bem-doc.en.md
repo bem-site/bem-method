@@ -10,11 +10,11 @@ And I am going to tell you everything step-by-step.
 
 First of all, I will tell you about myself:
 
-My name is [Inna Belaya](http://bem.info/authors/belaya-inna/), and I manage a team that develops our technical documentation for BEM. Almost a year we, technical writers, together with development team are leading BEM documentation to its bright future. The way is thorny and bumpy, but we try our best :) We write, translate, follow users feedback and move towards being understandable.
+My name is [Inna Belaya](http://en.bem.info/authors/belaya-inna/), and I manage a team that develops our technical documentation for BEM. Almost a year we, technical writers, together with development team are leading BEM documentation to its bright future. The way is thorny and bumpy, but we try our best :) We write, translate, follow users feedback and move towards being understandable.
 
 When the opportunity to meet in person and even better to work with BEM community developers appeared, I agreed with pleasure. This event allowed us
 * To get feedback on current state of the documentation — what developers lack, what might be improved and needed to be improved;
-* To improve the documentation and [bem.info](https://bem.info) together with the developers from BEM community;
+* To improve the documentation and [bem.info](https://en.bem.info) together with the developers from BEM community;
 * To set new goals in the future workload.
 
 It is not easy to be a mentor. I needed to work hard before the event in order to understand what problems we need to solve.
@@ -36,16 +36,16 @@ So, these problems were set to priority as possible tasks for hackathon, and
 
 ### Few common words :)
 
-Hackathon was planned accordingly: all participants meet and get to know each other the day earlier. We had a dinner together and a little tour on Yandex.Moscow. When we meet the next day, we felt comfortable already knowing each other. Everyone was a little nervous because of coming tasks and projects presentations. Greeting speech of [Yelena Jetpyspayeva](https://bem.info/authors/jetpyspayeva-yelena/) (known as Mursya) and [Vladimir Grinenko](https://bem.info/authors/grinenko-vladimir/) was very heartful and informal and switched everyone to this wave. Positive touch lasted all 48 hours.
+Hackathon was planned accordingly: all participants meet and get to know each other the day earlier. We had a dinner together and a little tour on Yandex.Moscow. When we meet the next day, we felt comfortable already knowing each other. Everyone was a little nervous because of coming tasks and projects presentations. Greeting speech of [Yelena Jetpyspayeva](https://en.bem.info/authors/jetpyspayeva-yelena/) (known as Mursya) and [Vladimir Grinenko](https://en.bem.info/authors/grinenko-vladimir/) was very heartful and informal and switched everyone to this wave. Positive touch lasted all 48 hours.
 
 ### Project presentation and forming the teams
 
 Mentors were supposed to create an idea, form a team and lead it to production. When the registration for hackathon was opened, we could see who and how many developers are interested in the topic. However to know for sure how many of them finally join the team, we could only after the presentation itself. Every mentor had to present his project in any convenient way and compete for the developers with the other mentors. There were no corporate templates or rules how to present, everyone decided for himself. However, all the presentations resulted in interesting and often humorous performances :)
 
 After the presentations there were time for the participants to decide which team to join. Many were in two minds about what group to choose. Because all of the projects were challenging. I was worried, would the developers join my team, would the documentation problems be interesting for the developers. But it ended better then ever, and I finally had a team of:
-* [Vitaly Harisov](https://bem.info/authors/harisov-vitaly/), who created BEM
+* [Vitaly Harisov](https://en.bem.info/authors/harisov-vitaly/), who created BEM
 * Victoria Fillipova
-* [Mikhail Baranov](https://bem.info/authors/baranov-mikhail/)
+* [Mikhail Baranov](https://en.bem.info/authors/baranov-mikhail/)
 
 ![](https://img-fotki.yandex.ru/get/17934/44214498.bd/0_9bc0a_7c0c5de_XL.jpg)
 
@@ -83,7 +83,7 @@ What we have found out:
 
 The task delegation approach was efficient: before a dinner time we had ready-to-go brand a new structure of the site and basic rules for the content forming, that we want to follow in the future. Of course, it is a proposition that needs to be developed well and agreed with BEM team.
 
-In terms of hackathon we had not so much time left to solve all the problems. We decided to translate documentation that everyone was waiting for. Misha Baranov started to translate! And we added his profile to the [author page](https://bem.info/authors/baranov-mikhail/), because all the translations were published under his name :) Thank you so much!
+In terms of hackathon we had not so much time left to solve all the problems. We decided to translate documentation that everyone was waiting for. Misha Baranov started to translate! And we added his profile to the [author page](https://en.bem.info/authors/baranov-mikhail/), because all the translations were published under his name :) Thank you so much!
 
 First hard hack-day went to an end. People started leaving after 10 p.m., but there were developers working up to 3 a.m. and even until morning comes.
 
@@ -103,10 +103,10 @@ During two days we finished the following:
 * **Got feedback** and **made conclusions**. For instance, we though that one of the main problem is too big and difficult-to-understand documents. However the problem is not there. Our survey showed us that developers are ready to read big volumes if they structured well and "seasoned" with useful examples.
 * Started working on the new document called "Creating a static page according to BEM" that is going to be truly useful and quick start for newcomers. Document is in development status. We plan to publish it in the nearest future.
 * **The following documentation was translated**:
- * [COA](http://bem.info/tools/bem/coa/)
- * [Static resources 'freeze'](http://bem.info/tools/optimizers/borschik/freeze/)
- * [Where is my tech](http://bem.info/tools/optimizers/borschik/where-is-my-tech/)
- * [JS include notations](http://bem.info/tools/optimizers/borschik/js-include/).
+ * [COA](http://en.bem.info/tools/bem/coa/)
+ * [Static resources 'freeze'](http://en.bem.info/tools/optimizers/borschik/freeze/)
+ * [Where is my tech](http://en.bem.info/tools/optimizers/borschik/where-is-my-tech/)
+ * [JS include notations](http://en.bem.info/tools/optimizers/borschik/js-include/).
 
 When everyone presented, we voted for the winners (yes, there was a competition!) and, or course, chose them! They got prizes (interesting books from [«Mann, Ivanov and Ferber»](http://www.mann-ivanov-ferber.ru/) printing house and T-shirt). And of course we did group and team photos. Than we had a dinner and a night Moscow walk.
 

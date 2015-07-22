@@ -21,7 +21,7 @@
 На данный момент текущий вид мы считаем окончательным, но мы с удовольствием выслушаем ваши пожелания и фидбэк по узким местам, которые мы упустили.
 Обратную связь вы можете публиковать [на наш форум](https://ru.bem.info/forum/?labels=asktheteam) в виде постов с меткой `asktheteam`.
 
-Обновленный JSDoc появился в последних версиях библиотек [bem-history](https://bem.info/libs/bem-history/), [bem-components](https://bem.info/libs/bem-components/) и [bem-core](https://bem.info/libs/bem-core/).
+Обновленный JSDoc появился в последних версиях библиотек [bem-history](https://ru.bem.info/libs/bem-history/), [bem-components](https://ru.bem.info/libs/bem-components/) и [bem-core](https://ru.bem.info/libs/bem-core/).
 
 Главный результат всей работы — [полноценный референс по всем методам i-bem.js](https://ru.bem.info/libs/bem-core/current/desktop/i-bem/jsdoc/)
 

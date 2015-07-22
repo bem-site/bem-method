@@ -326,7 +326,7 @@ Obviousy, too many imports, page loads slowly! So, we decided to pre-compile sty
 The compilation replaces `@import` directives with the actual contents of external files (this is called `inlining`)
 and performs more optimizations, e.g. unrequired to browser whitespaces and comments.
 
-Our internal inlining tool evolved from a simple wrapper perl script into an open source project [borschik](https://bem.info/tools/optimizers/borschik/); try it out!
+Our internal inlining tool evolved from a simple wrapper perl script into an open source project [borschik](https://en.bem.info/tools/optimizers/borschik/); try it out!
 
 ## Independent blocks as a concept
 By the fall of 2007, our everyday practice got some theory behind it.
@@ -798,11 +798,11 @@ This change turned out to be useful when working with modifiers from JavaScript.
 In 2010, we had published some code on [our GitHub account](https://github.com/bem) to continue growing as an open source project.
 
 #### Creating bem-bl library
-Blocks from Lego are being gradually ported to [bem-bl](https://bem.info/libs/bem-bl/), a library of blocks we consider useful for any web site, not just a Yandex project. As blocks are gradually open-sourced, we improve code and add new features.
+Blocks from Lego are being gradually ported to [bem-bl](https://en.bem.info/libs/bem-bl/), a library of blocks we consider useful for any web site, not just a Yandex project. As blocks are gradually open-sourced, we improve code and add new features.
 
 This is very much a work in progress, and we invite everybody to make pull requests :-)
 
-We also develop [bem-tools](https://bem.info/tools/bem/bem-tools/), a set of helper scripts and automation utilities that make working with BEM files easier. This is mostly done with Node.js, to keep the barriers low for front-end people familiar with JavaScript and willing to contribute.
+We also develop [bem-tools](https://en.bem.info/tools/bem/bem-tools/), a set of helper scripts and automation utilities that make working with BEM files easier. This is mostly done with Node.js, to keep the barriers low for front-end people familiar with JavaScript and willing to contribute.
 
 ### Redefinition levels in BEM
 One size never fits all... but one BEM does! Because blocks and elements are represented on a file system as files and folders, and BEM file structure is unified and based mostly on semantical criteria, we can easily redefine a part of a BEM block, or add more functionality. Similar to the way we extend objects in JavaScript, BEM blocks can be extended using so-called "redefinition levels".

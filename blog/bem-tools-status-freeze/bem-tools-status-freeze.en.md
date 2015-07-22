@@ -14,9 +14,9 @@ As a result we had a choice: to support both instruments, test all blocks build 
 
 By now we implemented everything that was developed on top of bem-tools for ENB and added parts that ENB did not have.
 
-We planned more to do such as writing and publishing new modules documentation, release libraries built with ENB, support it in [project-stub](https://bem.info/tutorials/project-stub/) and so on.
+We planned more to do such as writing and publishing new modules documentation, release libraries built with ENB, support it in [project-stub](https://en.bem.info/tutorials/project-stub/) and so on.
 
-Talking about usage, until bem-core@v3 is out it will be possible to build all of our libraries with any of building tools. There will be no difference in resulting state. When there are changes coming, we will inform you immediately via our blog here on [bem.info](https://bem.info/blog).
+Talking about usage, until bem-core@v3 is out it will be possible to build all of our libraries with any of building tools. There will be no difference in resulting state. When there are changes coming, we will inform you immediately via our blog here on [bem.info](https://en.bem.info/blog).
 
 For tasks such as entities creation bem-tools are still actual. There is no sense in implementing such logic in ENB. It is possible that in the frames of bem-tools `make` command will be polymorphic: if there is bem-tools config — we build with `bem make`, if there is ENB config — we build with ENB.
 

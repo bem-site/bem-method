@@ -17,11 +17,11 @@ First of all, common web-technologies that are used to implement behavior or app
 
 For instance, when we have my-block.css file that declares block appearance, we say that block was implemented using CSS technology.
 
-Second of all, we have a number of own technologies — ([BEMHTML](https://bem.info/technology/bemhtml/current/reference/), [BEMTREE](https://bem.info/technology/bemtree/current/bemtree/), [BEMJSON](https://bem.info/technology/bemjson/current/bemjson/), [i-bem.js](https://bem.info/tutorials/bem-js-tutorial/)) that are our implementation of [BEM methodology](https://bem.info/method/).
+Second of all, we have a number of own technologies — ([BEMHTML](https://en.bem.info/technology/bemhtml/current/reference/), [BEMTREE](https://en.bem.info/technology/bemtree/current/bemtree/), [BEMJSON](https://en.bem.info/technology/bemjson/current/bemjson/), [i-bem.js](https://en.bem.info/tutorials/bem-js-tutorial/)) that are our implementation of [BEM methodology](https://en.bem.info/method/).
 
-Thirdly, there are “[tech modules](https://bem.info/tools/bem/bem-tools/tech-modules/)” — files that are used by building tools such as bem-tools or ENB to build bundles.
+Thirdly, there are “[tech modules](https://en.bem.info/tools/bem/bem-tools/tech-modules/)” — files that are used by building tools such as bem-tools or ENB to build bundles.
 
-Fourthly, we use [borschik](https://bem.info/tools/optimizers/borschik/) that rely on its own building technologies.
+Fourthly, we use [borschik](https://en.bem.info/tools/optimizers/borschik/) that rely on its own building technologies.
 
 Thus, depending on a context we can mean something from up above saying “tech” or “technology” or use it as a collective sense: “space technology”, “BEM technology”.
 
@@ -29,7 +29,7 @@ We hope we cleared that up for you. Let us move on.
 
 ## Site navigation improvement, “Technologies” section
 
-From now on everything about technologies listed in the second paragraph will appear in our new section called “[Technologies](https://bem.info/technology/)” on bem.info. We set it up to ease in our point of view a life of users and make navigation on site be more native and understandable. Related information about BEMHTML, BEMTREE, BEMJSON and i-bem.js we group according to [bem-core](https://bem.info/libs/bem-core/) libraries versions.
+From now on everything about technologies listed in the second paragraph will appear in our new section called “[Technologies](https://en.bem.info/technology/)” on bem.info. We set it up to ease in our point of view a life of users and make navigation on site be more native and understandable. Related information about BEMHTML, BEMTREE, BEMJSON and i-bem.js we group according to [bem-core](https://en.bem.info/libs/bem-core/) libraries versions.
 
 Besides the new section “Technologies” on site we have made some more changes.
 

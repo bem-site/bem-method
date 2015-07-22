@@ -2,7 +2,7 @@
 
 <img style="float: right" src="https://dl.dropboxusercontent.com/u/1122837/src2img.png" alt="photo of the Yandex office in Saint Petersburg" width="200" title="BEMup in Saint Petersburg" />
 
-Hi, my name is [Alexey Kondratov](https://bem.info/authors/kondratov-alexey/) and I presented the [src2img](http://src2img.com/) project at the hackathon.
+Hi, my name is [Alexey Kondratov](https://en.bem.info/authors/kondratov-alexey/) and I presented the [src2img](http://src2img.com/) project at the hackathon.
 
 ## Background
 
@@ -30,7 +30,7 @@ To get all the boring stuff out of the way, we did some preliminary work ahead o
 
 Initially we weren't sure whether we'd be needing a back end or not, so we were going to use phantom.js on the server for screenshot drawing.
 
-Aside from that, we were planning to use the standard BEM stack: [enb](https://ru.bem.info/tools/bem/enb-bem-examples/), [bem-core](https://bem.info/libs/bem-core/v2.5.0/), [bem-components](https://en.bem.info/libs/bem-components/v2/).
+Aside from that, we were planning to use the standard BEM stack: [enb](https://en.bem.info/tools/bem/enb-bem-examples/), [bem-core](https://en.bem.info/libs/bem-core/v2.5.0/), [bem-components](https://en.bem.info/libs/bem-components/v2/).
 
 ![](https://img-fotki.yandex.ru/get/15583/44214498.bc/0_9bbd7_63e86f23_XL.jpg)
 
