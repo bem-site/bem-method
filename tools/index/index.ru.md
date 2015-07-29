@@ -32,5 +32,4 @@ SVGO имеет архитектуру, в которой практически
 
 ## Парсеры / Языки
 ### XJST
-[XJST](http://en.bem.info/tools/templating-engines/xjst/) is a DSL for universal data transformations
-with compiler written on top of the node.js and ometajs and output code working in any browser or on server-side.
+[XJST](http://en.bem.info/tools/templating-engines/xjst/) — это предметно-ориентированный язык (DSL) для преобразования универсальных данных с помощью компилятора, написанного на Node.js и Ometa/JS. XJST генерирует код, который работает как в любом браузере, так и на сервере.
