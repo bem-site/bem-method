@@ -1,561 +1,198 @@
-# Definitions
+BEM: Key concepts
+=================
 
-## What is BEM?
-`BEM` stands for Block, Element, Modifier. The meaning of these terms will be described
-further in the article.
+-   [Block](#block)
+-   [Element](#element)
+-   [Modifier](#modifier)
+-   [BEM entity](#bem-entity)
+-   [Mix](#mix)
+-   [BEM tree](#bem-tree)
+-   [Block implementation](#block-implementation)
+-   [Block implementation technology](#implementation-technology)
+-   [Block redefinition](#block-redefinition)
+-   [Redefinition level](#redefinition-level)
 
-One of the most common examples of a methodology in programming is Object-Oriented Programming.
-It's a programming paradigm embodied by many languages. In some ways, BEM
-is similar to OOP. It's a way of describing reality in code, a range of patterns, and
-a way of thinking about program entities regardless of programming languages being used.
+<a name="block"></a>
 
-We used BEM principles to create a set of front-end development techniques and tools, that
-allow us to build websites quickly and maintain them over a long time.
+Block
+-----
 
-### Unified data domain
-Imagine an ordinary website, like the one pictured below.
+A logically and functionally independent page component, the equivalent of a component in Web Components. A block encapsulates behavior (JavaScript), templates, styles (CSS), and other [implementation technologies](#implementation-technology). Blocks being independent allows for their re-use, as well as facilitating the [project development and support process](../solved-problems/solved-problems.en.md).
 
-![Ordinary website](https://img-fotki.yandex.ru/get/15561/158800653.0/0_111fbc_61755fac_orig)
+#### Block features
 
-While developing such a site it is useful to mark out "blocks" of which the site consists.
+**Nested structure**
 
-For example, in this picture there are `Head`, `Main Layout` and `Foot` blocks. The
-`Head` in turn consists of `Logo`, `Search`, `Auth block` and `Menu`. `Main Layout`
- contains a `Page Title` and a `Text Block`.
+Blocks can be nested inside any other blocks.
 
-![site blocks](https://img-fotki.yandex.ru/get/15592/158800653.0/0_111fbb_2bb44507_orig)
+For example, a `head` block can include a logo (`logo`), a search form (`search`), and an authorization block (`auth`).
 
-Giving each part of the page a name is very useful when it comes to team communication.
+![Head block components](https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig)
 
-A project manager could ask:
- * to make the `Head` bigger or
- * to create a page without a `Search` form in the `Head`
+**Arbitrary placement**
 
-An HTML guy could ask a fellow JavaScript developer
- * to make `Auth Block` animated, etc.
+Blocks can be moved around on a page, moved between pages or projects. The implementation of blocks as independent entities makes it possible to change their position on the page and ensures their proper functioning and appearance.
 
-Let's now take a closer look at what constitutes BEM:
+Thus, the logo and the authorization form can be swapped around without modifying the CSS or JavaScript code of the blocks.
 
-#### Block
-A `block` is an independent entity, a "building block" of an application.
-A block can be either simple or compound (containing other blocks).
+![Altering the block positions](https://img-fotki.yandex.ru/get/16156/158800653.0/0_111fb3_2fec3fed_orig)
 
-**Example**
-Search form block
+![Altering the block positions](https://img-fotki.yandex.ru/get/15542/158800653.0/0_111fb1_bcbc3c6a_orig)
 
-![Search form block](https://img-fotki.yandex.ru/get/15569/158800653.0/0_111fb9_8ae85b15_orig)
+**Re-use**
 
-#### Element
-An `element` is a part of a block that performs a certain function. Elements are
-context-dependent: they only make sense in the context of the block they belong to.
+An interface can contain multiple instances of the same block.
 
-**Example**
-An input field and a button are elements of the `Search Block`
+![Online store products](https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fb0_fbb195e9_orig)
 
-![An input field and a button](https://img-fotki.yandex.ru/get/5111/246231603.0/0_15e949_f021683f_orig.png)
+Element
+-------
 
-### Means of describing pages and templates
-Blocks and elements constitute page content. Besides simply being present on a page,
-their arrangement is also important.
+A constituent part of a [block](#block) that can't be used outside of it.
 
-Blocks (or elements) may follow each other in a certain order.
-
-For example, a list of goods on a commerce website:
-
-![List of goods](https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fb0_fbb195e9_orig)
-
-…or menu items:
+For example, a menu item is not used outside of the context of a menu block, therefore it is an element.
 
 ![Menu items](https://img-fotki.yandex.ru/get/15588/158800653.0/0_111fb6_192672cf_orig)
 
-Blocks may also be contained inside other blocks.
+> [A block or an element: when should I use which?](../../faq/faq.en.md#В-каком-случае-создавать-блок-в-каком-элемент)
 
-For example, a `Head Block` includes other blocks:
+> [Why does the BEM methodology not recommend using elements within elements?](../../faq/faq.en.md#Почему-в-БЭМ-не-рекомендуется-создавать-элементы-элементов-block__elem1__elem2)
 
-![Head block](https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig)
+Modifier
+--------
 
-Besides our building blocks we need a way to describe page layout in plain text.
-To do so, every block and element should have a keyword that identifies it.
+A BEM entity that defines the appearance and behavior of a [block](#block) or an [element](#element).
 
-A keyword designating a specific block is called `block name`.
+The use of modifiers is optional.
 
-For example, `menu` can be a keyword for the `Menu block`, `head` can be a
-keyword for the `Head` block.
+Modifiers are similar in essence to HTML attributes. The same block looks different due to the use of a modifier.
 
-A keyword designating an element is called `element name`.
+For instance, the appearance of the menu block (`menu`) may change depending on a modifier that is used on it.
 
-For example, each item in a menu is an element `item` of the `menu` block.
+![Add a menu to the footer](https://img-fotki.yandex.ru/get/16183/158800653.0/0_111fba_921b3c47_orig)
 
-Block names must be unique within a project to unequivocally designate which
-block is being described. Only instances of the same block can have same names.
-In this case we say that one block is present on the page 2 (3, 4, …) times.
+BEM entity
+----------
 
-Element names must be unique within the scope of a block.
-An element can be repeated several times.
+[Blocks](#block), [elements](#element), and [modifiers](#modifier) are all called BEM entities.
 
-For example, menu items:
+It is a notion that can be used both to refer to an individual BEM entity and as a generic term for blocks, elements, and modifiers.
 
-![Menu items](https://img-fotki.yandex.ru/get/15588/158800653.0/0_111fb6_192672cf_orig)
+Mix
+---
 
-Keywords should be put in certain order.
-Any data format that supports nesting (XML, JSON) will do:
+An instance of different [BEM entities](#bem-entity) being hosted on a single [DOM node](https://en.wikipedia.org/wiki/Document_Object_Model).
 
-```xml
-<b:page>
-  <b:head>
-    <b:menu>
-      …
-    </b:menu>
-    <e:column>
-      <b:logo/>
-    </e:column>
-    <e:column>
-      <b:search>
-        <e:input/>
-        <e:button>Search</e:button>
-      </b:search>
-    </e:column>
-    <e:column>
-      <b:auth>
-        …
-      </b:auth>
-    <e:column>
-  </b:head>
-</b:page>
+Mixes allow us to
+
+-   Combine the behaviors and styles of several BEM entities while avoiding code duplication
+-   Create semantically new interface components on the basis of existing BEM entities.
+
+Let's consider the case of a mix comprising a block and an element of another block.
+
+Let's assume that links in your project are implemented via a `link` block. We need to format menu items as links. There are several ways to do that.
+
+-   Create a modifier for a menu item that turns the item into a link. Implementing such a modifier would necessarily involve copying the behavior and styles of the `link` block. That would result in code duplication.
+
+-   Have a mix combining a generic `link` block and a `link` element of a `menu` block. A mix of the two BEM entities will allow us to use the basic link functionality of the `link` block and additional CSS rules of the `menu` block without copying the code.
+
+BEM tree
+--------
+
+A representation of a web page structure in terms of blocks, elements, and modifiers. It is an abstraction over a [DOM tree](https://en.wikipedia.org/wiki/Document_Object_Model) that describes the names of BEM entities, their states, order, nesting, and auxiliary data.
+
+In real-life projects, a BEM tree can be presented in any format that supports the tree structure.
+
+Let's consider an example of a DOM tree:
+
+``` html
+<header class="header"> <img class="logo"> <form class="search"> <input type="input"> <button type="button"></button> </form> <div class="lang-switcher"></div> </header>
 ```
 
-In this example, `b` and `e` namespaces separate block nodes from element nodes.
+The corresponding BEM tree will look like this:
 
-The same in JSON:
+    header
+      ├──logo
+      └──search
+        ├──input
+        └──button
+      └──lang-switcher
 
-```js
+In XML and [BEMJSON](https://en.bem.info/technology/bemjson/) formats, the same BEM tree will appear as follows:
+
+XML
+
+``` xml
+<block:header>
+    <block:logo/>
+    <block:search>
+        <block:input/>
+        <block:button/>
+    </block:search>
+    <block:lang-switcher/>
+</block:header>
+```
+
+BEMJSON
+
+``` js
 {
-  block: 'page',
-  content: {
-    block: 'head',
-    content: [
-      { block: 'menu', content: … },
-      {
-        elem: 'column',
-        content: { block: 'logo' }
-      },
-      {
-        elem: 'column',
-        content: [
-          {
-            block: 'search',
-            content: [
-              { elem: 'input' },
-              { elem: 'button', content: 'Search' }
+    block: 'header',
+    content : [
+        { block : 'logo' },
+        {
+            block : 'search-form',
+            content : [
+                { block : 'input' },
+                { block : 'button' }
             ]
-          }
-        ]
-      },
-      {
-        elem: 'column',
-        content: {
-          block: 'auth', content: …
-        }
-      }
+        },
+        { block : 'lang-switcher' }
     ]
-  }
 }
 ```
 
-Examples above show an object model with blocks and elements nested inside each other.
-This structure can also contain any number of custom data fields.
+Block implementation
+--------------------
 
-We call this structure `BEM tree` (by analogy with DOM tree).
+A set of different [technologies](#implementation-technology) that determine the following aspects of a BEM entity:
 
-Final browser markup is generated by applying template transformations (using XSL or
-JavaScript) to a BEM tree.
+-   behavior
+-   appearance
+-   tests
+-   templates
+-   documentation
+-   description of dependencies
+-   additional data (e.g., images).
 
-If a developer needs to move a block to a different place on a page, he does so by
-changing the BEM tree. Templates generate the final view themselves.
+Implementation technology
+-------------------------
 
-You can use any format to describe the BEM tree and any template engine.
+A technology used for [implementing](#block-implementation) a block.
 
-We went with JSON as a page description format.
-It is then turned into HTML by a JS-based template engine BEMHTML.
+Blocks can be implemented in one or more technologies, for example:
 
-### Block independence
-As projects grow, blocks tend to be added, removed, or moved around the page. For example,
-you may want to swap the `Logo` and `Auth Block` or to place the `Menu` under the
-`Search Block`.
+-   behavior — JavaScript, CoffeeScript
+-   appearance — CSS, Stylus, Sass
+-   templates — BEMHTML, BH, Jade, Handlebars, XSL
+-   documentation — Markdown, Wiki, XML.
 
-![Swap blocks](https://img-fotki.yandex.ru/get/16156/158800653.0/0_111fb3_2fec3fed_orig)
+For instance, if the appearance of a block is defined with CSS, that means that the block is implemented in the CSS technology. Likewise, if the documentation for a block is written in Markdown format, the block is implemented in the Markdown technology.
 
-![Swap blocks](https://img-fotki.yandex.ru/get/15542/158800653.0/0_111fb1_bcbc3c6a_orig)
+Block redefinition
+------------------
 
-To make this process easier, blocks must be `independent`.
+Modifying a block [implementation](#block-implementation) by adding new features to the block on a different [level](#redefinition-level).
 
-An `independent` block is implemented in a way that allows arbitrary placement —
-anywhere on the page, including nesting inside another block.
+Redefinition level
+------------------
 
-#### Independent CSS
-From the CSS point of view it means that
+A set of BEM entities and their partial [implementations](#block-implementation).
 
- * A block (or an element) must have a unique "name" (a CSS class) that could be used in a CSS rule.
- * HTML elements must not be used in CSS selectors (`.menu td`) as such selectors are inherently
-   not context-free.
- * Cascading selectors should be avoided.
+The final implementation of a block can be divided into different redefinition levels. Each new level extends or overrides the original implementation of the block. The end result is assembled from individual [implementation technologies](#implementation-technology) of the block from all redefinition levels in a pre-determined consecutive order.
 
-##### Naming for independent CSS classes
-Here's one of the possible CSS class naming scheme:
+Any [implementation](#implementation-technology) technologies of BEM entities can be [redefined](#block-redefinition).
 
- * CSS class for a block coincides with its `block name`
+For example, there is a third-party library linked to a project on a separate level. The library contains ready-made block implementations. The project-specific blocks are stored on a different redefinition level.
 
-```xml
-<ul class="menu">
-  …
-</ul>
-```
- * CSS class for an element is a `block name` and an `element name` separated
- by some character(s)
-
-```xml
-<ul class="menu">
-  <li class="menu__item">…</li>
-  <li class="menu__item">…</li>
-</ul>
-```
-
-It is necessary to include block name into a CSS class for an element to minimize cascading.
-
-It is also important to use separators consistently to allow the tools and helpers (described
-further) unambiguous programmatic access to the elements.
-
-We use hyphen to separate words in long names (for example, `block-name`) and two underscores
-to separate the name of the block form the name of the element (`block-name_~_element-name`).
-
-But you can use any other separators for it.
-
-E.g.:
-  * `block-name-~-element-name` or
-  * `blockName-elementName`
-
-#### Independent templates
-From the template engine perspective, block independence means that:
-
- * Blocks and elements must be described in the input data
-    Blocks (or elements) must have unique "names" to make things like "`Menu` should be
-    placed here" expressible in our templates.
- * Blocks may appear anywhere in a BEM tree
-
-##### Independent templates for blocks
-Coming upon a block in a template, the template engine should be able to unambiguously transform
-it into HTML. Thus, every block should have a template for that.
-
-For example, a template can look like this in XSL:
-
-```xml
-<xsl:template match="b:menu">
-  <ul class="menu">
-    <xsl:apply-templates/>
-  </ul>
-</xsl:template>
-
-<xsl:template match="b:menu/e:item">
-  <li class="menu__item">
-    <xsl:apply-templates/>
-  </li>
-<xsl:template>
-```
-
-We are gradually discarding XSLT in our products in favor of our own JavaScript-based
-template engine [XJST](https://en.bem.info/tools/templating-engines/xjst/). This template engine absorbs everything
-we like about XSLT (we are fans of declarative programming), and implements it with JavaScript's
-productivity on either client or server side.
-
-We write our templates using a domain-specific language called BEMHTML, which is based on XJST.
-[The main ideas of BEMHTML](https://en.bem.info/technology/bemhtml/current/rationale/).
-
-### Blocks reiteration
-The second `Menu Block` can occur in the `Foot Block` of a site. Or, a `Text Block`
-can turn into two, separated by an advertisement.
-
-Even if a block was developed as a singular unit, the same one can appear on a page at any moment.
-
-In CSS related terms, it means:
- * ID-based CSS selectors must not be used
-    Only class selectors satisfy our non-uniqueness requirement.
-
-On the JavaScript side it means:
- * Blocks with similar behavior are detected unequivocally: they have the same CSS classes
-    Using CSS class selectors allow picking all blocks with a given name to apply the required
-    dynamic behavior.
-
-### Modifiers for blocks
-We often need to create a block very similar to an existing one, but with slightly altered
-its appearance or behavior.
-
-Let's say, we have a task:
- * Add another `Menu` in the `Footer` with a *different layout*.
-
-![Add another menu](https://img-fotki.yandex.ru/get/16183/158800653.0/0_111fba_921b3c47_orig)
-
-To avoid developing another block that is only minimally different from an existing one,
-we can use a `modifier`.
-
-A `modifier` is a property of a block or an element that alters its look or behavior.
-
-A modifier has a name and a value. Several modifiers can be used at once.
-
-**Example**
-A block modifier specifies background color
-
-![Change background color](https://img-fotki.yandex.ru/get/16155/158800653.0/0_111fb7_46771936_orig)
-
-**Example**
-An element modifier changes the look of the "current" item
-
-![Change the look of the item](https://img-fotki.yandex.ru/get/16102/158800653.0/0_111fb4_6b15e133_orig)
-
-#### From the input data point of view
-In a BEM tree, modifiers are properties of an entity that describes a block or an element.
-
-For example, they can be attribute nodes in XML:
-
-```xml
-<b:menu m:size="big" m:type="buttons">
-  …
-</b:menu>
-```
-
-The same expressed in JSON:
-
-```js
-{
-  block: 'menu',
-  mods: [
-   { size: 'big' },
-   { type: 'buttons' }
-  ]
-}
-```
-
-#### From the HTML/CSS point of view
-A modifier is an additional CSS class for a block or an element.
-
-```xml
-<ul class="menu menu_size_big menu_type_buttons">
-  …
-</ul>
-```
-
-```css
-.menu_size_big {
-  // CSS code to specify height
-}
-.menu_type_buttons .menu__item {
-  // CSS code to change item look
-}
-```
-
-### Element modifiers
-Element modifiers are implemented in the same fashion.
-
-Again, when writing CSS by hand, it is very important to use separators consistently for programmatic access.
-
-E.g., current menu item can be marked with a modifier:
-
-```xml
-<b:menu>
-  <e:item>Index<e:item>
-  <e:item m:state="current">Products</e:item>
-  <e:item>Contact<e:item>
-</b:menu>
-```
-
-```js
-{
-  block: 'menu',
-  content: [
-    { elem: 'item', content: 'Index' },
-    {
-      elem: 'item',
-      mods: { 'state' : 'current' },
-      content: 'Products'
-    },
-    { elem: 'item', content: 'Contact' }
-  ]
-}
-```
-
-```css
-.menu__item_state_current
-{
-  font-weight: bold;
-}
-```
-
-Which could be represented in HTML as follows:
-
-```xml
-<ul class="menu">
-  <li class="menu__item">Index</li>
-  <li class="menu__item menu__item_state_current">Products</li>
-  <li class="menu__item">Contact</li>
-</ul>
-```
-
-Or to make menu classes independent of the implementation details of its layout:
-
-```xml
-<div class="menu">
-  <ul class="menu__layout">
-    <li class="menu__layout-unit">
-      <div class="menu__item">Index</div>
-    </li>
-    <li class="menu__layout-unit">
-      <div class="menu__item menu__item_state_current">Products</div>
-    </li>
-    <li class="menu__layout-unit">
-      <div class="menu__item">Contact</div>
-    </li>
-  </ul>
-</div>
-```
-
-```xml
-<div class="menu">
-  <table class="menu__layout">
-  <tr>
-    <td class="menu__layout-unit">
-      <div class="menu__item">Index</div>
-    </td>
-    <td class="menu__layout-unit">
-      <div class="menu__item menu__item_state_current">Products</div>
-    </td>
-    <td class="menu__layout-unit">
-      <div class="menu__item">Contact</div>
-    </td>
-  </tr>
-  </table>
-</div>
-```
-
-### Subject-matter abstraction
-When many people work on a project they should agree on a data domain and use it
-when naming their blocks and elements.
-
-For example, a `Tag Cloud` block is always named `tags`. Each of its elements is a
-`tag`. This convention spreads across all languages: CSS, JavaScript, XSL, etc.
-
-From the development process' point of view:
- * All participants operate on the same terms
-
-From the CSS point of view:
- * CSS for blocks and elements can be written in a pseudo language that compiles
-   down to CSS according to the naming convention.
-
-```css
-.menu {
-  __layout {
-    display: inline;
-  }
-  __layout-item {
-    display: inline-block;
-    …
-  }
-  __item {
-    _state_current {
-      font-weight: bold;
-    }
-  }
-}
-```
-
-On the JavaScript side:
- * Instead of using class selectors directly to find DOM elements, a special helper
-   library may be used:
-
-```js
-$('menu__item').click( … );
-$('menu__item').addClass('menu__item_state_current');
-$('menu').toggle('menu_size_big').toggle('menu_size_small');
-```
-
-The naming convention for CSS classes of blocks and elements can change in the course of
-time. Using special JavaScript functions to access blocks and elements and to work with their
-modifiers makes it possible to change only these functions if the naming convention changes.
-
-```js
-block('menu').elem('item').click( … );
-block('menu').elem('item').setMod('state', 'current');
-block('menu').toggleMod('size', 'big', 'small');
-```
-
-The code above is abstract. In real life we use the JavaScript core of `i-bem` block
-from the `bem-bl` block library:
- <https://en.bem.info/libs/bem-bl/current/desktop/i-bem/>
-
-### Blocks consistency
-A site has a `Button` block with certain dynamic behavior.
-
-![Button block](https://img-fotki.yandex.ru/get/16130/158800653.0/0_111faf_308d2206_orig)
-
-When a block is hovered, it changes its appearance.
-
-![Button on hover](https://img-fotki.yandex.ru/get/15574/158800653.0/0_111fae_1e5a7498_orig)
-
-A manager could ask to use the same button on another page.
-
-Having a CSS implementation of a block is not enough. Reusing a block also means reusing its
-behavior, described in JavaScript.
-
-So a block must "know" everything about itself. To implement a block we describe its appearance
-and behavior in all technologies being used - we call that `multilingualism`.
-
-`Multilingual` presentation is a description of a block in all the programming languages (techs)
-that are necessary to implement the view and the functionality of a block.
-
-To have a block present on a page as a UI element we need to implement it in the following techs:
- * Templates (XSL, TT2, JavaScript, etc), which turn block declarations into HTML code
- * CSS that describes appearance of the block
- * A JavaScript implementation for the block, if a block has dynamic behavior
- * Images
- * Documentation
-
-Everything that constitutes a block is a block technology.
-
-### Real examples
-[Yandex](https://company.yandex.ru) is a large (mostly Russian) company that
-use BEM methodology to develop its services.
-
-BEM methodology does not request you to use certain framework. You also don't
-have to use BEM for all the technologies you have on your pages (but that would
-be the most efficient).
-
-[All the services of Yandex](https://www.yandex.ru/all) have BEM in their
-CSS and JavaScript code and XSL templates of the pages. E.g.,
- * [Yandex.Maps](https://maps.yandex.ru)
- * [Yandex.Images](https://images.yandex.ru/yandsearch?text=Yandex+office&rpt=image)
-    This is a service for searching images in the Internet.
- * [Yandex.Video](https://video.yandex.ru/#search?text=yac%202011)
-    This is a service for both hosting and searching images.
- * [Yandex.Auto](https://auto.yandex.ru/)
- * [Turkish Yandex](https://www.yandex.com.tr/)
-
-Some services don't use XSL templates and build their pages with our newest template
-product, `bemhtml` template engine which was mentioned above. These are the following
-services:
- * [Yandex Search](https://yandex.ru/yandsearch?text=BEM+methodology+front-end&lr=213)
-    or [Yandex Search in English](https://yandex.com/yandsearch?text=%22What+is+BEM%3F%22+front-end&lr=213)
- * [Mobile Apps Search](http://appsearch.yandex.ru/)
-    This site is to look under smartphones.
-
-There are also other companies that use BEM methodology.
-
-For example, guys in [Mail.ru](http://mail.ru) partly use BEM for their services.
-Some blocks on their pages are BEM-based in terms of CSS code. They also have their
-own C++ template engine and write block templates according to the methodology.
-
-More examples:
- * [Rambler.News](http://beta.news.rambler.ru/)
- * [HeadHunter](http://hh.ru/)
- * [TNK Racing Team](http://futurecolors.ru/tnkracing/)
-
-You may also be interested in sites that use [bem-bl](https://en.bem.info/libs/bem-bl/) block library:
- * [Mikhail Troshev vCard](http://mishanga.pro/)
-    Source code is hosted at GitHub: ((https://github.com/mishanga/bem-vcard))
+Let's say we need to modify the appearance of one of the library blocks. That doesn't require changing the CSS rules of the block in the library source code or copying the code at the project level. We only need to create additional CSS rules for that block at the project level. During the build process, the resulting implementation will incorporate both the original rules from the library level and the new styles from the project level.
