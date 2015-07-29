@@ -33,26 +33,7 @@ add your own.
 [borschik](/tools/optimizers/borschik) is a extendable builder for text-based file formats.
 It's main purpose is the assembly of static files for web projects (CSS, JS, etc.).
 
-### setochka (prototype)
-[Setochka](https://github.com/afelix/setochka) is a tool to extract properties of the CSS style in separate files.
-
-Can also be used to remove those properties without storing them in files.
-
 ## Languages / Parsers
-### OmetaJS
-[OMetaJS](https://github.com/veged/ometa-js#ometajs-) is a JavaScript implementation of OMeta, an object-oriented
-language for pattern matching.
-
-This is a Node.js module for developing and using such pattern matching grammars.
-
 ### XJST
 [XJST](http://en.bem.info/tools/templating-engines/xjst/) is a DSL for universal data transformations
 with compiler written on top of the node.js and ometajs and output code working in any browser or on server-side.
-
-### Shmakowiki
-[Shmakowiki](https://github.com/veged/shmakowiki) is yet another wiki dialect, inspired by WackoWiki and WikiCreole.
-
-### Gonzales
-[Gonzales](https://github.com/css/gonzales) — fast CSS parser.
-
-Fast CSS parser, based on PEG ideology. At the moment it produces CSSP compatible AST, but will be extended to support other formats.

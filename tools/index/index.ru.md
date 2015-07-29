@@ -30,25 +30,7 @@ SVGO имеет архитектуру, в которой практически
 Расширяемый сборщик файлов [borschik](/tools/optimizers/borschik) может использоваться для сборки текстовых
 файлов из кусочков. Например, для сборки статических файлов веб-страниц (CSS, JS, etc).
 
-### setochka (прототип)
-[Сеточка](https://github.com/afelix/setochka) — инструмент для выделения CSS-свойств исходного CSS в отдельные файлы.
-Также может использоваться для удаления этих свойств без записи.
-
 ## Парсеры / Языки
-### OmetaJS
-[OMetaJS](https://github.com/veged/ometa-js#ometajs-) is a JavaScript implementation of OMeta, an object-oriented
-language for pattern matching.
-
-This is a Node.js module for developing and using such pattern matching grammars.
-
 ### XJST
 [XJST](http://en.bem.info/tools/templating-engines/xjst/) is a DSL for universal data transformations
 with compiler written on top of the node.js and ometajs and output code working in any browser or on server-side.
-
-### Shmakowiki
-[Shmakowiki](https://github.com/veged/shmakowiki) is yet another wiki dialect, inspired by WackoWiki and WikiCreole.
-
-### Gonzales
-[Gonzales](https://github.com/css/gonzales) — быстрый парсер CSS.
-
-Быстрый парсер CSS, основанный на идеологии PEG. На данный момент производит AST, совместимый с CSSP, но в будущем будет расширен для поддержки других форматов.
