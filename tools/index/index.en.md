@@ -13,13 +13,13 @@ It allows you:
 
 ## Optimizers
 ### CSSO
-[CSSO](/tools/optimizers/csso) (CSS Optimizer) is a CSS minimizer unlike others.
+[CSSO](https://github.com/css/csso/) (CSS Optimizer) is a CSS minimizer unlike others.
 
 In addition to usual minification techniques it can perform structural optimization of CSS files,
 resulting in smaller file size compared to other minifiers.
 
 ### SVGO
-[SVGO](/tools/optimizers/svgo) (SVG Optimizer) is a NodeJS-based tool for optimizing SVG vector graphics files.
+[SVGO](https://github.com/svg/svgo/) (SVG Optimizer) is a NodeJS-based tool for optimizing SVG vector graphics files.
 
 SVG files, especially exported from various editors, usually contain a lot of redundant and useless information
 such as editor metadata, comments, hidden elements and other stuff that can be safely removed without affecting
