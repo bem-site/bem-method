@@ -109,5 +109,13 @@ Project repository on [GitHub](https://github.com/bem/bem-site-engine).
 
 Authored by Andrey Kuznetsov [gh: tormozz48](https://github.com/tormozz48), [@kuznetsov48](https://twitter.com/@kuznetsov48), [andrey.kuznetsov48@yandex.ua](mailto:andrey.kuznetsov48@yandex.ua).
 
+## bem-cn
+
+Friendly BEM class names generator. Simple syntax was created originally to be used in React components, but it is good enough with any other frameworks.
+
+Project repository on [GitHub](https://github.com/albburtsev/bem-cn).
+
+Authored by Alexander Burtsev, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me)
+
 ____________________________________
 **Join us with your projects!**

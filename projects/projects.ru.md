@@ -104,5 +104,13 @@
 
 Автор проекта –  Андрей Кузнецов, [gh: tormozz48](https://github.com/tormozz48), [@kuznetsov48](https://twitter.com/@kuznetsov48), [andrey.kuznetsov48@yandex.ua](mailto:andrey.kuznetsov48@yandex.ua).
 
+## bem-cn
+
+Генератор имен классов по методологии БЭМ. Лаконичный синтаксис изначально предназначался для использования в React-компонентах. Однако, утилита может использоваться и с другими фреймворками.
+
+Репозиторий проекта на [GitHub](https://github.com/albburtsev/bem-cn)
+
+Автор проекта — Александр Бурцев, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me)
+
 ___________________________________
 **Присоединяйтесь и вы!**
