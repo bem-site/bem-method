@@ -43,10 +43,11 @@
 
 Текущие вакансии в офисы Яндекса:
 -----------------
-  * [Разработчик интерфейсов](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml) в офис Яндекса в Москве.
+  * [Разработчик интерфейсов](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml) в офис Яндекса в Москве и Екатеринбурге;
+  * [Фронтенд-разработчик](https://yandex.ru/jobs/vacancies/dev/frontdev_radiosvodka/) в офис Яндекса в Екатеринбурге.
 
 Текущие вакансии, где требуется знание БЭМ:
 -----------------
   * [Вакансии для фронтендеров со знанием БЭМ](https://bitbucket.org/manufactura/jobs/) — работа в команде интерактивного агентства [Мануфактура](http://factory.mn/), Воронеж;
   * [Разработчик интерфейсов](https://giftd.ru/jobs/frontend-lead.html) — удаленная работа/работа в офисе Giftd, Санкт-Петербург;
-  * [Senior Front-end Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) в Берлин, Германия.
+  * [Старший разработчик интерфейсов](http://www.deltamethod.com/senior-frontend-developer-mf/) — работа в компании Дельтаметод, Берлин, Германия.
