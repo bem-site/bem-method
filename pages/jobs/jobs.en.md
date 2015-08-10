@@ -43,10 +43,11 @@ If you recognize yourself in the description above, please submit your CV with a
 
 Current Yandex openings:
 -----------------
-  * [Frontend Developer](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml) in Yandex.Moscow.
+  * [Frontend Developer](https://company.yandex.ru/job/vacancies/dev_int_yaservices.xml) in Yandex office in Moscow and Ekaterinburg;
+  * [Frontend Developer](https://yandex.ru/jobs/vacancies/dev/frontdev_radiosvodka/) in Yandex office in Ekaterinburg.
 
 Current non-Yandex openings requiring BEM knowledge:
 -----------------
   * [Front-end openings requiring BEM knowledge](https://bitbucket.org/manufactura/jobs/) — join front-end team at Interactive Agency [Manufacture](http://factory.mn/) in Voronezh, Russia;
   * [Front-end Developer](http://giftd.ru/jobs/frontend-lead.html) — remote position/work in the office of Giftd, Saint Petersburg, Russia;
-  * [Senior Front-end Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) in Berlin, Germany.
+  * [Senior Front-end Developer](http://www.deltamethod.com/senior-frontend-developer-mf/) — position in Deltamethod project, Berlin, Germany.
