@@ -54,9 +54,7 @@ For example, a menu item is not used outside of the context of a menu block, the
 
 ![Menu items](https://img-fotki.yandex.ru/get/15588/158800653.0/0_111fb6_192672cf_orig)
 
-> [A block or an element: when should I use which?](../../faq/faq.en.md#В-каком-случае-создавать-блок-в-каком-элемент)
-
-> [Why does the BEM methodology not recommend using elements within elements?](../../faq/faq.en.md#Почему-в-БЭМ-не-рекомендуется-создавать-элементы-элементов-block__elem1__elem2)
+> Using elements within elements is not recommended by the BEM methodology.
 
 Modifier
 --------
