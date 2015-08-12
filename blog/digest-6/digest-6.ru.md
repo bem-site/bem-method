@@ -131,7 +131,7 @@
 * [Холивар](https://ru.bem.info/forum/520/)на тему рациональности использования БЭМ для небольших проектов.
 * [Вопрос](https://ru.bem.info/forum/476/) про шаблонизацию с BEMHTML на клиенте.
 * [enb server as API](https://ru.bem.info/forum/498/).
-* [Варианты использования](https://ru.bem.info/forum/483/)БЭМ в django.
+* [Варианты использования](https://ru.bem.info/forum/483/) БЭМ в django.
 * Как [подключать сторонние библиотеки](https://ru.bem.info/forum/491/) в проект на БЭМ.
 * [Много вопросов](https://ru.bem.info/forum/?page=1&labels=gemini) по использованию gemini.
  
