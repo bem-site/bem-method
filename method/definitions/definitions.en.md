@@ -17,7 +17,7 @@ BEM: Key concepts
 Block
 -----
 
-A logically and functionally independent page component, the equivalent of a component in Web Components. A block encapsulates behavior (JavaScript), templates, styles (CSS), and other [implementation technologies](#implementation-technology). Blocks being independent allows for their re-use, as well as facilitating the [project development and support process](../solved-problems/solved-problems.en.md).
+A logically and functionally independent page component, the equivalent of a component in Web Components. A block encapsulates behavior (JavaScript), templates, styles (CSS), and other [implementation technologies](#implementation-technology). Blocks being independent allows for their re-use, as well as facilitating the project development and support process.
 
 #### Block features
 
