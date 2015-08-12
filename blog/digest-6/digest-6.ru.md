@@ -12,7 +12,7 @@
 * Релиз bem-core [2.7.0](https://ru.bem.info/libs/bem-core/v2.7.0/changelog/#270).
 * Релиз bem-components[2.3.0](https://ru.bem.info/libs/bem-components/v2.3.0/changelog/#230).
 
-Кроме того, библиотеки уже обновлены и в [project-stub](https://ru.bem.info/tutorials/project-stub/).
+Кроме того, библиотеки уже обновлены в [project-stub](https://ru.bem.info/tutorials/project-stub/).
 
 Последние версии библиотек также доступны для использования с CDN и через bower:
 * [dist для bem-core](https://github.com/bem/bem-core-dist)
