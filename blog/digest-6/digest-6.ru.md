@@ -164,7 +164,7 @@
  * [BEM Guidelines for component focused development](http://www.joelambert.co.uk/articles/bem-guidelines) — статья от разработчика Joe Lambert.
  * [Ros Ivanov](https://www.youtube.com/channel/UC-_16EgYOzinLxegLrTMkTA) записал и выложил два скринкаста БЭМ (BEM): Для Начинающих [Часть 1](https://youtu.be/5Gp_2kN5Bv4) и [Часть 2 Организация Файлов](https://youtu.be/9sEEc2qsfh4).
  * Ребята из uWebDesign записали первый видеоподкаст [Разговоры у экрана #1 — знакомство с технологиями](https://uwebdesign.ru/screen-talks-1-meet-the-technology/). Большая часть обсуждений была уделена БЭМ, где обсуждались вопросы от/для начинающих.
- * Опубликовано видео доклада с MoscowJS 22 — [Кодовая база CSS: избавляемся от головной боли](https://youtu.be/_bpSL71qknY) Андрея Михайлова, где он рассказал про БЭМ-путь и симантические HTML-классы.
+ * Опубликовано видео доклада [Кодовая база CSS: избавляемся от головной боли](https://youtu.be/_bpSL71qknY) от Андрея Михайлова с MoscowJS 22, где он рассказал про БЭМ-путь и симантические HTML-классы.
 
 На этом все на сегодня, приятного вам чтения, использования и **Stay BEMed**!
 
