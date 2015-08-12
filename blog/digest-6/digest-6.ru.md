@@ -10,7 +10,7 @@
 
 Выпустили новые релизы главных библиотек:
 * Релиз bem-core [2.7.0](https://ru.bem.info/libs/bem-core/v2.7.0/changelog/#270).
-* Релиз bem-components[2.3.0](https://ru.bem.info/libs/bem-components/v2.3.0/changelog/#230).
+* Релиз bem-components [2.3.0](https://ru.bem.info/libs/bem-components/v2.3.0/changelog/#230).
 
 Кроме того, библиотеки уже обновлены в [project-stub](https://ru.bem.info/tutorials/project-stub/).
 
@@ -24,7 +24,7 @@
 
 ### borschik
 
-Выпустили релиз `borschik` [v1.4.0](https://ru.bem.info/tools/optimizers/borschik/changelog/), в котором поддержали фриз для .woff2, .js, .css и .cur.
+Выпустили релиз `borschik` [v1.4.0](https://ru.bem.info/tools/optimizers/borschik/changelog/), в котором поддержали фриз для `.woff2`, `.js`, `.css` и `.cur`.
 
 ### bem-tools
 
@@ -38,7 +38,7 @@
 
 Выпустили версии `enb` [v0.16.0](https://github.com/enb-make/enb/releases/tag/v0.16.0) и [v0.17.0](https://github.com/enb-make/enb/releases/tag/v0.17.0). В них:
 * Появился пул дочерних процессов для выполнения «тяжелых» задач в технологиях. Использование этого пула позволит значительно ускорить сборку шаблонов и работу с borschik'ом.
-* Технология file-merge стала поддерживать карты кода (source maps).
+* Технология `file-merge` стала поддерживать карты кода (source maps).
 * При помощи переменной окружения COLOR теперь можно включать цветной вывод в логах.
 
 Выпустили версию `enb-bem-i18n` [v0.4.0](https://github.com/enb-bem/enb-bem-i18n/releases/tag/v0.4.0), где улучшили поддержку параметризованных склоняемых ключей, а также исправили ошибки для работы с tanker. Подробности в [описании к релизу](https://github.com/enb-bem/enb-bem-i18n/releases/tag/v0.4.0).
@@ -54,7 +54,7 @@
 Выпустили версии `enb-priv-js` [v2.2.0](https://github.com/enb-make/enb-priv-js/releases/tag/v2.2.0), [v2.3.0](https://github.com/enb-make/enb-priv-js/releases/tag/v2.3.0) и [v2.3.1](https://github.com/enb-make/enb-priv-js/releases/tag/v2.3.1), в которых:
 * Добавили технологию [pub-js-only-i18n](https://github.com/enb-make/enb-priv-js/blob/master/techs/pub-js-only-i18n.js).
 * Для технологий [priv-client](https://github.com/enb-make/enb-priv-js/blob/master/techs/priv-client.js) и [priv-server](https://github.com/enb-make/enb-priv-js/blob/master/techs/priv-server.js) добавили опцию `keepRequires`, которая отключает вырезание require, что позволяет ускорить сборку.
-* Вместо модуля enb-borschik теперь используется borschik. В результате на проект ставится на одну зависимость меньше.
+* Вместо модуля `enb-borschik` теперь используется `borschik`. В результате на проект ставится на одну зависимость меньше.
 
 Выпустили версии `enb-bembundle` [v1.2.0](https://github.com/enb-make/enb-bembundle/releases/tag/v1.2.0) и [v1.2.1](https://github.com/enb-make/enb-bembundle/releases/tag/v1.2.1), в которых:
 * Добавили технологию [css-borschik-chunks](https://github.com/enb-make/enb-bembundle/blob/master/techs/css-borschik-chunks.js).
@@ -68,7 +68,7 @@
 * `MockNode` — модуль для имитации `Node`.
 * `MockLogger` — модуль для имитации `Logger`.
 
-Так же было исправлено несколько ошибок в версиях mock-enb [v0.0.1](https://github.com/enb-make/mock-enb/releases/tag/v0.0.1), [v0.0.2](https://github.com/enb-make/mock-enb/releases/tag/v0.0.2) и [v0.1.0](https://github.com/enb-make/mock-enb/releases/tag/v0.1.0)
+Так же было исправлено несколько ошибок в версиях `mock-enb` [v0.0.1](https://github.com/enb-make/mock-enb/releases/tag/v0.0.1), [v0.0.2](https://github.com/enb-make/mock-enb/releases/tag/v0.0.2) и [v0.1.0](https://github.com/enb-make/mock-enb/releases/tag/v0.1.0)
 
 ## Новости документации
 
