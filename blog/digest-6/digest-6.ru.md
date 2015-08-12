@@ -162,9 +162,9 @@
  * [Making BEM easier in Sass](http://ianmcnally.me/blog/2015/5/26/making-bem-easier-in-sass) — статья от разработчика Ian McNally.
  * [Front-End Stack for EveryDollar](http://www.developwithpurpose.com/front-end-stack-for-everydollar/) — статья от разработчика Elijah Manor.
  * [BEM Guidelines for component focused development](http://www.joelambert.co.uk/articles/bem-guidelines) — статья от разработчика Joe Lambert.
- * [Ros Ivanov](https://www.youtube.com/channel/UC-_16EgYOzinLxegLrTMkTA) записал и выложил два скринкаста БЭМ (BEM): Для Начинающих [Часть 1](https://youtu.be/5Gp_2kN5Bv4) и [Часть 2 Организация Файлов](https://youtu.be/9sEEc2qsfh4).
+ * <a href="https://www.youtube.com/channel/UC-_16EgYOzinLxegLrTMkTA">Ros Ivanov</a> записал и выложил два скринкаста БЭМ (BEM): Для Начинающих <a href="https://youtu.be/5Gp_2kN5Bv4">Часть 1</a> и <a href="https://youtu.be/9sEEc2qsfh4">Часть 2 Организация Файлов</a>.
  * Ребята из uWebDesign записали первый видеоподкаст [Разговоры у экрана #1 — знакомство с технологиями](https://uwebdesign.ru/screen-talks-1-meet-the-technology/). Большая часть обсуждений была уделена БЭМ, где обсуждались вопросы от/для начинающих.
- * Опубликовано видео доклада [Кодовая база CSS: избавляемся от головной боли](https://youtu.be/_bpSL71qknY) от Андрея Михайлова с MoscowJS 22, где он рассказал про БЭМ-путь и симантические HTML-классы.
+ * Опубликовано видео доклада <a href="https://youtu.be/_bpSL71qknY">Кодовая база CSS: избавляемся от головной боли</a> от Андрея Михайлова с MoscowJS 22, где он рассказал про БЭМ-путь и симантические HTML-классы.
 
 На этом все на сегодня, приятного вам чтения, использования и **Stay BEMed**!
 
