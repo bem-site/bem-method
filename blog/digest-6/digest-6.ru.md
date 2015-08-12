@@ -148,7 +148,7 @@
 * [enb-ng-techs](https://github.com/bem-incubator/enb-ng-techs) от него же предоставляет технологии `ng-annotate` и `ng-templates` для сборки Angular-проектов на ENB.
 * [bem-flux](https://github.com/bem-incubator/bem-flux) от Романа Парадеева (sameoldmadness) — это реализация FLUX-парадигмы для `bem-core`.
 * [html2bemjson](https://github.com/bem-incubator/html2bemjson) от Владимира Гриненко (tadatuta), как и следует из названия, позволяет превратить любой HTML-код в [BEMJSON](https://ru.bem.info/technology/bemjson/). Недавно вышла новая версия пакета.
-* Антон Виноградов (verybigman) выпустил мажорный релиз [bem-grid](https://github.com/bem-incubator/bem-grid) [2.0.0](https://github.com/bem-incubator/bem-grid/releases/tag/2.0.0), в рамках которого сетка перешла на использование [lost](https://github.com/corysimmons/lost).
+* Антон Виноградов ([@awinogradov](https://twitter.com/awinogradov)) выпустил мажорный релиз [bem-grid](https://github.com/bem-incubator/bem-grid) [2.0.0](https://github.com/bem-incubator/bem-grid/releases/tag/2.0.0), в рамках которого сетка перешла на использование [lost](https://github.com/corysimmons/lost).
 * [bem-scrollspy](https://github.com/bem-incubator/bem-scrollspy) от Евгения Баранова (kompolom) — это реализациея scrollspy на `i-bem.js`.
 
 Если у вас есть полезные инструменты или библиотеки на БЭМ, присоединяйтесь к нашему БЭМ-инкубатору, и мы обязательно расскажем о них в следующих выпусках!
