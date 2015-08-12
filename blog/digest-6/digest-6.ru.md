@@ -157,8 +157,8 @@
 
 В этом разделе мы собрали интересные ссылки на статьи, репозитории и просто твиты про БЭМ, найденные в поиске или социальных сетях:
  * Для своей новой библиотеки блоков [Material Design Lite](http://www.getmdl.io/) Google [выбрал БЭМ](https://github.com/google/material-design-lite/wiki/Understanding-BEM) в качестве методологии. Библиотека содержит набор готовых блоков для разработки в стиле материального дизайна.
- * Пара реально крутых сниппетов для тех кто делает БЭМ в Sublime Text от [@voischev](https://twitter.com/voischev/status/626129020225200128).
- * Мини-демка о том, как БЭМ используется для проектов на AngularJS от [@vladimore](https://twitter.com/vladimore/status/622389329894117378).
+ * Пара [реально крутых сниппетов](https://github.com/voischev/dotfiles/tree/master/sublime/snippets) для тех кто делает БЭМ в Sublime Text от [@voischev](https://twitter.com/voischev/).
+ * [Мини-демка](https://bitbucket.org/catindev/getflat-mobile) о том, как БЭМ используется для проектов на AngularJS от [@vladimore](https://twitter.com/vladimore/).
  * [Making BEM easier in Sass](http://ianmcnally.me/blog/2015/5/26/making-bem-easier-in-sass) — статья от разработчика Ian McNally.
  * [Front-End Stack for EveryDollar](http://www.developwithpurpose.com/front-end-stack-for-everydollar/) — статья от разработчика Elijah Manor.
  * [BEM Guidelines for component focused development](http://www.joelambert.co.uk/articles/bem-guidelines) — статья от разработчика Joe Lambert.
