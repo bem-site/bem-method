@@ -112,5 +112,13 @@
 
 Автор проекта — Александр Бурцев, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me)
 
+## b_
+
+Генератор классов по методологии БЭМ с возможностью гибко настраивать синтаксис форматирования.
+
+Репозиторий проекта на [GitHub](https://github.com/azproduction/b_)
+
+Автор проекта — Михаил Давыдов, [gh: azproduction](https://github.com/azproduction), [i@azproduction.me](mailto:i@azproduction.me)
+
 ___________________________________
 **Присоединяйтесь и вы!**
