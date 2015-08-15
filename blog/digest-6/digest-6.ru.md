@@ -99,7 +99,7 @@
 * [React BEM](https://github.com/cuzzo/react-bem) от Cuzzo Yahn (cuzzo) из Лос-Анжелеса.
 * [bem-cn](https://github.com/albburtsev/bem-cn) от Alexander Burtsev (albburtsev) из Москвы.
 * [b_](https://github.com/azproduction/b_) от Миши Давыдова (azproduction) из Берлина.
-* [Flexible Grid System BEM CSS](https://github.com/flexiblegs/flexiblegs-bem-css) от Doğukan Güven (dnomak) из Турции.
+* [Flexible Grid System BEM](https://github.com/flexiblegs/flexiblegs-bem) от Doğukan Güven (dnomak) из Турции.
 * [A PostCSS plugin to lint BEM-style CSS](https://github.com/postcss/postcss-bem-linter/) от Nicolas Gallagher (necolas) из San Francisco (Twitter) и David Clark из Турции.
 * [BEM Constructor](https://github.com/danielguillan/bem-constructor) от Daniel Guillan (danielguillan) из Барселоны. Это Sass-библиотека, предоставляющая определённый синтаксический сахар для описания независимых объектов в БЭМ-стиле.
 * [_bemify](http://franzheidl.github.io/bemify/) — Sass миксины, которые помогают писать .scss в БЭМ стиле, от Franz Heidl (franzheidl) из Берлина.
@@ -166,7 +166,7 @@
  * Ребята из uWebDesign записали первый видеоподкаст [Разговоры у экрана #1 — знакомство с технологиями](https://uwebdesign.ru/screen-talks-1-meet-the-technology/). Большая часть обсуждений была уделена БЭМ, где обсуждались вопросы от/для начинающих.
  * Опубликовано видео доклада <a href="https://youtu.be/_bpSL71qknY">Кодовая база CSS: избавляемся от головной боли</a> от Андрея Михайлова с MoscowJS 22, где он рассказал про БЭМ-путь и симантические HTML-классы.
 
-## Вакансии 
+## Вакансии
 
 Как вы знаете, на сайте [bem.info](https://ru.bem.info) есть рубрика [Работа](https://ru.bem.info/jobs/). Это страничка, куда мы собираем актуальные ссылки на открытые вакансии в Яндексе и не только, где требуются разработчики со знанием БЭМ.
 
