@@ -144,12 +144,12 @@
 Наша новая рубрика «Инкубатор БЭМ-проектов», в которой мы будем делиться проектами из организации [bem-incubator](https://github.com/bem-incubator/). В него вступает все больше и больше разработчиков сообщества БЭМ, которые делают проекты с помощью технологии и хотят развивать и поддерживать их вместе.
 
 Последние проекты Инкубатора:
-* [ng-bem-components](https://github.com/bem-incubator/ng-bem-components) от Алексея Гурьянова (Guria) — это обертка, которая помогает использовать `bem-components` в проекте на Angular. Посмотреть на результат в деле можно [здесь](http://embed.plnkr.co/jnd1e2VQ6SoOWsCztubX/preview).
+* [ng-bem-components](https://github.com/bem-incubator/ng-bem-components) от Алексея Гурьянова ([@guria](https://twitter.com/GuriaFS)) — это обертка, которая помогает использовать `bem-components` в проекте на Angular. Посмотреть на результат в деле можно [здесь](http://embed.plnkr.co/jnd1e2VQ6SoOWsCztubX/preview).
 * [enb-ng-techs](https://github.com/bem-incubator/enb-ng-techs) от него же предоставляет технологии `ng-annotate` и `ng-templates` для сборки Angular-проектов на ENB.
-* [bem-flux](https://github.com/bem-incubator/bem-flux) от Романа Парадеева (sameoldmadness) — это реализация FLUX-парадигмы для `bem-core`.
-* [html2bemjson](https://github.com/bem-incubator/html2bemjson) от Владимира Гриненко (tadatuta), как и следует из названия, позволяет превратить любой HTML-код в [BEMJSON](https://ru.bem.info/technology/bemjson/). Недавно вышла новая версия пакета.
-* Антон Виноградов (verybigman) выпустил мажорный релиз [bem-grid](https://github.com/bem-incubator/bem-grid) [2.0.0](https://github.com/bem-incubator/bem-grid/releases/tag/2.0.0), в рамках которого сетка перешла на использование [lost](https://github.com/corysimmons/lost).
-* [bem-scrollspy](https://github.com/bem-incubator/bem-scrollspy) от Евгения Баранова (kompolom) — это реализациея scrollspy на `i-bem.js`.
+* [bem-flux](https://github.com/bem-incubator/bem-flux) от Романа Парадеева ([@sameoldmadness](https://twitter.com/sameoldmadness)) — это реализация FLUX-парадигмы для `bem-core`.
+* [html2bemjson](https://github.com/bem-incubator/html2bemjson) от Владимира Гриненко ([@tadatuta](https://twitter.com/tadatuta)), как и следует из названия, позволяет превратить любой HTML-код в [BEMJSON](https://ru.bem.info/technology/bemjson/). Недавно вышла новая версия пакета.
+* Антон Виноградов ([@awinogradov](https://twitter.com/awinogradov)) выпустил мажорный релиз [bem-grid](https://github.com/bem-incubator/bem-grid) [2.0.0](https://github.com/bem-incubator/bem-grid/releases/tag/2.0.0), в рамках которого сетка перешла на использование [lost](https://github.com/corysimmons/lost).
+* [bem-scrollspy](https://github.com/bem-incubator/bem-scrollspy) от Евгения Баранова ([@kompolom](https://twitter.com/kompolom)) — это реализациея scrollspy на `i-bem.js`.
 
 Если у вас есть полезные инструменты или библиотеки на БЭМ, присоединяйтесь к нашему БЭМ-инкубатору, и мы обязательно расскажем о них в следующих выпусках!
 
