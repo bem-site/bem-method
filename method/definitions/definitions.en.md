@@ -104,14 +104,21 @@ In real-life projects, a BEM tree can be presented in any format that supports t
 Let's consider an example of a DOM tree:
 
 ``` html
-<header class="header"> <img class="logo"> <form class="search"> <input type="input"> <button type="button"></button> </form> <div class="lang-switcher"></div> </header>
+<header class="header">
+    <img class="logo">
+    <form class="search-form">
+        <input type="input">
+        <button type="button"></button>
+    </form>
+    <div class="lang-switcher">
+</div> </header>
 ```
 
 The corresponding BEM tree will look like this:
 
     header
       ├──logo
-      └──search
+      └──search-form
         ├──input
         └──button
       └──lang-switcher
@@ -123,7 +130,7 @@ XML
 ``` xml
 <block:header>
     <block:logo/>
-    <block:search>
+    <block:search-form>
         <block:input/>
         <block:button/>
     </block:search>
