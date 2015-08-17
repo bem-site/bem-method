@@ -100,7 +100,7 @@
 ```html
 <header class="header">
     <img class="logo">
-    <form class="search">
+    <form class="search-form">
         <input type="input">
         <button type="button"></button>
     </form>
@@ -113,7 +113,7 @@
 ```
 header
   ├──logo
-  └──search
+  └──search-form
     ├──input
     └──button
   └──lang-switcher
@@ -126,7 +126,7 @@ XML
 ```xml
 <block:header>
     <block:logo/>
-    <block:search>
+    <block:search-form>
         <block:input/>
         <block:button/>
     </block:search>
