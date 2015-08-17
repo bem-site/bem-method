@@ -6,7 +6,7 @@
 
 ## bem-flashcards
 
-Небольшой проект на основе project-stub с использованием библиотек bem-core и bem-history. Содержит набор английских слов с переводом, которые выводятся в виде переворачивающихся карточек. Есть возможность заменить словарь на другой или просто на произвольный набор пар фраз.
+Небольшой проект на основе [project-stub](https://ru.bem.info/tutorials/project-stub/) с использованием библиотек [bem-core](https://ru.bem.info/libs/bem-core/) и [bem-history](https://ru.bem.info/libs/bem-history/). Содержит набор английских слов с переводом, которые выводятся в виде переворачивающихся карточек. Есть возможность заменить словарь на другой или просто на произвольный набор пар фраз.
 
 Для подготовки словаря из XLS-файла есть [ruby-скрипт](https://gist.github.com/ololobus/11f222d1fc48f2efef56). Входной XLS-файл должен содержать три колонки (A, B, C): слово, транскрипция, перевод.
 
@@ -18,7 +18,7 @@
 
 ## bem-grid
 
-Библиотека для описания CSS-сеток. CSS-сетка построена на flexbox'ах и имеет деградацию для старых браузеров, а также она полностью настраивается под любые нужды через переменные, используют rem единицы и суперскоростной Stylus. Основана на библиотеке bem-core.
+Библиотека для описания CSS-сеток. CSS-сетка построена на flexbox'ах и имеет деградацию для старых браузеров, а также она полностью настраивается под любые нужды через переменные, используют rem-единицы и суперскоростной Stylus. Основана на библиотеке [bem-core](https://ru.bem.info/libs/bem-core/).
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-grid).
 
@@ -26,7 +26,7 @@
 
 ## bem-ng
 
-Библиотека для совместного использования БЭМ-методологии и AngularJS. Позволяет писать view-ориентированный BEMJSON.
+Библиотека для совместного использования [БЭМ-методологии](https://ru.bem.info/method/) и AngularJS. Позволяет писать view-ориентированный BEMJSON.
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-ng).
 
@@ -50,7 +50,7 @@
 
 ## gem 'bem-on-rails’
 
-Позволяет работать с БЭМ-методологией в проектах на Ruby on Rails.
+Позволяет работать с [БЭМ-методологией](https://ru.bem.info/method/) в проектах на Ruby on Rails.
 
 Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-on-rails).
 
@@ -60,7 +60,7 @@
 
 Набор сниппетов для быстрого набора BEMJSON в свободном редакторе Atom. Устанавливается из менеджера пакетов Atom.
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/atom-bemjson-snippets)
+Репозиторий проекта на [GitHub](https://github.com/verybigman/atom-bemjson-snippets).
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
@@ -68,23 +68,23 @@
 
 Библиотека блоков социальных виджетов для сайтов, использующих БЭМ-стек технологий. Share, Like, Follow, Yandex.Share API и другие. Содержит SVG-иконки социальных сетей и несколько тем оформления. Библиотека использует некоторые блоки библиотеки [bem-components](https://ru.bem.info/libs/bem-components/).
 
-Репозиторий проекта на [GitHub](https://github.com/voischev/bem-social)
+Репозиторий проекта на [GitHub](https://github.com/voischev/bem-social).
 
 Автор проекта — Иван Воищев, [gh: voischev](https://github.com/voischev), [@voischev](https://twitter.com/voischev), [voischev.ivan@ya.ru](mailto:voischev.ivan@ya.ru).
 
 ## bnsf
 
-Фреймворк для создания одностраничных приложений по методологии БЭМ. Позволяет легко использовать единожды написанный код, в первую очередь шаблоны и маршрутизацию, как на клиенте, так и на сервере. Дружелюбен к поисковым системам. Зависит от [bem-core](https://ru.bem.info/libs/bem-core), для шаблонизации использует `BEMHTML` и `BEMTREE`, сборка через `bem-tools`.
+Фреймворк для создания одностраничных приложений по [БЭМ-методологии](https://ru.bem.info/method/). Позволяет легко использовать единожды написанный код, в первую очередь шаблоны и маршрутизацию как на клиенте, так и на сервере. Дружелюбен к поисковым системам. Зависит от [bem-core](https://ru.bem.info/libs/bem-core), для шаблонизации использует BEMHTML и BEMTREE, сборка с помощью [bem-tools](https://ru.bem.info/tools/bem/bem-tools/).
 
-Репозиторий проекта на [GitHub](https://github.com/apsavin/bnsf)
+Репозиторий проекта на [GitHub](https://github.com/apsavin/bnsf).
 
 Автор проекта — Александр Савин, [gh: apsavin](https://github.com/apsavin), [@apsavin](https://twitter.com/ap_savin), [a.p.savin@yandex.ru](mailto:a.p.savin@yandex.ru).
 
 ## sails-bem-project-stub
 
-Заготовка проекта на nodejs MVC-фреймворке [Sails](http://sailsjs.org).
+Заготовка проекта на Node.js MVC-фреймворке [Sails](http://sailsjs.org).
 
-В качестве фронтенда используется полный стек технологий БЭМ: BEMTREE, BEMHTML, i-bem.js, библиотеки bem-core и bem-components. БЭМ-блоки интерфейса находятся в папке views.
+В качестве фронтенда используется полный стек технологий БЭМ: BEMTREE, BEMHTML, i-bem.js, библиотеки [bem-core](https://ru.bem.info/libs/bem-core/) и [bem-components](https://ru.bem.info/libs/bem-components). БЭМ-блоки интерфейса находятся в папке `views`.
 
 Проект настроен на использование mongoDB, но предоставляет возможность использовать произвольную базу данных.
 
@@ -94,11 +94,11 @@
 
 ## bem-site-engine
 
-Проект для сбора и публикации документации, основанный на использовании библиотеки `bem-core@v2*`. Предназначен для запуска сайта с набором статей, представленном в удобном для навигации и поиска виде.
+Проект для сбора и публикации документации, основанный на использовании библиотеки [bem-core@v2*](https://ru.bem.info/libs/bem-core/v2/). Предназначен для запуска сайта с набором статей, представленном в удобном для навигации и поиска виде.
 
 В проекте используются блоки из библиотеки [bem-components](https://ru.bem.info/libs/bem-components/). Более подробно про проект рассказывается в [докладе](https://events.yandex.ru/lib/talks/2191/) на BEMup'е в Санкт-Петербурге.
 
-На данный момент ветка dev стабилизирована и заморожена для разработки. Баги принимаем в [issues](https://github.com/bem/bem-site-engine/issues) проекта на GitHub.
+На данный момент ветка `dev` стабилизирована и заморожена для разработки. Баги принимаем в [issues](https://github.com/bem/bem-site-engine/issues) проекта на GitHub.
 
 Репозиторий проекта на [GitHub](https://github.com/bem/bem-site-engine).
 
@@ -106,19 +106,19 @@
 
 ## bem-cn
 
-Генератор имен классов по методологии БЭМ. Лаконичный синтаксис изначально предназначался для использования в React-компонентах. Однако, утилита может использоваться и с другими фреймворками.
+Генератор имен классов по [БЭМ-методологии](https://ru.bem.info/method/). Лаконичный синтаксис изначально предназначался для использования в React-компонентах. Однако, утилита может использоваться и с другими фреймворками.
 
-Репозиторий проекта на [GitHub](https://github.com/albburtsev/bem-cn)
+Репозиторий проекта на [GitHub](https://github.com/albburtsev/bem-cn).
 
-Автор проекта — Александр Бурцев, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me)
+Автор проекта — Александр Бурцев, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me).
 
 ## b_
 
-Генератор классов по методологии БЭМ с возможностью гибко настраивать синтаксис форматирования.
+Генератор классов по [БЭМ-методологии](https://ru.bem.info/method/) с возможностью гибко настраивать синтаксис форматирования.
 
-Репозиторий проекта на [GitHub](https://github.com/azproduction/b_)
+Репозиторий проекта на [GitHub](https://github.com/azproduction/b_).
 
-Автор проекта — Михаил Давыдов, [gh: azproduction](https://github.com/azproduction), [i@azproduction.me](mailto:i@azproduction.me)
+Автор проекта — Михаил Давыдов, [gh: azproduction](https://github.com/azproduction), [i@azproduction.me](mailto:i@azproduction.me).
 
 ___________________________________
 **Присоединяйтесь и вы!**
