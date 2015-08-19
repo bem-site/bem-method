@@ -32,7 +32,6 @@
 
 <script async class="speakerdeck-embed" data-id="5e476430d05b4da0a9327368d88d3dca" data-ratio="1.6" src="//speakerdeck.com/assets/embed.js"></script>
 
-
 **Биография спикеров**
 
 [Владимир Гриненко](https://ru.bem.info/authors/grinenko-vladimir/), руководитель службы разработки БЭМ. Профессионал в HTML/CSS/JS. 
