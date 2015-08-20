@@ -1,6 +1,5 @@
 # BEM talk on You Gotta Love Frontend Conference 2015
 
-<img src="https://img-fotki.yandex.ru/get/5500/246231603.0/0_151090_d51ff18f_orig.png" style="width: 400px; height: auto; float: right; padding: 0 0 20px 20px;" alt="You Gotta Love Frontend"/>
 **You Gotta Love Frontend** is the first international frontend conference of its kind that was held on June 8 — 9, 2015, in Tel Aviv (Israel).
 
 More information about it could be found on [the official web page](http://yougottalovefrontend.com/).
