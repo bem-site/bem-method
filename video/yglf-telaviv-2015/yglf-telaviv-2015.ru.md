@@ -1,6 +1,5 @@
 # БЭМ на конференции You Gotta Love Frontend 2015 
 
-<img src="https://img-fotki.yandex.ru/get/5500/246231603.0/0_151090_d51ff18f_orig.png" style="width: 400px; height: auto; float: right; padding: 0 0 20px 20px;" alt="You Gotta Love Frontend"/>
 8 — 9 июня 2015 года в Тель-авиве (Израиль) прошла первая международная конференция по фронтенд-разработке **You Gotta Love Frontend**. 
 
 Больше информации о ней можно получить на [официальном веб-сайте](http://yougottalovefrontend.com/).
