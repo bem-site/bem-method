@@ -129,7 +129,7 @@ XML
     <block:search-form>
         <block:input/>
         <block:button/>
-    </block:search>
+    </block:search-form>
     <block:lang-switcher/>
 </block:header>
 ```
