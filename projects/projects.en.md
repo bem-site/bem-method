@@ -110,7 +110,7 @@ Authored by Andrey Kuznetsov [gh: tormozz48](https://github.com/tormozz48), [@ku
 
 ## bem-cn
 
-BEM-friendly class names generator. Simple syntax was created originally to be used in React components, but it is good enough with any other frameworks.
+[BEM](https://en.bem.info/method/)-friendly class names generator. Simple syntax was created originally to be used in React components, but it is good enough with any other frameworks.
 
 Project repository on [GitHub](https://github.com/albburtsev/bem-cn).
 
@@ -118,7 +118,7 @@ Authored by Alexander Burtsev, [gh: albburtsev](https://github.com/albburtsev), 
 
 ## b_
 
-BEM-friendly class names generator with an option of flexible adjustments of the formatting syntax.
+[BEM](https://en.bem.info/method/)-friendly class names generator with an option of flexible adjustments of the formatting syntax.
 
 Project repository on [GitHub](https://github.com/azproduction/b_).
 
