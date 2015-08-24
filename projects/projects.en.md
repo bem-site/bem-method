@@ -63,7 +63,7 @@ Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [
 
 A set of snippets for speedy generating of BEMJSON in Atom editor. Install from an Atom package manager.
 
-Project repository on [GitHub](https://github.com/verybigman/atom-bemjson-snippets)
+Project repository on [GitHub](https://github.com/verybigman/atom-bemjson-snippets).
 
 Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
@@ -71,17 +71,16 @@ Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [
 
 A library of social widget blocks for sites built with BEM stack of technologies. Share, Like, Follow, Yandex.Share API and some others. Contains social networks SVG icons together with a few design themes. Library uses a few blocks of [bem-components](https://ru.bem.info/libs/bem-components/) library.
 
-Project repository on [GitHub](https://github.com/voischev/bem-social)
+Project repository on [GitHub](https://github.com/voischev/bem-social).
 
 Authored by Ivan Voischev, [gh: voischev](https://github.com/voischev), [@voischev](https://twitter.com/voischev), [voischev.ivan@ya.ru](mailto:voischev.ivan@ya.ru).
 
 ## bnsf
 
 A framework to create one-page application according to BEM methodology. Allows easy reuse of the same code, especially
-templates and routing, on both the client side and server side. Search engine friendly. Depends on [bem-core](https://ru.bem.info/libs/bem-core) library,
-for templating uses `BEMHTML` and `BEMTREE`, building with `bem-tools`.
+templates and routing, on both the client side and server side. Search engine friendly. Depends on [bem-core](https://ru.bem.info/libs/bem-core) library, for templating uses `BEMHTML` and `BEMTREE`, building with `bem-tools`.
 
-Project repository on [GitHub](https://github.com/apsavin/bnsf)
+Project repository on [GitHub](https://github.com/apsavin/bnsf).
 
 Authored by Alexander Savin, [gh: apsavin](https://github.com/apsavin), [@apsavin](https://twitter.com/ap_savin), [a.p.savin@yandex.ru](mailto:a.p.savin@yandex.ru).
 
@@ -111,11 +110,20 @@ Authored by Andrey Kuznetsov [gh: tormozz48](https://github.com/tormozz48), [@ku
 
 ## bem-cn
 
-Friendly BEM class names generator. Simple syntax was created originally to be used in React components, but it is good enough with any other frameworks.
+BEM-friendly class names generator. Simple syntax was created originally to be used in React components, but it is good enough with any other frameworks.
 
 Project repository on [GitHub](https://github.com/albburtsev/bem-cn).
 
-Authored by Alexander Burtsev, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me)
+Authored by Alexander Burtsev, [gh: albburtsev](https://github.com/albburtsev), [burtsev@burtsev.me](mailto:burtsev@burtsev.me).
+
+## b_
+
+BEM-friendly class names generator with an option of flexible adjustments of the formatting syntax.
+
+Project repository on [GitHub](https://github.com/azproduction/b_).
+
+Authored by Mikhail Davydov, [gh: azproduction](https://github.com/azproduction), [i@azproduction.me](mailto:i@azproduction.me).
+
 
 ____________________________________
 **Join us with your projects!**
