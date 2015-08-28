@@ -33,7 +33,7 @@ We need to create a local copy of a `project-stub`. You can choose any of your f
 
 **Note** If your operating system is Windows, you must run the following commands in Git Bash with administrator rights.
 
-    $ git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 test-project
+    $ git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.1 test-project
 
 Go to a new project directory:
 
@@ -169,7 +169,7 @@ Refresh the page to see the corresponding `<div>` with a `"head"` class:
         <head>...</head>
         <body class="page">
             <div class="head"></div>
-            <script src="_index.js"></script>
+            <script src="index.min.js"></script>
         </body>
     </html>
 
@@ -209,7 +209,7 @@ Refresh the page to view the new corresponding `<div>`:
                     <div class="layout__right">right here</div>
                 </div>
             </div>
-            <script src="_index.js"></script>
+            <script src="index.min.js"></script>
         </body>
     </html>
 
@@ -337,7 +337,7 @@ Use a **link** block from the same library to render an icon with a slogan as a 
 }
 ```
 
-[Code sample](https://gist.github.com/dmytroyarmak/10934301) index.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/991dd26025331405dcf2) index.bemjson.js.
 
 <a name="block-redefine"></a>
 ### Modifying the library blocks
@@ -375,9 +375,8 @@ You can use BEMHTML templates not only to declare HTML tags to output but also t
 
 Add some code to wrap the page contents in additional container node; put it into a newly created `desktop.blocks/page/page.bemhtml` file.
 
-    block('page').match(!this._done)(
+    block('page')(
         content()(function() {
-            this._done = true;
             return {
                 elem: 'inner',
                 content: applyNext()
@@ -395,7 +394,7 @@ Add some code to wrap the page contents in additional container node; put it int
                 <div class="head">
                     <div class="layout">...</div>
                 </div>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -437,7 +436,7 @@ A web page we are going to develop contains a list of some goods. To be able to 
             //...
     }
 
-[Code sample](https://gist.github.com/dmytroyarmak/10935438) index.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/2cb6080ba35d3a3cacf6) index.bemjson.js.
 
 This block has to be implemented in BEMHTML technology in order to be turned into an appropriate piece of HTML. It needs to be styled with CSS as well. So you can create this block with two types of technologies at once.
 
@@ -487,7 +486,7 @@ Then write BEMHTML code in a `desktop.blocks/goods/goods.bemhtml` file that proc
                     <li class="goods__item">...</li>
                     <li class="goods__item">...</li>
                 </ul>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -541,17 +540,17 @@ Also you have to link ie.css style to `index.bemjson.js`:
     favicon: '/favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' }},
-        { elem: 'css', url: '_index.css' },
-        { elem: 'css', url: '_index.ie.css', ie: 'IE' }
+        { elem: 'css', url: 'index.min.css' },
+        { elem: 'css', url: 'index.min.ie.css', ie: 'IE' }
     ],
-    scripts: [{ elem: 'js', url: '_index.js' }],
+    scripts: [{ elem: 'js', url: 'index.min.js' }],
     content: [
         {
             // ...
         }]
     })
 
-[Code sample](https://gist.github.com/dmytroyarmak/10936158) index.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/507c6d4e28ba6e6c2e9d) index.bemjson.js.
 
 CSS rules for Internet Explorer should be created in separate `ie.css` file.
 
@@ -651,7 +650,7 @@ Here you can mix **head** and **box** blocks:
         mix: [ { block: 'box' } ],
         content: ...
     }
-[Code sample](https://gist.github.com/dmytroyarmak/10937483) index.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/dbee1265bcd65c6de2aa) index.bemjson.js.
 
     <!DOCTYPE html>
     <html class="ua_js_yes">
@@ -662,7 +661,7 @@ Here you can mix **head** and **box** blocks:
                     <div class="layout">...</div>
                 </div>
                 <ul class="goods">...</ul>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -697,7 +696,7 @@ Let's specify that each item element from a **goods** block has the same formatt
                     //...
 
                 </ul>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -727,7 +726,8 @@ The **box** block borrowed from a third-party library supports roll up animation
 To use this functionality in a **head** block you need to change the a block BEMJSON declaration and set JavaScript property to `true` for the mixed **box** block.
 
     mix: [{ block: 'box', js: true }]
-[Code sample](https://gist.github.com/dmytroyarmak/10937757) index.bemjson.js.
+
+[Code sample](https://gist.github.com/innabelaya/41aa8afbfbcfe7c4a9a9) index.bemjson.js.
 
 It is required to have a `switcher` element in the block.
 
@@ -745,7 +745,7 @@ It is required to have a `switcher` element in the block.
             elem: 'switcher'
         }
     ]
-[Code sample](https://gist.github.com/dmytroyarmak/10937850) index.bemjson.js.
+[Code sample](https://gist.github.com/innabelaya/4a14fb92ca9103bed3a5) index.bemjson.js.
 
 With that you have a block with a clickable arrow-shaped element which rolls the block up.
 

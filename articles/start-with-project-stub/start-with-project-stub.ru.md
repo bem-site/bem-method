@@ -35,7 +35,7 @@
 
 **Важно** Пользователям Windows необходимо выполнять все команды в Git Bash. Убедитесь, что Git Bash запущен от имени администратора.
 
-    $ git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 test-project
+    $ git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.1 test-project
 
 Переходим в папку нашего проекта:
 
@@ -168,7 +168,7 @@ BEMJSON-декларация - это структура страницы, оп�
         <head>...</head>
         <body class="page">
             <div class="head"></div>
-            <script src="_index.js"></script>
+            <script src="index.min.js"></script>
         </body>
     </html>
 ```
@@ -209,7 +209,7 @@ BEMJSON-декларация - это структура страницы, оп�
                     <div class="layout__right">right here</div>
                 </div>
             </div>
-            <script src="_index.js"></script>
+            <script src="index.min.js"></script>
         </body>
     </html>
 
@@ -259,7 +259,7 @@ BEMJSON-декларация - это структура страницы, оп�
         }
     }
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10934051) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/a5c5e962c07c19865cda) index.bemjson.js.
 
 ![Блок logo](https://img-fotki.yandex.ru/get/15582/158800653.0/0_111fce_fe11809a_orig)
 
@@ -285,7 +285,7 @@ BEMJSON-декларация - это структура страницы, оп�
         ]
     }
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10934128) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/a3e623137ef63175bc6e) index.bemjson.js.
 
 Добавим обработку пользовательского запроса Яндекс.Браузером:
 
@@ -311,7 +311,7 @@ BEMJSON-декларация - это структура страницы, оп�
 }
 ```
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10934244) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/7db50cf3978a740fbea3) index.bemjson.js.
 
 ![Форма поиска](https://img-fotki.yandex.ru/get/15499/158800653.0/0_111fd4_74d6387_orig)
 
@@ -342,7 +342,7 @@ BEMJSON-декларация - это структура страницы, оп�
     }
 }
 ```
-[Пример кода](https://gist.github.com/dmytroyarmak/10934301) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/309c252fbfd192239af7) index.bemjson.js.
 
 <a name="block-redefine"></a>
 ### Модификация блоков библиотек
@@ -380,9 +380,8 @@ BEMHTML-шаблоны могут не просто определять тег�
 
 В созданном файле `desktop.blocks/page/page.bemhtml` необходимо написать код, оборачивающий контент блока в дополнительный контейнер.
 
-    block('page').match(!this._done)(
+    block('page')(
         content()(function() {
-            this._done = true;
             return {
                 elem: 'inner',
                 content: applyNext()
@@ -400,7 +399,7 @@ BEMHTML-шаблоны могут не просто определять тег�
                 <div class="head">
                     <div class="layout">...</div>
                 </div>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -439,7 +438,7 @@ BEMHTML-шаблоны могут не просто определять тег�
             },
             //...
     }
-[Пример кода](https://gist.github.com/dmytroyarmak/10935438) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/3405ec7368aae6c3afe9) index.bemjson.js.
 
 Чтобы эти данные превратились в нужную разметку, блок должен быть реализован в технологии BEMHTML. Для корректировки внешнего вида применим CSS-правила. Воспользуемся командой `bem create`, чтобы создать блок сразу в двух технологиях:
 
@@ -489,7 +488,7 @@ BEMHTML-шаблоны могут не просто определять тег�
                     <li class="goods__item">...</li>
                     <li class="goods__item">...</li>
                 </ul>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -539,17 +538,17 @@ CSS-правила для блока можно скопировать [отсю
     favicon: '/favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' }},
-        { elem: 'css', url: '_index.css' },
-        { elem: 'css', url: '_index.ie.css', ie: 'IE' }
+        { elem: 'css', url: 'index.min.css' },
+        { elem: 'css', url: 'index.min.ie.css', ie: 'IE' }
     ],
-    scripts: [{ elem: 'js', url: '_index.js' }],
+    scripts: [{ elem: 'js', url: 'index.min.js' }],
     content: [
         {
             // ...
         }]
     })
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10936158) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/0ea90c663dc5757adbfd) index.bemjson.js.
 
 CSS-правила для Internet Explorer создаются в специальном `ie.css`-файле. Он не входит в список технологий по умолчанию.
 
@@ -654,7 +653,7 @@ CSS-правила для Internet Explorer создаются в специал
         content: ...
     }
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10937483) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/a0b4cb6d0c1a1d226797) index.bemjson.js.
 
     <!DOCTYPE html>
     <html class="ua_js_yes">
@@ -665,7 +664,7 @@ CSS-правила для Internet Explorer создаются в специал
                     <div class="layout">...</div>
                 </div>
                 <ul class="goods">...</ul>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -701,7 +700,7 @@ CSS-правила для Internet Explorer создаются в специал
                     //...
 
                 </ul>
-                <script src="_index.js"></script>
+                <script src="index.min.js"></script>
             </div>
         </body>
     </html>
@@ -732,7 +731,7 @@ CSS-правила для Internet Explorer создаются в специал
 
     mix: [{ block: 'box', js: true }]
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10937757) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/4773090c1f499991d7a4) index.bemjson.js.
 
 Также разместим внутри блока элемент `switcher`:
 
@@ -751,7 +750,7 @@ CSS-правила для Internet Explorer создаются в специал
         }
     ]
 
-[Пример кода](https://gist.github.com/dmytroyarmak/10937850) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/c7ce1ce81ba019bacf67) index.bemjson.js.
 
 Теперь в блоке **head** есть стрелочка, умеющая сворачивать и разворачивать его.
 
