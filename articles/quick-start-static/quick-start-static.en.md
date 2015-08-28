@@ -26,7 +26,7 @@ A [template repository](https://github.com/bem/project-stub) is the quickest and
     **NB** Do not use root rights to install npm and bower dependencies. bower dependencies are installed in the `libs` directory by npm postinstall.
 
     ```bash
-    git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 start-project
+    git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.1 start-project
     cd start-project
     npm install
     ```
@@ -80,9 +80,9 @@ A [BEMJSON file](https://en.bem.info/technology/bemjson/) describes a page struc
         block : 'page',
         title : 'hello',
         head : [
-            { elem : 'css', url : '_hello.css' }
+            { elem : 'css', url : 'hello.min.css' }
         ],
-        scripts : [{ elem : 'js', url : '_hello.js' }],
+        scripts : [{ elem : 'js', url : 'hello.min.js' }],
         mods : { theme : 'islands' },
         content : [
             {
