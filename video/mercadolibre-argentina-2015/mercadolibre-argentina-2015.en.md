@@ -10,7 +10,7 @@ Argentina (Buenos Aires and San Luis) and Chile (Santiago de Chile).
 
 On this page you may find slides of BEM talk. 
 
-## B__E_M
+## `B__E_M`
 
 **Slides**
 
