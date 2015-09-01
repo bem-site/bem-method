@@ -22,6 +22,4 @@ On this page you may find slides of BEM talk.
 and JavaScript. Specialised in architecting and building large-scale web applications, strongly focused on performance, 
 flexibility, scalability and maintainability.
 
-In case you want to reach him, you can find him on [Twitter](https://twitter.com/battaglr/) or [GitHub](https://github.com/battaglr/).
-
 Have a pleasant time sliding and **Stay BEMed!**
