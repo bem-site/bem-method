@@ -98,8 +98,7 @@
 
 [Фотоотчет](http://fotki.yandex.ru/users/ya-events/album/145885/?&p=1) с мероприятия.
 
-Следите за новостями на [Facebook](http://bit.ly/fb-bem), в [Твиттере](http://bit.ly/ru-twi), [клубе на Я.Ру](http://bit.ly/ru-club)
+Следите за новостями на [Facebook](http://bit.ly/fb-bem), в [Твиттере](http://bit.ly/ru-twi), [форуме](http://bit.ly/ru-club)
 и сайте [bem.info](https://ru.bem.info/).
 
 **Stay BEMed!**
-

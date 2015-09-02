@@ -26,14 +26,14 @@ The conclusion that comes to mind then is that, firstly, build tools must be sim
 
 The above considerations lead to the idea of making the build process easier both in terms of understanding and in terms of development. That was the idea I brought to the hackathon as the mentor of the Build team.
 
-To put this idea into practice, I thought we needed a set of principles for the development of tools, which must be followed to perform the tasks set. 
+To put this idea into practice, I thought we needed a set of principles for the development of tools, which must be followed to perform the tasks set.
 
 After the word ”pain“ came up three times in my presentation, as I spoke of my experience of using and developing the current solutions, I went on to list the principles that would prevent that word from being uttered again.
 
 Here's what I came up with:
 
   1. One module per task.
-  2. Simple API. 
+  2. Simple API.
 	An API helps users accomplish specific tasks, so it should interact in terms of those tasks and not through a set of its own abstractions.
   3. Plug-ins.
 	A module allows variation in the way the task is accomplished without having to rewrite the module.
@@ -52,7 +52,7 @@ the nature of the project. Fortunately, my concerns proved ill-founded, as I fou
 Our team:
 
   * [Sasha Belyanskii](https://events.yandex.ru/lib/people/610407/) (@belyanskii) works in the Yandex.Direct team in the Simferopol office; presented the [BEM IDE](https://en.bem.info/blog/first-bem-ide/) project at the hackathon, but ended up with us once the teams were formed. Sasha's bem.info profile can be found [here](https://en.bem.info/authors/belyanskii-alexandr/).
-  * [Vsevolod Strukchinskii](https://events.yandex.ru/lib/people/9466/) (@floatdrop) works in the Yandex office in Yekaterinburg and is the author of [gulp-bem](http://github.com/floatdrop/gulp-bem) and maintainer of [getbem.com](https://getbem.com).
+  * [Vsevolod Strukchinskii](https://events.yandex.ru/lib/people/9466/) (@floatdrop) works in the Yandex office in Yekaterinburg and is the author of [gulp-bem](http://github.com/floatdrop/gulp-bem) and maintainer of [getbem.com](http://getbem.com).
   * [Evgeniy Gavryushin](https://events.yandex.ru/lib/people/423628/) (@egavr) works on tools development in the Yandex office in Simferopol and is the author of `generator-bem-stub`. Evgeniy's bem.info profile can be seen [here](https://en.bem.info/authors/gavryushin-evgeny/).
 
 ## Planning

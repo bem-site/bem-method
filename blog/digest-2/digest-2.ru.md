@@ -10,7 +10,7 @@
 
 ### ENB
 * Выпустили стабильный релиз [enb-bem-techs](https://github.com/enb-bem/enb-bem-techs/releases/tag/v1.0.0). В пакет вошли базовые технологии, уже известные всем из пакета ENB. В релизе значительно проработано API технологий, большая часть кода покрыта тестами, а также исправлен ряд ошибок. 
-* Актуализировали документацию для каждой из технологий и [несколько документов](https://github.com/enb-bem/enb-bem-techs/tree/master/docs), которые помогут сконфигурировать проект для наиболее популярных задач. Все нюансы описаны в [руководстве по миграции](https://github.com/enb-bem/enb-bem-techs/blob/master/MIGRATION.md). Подробнее про все изменения читайте в [истории изменений](https://github.com/enb-bem/enb-bem-techs/blob/master/CHANGELOG.md).
+* Актуализировали документацию для каждой из технологий и [несколько документов](https://github.com/enb-bem/enb-bem-techs/tree/master/docs), которые помогут сконфигурировать проект для наиболее популярных задач. Все нюансы описаны в [руководстве по миграции](https://github.com/enb-bem/enb-bem-techs/blob/master/MIGRATION-1.md). Подробнее про все изменения читайте в [истории изменений](https://github.com/enb-bem/enb-bem-techs/blob/master/CHANGELOG.md).
 * Пакеты из организации `enb-bem` для работы с Windows исправлены.
 * Устаревшие ENB-пакеты в npm объявлены deprecated:
   * Вместо `enb-bemhtml` следует использовать [enb-xjst](https://github.com/enb-bem/enb-xjst).

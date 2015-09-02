@@ -95,7 +95,7 @@
 
 #### Есть ли у вас нечто наподобие плагина для редактора по вашим библиотекам, с автодополнением и подсказками?
 
-Есть несколько полезных плагинов. Например, набор сниппетов для написания bemhtml шаблонов для [Atom](https://github.com/jchouse/bemhtml) и [Sublime text 2](https://github.com/feugenix/BEMHTMLSublime), а также набор сниппетов для быстрого написания bemjson для [Atom](https://github.com/verybigman/atom-bemjson-snippets). 
+Есть несколько полезных плагинов. Например, набор сниппетов для написания bemhtml шаблонов для [Atom](https://github.com/jchouse/bemhtml) и [Sublime text 2](https://github.com/feugenix/BEMHTMLSublime), а также набор сниппетов для быстрого написания bemjson для [Atom](https://github.com/awinogradov/atom-bemjson-snippets). 
 
 #### Что такое borschik? Что такое фриз картинок? Как минифицировать CSS и JS в БЭМ инструментах?
 

@@ -51,7 +51,7 @@
 Наша команда:
 
   * [Саша Белянский](https://events.yandex.ru/lib/people/610407/) (@belyanskii) работает в команде Яндекс.Директа в симферопольском офисе и представлял проект [BEM IDE](http://ru.bem.info/blog/first-bem-ide/), но в итоге формирования команд перешел к нам. Профиль Саши на bem.info можно найти [здесь](http://ru.bem.info/authors/belyanskii-alexandr/).
-  * [Всеволод Струкчинский](https://events.yandex.ru/lib/people/9466/) (@floatdrop) работает в екатеринбургском Яндексе и является автором [gulp-bem](http://github.com/floatdrop/gulp-bem) и ментейнером [getbem.com](https://getbem.com).
+  * [Всеволод Струкчинский](https://events.yandex.ru/lib/people/9466/) (@floatdrop) работает в екатеринбургском Яндексе и является автором [gulp-bem](http://github.com/floatdrop/gulp-bem) и ментейнером [getbem.com](http://getbem.com).
   * [Евгений Гаврюшин](https://events.yandex.ru/lib/people/423628/) (@egavr) занимается разработкой инструментов в симферопольском Яндексе и является автором `generator-bem-stub`. Профиль Жени на bem.info можно найти [здесь](http://ru.bem.info/authors/gavryushin-evgeny/).
 
 ## Планирование
