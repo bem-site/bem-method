@@ -6,7 +6,7 @@
 переименования, в которой отключены issues.
 
 Все старые ссылки на issues, к сожалению, не работают. Нужно вручную изменять в урлах вида
-https://github.com/bem/bem-controls/issues/106 строку "bem-controls" на "bem-components" 
+https://github.com/bem/bem-components/issues/106 строку "bem-controls" на "bem-components" 
 (https://github.com/bem/bem-components/issues/106).
 
 Сделать репозиторий read-only нельзя, поэтому большая просьба к вам туда по возможности ничего не пушить.
