@@ -22,17 +22,17 @@ Authored by Aleksey Kondratov, [gh: ololobus](https://github.com/ololobus), [@ol
 A library to define CSS grids. CSS grid is built using flexbox and has a degradation for old browsers. It is fully customizable
 for any needs using variables, uses rem units and superfast Stylus. Based on bem-core library.
 
-Project repository on [GitHub](https://github.com/verybigman/bem-grid).
+Project repository on [GitHub](https://github.com/awinogradov/bem-grid).
 
-Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bem-ng
 
 A library to use BEM methodology together with AngularJS. Allows writing view-oriented BEMJSON.
 
-Project repository on [GitHub](https://github.com/verybigman/bem-ng).
+Project repository on [GitHub](https://github.com/awinogradov/bem-ng).
 
-Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bemy
 
@@ -47,25 +47,25 @@ Authored by Anton Grischenko, [gh: f0rmat1k](https://github.com/f0rmat1k), [f0rm
 An unusual generator of BEM projects that use AngularJS. Using it you can easily create a basic structure of a BEM project and
 modules of an AngularJS application. Generator uses a module paradigm that may appear rather unconventional, but that is in fact very convenient and appropriate if you're familiar with BEM.
 
-Project repository on [GitHub](https://github.com/verybigman/generator-bem-ng).
+Project repository on [GitHub](https://github.com/awinogradov/generator-bem-ng).
 
-Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## gem bem-on-rails
 
 Allows working with BEM methodology in Ruby on Rails projects.
 
-Project repository on [GitHub](https://github.com/verybigman/bem-on-rails).
+Project repository on [GitHub](https://github.com/awinogradov/bem-on-rails).
 
-Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## atom-bemjson-snippets
 
 A set of snippets for speedy generating of BEMJSON in Atom editor. Install from an Atom package manager.
 
-Project repository on [GitHub](https://github.com/verybigman/atom-bemjson-snippets).
+Project repository on [GitHub](https://github.com/awinogradov/atom-bemjson-snippets).
 
-Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bem-social
 

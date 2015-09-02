@@ -20,17 +20,17 @@
 
 Библиотека для описания CSS-сеток. CSS-сетка построена на flexbox'ах и имеет деградацию для старых браузеров, а также она полностью настраивается под любые нужды через переменные, используют rem-единицы и суперскоростной Stylus. Основана на библиотеке [bem-core](https://ru.bem.info/libs/bem-core/).
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-grid).
+Репозиторий проекта на [GitHub](https://github.com/awinogradov/bem-grid).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bem-ng
 
 Библиотека для совместного использования [БЭМ-методологии](https://ru.bem.info/method/) и AngularJS. Позволяет писать view-ориентированный BEMJSON.
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-ng).
+Репозиторий проекта на [GitHub](https://github.com/awinogradov/bem-ng).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bemy
 
@@ -44,25 +44,25 @@
 
 Необыкновенный генератор БЭМ-проектов, использующих AngularJS. С ним вы сможете создать базовую структуру БЭМ-проекта и модули AngularJS приложения. Генератор использует непривычную, на первый взгляд, парадигму модулей, но очень удобную и правильную для тех, кто знаком с БЭМ.
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/generator-bem-ng).
+Репозиторий проекта на [GitHub](https://github.com/awinogradov/generator-bem-ng).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## gem 'bem-on-rails’
 
 Позволяет работать с [БЭМ-методологией](https://ru.bem.info/method/) в проектах на Ruby on Rails.
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/bem-on-rails).
+Репозиторий проекта на [GitHub](https://github.com/awinogradov/bem-on-rails).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## atom-bemjson-snippets
 
 Набор сниппетов для быстрого набора BEMJSON в свободном редакторе Atom. Устанавливается из менеджера пакетов Atom.
 
-Репозиторий проекта на [GitHub](https://github.com/verybigman/atom-bemjson-snippets).
+Репозиторий проекта на [GitHub](https://github.com/awinogradov/atom-bemjson-snippets).
 
-Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
+Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
 ## bem-social
 

@@ -42,7 +42,7 @@ Ever since the forum went live, the missing sorting functionality had been an is
 
 **Preview of .md code for posts and comments**
 
-The forum uses GitHub issues as a data source, where the content is written in markdown format, so we had it the same way. However, the preview feature was unavailable as the user wrote text and presented it in markdown blocks, which was rather inconvenient. We decided to implement markdown code preview during the hackathon and completed the task successfully. To do that, we used the BEM library [bem-content](https://github.com/verybigman/bem-content), which is a good library for content formatting. The library is maintained by [Anton Vinogradov](http://ru.bem.info/authors/vinogradov-anton/), who was one of our team members.
+The forum uses GitHub issues as a data source, where the content is written in markdown format, so we had it the same way. However, the preview feature was unavailable as the user wrote text and presented it in markdown blocks, which was rather inconvenient. We decided to implement markdown code preview during the hackathon and completed the task successfully. To do that, we used the BEM library [bem-content](https://github.com/awinogradov/bem-content), which is a good library for content formatting. The library is maintained by [Anton Vinogradov](http://ru.bem.info/authors/vinogradov-anton/), who was one of our team members.
 
 **Comment pagination**
 
