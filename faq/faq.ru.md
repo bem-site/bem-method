@@ -98,10 +98,10 @@
 Блок может иметь вложенную структуру элементов в DOM-дереве:
 
 ```html
-<div class='block'>
-    <div class='block__elem1'>
-        <div class='block__elem2'>
-            <div class='block__elem3'></div>
+<div class="block">
+    <div class="block__elem1">
+        <div class="block__elem2">
+            <div class="block__elem3"></div>
         </div>
     </div>
 </div>
@@ -110,22 +110,23 @@
 Однако эта же структура блока в методологии БЭМ всегда будет представлена плоским списком элементов:
 
 ```css
-.block{}
-.block__elem1{}
-.block__elem2{}
-.block__elem3{}
+.block {}
+.block__elem1 {}
+.block__elem2 {}
+.block__elem3 {}
 ```
 
 Это позволяет изменять DOM-структуру блока без внесения правок в коде каждого отдельного элемента:
 
 ```html
-<div class='block'>
-    <div class='block__elem1'>
-        <div class='block__elem2'></div>
+<div class="block">
+    <div class="block__elem1">
+        <div class="block__elem2"></div>
     </div>
-    <div class='block__elem3'></div>
+    <div class="block__elem3"></div>
 </div>
 ```
+
 Структура блока меняется, а правила для элементов и их названия остаются прежними.
 
 ## Зачем писать имя блока в именах модификаторов и элементов?
@@ -198,13 +199,13 @@ _____________________________________________
 
 ```
 blocks/
-    input/
-        input_layout_horiz.css
-        input_layout_vertical.css
-        input__elem.css
-        input.css
-        input.js
-    button/
+  input/
+      input_layout_horiz.css
+      input_layout_vertical.css
+      input__elem.css
+      input.css
+      input.js
+  button/
 ```
 
 * Блоку соответствует отдельная директория.
@@ -212,10 +213,10 @@ blocks/
 
 ```
 blocks/
-    input/
-        input.css
-        input.js
-    button/
+  input/
+      input.css
+      input.js
+  button/
 ```
 
 * Директории для блоков не используются.
@@ -223,12 +224,12 @@ blocks/
 
 ```
 blocks/
-    input.css
-    input.js
-    button.css
-    button.js
-
+  input.css
+  input.js
+  button.css
+  button.js
 ```
+
 **flat-схема**
 
 * Директории для блоков не используются.
@@ -236,16 +237,16 @@ blocks/
 
 ```
 blocks/
-    input_type_search.js
-    input_type_search.bemhtml
-    input__box.bemhtml
-    input.css
-    input.js
-    input.bemhtml
-    button.css
-    button.js
-    button.bemhtml
-    button.png
+  input_type_search.js
+  input_type_search.bemhtml
+  input__box.bemhtml
+  input.css
+  input.js
+  input.bemhtml
+  button.css
+  button.js
+  button.bemhtml
+  button.png
 ```
 
 ## Зачем использовать `i-bem.js`, если можно писать на jQuery?
