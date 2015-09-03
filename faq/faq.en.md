@@ -20,7 +20,7 @@ Blocks and elements
 JavaScript
 ----------
 
--   [Why use `i-bem.js` when you have jQuery?](#why-use-i-bem.js-when-you-have-jquery)
+-   [Why use `i-bem.js` when you have jQuery?](#why-use-i-bemjs-when-you-have-jquery)
 
 CSS
 ---
@@ -30,7 +30,7 @@ CSS
 -   [Can I combine a tag and a class in a selector (e.g. `button.button`)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 -   [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
 -   [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
--   [Why can't I write `<div class="block_mod">` instead of `<div class="block block_mod">`, when the modifier name already contains all the block data?](#why-cant-i-write-div-class-block_mod-instead-of-div-class-block-block-mod-when-the-modifier-name-already-contains-all-the-block-data)
+-   [Why can't I write `<div class="block_mod">` instead of `<div class="block block_mod">`, when the modifier name already contains all the block data?](why-cant-i-write-div-classblock_mod-instead-of-div-classblock-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
 -   [Why can't I include a CSS property name in a modifier name: `.block__element_border-color_grey`?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
 **Not found your question?** — [Ask our team on the forum](https://en.bem.info/forum/)
@@ -40,7 +40,7 @@ How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
 
 1.  BEM is applicable to JavaScript as well as CSS.
 2.  BEM has more in common with Web Components than with the CSS solutions listed. ([What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components))
-3.  BEM provides a comprehensive solution for creating the architecture for your project and helps organize development processes. For details, see the section [Using the methodology for solving web development problems](../method/solved-problems/solved-problems.ru.md) (in Russian only).
+3.  BEM provides a comprehensive solution for creating the architecture for your project and helps organize development processes.
 
 > Find out more about the [BEM methodology](https://en.bem.info/method/).
 
@@ -77,7 +77,7 @@ Abstraction over a DOM tree vs Custom Elements
 -   In Web Components, Custom Elements are used. Such an approach allows only for one component to be hosted on a single DOM node.
 -   BEM introduces the concept of a [BEM tree](../method/definitions/definitions.en.md#bem-tree). BEM uses [mixes](../method/definitions/definitions.en.md#mix) — the practice of hosting several BEM entities on a single DOM node.
 
-What's the difference between BEM and Bootstrap?
+What is the difference between BEM and Bootstrap?
 ------------------------------------------------
 
 In BEM terms, [Bootstrap](http://getbootstrap.com/) is a set of ready-made blocks. BEM, on the other hand, is not a library of interface elements but a methodology that allows you to
@@ -146,10 +146,9 @@ A block name in the names of [BEM entities](../method/definitions/definitions.en
 -   [Mixes](#mixes)
 -   [Code searching](#code-searching)
 
-------------------------------------------------------------------------
+---------------------------------------------------
 
 **NB**: The BEM methodology [allows freedom of choice](../method/naming/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
-----------------------------------------------------------------------
 
 #### Namespace
 
