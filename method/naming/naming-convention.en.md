@@ -64,7 +64,7 @@ If a block has several identical elements, such as in the case of menu items, al
 
 ------------------------------------------------------------------------
 
-**Important!** Using elements within elements is not recommended by the BEM methodology.
+**Important!** [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2).
 
 **Example**
 
@@ -96,7 +96,7 @@ The full name of a modifier is created using the scheme:
 
 ------------------------------------------------------------------------
 
-**Important!** In the BEM methodology, a modifier cannot be used outside of the context of its owner.
+**Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element).
 
 #### Block modifier
 
