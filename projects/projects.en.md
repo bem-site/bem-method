@@ -22,7 +22,7 @@ Authored by Aleksey Kondratov, [gh: ololobus](https://github.com/ololobus), [@ol
 A library to define CSS grids. CSS grid is built using flexbox and has a degradation for old browsers. It is fully customizable
 for any needs using variables, uses rem units and superfast Stylus. Based on bem-core library.
 
-Project repository on [GitHub](https://github.com/awinogradov/bem-grid).
+Project repository on [GitHub](https://github.com/bem-incubator/bem-grid).
 
 Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
