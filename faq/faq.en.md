@@ -13,7 +13,7 @@ Blocks and elements
 
 -   [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
 -   [Why does BEM not recommend using elements within elements (`block__elem1__elem2`)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
--   [Why include the block name in modifier names and element names?](#why-include-the-block-name-in-modifier-names-and-element-names)
+-   [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
 -   [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
 -   [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
 
@@ -137,7 +137,7 @@ This makes it possible to change the DOM structure of the block without modifyin
 
 The structure of the block changes while the rules for its elements and their names remain the same.
 
-Why include the block name in names of modifier and element names?
+Why include the block name in names of modifier and element?
 ------------------------------------------------------------------------
 
 A block name in the names of [BEM entities](../method/definitions/definitions.en.md#bem-entity) is used for
