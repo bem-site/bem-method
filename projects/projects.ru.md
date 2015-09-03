@@ -20,7 +20,7 @@
 
 Библиотека для описания CSS-сеток. CSS-сетка построена на flexbox'ах и имеет деградацию для старых браузеров, а также она полностью настраивается под любые нужды через переменные, используют rem-единицы и суперскоростной Stylus. Основана на библиотеке [bem-core](https://ru.bem.info/libs/bem-core/).
 
-Репозиторий проекта на [GitHub](https://github.com/awinogradov/bem-grid).
+Репозиторий проекта на [GitHub](https://github.com/bem-incubator/bem-grid).
 
 Автор проекта — Антон Виноградов, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
