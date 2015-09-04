@@ -33,7 +33,7 @@ CSS
 -   [Why can't I write `<div class="block_mod">` instead of `<div class="block block_mod">`, when the modifier name already contains all the block data?](#why-cant-i-write-div-classblock_mod-instead-of-div-classblock-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
 -   [Why can't I include a CSS property name in a modifier name: `.block__element_border-color_grey`?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
-**Not found your question?** — [Ask our team on the forum](https://en.bem.info/forum/)
+**No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
 
 How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
 -------------------------------------------------------
