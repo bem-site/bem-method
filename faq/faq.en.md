@@ -389,3 +389,5 @@ Why can't I include a CSS property name in a modifier name: `.block__element_bor
 -   If other properties (background, margins) are added, the name of the modifier will no longer match the content.
 
 The BEM methodology recommends choosing names for modifiers based on semantics rather than visual representation.
+
+<small>This FAQ is partially based on http://getbem.com/faq/</small>
