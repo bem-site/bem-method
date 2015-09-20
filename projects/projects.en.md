@@ -34,6 +34,14 @@ Project repository on [GitHub](https://github.com/awinogradov/bem-ng).
 
 Authored by Anton Winogradov, [gh: verybigman](https://github.com/awinogradov), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
+## angular-bem
+
+A set of directives to simplify your workflow with BEM-markup in AngularJS applications.
+
+Project repository on [GitHub](https://github.com/tenphi/angular-bem).
+
+Authored by Andrey Yamanov, [gh: tenphi](https://github.com/tenphi), [@tenphi](https://twitter.com/tenphi), [tenphi@gmail.com](mailto:tenphi@gmail.com).
+
 ## bemy
 
 A Node.js application for manipulations with BEM structure. Allows creating and renaming BEM entities on a file system (analogue of the `bem create` command). Could be used to set up a block file structure using [ENB](http://enb-make.info) building tool `deps.js` files. Works via shell with Webstorm, Sublime and other editing programs.
