@@ -58,10 +58,10 @@
 
 ## sublime-bemjson-snippets
 
-Набор сниппетов для быстрого набора BEMJSON в редакторе Sublime (v2, v3).
-[Установка](https://github.com/1vank1n/sublime-bemjson-snippets#install) возможна как вручную, так и через Package Control.
+Набор сниппетов для быстрого набора BEMJSON в редакторе Sublime Text (v2, v3).
+[Установка](https://github.com/1vank1n/sublime-bemjson-snippets#install) возможна как вручную, так и через [Package Control](https://packagecontrol.io/packages/BEMJSON%20snippets).
 
-Репозиторий проекта на [GitHub](https://github.com/1vank1n/sublime-bemjson-snippets)
+Репозиторий проекта на [GitHub](https://github.com/1vank1n/sublime-bemjson-snippets).
 
 Автор проекта — Иван Лукьянец, [gh: 1vank1n](https://github.com/1vank1n), [@1vank1n](https://twitter.com/1vank1n), [lukyanets.ivan@gmail.com](mailto:lukyanets.ivan@gmail.com).
 

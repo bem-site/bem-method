@@ -59,6 +59,15 @@ Project repository on [GitHub](https://github.com/verybigman/atom-bemjson-snippe
 
 Authored by Anton Winogradov, [gh: verybigman](https://github.com/verybigman), [@awinogradov](https://twitter.com/awinogradov), [winogradovaa@gmail.com](mailto:winogradovaa@gmail.com).
 
+## sublime-bemjson-snippets
+
+A set of snippets for speedy generation of BEMJSON in Sublime Text (v2, v3).
+[Install](https://github.com/1vank1n/sublime-bemjson-snippets#install) manually or use [Package Control](https://packagecontrol.io/packages/BEMJSON%20snippets).
+
+Project repository on [GitHub](https://github.com/1vank1n/sublime-bemjson-snippets).
+
+Authored by Ivan Lukyanets, [gh: 1vank1n](https://github.com/1vank1n), [@1vank1n](https://twitter.com/1vank1n), [lukyanets.ivan@gmail.com](mailto:lukyanets.ivan@gmail.com).
+
 ## bem-social
 
 A library of social widget blocks for sites built with BEM stack of technologies. Share, Like, Follow, Yandex.Share API and some others. Contains social networks SVG icons together with a few design themes. Library uses a few blocks of [bem-components](https://ru.bem.info/libs/bem-components/) library.
