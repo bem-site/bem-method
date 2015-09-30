@@ -11,6 +11,12 @@
 
 ## Мастер-класс: Автоматизация БЭМ 
 
+**Видео**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-un-YYgU6Pg" frameborder="0" allowfullscreen></iframe>
+
+**Скринкаст**
+
 <iframe width="420" height="315" src="https://www.youtube.com/embed/VD_l1feBwTk" frameborder="0" allowfullscreen></iframe>
 
 Мастер-класс по БЭМ на конференции провел [Владимир Гриненко](https://ru.bem.info/authors/grinenko-vladimir/). Он рассказал 
