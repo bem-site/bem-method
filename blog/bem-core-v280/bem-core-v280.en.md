@@ -12,17 +12,16 @@ API to work with JS and templates and could be used both in browsers and in node
 
 Internationalisation-powered build-related documentation could be found in a build package called [enb-bem-i18n](https://en.bem.info/tools/bem/enb-bem-i18n/readme/).
 
-Besides, default jQuery initialisation could be enabled via https ([#1202](https://github.com/bem/bem-core/issues/1202)) and there 
+Besides, jQuery is loaded via https by default ([#1202](https://github.com/bem/bem-core/issues/1202)) and there 
 is no bemhtml-compat dependancy ([#1186](https://github.com/bem/bem-core/issues/1186)) any longer — we deleted it. 
-
-If you use bem-tools, please, proceed with `npm i bemhtml-compat --save` to install the package on a project level.
+If you use `bem-tools`, please, proceed with `npm i bemhtml-compat --save` to install the package on a project level.
 
 ## Bug fixes and other changes
 
 Following bug fixes and changes we released as well: 
 * Bug in `loader_type_js` that allowed undefined handler calls ([#1159](https://github.com/bem/bem-core/pull/1159)) fixed.
-* BH-bundles in dist now mimics towards BEMHTML ([#1210](https://github.com/bem/bem-core/issues/1210)).
-* bem create templates for bemhtml, bemtree, vanilla.js and browser.js ([#1183](https://github.com/bem/bem-core/issues/1183)) were improved.
+* BH bundles in dist now mimic to BEMHTML ([#1210](https://github.com/bem/bem-core/issues/1210)).
+* `bem create` templates for `bemhtml`, `bemtree`, `vanilla.js` and `browser.js` ([#1183](https://github.com/bem/bem-core/issues/1183)) were improved.
 * vow updated up to 0.4.10 ([#1056](https://github.com/bem/bem-core/issues/1056)).
 
 The complete history of other changes could be found in bem-core library releases' [changelog](https://en.bem.info/libs/bem-core/v2.8.0/changelog/#280).
