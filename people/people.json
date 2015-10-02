@@ -1000,5 +1000,28 @@
             "skype": "",
             "info": ""
         }
+    },
+    ,
+    "johan-ronsse": {
+        "en": {
+            "firstName": "Emi Zhanel",
+            "lastName": "Krishnevsky",
+            "avatar": "https://avatars2.githubusercontent.com/u/8817028?v=3&s=460",
+            "github": "krishnevsky",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        },
+        "ru": {
+            "firstName": "Эми Жанель",
+            "lastName": "Кришневски",
+            "avatar": "https://avatars2.githubusercontent.com/u/8817028?v=3&s=460",
+            "github": "krishnevsky",
+            "email": [],
+            "twitter": "",
+            "skype": "",
+            "info": ""
+        }
     }
 }
