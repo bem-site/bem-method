@@ -37,7 +37,6 @@
 * **Подключение только нужной реализации блока.**<br>
 В сборку подключаются только файлы, действительно необходимые для данной реализации блока.
 
-<a name="comb"></a>
 ### Файлы объединяются по смыслу, а не по типу
 
 Файлы блока группируются с помощью общих [правил именования](../naming/naming-convention.ru.md). Для удобства работы они могут быть объединены в директорию этого блока.
@@ -47,7 +46,6 @@
 * **Подключение в проект только необходимых блоков.**<br>
 Блоки реализованы независимо. Это позволяет настраивать сборку так, чтобы в проект попадали только нужные блоки.
 
-<a name="project-levels"></a>
 ### Проект разделяется на уровни переопределения
 
 Конечная реализация блока может быть разделена по [уровням переопределения](#Примеры-использования-уровней-переопределения).
@@ -86,9 +84,9 @@ blocks/
 
 Имена файлов и директорий [БЭМ-сущностей](../definitions/definitions.ru.md#БЭМ-сущность) соответствуют [соглашению по именованию](../naming/naming-convention.ru.md):
 
-* Элемент — `block__elem.ext` (`input__box.css`).
-* Модификатор блока — `block_mod_val.ext` (`input_type_search.css`) или `block_mod.ext` (`input_disabled.css`). Значение булевого модификатора не указывается.
-* Модификатор элемента — `block__elem_mod_val.ext` (`input__clear_size_large.css`) или `block__elem_mod.ext` (`input__clear_visible.css`).
+* Элемент — `block__elem.extension` (`input__box.css`).
+* Модификатор блока — `block_mod_val.extension` (`input_type_search.css`) или `block_mod.extension` (`input_disabled.css`). Значение булевого модификатора не указывается.
+* Модификатор элемента — `block__elem_mod_val.extension` (`input__clear_size_large.css`) или `block__elem_mod.extension` (`input__clear_visible.css`).
 
 
 Модификаторы и элементы выделяются в отдельные файлы и группируются в поддиректории блока с соответствующими именами.
@@ -108,7 +106,7 @@ blocks/
         button.png
 ```
 
-При создании модификаторов с разными значениями (например, `popup_target_anchor.ext` и `popup_target_position.ext`), общий код может быть вынесен в отдельный файл (`popup_target.ext`) без указания значения модификатора в имени.
+При создании модификаторов с разными значениями (например, `popup_target_anchor.extension` и `popup_target_position.extension`), общий код может быть вынесен в отдельный файл (`popup_target.extension`) без указания значения модификатора в имени.
 
 ```
 blocks/
@@ -123,13 +121,11 @@ blocks/
     popup.js
 ```
 
-<a name="examples"></a>
 ### Примеры из жизни
 
 * [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
 * [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
 
-<a name="level"></a>
 ## Примеры использования уровней переопределения
 
 Реализация блока может быть разделена по [уровням переопределения](../definitions/definitions.ru.md#Уровень-переопределения).
