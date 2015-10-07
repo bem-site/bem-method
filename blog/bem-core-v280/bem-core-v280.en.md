@@ -10,7 +10,7 @@ The biggest and most significant change is the release of [i18n block](https://e
 internalisation (translation) of your interfaces ([#1074](https://github.com/bem/bem-core/issues/1074)). This block has an universal 
 API to work with JS and templates and could be used both in browsers and in node.js environment.
 
-Internationalisation-powered build-related documentation could be found in a build package called [enb-bem-i18n](https://en.bem.info/tools/bem/enb-bem-i18n/readme/) (Russian only, translation is coming).
+Internationalisation-powered build-related documentation could be found in a build package called [enb-bem-i18n](https://ru.bem.info/tools/bem/enb-bem-i18n/readme/) (Russian only, translation is coming).
 
 Besides, jQuery is loaded via https by default ([#1202](https://github.com/bem/bem-core/issues/1202)) and there 
 is no bemhtml-compat dependancy ([#1186](https://github.com/bem/bem-core/issues/1186)) any longer — we deleted it. 
