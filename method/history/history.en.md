@@ -9,13 +9,13 @@ of Open Source and benefit all good people around.
 
 This article tells about Yandex front-end developers constantly revising and improving the way they build web pages.
 Front-end developers are well known for their enormous curiosity (that often brings innovation) and their remarkable
-lazyness that makes them devise sophisticated systems to save precious time, to unify and automate everything.
+laziness that makes them devise sophisticated systems to save precious time, to unify and automate everything.
 
 This is how many exciting things were born into life, but now let's travel back in time to 2005 and sneak a peek over
 a shoulder of a really-really-busy Yandex front-end developer, and thus see...
 
 ## ...where it all began
-Back in 2005, the focus was still petty much on the server side of things. From frontender perspective, a typical Yandex project was a set of static HTML pages that served as a base reference for creating advanced templates like XSL stylesheets.
+Back in 2005, the focus was still pretty much on the server side of things. From frontender perspective, a typical Yandex project was a set of static HTML pages that served as a base reference for creating advanced templates like XSL stylesheets.
 
 These pages were kept in a separate folder and looked like this after a checkout:
 
