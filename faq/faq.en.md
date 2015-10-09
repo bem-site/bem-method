@@ -62,7 +62,7 @@ Encapsulation
 Template execution
 
 -   In Web Components, templates are always executed in the browser. This may involve solving some indexing problems.
--   In BEM, template generation is possible at the development stage. This let us pass the ready HTML. Templates can be executed both in the browser and on the server side.
+-   In BEM, template generation is possible at the development stage. This lets us pass the ready HTML. Templates can be executed both in the browser and on the server side.
 
 -   Web Components are based on an imperative principle, using string interpolation.
 -   BEM uses a declarative approach, which helps manage templating in a flexible way and avoid redundancy.
@@ -262,7 +262,7 @@ Why use `i-bem.js` when you have jQuery?
 
 [i-bem.js](https://en.bem.info/technology/i-bem/) is a specialized framework for developing projects with JavaScript in terms of blocks, elements, and modifiers.
 
-`-bem.js` is not meant to replace any general-purpose framework, such as jQuery.
+`i-bem.js` is not meant to replace any general-purpose framework, such as jQuery.
 
 `i-bem.js` allows you to
 
