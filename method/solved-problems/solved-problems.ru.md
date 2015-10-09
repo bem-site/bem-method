@@ -258,7 +258,7 @@ CSS-стили к пункту `item` могут быть записаны ка�
 <div class="snippets">
     <div class="snippets__item">
         <h2 class="snippets__title"></h2>
-        <img class="snippents__thumb">
+        <img class="snippets__thumb">
     </div>
 </div>
 ```
