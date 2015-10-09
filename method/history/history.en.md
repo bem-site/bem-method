@@ -197,7 +197,7 @@ Some suffixes were employed as well, e.g.:
 ### What's inside?
 In an HTML container forming a block, some nodes get a distinct CSS classname. This not only facilitates the creation of tagname-independent style rules, but also assigns semantically meaningful roles to each node. Such inner nodes are called "block elements", or simply "elements".
 
-The core distinction between a block and an element is the element inability to exist out of its parent block context. As long as you cannot detach something from a block, it's an element; detachable elements (probably) should become blocks themselves.
+The core distinction between a block and an element is the element's inability to exist out of its parent block context. As long as you cannot detach something from a block, it's an element; detachable elements (probably) should become blocks themselves.
 
 At first, elements could have been defined only inside their parent block container; later, a technique was provided to place some elements outside and still keep a block consistent.
 
