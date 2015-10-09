@@ -261,7 +261,7 @@ In this case, adding a new `item` to the page will look like this:
 <div class="snippets">
     <div class="snippets__item">
         <h2 class="snippets__title"></h2>
-        <img class="snippents__thumb">
+        <img class="snippets__thumb">
     </div>
 </div>
 ```
