@@ -35,4 +35,4 @@ Follow [@bem_en](https://twitter.com/bem_en) for updates and live tweets.
 
 Hopefully, there will be video available after the conference that we can share with you.
 
-**Stay BEMed**!
+**Stay BEMed!**
