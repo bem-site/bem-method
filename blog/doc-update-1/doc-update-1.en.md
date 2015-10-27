@@ -18,6 +18,6 @@ Hope these new updates will be useful!
 
 And of course, we want to thank all the respondents who participated in a survey! Your answers helped us dramatically in improvement of the documentation and understanding what is really important to you.
 
-We also added a permanent [feedback tab](https://en.bem.info/feedback/) on the main menu to give you a tool to report us what you think back any time you like. You can do this by mail as well: mailto:info@bem.info.
+We also added a permanent [feedback tab](https://en.bem.info/feedback/) on the main menu to give you a tool to report us what you think back any time you like. You can do this by mail as well: [info@bem.info](mailto:info@bem.info).
 
 Enjoy usage and **Stay BEMed!**
