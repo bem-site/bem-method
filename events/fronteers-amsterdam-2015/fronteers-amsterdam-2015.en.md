@@ -14,7 +14,7 @@ More information about the event could be found on [it's official web page](http
 ## Rebuild your own React by Sergey Berezhnoy
 
 [vidom](https://github.com/dfilatov/vidom) is a React-inspired library for building web interfaces. In his talk Sergey will 
-talk about the basic ideas behind it, like speed, lightweight and simplicity. Furthermore, this talk is aboud the process of 
+talk about the basic ideas behind it, like speed, lightweight and simplicity. Furthermore, this talk is about the process of 
 reassembling things as a method to understand them deeply.
 
 ## Declarative templates for HTML by Vladimir Grinenko
