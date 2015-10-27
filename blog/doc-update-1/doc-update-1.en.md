@@ -8,7 +8,7 @@ Not so long ago we conducted a survey and found out what would be useful to add 
 
 Here is the list of new features of documentation that were implemented:
 
-* Now we are able to show source files of blocks from all levels involved in the assembly. To see links to all the files of the block from all levels, you need to open a new tab of the block description — ((https://en.bem.info/libs/bem-components/v2/desktop/button/sources/ Sources)). Thus, for example, for a desktop block there will be a set of files from desktop and common levels.
+* Now we are able to show source files of blocks from all levels involved in the assembly. To see links to all the files of the block from all levels, you need to open a new tab of the block description — [Sources](https://en.bem.info/libs/bem-components/v2/desktop/button/sources/ ). Thus, for example, for a desktop block there will be a set of files from desktop and common levels.
 * We are able to show additional levels for the complex block examples from an ”Examples“ tab. For this we created a separate tab called ”custom blocks“ that contains links to all additional files.
 * We also are able to show the dependencies for all examples in ”deps“ tab.
 * We now highlight and format all code examples. We add formatting and highlighting of the code in BEMJSON and HTML tabs.
