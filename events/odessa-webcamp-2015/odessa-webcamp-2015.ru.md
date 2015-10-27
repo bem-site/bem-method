@@ -1,6 +1,6 @@
 # БЭМ на конференции WebCamp 2015
 
-**Когда**: 4 июля 2015 года.
+**Когда**: 4 июля 2015 года
 
 **Где**: [HUB Odessa](http://webcamp.in.ua/frontend-developers-day.html), ул. Греческая, 1а, Украина
 
