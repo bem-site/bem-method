@@ -1,5 +1,7 @@
 # JavaScript for BEM. The main terms
 
+_The article is based on [Vladimir Varankin's](https://github.com/narqo) talk [BEM and JavaScript: Why Did We Created a JS-framework?](https://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) at Yandex Developer's Day in Moscow on September 8, 2012._
+ 
 Stack of BEM technologies contains an `i-bem` block of the [bem-core](https://en.bem.info/libs/bem-core) library.
 
 The JavaScript implementation of this block uses BEM data domain. The use of the `i-bem` block allows one to manipulate the client-side JavaScript/DOM in *BEM-style* according to *BEM-Principles*, not only in the design of visible components, but also their behavior.
@@ -239,5 +241,3 @@ onSetMod : {
 ```
 
 `i-bem` makes possible the lazy initialization for the blocks, and creation of blocks without DOM representation.
-
-This article is based on [Vladimir Varankin's](https://github.com/narqo) talk [BEM and JavaScript: Why Did We Created a JS-framework?](https://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow, September 8, 2012.
