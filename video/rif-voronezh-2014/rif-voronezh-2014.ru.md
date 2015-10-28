@@ -27,3 +27,5 @@
 ## Секция вопросов и ответов
 
 <iframe width="450" height="225" src="//video.yandex.ru/iframe/ya-events/fvdbsnbiq1.6843/" frameborder="0" allowfullscreen="1"></iframe>
+
+Приятного просмотра и **Stay BEMed!**
