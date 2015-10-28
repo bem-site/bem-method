@@ -1,6 +1,6 @@
 # Сайт с нуля на полном стеке БЭМ-технологий
 
-Оригинал статьи опубликован в [блоге Яндекса](//habrahabr.ru/company/yandex/blog/251473/) на Хабрахабр.
+_Оригинал статьи опубликован в [блоге Яндекса на Хабрахабре](//habrahabr.ru/company/yandex/blog/251473/)._
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/0-intro.jpg)
 
