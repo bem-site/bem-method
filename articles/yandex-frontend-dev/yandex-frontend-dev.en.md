@@ -1,7 +1,6 @@
 # What you can borrow from Yandex front-end dev
 
-This article is a text version of a [presentation](https://vimeo.com/53219242)
-given at [Riga WebConf](http://webconf.lv/) in November 2012.
+_The article is a text version of a [presentation](https://vimeo.com/53219242) given at [Riga WebConf](http://webconf.lv/) in November 2012._
 
 The article sums up [Yandex](http://www.yandex.com/) over 7-year experience
 in finding solutions for efficient front-end development.<br/>
