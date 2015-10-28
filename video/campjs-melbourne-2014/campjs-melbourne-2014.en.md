@@ -1,4 +1,4 @@
-# BEM for JavaScript Talk on Camp JS
+# BEM for JavaScript Talk on Camp JS 2014
 
 [CampJS III](http://campjs.com/) conference was held in May 23 — 26, 2014, in Lord Somers Camp, Australia. It is a weekend-long hack-retreat for JavaScript developers, that takes place in Australia. There is quite a bunch of brilliant speakers and mentors as well as interesting talks, practical workshops and sessions together with panel discussions and team work.
 
@@ -26,4 +26,4 @@ Unfortunately it is very well known only here in Russia and ex-Soviet countries,
 
 Vladimir Grinenko is a web developer with more than 10 years of fronted experience and a deep expertise in HTML5, CSS3 and JavaScript. He works for Yandex, Russian Search engine, and leads a team that develops BEM technologies. He also evangelizes a lot both in Russian and English and gives live coding sessions as well as maintains and contributs to few opensource projects. His area of speaking experience includes such topics as BEM technologies, large scale web sites architecture, modular frontend applications development, etc.
 
-**Stay BEMed!**
+Have a pleasant time watching and **Stay BEMed!**
