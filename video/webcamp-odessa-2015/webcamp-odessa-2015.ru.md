@@ -16,4 +16,4 @@
 
 Слайды доклада доступны по [ссылке](http://delka.github.io/talks/webcamp/2015/bem/).
 
-**Stay BEMed!** 
+Приятного просмотра и **Stay BEMed!**
