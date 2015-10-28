@@ -1,5 +1,7 @@
 # smartcd: how to launch tools locally
 
+_The article is based on "[Using locally installed tools from the command line](http://clubs.ya.ru/bem/replies.xml?item_no=2231)" (Russian only) posted at Ya.ru._
+
 We recommend installing all the dependencies including [bem-tools](https://en.bem.info/tools/bem/bem-tools/) locally in each project. We describe them in `package.json` at the project root - install them with the command `npm install`.
 
 We would like to use locally installed tools inside project directories (at any level) just by calling their names: `bem make`, `borschik path/to/file.css`, etc.
@@ -77,6 +79,3 @@ smartcd: running /Users/arikon/.smartcd/scripts/Users/arikon/projects/bem-www/ba
 ```
 
 If you are using `zsh` with the option `autocd` enabled, uncomment the line `smartcd setup prompt-hook` in `~/.smartcd_config`.
-
-This article is based on: «[Using locally installed tools from the command line](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» (Russian only) posted at Ya.ru.
-
