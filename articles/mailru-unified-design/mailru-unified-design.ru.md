@@ -1,6 +1,6 @@
 # Унификация дизайна: Фреймворк Mail.Ru Group для мобильного веба
 
-_Статья написана [для Smashing Magazine](//www.smashingmagazine.com/2015/02/04/product-design-unification-case-study-mobile-web-framework/)._
+_Оригинал статьи опубликован в [Smashing Magazine](//www.smashingmagazine.com/2015/02/04/product-design-unification-case-study-mobile-web-framework/)._
 
 ![Унификация дизайна: Фреймворк Mail.Ru Group для мобильного веба](https://img-fotki.yandex.ru/get/5804/246231603.0/0_14ae40_59a182f4_orig.png)
 
