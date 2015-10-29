@@ -206,7 +206,7 @@
             "email": ["veged@ya.ru"],
             "twitter": "veged",
             "skype": "",
-            "info": "http://veged.ru"
+            "info": "http://veged.ru<br>Web developer in Yandex since 2005. Developed such Yandex services as Search, Mail, Blog Search, Yandex blogging platform, Video. Along with service development codes internal tools for web development."
         },
         "ru": {
             "firstName": "Сергей",
@@ -216,7 +216,7 @@
             "email": ["veged@ya.ru"],
             "twitter": "veged",
             "skype": "",
-            "info": "http://veged.ru"
+            "info": "http://veged.ru<br>Веб-разработчик в Яндексе с 2005 года. Успел поработать над Поиском, Почтой, Поиском по блогам, Я.ру, Картинками, Видео. Помимо этого, активно занимается развитием внутренних инструментов для создания сайтов."
         }
     },
     "filatov-dmitry": {
@@ -272,7 +272,7 @@
             "email": ["i@tadatuta.com"],
             "twitter": "tadatuta",
             "skype": "",
-            "info": ""
+            "info": "Head of BEM development team. HTML/CSS/JS-professional. BEM-addict. Answers BEM questions 24/7. Outside Yandex runs his own web development agency, consults projects and helps them stay healthy and wealthy with BEM."
         },
         "ru": {
             "firstName": "Владимир",
@@ -282,7 +282,7 @@
             "email": ["i@tadatuta.com"],
             "twitter": "tadatuta",
             "skype": "",
-            "info": ""
+            "info": "Руководитель службы разработки БЭМ. Профессионал в HTML/CSS/JS. БЭМ-зависимый. Отвечает на вопросы про технологию 24 часа 7 дней в неделю. Вне Яндекса руководит собственной веб-студией, консультирует проекты и помогает им расти здоровыми и счастливыми вместе с БЭМ."
         }
     },
     "mikulyanets-anfisa": {
@@ -526,7 +526,7 @@
             "email": ["mursya@gmail.com"],
             "twitter": "mursya",
             "skype": "",
-            "info": ""
+            "info": "BEM Developer Relations Specialist. Helps BEM team with coordination of an open source activity inside and outside Yandex and the community making sure everyone is happy with BEM. Outside Yandex volunteers for open source and helps developers run developer events. Dreamer of the better web and believer in true power of open source."
         },
         "ru": {
             "firstName": "Елена",
@@ -536,7 +536,7 @@
             "email": ["mursya@gmail.com"],
             "twitter": "mursya_ru",
             "skype": "",
-            "info": ""
+            "info": "Маркетолог, специалист по коммуникации с сообществом БЭМ. Помогает команде БЭМ с координацией активностей вокруг опенсорс продукта внутри и снаружи Яндекса, а также постоянно следит за индексом счастья пользователей БЭМ. Вне Яндекса Елена поддерживает тех, кто болеет за опенсорс-разработку, и помогает сообществам с мероприятиями для разработчиков. Мечтает о лучшем вебе и верит в силу опенсорса."
         }
     },
     "dulin-marat": {
