@@ -25,7 +25,9 @@ and we’re missing scope.
 Web Components will hopefully provide some CSS scope (see [Shadow DOM](http://webcomponents.org/articles/introduction-to-shadow-dom/)). But while waiting for Web Components to get finished and 
 implemented in common browsers, we’d better use some proper _workarounds_ like:
 
-![BEM logo](http://blog.decaf.de/content/images/2015/06/bem.png)
+<p style="text-align: center">
+<img src="http://blog.decaf.de/content/images/2015/06/bem.png" style="width: 213px; height: auto; margin-top: 20px;" alt="BEM logo"/>
+</p>
 
 ## BEM
 
