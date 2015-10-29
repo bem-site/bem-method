@@ -1,27 +1,23 @@
-BEM: Key concepts
-=================
+# Key concepts
 
--   [Block](#block)
--   [Element](#element)
--   [Modifier](#modifier)
--   [BEM entity](#bem-entity)
--   [Mix](#mix)
--   [BEM tree](#bem-tree)
--   [Block implementation](#block-implementation)
--   [Block implementation technology](#implementation-technology)
--   [Block redefinition](#block-redefinition)
--   [Redefinition level](#redefinition-level)
+* [Block](#block)
+* [Element](#element)
+* [Modifier](#modifier)
+* [BEM entity](#bem-entity)
+* [Mix](#mix)
+* [BEM tree](#bem-tree)
+* [Block implementation](#block-implementation)
+* [Block implementation technology](#implementation-technology)
+* [Block redefinition](#block-redefinition)
+* [Redefinition level](#redefinition-level)
 
-<a name="block"></a>
-
-Block
------
+## Block
 
 A logically and functionally independent page component, the equivalent of a component in Web Components. A block encapsulates behavior (JavaScript), templates, styles (CSS), and other [implementation technologies](#implementation-technology). Blocks being independent allows for their re-use, as well as facilitating the project development and support process.
 
-#### Block features
+### Block features
 
-**Nested structure**
+#### Nested structure
 
 Blocks can be nested inside any other blocks.
 
@@ -29,7 +25,7 @@ For example, a `head` block can include a logo (`logo`), a search form (`search`
 
 ![Head block components](https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig)
 
-**Arbitrary placement**
+#### Arbitrary placement
 
 Blocks can be moved around on a page, moved between pages or projects. The implementation of blocks as independent entities makes it possible to change their position on the page and ensures their proper functioning and appearance.
 
@@ -39,14 +35,13 @@ Thus, the logo and the authorization form can be swapped around without modifyin
 
 ![Altering the block positions](https://img-fotki.yandex.ru/get/15542/158800653.0/0_111fb1_bcbc3c6a_orig)
 
-**Re-use**
+#### Re-use
 
 An interface can contain multiple instances of the same block.
 
 ![Online store products](https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fb0_fbb195e9_orig)
 
-Element
--------
+## Element
 
 A constituent part of a [block](#block) that can't be used outside of it.
 
@@ -58,8 +53,7 @@ For example, a menu item is not used outside of the context of a menu block, the
 
 > [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
 
-Modifier
---------
+## Modifier
 
 A BEM entity that defines the appearance and behavior of a [block](#block) or an [element](#element).
 
@@ -71,33 +65,30 @@ For instance, the appearance of the menu block (`menu`) may change depending on 
 
 ![Add a menu to the footer](https://img-fotki.yandex.ru/get/16183/158800653.0/0_111fba_921b3c47_orig)
 
-BEM entity
-----------
+## BEM entity
 
 [Blocks](#block), [elements](#element), and [modifiers](#modifier) are all called BEM entities.
 
 It is a notion that can be used both to refer to an individual BEM entity and as a generic term for blocks, elements, and modifiers.
 
-Mix
----
+## Mix
 
 An instance of different [BEM entities](#bem-entity) being hosted on a single [DOM node](https://en.wikipedia.org/wiki/Document_Object_Model).
 
 Mixes allow us to
 
--   Combine the behaviors and styles of several BEM entities while avoiding code duplication
--   Create semantically new interface components on the basis of existing BEM entities.
+* Combine the behaviors and styles of several BEM entities while avoiding code duplication
+* Create semantically new interface components on the basis of existing BEM entities.
 
 Let's consider the case of a mix comprising a block and an element of another block.
 
 Let's assume that links in your project are implemented via a `link` block. We need to format menu items as links. There are several ways to do that.
 
--   Create a modifier for a menu item that turns the item into a link. Implementing such a modifier would necessarily involve copying the behavior and styles of the `link` block. That would result in code duplication.
+* Create a modifier for a menu item that turns the item into a link. Implementing such a modifier would necessarily involve copying the behavior and styles of the `link` block. That would result in code duplication.
 
--   Have a mix combining a generic `link` block and a `link` element of a `menu` block. A mix of the two BEM entities will allow us to use the basic link functionality of the `link` block and additional CSS rules of the `menu` block without copying the code.
+* Have a mix combining a generic `link` block and a `link` element of a `menu` block. A mix of the two BEM entities will allow us to use the basic link functionality of the `link` block and additional CSS rules of the `menu` block without copying the code.
 
-BEM tree
---------
+## BEM tree
 
 A representation of a web page structure in terms of blocks, elements, and modifiers. It is an abstraction over a [DOM tree](https://en.wikipedia.org/wiki/Document_Object_Model) that describes the names of BEM entities, their states, order, nesting, and auxiliary data.
 
@@ -105,31 +96,33 @@ In real-life projects, a BEM tree can be presented in any format that supports t
 
 Let's consider an example of a DOM tree:
 
-``` html
+```html
 <header class="header">
     <img class="logo">
     <form class="search-form">
         <input type="input">
         <button type="button"></button>
     </form>
-    <div class="lang-switcher">
-</div> </header>
+    <div class="lang-switcher"></div>
+</header>
 ```
 
 The corresponding BEM tree will look like this:
 
-    header
-      ├──logo
-      └──search-form
+```
+header
+    ├──logo
+    └──search-form
         ├──input
         └──button
-      └──lang-switcher
+    └──lang-switcher
+```
 
 In XML and [BEMJSON](https://en.bem.info/technology/bemjson/) formats, the same BEM tree will appear as follows:
 
 XML
 
-``` xml
+```xml
 <block:header>
     <block:logo/>
     <block:search-form>
@@ -142,7 +135,7 @@ XML
 
 BEMJSON
 
-``` js
+```js
 {
     block: 'header',
     content : [
@@ -159,40 +152,36 @@ BEMJSON
 }
 ```
 
-Block implementation
---------------------
+## Block implementation
 
 A set of different [technologies](#implementation-technology) that determine the following aspects of a BEM entity:
 
--   behavior
--   appearance
--   tests
--   templates
--   documentation
--   description of dependencies
--   additional data (e.g., images).
+* behavior
+* appearance
+* tests
+* templates
+* documentation
+* description of dependencies
+* additional data (e.g., images).
 
-Implementation technology
--------------------------
+## Implementation technology
 
 A technology used for [implementing](#block-implementation) a block.
 
 Blocks can be implemented in one or more technologies, for example:
 
--   behavior — JavaScript, CoffeeScript
--   appearance — CSS, Stylus, Sass
--   templates — BEMHTML, BH, Jade, Handlebars, XSL
--   documentation — Markdown, Wiki, XML.
+* behavior — JavaScript, CoffeeScript
+* appearance — CSS, Stylus, Sass
+* templates — BEMHTML, BH, Jade, Handlebars, XSL
+* documentation — Markdown, Wiki, XML.
 
 For instance, if the appearance of a block is defined with CSS, that means that the block is implemented in the CSS technology. Likewise, if the documentation for a block is written in Markdown format, the block is implemented in the Markdown technology.
 
-Block redefinition
-------------------
+## Block redefinition
 
 Modifying a block [implementation](#block-implementation) by adding new features to the block on a different [level](#redefinition-level).
 
-Redefinition level
-------------------
+## Redefinition level
 
 A set of BEM entities and their partial [implementations](#block-implementation).
 
