@@ -22,6 +22,6 @@ We are ready to announce a new set of documents for the `i-bem` technology!
 
 Hope, these documents will help you understand and work with the `i-bem.js` framework.
 
-If you have any questions, please, ask them on the [forum](https://en.bem.info/forum/) or write e-mail [info@bem.info](mailto:info@bem.info).
+If you have any questions, please, ask them on the [forum](https://en.bem.info/forum/) or e-mail us at [info@bem.info](mailto:info@bem.info).
 
 Enjoy usage and **Stay BEMed!**
