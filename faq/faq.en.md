@@ -44,7 +44,7 @@ How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
 
 > Find out more about the [BEM methodology](https://en.bem.info/method/).
 
-It is possible to use BEM at the CSS level only. You just need to follow the [guidelines proposed by the methodology](../method/naming/naming-convention.en.md).
+It is possible to use BEM at the CSS level only. You just need to follow the [guidelines proposed by the methodology](../method/naming-convention/naming-convention.en.md).
 
 What is the difference between BEM and Web Components?
 ------------------------------------------------------
@@ -101,7 +101,7 @@ Why does BEM not recommend using elements within elements (`block__elem1__elem2`
 
 The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
 
-In the BEM methodology, blocks are the only entities that support nested structure (`block__elem`). A block name defines a namespace that [ensures the dependence](../method/naming/naming-convention.en.md#element-name) of elements on the block.
+In the BEM methodology, blocks are the only entities that support nested structure (`block__elem`). A block name defines a namespace that [ensures the dependence](../method/naming-convention/naming-convention.en.md#element-name) of elements on the block.
 
 A block can have a nested element structure in a DOM tree.
 
@@ -148,7 +148,7 @@ A block name in the names of [BEM entities](../method/key-concepts/key-concepts.
 
 ---------------------------------------------------
 
-**NB**: The BEM methodology [allows freedom of choice](../method/naming/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
+**NB**: The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
 
 #### Namespace
 

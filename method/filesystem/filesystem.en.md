@@ -41,7 +41,7 @@ A file set for a block (e.g., `input.css`, `input.js`) is determined by the [tec
 
 ### Files are grouped by meaning and not by type
 
-Block files are grouped together based on common [naming rules](../naming/naming-convention.en.md). For convenience, they can be grouped into a block directory.
+Block files are grouped together based on common [naming rules](../naming-convention/naming-convention.en.md). For convenience, they can be grouped into a block directory.
 
 *Why?*
 
@@ -85,7 +85,7 @@ blocks/
         button.png
 ```
 
-Names of files and directories for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) are based on the [naming convention](../naming/naming-convention.en.md):
+Names of files and directories for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) are based on the [naming convention](../naming-convention/naming-convention.en.md):
 
 -   Element — `block__elem.extension` (`input__box.css`).
 -   Block modifier — `block_mod_val.extension` (`input_type_search.css`) or `block_mod.extension` (`input_disabled.css`). Values of boolean modifiers are not included.

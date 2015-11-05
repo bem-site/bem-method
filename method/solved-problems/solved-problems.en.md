@@ -1,7 +1,7 @@
 Using BEM to solve common issues in web development
 ===================================================
 
-The BEM methodology defines [CSS selector naming conventions](../naming/naming-convention.en.md) that solve a range of web development problems and address the following issues:
+The BEM methodology defines [CSS selector naming conventions](../naming-convention/naming-convention.en.md) that solve a range of web development problems and address the following issues:
 
 -   [How to simplify code and facilitate refactoring](#how-to-simplify-code-and-facilitate-refactoring)
 -   [How to get self-documenting code](#how-to-get-self-documenting-code)
@@ -51,7 +51,7 @@ In order to find out whether styles can be painlessly changed for the `.active` 
 
 **Solution**
 
-The BEM methodology solves the collision issue using [naming conventions for CSS classes](../naming/naming-convention.en.md#css-selector-naming-convention), providing unique names for all components and their parts.
+The BEM methodology solves the collision issue using [naming conventions for CSS classes](../naming-convention/naming-convention.en.md#css-selector-naming-convention), providing unique names for all components and their parts.
 
 Using naming conventions allows us to:
 
@@ -156,7 +156,7 @@ Let's write the CSS for classes:
 
 The code is more informative. Now it is clear that there is a form, a field, and a `submit` component. But these names still don't tell us whether `field` belongs to `form`, or what will happen if there are multiple fields or forms on the page. Once again we must return to the HTML.
 
-We'll rewrite the example using [BEM naming conventions](../naming/naming-convention.en.md):
+We'll rewrite the example using [BEM naming conventions](../naming-convention/naming-convention.en.md):
 
 ```css
 .form {}
@@ -235,7 +235,7 @@ Using cascades increases coupling of interface components of the interface. You 
 
 **Solution**
 
-[CSS selector naming rules](../naming/naming-convention.en.md) make it possible to change specific points without affecting dependent components. In BEM, every block has a unique name and is self-sufficient.
+[CSS selector naming rules](../naming-convention/naming-convention.en.md) make it possible to change specific points without affecting dependent components. In BEM, every block has a unique name and is self-sufficient.
 
 Let's write the same code in conformance with BEM naming rules:
 
@@ -326,7 +326,7 @@ The consequence is that the developer has to support more lines of code, and fix
 
 **Solution**
 
-We'll use an example that implements a universal navigation menu block and follows all the [BEM naming rules](../naming/naming-convention.en.md).
+We'll use an example that implements a universal navigation menu block and follows all the [BEM naming rules](../naming-convention/naming-convention.en.md).
 
 ```html
 <ul class="nav">

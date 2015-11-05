@@ -40,7 +40,7 @@
 
 ### Файлы объединяются по смыслу, а не по типу
 
-Файлы блока группируются с помощью общих [правил именования](../naming/naming-convention.ru.md). Для удобства работы они могут быть объединены в директорию этого блока.
+Файлы блока группируются с помощью общих [правил именования](../naming-convention/naming-convention.ru.md). Для удобства работы они могут быть объединены в директорию этого блока.
 
 *Зачем?*
 
@@ -85,7 +85,7 @@ blocks/
         button.png
 ```
 
-Имена файлов и директорий [БЭМ-сущностей](../key-concepts/key-concepts.ru.md#БЭМ-сущность) соответствуют [соглашению по именованию](../naming/naming-convention.ru.md):
+Имена файлов и директорий [БЭМ-сущностей](../key-concepts/key-concepts.ru.md#БЭМ-сущность) соответствуют [соглашению по именованию](../naming-convention/naming-convention.ru.md):
 
 * Элемент — `block__elem.extension` (`input__box.css`).
 * Модификатор блока — `block_mod_val.extension` (`input_type_search.css`) или `block_mod.extension` (`input_disabled.css`). Значение булевого модификатора не указывается.
