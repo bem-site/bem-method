@@ -57,7 +57,7 @@ Browser support
 Encapsulation
 
 -   Web Components use Shadow DOM.
--   BEM uses block [elements](../method/definitions/definitions.en.md#element).
+-   BEM uses block [elements](../method/key-concepts/key-concepts.en.md#element).
 
 Template execution
 
@@ -75,7 +75,7 @@ Build vs HTML import
 Abstraction over a DOM tree vs Custom Elements
 
 -   In Web Components, Custom Elements are used. Such an approach allows only for one component to be hosted on a single DOM node.
--   BEM introduces the concept of a [BEM tree](../method/definitions/definitions.en.md#bem-tree). BEM uses [mixes](../method/definitions/definitions.en.md#mix) — the practice of hosting several BEM entities on a single DOM node.
+-   BEM introduces the concept of a [BEM tree](../method/key-concepts/key-concepts.en.md#bem-tree). BEM uses [mixes](../method/key-concepts/key-concepts.en.md#mix) — the practice of hosting several BEM entities on a single DOM node.
 
 What is the difference between BEM and Bootstrap?
 ------------------------------------------------
@@ -91,8 +91,8 @@ BEM does provide its own block library, called [bem-components](https://en.bem.i
 A block or an element: when should I use which?
 -----------------------------------------------
 
-1.  If you're dealing with a fragment of code that can be reused and does not depend on the implementation of other components of the page, you should implement it as a [block](../method/definitions/definitions.en.md#block).
-2.  If it's a fragment of code that cannot be used on its own, without a parent entity (block), in most cases that should be an [element](../method/definitions/definitions.en.md#element).
+1.  If you're dealing with a fragment of code that can be reused and does not depend on the implementation of other components of the page, you should implement it as a [block](../method/key-concepts/key-concepts.en.md#block).
+2.  If it's a fragment of code that cannot be used on its own, without a parent entity (block), in most cases that should be an [element](../method/key-concepts/key-concepts.en.md#element).
 
 This rule does not apply when implementing elements that, for reasons of simplifying the development process, have to be broken down into smaller, sub-element, parts. The BEM methodology [does not recommend creating elements of elements](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2). So, in cases like this, instead of an element, a service block should be created.
 
@@ -140,7 +140,7 @@ The structure of the block changes while the rules for its elements and their na
 Why include the block name in names of modifier and element?
 ------------------------------------------------------------------------
 
-A block name in the names of [BEM entities](../method/definitions/definitions.en.md#bem-entity) is used for
+A block name in the names of [BEM entities](../method/key-concepts/key-concepts.en.md#bem-entity) is used for
 
 -   [Namespace](#namespace)
 -   [Mixes](#mixes)
@@ -156,7 +156,7 @@ A block name defines a namespace and ensures unique names for elements and modif
 
 #### Mixes
 
-A [mix](../method/definitions/definitions.en.md#mix) is an instance of different BEM entities being hosted on a single DOM node. When mixing a modifier, a block name indicates what block the modifier will be applied to. If a block name is not specified, the modifier will be applied to all the mixed BEM entities.
+A [mix](../method/key-concepts/key-concepts.en.md#mix) is an instance of different BEM entities being hosted on a single DOM node. When mixing a modifier, a block name indicates what block the modifier will be applied to. If a block name is not specified, the modifier will be applied to all the mixed BEM entities.
 
 Let's say we have a mix of a menu item (`menu_item`) and a button (`button`:
 
@@ -185,11 +185,11 @@ Let's compare the results of a global search during the debugging stage. Let's f
 How do I make global modifiers for blocks?
 ------------------------------------------
 
-BEM does not accommodate the concept of global modifiers — any modifier always belongs to one specific [BEM entity](../method/definitions/definitions.en.md#bem-entity).
+BEM does not accommodate the concept of global modifiers — any modifier always belongs to one specific [BEM entity](../method/key-concepts/key-concepts.en.md#bem-entity).
 
 If a CSS property needs to be moved outside of a block and applied to different BEM entities in the project, a separate block should be created, implemented in the CSS technology.
 
-BEM allows us to combine the implementation of different blocks using [mixes](../method/definitions/definitions.en.md#mix):
+BEM allows us to combine the implementation of different blocks using [mixes](../method/key-concepts/key-concepts.en.md#mix):
 
 ```html
 <div class="block1 block2"></div>
@@ -343,7 +343,7 @@ Why are custom tags not used for blocks in BEM?
 
 Custom tags can indeed be used for creating block selectors, but the following restrictions apply
 
--   [Mixes](../method/definitions/definitions.en.md#mix) can't be used.
+-   [Mixes](../method/key-concepts/key-concepts.en.md#mix) can't be used.
 -   Not all blocks can be represented by custom tags. For example, all links require an `<a>` tag, and all fields require `<input>`.
 
 Why can't I use a CSS Reset?
@@ -357,7 +357,7 @@ If you must reset your styles, in BEM you can do it on a per-block basis.
 
 Here is an example. If a menu block and a list block in your project are both represented by a `<ul>` tag in HTML, then each block must provide a CSS Reset for `<ul>`. Duplication in the resultant code can be avoided by using a CSS optimizer.
 
-If your project does not use a CSS optimizer that combines selectors with the same sets of rules, you can use a CSS preprocessor. Then you can have a reset of rules for every new block, [mixing](../method/definitions/definitions.en.md#mix) the proper code. E.g., in SASS it would look like this:
+If your project does not use a CSS optimizer that combines selectors with the same sets of rules, you can use a CSS preprocessor. Then you can have a reset of rules for every new block, [mixing](../method/key-concepts/key-concepts.en.md#mix) the proper code. E.g., in SASS it would look like this:
 
 ``` css
 .menu {
