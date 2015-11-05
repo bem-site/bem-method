@@ -289,7 +289,7 @@ The BEM methodology allows using cascades.
 
 For example, a cascade is appropriate for changing elements depending on the state of the block or the theme assigned to it:
 
-````css
+```css
 .nav_hovered .nav__link
 {
     text-decoration: underline;
