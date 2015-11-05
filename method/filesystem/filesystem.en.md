@@ -23,7 +23,7 @@ In the file system, the codebase of BEM project is organized according to the fo
 
 ### A block implementation is divided into separate files
 
-A file set for a block (e.g., `input.css`, `input.js`) is determined by the [technologies](../definitions/definitions.en.md#implementation-technology) that make up the implementation of the block.
+A file set for a block (e.g., `input.css`, `input.js`) is determined by the [technologies](../key-concepts/key-concepts.en.md#implementation-technology) that make up the implementation of the block.
 
 *Why?*
 
@@ -85,7 +85,7 @@ blocks/
         button.png
 ```
 
-Names of files and directories for [BEM entities](../definitions/definitions.en.md#bem-entity) are based on the [naming convention](../naming/naming-convention.en.md):
+Names of files and directories for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) are based on the [naming convention](../naming/naming-convention.en.md):
 
 -   Element — `block__elem.extension` (`input__box.css`).
 -   Block modifier — `block_mod_val.extension` (`input_type_search.css`) or `block_mod.extension` (`input_disabled.css`). Values of boolean modifiers are not included.
@@ -131,7 +131,7 @@ blocks/
 Examples of using redefinition levels
 -------------------------------------
 
-The implementation of a block can be divided into [redefinition levels](../definitions/definitions.en.md#redefinition-level).
+The implementation of a block can be divided into [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
 
 Let's take a few examples:
 

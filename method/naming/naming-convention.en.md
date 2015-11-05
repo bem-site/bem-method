@@ -1,7 +1,7 @@
 Naming convention
 =================
 
-Working with [BEM entities](../definitions/definitions.en.md#bem-entity) requires a knowledge of their naming rules.
+Working with [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) requires a knowledge of their naming rules.
 
 The main idea of the naming convention is to make names of CSS selectors as informative and clear as possible. This will help make code development and debugging easier and also solve some of the problems faced by web developers.
 
@@ -227,13 +227,13 @@ This style differs from the classic one in that it uses [CamelCase](https://en.w
 
 `_available`
 
-This style is characterized by the absence of a block name before a modifier. Such a scheme puts limitations on the use of [mixes](../definitions/definitions.en.md#Mix), as it makes it impossible to determine what block a modifier belongs to.
+This style is characterized by the absence of a block name before a modifier. Such a scheme puts limitations on the use of [mixes](../key-concepts/key-concepts.en.md#Mix), as it makes it impossible to determine what block a modifier belongs to.
 
 Which style to choose
 ---------------------
 
 The BEM methodology offers general principles for naming BEM entities. The choice of a particular naming scheme depends on your project requirements and personal preferences. One considerable advantage of using [the naming convention](#css-selector-naming-convention) offered by the methodology is the existence of ready-made development tools that are specifically geared towards the ”classic naming“.
 
-Besides, the BEM methodology in not limited in its scope to the HTML and CSS technologies, which are discussed in this document. The concepts of blocks, elements, and modifiers are used when working with the JavaScript, templates and file system of a BEM project. The [bem-naming](https://en.bem.info/tools/bem/bem-naming/) tool enables us to use the same names for BEM entities in all of the [implementation technologies](../definitions/definitions.en.md#implementation-technology) that may be used.
+Besides, the BEM methodology in not limited in its scope to the HTML and CSS technologies, which are discussed in this document. The concepts of blocks, elements, and modifiers are used when working with the JavaScript, templates and file system of a BEM project. The [bem-naming](https://en.bem.info/tools/bem/bem-naming/) tool enables us to use the same names for BEM entities in all of the [implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology) that may be used.
 
 By default, `bem-naming` is configured to use the naming convention according to the methodology, but it allows you to add rules so you can use alternative schemes.

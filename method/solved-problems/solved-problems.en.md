@@ -55,7 +55,7 @@ The BEM methodology solves the collision issue using [naming conventions for CSS
 
 Using naming conventions allows us to:
 
--   Define unique names for [BEM entities](../definitions/definitions.en.md#bem-entity).
+-   Define unique names for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity).
 -   Track hierarchical relationships within a block.
 -   Simplify the code.
 -   Get [self-documenting code](#how-to-get-self-documenting-code).
@@ -117,9 +117,9 @@ One of the goals of BEM is to make it clear what a piece of code does just by th
 
 Using BEM, you can get HTML with class names that show the interaction of the following parts of code:
 
--   Independent [blocks](../definitions/definitions.en.md#block).
--   [Elements](../definitions/definitions.en.md#element) (child components) of a block.
--   [Modifiers](../definitions/definitions.en.md#modifier) of a block or an element.
+-   Independent [blocks](../key-concepts/key-concepts.en.md#block).
+-   [Elements](../key-concepts/key-concepts.en.md#element) (child components) of a block.
+-   [Modifiers](../key-concepts/key-concepts.en.md#modifier) of a block or an element.
 
 Here is an example with a search form on a website. We won't look at the HTML. We'll try to just read the CSS and understand which part of the interface it describes.
 
@@ -340,7 +340,7 @@ This block could be used, for example, for navigating articles in a news section
 
 Let's assume that the news section already has the `articles` block with all the necessary CSS rules.
 
-We can use a [mix](../definitions/definitions.en.md#mix) to combine the implementation of the two different blocks without copying code. In other words, host the `nav` block and the `articles__nav` element on the same DOM node.
+We can use a [mix](../key-concepts/key-concepts.en.md#mix) to combine the implementation of the two different blocks without copying code. In other words, host the `nav` block and the `articles__nav` element on the same DOM node.
 
 The code will look like this:
 
@@ -354,4 +354,4 @@ The code will look like this:
 
 This implementation allows combining the functionality of the `nav` block with the specific implementation of the `articles__nav` element (the appearance of news articles in the menu). However, there is no need to copy the existing CSS rules. If a bug is detected, only one part of the code will have to be fixed.
 
-> In addition to blocks and elements, you can mix other BEM entities, as well. For more information about ways to use mixes in BEM, see the section [Basic BEM concepts](../definitions/definitions.en.md#mix).
+> In addition to blocks and elements, you can mix other BEM entities, as well. For more information about ways to use mixes in BEM, see the section [Basic BEM concepts](../key-concepts/key-concepts.en.md#mix).
