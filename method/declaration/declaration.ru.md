@@ -32,7 +32,7 @@ exports.blocks = [
 
 >Один из инструментов, позволяющих получить БЭМ-дерево по HTML-структуре страницы — [html2bemjson](https://github.com/bem-incubator/html2bemjson).
 
-![Способ создания декларации](https://img-fotki.yandex.ru/get/6114/246231603.1/0_162b0c_f5211dc6_orig)
+![Способ создания декларации](declarations__html2decl.png)
 
 >Пример проекта, в котором формируется отдельная декларация для каждой страницы — [Создаем свой проект на БЭМ](https://ru.bem.info/tutorials/start-with-project-stub/).
 
@@ -40,7 +40,7 @@ exports.blocks = [
 
 При сборке в декларацию автоматически попадают все БЭМ-сущности, находящиеся в файловой системе проекта со всех уровней переопределения.
 
-![Способ создания декларации](https://img-fotki.yandex.ru/get/4510/246231603.1/0_162b0d_d4139277_orig)
+![Способ создания декларации](declarations__fs2decl.png)
 
 >В [bem-components](https://ru.bem.info/libs/bem-components/) такой способ создания декларации используется для поставки библиотеки в виде [Dist](https://ru.bem.info/libs/bem-components/current/#Варианты-поставки-библиотеки).
 
