@@ -12,4 +12,4 @@
 
 Огромное спасибо команде, которая работала над запуском сайта — [Андрею Кузнецову](https://github.com/tormozz48/), [Саше Нехаевой](https://github.com/lesanra), [Паше Башинскому](https://ru.bem.info/authors/bashinsky-pavel/), [Дане Ковчему](https://twitter.com/kovchiy) и [Вове Гриненко](https://ru.bem.info/authors/grinenko-vladimir/).
 
-PS: Не переставайте обновлять главную ;)
+Не переставайте обновлять главную ;) и **Stay BEMed!**
