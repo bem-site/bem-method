@@ -9,3 +9,5 @@ Unfortunately, we have broken old links to issues. If you need them, you need to
 
 It is impossible to create read-only repository. Therefore please try not to push anything there. 
 If you accidently do, please push the same commit to [bem-components](https://github.com/bem/bem-components/).
+
+**Stay BEMed!**
