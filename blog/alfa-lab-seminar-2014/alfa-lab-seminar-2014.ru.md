@@ -1,3 +1,5 @@
+# «Яндекс» в гостях у «Альфа-Лаборатории»
+
 Оригинал статьи опубликован на [Habrahabr](http://habrahabr.ru/company/alfa/blog/235853/).
 
 ![](https://raw.githubusercontent.com/bem/bem-method/bem-info-data/blog/alfa-lab-seminar-2014/alfa-lab-1.jpg)
@@ -32,4 +34,4 @@
 
 <div class="slideshow"><iframe src="https://www.slideshare.net/slideshow/embed_code/38824845" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
 
-Stay BEMed!
+**Stay BEMed!**
