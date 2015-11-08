@@ -21,9 +21,7 @@ As we mentioned above, this mobile version is transitional. We would be happy to
 
 Write us at [info@bem.info](mailto:info@bem.info) or chat with us on [Gitter](https://gitter.im/bem/talk). Thanks!
 
-Respectfully yours,
-
-BEM Development Team
+Respectfully yours and **Stay BEMed!**
 
 ![Mobile version screenshot](https://img-fotki.yandex.ru/get/15599/127846884.248/0_f2dbc_8c683494_XL/)
 
