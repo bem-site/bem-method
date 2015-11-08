@@ -26,4 +26,4 @@ GitHub repository for [bem-cli](https://github.com/bem/bem-cli).
 mobile web-applications and promo-projects. He also writes and translates articles on JavaScript for the
 Russian web-community [Habrahabr](http://habrahabr.ru/) under [azproduction](http://habrahabr.ru/users/azproduction/).
 
-[Twitter](https://twitter.com/azproduction), [GitHub](https://github.com/azproduction).
+[Twitter](https://twitter.com/azproduction), [GitHub](https://github.com/azproduction), and **Stay BEMed!**
