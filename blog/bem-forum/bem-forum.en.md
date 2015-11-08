@@ -14,4 +14,4 @@ We develop it in opensource at github — [bem-forum](https://github.com/bem/bem
 
 Before you find our forum working on site, we would like to ask you to become our beta-testers and try our bem-forum out and report us your feelings via [Issues](https://github.com/bem/bem-forum/issues): what do you think is less useful, what do you lack while using, what do you want to add or remove and so on. This will allow us to make some corrections, deploy and start our moving in.
 
-Waiting for you very much!
+Waiting for this very much to **Stay BEMed!**
