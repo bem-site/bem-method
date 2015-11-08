@@ -27,3 +27,5 @@ Someday we will get there. Or may be find somebody passionate from BEM community
 If you have time and desire to tackle this task, we will be happy to discuss it, help to plan and advise, where to move first, and the longer it takes the more we are open to engage you in sharing results on our own or external conferences and publish it on bem.info.
 
 Email us at [info@bem.info](mailto:info@bem.info)
+
+**Stay BEMed!**
