@@ -1,5 +1,7 @@
 #bem-tools v0.6.4
 
+Hi,
+
 The stable [bem-tools](https://en.bem.info/tools/bem/bem-tools/) v0.6.4 is available.
 
 In this version
@@ -172,3 +174,5 @@ a list of files filtered by a specific suffix is passed to it.
 Each file path is processed by `getBuildResultChunk`. The output is a string with the file content.
 
 Depending on the technology it may be or obtained file path wrapped in connection directive or the file content read from the disk.
+
+**Stay BEMed!**
