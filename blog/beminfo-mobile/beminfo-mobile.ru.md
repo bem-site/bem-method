@@ -1,4 +1,4 @@
-#Мобильный bem.info
+# Мобильный bem.info
 
 Привет!
 
@@ -21,8 +21,6 @@
 
 Пишите нам на почту [info@bem.info](mailto:info@bem.info) или форум с меткой [bem.info](https://ru.bem.info/forum/?labels=bem.info). Спасибо!
 
-С уважением,
-
-Команда разработки БЭМ
+С уважением и **Stay BEMed!**
 
 ![Скриншот мобильной версии bem.info](https://img-fotki.yandex.ru/get/16187/127846884.248/0_f2dbd_ec360a78_XL/)
