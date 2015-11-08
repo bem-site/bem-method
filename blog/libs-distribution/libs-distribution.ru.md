@@ -19,3 +19,5 @@
 **В идеале** хотим на bem.info сделать форму, где можно почекать нужные сущности и получить свой кастомный бандл. Однако, не знаем, когда до этого дойдут руки.
 
 Писать можно на почту [info@bem.info](mailto:info@bem.info) или в наш [форум](http://ru.bem.info/forum/?labels=bem-components) с меткой bem-components.
+
+**Stay BEMed!**
