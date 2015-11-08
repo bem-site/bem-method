@@ -29,4 +29,5 @@
 мобильными веб-приложениями и промо-проектами. Пишет и переводит статьи по JavaScript
 для [Хабрахабра](http://habrahabr.ru/) под ником [azproduction](http://habrahabr.ru/users/azproduction/).
 
-[Twitter](https://twitter.com/azproduction), [GitHub](https://github.com/azproduction).
+[Twitter](https://twitter.com/azproduction), [GitHub](https://github.com/azproduction), и **Stay BEMed!**
+
