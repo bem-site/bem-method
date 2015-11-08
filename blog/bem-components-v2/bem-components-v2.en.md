@@ -94,4 +94,4 @@ We welcome all your questions and experience notes on our [forum](https://en.bem
 
 Your user feedback and active contribution to the library helps us to improve our library and extend it with new helpful blocks and features. 
 
-Enjoy the update and use!
+Enjoy the update and use, and always **Stay BEMed!**
