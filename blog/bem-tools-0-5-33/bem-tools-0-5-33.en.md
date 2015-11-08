@@ -21,3 +21,5 @@ We are open to any feedback via comments in our [BEM club on Ya.ru](http://clubs
 We will try to react asap.
 
 Repository on [Github](https://github.com/bem/bem-tools/).
+
+**Stay BEMed!**
