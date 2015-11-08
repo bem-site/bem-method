@@ -1,5 +1,7 @@
 # Release: bem-tools v0.10.0
 
+Hi,
+
 Back in December 2014 we [announced a freeze](https://en.bem.info/blog/bem-tools-status-freeze/) of build with a help of 
 `bem make` command of `bem-tools`. However, since that time we have released minor updates with some improvements.
 
@@ -25,4 +27,4 @@ We continue to suggest you to switch to `ENB` build if you still haven't done it
 The simplest way to do so is to check the config sample within the [project-stub](https://github.com/bem/project-stub/blob/bem-core/.enb/make.js) 
 and if you have diffuculties, ask on our [forum](https://en.bem.info/forum/).
 
-**Bon appetit and Stay BEMed!**
+Bon appetit and **Stay BEMed!**
