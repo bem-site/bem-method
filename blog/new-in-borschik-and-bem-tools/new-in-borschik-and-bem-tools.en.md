@@ -14,4 +14,4 @@ Besides,for those who use bem-tools it will be handy to know that version 0.8.0 
 
 [Detailed changelog](https://en.bem.info/tools/bem/bem-tools/changelog/).
 
-Bon usage!
+Bon usage and **Stay BEMed!**
