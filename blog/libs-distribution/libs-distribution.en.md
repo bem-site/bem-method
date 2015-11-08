@@ -19,3 +19,5 @@ Here we include pre-compiled JS and CSS into the project, go to [bem.info](https
 **Ideally** we would prefer to have a form on bem.info, where you can check needed entities and as a result get your final custom bundle. However, it’s all in plans for now.
 
 Email us at [info@bem.info](mailto:info@bem.info) with a subject "bem-components".
+
+**Stay BEMed!**
