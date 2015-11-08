@@ -14,4 +14,4 @@
 
 [Полная история изменений](https://ru.bem.info/tools/bem/bem-tools/changelog/).
 
-Приятного использования!
+Приятного использования и **Stay BEMed!**
