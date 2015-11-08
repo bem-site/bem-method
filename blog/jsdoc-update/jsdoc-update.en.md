@@ -26,5 +26,4 @@ Updated JSDoc could be found in the latest versions of [bem-history](https://en.
 
 Major result of this work is [complete reference of all i-bem.js methods](https://en.bem.info/libs/bem-core/current/desktop/i-bem/jsdoc/)
 
-Thanks and bon usage,<br>
-BEM team
+Bon usage and **Stay BEMed!**
