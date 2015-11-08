@@ -22,3 +22,4 @@
 
 Репозиторий на [Github](https://github.com/bem/bem-tools/).
 
+**Stay BEMed!**
