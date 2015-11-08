@@ -39,3 +39,5 @@ Start writing your first post right now! We as a BEM team and guys from the comm
 We also hope you open our eyes on the problems English language developers have with BEM (anything from documentation to demos, from installation to use cases). Just mark such posts with "bug" label. It will be a lot of a help!
 
 Let's get started with BEM forum!
+
+To keep in touch and **Stay BEMed!**
