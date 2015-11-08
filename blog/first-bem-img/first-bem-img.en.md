@@ -74,6 +74,8 @@ I am delighted to have been able to take part in the hackathon. I am even more d
 
 I can't find any fault with anything related to the organization of the hackathon, so I'll just say thanks again to the organizers and my team.
 
-**It was awesome! Let's hope this BEM hackathon was just the first of many!**
+It was awesome! Let's hope this BEM hackathon was just the first of many!
+
+**Stay BEMed!**
 
 ![](https://img-fotki.yandex.ru/get/15565/44214498.bd/0_9bc30_a0c39994_XL.jpg)
