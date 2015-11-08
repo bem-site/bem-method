@@ -12,4 +12,4 @@ Feel free to send all bug reports, suggestions and feature requests to [info@bem
 
 Kudos go to our great site development team: [Andrew Kuznetsov](https://github.com/tormozz48/), [Aleksandra Nekhaieva](https://github.com/lesanra), [Pavel Bashinsky](https://en.bem.info/authors/bashinsky-pavel/), [Danila Kovchiy](https://twitter.com/kovchiy) and [Vladimir Grinenko](https://en.bem.info/authors/grinenko-vladimir/).
 
-PS: Don't stop refreshing ;)
+Don't stop refreshing main page ;) and **Stay BEMed!**
