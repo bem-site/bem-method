@@ -1,3 +1,5 @@
+# New on site: sections, navigation, meaning of «technologies», call for articles
+
 Hi!
 
 We are frequently asked about what do we mean by “technologies” in BEM, what kind of them we have, how do they work and so on. Let us explain :)
@@ -42,3 +44,5 @@ We also checked “Tutorials” and “Articles” sections. First now gathers m
 If you know such articles and think they might be handy to be published at bem.info; moreover, you wrote such articles by yourself and want them to be published here — email us at [info@bem.info](mailto:info@bem.info), and we will be happy to do so.
 
 If you notice a mistake, 404 or know how to improve usability on the site, do not stay silent, our mailbox [info@bem.info](mailto:info@bem.info) is waiting for your emails!
+
+**Stay BEMed!**
