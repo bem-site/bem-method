@@ -17,3 +17,5 @@ Besides, it can become your ~~chance to rock the world~~ project: Vasya is activ
 If you want to support the project, write directly to Vasya: <outring@gmail.com>
 
 **Vasya Aksyonov**, interface display models specialist. Formerly interface developer in Yandex and head of interface development in SKB Kontur. [Twitter](https://twitter.com/outring), [GitHub](https://github.com/outring/anygrid).
+
+**Stay BEMed!**
