@@ -23,3 +23,5 @@ How we plan to do this?
 While we plan development process we would like to **ask your feedback** on whether will such changes ease the work with library or we need to do something else?
 
 If you have and would like to **propose tasks** for v3 — please, do [create an issue](https://github.com/bem/bem-core/issues/new), we will be more than happy!
+
+**Stay BEMed!**
