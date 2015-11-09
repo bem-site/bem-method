@@ -246,7 +246,7 @@ Create your own CSS rules for the `hello` block. For example:
     margin-right: 12px;
 }
 ```
-To add to `input` element CSS rules that are already implemented in the `hello` block, mix element using the field `mix` in the input data (BEMJSON).
+To add to `input` block the CSS rules that are already implemented in the `input` element of `hello` block, mix element using the field `mix` in the input data (BEMJSON).
 
 ```js
 {
