@@ -24,3 +24,7 @@ We will be very much thankful as well if you could possibly forward a link to th
 who use BEM in their work. This allows us to gather as much useful and important feedback as possible. 
 
 Thank you very much in advance, and **Stay BEMed**!
+
+P.S.
+Finally, we have launched a subscription to [news mailing list](https://en.bem.info/subscribe).
+So, it is even easier now to stay in the know of product news, important releases, documentation updates, events and conferences about BEM as well as other topics!
