@@ -1022,5 +1022,27 @@
             "skype": "",
             "info": ""
         }
+    },
+    "karpov-viktor": {
+        "en": {
+            "firstName": "Viktor",
+            "lastName": "Karpov",
+            "avatar": "https://avatars0.githubusercontent.com/u/3001791?v=3&s=400",
+            "github": "vitkarpov",
+            "email": ["viktor.s.karpov@yandex.ru"],
+            "twitter": "vitkarpov",
+            "skype": "",
+            "info": "Interface Developer, Yandex"
+        },
+        "ru": {
+            "firstName": "Виктор",
+            "lastName": "Карпов",
+            "avatar": "https://avatars0.githubusercontent.com/u/3001791?v=3&s=400",
+            "github": "vitkarpov",
+            "email": ["viktor.s.karpov@yandex.ru"],
+            "twitter": "vitkarpov",
+            "skype": "",
+            "info": "Разрабатывает интерфейсы в Яндексе с 2013 года. В 2015, в составе команды, запустил Фото в Яндекс.Диске. В 2011 окончил мехмат Ростовского государственного университета (ныне Южный Федеральный Университет)."
+        }
     }
 }
