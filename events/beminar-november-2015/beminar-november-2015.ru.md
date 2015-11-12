@@ -12,7 +12,7 @@
 
 Кроме того, вы узнаете, как описать страницу в БЭМ-терминах с помощью [BEMJSON](https://ru.bem.info/technology/bemjson/).
 
-Ведущий вебинара — [Виктор Карпов](https://ru.bem.info/authors/viktor-karpov/).
+Ведущий вебинара — [Виктор Карпов](https://ru.bem.info/authors/karpov-viktor/).
 
 [Регистрация](https://events.yandex.ru/events/webinars/18-november-2015/) открыта **до 18 марта 2015 года 18:00 по московскому времени включительно**.
 
