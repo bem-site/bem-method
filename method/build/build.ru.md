@@ -116,7 +116,7 @@ bundles/                # Директория, содержащая все ре
 * Непосредственно в коде блока.
 
   * В CSS зависимости можно определять с помощью директивы [@import](http://htmlbook.ru/css/import).
-  * В JavaScript можно декларировать зависимости с помощью модульной системы (например, [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), [CommonJS](http://www.commonjs.org/)) или импортов ([ECMAScript 2015](ecmascript.org)).
+  * В JavaScript можно декларировать зависимости с помощью модульной системы (например, [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), [CommonJS](http://www.commonjs.org/)) или импортов ([ECMAScript 2015](http://ecmascript.org)).
 
 * В отдельном файле.
 
