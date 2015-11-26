@@ -227,7 +227,7 @@ This style differs from the classic one in that it uses [CamelCase](https://en.w
 
 `_available`
 
-This style is characterized by the absence of a block or element name before a modifier. Such a scheme puts limitations on the use of [mixes](../key-concepts/key-concepts.en.md#Mix), as it makes it impossible to determine what block a modifier belongs to.
+This style is characterized by the absence of a block or element name before a modifier. Such a scheme puts limitations on the use of [mixes](../key-concepts/key-concepts.en.md#Mix), as it makes it impossible to determine what block or element a modifier belongs to.
 
 Which style to choose
 ---------------------
