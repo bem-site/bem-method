@@ -155,7 +155,14 @@ Let's add a **head** block to the page. To do this declare it in a BEMJSON file 
 <script src="https://gist.github.com/tadatuta/7beb85c518237538bb7c.js"></script>Refresh the page to see the corresponding `<div>` with a `"head"` class.
 
 ```html
-<!DOCTYPE html> <html class="ua_js_yes"> <head>...</head> <body class="page"> <div class="head"></div> <script src="index.min.js"></script> </body> </html>
+<!DOCTYPE html>
+<html class="ua_js_yes">
+    <head>...</head>
+    <body class="page">
+        <div class="head"></div>
+        <script src="index.min.js"></script>
+    </body>
+</html>
 ```
 
 A **head** block consists of a search form, a logo and a layout block that provides correct markup within the head.
@@ -185,7 +192,19 @@ First of all put a **layout** block along with its two elements (**left** and **
 Refresh the page to view the new corresponding HTML layout.
 
 ```html
-<!DOCTYPE html> <html class="ua_js_yes"> <head>...</head> <body class="page"> <div class="head"> <div class="layout"> <div class="layout__left">left here</div> <div class="layout__right">right here</div> </div> </div> <script src="index.min.js"></script> </body> </html>
+<!DOCTYPE html>
+<html class="ua_js_yes">
+    <head>...</head>
+    <body class="page">
+        <div class="head">
+            <div class="layout">
+                <div class="layout__left">left here</div>
+                <div class="layout__right">right here</div>
+            </div>
+        </div>
+        <script src="index.min.js"></script>
+    </body>
+</html>
 ```
 
 This markup requires CSS rules for the **layout**. In BEM terms you have to implement a block in CSS.
@@ -371,7 +390,18 @@ block('page')(
 [Code sample](https://gist.github.com/innabelaya/8906664) page.bemhtml.
 
 ```html
-<!DOCTYPE html> <html class="ua_js_yes"> <head>...</head> <body class="page"> <div class="page__inner"> <div class="head"> <div class="layout">...</div> </div> <script src="index.min.js"></script> </div> </body> </html>
+<!DOCTYPE html>
+<html class="ua_js_yes">
+    <head>...</head>
+    <body class="page">
+        <div class="page__inner">
+            <div class="head">
+                <div class="layout">...</div>
+            </div>
+            <script src="index.min.js"></script>
+        </div>
+    </body>
+</html>
 ```
 
 Then implement the **page** block in CSS technology to apply style to resulting markup:
@@ -392,8 +422,25 @@ Once again, you can borrow contents for a `desktop.blocks/head/head.css` file fr
 A web page we are going to develop contains a list of some goods. To be able to add it to the page you have to declare a **goods** block in a BEMJSOM file. There are the following goods data available: title, image, price and link for each item.
 
 ```js
-{ block: 'goods', goods: [ { title: 'Apple iPhone 4S 32Gb', image: 'http://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg', price: '259', url: '/' }, { title: 'Samsung Galaxy Ace S5830', image: 'http://mdata.yandex.net/i?path=b0206005907_img_id5777488190397681906.jpg', price: '73', url: '/' }, //... }
+{
+    block: 'goods',
+    goods: [
+        {
+            title: 'Apple iPhone 4S 32Gb',
+            image: 'http://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg',
+            price: '259',
+            url: '/'
+        },
+        {
+            title: 'Samsung Galaxy Ace S5830',
+            image: 'http://mdata.yandex.net/i?path=b0206005907_img_id5777488190397681906.jpg',
+            price: '73',
+            url: '/'
+        },
+        //...
+}
 ```
+
 [Code sample](https://gist.github.com/innabelaya/2cb6080ba35d3a3cacf6) index.bemjson.js.
 
 This block has to be implemented in BEMHTML technology in order to be turned into an appropriate piece of HTML. It needs to be styled with CSS as well. So you can create this block with two types of technologies at once using `bem create` command:
@@ -431,8 +478,27 @@ block('goods')(
 ```
 
 [Code sample](https://gist.github.com/innabelaya/8913843) goods.bemhtml.
+
 ```html
-<!DOCTYPE html> <html class="ua_js_yes"> <head>...</head> <body class="page"> <div class="page__inner"> <div class="head">...</div> <ul class="goods"> <li class="goods__item"> <h3 class="goods__title">Apple iPhone 4S 32Gb</h3> <img class="goods__image" src="http://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg"/> <span class="goods__price">259</span> </li> <li class="goods__item">...</li> <li class="goods__item">...</li> </ul> <script src="index.min.js"></script> </div> </body> </html>
+<!DOCTYPE html>
+<html class="ua_js_yes">
+    <head>...</head>
+    <body class="page">
+        <div class="page__inner">
+            <div class="head">...</div>
+            <ul class="goods">
+                <li class="goods__item">
+                    <h3 class="goods__title">Apple iPhone 4S 32Gb</h3>
+                    <img class="goods__image" src="http://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg"/>
+                    <span class="goods__price">259</span>
+                </li>
+                <li class="goods__item">...</li>
+                <li class="goods__item">...</li>
+            </ul>
+            <script src="index.min.js"></script>
+        </div>
+    </body>
+</html>
 ```
 
 Templates can produce not only HTML elements of a block but nested blocks as well. The example below shows you how to render a price element as a **link** block of `bem-components` library.
@@ -451,8 +517,21 @@ An extra trick: if you would like to avoid cascade when styling the block, mark 
 ```
 
 [Code sample](https://gist.github.com/innabelaya/8913983) goods.bemhtml.
+
 ```js
-<!DOCTYPE html> <ul class="goods"> <li class="goods__item"> <h3 class="goods__title"> Apple iPhone 4S 32Gb </h3> <img class="goods__image" src="http://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg"/> <a class="link goods__link" href="/">259</a> </li> //... <li class="goods__item">...</li> <li class="goods__item">...</li> </ul>
+<!DOCTYPE html>
+<ul class="goods">
+    <li class="goods__item">
+        <h3 class="goods__title">
+            Apple iPhone 4S 32Gb
+        </h3>
+        <img class="goods__image" src="http://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg"/>
+        <a class="link goods__link" href="/">259</a>
+    </li>
+    //...
+    <li class="goods__item">...</li>
+    <li class="goods__item">...</li>
+</ul>
 ```
 
 You need to identify new goods on a page. To implement this add a verification of a `new` modifier to the template: [code sample](https://gist.github.com/innabelaya/8914048).
@@ -493,7 +572,9 @@ It provides just one block **box** that does all we need.
 You should declare a library name, its version (if available) and its repository URL in a `bower.json` file.
 
 ```
- "dependencies": { "bem-components": "2.4.0", "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
+    "dependencies": {
+        "bem-components": "2.4.0",
+        "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
 ```
 
 [Code sample](https://gist.github.com/tadatuta/ce9a013691c91adebec0) bower.json.
@@ -559,7 +640,10 @@ You can also mix an element with a block. Mix could be declared in BEMJSON or in
  Let's specify that each item element from a goods list has the same formatting as a head of the page. For this you need to mix each **item** from the **goods** block with the **box** block from the alredy linked library.
 
 ```
- elem: 'item', mods: { new: item.new ? 'yes' : undefined }, mix: [{ block: 'box' }], content: ...
+    elem: 'item',
+        mods: { new: item.new ? 'yes' : undefined },
+        mix: [{ block: 'box' }],
+        content: ...
 ```
 
 [Code sample](https://gist.github.com/innabelaya/8930835) goods.bemhtml.
