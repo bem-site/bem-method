@@ -87,7 +87,7 @@ Building a project with only the relevant BEM entities makes use of the followin
 
 To start the build process for a page, the build tool must know all of its components.
 
-![Declaration](build_declaration.png)
+![Declaration](build__declaration.png)
 
 The first step in the build process is making a list of the necessary BEM entities. The following example explains the purpose of such a list and how it is created.
 
@@ -101,7 +101,7 @@ The main purpose of the declaration is to define what and in what order should b
 
 In the BEM methodology, blocks are often built on the basis of other blocks. For instance, the search form block (`search-form`) is built using the `input` and `button` blocks. There is no need to implement a block again if it is already stored in the library. You can build the new block on the basis of the existing one.
 
-![Example of a compound block](build_search-form.png)
+![Example of a compound block](build__search-form.png)
 
 To create a block based on another block that already exists, you need to specify dependencies between the two. For instance, the above-mentioned `search-form` block is dependent on `input` and `button`.
 
@@ -143,7 +143,7 @@ The order of including BEM entities in the build depends upon:
 
 The diagram illustrates the principle of applying redefinition levels to the build: components common to all platforms are linked to the `common` level, while platform-specific components are linked from the `desktop` and `touch` levels.
 
-![Redefinition levels](build_levels.png)
+![Redefinition levels](build__levels.png)
 
 To find out more about using redefinition levels, read these examples:
 
