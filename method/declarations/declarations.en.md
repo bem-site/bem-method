@@ -38,7 +38,7 @@ When the page get built, the declaration is formed automatically based on the BE
 
 >[html2bemjson](https://github.com/bem-incubator/html2bemjson) is one of the tools that builds a BEM tree out of the HTML structure of a page.
 
-![A way of creating a declaration](declarations__html2decl.png)
+![A way of creating a declaration](declarations__html2decl.en.png)
 
 >For an example of a project where a separate declaration is formed for each individual page, see [Starting your own BEM project](https://en.bem.info/tutorials/start-with-project-stub/).
 
@@ -48,7 +48,7 @@ Another source of information about the entities is the project file system.
 The declaration will thus encompass all entities that are found in the file system of the project. Although it ensures a guaranteed inclusion of all the necessary entities in the build, this method is lacking in precision: the build will cover all of the existing entities, not just the relevant ones.
 On the contrary, the page description-based declaration ensures the building of the relevant BEM entities on a per-entity basis, but does not guarantee inclusion of all those entities that are not explicitly specified in the HTML file for the page.
 
-![A way of creating a declaration](declarations__fs2decl.png)
+![A way of creating a declaration](declarations__fs2decl.en.png)
 
 >In [bem-components](https://en.bem.info/libs/bem-components/), the method of creating a declaration via the introspection of a file system is used for the [Dist](https://en.bem.info/libs/bem-components/)-based library distribution.
 
