@@ -110,7 +110,7 @@ Dependencies can be specified in a number of ways:
 * Directly in the block code.
 
   * In CSS, dependencies can be defined using the @import directive.
-  * In JavaScript, dependencies can be declared using a module system (e.g., [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), [CommonJS](http://www.commonjs.org/)) or imports ([ECMAScript 2015](ecmascript.org)).
+  * In JavaScript, dependencies can be declared using a module system (e.g., [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), [CommonJS](http://www.commonjs.org/)) or imports ([ECMAScript 2015](http://www.ecmascript.org/)).
 
 * In a separate file.
 
