@@ -222,7 +222,7 @@ where
 
 * `-l directoryName` – defines a redefinition level;
 *  `-b blockName` – defines a name of the block directory for which a technology file will be created. If there is no any directory with the defined name, creates it;
-* `-T technogyName` – creates technology file for block implementation.
+* `-T technologyName` – creates technology file for block implementation.
 
 Running this command creates a `desktop.blocks/layout/layout.css` file in a **layout** directory on a `desktop.blocks` redefinition level. Inside you will find a CSS selector that matches the layout block.
 
