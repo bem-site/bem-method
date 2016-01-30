@@ -1123,7 +1123,7 @@ Lastly, we need to convert BEMJSON to HTML using `BEMHTML.apply()`. This will re
 ```js
 var BEMHTML = require(PATH.join('../../' + pathToBundle, 'index.bemhtml.js')).BEMHTML;
 //…
-BEMTREE.apply(dataEntries.map(function(dataEntry) {
+BEMHTML.apply(dataEntries.map(function(dataEntry) {
     dataEntry.createdAt = moment(dataEntry.createdAt).fromNow();
     return {
         block: 'island',
