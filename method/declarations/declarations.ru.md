@@ -75,7 +75,7 @@ exports.blocks = [
     'input',                'input',                'input',
     'button',               'button',               'button',
     'link',                                         'link',
-    'attach',     +                        +        'attach',
+    'attach',     +                        =        'attach',
                             'menu',                 'menu',
                             'image',                'image',
     'checkbox',                                     'checkbox',
@@ -117,7 +117,7 @@ exports.blocks = [
 [                       [                       [
     'header',               'header',               'header',
     'input',                'menu',
-    'link',        +        'button',     =
+    'link',        ⋂        'button',     =
     'attach',               'input',
     'checkbox',             'image',
     'textarea',             'popup',
