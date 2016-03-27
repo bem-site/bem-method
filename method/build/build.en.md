@@ -28,9 +28,9 @@ The build process takes care of the following:
 
 In order to obtain a finished project part (build result), such as a web page, from individual files, we need to:
 
-* [list blocks, elements, and modifiers involved in the creation of the page](#listing-blocks-and-elements-needed-for-creating-the-page)
-* [specify dependencies for the BEM entities used on the page](#identifying-necessary-dependencies-for-bem-entities-used)
-* [combine the source files](#determing-the-order-of-including-bem-entities-in-the-build)
+* [list blocks, elements, and modifiers involved in the creation of the page](#determining-a-list-of-blocks-elements-and-modifiers-for-creating-a-page)
+* [specify dependencies for the BEM entities used on the page](#identifying-dependencies)
+* [combine the source files](#determining-the-order-of-including-bem-entities-in-the-build)
 
 ### Build results
 
