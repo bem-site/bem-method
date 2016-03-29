@@ -1,13 +1,13 @@
-The Yandex-developed BEM methodology has been the topic of many a Habr post. We have decided it's time to offer a more structured look into its origin and what made BEM what it is today. We believe it will be interesting not just for existing BEM practitioners but also for those who consider this methodology to be unsuitable for their particular projects. They may find that we were addressing issues similar to their own and discover something of benefit to themselves.
+This article offers a structured look of the Yandex-developed BEM methodology. We believe it will be interesting not just for existing BEM practitioners but also for those who consider this methodology to be unsuitable for their particular projects. They may find that we were addressing issues similar to their own and discover something of benefit to themselves.
 
-<img src="https://habrastorage.org/getpro/habr/post_images/09d/d3b/d6d/09dd3bd6d684e767c5f4d5b9564607d8.png" alt="image"/>
+<img src="https://github.com/bem/bem-method/blob/bem-info-data/articles/bem-key-concepts-habr/bem-key-concepts-habr-1.png?raw=true" style="width: 600px; heigth: auto;" alt="image"/>
 
-Naturally, it was Yandex’s own needs that kicked it all off. As the company grew, so did the number of staff involved in front-end development. Eventually the team reached the size when it became obvious that it would be difficult to work without some common standards. Besides, we are based in different Yandex offices in different cities. An idea of a common methodology emerged, one that would help set up processes in a big team working on different projects. Crucially, our goals were not limited to streamlining and speeding up the development process — we also wanted to shorten the learning curve for newcomers.
+Naturally, it was Yandex’s own needs that kicked it all off. As the company grew, so did the number of staff involved in front-end development. Eventually the team reached the size when it became obvious that it would be difficult to work without some common standards. Besides, we are based in different offices in different cities. An idea of a common methodology emerged, one that would help set up processes in a big team working on different projects. Crucially, our goals were not limited to streamlining and speeding up the development process — we also wanted to shorten the learning curve for newcomers.
 
 ## What the BEM methodology is for
 These are the requirements that we identified:
 
-* Developers should always understand their own code (even a year on after they wrote it) as well as the code of any programmer in their BEM project team.
+* Developers should always understand their own code (even a year on after they wrote it) as well as the code of any other programmer in their team.
 * Any code block can be re-used: we must create a common knowledge base and use ready-made solutions where possible instead of starting from scratch every time.
 * When working in the same team, programmers, managers, designers, and front-end developers must all stick to the same terminology. In other words, they must use the same lingo.
 * Teams can exchange engineers for implementing some specific functionality.
@@ -31,7 +31,7 @@ project.js      # The scripts for the entire project were stored in one file
 images/         # Images were placed into a separate folder yandex.png
 ```
 
-`id` , class and tag selectors were used in CSS rules.
+`id`, class and tag selectors were used in CSS rules.
 
 **Example**
 
@@ -66,7 +66,7 @@ A logically and functionally independent page component. A block is fully self-c
 
 Blocks can be nested inside each other, grouped together, used for creating compound blocks.
 
-<img src="https://habrastorage.org/getpro/habr/post_images/569/22d/95c/56922d95c9a9725976d8010279baf919.png" alt="image"/>
+<img src="https://github.com/bem/bem-method/blob/bem-info-data/articles/bem-key-concepts-habr/bem-key-concepts-habr-2.ru.png?raw=true" style="width: 600px; heigth: auto;" alt="image"/>
 
 
 #### Element
@@ -74,8 +74,7 @@ A constituent part of a block that can’t be used outside of it and makes sense
 
 An important tip to bear in mind when dealing with elements: it is not recommended to create elements of elements. Embedding one element into another makes it impossible to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
 
-<img src="https://habrastorage.org/getpro/habr/post_images/f4f/9c7/a51/f4f9c7a516e679b4dec1e90eb25f6640.png" alt="image"/>
-
+<img src="https://github.com/bem/bem-method/blob/bem-info-data/articles/bem-key-concepts-habr/bem-key-concepts-habr-3.ru.png?raw=true" style="width: 600px; heigth: auto;" alt="image"/>
 
 #### Modifier
 A property of a block or an element that modifies their appearance, state or behavior.
@@ -83,8 +82,7 @@ A modifier has a name and it can also have a value. The use of modifiers is opti
 
 For example, a modifier can be used to change not only the color of the sword but also its functionality (as is shown in the example with the red sword):
 
-<img src="https://habrastorage.org/getpro/habr/post_images/81c/325/0b2/81c3250b2a8b7cbb09420e82aed2c34c.png" alt="image"/>
-
+<img src="https://github.com/bem/bem-method/blob/bem-info-data/articles/bem-key-concepts-habr/bem-key-concepts-habr-4.png?raw=true" style="width: 600px; heigth: auto;" alt="image"/>
 
 ### Naming rules for CSS selectors
 All of the BEM principles were developed and adopted in stages. We began by defining strict rules for naming CSS selectors.
@@ -296,7 +294,7 @@ Redefinition levels allow us to
 * Divide a project into platforms. Store implementation common to all platforms on one level and store platform-specific implementation on another.
 * Avoid code duplication and the creation of new entities if existing functionality needs to be changed. If we compare levels to layers, then the basic layer is the original implementation of the block, and each next layer is added on top and complements (inherits) or modifies the basic implementation.
 
-<img src="https://habrastorage.org/getpro/habr/post_images/a9f/9a7/157/a9f9a71573795ac5d54e513b4141a2af.png" alt="image"/>
+<img src="https://github.com/bem/bem-method/blob/bem-info-data/articles/bem-key-concepts-habr/bem-key-concepts-habr-5.ru.png?raw=true" style="width: 600px; heigth: auto;" alt="image"/>
 
 **Example**
 
