@@ -121,7 +121,7 @@ Dependencies can be specified in a number of ways:
       input/
           input.css
           input.js
-          input.deps.js   # Файл с зависимостями блока `input`
+          input.deps.js   # `input` block dependencies
       button/
           button.css
           button.js
