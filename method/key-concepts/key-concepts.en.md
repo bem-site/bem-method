@@ -13,7 +13,7 @@
 
 ## Block
 
-A logically and functionally independent page component, the equivalent of a component in Web Components. A block encapsulates behavior (JavaScript), templates, styles (CSS), and other [implementation technologies](#implementation-technology). Blocks being independent allows for their re-use, as well as facilitating the project development and support process.
+A logically and functionally independent page component, the equivalent of a component in Web Components. A block encapsulates behavior (JavaScript), templates, styles (CSS), and other [implementation technologies](#implementation-technology). Blocks being independent allows for their re-use, as well as facilitating the [project development and support process](../solved-problems/solved-problems.en.md).
 
 ### Block features
 
@@ -23,7 +23,7 @@ Blocks can be nested inside any other blocks.
 
 For example, a `head` block can include a logo (`logo`), a search form (`search`), and an authorization block (`auth`).
 
-![Head block components](https://img-fotki.yandex.ru/get/15534/158800653.0/0_111fb2_7710ab3d_orig)
+![Head block components](key-concepts__head_marked.png)
 
 #### Arbitrary placement
 
@@ -31,15 +31,15 @@ Blocks can be moved around on a page, moved between pages or projects. The imple
 
 Thus, the logo and the authorization form can be swapped around without modifying the CSS or JavaScript code of the blocks.
 
-![Altering the block positions](https://img-fotki.yandex.ru/get/16156/158800653.0/0_111fb3_2fec3fed_orig)
+![Altering the block positions](key-concepts__head.png)
 
-![Altering the block positions](https://img-fotki.yandex.ru/get/15542/158800653.0/0_111fb1_bcbc3c6a_orig)
+![Altering the block positions](key-concepts__head_changed.png)
 
 #### Re-use
 
 An interface can contain multiple instances of the same block.
 
-![Online store products](https://img-fotki.yandex.ru/get/15498/158800653.0/0_111fb0_fbb195e9_orig)
+![Online store products](key-concepts__goods-list.png)
 
 ## Element
 
@@ -47,7 +47,7 @@ A constituent part of a [block](#block) that can't be used outside of it.
 
 For example, a menu item is not used outside of the context of a menu block, therefore it is an element.
 
-![Menu items](https://img-fotki.yandex.ru/get/15588/158800653.0/0_111fb6_192672cf_orig)
+![Menu items](key-concepts__menu-items.png)
 
 > [A block or an element: when should I use which?](../../faq/faq.en.md#a-block-or-an-element-when-should-i-use-which)
 
@@ -63,7 +63,7 @@ Modifiers are similar in essence to HTML attributes. The same block looks differ
 
 For instance, the appearance of the menu block (`menu`) may change depending on a modifier that is used on it.
 
-![Add a menu to the footer](https://img-fotki.yandex.ru/get/16183/158800653.0/0_111fba_921b3c47_orig)
+![Add a menu to the footer](key-concepts__site-footer-menu.png)
 
 ## BEM entity
 
