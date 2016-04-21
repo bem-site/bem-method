@@ -66,7 +66,7 @@ File system organization of a BEM project
 
 For every block, there's a directory in the file system. The directory is named after the block.
 
-```
+```files
 blocks/
     input/     # input block directory
     button/    # button block directory
@@ -74,11 +74,11 @@ blocks/
 
 A block implementation is divided into separate files known as technology files. The files all have the same name as the block. The extension of each file corresponds to its technology.
 
-```
+```files
 blocks/
     input/
-        input.css       # `input` block implementation in CSS technology
-        input.js        # `input` block implementation in JavaScript technology
+        input.css       # `input` block implementation in CSS
+        input.js        # `input` block implementation in JavaScript
     button/
         button.css
         button.js
@@ -93,11 +93,12 @@ Names of files and directories for [BEM entities](../key-concepts/key-concepts.e
 
 Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
 
-```
+```files
 blocks/
     input/
         _type/                        # `type` modifier directory
-            input_type_search.css     # Implementation of modifier `type` with value `search` in CSS technology
+            input_type_search.css     # Implementation of modifier `type`
+                                      # with value `search` in CSS technology
         __box/                        # `box` element directory
             input__box.css
         input.css
@@ -110,13 +111,13 @@ blocks/
 
 If there are modifiers that differ in value (e.g., `popup_target_anchor.extension` and `popup_target_position.extension`), the shared code can be stored in a separate file (`popup_target.extension`) with no modifier value included in the name.
 
-```
+```files
 blocks/
     popup/
         _target/
             popup_target.css            # Common code of  modifier `target`
-            popup_target_anchor.css     # Implementation of modifier `target` with value `anchor`
-            popup_target_position.css   # Implementation of modifier `target` with value `position`
+            popup_target_anchor.css     # Modifier `target` with value `anchor`
+            popup_target_position.css   # Modifier `target` with value `position`
         _visible/
             popup_visible.css           # Boolean modifier `visible`
     popup.css
@@ -144,13 +145,13 @@ A library can be linked to a project as a separate level. Blocks can be modified
 
 Such an arrangement allows us to preserve changes made to the blocks if the library gets updated — the library source code will be updated while the specific implementation of the project blocks will remain the same because it is stored at a different level.
 
-```
+```files
 library.blocks/
     button/
-        button.css    # CSS implementation of the button in the linked library (height 20px)
+        button.css    # CSS implementation in the linked library (height 20px)
 project.blocks/
     button/
-        button.css    # Redefinition of CSS implementation of the button (height 24px)
+        button.css    # Redefinition of CSS implementation (height 24px)
 ```
 
 ### Dividing a project into platforms
@@ -159,7 +160,7 @@ A project is divided into platforms (`mobile` and `desktop`) and into respective
 
 Let's look at an example:
 
-```
+```files
 common.blocks/
     button/
         button.css    # Generic CSS implementation of the button
@@ -173,14 +174,14 @@ mobile.blocks/
 
 During the build process, all the generic CSS rules for the button will be included in the `desktop.css` file from the `common` level, and the redefined rules from the `desktop` level.
 
-```
-@import(common.blocks/button/button.css);    # Generic CSS rules
-@import(desktop.blocks/button/button.css);   # Desktop platform-specific button features
+```css
+@import(common.blocks/button/button.css);    /* Generic CSS rules */
+@import(desktop.blocks/button/button.css);   /* Desktop platform-specific */
 ```
 
 The `mobile.css` file will include the generic CSS rules for the button from the `common` level and the redefined rules from the `mobile` level.
 
-```
-@import(common.blocks/button/button.css);    # Generic CSS rules
-@import(mobile.blocks/button/button.css);    # Mobile platform-specific button features
+```css
+@import(common.blocks/button/button.css);    /* Generic CSS rules */
+@import(mobile.blocks/button/button.css);    /* Mobile platform-specific */
 ```
