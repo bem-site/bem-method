@@ -42,13 +42,13 @@ Different prefixes can sometimes be added to block names. Our experience of usin
 
 *HTML*
 
-``` html
+```html
 <div class="menu">...</div>
 ```
 
 *CSS*
 
-``` css
+```css
 .menu { color: red; }
 ```
 
@@ -74,13 +74,13 @@ If a block has several identical elements, such as in the case of menu items, al
 
 *HTML*
 
-``` html
+```html
 <div class="menu"> ... <span class="menu__item"></span> </div>
 ```
 
 *CSS*
 
-``` css
+```css
 .menu__item { color: red; }
 ```
 
@@ -106,7 +106,7 @@ The full name of a modifier is created using the scheme:
 
 **Example**
 
-    `menu_hidden`
+`menu_hidden`
 
 -   **Key-value type modifier**.
     The value of a modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme:
@@ -114,17 +114,18 @@ The full name of a modifier is created using the scheme:
 
 **Example**
 
-    `menu_theme_morning-forest`
+`menu_theme_morning-forest`
 
 *HTML*
 
-``` html
-<div class="menu menu_hidden">...</div> <div class="menu menu_theme_morning-forest">...</div>
+```html
+<div class="menu menu_hidden">...</div>
+<div class="menu menu_theme_morning-forest">...</div>
 ```
 
 > *Incorrect notation*
 
-> ``` html
+> ```html
 > <div class="menu_hidden">...</div>
 > ```
 
@@ -132,7 +133,7 @@ The full name of a modifier is created using the scheme:
 
 *CSS*
 
-``` css
+```css
 .menu_hidden { display: none }
 .menu_theme_morning-forest { color: green; }
 ```
@@ -145,7 +146,7 @@ The full name of a modifier is created using the scheme:
 
 **Example**
 
-    `menu__item_visible`
+`menu__item_visible`
 
 -   **Key-value type modifier**.
     The value of a modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme:
@@ -153,11 +154,11 @@ The full name of a modifier is created using the scheme:
 
 **Example**
 
-    `menu__item_type_radio`
+`menu__item_type_radio`
 
 *HTML*
 
-``` html
+```html
 <div class="menu"> ... <span class="menu__item menu__item_visible menu__item_type_radio"></span> </div>
 ```
 
@@ -173,7 +174,7 @@ The implementation of an authorization form in HTML and CSS:
 
 *HTML*
 
-``` html
+```html
 <form class="form form_login form_theme_forest">
     <input class="form__input">
     <input class="form__submit form__submit_disabled">
@@ -182,7 +183,7 @@ The implementation of an authorization form in HTML and CSS:
 
 *CSS*
 
-``` css
+```css
 .form {}
 .form_theme_forest {}
 .form_login {}
