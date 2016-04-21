@@ -19,7 +19,7 @@ Back in 2005, the focus was still pretty much on the server side of things. From
 
 These pages were kept in a separate folder and looked like this after a checkout:
 
-```
+```files
 about.html
 index.html
 …
@@ -245,7 +245,7 @@ JavaScript was employed more and more daily, thus the addition of optional compo
 
 Typical file structure:
 
-```
+```files
 index.html
 css/
   yaru.css
@@ -417,7 +417,7 @@ We decided to build a portal-wide framework of blocks so all could benefit from 
 ### Lego repository structure, first approach
 The topmost level corresponded to various available `implementations`:
 
-```
+```files
 css/
 html/
 js/
@@ -429,7 +429,7 @@ Each implementation contained its own sub-structure of folders.
 
 CSS went into 3 different folders:
 
-```
+```files
 css/
   block/
     b-dropdown/
@@ -450,7 +450,7 @@ css/
 
 HTML folder structure was identical to CSS:
 
-```
+```files
 html/
   block/
     b-dropdown.html
@@ -463,7 +463,7 @@ html/
 
 JavaScript was yet loosely structured and used inconsistently between services:
 
-```
+```files
 js/
   check-is-frame.js
   check-session.js
@@ -475,7 +475,7 @@ js/
 
 Each service had a corresponding XML file semantically describing its page header (and providing necessary project-specific data), which in conjunction with an XSL stylesheet generated header HTML code.
 
-```
+```files
 xml/
   block/
     b-head-tabs-communication.xml
@@ -488,7 +488,7 @@ xml/
 
 XSL templates for various blocks (one file per block) were contained in one folder:
 
-```
+```files
 xsl/
   block/
     b-dropdown.xsl
@@ -526,7 +526,7 @@ At that point, we didn't yet come to a unified file naming convention and tried 
 ## Portal-wide framework lego 1.2 (2008)
 Upon releasing Lego version 1.2, the code had been refactored and folder structure had changed.
 
-```
+```files
 common/
   css/
   js/
@@ -544,7 +544,7 @@ Blocks previously separated and placed in `util` and `block` folders are now com
 
 We had been pondering the possibility of open-sourcing the code but postponed it until two years later.
 
-```
+```files
 common/
   css/
     b-dropdown/
@@ -605,7 +605,7 @@ CSS:
 
 All block files (CSS, JS, HTML, XSL) are stored in block folder:
 
-```
+```files
 common/
   block/
     b-head-logo/
@@ -635,7 +635,7 @@ HTML classes inside the block have their prefixes omitted as well.
 
 Files related to inner elements each get their own folder:
 
-```
+```files
 common/
   block/
     b-head-logo/
@@ -661,7 +661,7 @@ In HTML, an extra classname is added:
 
 Modifier files (styles etc.) go into separate folders prefixed with an underscore:
 
-```
+```files
 common/
   block/
     b-head-logo/
@@ -817,7 +817,7 @@ You're free to go and add more levels. You might need some page-specific block i
 
 Example:
 
-```
+```files
 bem-bl/
   b-logo/
 lego/
@@ -831,7 +831,7 @@ It is also possible to use a custom file structure on a redefinition level; as l
 
 We won't go into much detail here, but there's a configuration file for that:
 
-```
+```files
 .bem/
   level.js
 ```
