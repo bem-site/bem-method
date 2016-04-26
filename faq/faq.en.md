@@ -96,7 +96,7 @@ A block or an element: when should I use which?
 
 This rule does not apply when implementing elements that, for reasons of simplifying the development process, have to be broken down into smaller, sub-element, parts. The BEM methodology [does not recommend creating elements of elements](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2). So, in cases like this, instead of an element, a service block should be created.
 
-Why does BEM not recommend using elements within elements (`block__elem1__elem2`)?
+Why does BEM not recommend using elements within elements (block__elem1__elem2)?
 --------------------------------------------------------------------------------
 
 The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
@@ -257,7 +257,7 @@ blocks/
   button.bemhtml
   button.png
 ```
-Why use `i-bem.js` when you have jQuery?
+Why use i-bem.js when you have jQuery?
 ----------------------------------------
 
 [i-bem.js](https://en.bem.info/technology/i-bem/) is a specialized framework for developing projects with JavaScript in terms of blocks, elements, and modifiers.
@@ -313,7 +313,7 @@ Using the block name in the name of a modifier gives a higher priority to CSS ru
 
 > [Reasons for including the block name in a modifier name](#why-include-the-block-name-in-modifier-names-and-element-names)
 
-Can I combine a tag and a class in a selector (e.g. `button.button`)?
+Can I combine a tag and a class in a selector (e.g. button.button)?
 ---------------------------------------------------------------------
 
 Combining a tag and a class in one selector increases its CSS specificity. Adding a modifier won't redefine the CSS rules of the block since the specificity of the block selector is higher.
