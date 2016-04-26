@@ -12,7 +12,7 @@ Blocks and elements
 -------------------
 
 -   [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
--   [Why does BEM not recommend using elements within elements (`block__elem1__elem2`)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
+-   [Why does BEM not recommend using elements within elements (block__elem1__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
 -   [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
 -   [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
 -   [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
@@ -20,7 +20,7 @@ Blocks and elements
 JavaScript
 ----------
 
--   [Why use `i-bem.js` when you have jQuery?](#why-use-i-bemjs-when-you-have-jquery)
+-   [Why use i-bem.js when you have jQuery?](#why-use-i-bemjs-when-you-have-jquery)
 
 CSS
 ---
@@ -30,8 +30,8 @@ CSS
 -   [Can I combine a tag and a class in a selector (e.g. `button.button`)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 -   [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
 -   [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
--   [Why can't I write `<div class="block_mod">` instead of `<div class="block block_mod">`, when the modifier name already contains all the block data?](#why-cant-i-write-div-classblock_mod-instead-of-div-classblock-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
--   [Why can't I include a CSS property name in a modifier name: `.block__element_border-color_grey`?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+-   [Why can't I write <div class="block_mod"> instead of <div class="block block_mod">, when the modifier name already contains all the block data?](#why-cant-i-write-div-classblock_mod-instead-of-div-classblock-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
+-   [Why can't I include a CSS property name in a modifier name: .block__element_border-color_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
 **No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
 
@@ -377,12 +377,12 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 
 This method is only appropriate in the absence of an optimizer.
 
-Why can't I write `<div class="block_mod">` instead of `<div class="block block_mod">`, when the modifier name already contains all the block data?
+Why can't I write <div class="block_mod"> instead of <div class="block block_mod">, when the modifier name already contains all the block data?
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Using multiple modifiers on the same block (e.g., `<div class="block_theme_christmas block_size_big">`) will cause duplication of the code that implements the basic functionality (logic and styles) of the block.
 
-Why can't I include a CSS property name in a modifier name: `.block__element_border-color_grey`?
+Why can't I include a CSS property name in a modifier name: .block__element_border-color_grey?
 ----------------------------------------------------------------------------------------------------
 
 -   If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to `red`, you will need to edit the templates, and most likely, the JavaScript code.
