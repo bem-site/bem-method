@@ -346,7 +346,7 @@ Custom tags can indeed be used for creating block selectors, but the following r
 -   [Mixes](../method/key-concepts/key-concepts.en.md#mix) can't be used.
 -   Not all blocks can be represented by custom tags. For example, all links require an `<a>` tag, and all fields require `<input>`.
 
-Why can't I use a CSS Reset?
+Why cannot I use a CSS Reset?
 ----------------------------
 
 Blocks are independent components. They must not be affected by page-wide CSS rules. Otherwise their independence is compromised and their reuse becomes problematic.
@@ -377,12 +377,12 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 
 This method is only appropriate in the absence of an optimizer.
 
-Why can't I write &lt;div class="block_mod"&gt; instead of &lt;div class="block block_mod"&gt;, when the modifier name already contains all the block data?
+Why cannot I write &lt;div class="block_mod"&gt; instead of &lt;div class="block block_mod"&gt;, when the modifier name already contains all the block data?
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Using multiple modifiers on the same block (e.g., `<div class="block_theme_christmas block_size_big">`) will cause duplication of the code that implements the basic functionality (logic and styles) of the block.
 
-Why can't I include a CSS property name in a modifier name: .block__element_border-color_grey?
+Why cannot I include a CSS property name in a modifier name: .block__element_border-color_grey?
 ----------------------------------------------------------------------------------------------------
 
 -   If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to `red`, you will need to edit the templates, and most likely, the JavaScript code.
