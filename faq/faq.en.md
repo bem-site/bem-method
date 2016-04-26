@@ -207,7 +207,7 @@ The use of the recommended file system structure is optional. You can use any al
 -   One block per directory.
 -   Elements and modifiers are implemented in separate files.
 
-```
+```files
 blocks/
   input/
       input_layout_horiz.css
@@ -220,7 +220,7 @@ blocks/
 -   One block per directory.
 -   Elements and modifiers are implemented inside block files.
 
-```
+```files
 blocks/
   input/
       input.css
@@ -231,7 +231,7 @@ blocks/
 -   Blocks don't have their own directories.
 -   Elements and modifiers are implemented inside block files.
 
-```
+```files
 blocks/
   input.css
   input.js
@@ -244,7 +244,7 @@ blocks/
 -   Blocks don't have their own directories.
 -   Optional elements and modifiers are implemented in separate files.
 
-```
+```files
 blocks/
   input_type_search.js
   input_type_search.bemhtml
@@ -279,14 +279,14 @@ The BEM methodology allows nested selectors, but recommends keeping their use to
 
 For instance, nesting is appropriate for changing elements depending on the state of a block or its assigned theme.
 
-``` css
+```css
 .nav_hovered .nav__link
 {
     text-decoration: underline;
 }
 ```
 
-``` css
+```css
 .nav_theme_islands .nav__item
 {
     line-height: 1.5;
@@ -300,7 +300,7 @@ Combined selectors make block redefinition more difficult because of their highe
 
 Consider an example:
 
-``` html
+```html
 <div class="header">
     <button class="button active">
 </div>
@@ -320,7 +320,7 @@ Combining a tag and a class in one selector increases its CSS specificity. Addin
 
 Let's look at an example:
 
-``` html
+```html
  <button class="button">
 ```
 
@@ -328,7 +328,7 @@ Let's use a `button.button` selector for the CSS rules of this block.
 
 Now with a modifier:
 
-``` html
+```html
  <button class="button button_active">
 ```
 
@@ -359,7 +359,7 @@ Here is an example. If a menu block and a list block in your project are both re
 
 If your project does not use a CSS optimizer that combines selectors with the same sets of rules, you can use a CSS preprocessor. Then you can have a reset of rules for every new block, [mixing](../method/key-concepts/key-concepts.en.md#mix) the proper code. E.g., in SASS it would look like this:
 
-``` css
+```css
 .menu {
     @include reset-list;
 }
