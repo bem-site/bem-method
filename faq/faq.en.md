@@ -29,9 +29,9 @@ CSS
 -   [Why does BEM advise against using combined selectors for creating CSS rules for modifiers?](#why-does-bem-advise-against-using-combined-selectors-for-creating-css-rules-for-modifiers)
 -   [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 -   [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
--   [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
--   [Why can't I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
--   [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+-   [Why can't I use a CSS Reset?](#why-cannot-i-use-a-css-reset)
+-   [Why can't I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?](#why-cannot-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
+-   [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cannot-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
 **No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
 
