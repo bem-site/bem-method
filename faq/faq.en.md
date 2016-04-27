@@ -12,7 +12,7 @@ Blocks and elements
 -------------------
 
 -   [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
--   [Why does BEM not recommend using elements within elements (block__elem1__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
+-   [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
 -   [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
 -   [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
 -   [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
@@ -30,7 +30,7 @@ CSS
 -   [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 -   [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
 -   [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
--   [Why can't I write &lt;div class="block_mod"&gt; instead of &lt;div class="block block_mod"&gt;, when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
+-   [Why can't I write "block_mod" instead of "block block_mod", when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
 -   [Why can't I include a CSS property name in a modifier name: .block__element_border-color_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
 **No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
@@ -96,7 +96,7 @@ A block or an element: when should I use which?
 
 This rule does not apply when implementing elements that, for reasons of simplifying the development process, have to be broken down into smaller, sub-element, parts. The BEM methodology [does not recommend creating elements of elements](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2). So, in cases like this, instead of an element, a service block should be created.
 
-Why does BEM not recommend using elements within elements (block__elem1__elem2)?
+Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?
 --------------------------------------------------------------------------------
 
 The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
