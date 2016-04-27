@@ -30,8 +30,8 @@ CSS
 -   [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 -   [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
 -   [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
--   [Why can't I write "block_mod" instead of "block block_mod", when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
--   [Why can't I include a CSS property name in a modifier name: .block__element_border-color_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+-   [Why can't I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
+-   [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
 **No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
 
@@ -377,12 +377,12 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 
 This method is only appropriate in the absence of an optimizer.
 
-Why cannot I write "block_mod" instead of "block block_mod", when the modifier name already contains all the block data?
+Why cannot I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Using multiple modifiers on the same block (e.g., `<div class="block_theme_christmas block_size_big">`) will cause duplication of the code that implements the basic functionality (logic and styles) of the block.
 
-Why cannot I include a CSS property name in a modifier name: .block__element_border-color_grey?
+Why cannot I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?
 ----------------------------------------------------------------------------------------------------
 
 -   If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to `red`, you will need to edit the templates, and most likely, the JavaScript code.
