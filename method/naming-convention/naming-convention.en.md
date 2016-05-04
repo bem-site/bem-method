@@ -60,7 +60,7 @@ The full name of an element is created using this scheme:
 
 `block-name__elem-name`
 
-If a block has several identical elements, such as in the case of menu items, all of them will have the same name `menu_item`.
+If a block has several identical elements, such as in the case of menu items, all of them will have the same name `menu__item`.
 
 ------------------------------------------------------------------------
 
