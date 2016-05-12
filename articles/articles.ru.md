@@ -1,2 +1,3 @@
-# Methodology
-* [BEM 101](https://css-tricks.com/bem-101/), 02-04-2015, Robin Rendle, Web designer
+# Методология
+* [Учимся любить БЭМ](https://css-tricks.com/bem-101/), 27-05-2015, Johan Ronsse, Дизайнер интерфейсов
+ 
