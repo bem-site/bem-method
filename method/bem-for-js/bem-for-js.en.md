@@ -2,7 +2,7 @@
 
 In the BEM methodology, JavaScript is used for making a webpage “come alive” and is considered one of the block [implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 
-BEM enforces [additional rules???](/bem-js-principles.en.md) on JavaScript that help to apply all the concepts of the component approach of the BEM methodology.
+BEM enforces [additional rules](../bem-js-principles/bem-js-principles.en.md) on JavaScript that help to apply all the concepts of the component approach of the BEM methodology.
 
 ## Basic principles of the component approach in JavaScript for BEM
 
@@ -61,7 +61,7 @@ In a BEM project, you can’t change the states in runtime by using modifiers an
 
 Switching a block from one state to another often causes changes in its appearance. If the CSS uses a modifier to define the block’s appearance, changing the block state called by the same modifier will automatically apply all the necessary styles.
 
-In BEM, the response to setting or removing a modifier is described [declaratively???](#declarative-style). So, for example, if an additional class (or modifier) appears in the CSS during execution, all of this modifier’s properties are automatically applied to the DOM node of this class. The same thing occurs in JavaScript: if a modifier appears (a new class is added to the DOM node), the entire functionality of this modifier is applied. If the modifier disappears, the functionality is disabled.
+In BEM, the response to setting or removing a modifier is described [declaratively](../bem-js-principles/bem-js-principles.en.md#declarative-style). So, for example, if an additional class (or modifier) appears in the CSS during execution, all of this modifier’s properties are automatically applied to the DOM node of this class. The same thing occurs in JavaScript: if a modifier appears (a new class is added to the DOM node), the entire functionality of this modifier is applied. If the modifier disappears, the functionality is disabled.
 
 To dynamically change the states of blocks and elements, we use special methods for setting and removing modifiers.
 
