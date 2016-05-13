@@ -172,7 +172,7 @@ Blocks can be implemented in one or more technologies, for example:
 
 * behavior — JavaScript, CoffeeScript
 * appearance — CSS, Stylus, Sass
-* templates — BEMHTML, BH, Jade, Handlebars, XSL
+* templates — BEMHTML, BH, Pug, Handlebars, XSL
 * documentation — Markdown, Wiki, XML.
 
 For instance, if the appearance of a block is defined with CSS, that means that the block is implemented in the CSS technology. Likewise, if the documentation for a block is written in Markdown format, the block is implemented in the Markdown technology.
