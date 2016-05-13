@@ -172,7 +172,7 @@ BEMJSON
 
 * поведение — JavaScript, CoffeeScript;
 * внешний вид — CSS, Stylus, Sass;
-* шаблоны — Jade, Handlebars, XSL, BEMHTML, BH;
+* шаблоны — Pug, Handlebars, XSL, BEMHTML, BH;
 * документация — Markdown, Wiki, XML.
 
 Например, если внешний вид блока задан с помощью CSS, это означает, что блок реализован в технологии CSS. А если документация к блоку написана в формате Markdown — блок реализован в технологии Markdown.
