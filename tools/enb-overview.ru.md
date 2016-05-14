@@ -14,7 +14,6 @@
 
 * [enb-js](https://github.com/enb/enb-js) — сборка JavaScrpt файлов.
 * [enb-modules](https://github.com/enb-make/enb-modules) — поддержка [ym](https://ru.bem.info/tools/bem/modules/).
-* [enb-diverse-js](https://github.com/enb-make/enb-diverse-js) — поддержка паттерна `vanilla.js` + `node.js` + `browser.js`.
 
 ### Стили
 
