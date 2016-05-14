@@ -12,6 +12,7 @@ Modules can be enabled via packages that are described below.
 
 ### CSS processing
 
+* [enb-css](https://github.com/enb-make/enb-css) — for building `css` files.
 * [enb-stylus](https://github.com/enb-make/enb-stylus) — for building `stylus` files.
 * [enb-autoprefixer](https://github.com/enb-make/enb-autoprefixer) — for an `autoprefixer` support.
 
