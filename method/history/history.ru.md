@@ -227,7 +227,7 @@ i/
   yandex.png
 ```
 
-Основной код для IE мы писали в общем CSS-файле, наприемр, `yaru.css`.
+Основной код для IE мы писали в общем CSS-файле, например, `yaru.css`.
 
 ```css
     /* Common definitions (begin) */
