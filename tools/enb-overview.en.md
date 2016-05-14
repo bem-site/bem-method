@@ -10,6 +10,11 @@ Modules can be enabled via packages that are described below.
 
 * [enb-bem-techs](https://github.com/enb-bem/enb-bem-techs) — the core technologies to build BEM-based projects.
 
+### JavaScript
+
+* [enb-js](https://github.com/enb/enb-js) — for building JavaScript files.
+* [enb-modules](https://github.com/enb-make/enb-modules) — for [ym](https://en.bem.info/tools/bem/modules/) support.
+
 ### CSS processing
 
 * [enb-css](https://github.com/enb-make/enb-css) — for building `css` files.
@@ -33,8 +38,6 @@ Modules can be enabled via packages that are described below.
 ### More
 
 * [enb-borschik](https://github.com/enb-make/enb-borschik) — for [borschik](https://en.bem.info/tools/optimizers/borschik/) support.
-* [enb-modules](https://github.com/enb-make/enb-modules) — for [ym](https://en.bem.info/tools/bem/modules/) support.
-* [enb-diverse-js](https://github.com/enb-make/enb-diverse-js) — for `vanilla.js` + `node.js` + `browser.js` pattern support.
 * [enb-bem-i18n](https://github.com/enb-bem/enb-bem-i18n) — for `BEM.I18N` support.
 
 ## How to get started?
