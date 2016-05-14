@@ -14,7 +14,6 @@ Modules can be enabled via packages that are described below.
 
 * [enb-js](https://github.com/enb/enb-js) — for building JavaScript files.
 * [enb-modules](https://github.com/enb-make/enb-modules) — for [ym](https://en.bem.info/tools/bem/modules/) support.
-* [enb-diverse-js](https://github.com/enb-make/enb-diverse-js) — for `vanilla.js` + `node.js` + `browser.js` pattern support.
 
 ### CSS processing
 
