@@ -10,6 +10,11 @@
 
 * [enb-bem-techs](https://ru.bem.info/tools/bem/enb-bem-techs/readme/) — базовые технологии для сборки БЭМ-проектов.
 
+### Скрипты
+
+* [enb-js](https://github.com/enb/enb-js) — сборка JavaScript файлов.
+* [enb-modules](https://github.com/enb-make/enb-modules) — поддержка [ym](https://ru.bem.info/tools/bem/modules/).
+
 ### Стили
 
 * [enb-css](https://github.com/enb/enb-css) — сборка `css`-файлов.
@@ -33,8 +38,6 @@
 ### Остальное
 
 * [enb-borschik](https://github.com/enb-make/enb-borschik) — поддержка [borschik](https://ru.bem.info/tools/optimizers/borschik/).
-* [enb-modules](https://github.com/enb-make/enb-modules) — поддержка [ym](https://ru.bem.info/tools/bem/modules/).
-* [enb-diverse-js](https://github.com/enb-make/enb-diverse-js) — поддержка паттерна `vanilla.js` + `node.js` + `browser.js`.
 * [enb-bem-i18n](https://github.com/enb-bem/enb-bem-i18n) — поддержка `BEM.I18N`.
 
 ## С чего начать?
