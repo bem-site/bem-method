@@ -12,7 +12,7 @@
 
 ### Скрипты
 
-* [enb-js](https://github.com/enb/enb-js) — сборка JavaScrpt файлов.
+* [enb-js](https://github.com/enb/enb-js) — сборка JavaScript файлов.
 * [enb-modules](https://github.com/enb-make/enb-modules) — поддержка [ym](https://ru.bem.info/tools/bem/modules/).
 
 ### Стили
