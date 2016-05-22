@@ -75,8 +75,8 @@ _________________________________________
 
 ```html
 <div class="menu">
-...
-<span class="menu__item"></span>
+  ...
+  <span class="menu__item"></span>
 </div>
 ```
 
@@ -171,8 +171,8 @@ _________________________________________________
 
 ```html
 <div class="menu">
-...
-<span class="menu__menu item__item_visible menu__item_type_radio"></span>
+  ...
+  <span class="menu__item menu__item_visible menu__item_type_radio"></span>
 </div>
 ```
 
@@ -190,8 +190,8 @@ _________________________________________________
 
 ```html
 <form class="form form_login form_theme_forest">
-<input class="form__input">
-<input class="form__submit form__submit_disabled">
+  <input class="form__input">
+  <input class="form__submit form__submit_disabled">
 </form>
 ```
 

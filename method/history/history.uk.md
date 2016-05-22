@@ -18,11 +18,11 @@ HTML-сторінки зберігалися в окремій директор�
 ```files
 about.html
 index.html
-...
+…
 project.css
 project.js
 i/
-yandex.png
+  yandex.png
 ```
 
 * Для кожної сторінки створювався окремий HTML-файл. У верстці використовувалися `id` і `класи`.
@@ -182,26 +182,26 @@ yandex.png
 
 ```css
 /* Head (begin) */
-.b-head { ... }
+    .b-head { … }
 
-/* Logo (begin) */
-.b-head .logo { ... }
-.b-head .logo a { ... }
-/* Logo (end) */
+    /* Logo (begin) */
+        .b-head .logo { … }
+        .b-head .logo a { … }
+    /* Logo (end) */
 
-/* Right side (begin) */
-.b-head .right { ... }
+    /* Right side (begin) */
+    .b-head .right { … }
 
-/* Info (begin) */
-.b-head .info { ... }
-.b-head .info .exit a { ... }
-/* Info (end) */
+        /* Info (begin) */
+            .b-head .info { … }
+            .b-head .info .exit a { … }
+        /* Info (end) */
 
-/* Search (begin) */
-.b-head .search { ... }
-.b-head .search div div, .b-head .search div div i { ... }
-/* Search (end) */
-/* Right side (end) */
+        /* Search (begin) */
+            .b-head .search { … }
+            .b-head .search div div, .b-head .search div div i { … }
+        /* Search (end) */
+    /* Right side (end) */
 /* Head (end) */
 ```
 
@@ -219,12 +219,12 @@ JavaScript застосовувався все частіше, в проект �
 ```files
 index.html
 css/
-yaru.css
-yaru-ie.css
+  yaru.css
+  yaru-ie.css
 js/
-yaru.js
+  yaru.js
 i/
-yandex.png
+  yandex.png
 ```
 
 Код основний для IE ми писали в загальному CSS-файлі, наприемр, `yaru.css`.
@@ -281,9 +281,9 @@ yandex.png
 @import url(slider.css);
 
 /* Header (begin) */
-/* Service (begin) */
-.b-head .service h1 { ... }
-.b-head .service h1, .b-head .service a h1, .b-head .service h1 b { ... }
+    /* Service (begin) */
+        .b-head .service h1 { … }
+        .b-head .service h1, .b-head .service h1 a, .b-head .service h1 b { … }
 ```
 
 Виникла проблема: велика кількість импортов уповільнювало завантаження сторінки. Було прийнято рішення прекомпилировать стилі (і пізніше JavaScript-файли)
@@ -306,7 +306,7 @@ yandex.png
 
 <blockquote>Блоком будемо називати фрагмент сторінки, який описується своєю розміткою і стилями.</blockquote>
 
-> Більш пізніше [опис](https://ru.bem.info/forum/-45/).
+> Пізнішій [опис](https://ru.bem.info/forum/-45/).
 
 Блоки поділялися на прості і складові.
 
@@ -399,68 +399,68 @@ CSS розподіляється на наступні директорії:
 
 ```files
 css/
-block/
-b-dropdown/
-b-dropdown.css
-service/
-auto/
-block/
-b-head-logo-auto.css
-head.css
-util/
-b-hmenu/
-b-hmenu.css
+  block/
+    b-dropdown/
+      b-dropdown.css
+  service/
+    auto/
+      block/
+        b-head-logo-auto.css
+      head.css
+  util/
+    b-hmenu/
+      b-hmenu.css
 ```
 
 Структура директорії HTML аналогічна CSS:
 
 ```files
 html/
-block/
-b-dropdown.html
-service/
-auto/
-l-head.html
-util/
-b-hmenu.html
+  block/
+    b-dropdown.html
+  service/
+    auto/
+      l-head.html
+  util/
+    b-hmenu.html
 ```
 
 JS знаходиться в зародковому стані і складається в одну директорію:
 
 ```files
 js/
-check-is-frame.js
-check-session.js
-clean-on-focus.js
-dropdown.js
-event.add.js
-event.del.js
+  check-is-frame.js
+  check-session.js
+  clean-on-focus.js
+  dropdown.js
+  event.add.js
+  event.del.js
 ```
 
 У кожного сервісу є XML-файл, що використовується для побудови шапки:
 
 ```files
 xml/
-block/
-b-head-tabs-communication.xml
-common-services.ru.xml
-head-messages.ru.xml
-service/
-auto/
-head.xml
+  block/
+    b-head-tabs-communication.xml
+    common-services.ru.xml
+    head-messages.ru.xml
+  service/
+    auto/
+      head.xml
 ```
 
 XSL блоків знаходиться в одній директорії. Кожному блоку відповідає один файл:
 
 ```files
 xsl/
-block/
-b-dropdown.xsl
-b-head-line.xsl
-i-common.xsl
-i-locale.xsl
-l-foot.xsl
-l-head.xsl
+  block/
+    b-dropdown.xsl
+    b-head-line.xsl
+    i-common.xsl
+    i-locale.xsl
+    l-foot.xsl
+    l-head.xsl
 ```
 
 `Лего` підключається в проекти з допомогою *svn:externals*.
@@ -496,16 +496,16 @@ l-head.xsl
 
 ```files
 common/
-css/
-js/
-xml/
-xsl/
+  css/
+  js/
+  xml/
+  xsl/
 example/
-html/
+  html/
 service/
-auto/
-css/
-xml/
+  auto/
+    css/
+    xml/
 ```
 
 Прибрано поділ на `util` і `block`, загальний CSS знаходиться в `common/css`.
@@ -514,13 +514,13 @@ xml/
 
 ```files
 common/
-css/
-b-dropdown/
-arr/
-b-dropdown.arr.css
-b-dropdown.arr.ie.css
-b-dropdown.css
-b-dropdown.ie.css
+  css/
+    b-dropdown/
+      arr/
+        b-dropdown.arr.css
+        b-dropdown.arr.ie.css
+        b-dropdown.css
+        b-dropdown.ie.css
 ```
 
 Все, що знаходилося в опціональному CSS (файлах `b-dropdown_arr.css`),
@@ -581,12 +581,12 @@ CSS-правила пишуться на клас:
 
 ```files
 common/
-block/
-b-head-logo/
-b-head-logo.css
-b-head-logo.xsl
-b-head-logo.js
-b-head-logo.wiki
+  block/
+    b-head-logo/
+      b-head-logo.css
+      b-head-logo.xsl
+      b-head-logo.js
+      b-head-logo.wiki
 ```
 
 ### Елемент
@@ -597,7 +597,7 @@ b-head-logo.wiki
 
 ```xml
 <lego:b-head-logo>
-<lego:name/>
+    <lego:name/>
 </lego:b-head-logo>
 ```
 
@@ -605,7 +605,7 @@ b-head-logo.wiki
 
 ```html
 <div class="b-head-logo">
-<span class="name">Авто</span>
+    <span class="name">Авто</span>
 </div>
 
 .b-head-logo .name { ... }
@@ -615,12 +615,12 @@ b-head-logo.wiki
 
 ```files
 common/
-block/
-b-head-logo/
-name/
-b-head-logo.name.css
-b-head-logo.name.png
-b-head-logo.name.wiki
+  block/
+    b-head-logo/
+      name/
+        b-head-logo.name.css
+        b-head-logo.name.png
+        b-head-logo.name.wiki
 ```
 
 Імена файлів елементів пишуться через точку: `b-head-logo.name.css`
@@ -647,12 +647,12 @@ b-head-logo.name.wiki
 
 ```files
 common/
-block/
-b-head-logo/
-_theme/
-b-head-logo_gray.css
-b-head-logo_gray.png
-b-head-logo_gray.wiki
+    block/
+        b-head-logo/
+            _theme/
+                b-head-logo_gray.css
+                b-head-logo_gray.png
+                b-head-logo_gray.wiki
 ```
 
 ### Декларація використовуваних блоків
@@ -661,12 +661,12 @@ b-head-logo_gray.wiki
 
 ```xml
 <lego:page>
-<lego:l-head>
-<lego:b-head-logo>
-<lego:name/>
-</lego:b-head-logo>
+    <lego:l-head>
+        <lego:b-head-logo>
+            <lego:name/>
+        </lego:b-head-logo>
 
-<lego:b-head-tabs type="search-and-content"/>
+        <lego:b-head-tabs type="search-and-content"/>
 ```
 
 З нього генеруються CSS-файли.
@@ -759,9 +759,9 @@ CSS, які при великому DOM-дереві і великий табл�
 
 ```html
 <div class="b-head-logo">
-<span class="b-head-logo__name">
-Авто
-</span>
+    <span class="b-head-logo__name">
+        Авто
+    </span>
 </div>
 ```
 
@@ -803,12 +803,12 @@ CSS, які при великому DOM-дереві і великий табл�
 
 ```files
 bem-bl/
-b-logo/
+  b-logo/
 lego/
-b-logo/
+  b-logo/
 auto/
-blocks/
-b-logo/
+  blocks/
+    b-logo/
 ```
 
 На рівні перевизначення можна задати іншу схему іменування папок/файлів, відмінну від нашої. Для цього потрібно вказати новий рівень у конфігурації:

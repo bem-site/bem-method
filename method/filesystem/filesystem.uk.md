@@ -75,21 +75,21 @@
 
 ```files
 blocks/
-input/ # Директорія блоку input
-button/ # Директорія блоку button
+    input/     # Директорія блоку input
+    button/    # Директорія блоку button
 ```
 
 Реалізація блоку розділена на окремі файли — файли технологій. Імена файлів збігаються з ім'ям блоку. Розширення відповідає технології.
 
 ```files
 blocks/
-input/
-input.css # Реалізація блоку `input` в технології CSS
-input.js # Реалізація блоку `input` в технології JavaScript
-button/
-button.css
-button.js
-button.png
+    input/
+        input.css       # Реалізація блоку `input` в технології CSS
+        input.js        # Реалізація блоку `input` в технології JavaScript
+    button/
+        button.css
+        button.js
+        button.png
 ```
 
 Імена файлів і директорій [БЕМ-сутностей](../key-concepts/key-concepts.ru.md#БЕМ-сутність) відповідають [згоди щодо іменування](../naming-convention/naming-convention.ru.md):
@@ -103,33 +103,33 @@ button.png
 
 ```files
 blocks/
-input/
-_type/ # Директорія модифікатора `type`
-input_type_search.css # Реалізація модифікатора `type`
-# зі значенням `search` в технології CSS
-__box/ # Директорія елемента `box`
-input__box.css
-input.css
-input.js
-button/
-button.css
-button.js
-button.png
+    input/
+        _type/                        # Директорія модифікатора `type`
+            input_type_search.css     # Реалізація модифікатора `type`
+                                      # зі значенням `search` в технології CSS
+        __box/                        # Директорія елемента `box`
+            input__box.css
+        input.css
+        input.js
+    button/
+        button.css
+        button.js
+        button.png
 ```
 
 При створенні модифікаторів з різними значеннями (наприклад, `popup_target_anchor.extension` і `popup_target_position.extension`), загальний код може бути винесений в окремий файл (`popup_target.extension`) без зазначення значення модифікатора в імені.
 
 ```files
 blocks/
-popup/
-_target/
-popup_target.css # Загальний код модифікатора `target`
-popup_target_anchor.css # Модифікатор `target` у значенні `якір`
-popup_target_position.css # Модифікатор `target` у значенні `position`
-_visible/
-popup_visible.css # Булевий модифікатор visible
-popup.css
-popup.js
+    popup/
+        _target/
+            popup_target.css           # Загальний код модифікатора `target`
+            popup_target_anchor.css    # Модифікатор `target` у значенні `якір`
+            popup_target_position.css  # Модифікатор `target` у значенні `position`
+        _visible/
+            popup_visible.css          # Булевий модифікатор visible
+    popup.css
+    popup.js
 ```
 
 ### Приклади з життя
@@ -154,12 +154,12 @@ popup.js
 
 ```files
 library.blocks/
-button/
-button.css # CSS-реалізація кнопки в бібліотеці (висота 20px)
+    button/
+        button.css    # CSS-реалізація кнопки в бібліотеці (висота 20px)
 
 project.blocks/
-button/
-button.css # Перевизначення на рівні проекту (висота 24px)
+    button/
+        button.css    # Перевизначення на рівні проекту (висота 24px)
 ```
 
 ### Поділ проекту на платформи
@@ -170,16 +170,16 @@ button.css # Перевизначення на рівні проекту (вис
 
 ```files
 common.blocks/
-button/
-button.css # Базова CSS-реалізація кнопки
+    button/
+        button.css    # Базова CSS-реалізація кнопки
 
 desktop.blocks/
-button/
-button.css # Особливості кнопки для desktop
+    button/
+        button.css    # Особливості кнопки для desktop
 
 mobile.blocks/
-button/
-button.css # Особливості кнопки для mobile
+    button/
+        button.css # Особливості кнопки для mobile
 ```
 
 При зборці в файл `desktop.css` потраплять всі базові CSS-правила кнопки з рівня `common` і перевизначені правила з рівня `desktop`.

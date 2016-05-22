@@ -99,11 +99,11 @@
 
 ```html
 <div class="block">
-<div class="block__elem1">
-<div class="block__elem2">
-<div class="block__elem3"></div>
-</div>
-</div>
+    <div class="block__elem1">
+        <div class="block__elem2">
+            <div class="block__elem3"></div>
+        </div>
+    </div>
 </div>
 ```
 
@@ -120,10 +120,10 @@
 
 ```html
 <div class="block">
-<div class="block__elem1">
-<div class="block__elem2"></div>
-</div>
-<div class="block__elem3"></div>
+    <div class="block__elem1">
+        <div class="block__elem2"></div>
+    </div>
+    <div class="block__elem3"></div>
 </div>
 ```
 
@@ -199,13 +199,13 @@ _____________________________________________
 
 ```files
 blocks/
-input/
-input_layout_horiz.css
-input_layout_vertical.css
-input__elem.css
-input.css
-input.js
-button/
+  input/
+      input_layout_horiz.css
+      input_layout_vertical.css
+      input__elem.css
+      input.css
+      input.js
+  button/
 ```
 
 * Блоку відповідає окрема директорія.
@@ -213,10 +213,10 @@ button/
 
 ```files
 blocks/
-input/
-input.css
-input.js
-button/
+  input/
+      input.css
+      input.js
+  button/
 ```
 
 * Директорії для блоків не використовуються.
@@ -224,10 +224,10 @@ button/
 
 ```files
 blocks/
-input.css
-input.js
-button.css
-button.js
+  input.css
+  input.js
+  button.css
+  button.js
 ```
 
 **flat-схема**
@@ -237,16 +237,16 @@ button.js
 
 ```files
 blocks/
-input_type_search.js
-input_type_search.bemhtml
-input__box.bemhtml
-input.css
-input.js
-input.bemhtml
-button.css
-button.js
-button.bemhtml
-button.png
+  input_type_search.js
+  input_type_search.bemhtml
+  input__box.bemhtml
+  input.css
+  input.js
+  input.bemhtml
+  button.css
+  button.js
+  button.bemhtml
+  button.png
 ```
 
 ## Навіщо використовувати i-bem.js якщо можна писати на jQuery?
@@ -290,7 +290,7 @@ button.png
 
 ```html
 <div class="header">
-<button class="button active">
+  <button class="button active">
 </div>
 ```
 Правила модификатора `active` для кнопки записываются как комбинированный селектор `.button.active`. При перевизначенні кнопки з допомогою батьківського блоку `header`, створюється селектор `.header .button`. Специфічність обох селекторів однакова, значить застосування CSS-правил визначається порядком їх оголошення в декларації.

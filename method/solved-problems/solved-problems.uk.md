@@ -19,9 +19,9 @@
 
 ```html
 <ul class="nav">
-<li class="item active"><a class="link">One</a></li>
-<li class="item"><a class="link">Two</a></li>
-<li class="item"><a class="link">Three</a></li>
+    <li class="item active"><a class="link">One</a></li>
+    <li class="item"><a class="link">Two</a></li>
+    <li class="item"><a class="link">Three</a></li>
 </ul>
 ```
 
@@ -62,9 +62,9 @@
 
 ```html
 <ul class="nav">
-<li class="item active"><a class="link">One</a></li>
-<li class="item"><a class="link">Two</a></li>
-<li class="item"><a class="link">Three</a></li>
+    <li class="item active"><a class="link">One</a></li>
+    <li class="item"><a class="link">Two</a></li>
+    <li class="item"><a class="link">Three</a></li>
 </ul>
 ```
 
@@ -74,9 +74,9 @@
 
 ```html
 <ul class="nav">
-<li class="nav__item nav__item_active"><a class="nav__link">One</a></li>
-<li class="nav__item"><a class="nav__link">Two</a></li>
-<li class="nav__item"><a class="nav__link">Three</a></li>
+    <li class="nav__item nav__item_active"><a class="nav__link">One</a></li>
+    <li class="nav__item"><a class="nav__link">Two</a></li>
+    <li class="nav__item"><a class="nav__link">Three</a></li>
 </ul>
 ```
 
@@ -184,9 +184,9 @@ input[type=submit]
 
 ```html
 <ul class="nav">
-<li class="item"><a class="link">One</a></li>
-<li class="item"><a class="link">Two</a></li>
-<li class="item"><a class="link">Three</a></li>
+    <li class="item"><a class="link">One</a></li>
+    <li class="item"><a class="link">Two</a></li>
+    <li class="item"><a class="link">Three</a></li>
 </ul>
 ```
 
@@ -204,10 +204,10 @@ CSS-стилі до пункту `item` можуть бути записані �
 
 ```html
 <div class="snippets">
-<div class="item">
-<h2 class="title"></h2>
-<img class="thumb">
-</div>
+    <div class="item">
+        <h2 class="title"></h2>
+        <img class="thumb">
+    </div>
 </div>
 ```
 
@@ -239,9 +239,9 @@ CSS-стилі до пункту `item` можуть бути записані �
 
 ```html
 <ul class="nav">
-<li class="nav__item"><a class="nav__link">One</a></li>
-<li class="nav__item"><a class="nav__link">Two</a></li>
-<li class="nav__item"><a class="nav__link">Three</a></li>
+    <li class="nav__item"><a class="nav__link">One</a></li>
+    <li class="nav__item"><a class="nav__link">Two</a></li>
+    <li class="nav__item"><a class="nav__link">Three</a></li>
 </ul>
 ```
 
@@ -257,10 +257,10 @@ CSS-стилі до пункту `item` можуть бути записані �
 
 ```html
 <div class="snippets">
-<div class="snippets__item">
-<h2 class="snippets__title"></h2>
-<img class="snippets__thumb">
-</div>
+    <div class="snippets__item">
+        <h2 class="snippets__title"></h2>
+        <img class="snippets__thumb">
+    </div>
 </div>
 ```
 
@@ -325,9 +325,9 @@ ________________________________________________
 
 ```html
 <ul class="nav">
-<li class="nav__item"><a class="nav__link">One</a></li>
-<li class="nav__item"><a class="nav__link">Two</a></li>
-<li class="nav__item"><a class="nav__link">Three</a></li>
+    <li class="nav__item"><a class="nav__link">One</a></li>
+    <li class="nav__item"><a class="nav__link">Two</a></li>
+    <li class="nav__item"><a class="nav__link">Three</a></li>
 </ul>
 ```
 Такий блок можна використовувати, наприклад, для навігації по статтям в блоці новин.
@@ -340,9 +340,9 @@ ________________________________________________
 
 ```html
 <ul class="nav articles__nav">
-<li class="nav__item"><a class="nav__link">One</a></li>
-<li class="nav__item"><a class="nav__link">Two</a></li>
-<li class="nav__item"><a class="nav__link">Three</a></li>
+    <li class="nav__item"><a class="nav__link">One</a></li>
+    <li class="nav__item"><a class="nav__link">Two</a></li>
+    <li class="nav__item"><a class="nav__link">Three</a></li>
 </ul>
 ```
 

@@ -98,12 +98,12 @@
 
 ```html
 <header class="header">
-<img class="logo">
-<form class="search-form">
-<input type="input">
-<button type="button"></button>
-</form>
-<div class="lang-switcher"></div>
+    <img class="logo">
+    <form class="search-form">
+        <input type="input">
+        <button type="button"></button>
+    </form>
+    <div class="lang-switcher"></div>
 </header>
 ```
 
@@ -111,11 +111,11 @@
 
 ```
 header
-├──logo
-└──search-form
-├──input
-└──button
-└──lang-switcher
+    ├──logo
+    └──search-form
+        ├──input
+        └──button
+    └──lang-switcher
 ```
 
 Це ж БЕМ-дерево буде мати наступний вигляд у форматах XML і [BEMJSON](https://ru.bem.info/technology/bemjson/):
@@ -124,12 +124,12 @@ XML
 
 ```xml
 <block:header>
-<block:logo/>
-<block:search-form>
-<block:input/>
-<block:button/>
-</block:search-form>
-<block:lang-switcher/>
+    <block:logo/>
+    <block:search-form>
+        <block:input/>
+        <block:button/>
+    </block:search-form>
+    <block:lang-switcher/>
 </block:header>
 ```
 
