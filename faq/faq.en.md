@@ -158,7 +158,7 @@ A block name defines a namespace and ensures unique names for elements and modif
 
 A [mix](../method/key-concepts/key-concepts.en.md#mix) is an instance of different BEM entities being hosted on a single DOM node. When mixing a modifier, a block name indicates what block the modifier will be applied to. If a block name is not specified, the modifier will be applied to all the mixed BEM entities.
 
-Let's say we have a mix of a menu item (`menu_item`) and a button (`button`:
+Let's say we have a mix of a menu item (`menu_item`) and a button (`button`):
 
 ```html
 <div class="menu__item button"></div>
