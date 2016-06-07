@@ -42,7 +42,7 @@
 
 ## С чего начать?
 
-Воспользуйтесь [инструкцией по установке project-stub](https://ru.bem.info/tutorials/project-stub/), чтобы создать БЭМ-проект, настроенный для сборки с помощью [ENB](http://enb-make.info/).
+Воспользуйтесь [инструкцией по установке project-stub](https://ru.bem.info/tutorials/project-stub/), чтобы создать БЭМ-проект, настроенный для сборки с помощью [ENB](https://github.com/enb/enb).
 
 Для создания проекта, подходящего под ваши задачи, ответьте на вопросы [генератора БЭМ-проектов](https://ru.bem.info/tools/bem/bem-stub/), основанного на [Yeoman](http://yeoman.io/).
 
