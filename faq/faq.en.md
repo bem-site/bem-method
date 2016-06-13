@@ -150,11 +150,11 @@ A block name in the names of [BEM entities](../method/key-concepts/key-concepts.
 
 **NB**: The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
 
-#### Namespace
+### Namespace
 
 A block name defines a namespace and ensures unique names for elements and modifiers. This helps reduce the impact of elements and modifiers of one block on the implementation of another.
 
-#### Mixes
+### Mixes
 
 A [mix](../method/key-concepts/key-concepts.en.md#mix) is an instance of different BEM entities being hosted on a single DOM node. When mixing a modifier, a block name indicates what block the modifier will be applied to. If a block name is not specified, the modifier will be applied to all the mixed BEM entities.
 
@@ -176,7 +176,7 @@ Likewise, notation like `<div class="block mod">` leaves it unclear as to what B
 
 The full name of the modifier `<div class="block block_mod">` leaves no doubt as to the types of entities: `<div class="checkbox checkbox_button">`.
 
-#### Code search
+### Code search
 
 Explicit and unique names facilitate searching the code or the file system for specific entities.
 
