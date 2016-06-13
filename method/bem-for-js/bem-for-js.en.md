@@ -57,7 +57,7 @@ In a BEM project, you can’t change the states in runtime by using modifiers an
 
 > For implementation examples, see the documentation for [i-bem.js](https://en.bem.info/technology/i-bem/current/i-bem-js-mods/).
 
-##### Response to changes in modifiers
+#### Response to changes in modifiers
 
 Switching a block from one state to another often causes changes in its appearance. If the CSS uses a modifier to define the block’s appearance, changing the block state called by the same modifier will automatically apply all the necessary styles.
 
