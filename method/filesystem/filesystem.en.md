@@ -96,11 +96,20 @@ Modifiers and elements are stored in separate files and are grouped into accordi
 ```files
 blocks/
     input/
-        _type/                        # `type` modifier directory
-            input_type_search.css     # Implementation of modifier `type`
-                                      # with value `search` in CSS technology
-        __box/                        # `box` element directory
+        _type/                                 # `type` modifier directory
+            input_type_search.css              # Implementation of modifier `type`
+                                               # with value `search` in CSS technology
+        __box/                                 # `box` element directory
             input__box.css
+        __clear/                               # `clear` element directory
+            _visible/                          # `visible` modifier directory
+                input__clear_visible.css       # Implementation of boolean modifier `visible`
+                                               # with value `true` in CSS technology
+            _size/                             # `size` modifier directory
+                input__clear_size_large.css    # Implementation of modifier `size`
+                                               # with value `large` in CSS technology
+            input__clear.css
+            input__clear.js
         input.css
         input.js
     button/
