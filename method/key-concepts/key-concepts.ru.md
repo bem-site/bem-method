@@ -105,10 +105,10 @@
     </form>
     <ul class="lang-switcher">
         <li class="lang-switcher__item">
-            <a class="lang-switcher__link" href="url" >en</a>
+            <a class="lang-switcher__link" href="url">en</a>
         </li>
         <li class="lang-switcher__item">
-            <a class="lang-switcher__link" href="url" >ru</a>
+            <a class="lang-switcher__link" href="url">ru</a>
         </li>
     </ul>
 </header>
@@ -171,14 +171,14 @@ BEMJSON
                 {
                     elem : 'item',
                     content : [
-                        elem : 'link'
-                    ]  
+                        { elem : 'link' }  
+                    ]
                 },
                 {
                     elem : 'item',
                     content : [
-                        elem : 'link'
-                    ]  
+                        { elem : 'link' }
+                    ]
                 }
             ]
         }
