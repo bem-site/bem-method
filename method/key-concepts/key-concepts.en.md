@@ -103,7 +103,14 @@ Let's consider an example of a DOM tree:
         <input type="input">
         <button type="button"></button>
     </form>
-    <div class="lang-switcher"></div>
+    <ul class="lang-switcher">
+        <li class="lang-switcher__item">
+            <a class="lang-switcher__link" href="url">en</a>
+        </li>
+        <li class="lang-switcher__item">
+            <a class="lang-switcher__link" href="url">ru</a>
+        </li>
+    </ul>
 </header>
 ```
 
@@ -116,6 +123,10 @@ header
         ├──input
         └──button
     └──lang-switcher
+        └──lang-switcher__item
+            └──lang-switcher__link
+        └──lang-switcher__item
+            └──lang-switcher__link
 ```
 
 In XML and [BEMJSON](https://en.bem.info/technology/bemjson/) formats, the same BEM tree will appear as follows:
@@ -129,9 +140,17 @@ XML
         <block:input/>
         <block:button/>
     </block:search-form>
-    <block:lang-switcher/>
+    <block:lang-switcher>
+        <elem:item>
+            <elem:link/>
+        </elem:item>
+        <elem:item>
+            <elem:link/>
+        </elem:item>
+    </block:lang-switcher>
 </block:header>
 ```
+
 
 BEMJSON
 
@@ -147,7 +166,23 @@ BEMJSON
                 { block : 'button' }
             ]
         },
-        { block : 'lang-switcher' }
+        {
+            block : 'lang-switcher',
+            content : [
+                {
+                    elem : 'item',
+                    content : [
+                        { elem : 'link' }  
+                    ]
+                },
+                {
+                    elem : 'item',
+                    content : [
+                        { elem : 'link' }
+                    ]
+                }
+            ]
+        }
     ]
 }
 ```
