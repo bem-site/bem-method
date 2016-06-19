@@ -222,6 +222,8 @@ A set of BEM entities and their partial [implementations](#block-implementation)
 
 The final implementation of a block can be divided into different redefinition levels. Each new level extends or overrides the original implementation of the block. The end result is assembled from individual [implementation technologies](#implementation-technology) of the block from all redefinition levels in a pre-determined consecutive order.
 
+![Redefinition level](key-concepts__levels.png)
+
 Any [implementation](#implementation-technology) technologies of BEM entities can be [redefined](#block-redefinition).
 
 For example, there is a third-party library linked to a project on a separate level. The library contains ready-made block implementations. The project-specific blocks are stored on a different redefinition level.
