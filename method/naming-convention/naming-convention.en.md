@@ -32,7 +32,7 @@ Naming rules for:
 
 A block name follows the `block-name` scheme and defines a [namespace](https://en.wikipedia.org/wiki/Namespace) for elements and modifiers.
 
-Different prefixes can sometimes be added to block names. Our experience of using prefixes is told in detail in the article [The History of BEM](https://en.bem.info/method/history/#blocks-to-the-rescue).
+Different prefixes can sometimes be added to block names. Our experience of using prefixes is told in detail in the article [The History of BEM](../history/history.en.md#blocks-to-the-rescue).
 
 **Example**
 
