@@ -104,11 +104,20 @@ blocks/
 ```files
 blocks/
     input/
-        _type/                        # Директорія модифікатора `type`
-            input_type_search.css     # Реалізація модифікатора `type`
-                                      # зі значенням `search` в технології CSS
-        __box/                        # Директорія елемента `box`
+        _type/                                 # Директорія модифікатора `type`
+            input_type_search.css              # Реалізація модифікатора `type`
+                                               # зі значенням `search` в технології CSS
+        __box/                                 # Директорія елемента `box`
             input__box.css
+        __clear/                               # Директорія елемента `clear`
+            _visible/                          # Директорія модифікатора `visible`
+                input__clear_visible.css       # Реалізація булевого модифікатора `visible`
+                                               # зі значенням `true` в технології CSS
+            _size/                             # Директорія модифікатора `size`
+                input__clear_size_large.css    # Реалізація модифікатора `size`
+                                               # зі значенням `large` в технології CSS
+            input__clear.css
+            input__clear.js
         input.css
         input.js
     button/
