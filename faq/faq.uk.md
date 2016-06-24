@@ -238,14 +238,14 @@ blocks/
 ```files
 blocks/
   input_type_search.js
-  input_type_search.bemhtml
-  input__box.bemhtml
+  input_type_search.bemhtml.js
+  input__box.bemhtml.js
   input.css
   input.js
-  input.bemhtml
+  input.bemhtml.js
   button.css
   button.js
-  button.bemhtml
+  button.bemhtml.js
   button.png
 ```
 
