@@ -681,7 +681,7 @@ levels = [
 
 ```js
 elem: 'item',
-    mods: { new: item.new ? 'yes' : undefined },
+    elemMods: { new: item.new ? 'yes' : undefined },
     mix: [{ block: 'box' }],
     content: ...
 ```

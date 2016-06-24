@@ -682,7 +682,7 @@ Let's specify that each item element from a goods list has the same formatting a
 
 ```js
 elem: 'item',
-    mods: { new: item.new ? 'yes' : undefined },
+    elemMods: { new: item.new ? 'yes' : undefined },
     mix: [{ block: 'box' }],
     content: ...
 ```
