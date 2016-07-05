@@ -6,6 +6,7 @@
 
 * [Принципы организации файловой системы](#Принципы-организации-файловой-системы-БЭМ-проекта)
 * [Пример файловой системы БЭМ-проекта](#Организация-файловой-системы-БЭМ-проекта)
+* [Примеры альтернативных файловых систем](#Альтернативные-файловые-системы)
 * [Примеры использования уровней переопределения](#Примеры-использования-уровней-переопределения)
 
 ## Принципы организации файловой системы БЭМ-проекта
@@ -145,6 +146,66 @@ blocks/
 
 * [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
 * [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
+
+## Альтернативные файловые системы
+
+**flex-схема**
+
+* Блоку соответствует отдельная директория.
+* Элементы и модификаторы реализованы в отдельных файлах.
+
+```files
+blocks/
+  input/
+      input_layout_horiz.css
+      input_layout_vertical.css
+      input__elem.css
+      input.css
+      input.js
+  button/
+```
+
+* Блоку соответствует отдельная директория.
+* Элементы и модификаторы реализованы в файлах блока.
+
+```files
+blocks/
+  input/
+      input.css
+      input.js
+  button/
+```
+
+* Директории для блоков не используются.
+* Элементы и модификаторы реализованы в файлах блока.
+
+```files
+blocks/
+  input.css
+  input.js
+  button.css
+  button.js
+```
+
+**flat-схема**
+
+* Директории для блоков не используются.
+* Опциональные элеметы и модификаторы реализованы в отдельных файлах.
+
+```files
+blocks/
+  input_type_search.js
+  input_type_search.bemhtml.js
+  input__box.bemhtml.js
+  input.css
+  input.js
+  input.bemhtml.js
+  button.css
+  button.js
+  button.bemhtml.js
+  button.png
+```
+
 
 ## Примеры использования уровней переопределения
 

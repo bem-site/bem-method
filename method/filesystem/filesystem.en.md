@@ -7,6 +7,7 @@ Below on this page you will find:
 
 - [Principles of file system organization](#principles-of-file-system-organization-for-bem-projects)
 - [Example of a file system for a BEM project](#file-system-organization-of-a-bem-project)
+- [Examples of alternative file systems](#Alternative-file-systems)
 - [Examples of using redefinition levels](#examples-of-using-redefinition-levels)
 
 Principles of file system organization for BEM projects
@@ -137,6 +138,66 @@ blocks/
 
 -   [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
 -   [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
+
+
+Alternative file systems
+----------------------------------------
+
+**flex scheme**
+
+-   One block per directory.
+-   Elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+  input/
+      input_layout_horiz.css
+      input_layout_vertical.css
+      input__elem.css
+      input.css
+      input.js
+  button/
+```
+-   One block per directory.
+-   Elements and modifiers are implemented inside block files.
+
+```files
+blocks/
+  input/
+      input.css
+      input.js
+  button/
+```
+
+-   Blocks don't have their own directories.
+-   Elements and modifiers are implemented inside block files.
+
+```files
+blocks/
+  input.css
+  input.js
+  button.css
+  button.js
+```
+
+**flat scheme**
+
+-   Blocks don't have their own directories.
+-   Optional elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+  input_type_search.js
+  input_type_search.bemhtml.js
+  input__box.bemhtml.js
+  input.css
+  input.js
+  input.bemhtml.js
+  button.css
+  button.js
+  button.bemhtml.js
+  button.png
+```
 
 Examples of using redefinition levels
 -------------------------------------

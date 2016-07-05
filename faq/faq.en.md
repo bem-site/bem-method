@@ -200,63 +200,9 @@ Why create separate directories and files for every block and technology?
 
 For the purpose of convenient development and support, the file system of a BEM project is divided into nested directories and files.
 
-The use of the recommended file system structure is optional. You can use any alternative project structure that conforms to the principles of BEM file system organization, for example:
+The use of the [recommended file system structure](../method/filesystem/filesystem.en.md#file-system-organization-of-a-bem-project) is optional. You can use any [alternative project structure](../method/filesystem/filesystem.en.md#Alternative-file-systems) that conforms to the [principles of BEM file system organization](../method/filesystem/filesystem.en.md#principles-of-file-system-organization-for-bem-projects).
 
-**flex scheme**
 
--   One block per directory.
--   Elements and modifiers are implemented in separate files.
-
-```files
-blocks/
-  input/
-      input_layout_horiz.css
-      input_layout_vertical.css
-      input__elem.css
-      input.css
-      input.js
-  button/
-```
--   One block per directory.
--   Elements and modifiers are implemented inside block files.
-
-```files
-blocks/
-  input/
-      input.css
-      input.js
-  button/
-```
-
--   Blocks don't have their own directories.
--   Elements and modifiers are implemented inside block files.
-
-```files
-blocks/
-  input.css
-  input.js
-  button.css
-  button.js
-```
-
-**flat scheme**
-
--   Blocks don't have their own directories.
--   Optional elements and modifiers are implemented in separate files.
-
-```files
-blocks/
-  input_type_search.js
-  input_type_search.bemhtml.js
-  input__box.bemhtml.js
-  input.css
-  input.js
-  input.bemhtml.js
-  button.css
-  button.js
-  button.bemhtml.js
-  button.png
-```
 Why use i-bem.js when you have jQuery?
 ----------------------------------------
 
