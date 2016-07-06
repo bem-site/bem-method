@@ -1113,7 +1113,7 @@ same can be described in text. Any nesting format works for it.
                 ...
 ````
 
-In Yandex it used to use XML, but now it's JSON.
+In Yandex it used to use XML, but now it’s JSON.
 
 ````js
 {
