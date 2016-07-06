@@ -2,7 +2,7 @@
 
 ![](https://github.com/bem/bem-method/raw/bem-info-data/articles/bem-full-stack/0-intro.jpg)
 
-Earlier this year [the BBC wrote](http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d) about using the Yandex-developed BEM methodology for the new version of their home page. And BBC was not the only company or individual writing about BEM as a methodology for frontend development and rules for scalable architecture build. 
+Earlier this year [the BBC wrote](http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d) about using the Yandex-developed BEM methodology for the new version of their home page. And BBC was not the only company or individual writing about BEM as a methodology for frontend development and rules for scalable architecture build.
 
 Smashing Magazine itself had a several pieces on BEM, including [A New Front-End Methodology: BEM](http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/) by [Varvara Stepanova](http://www.smashingmagazine.com/author/varvara-stepanova/) and [The Evolution Of The BEM Methodology](http://www.smashingmagazine.com/2013/02/21/the-history-of-the-bem-methodology/) and [Scaling Down The BEM Methodology For Small Projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/) both by [Maxim Shirshin](http://www.smashingmagazine.com/author/maksim-shirshin/).
 
@@ -87,7 +87,7 @@ Now it's time to learn about `redefinition levels`.
 
 #### Redefinition level
 
-A set of block implementations is called a redefinition level. A project may have multiple levels, at each one of which a block implementation is added or changed. The resultant block implementation is assembled from all levels in a predetermined consecutive order. 
+A set of block implementations is called a redefinition level. A project may have multiple levels, at each one of which a block implementation is added or changed. The resultant block implementation is assembled from all levels in a predetermined consecutive order.
 
 We can define and redefine styles, templates, the JavaScript implementation of blocks at our project's redefinition level. And we do so without modifying the library's source files, which means that our changes will be preserved if the library gets updated.
 
@@ -145,7 +145,7 @@ In your browser, open the Inspector and look at the DOM tree. We have not writte
 Our project includes a file named `index.bemjson.js` in the `./desktop.bundles/index/` folder:
 
 ```js
-({
+module.exports = {
     block: 'page',
     title: 'Hello, World!',
     styles: [
@@ -157,7 +157,7 @@ Our project includes a file named `index.bemjson.js` in the `./desktop.bundles/i
     content: [
         'Hello, World!'
     ]
-}
+};
 ```
 
 This file is a description of the page in BEM terms. The root block of our BEM tree is `page`. It has an API — additional keywords such as `title`, `favicon`, etc. The templates for this block are contained in the `bem-core` library.
@@ -165,7 +165,7 @@ This file is a description of the page in BEM terms. The root block of our BEM t
 Our application consists of two main parts — a header and content. Let's add a block called `sssr` to the page content, with two elements to describe the interface components. To do so, let's edit `./desktop.bundles/index/index.bemjson.js`:
 
 ```js
-({
+module.exports = {
     block: 'page',
     //…
     content: [
@@ -181,7 +181,7 @@ Our application consists of two main parts — a header and content. Let's add a
             ]
         }
     ]
-});
+};
 ```
 
 The header, in turn, will contain a seach form and the website name with the logo:
@@ -305,7 +305,7 @@ Custom JavaScript expressions are also valid in BEMJSON. Let's add a `map` const
 Here's the complete `index.bemjson.js` file:
 
 ```js
-({
+module.exports = {
     block: 'page',
     title: 'Social Services Search Robot',
     favicon: '/favicon.ico',
@@ -378,7 +378,7 @@ Here's the complete `index.bemjson.js` file:
             }
         ]
     }
-})
+};
 ```
 
 Having described the interface structure, we now need to define and add styles for our blocks. Most of the styles come with the `bem-components` library, so we need to add just a few.
@@ -1801,7 +1801,7 @@ If there are lots of blocks on the page, their automatic initialization can lead
 
 Instead we could employ event-triggered block initialization — something that is known as `lazy` or `live` initialization. You can find the detailed description of lazy initialization in the `i-bem.js` documentation.
 
-Specifically, we don't need to have the `sssr` and `form` blogs initialized right at the start, they can be initialized when needed. Let's implement that idea in code: 
+Specifically, we don't need to have the `sssr` and `form` blogs initialized right at the start, they can be initialized when needed. Let's implement that idea in code:
 
 `./desktop.blocks/sssr/sssr.js`:
 
