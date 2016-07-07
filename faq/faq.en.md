@@ -1,42 +1,38 @@
-Frequently asked questions
-==========================
+# Frequently asked questions
 
-Why BEM?
---------
+## Why BEM?
 
--   [How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?](#how-does-bem-differ-from-oocss-amcss-smacss-suitcss)
--   [What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components)
--   [What is the difference between BEM and Bootstrap?](#what-is-the-difference-between-bem-and-bootstrap)
 
-Blocks and elements
--------------------
+* [How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?](#how-does-bem-differ-from-oocss-amcss-smacss-suitcss)
+* [What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components)
+* [What is the difference between BEM and Bootstrap?](#what-is-the-difference-between-bem-and-bootstrap)
 
--   [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
--   [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
--   [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
--   [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
--   [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
+## Blocks and elements
 
-JavaScript
-----------
 
--   [Why use i-bem.js when you have jQuery?](#why-use-i-bemjs-when-you-have-jquery)
+* [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
+* [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
+* [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
+* [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
+* [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
 
-CSS
----
+## JavaScript
 
--   [Why should I avoid using nested selectors?](#why-should-i-avoid-using-nested-selectors)
--   [Why does BEM advise against using combined selectors for creating CSS rules for modifiers?](#why-does-bem-advise-against-using-combined-selectors-for-creating-css-rules-for-modifiers)
--   [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
--   [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
--   [Why can't I use a CSS Reset?](#why-cannot-i-use-a-css-reset)
--   [Why can't I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?](#why-cannot-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
--   [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cannot-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+* [Why use i-bem.js when you have jQuery?](#why-use-i-bemjs-when-you-have-jquery)
+
+## CSS
+
+* [Why should I avoid using nested selectors?](#why-should-i-avoid-using-nested-selectors)
+* [Why does BEM advise against using combined selectors for creating CSS rules for modifiers?](#why-does-bem-advise-against-using-combined-selectors-for-creating-css-rules-for-modifiers)
+* [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
+* [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
+* [Why can't I use a CSS Reset?](#why-cannot-i-use-a-css-reset)
+* [Why can't I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?](#why-cannot-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
+* [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cannot-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
 
 **No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
 
-How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
--------------------------------------------------------
+## How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
 
 1.  BEM is applicable to JavaScript as well as CSS.
 2.  BEM has more in common with Web Components than with the CSS solutions listed. ([What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components))
@@ -46,58 +42,55 @@ How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
 
 It is possible to use BEM at the CSS level only. You just need to follow the [guidelines proposed by the methodology](../method/naming-convention/naming-convention.en.md).
 
-What is the difference between BEM and Web Components?
-------------------------------------------------------
+## What is the difference between BEM and Web Components?
 
 Browser support
 
--   Web Components [are not supported](http://caniuse.com/#search=Web%20Components) by Safari, iOS Safari, Internet Explorer, Firefox.
--   BEM works in all browsers.
+* Web Components [are not supported](http://caniuse.com/#search=Web%20Components) by Safari, iOS Safari, Internet Explorer, Firefox.
+* BEM works in all browsers.
 
 Encapsulation
 
--   Web Components use Shadow DOM.
--   BEM uses block [elements](../method/key-concepts/key-concepts.en.md#element).
+* Web Components use Shadow DOM.
+* BEM uses block [elements](../method/key-concepts/key-concepts.en.md#element).
 
 Template execution
 
--   In Web Components, templates are always executed in the browser. This may involve solving some indexing problems.
--   In BEM, template generation is possible at the development stage. This lets us pass the ready HTML. Templates can be executed both in the browser and on the server side.
+* In Web Components, templates are always executed in the browser. This may involve solving some indexing problems.
+* In BEM, template generation is possible at the development stage. This lets us pass the ready HTML. Templates can be executed both in the browser and on the server side.
 
--   Web Components are based on an imperative principle, using string interpolation.
--   BEM uses a declarative approach, which helps manage templating in a flexible way and avoid redundancy.
+* Web Components are based on an imperative principle, using string interpolation.
+* BEM uses a declarative approach, which helps manage templating in a flexible way and avoid redundancy.
 
 Build vs HTML import
 
--   Web Components use HTML Imports, which work directly in the browser. The [Vulcanize](http://webcomponents.org/articles/introduction-to-html-imports/#aggregating-network-requests) tool is used to aggregate multiple HTML files into one file.
--   BEM uses build tools: [ENB](https://en.bem.info/tools/bem/enb-bem/) or [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
+* Web Components use HTML Imports, which work directly in the browser. The [Vulcanize](http://webcomponents.org/articles/introduction-to-html-imports/#aggregating-network-requests) tool is used to aggregate multiple HTML files into one file.
+* BEM uses build tools: [ENB](https://en.bem.info/tools/bem/enb-bem/) or [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
 
 Abstraction over a DOM tree vs Custom Elements
 
--   In Web Components, Custom Elements are used. Such an approach allows only for one component to be hosted on a single DOM node.
--   BEM introduces the concept of a [BEM tree](../method/key-concepts/key-concepts.en.md#bem-tree). BEM uses [mixes](../method/key-concepts/key-concepts.en.md#mix) — the practice of hosting several BEM entities on a single DOM node.
+* In Web Components, Custom Elements are used. Such an approach allows only for one component to be hosted on a single DOM node.
+* BEM introduces the concept of a [BEM tree](../method/key-concepts/key-concepts.en.md#bem-tree). BEM uses [mixes](../method/key-concepts/key-concepts.en.md#mix) — the practice of hosting several BEM entities on a single DOM node.
 
-What is the difference between BEM and Bootstrap?
-------------------------------------------------
+## What is the difference between BEM and Bootstrap?
 
 In BEM terms, [Bootstrap](http://getbootstrap.com/) is a set of ready-made blocks. BEM, on the other hand, is not a library of interface elements but a methodology that allows you to
 
--   Create the architecture for your project
--   Develop web applications based on independent blocks
--   Facilitate project support.
+* Create the architecture for your project
+* Develop web applications based on independent blocks
+* Facilitate project support.
 
 BEM does provide its own block library, called [bem-components](https://en.bem.info/libs/bem-components/). [Other](https://en.bem.info/libs/) BEM libraries are also available.
 
-A block or an element: when should I use which?
------------------------------------------------
+## A block or an element: when should I use which?
 
 1.  If you're dealing with a fragment of code that can be reused and does not depend on the implementation of other components of the page, you should implement it as a [block](../method/key-concepts/key-concepts.en.md#block).
 2.  If it's a fragment of code that cannot be used on its own, without a parent entity (block), in most cases that should be an [element](../method/key-concepts/key-concepts.en.md#element).
 
 This rule does not apply when implementing elements that, for reasons of simplifying the development process, have to be broken down into smaller, sub-element, parts. The BEM methodology [does not recommend creating elements of elements](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2). So, in cases like this, instead of an element, a service block should be created.
 
-Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?
---------------------------------------------------------------------------------
+## Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?
+
 
 The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
 
@@ -137,14 +130,14 @@ This makes it possible to change the DOM structure of the block without modifyin
 
 The structure of the block changes while the rules for its elements and their names remain the same.
 
-Why include the block name in names of modifier and element?
-------------------------------------------------------------------------
+## Why include the block name in names of modifier and element?
+
 
 A block name in the names of [BEM entities](../method/key-concepts/key-concepts.en.md#bem-entity) is used for
 
--   [Namespace](#namespace)
--   [Mixes](#mixes)
--   [Code searching](#code-searching)
+* [Namespace](#namespace)
+* [Mixes](#mixes)
+* [Code searching](#code-search)
 
 ---------------------------------------------------
 
@@ -182,8 +175,7 @@ Explicit and unique names facilitate searching the code or the file system for s
 
 Let's compare the results of a global search during the debugging stage. Let's find a modifier called `active`. If short notation is used (`active`), the search results will include all possible combinations and HTML fragments containing `active`. In the BEM-recommended notation the name of the modifier already contains a additional search parameter in the form of the block name (`button_active`). Because the modifier name is unique, the search will return only relevant code fragments.
 
-How do I make global modifiers for blocks?
-------------------------------------------
+## How do I make global modifiers for blocks?
 
 BEM does not accommodate the concept of global modifiers — any modifier always belongs to one specific [BEM entity](../method/key-concepts/key-concepts.en.md#bem-entity).
 
@@ -195,16 +187,17 @@ BEM allows us to combine the implementation of different blocks using [mixes](..
 <div class="block1 block2"></div>
 ```
 
-Why create separate directories and files for every block and technology?
--------------------------------------------------------------------------
+## Why create separate directories and files for every block and technology?
 
 For the purpose of convenient development and support, the file system of a BEM project is divided into nested directories and files.
 
-The use of the [recommended file system structure](../method/filesystem/filesystem.en.md#file-system-organization-of-a-bem-project) is optional. You can use any [alternative project structure](../method/filesystem/filesystem.en.md#Alternative-file-systems) that conforms to the [principles of BEM file system organization](../method/filesystem/filesystem.en.md#principles-of-file-system-organization-for-bem-projects).
+You can use any recommended file system structure:
+* [Nested-scheme](../method/filesystem/filesystem.en.md#Nested-scheme).
+* [Flex-scheme](../method/filesystem/filesystem.en.md#Flex-scheme).
+* [Flat-scheme](../method/filesystem/filesystem.en.md#Flat-scheme).
 
 
-Why use i-bem.js when you have jQuery?
-----------------------------------------
+## Why use i-bem.js when you have jQuery?
 
 [i-bem.js](https://en.bem.info/technology/i-bem/) is a specialized framework for developing projects with JavaScript in terms of blocks, elements, and modifiers.
 
@@ -212,12 +205,11 @@ Why use i-bem.js when you have jQuery?
 
 `i-bem.js` allows you to
 
--   Develop a web interface in terms of blocks, elements, modifiers
--   Integrate JavaScript code with templates and BEM-style CSS rules
--   Describe the logic of a block as a set of states.
+* Develop a web interface in terms of blocks, elements, modifiers
+* Integrate JavaScript code with templates and BEM-style CSS rules
+* Describe the logic of a block as a set of states.
 
-Why should I avoid using nested selectors?
-------------------------------------------
+## Why should I avoid using nested selectors?
 
 BEM is all about independent blocks. Nested selectors increase coupling within the code and make code reuse impossible. This is in contradiction to the BEM principles.
 
@@ -239,8 +231,7 @@ For instance, nesting is appropriate for changing elements depending on the stat
 }
 ```
 
-Why does BEM advise against using combined selectors for creating CSS rules for modifiers?
-------------------------------------------------------------------------------------------
+## Why does BEM advise against using combined selectors for creating CSS rules for modifiers?
 
 Combined selectors make block redefinition more difficult because of their higher CSS specificity compared to single selectors. Combined selectors for a block modifier (`.block1.mod`) and for a redefined block (`.block2 .block1`) have the same specificity. Block redefinition would depend only on the order of rules in the declaration.
 
@@ -257,10 +248,9 @@ The rules for the modifier `active` for the button are written as the combined s
 Using the block name in the name of a modifier gives a higher priority to CSS rules for block redefinition. The
 `.header .button` selector will be always of a higher priority than `.button_active`.
 
-> [Reasons for including the block name in a modifier name](#why-include-the-block-name-in-modifier-names-and-element-names)
+> [Reasons for including the block name in a modifier name](#why-include-the-block-name-in-names-of-modifier-and-element)
 
-Can I combine a tag and a class in a selector (e.g. button.button)?
----------------------------------------------------------------------
+## Can I combine a tag and a class in a selector (e.g. button.button)?
 
 Combining a tag and a class in one selector increases its CSS specificity. Adding a modifier won't redefine the CSS rules of the block since the specificity of the block selector is higher.
 
@@ -282,18 +272,17 @@ The `.button_mod` selector will not redefine CSS properties of the block with th
 
 As your project keeps growing, you may have blocks with selectors like `input.button`, `span.button` and, say, `a.button`. Then all modifiers of the `button` block and all its nested elements will require four different declarations for each instance.
 
-Why are custom tags not used for blocks in BEM?
------------------------------------------------
+## Why are custom tags not used for blocks in BEM?
+
 
 > Blocks could be represented in HTML by custom tags, with CSS rules defined for them. In that case classes would only be used for modifiers: `<button class="mod"/>`.
 
 Custom tags can indeed be used for creating block selectors, but the following restrictions apply
 
--   [Mixes](../method/key-concepts/key-concepts.en.md#mix) can't be used.
--   Not all blocks can be represented by custom tags. For example, all links require an `<a>` tag, and all fields require `<input>`.
+* [Mixes](../method/key-concepts/key-concepts.en.md#mix) can't be used.
+* Not all blocks can be represented by custom tags. For example, all links require an `<a>` tag, and all fields require `<input>`.
 
-Why cannot I use a CSS Reset?
-----------------------------
+## Why cannot I use a CSS Reset?
 
 Blocks are independent components. They must not be affected by page-wide CSS rules. Otherwise their independence is compromised and their reuse becomes problematic.
 
@@ -323,16 +312,14 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 
 This method is only appropriate in the absence of an optimizer.
 
-Why cannot I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?
----------------------------------------------------------------------------------------------------------------------------------------------------
+## Why cannot I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?
 
 Using multiple modifiers on the same block (e.g., `<div class="block_theme_christmas block_size_big">`) will cause duplication of the code that implements the basic functionality (logic and styles) of the block.
 
-Why cannot I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?
-----------------------------------------------------------------------------------------------------
+## Why cannot I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?
 
--   If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to `red`, you will need to edit the templates, and most likely, the JavaScript code.
--   If other properties (background, margins) are added, the name of the modifier will no longer match the content.
+* If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to `red`, you will need to edit the templates, and most likely, the JavaScript code.
+* If other properties (background, margins) are added, the name of the modifier will no longer match the content.
 
 The BEM methodology recommends choosing names for modifiers based on semantics rather than visual representation.
 
