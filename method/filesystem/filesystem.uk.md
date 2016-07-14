@@ -71,7 +71,7 @@
 
 ## Приклади схем файлових систем БЕМ-проекту
 
-### Nested-схема
+### Nested
 
 * Блоку відповідає директорія у файловій системі.
 * Імена блоку і його директорії збігаються.
@@ -151,7 +151,27 @@ blocks/
 * [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
 * [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
 
-### Flex-схема
+
+### Flat
+
+* Директорії для блоків не використовуються.
+* Опціональні элеметы і модифікатори реалізовані в окремих файлах.
+
+```files
+blocks/
+    input_type_search.js
+    input_type_search.bemhtml.js
+    input__box.bemhtml.js
+    input.css
+    input.js
+    input.bemhtml.js
+    button.css
+    button.js
+    button.bemhtml.js
+    button.png
+```
+
+### Flex
 
 * Блоку відповідає окрема директорія.
 * Елементи і модифікатори реалізовані в окремих файлах.
@@ -187,25 +207,6 @@ blocks/
     input.js
     button.css
     button.js
-```
-
-### Flat-схема
-
-* Директорії для блоків не використовуються.
-* Опціональні элеметы і модифікатори реалізовані в окремих файлах.
-
-```files
-blocks/
-    input_type_search.js
-    input_type_search.bemhtml.js
-    input__box.bemhtml.js
-    input.css
-    input.js
-    input.bemhtml.js
-    button.css
-    button.js
-    button.bemhtml.js
-    button.png
 ```
 
 ## Приклади використання рівнів перевизначення

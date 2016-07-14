@@ -63,7 +63,7 @@ The final implementation of a block can be split into [redefinition levels](#exa
 
 ## Examples of file systems for a BEM project
 
-### Nested-scheme
+### Nested
 
 * For every block, there's a directory in the file system.
 * The directory is named after the block.
@@ -142,8 +142,26 @@ blocks/
 * [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
 * [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
 
+### Flat
 
-### Flex-scheme
+* Blocks don't have their own directories.
+* Optional elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+    input_type_search.js
+    input_type_search.bemhtml.js
+    input__box.bemhtml.js
+    input.css
+    input.js
+    input.bemhtml.js
+    button.css
+    button.js
+    button.bemhtml.js
+    button.png
+```
+
+### Flex
 
 * One block per directory.
 * Elements and modifiers are implemented in separate files.
@@ -178,25 +196,6 @@ blocks/
     input.js
     button.css
     button.js
-```
-
-### Flat-scheme
-
-* Blocks don't have their own directories.
-* Optional elements and modifiers are implemented in separate files.
-
-```files
-blocks/
-    input_type_search.js
-    input_type_search.bemhtml.js
-    input__box.bemhtml.js
-    input.css
-    input.js
-    input.bemhtml.js
-    button.css
-    button.js
-    button.bemhtml.js
-    button.png
 ```
 
 ## Examples of using redefinition levels
