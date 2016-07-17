@@ -60,10 +60,7 @@ The full name of an element is created using this scheme:
 
 If a block has several identical elements, such as in the case of menu items, all of them will have the same name `menu__item`.
 
-_________________________________________
-
 **Important!** [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2).
-_________________________________________
 
 **Example**
 
@@ -93,10 +90,7 @@ The full name of a modifier is created using the scheme:
 
 * For key-value type modifiers — `owner-name_mod-name_mod-val`.
 
-_________________________________________
-
 **Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element).
-_________________________________________
 
 #### Block modifier
 
@@ -207,11 +201,7 @@ There are some alternative solutions that are based on the BEM naming convention
 * Boolean modifiers are delimited by double hyphens (`--`).
 * Key-value type modifiers are not used.
 
-_________________________________________
-
 **Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
-_________________________________________
-
 
 ### CamelCase style
 
@@ -228,10 +218,10 @@ This style differs from the classic one in that it uses [CamelCase](https://en.w
 * Modifiers are delimited by double hyphens (`--`).
 * The value of a modifier is separated from its name by a double hyphen (`--`).
 
-_________________________________________
+
 
 **Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
-_________________________________________
+
 
 ### No namespace style
 
