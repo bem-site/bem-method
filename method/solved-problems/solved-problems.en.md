@@ -1,15 +1,13 @@
-Using BEM to solve common issues in web development
-===================================================
+# Using BEM to solve common issues in web development
 
 The BEM methodology defines [CSS selector naming conventions](../naming-convention/naming-convention.en.md) that solve a range of web development problems and address the following issues:
 
--   [How to simplify code and facilitate refactoring](#how-to-simplify-code-and-facilitate-refactoring)
--   [How to get self-documenting code](#how-to-get-self-documenting-code)
--   [How to start reusing code without letting components influence each other](#how-to-start-reusing-code-without-letting-components-influence-each-other)
--   [How to host multiple entities on the same DOM node and avoid copy and paste](#how-to-host-multiple-entities-on-the-same-dom-node-and-avoid-copy-and-paste)
+* [How to simplify code and facilitate refactoring](#how-to-simplify-code-and-facilitate-refactoring)
+* [How to get self-documenting code](#how-to-get-self-documenting-code)
+* [How to start reusing code without letting components influence each other](#how-to-start-reusing-code-without-letting-components-influence-each-other)
+* [How to host multiple entities on the same DOM node and avoid copy and paste](#how-to-host-multiple-entities-on-the-same-dom-node-and-avoid-copy-and-paste)
 
-How to simplify code and facilitate refactoring
------------------------------------------------
+## How to simplify code and facilitate refactoring
 
 **Problem**
 
@@ -55,10 +53,10 @@ The BEM methodology solves the collision issue using [naming conventions for CSS
 
 Using naming conventions allows us to:
 
--   Define unique names for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity).
--   Track hierarchical relationships within a block.
--   Simplify the code.
--   Get [self-documenting code](#how-to-get-self-documenting-code).
+* Define unique names for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity).
+* Track hierarchical relationships within a block.
+* Simplify the code.
+* Get [self-documenting code](#how-to-get-self-documenting-code).
 
 Let's take the same navigation menu example:
 
@@ -102,8 +100,8 @@ The new CSS class names contain all the information about the block structure. T
 
 > Using long names has the following disadvantages:
 
-> -   The resulting code base is heavier. This problem is solved by using `gzip`, which compresses repetitive sequences in names.
-> -   More time is spent on writing classes. This burden is eased by using autocomplete in the editor, along with CSS preprocessors and template engines that automatically add prefixes. Long class names provide explicit connections between parts of components, which saves time on analyzing the project architecture.
+> * The resulting code base is heavier. This problem is solved by using `gzip`, which compresses repetitive sequences in names.
+> * More time is spent on writing classes. This burden is eased by using autocomplete in the editor, along with CSS preprocessors and template engines that automatically add prefixes. Long class names provide explicit connections between parts of components, which saves time on analyzing the project architecture.
 
 ### How to get self-documenting code
 
@@ -117,9 +115,9 @@ One of the goals of BEM is to make it clear what a piece of code does just by th
 
 Using BEM, you can get HTML with class names that show the interaction of the following parts of code:
 
--   Independent [blocks](../key-concepts/key-concepts.en.md#block).
--   [Elements](../key-concepts/key-concepts.en.md#element) (child components) of a block.
--   [Modifiers](../key-concepts/key-concepts.en.md#modifier) of a block or an element.
+* Independent [blocks](../key-concepts/key-concepts.en.md#block).
+* [Elements](../key-concepts/key-concepts.en.md#element) (child components) of a block.
+* [Modifiers](../key-concepts/key-concepts.en.md#modifier) of a block or an element.
 
 Here is an example with a search form on a website. We won't look at the HTML. We'll try to just read the CSS and understand which part of the interface it describes.
 
@@ -141,8 +139,8 @@ input[type=submit]
 
 This doesn't reflect the relationships between:
 
--   Components and their parts.
--   Selectors and specific components of the interface that they are related to.
+* Components and their parts.
+* Selectors and specific components of the interface that they are related to.
 
 Using global selectors makes the project code non-extensible, as even the smallest changes will entail edits to all the dependent rules.
 
@@ -167,16 +165,15 @@ We'll rewrite the example using [BEM naming conventions](../naming-convention/na
 
 Now we can see how this code works. The CSS class names show that:
 
--   There is a form implemented by the `form` block.
--   The `form_search` modifier indicates that this is a search form.
--   The form has nested elements: `form__field` and `form__submit-button`.
+* There is a form implemented by the `form` block.
+* The `form_search` modifier indicates that this is a search form.
+* The form has nested elements: `form__field` and `form__submit-button`.
 
 Following the BEM naming convention allows us to understand the structure of a block without studying the HTML in detail. Even if another field appears on the page (besides `form__field`), its rules won't affect the search form elements in any way. The new field will be implemented as an element of another block, and will have its own unique name. For example, `attach__field`.
 
 The BEM naming rules help to make the project code unambiguous and informative. This reduces the learning curve for other developers.
 
-How to start reusing code without letting components influence each other
--------------------------------------------------------------------------
+## How to start reusing code without letting components influence each other
 
 **Problem**
 
@@ -303,15 +300,9 @@ For example, a cascade is appropriate for changing elements depending on the sta
 }
 ```
 
-------------------------------------------------------------------------
-
 **Important!** Applying a cascade increases code coupling and makes reuse impossible.
 
---------------------------------------------
-
-
-How to host multiple entities on the same DOM node and avoid copy and paste
--------------------------------------------------------------------------
+## How to host multiple entities on the same DOM node and avoid copy and paste
 
 **Problem**
 
@@ -319,8 +310,8 @@ When working with projects, an implemented functionality may need to be reused.
 
 In many cases, this issue is resolved by copying the desired chunk of code to the new component. This approach has the following disadvantages:
 
--   The project's code base increases.
--   Debugging becomes more difficult if errors are detected.
+* The project's code base increases.
+* Debugging becomes more difficult if errors are detected.
 
 The consequence is that the developer has to support more lines of code, and fixes must be made separately in each implementation. This increases the time spent on debugging and maintaining the project.
 

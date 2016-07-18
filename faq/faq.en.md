@@ -2,7 +2,6 @@
 
 ## Why BEM?
 
-
 * [How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?](#how-does-bem-differ-from-oocss-amcss-smacss-suitcss)
 * [What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components)
 * [What is the difference between BEM and Bootstrap?](#what-is-the-difference-between-bem-and-bootstrap)
@@ -91,7 +90,6 @@ This rule does not apply when implementing elements that, for reasons of simplif
 
 ## Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?
 
-
 The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
 
 In the BEM methodology, blocks are the only entities that support nested structure (`block__elem`). A block name defines a namespace that [ensures the dependence](../method/naming-convention/naming-convention.en.md#element-name) of elements on the block.
@@ -132,14 +130,11 @@ The structure of the block changes while the rules for its elements and their na
 
 ## Why include the block name in names of modifier and element?
 
-
 A block name in the names of [BEM entities](../method/key-concepts/key-concepts.en.md#bem-entity) is used for
 
 * [Namespace](#namespace)
 * [Mixes](#mixes)
-* [Code searching](#code-search)
-
----------------------------------------------------
+* [Code searching](#code-searching)
 
 **NB**: The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
 
@@ -207,7 +202,6 @@ For the purpose of convenient development and support, the file system of a BEM 
 The use of the [recommended file system](../method/filesystem/filesystem.en.md#nested) structure is optional. You can use any alternative project structure that conforms to the principles of BEM file system organization, for example:
 * [Flat](../method/filesystem/filesystem.en.md#flat).
 * [Flex](../method/filesystem/filesystem.en.md#flex).
-
 
 ## Why use i-bem.js when you have jQuery?
 
@@ -286,8 +280,7 @@ As your project keeps growing, you may have blocks with selectors like `input.bu
 
 ## Why are custom tags not used for blocks in BEM?
 
-
-> Blocks could be represented in HTML by custom tags, with CSS rules defined for them. In that case classes would only be used for modifiers: `<button class="mod"/>`.
+> Blocks could be represented in HTML by custom tags, with CSS rules defined for them. In that case classes would only be used for modifiers: `<button class="msod"/>`.
 
 Custom tags can indeed be used for creating block selectors, but the following restrictions apply
 
