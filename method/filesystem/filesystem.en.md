@@ -4,9 +4,9 @@ A component-based approach used in the BEM methodology also determines the way t
 
 Below on this page you will find:
 
-* [Principles of file system organization](#Principles-of-file-system-organization-for-bem-projects)
-* [Examples of file systems for a BEM project](#Examples-of-file-systems-for-a-BEM-project)
-* [Examples of using redefinition levels](#Examples-of-using-redefinition-levels)
+* [Principles of file system organization](#principles-of-file-system-organization-for-bem-projects)
+* [Examples of file systems for a BEM project](#examples-of-file-systems-for-a-bem-project)
+* [Examples of using redefinition levels](#examples-of-using-redefinition-levels)
 
 ## Principles of file system organization for BEM projects
 
@@ -163,6 +163,8 @@ blocks/
 
 ### Flex
 
+The Flex scheme is very flexible in relation to the file system organization for BEM projects:
+
 * One block per directory.
 * Elements and modifiers are implemented in separate files.
 
@@ -197,6 +199,42 @@ blocks/
     button.css
     button.js
 ```
+
+* Blocks don't have their own directories.
+* Optional elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+    input_type_search.js
+    input_type_search.bemhtml.js
+    input__box.bemhtml.js
+    input.css
+    input.js
+    input.bemhtml.js
+    button.css
+    button.js
+    button.bemhtml.js
+    button.png
+```
+
+Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
+
+```files
+blocks/
+    input/
+        _type/                                 # `type` modifier directory
+            input_type_search.css              # Implementation of modifier `type`
+                                               # with value `search` in CSS technology
+        __box/                                 # `box` element directory
+            input__box.css
+        input.css
+        input.js
+    button/
+        button.css
+        button.js
+        button.png
+```
+
 
 ## Examples of using redefinition levels
 

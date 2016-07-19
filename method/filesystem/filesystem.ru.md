@@ -172,6 +172,8 @@ blocks/
 
 ### Flex
 
+Flex схема весьма гибкая по отношению к организации файловой системы БЭМ-проекта:
+
 * Блоку соответствует отдельная директория.
 * Элементы и модификаторы реализованы в отдельных файлах.
 
@@ -205,6 +207,41 @@ blocks/
     input.js
     button.css
     button.js
+```
+
+* Директории для блоков не используются.
+* Опциональные элеметы и модификаторы реализованы в отдельных файлах.
+
+```files
+blocks/
+    input_type_search.js
+    input_type_search.bemhtml.js
+    input__box.bemhtml.js
+    input.css
+    input.js
+    input.bemhtml.js
+    button.css
+    button.js
+    button.bemhtml.js
+    button.png
+```
+
+Модификаторы и элементы выделяются в отдельные файлы и группируются в поддиректории блока с соответствующими именами.
+
+```files
+blocks/
+    input/
+        _type/                                 # Директория модификатора `type`
+            input_type_search.css              # Реализация модификатора `type`
+                                               # со значением `search` в технологии CSS
+        __box/                                 # Директория элемента `box`
+            input__box.css
+        input.css
+        input.js
+    button/
+        button.css
+        button.js
+        button.png
 ```
 
 ## Примеры использования уровней переопределения
