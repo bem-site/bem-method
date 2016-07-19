@@ -1,25 +1,23 @@
-File system organization
-========================
+# File system organization
 
 A component-based approach used in the BEM methodology also determines the way that BEM projects are organized in a file system. In BEM, it's not just the interface that is divided into independent components, i.e. blocks, but the implementation of blocks is also divided into independent parts, namely files.
 
 Below on this page you will find:
 
-- [Principles of file system organization](#principles-of-file-system-organization-for-bem-projects)
-- [Example of a file system for a BEM project](#file-system-organization-of-a-bem-project)
-- [Examples of using redefinition levels](#examples-of-using-redefinition-levels)
+* [Principles of file system organization](#principles-of-file-system-organization-for-bem-projects)
+* [Examples of file systems for a BEM project](#examples-of-file-systems-for-a-bem-project)
+* [Examples of using redefinition levels](#examples-of-using-redefinition-levels)
 
-Principles of file system organization for BEM projects
--------------------------------------------------------
+## Principles of file system organization for BEM projects
 
 In a BEM project, the code is broken down into small independent parts, to make working with individual blocks easier. Before they are sent to the browser, the files are assembled and optimized. That way we separate the human-manipulated code from the code that is sent to the browser.
 
 In the file system, the codebase of BEM project is organized according to the following principles:
 
-- [A block implementation is divided into separate parts](#a-block-implementation-is-divided-into-separate-files)
-- [Optional elements and modifiers are stored in separate files](#optional-elements-and-modifiers-are-stored-in-separate-files)
-- [Files are grouped by meaning and not by type](#files-are-grouped-by-meaning-and-not-by-type)
-- [A project is divided into redefinition levels](#a-project-is-divided-into-redefinition-levels)
+* [A block implementation is divided into separate parts](#a-block-implementation-is-divided-into-separate-files)
+* [Optional elements and modifiers are stored in separate files](#optional-elements-and-modifiers-are-stored-in-separate-files)
+* [Files are grouped by meaning and not by type](#files-are-grouped-by-meaning-and-not-by-type)
+* [A project is divided into redefinition levels](#a-project-is-divided-into-redefinition-levels)
 
 ### A block implementation is divided into separate files
 
@@ -27,17 +25,18 @@ A file set for a block (e.g., `input.css`, `input.js`) is determined by the [tec
 
 *Why?*
 
-- **Enhanced project navigation.**
+* **Enhanced project navigation.**
   The project structure is built on a single principle, and the block names are unique. This enables developers to easily identify different parts of the project and to find necessary files quicker.
-- **Easier moving of blocks between projects.**
+* **Easier moving of blocks between projects.**
   The implementation of blocks is divided into separate files. To move a block from one project to another, you only need to copy the relevant files or directories.
 
 ### Optional elements and modifiers are stored in separate files
 
 *Why?*
 
-- **Only relevant block implementation is included**
-  Only files that are essential to a given block implementation are included in the build.
+* **Only relevant block implementation is included**
+
+Only files that are essential to a given block implementation are included in the build.
 
 ### Files are grouped by meaning and not by type
 
@@ -45,8 +44,9 @@ Block files are grouped together based on common [naming rules](../naming-conven
 
 *Why?*
 
-- **Only necessary blocks are included in the project**
-  Blocks are implemented as independent entities. This enables us to configure a build in a way that ensures that only relevant blocks are included in the project.
+* **Only necessary blocks are included in the project**
+
+Blocks are implemented as independent entities. This enables us to configure a build in a way that ensures that only relevant blocks are included in the project.
 
 ### A project is divided into redefinition levels
 
@@ -54,17 +54,19 @@ The final implementation of a block can be split into [redefinition levels](#exa
 
 *Why?*
 
-- **No code duplication.**
+* **No code duplication.**
   Storing implementation common to all platforms on a separate level helps avoid code duplication and reduce debugging time.
-- **Redefinition and extension of ready-made library blocks.**
+* **Redefinition and extension of ready-made library blocks.**
   To modify a library block, you don't need to copy it to the project level. You just need to create the necessary file with the changes or new code at another redefinition level and include it in the build.
-- **Updating libraries linked to the project.**
+* **Updating libraries linked to the project.**
   Dividing a project into distinct levels lets us modify blocks without affecting the library source code. If the library gets updated, the block modification is stored at a different level of the project.
 
-File system organization of a BEM project
-------------------------------------------
+## Examples of file systems for a BEM project
 
-For every block, there's a directory in the file system. The directory is named after the block.
+### Nested
+
+* For every block, there's a directory in the file system.
+* The directory is named after the block.
 
 ```files
 blocks/
@@ -72,7 +74,9 @@ blocks/
     button/    # button block directory
 ```
 
-A block implementation is divided into separate files known as technology files. The files all have the same name as the block. The extension of each file corresponds to its technology.
+* A block implementation is divided into separate files known as technology files.
+* The files all have the same name as the block.
+* The extension of each file corresponds to its technology.
 
 ```files
 blocks/
@@ -87,9 +91,9 @@ blocks/
 
 Names of files and directories for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) are based on the [naming convention](../naming-convention/naming-convention.en.md):
 
--   Element — `block__elem.extension` (`input__box.css`).
--   Block modifier — `block_mod_val.extension` (`input_type_search.css`) or `block_mod.extension` (`input_disabled.css`). Values of boolean modifiers are not included.
--   Element modifier — `block__elem_mod_val.extension` (`input__clear_size_large.css`) or `block__elem_mod.extension` (`input__clear_visible.css`).
+* Element — `block__elem.extension` (`input__box.css`).
+* Block modifier — `block_mod_val.extension` (`input_type_search.css`) or `block_mod.extension` (`input_disabled.css`). Values of boolean modifiers are not included.
+* Element modifier — `block__elem_mod_val.extension` (`input__clear_size_large.css`) or `block__elem_mod.extension` (`input__clear_visible.css`).
 
 Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
 
@@ -133,20 +137,113 @@ blocks/
     popup.js
 ```
 
-### Real-life examples
+#### Real-life examples
 
--   [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
--   [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
+* [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
+* [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
 
-Examples of using redefinition levels
--------------------------------------
+### Flat
+
+* Blocks don't have their own directories.
+* Optional elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+    input_type_search.js
+    input_type_search.bemhtml.js
+    input__box.bemhtml.js
+    input.css
+    input.js
+    input.bemhtml.js
+    button.css
+    button.js
+    button.bemhtml.js
+    button.png
+```
+
+### Flex
+
+The Flex scheme is very flexible in relation to the file system organization for BEM projects:
+
+* One block per directory.
+* Elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+    input/
+        input_layout_horiz.css
+        input_layout_vertical.css
+        input__elem.css
+        input.css
+        input.js
+    button/
+```
+* One block per directory.
+* Elements and modifiers are implemented inside block files.
+
+```files
+blocks/
+    input/
+        input.css
+        input.js
+    button/
+```
+
+* Blocks don't have their own directories.
+* Elements and modifiers are implemented inside block files.
+
+```files
+blocks/
+    input.css
+    input.js
+    button.css
+    button.js
+```
+
+* Blocks don't have their own directories.
+* Optional elements and modifiers are implemented in separate files.
+
+```files
+blocks/
+    input_type_search.js
+    input_type_search.bemhtml.js
+    input__box.bemhtml.js
+    input.css
+    input.js
+    input.bemhtml.js
+    button.css
+    button.js
+    button.bemhtml.js
+    button.png
+```
+
+Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
+
+```files
+blocks/
+    input/
+        _type/                                 # `type` modifier directory
+            input_type_search.css              # Implementation of modifier `type`
+                                               # with value `search` in CSS technology
+        __box/                                 # `box` element directory
+            input__box.css
+        input.css
+        input.js
+    button/
+        button.css
+        button.js
+        button.png
+```
+
+
+## Examples of using redefinition levels
 
 The implementation of a block can be divided into [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
 
 Let's take a few examples:
 
--   [Linking a library](#linking-a-library)
--   [Dividing a project into platforms](#dividing-a-project-into-platforms)
+* [Linking a library](#linking-a-library)
+* [Dividing a project into platforms](#dividing-a-project-into-platforms)
 
 ### Linking a library
 
