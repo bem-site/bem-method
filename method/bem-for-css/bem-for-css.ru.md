@@ -270,49 +270,6 @@ CSS-реализация элемента `button` блока `header`:
 В данном примере, мы задали внешнюю геометрию и позиционирование для блока`button` через элемент `header__button`, а сам блок `button` сделали универсальным.
 Блок стал независимым, потому что он не специфицирует никакие отступы.
 
-**Независимые блоки** позволяют делать удивительные вещи:
-
-Блок `button`:
-
-```html
-<button class="button button_theme_islands">
-    <span class="button__text">Найти</span>
-</button>
-```
-
-Блок `menu`:
-
-```html
-<div class="menu">
-    <div class="menu-item">Блок</div>
-    <div class="menu-item">Элемент</div>
-    <div class="menu-item">Модификатор</div>
-</div>
-```
-
-Блок `popup`:
-
-```html
-<div class="popup"></div>
-```
-
-Всё как следует перемешиваем — блок `button` + блок `menu` + блок `popup` = блок `select`:
-
-```html
-<div class="select">
-  <button class="button select__button">
-      <span class="button__text">Блок</span>
-  </button>
-</div>
-<div class="popup">
-    <div class="menu">
-        <div class="menu-item">Блок</div>
-        <div class="menu-item">Элемент</div>
-        <div class="menu-item">Модификатор</div>
-    </div>
-</div>
-```
-
 ### Стилизация групп блоков
 
 Иногда бывает необходимо применить одинаковое форматирование сразу к нескольким различным HTML-элементам веб-страницы.
@@ -484,7 +441,7 @@ CSS-реализация:
 }
 ```
 
-Мы расширили существующую функциональность кнопки при помощи класса `button_size_s`, переопределив свойства `font-size` и `line-height`. Теперь мы имеем две кнопки разного размера.
+Мы расширили существующую функциональность кнопки при помощи класса `button_size_s`, переопределив свойства `font-size` и `line-height`. Теперь на странице есть две кнопки разного размера.
 
 HTML-реализация:
 
@@ -551,20 +508,34 @@ CSS-реализация:
 .button {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
+    background-color: red;
 }
 
 .btn {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
+    background-color: blue;
 }
 ```
 
-Как видно из примера, в селекторе `btn` мы повторили существующую реализацию блока `button`.
+Как видно из примера, в селекторе `btn` мы фактически повторили существующую реализацию блока `button`.
 Пытайтесь минимизировать случайные повторения.
 
 **Важно!** Следует оговориться, что принцип DRY имеет отношение только к функционально однотипным компонентам страницы: кнопки, заголовки, списки, меню и т. п..
-Не имеет смысла стараться объединить блоки, только потому что у них одинаковый цвет или размер.
 
+#### Пример из жизни
+
+Например, грузовые автомобили. Как видно из примера, между ними есть небольшие внешние отличия. В принципе DRY речь идет как раз о таких сущностях, функционально однотипных, но разных по оформлению.
+
+![truck-1](truck-1.png)
+![truck-2](truck-2.png)
+
+Второй пример — мотороллер и грузовой автомобиль. Они также являются средствами передвижения, однако между ними много конструктивных отличий.
+
+![vespa](Vespa.png)
+![truck-2](truck-2.png)
+
+Таким образом, не имеет смысла объединять разные по типу блоки, только потому что у них, например, одинаковый цвет или размер.
 
 ### Композиция вместо наследования
 
@@ -573,8 +544,27 @@ CSS-реализация:
 
 **Пример**
 
+Допустим, у нас есть три готовые реализации:
+
+* кнопка — блок `button`;
+* меню — блок `menu`;
+* всплывающее окно — блок `popup`.
+
+Для того чтобы создать раскрывающийся список (блок `select`), нам не нужно заново описывать все эти блоки.
+
 ```html
-<button class="button button_theme_islands button_size_s">...</button>
+<div class="select">
+  <button class="button select__button">
+      <span class="button__text">Блок</span>
+  </button>
+</div>
+<div class="popup">
+    <div class="menu">
+        <div class="menu-item">Блок</div>
+        <div class="menu-item">Элемент</div>
+        <div class="menu-item">Модификатор</div>
+    </div>
+</div>
 ```
 
 ## Работа с уровнями переопределения
@@ -586,38 +576,79 @@ CSS-реализация:
 
 С помощью уровней переопределения можно создать универсальную CSS-библиотеку блоков и изменять ее на проектном уровне. Затем использовать сборку и включать в проект только необходимое представление блоков.
 
-Пример уровней:
+Рассмотрим на примере:
 
 ```files
-common.blocks     # Общая библиотека блоков
-desktop.blocks    # Блоки для ноутбуков и настольных компьютеров
-touch.blocks      # Блоки для тачпадов
-mobile.blocks     # Блоки для мобильных устройств
+common.blocks/
+    button/
+        button.css    # Базовая CSS-реализация кнопки
 
+desktop.blocks/
+    button/
+        button.css    # Особенности кнопки для desktop
+
+mobile.blocks/
+    button/
+        button.css    # Особенности кнопки для mobile
 ```
 
-**Пример**
+При сборке в файл `desktop.css` попадут все базовые CSS-правила кнопки с уровня `common` и переопределенные правила с уровня `desktop`.
 
 ```css
-.button_theme_islands {
-    background-color: white;
-}
+@import "common.blocks/button/button.css";    /* Базовые CSS-правила */
+@import "desktop.blocks/button/button.css";   /* Особенности desktop */
+```
+
+Файл `mobile.css` будет включать базовые CSS-правила кнопки с уровня `common` и переопределенные правила с уровня `mobile`.
+
+```css
+@import "common.blocks/button/button.css";    /* Базовые CSS-правила */
+@import "mobile.blocks/button/button.css";    /* Особенности mobile */
 ```
 
 Запись в стиле БЭМ позволяет:
 
 * Полностью перекрывать внешний вид блока на другом уровне переопределения.
 
+`common.blocks/button/button.css`
+
 ```css
-.button_theme_islands {
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 24px;
+    background-color: white;
+}
+```
+
+`desktop.blocks/button/button.css`
+
+```css
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 28px;
     background-color: yellow;
 }
 ```
 
 * Добавлять или частично изменять внешний вид блока на другом уровне переопределения.
 
+`common.blocks/button/button.css`
+
 ```css
-.button_theme_islands {
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 24px;
+    background-color: white;
+}
+```
+
+`desktop.blocks/button/button.css`
+
+```css
+.button {
     background-color: white;
     color: red;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
