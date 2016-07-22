@@ -14,12 +14,12 @@ The tool [smartcd](https://github.com/cxreg/smartcd) can configure any directory
 
 Set up everything as follows:
 
-  - install `smartcd`:
+  * install `smartcd`:
     ```
     curl -L http://smartcd.org/install | bash
     ```
 
-  - create config `~/.smartcd_config`, for this just answer to installer:
+  * create config `~/.smartcd_config`, for this just answer to installer:
 
     ```
     Configure now? [Y/n] y
@@ -32,18 +32,18 @@ Set up everything as follows:
     your `.zshrc` file manually.
 
 
-  - make template `npm-module` for `smartcd`
+  * make template `npm-module` for `smartcd`
     ```
     smartcd template create npm-module
     ```
 
-  - in the file @@ insert the line
+  * in the file @@ insert the line
     ```
     smartcd helper run path prepend __PATH__/node_modules/.bin
     ```
     after the comment: `# Enter any bash_enter commands below here: (leave this line!)`
 
-  - set up the project:
+  * set up the project:
     ```
     cd path/to/project
     echo 'smartcd template run npm-module' | smartcd edit enter

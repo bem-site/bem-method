@@ -38,6 +38,7 @@ A file set for a block (e.g., `input.css`, `input.js`) is determined by the [tec
 
 Only files that are essential to a given block implementation are included in the build.
 
+
 ### Files are grouped by meaning and not by type
 
 Block files are grouped together based on common [naming rules](../naming-convention/naming-convention.en.md). For convenience, they can be grouped into a block directory.
@@ -234,7 +235,6 @@ blocks/
         button.js
         button.png
 ```
-
 
 ## Examples of using redefinition levels
 
