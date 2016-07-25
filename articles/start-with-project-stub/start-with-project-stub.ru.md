@@ -186,6 +186,7 @@ module.exports = {
     }
 }
 ```
+
 [Пример кода](https://gist.github.com/tadatuta/fcc6b7bd8523d453d0fd) index.bemjson.js.
 
 В HTML-представлении страницы появится необходимая разметка (вы сможете увидеть её, обновив страницу).
@@ -275,14 +276,14 @@ bem create -l desktop.blocks -b layout -T css
         },
         {
             block: 'button',
-            type: 'submit',
+            mods: { type: 'submit' },
             content: 'Search'
         }
     ]
 }
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/a3e623137ef63175bc6e) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/7da95e41ed257bf1e5a4f63247c25925) index.bemjson.js.
 
 Добавим обработку пользовательского запроса Яндексом:
 
@@ -300,7 +301,7 @@ bem create -l desktop.blocks -b layout -T css
             },
             {
                 block: 'button',
-                type: 'submit',
+                mods: { type: 'submit' },
                 content: 'Search'
             }
         ]
@@ -308,7 +309,7 @@ bem create -l desktop.blocks -b layout -T css
 }
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/7db50cf3978a740fbea3) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/3d862f3e6ff2eb5221498cdfe7bc9351) index.bemjson.js.
 
 ![Форма поиска](start-with-project-stub__search.png)
 
@@ -340,7 +341,7 @@ bem create -l desktop.blocks -b layout -T css
 }
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/309c252fbfd192239af7) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/ed8a8e811a9f3d83950aff6116990fd6) index.bemjson.js.
 
 ### Модификация блоков библиотек
 
@@ -459,7 +460,7 @@ bem create -l desktop.blocks -b head -T css
         //...
 }
 ```
-[Пример кода](https://gist.github.com/innabelaya/3405ec7368aae6c3afe9) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/357ea81bdd3cbeb86d1c64ca05cfc1a7) index.bemjson.js.
 
 Чтобы эти данные превратились в нужную разметку, блок должен быть реализован в технологии BEMHTML. Для корректировки внешнего вида применим CSS-правила. Воспользуемся командой `bem create`, чтобы создать блок сразу в двух технологиях:
 
@@ -652,7 +653,7 @@ levels = [
 }
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/a0b4cb6d0c1a1d226797) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/bcd05232adf5f3a06de7ccc9ea05f337) index.bemjson.js.
 
 ```html
 <!DOCTYPE html>
@@ -737,7 +738,7 @@ elem: 'item',
 
     mix: [{ block: 'box', js: true }]
 
-[Пример кода](https://gist.github.com/innabelaya/4773090c1f499991d7a4) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/1fe1aa79ccb602e50e1484dbc98f6e12) index.bemjson.js.
 
 Также разместим внутри блока элемент `switcher`:
 
@@ -756,7 +757,7 @@ content: [
 ]
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/c7ce1ce81ba019bacf67) index.bemjson.js.
+[Пример кода](https://gist.github.com/godfreyd/f4e8e10349bc1de79eda1a2f63aeb9aa) index.bemjson.js.
 
 Теперь в блоке `head` есть стрелочка, умеющая сворачивать и разворачивать его.
 
