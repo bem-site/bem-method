@@ -275,14 +275,14 @@ You do not need to implement an `input` and a `button` blocks yourself. They are
         },
         {
             block: 'button',
-            type: 'submit',
+            mods: { type: 'submit' },
             content: 'Search'
         }
     ]
 }
 ```
 
-[Code sample](https://gist.github.com/innabelaya/8912696) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/7da95e41ed257bf1e5a4f63247c25925) index.bemjson.js.
 
 Let's add Yandex search results to the search form:
 
@@ -300,7 +300,7 @@ Let's add Yandex search results to the search form:
             },
             {
                 block: 'button',
-                type: 'submit',
+                mods: { type: 'submit' },
                 content: 'Search'
             }
         ]
@@ -308,7 +308,7 @@ Let's add Yandex search results to the search form:
 }
 ```
 
-[Code sample](https://gist.github.com/innabelaya/9391751) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/3d862f3e6ff2eb5221498cdfe7bc9351) index.bemjson.js.
 
 ![Search form](start-with-project-stub__search.png)
 
@@ -340,7 +340,7 @@ Use a `link` block from the same library to render an icon with a slogan as a li
 }
 ```
 
-[Code sample](https://gist.github.com/innabelaya/991dd26025331405dcf2) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/ed8a8e811a9f3d83950aff6116990fd6) index.bemjson.js.
 
 ### Modifying the library blocks
 
@@ -460,7 +460,7 @@ A web page we are going to develop contains a list of some goods. To be able to 
 }
 ```
 
-[Code sample](https://gist.github.com/innabelaya/2cb6080ba35d3a3cacf6) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/357ea81bdd3cbeb86d1c64ca05cfc1a7) index.bemjson.js.
 
 This block has to be implemented in BEMHTML technology in order to be turned into an appropriate piece of HTML. It needs to be styled with CSS as well. So you can create this block with two types of technologies at once using `bem create` command:
 
@@ -653,7 +653,7 @@ Here you can mix `head` and `box` blocks:
 }
 ```
 
-[Code sample](https://gist.github.com/innabelaya/dbee1265bcd65c6de2aa) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/bcd05232adf5f3a06de7ccc9ea05f337) index.bemjson.js.
 
 ```html
 <!DOCTYPE html>
@@ -738,7 +738,7 @@ To use this functionality in a `head` block you need to change the a block BEMJS
 
     mix: [{ block: 'box', js: true }]
 
-[Code sample](https://gist.github.com/innabelaya/41aa8afbfbcfe7c4a9a9) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/1fe1aa79ccb602e50e1484dbc98f6e12) index.bemjson.js.
 
 It is required to have a `switcher` element in the block:
 
@@ -757,7 +757,7 @@ content: [
 ]
 ```
 
-[Code sample](https://gist.github.com/innabelaya/4a14fb92ca9103bed3a5) index.bemjson.js.
+[Code sample](https://gist.github.com/godfreyd/f4e8e10349bc1de79eda1a2f63aeb9aa) index.bemjson.js.
 
 With that you have a block with a clickable arrow-shaped element which rolls the block up in the `head` block.
 
