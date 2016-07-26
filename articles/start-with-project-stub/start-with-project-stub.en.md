@@ -562,7 +562,7 @@ An extra trick: if you would like to avoid cascade when styling the block, mark 
 </ul>
 ```
 
-You need to identify new goods on a page. To implement this add a verification of a `new` modifier to the template: [code sample](https://gist.github.com/innabelaya/8914048).
+You need to identify new goods on a page. To implement this add a verification of a `new` modifier to the template: [code sample](https://gist.github.com/godfreyd/9891ffe4604c908b978101c07976141f).
 
 Use this code snapshot for [CSS rules](https://gist.github.com/innabelaya/8915049).
 
