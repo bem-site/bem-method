@@ -65,6 +65,10 @@ For instance, the appearance of the menu block (`menu`) may change depending on 
 
 ![Add a menu to the footer](key-concepts__site-footer-menu.png)
 
+Modifiers can be changed in runtime (for example, as a reaction to a DOM event of the block), or via other blocks.
+
+E.g. a click on Sign In button (click DOM event) when sign in form is filled with wrong credentials will set visible modifier on hidden error block.
+
 ## BEM entity
 
 [Blocks](#block), [elements](#element), and [modifiers](#modifier) are all called BEM entities.
