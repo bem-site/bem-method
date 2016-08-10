@@ -317,9 +317,10 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 
 This method is only appropriate in the absence of an optimizer.
 
-## Why cannot I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?
+## Why can't I write block_mod instead of block block_mod, if the modifier name already contains all the block information?
 
-Using multiple modifiers on the same block (e.g., `<div class="block_theme_christmas block_size_big">`) will cause duplication of the code that implements the basic functionality (logic and styles) of the block.
+If you write block_mod instead of block block_mod, you have to define all the block's basic CSS properties in the block_mod modifier. Modifiers can change when the block is being used (for example, in response to DOM events on the block), or when this is requested by other blocks. So you would have to copy the CSS code for the block's basic functionality to all its modifiers, as well. This would lead to code duplication.
+
 
 ## Why cannot I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?
 
