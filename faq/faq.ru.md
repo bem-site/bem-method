@@ -14,6 +14,7 @@
 * [Почему нельзя писать имя модификатора блока в имени элемента (block\_mod\__elem)?](#Почему-нельзя-писать-имя-модификатора-блока-в-имени-элемента-block_mod__elem)
 * [Как сделать глобальные модификаторы для блоков?](#Как-сделать-глобальные-модификаторы-для-блоков)
 * [Зачем создавать отдельные директории и файлы для каждого блока и технологии?](#Зачем-создавать-отдельные-директории-и-файлы-для-каждого-блока-и-технологии)
+* [Как правильно изменить внешний вид каждого экземпляра блока на странице?](#Как-правильно-изменить-внешний-вид-каждого-экземпляра-блока-на-странице)
 
 ## JavaScript
 
@@ -168,6 +169,148 @@
 * [Flat](../method/filesystem/filesystem.ru.md#flat).
 * [Flex](../method/filesystem/filesystem.ru.md#flex).
 
+## Как правильно изменить внешний вид каждого экземпляра блока на странице?
+
+**Задача**
+
+Необходимо переиспользовать кнопку (блок `button`) на странице в форме поиска (`search-form`), блоке авторизации (`auth`) и блоке оформления подписки (`suscribe`). Все три кнопки должны отличаться по цвету и иметь разные отступы.
+
+**Решение**
+
+Рассмотрим пример DOM-дерева:
+
+```html
+<body>
+    <header class="header">
+        <form class="search-form">
+            <div class="search-form__content">
+                <input type="text" class="input">
+                <button type="submit" class="button">Search</button>
+            </div>
+        </form>
+        <form class="auth">
+            <input type="text" class="login">
+            <input type="password" class="password">
+            <button type="submit" class="button">Sign in</button>
+        </form>
+    </header>
+    <div class="content">
+    <!-- content -->
+    </div>
+    <footer>
+        <form class="suscribe">
+            <input type="text" class="email">
+            <button type="submit" class="button">Suscribe</button>
+        </form>
+    </footer>
+</body>
+```
+
+В CSS по БЭМ, стили, отвечающие за внешнюю геометрию и позиционирование задают через родительский блок.
+
+Запишем тот же код в соответствии с этим правилом:
+
+```html
+<body>
+    <header class="header">
+        <form class="search-form">
+            <div class="search-form__content">
+                <input type="text" class="input">
+                <button type="submit" class="search-form__button button">Search</button>
+            </div>
+        </form>
+        <form class="auth">
+            <input type="text" class="login">
+            <input type="password" class="password">
+            <button type="submit" class="auth__button button">Sign in</button>
+        </form>
+    </header>
+    <div class="content">
+    <!-- content -->
+    </div>
+    <footer>
+        <form class="suscribe">
+            <input type="text" class="email">
+            <button type="submit" class="suscribe__button button">Suscribe</button>
+        </form>
+    </footer>
+</body>
+```
+
+Каждая кнопка будет иметь соответствующие только ей уникальные CSS-правила, определяющие отступы:
+
+```css
+.search-form__button {
+    margin: 30px;
+    position: relative;
+}
+.auth__button {
+    margin: 40px;
+    position: relative;
+}
+.suscribe__button {
+    margin: 50px;
+    position: relative;
+}
+```
+
+Для того чтобы сделать кнопки разными по цвету, следует добавить блоку `button` модификатор c определенной темой оформления.
+
+В таком случае запись будет следующей:
+
+```html
+<body>
+    <header class="header">
+        <form class="search-form">
+            <div class="search-form__content">
+                <input type="text" class="input">
+                <button type="submit" class="search-form__button button button_theme_lite">Search</button>
+            </div>
+        </form>
+        <form class="auth">
+            <input type="text" class="login">
+            <input type="password" class="password">
+            <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
+        </form>
+    </header>
+    <div class="content">
+    <!-- content -->
+    </div>
+    <footer>
+        <form class="suscribe">
+            <input type="text" class="email">
+            <button type="submit" class="suscribe__button button button_theme_island">Suscribe</button>
+        </form>
+    </footer>
+</body>
+```
+
+И, соответственно, CSS будет иметь такой вид:
+
+```css
+.button_theme_lite {
+    background: #fff;
+}
+.button_theme_dark {
+    background: #000;
+}
+.button_theme_island {
+    background: #ffff00;
+}
+```
+
+Применение CSS-правил не зависит от порядка объявления классов:
+
+```html
+<button type="submit" class="search-form__button button button_theme_lite">Search</button>
+<button type="submit" class="auth__button button button_theme_dark">Sign in</button>
+<button type="submit" class="suscribe__button button button_theme_island">Suscribe</button>
+
+<button type="submit" class="button_theme_lite search-form__button button">Search</button>
+<button type="submit" class="button auth__button button_theme_dark">Sign in</button>
+<button type="submit" class="button button_theme_island suscribe__button">Suscribe</button>
+```
+
 ## Зачем использовать i-bem.js, если можно писать на jQuery?
 
 [i-bem.js](https://ru.bem.info/technology/i-bem/) это специализированный фреймворк для разработки проектов на JavaScript в терминах блоков, элементов и модификаторов.
@@ -282,7 +425,9 @@ Cелектор `.button_active` не переопределит свойств�
 
 ## Почему нельзя писать block\_mod вместо block block\_mod, если имя модификатора уже содержит всю информацию о блоке?
 
-Если писать `block_mod` вместо `block block_mod`, то все базовые CSS-свойства блока необходимо будет определить в модификаторе `block_mod`. Модификаторы могут изменяться как в процессе работы блока (например, как реакция на DOM-события блока), так и по запросу из других блоков. Таким образом, копировать CSS-код, реализующий базовую функциональность блока, придется во все его модификаторы. Это приведет к дублированию кода.
+Согласно БЭМ-методологии, модификаторами описывают внешний вид, состояние, поведение блока и его элементов.
+Если писать block\_mod вместо block block\_mod, то все свойства селектора `block\_mod
+Совмещение нескольких модификаторов на одном и том же блоке (например, `<div class="block_theme_christmas block_size_big">`) приведет к дублированию кода, реализующего базовую функциональность (логику и стили) блока.
 
 ## Почему нельзя указывать название CSS-свойства в имени модификатора: .block\__element\_border-color\_grey?
 
