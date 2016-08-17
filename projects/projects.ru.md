@@ -21,9 +21,9 @@ block('checkbox').mod('theme', 'dark') { // 1
 
 }
 
-1 -> .checkbox_them_dark {}
-1 -> .checkbox_them_dark .checkbox__box {}
-3 -> .checkbox_them_dark .checkbox__control {}
+1 -> .checkbox_theme_dark {}
+1 -> .checkbox_theme_dark .checkbox__box {}
+3 -> .checkbox_theme_dark .checkbox__control {}
 ```
 
 - [NPM](https://www.npmjs.com/package/pobem).
