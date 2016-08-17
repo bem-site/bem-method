@@ -173,7 +173,7 @@
 
 **Задача**
 
-Необходимо переиспользовать кнопку (блок `button`) на странице в форме поиска (`search-form`), блоке авторизации (`auth`) и блоке оформления подписки (`suscribe`). Все три кнопки должны отличаться по цвету и иметь разные отступы.
+Необходимо переиспользовать кнопку (блок `button`) на странице в форме поиска (`search-form`), блоке авторизации (`auth`) и блоке оформления подписки (`subscribe`). Все три кнопки должны отличаться по цвету и иметь разные отступы.
 
 **Решение**
 
@@ -198,9 +198,9 @@
     <!-- content -->
     </div>
     <footer>
-        <form class="suscribe">
+        <form class="subscribe">
             <input type="text" class="email">
-            <button type="submit" class="button">Suscribe</button>
+            <button type="submit" class="button">Subscribe</button>
         </form>
     </footer>
 </body>
@@ -229,9 +229,9 @@
     <!-- content -->
     </div>
     <footer>
-        <form class="suscribe">
+        <form class="subscribe">
             <input type="text" class="email">
-            <button type="submit" class="suscribe__button button">Suscribe</button>
+            <button type="submit" class="subscribe__button button">Subscribe</button>
         </form>
     </footer>
 </body>
@@ -248,7 +248,7 @@
     margin: 40px;
     position: relative;
 }
-.suscribe__button {
+.subscribe__button {
     margin: 50px;
     position: relative;
 }
@@ -277,9 +277,9 @@
     <!-- content -->
     </div>
     <footer>
-        <form class="suscribe">
+        <form class="subscribe">
             <input type="text" class="email">
-            <button type="submit" class="suscribe__button button button_theme_island">Suscribe</button>
+            <button type="submit" class="subscribe__button button button_theme_island">Subscribe</button>
         </form>
     </footer>
 </body>
@@ -304,11 +304,11 @@ Cоответственно, CSS будет иметь такой вид:
 ```html
 <button type="submit" class="search-form__button button button_theme_lite">Search</button>
 <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
-<button type="submit" class="suscribe__button button button_theme_island">Suscribe</button>
+<button type="submit" class="subscribe__button button button_theme_island">Subscribe</button>
 
 <button type="submit" class="button_theme_lite search-form__button button">Search</button>
 <button type="submit" class="button auth__button button_theme_dark">Sign in</button>
-<button type="submit" class="button button_theme_island suscribe__button">Suscribe</button>
+<button type="submit" class="button button_theme_island subscribe__button">Subscribe</button>
 ```
 
 ## Зачем использовать i-bem.js, если можно писать на jQuery?
