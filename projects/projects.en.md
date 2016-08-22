@@ -29,7 +29,7 @@ block('checkbox').mod('theme', 'dark') { // 1
 - [NPM](https://www.npmjs.com/package/pobem).
 - [GitHub](https://github.com/bem-contrib/pobem).
 
-Author — Sergey Belozyorcev, [gh: belozyorcev](https://github.com/belozyorcev), [@belozyorcev](https://twitter.com/belozyorcev), [belozyorcev@ya.ru](mailto:belozyorcev@ya.ru).
+Authored by Sergey Belozyorcev, [gh: belozyorcev](https://github.com/belozyorcev), [@belozyorcev](https://twitter.com/belozyorcev), [belozyorcev@ya.ru](mailto:belozyorcev@ya.ru).
 
 ## bem-flashcards
 
