@@ -90,14 +90,16 @@ Features:
 **Example**
 
 ```html
-<!-- Correct. The structure of the full element name follows the pattern: `block-name__element-name` -->
+<!-- Correct. The structure of the full element name follows the pattern:
+`block-name__element-name` -->
 <form class="search-form">
     <div class="search-form__content">
         <input class="search-form__input">
         <button class="search-form__button">Search</button>
     </div>
 </form>
-<!-- Incorrect. The structure of the full element name doesn't follow the pattern: `block-name__element-name` -->
+<!-- Incorrect. The structure of the full element name doesn't follow the pattern:
+`block-name__element-name` -->
 <form class="search-form">
     <div class="search-form__content">
         <!-- Recommended: `search-form__input` or `search-form__content-input` -->
@@ -157,7 +159,8 @@ An element is **always part of a block**, and you shouldn't use it separately fr
 **Example**
 
 ```html
-<!-- Correct. Elements are located inside the `search-form` block --> <!-- `search-form` block -->
+<!-- Correct. Elements are located inside the `search-form` block -->
+<!-- `search-form` block -->
 <form class="search-form">
     <!-- `input` element in the `search-form` block -->
     <input class="search-form__input">
