@@ -315,13 +315,16 @@ Cущность, определяющая внешний вид, состоян�
 search-form/                           # Директория блока `search-form`
     __input/                           # Поддиректория элемента `search-form__input`
         search-form__input.css         # Реализация элемента `search-form__input` в технологии CSS
-        search-form__input.js          # Реализация элемента `search-form__input` в технологии JavaScript
+        search-form__input.js          # Реализация элемента `search-form__input` в технологии
+                                         JavaScript
     __button/                          # Поддиректория элемента `search-form__button`
         search-form__button.css
         search-form__button.js
     _theme/                            # Поддиректория модификатора `search-form_theme`
-        search-form_theme_islands.css  # Реализация блока `search-form`, имеющего модификатор `theme` со значением `islands` в технологии CSS
-        search-form_theme_lite.css     # Реализация блока `search-form`, имеющего модификатор `theme` со значением `lite` в технологии CSS
+        search-form_theme_islands.css  # Реализация блока `search-form`, имеющего модификатор
+                                         `theme` со значением `islands` в технологии CSS
+        search-form_theme_lite.css     # Реализация блока `search-form`, имеющего модификатор
+                                         `theme` со значением `lite` в технологии CSS
 search-form.css                        # Реализация блока `search-form` в технологии CSS
 search-form.js                         # Реализация блока `search-form` в технологии JavaScript
 ```

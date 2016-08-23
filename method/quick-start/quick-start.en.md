@@ -320,8 +320,9 @@ search-form/                           # Directory of the `search-form`
         search-form__button.js
     _theme/                            # Subdirectory of the `search-form_theme` modifier
         search-form_theme_islands.css  # CSS implementation of the `search-form` block
-                                      that has the `theme` modifier with the value `islands`
-        search-form_theme_lite.css     # CSS implementation of the `search-form` block that has the `theme` modifier with the value `lite`
+                                         that has the `theme` modifier with the value `islands`
+        search-form_theme_lite.css     # CSS implementation of the `search-form` block
+                                         that has the `theme` modifier with the value `lite`
 search-form.css                        # CSS implementation of the `search-form` block
 search-form.js                         # JavaScript implementation of the `search-form` block
 ```
