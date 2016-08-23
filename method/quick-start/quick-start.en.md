@@ -217,9 +217,11 @@ Features:
 **Example**
 
 ```html
-<!-- The `search-form` block has the `focused` Boolean modifier --> <form class="search-form search-form_focused">
+<!-- The `search-form` block has the `focused` Boolean modifier -->
+<form class="search-form search-form_focused">
     <input class="search-form__input">
-    <!-- The `button` element has the `disabled` Boolean modifier --> <button class="search-form__button search-form__button_disabled">Search</button>
+    <!-- The `button` element has the `disabled` Boolean modifier -->
+    <button class="search-form__button search-form__button_disabled">Search</button>
 </form>
 ```
 
@@ -267,7 +269,7 @@ From the BEM perspective, a modifier can't be used in isolation from the modifie
 </form>
 ```
 
-> [Why write the block name in the names of modifiers and elements?](../../faq/faq.en.md#Why-write-the-block-name-in-the-names-of-modifiers-and-elements)
+> [Why write the block name in the names of modifiers and elements?](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element)
 
 ## Mix
 
@@ -317,7 +319,8 @@ search-form/                           # Directory of the `search-form`
         search-form__button.css
         search-form__button.js
     _theme/                            # Subdirectory of the `search-form_theme` modifier
-        search-form_theme_islands.css  # CSS implementation of the `search-form` block that has the `theme` modifier with the value `islands`
+        search-form_theme_islands.css  # CSS implementation of the `search-form` block
+                                      that has the `theme` modifier with the value `islands`
         search-form_theme_lite.css     # CSS implementation of the `search-form` block that has the `theme` modifier with the value `lite`
 search-form.css                        # CSS implementation of the `search-form` block
 search-form.js                         # JavaScript implementation of the `search-form` block
