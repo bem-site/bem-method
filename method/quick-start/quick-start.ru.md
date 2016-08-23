@@ -23,8 +23,9 @@
 * [Название блока](../naming-convention/naming-convention.ru.md#Имя-блока) характеризует смысл («что это?» — «меню»: `menu`, «кнопка»: `button`), а не состояние («какой, как выглядит?» — «красный»: `red`, «большой»: `big`).
 
 **Пример**
+
 ```html
-<!-- Верно. Семантически осмысленный блок `error`  -->
+<!-- Верно. Семантически осмысленный блок `error` -->
 <div class="error"></div>
 <!-- Неверно. Описывается внешний вид -->
 <div class="red-text"></div>
@@ -45,12 +46,12 @@
 **Пример**
 
 ```html
-<!-- Блок `header`  -->
-<header class="header">  
+<!-- Блок `header` -->
+<header class="header">
     <!-- Вложенный блок `logo` -->
-    <div class="logo"></div>  
+    <div class="logo"></div>
     <!-- Вложенный блок `search-form` -->
-    <form class="search-form"></form>  
+    <form class="search-form"></form>
 </header>
 ```
 
@@ -67,11 +68,11 @@
 
 ```html
 <!-- Блок `search-form` -->
-<form class="search-form">   
+<form class="search-form">
     <!-- Элемент `input` блока `search-form` -->
-    <input class="search-form__input">  
+    <input class="search-form__input">
     <!-- Элемент `button` блока `search-form` -->
-    <button class="search-form__button">Найти</button>  
+    <button class="search-form__button">Найти</button>
 </form>
 ```
 ### Принципы работы с элементами
@@ -90,19 +91,19 @@
 
 ```html
 <!-- Верно. Структура полного имени элементов соответствует схеме: `имя-блока__имя-элемента` -->
-<form class="search-form">   
-    <div class="search-form__content">  
-        <input class="search-form__input">  
-        <button class="search-form__button">Найти</button>  
+<form class="search-form">
+    <div class="search-form__content">
+        <input class="search-form__input">
+        <button class="search-form__button">Найти</button>
     </div>
 </form>
 <!-- Неверно. Структура полного имени элементов не соответствует схеме: `имя-блока__имя-элемента` -->
-<form class="search-form">  
-    <div class="search-form__content">  
+<form class="search-form">
+    <div class="search-form__content">
         <!-- Рекомендуется: `search-form__input` или `search-form__content-input` -->
         <input class="search-form__content__input">
         <!-- Рекомендуется: `search-form__button` или `search-form__content-button` -->
-        <button class="search-form__content__button">Найти</button>  
+        <button class="search-form__content__button">Найти</button>
     </div>
 </form>
 ```
@@ -158,19 +159,19 @@
 ```html
 <!-- Верно. Элементы лежат внутри блока `search-form` -->
 <!-- Блок `search-form` -->
-<form class="search-form">    
+<form class="search-form">
     <!-- Элемент `input` блока `search-form` -->
-    <input class="search-form__input">  
+    <input class="search-form__input">
     <!-- Элемент `button` блока `search-form` -->
-    <button class="search-form__button">Найти</button>  
+    <button class="search-form__button">Найти</button>
 </form>
 <!-- Неверно. Элементы лежат вне контекста блока `search-form` -->
 <!-- Блок `search-form` -->
 <form class="search-form"></form>
 <!-- Элемент `input` блока `search-form` -->
-<input class="search-form__input">  
-<!-- Элемент `button` блока `search-form` -->  
-<button class="search-form__button">Найти</button>  
+<input class="search-form__input">
+<!-- Элемент `button` блока `search-form` -->
+<button class="search-form__button">Найти</button>
 ```
 
 #### Необязательность
@@ -180,12 +181,12 @@
 **Пример**
 
 ```html
-<!-- Блок `search-form` -->  
-<div class="search-form">  
+<!-- Блок `search-form` -->
+<div class="search-form">
     <!-- Блок `input` -->
-    <input class="input">  
+    <input class="input">
     <!-- Блок `button` -->
-    <button class="button">Найти</button>  
+    <button class="button">Найти</button>
 </div>
 ```
 
@@ -212,16 +213,16 @@ Cущность, определяющая внешний вид, состоян�
 * Используют, когда важно только наличие или отсутствие модификатора, а его значение несущественно. Например, «отключен»: `disabled`. Считается, что при наличии булевого модификатора у сущности его значение равно `true`.
 * Структура полного имени модификатора соответствует схеме:
   * `имя-блока_имя-модификатора`;
-  * `имя-блока__имя-элемента_имя-модификатора`;
+  * `имя-блока__имя-элемента_имя-модификатора`.
 
 **Пример**
 
 ```html
 <!-- Блок `search-form` имеет булевый модификатор `focused` -->
-<form class="search-form search-form_focused">  
-    <input class="search-form__input">  
+<form class="search-form search-form_focused">
+    <input class="search-form__input">
     <!-- Элемент `button` имеет булевый модификатор `disabled` -->
-    <button class="search-form__button search-form__button_disabled">Найти</button>  
+    <button class="search-form__button search-form__button_disabled">Найти</button>
 </form>
 ```
 
@@ -235,17 +236,16 @@ Cущность, определяющая внешний вид, состоян�
 **Пример**
 
 ```html
-<!-- Блок `search-form` имеет модификатор `theme` со значением `islands` -->  
-<form class="search-form search-form_theme_islands">  
-    <input class="search-form__input">  
+<!-- Блок `search-form` имеет модификатор `theme` со значением `islands` -->
+<form class="search-form search-form_theme_islands">
+    <input class="search-form__input">
     <!-- Элемент `button` имеет модификатор `size` со значением `m` -->
-    <button class="search-form__button search-form__button_size_m">Найти</button>  
+    <button class="search-form__button search-form__button_size_m">Найти</button>
 </form>
-
 <!-- Невозможно одновременно использовать два одинаковых модификатора с разными значениями -->
-<form class="search-form search-form_theme_lite search-form_theme_islands">  
-    <input class="search-form__input">  
-    <button class="search-form__button search-form__button_size_s search-form__button_size_m">Найти</button>  
+<form class="search-form search-form_theme_lite search-form_theme_islands">
+    <input class="search-form__input">
+    <button class="search-form__button search-form__button_size_s search-form__button_size_m">Найти</button>
 </form>
 ```
 
@@ -260,13 +260,13 @@ Cущность, определяющая внешний вид, состоян�
 ```html
 <!-- Верно. Блок `search-form` имеет модификатр `theme` со значением `islands`-->
 <form class="search-form search-form_theme_islands">
-    <input class="search-form__input">  
-    <button class="search-form__button">Найти</button>  
+    <input class="search-form__input">
+    <button class="search-form__button">Найти</button>
 </form>
 <!-- Неверно. Отсутствует модифицируемый класс `search-form` -->
-<form class="search-form_theme_islands">  
-    <input class="search-form__input">  
-    <button class="search-form__button">Найти</button>  
+<form class="search-form_theme_islands">
+    <input class="search-form__input">
+    <button class="search-form__button">Найти</button>
 </form>
 ```
 
@@ -284,10 +284,10 @@ Cущность, определяющая внешний вид, состоян�
 **Пример**
 
 ```html
-<!-- Блок `header`  -->
-<div class="header">  
+<!-- Блок `header` -->
+<div class="header">
     <!-- К блоку `search-form` примиксован элемент `search-form` блока `header`-->
-    <div class="search-form header__search-form"></div>  
+    <div class="search-form header__search-form"></div>
 </div>
 ```
 
@@ -315,16 +315,13 @@ Cущность, определяющая внешний вид, состоян�
 search-form/                           # Директория блока `search-form`
     __input/                           # Поддиректория элемента `search-form__input`
         search-form__input.css         # Реализация элемента `search-form__input` в технологии CSS
-        search-form__input.js          # Реализация элемента `search-form__input` в технологии
-                                         JavaScript
+        search-form__input.js          # Реализация элемента `search-form__input` в технологии JavaScript
     __button/                          # Поддиректория элемента `search-form__button`
         search-form__button.css
         search-form__button.js
     _theme/                            # Поддиректория модификатора `search-form_theme`
-        search-form_theme_islands.css  # Реализация блока `search-form`, имеющего модификатор
-                                         `theme` со значением `islands` в технологии CSS
-        search-form_theme_lite.css     # Реализация блока `search-form`, имеющего модификатор
-                                         `theme` со значением `lite` в технологии CSS
+        search-form_theme_islands.css  # Реализация блока `search-form`, имеющего модификатор `theme` со значением `islands` в технологии CSS
+        search-form_theme_lite.css     # Реализация блока `search-form`, имеющего модификатор `theme` со значением `lite` в технологии CSS
 search-form.css                        # Реализация блока `search-form` в технологии CSS
 search-form.js                         # Реализация блока `search-form` в технологии JavaScript
 ```
