@@ -214,8 +214,8 @@ Features:
 
 * Used when only the presence or absence of the modifier is important, and its value is irrelevant. For example, `disabled`. If a Boolean modifier is present, its value is assumed to be `true`.
 * The structure of the modifier's full name follows the pattern:
-  * `block-name_modifier-name`;
-  * `block-name__element-name_modifier-name`.
+  * `block-name_modifier-name`
+  * `block-name__element-name_modifier-name`
 
 **Example**
 
@@ -232,8 +232,8 @@ Features:
 
 * Used when the modifier value is important. For example, "a menu with the `islands` design theme": `menu_theme_islands`.
 * The structure of the modifier's full name follows the pattern:
-  * `block-name_modifier-name_modifier-value`;
-  * `block-name__element-name_modifier-name_modifier-value`.
+  * `block-name_modifier-name_modifier-value`
+  * `block-name__element-name_modifier-name_modifier-value`
 
 **Example**
 
@@ -280,8 +280,8 @@ A technique for using different BEM entities on a single DOM node.
 
 Mixes allow you to:
 
-* combine the behavior and styles of multiple entities without duplicating code;
-* create semantically new UI components based on existing ones.
+* Combine the behavior and styles of multiple entities without duplicating code.
+* Create semantically new UI components based on existing ones.
 
 **Example**
 
