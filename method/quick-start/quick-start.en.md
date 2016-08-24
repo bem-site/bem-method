@@ -261,7 +261,7 @@ Features:
     <input class="search-form__input">
 
     <!-- The `button` element has the `size` modifier with the value `m` -->
-    <button class="search-form__button search-form__button_size_m">Найти</button>
+    <button class="search-form__button search-form__button_size_m">Search</button>
 </form>
 
 <!-- You can't use two identical modifiers with different values simultaneously -->
