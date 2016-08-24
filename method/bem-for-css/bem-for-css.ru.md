@@ -113,6 +113,7 @@ CSS-реализация:
 {
     text-decoration: underline;
 }
+
 .button_theme_islands .button__text
 {
     line-height: 1.5;
@@ -137,6 +138,7 @@ CSS-реализация:
 ```html
 <button class="button button_theme_islands">
     <span class="button__icon"></span>
+
     <span class="button__text">...</span>
 </button>
 ```
@@ -162,13 +164,14 @@ CSS-реализация:
 HTML-реализация:
 
 ```html
-<!--  блок `logo` -->
+<!-- Блок `logo` -->
 <div class="logo logo_theme_islands">
-    <img src="URL" alt="logo" class="logo__img" >
+    <img src="URL" alt="logo" class="logo__img">
 </div>
-<!--  блок `user` -->
+
+<!-- Блок `user` -->
 <div class="user user_theme_islands">
-    <img src="URL" alt="user-logo" class="user__img" >
+    <img src="URL" alt="user-logo" class="user__img">
     ...
 </div>
 ```
@@ -177,10 +180,15 @@ HTML-реализация:
 
 ```css
 .logo {}                  /* CSS-класс блока `logo` */
+
 .logo__img {}             /* CSS-класс элемента `logo__img` */
+
 .logo_theme_islands {}    /* CSS-класс модификатора `logo_theme_islands` */
+
 .user {}                  /* CSS-класс блока `user` */
+
 .user__img {}             /* CSS-класс элемента `user__img` */
+
 .user_theme_islands {}    /* CSS-класс модификатора `user_theme_islands` */
 ```
 
@@ -241,6 +249,7 @@ HTML-реализация:
 <header class="header">  
     <button class="button">...</button>  
 </header>
+
 <!-- Блок `form`  -->
 <form class="form" >
 </form>
@@ -275,6 +284,7 @@ HTML-реализация:
     <!-- К блоку `button` добавили класс `header__button`-->
     <button class="button header__button">...</button>  
 </header>
+
 <!-- Блок `form`  -->
 <form class="form" >
     <button class="button">...</button>  
@@ -375,6 +385,7 @@ CSS-реализация:
 button/                      # Директория блока `button`
     _size
         button_size_s.css    # Реализация модификатора в технологии CSS
+
     button.css               # Реализация блока `button` в технологии CSS
 ```
 
@@ -628,6 +639,7 @@ HTML-реализация:
         <span class="button__text">Блок</span>
     </button>
 </div>
+
 <div class="popup">
     <div class="menu">
         <div class="menu-item">Блок</div>
