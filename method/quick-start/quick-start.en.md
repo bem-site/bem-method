@@ -27,6 +27,7 @@ Features:
 ```html
 <!-- Correct. The `error` block is semantically meaningful -->
 <div class="error"></div>
+
 <!-- Incorrect. It describes the appearance -->
 <div class="red-text"></div>
 ```
@@ -50,6 +51,7 @@ This ensures the necessary independence for reusing blocks or moving them from p
 <header class="header">
     <!-- Nested `logo` block -->
     <div class="logo"></div>
+
     <!-- Nested `search-form` block -->
     <form class="search-form"></form>
 </header>
@@ -71,6 +73,7 @@ Features:
 <form class="search-form">
     <!-- `input` element in the `search-form` block -->
     <input class="search-form__input">
+
     <!-- `button` element in the `search-form` block -->
     <button class="search-form__button">Search</button>
 </form>
@@ -90,20 +93,27 @@ Features:
 **Example**
 
 ```html
-<!-- Correct. The structure of the full element name follows the pattern:
-`block-name__element-name` -->
+<!--
+    Correct. The structure of the full element name follows the pattern:
+    `block-name__element-name`
+-->
 <form class="search-form">
     <div class="search-form__content">
         <input class="search-form__input">
+
         <button class="search-form__button">Search</button>
     </div>
 </form>
-<!-- Incorrect. The structure of the full element name doesn't follow the pattern:
-`block-name__element-name` -->
+
+<!--
+    Incorrect. The structure of the full element name doesn't follow the pattern:
+    `block-name__element-name`
+-->
 <form class="search-form">
     <div class="search-form__content">
         <!-- Recommended: `search-form__input` or `search-form__content-input` -->
         <input class="search-form__content__input">
+
         <!-- Recommended: `search-form__button` or `search-form__content-button` -->
         <button class="search-form__content__button">Search</button>
     </div>
@@ -146,6 +156,7 @@ This allows you to change a block's DOM structure without making changes in the 
     <div class="block__elem1">
         <div class="block__elem2"></div>
     </div>
+
     <div class="block__elem3"></div>
 </div>
 ```
@@ -164,14 +175,19 @@ An element is **always part of a block**, and you shouldn't use it separately fr
 <form class="search-form">
     <!-- `input` element in the `search-form` block -->
     <input class="search-form__input">
+
     <!-- `button` element in the `search-form` block -->
     <button class="search-form__button">Search</button>
 </form>
+
 <!-- Incorrect. Elements are located outside of the context of the `search-form` block -->
 <!-- `search-form` block -->
-<form class="search-form"></form>
+<form class="search-form">
+</form>
+
 <!-- `input` element in the `search-form` block -->
 <input class="search-form__input">
+
 <!-- `button` element in the `search-form` block-->
 <button class="search-form__button">Search</button>
 ```
@@ -187,6 +203,7 @@ An element is an optional block component. Not all blocks have elements.
 <div class="search-form">
     <!-- `input` block -->
     <input class="input">
+
     <!-- `button` block -->
     <button class="button">Search</button>
 </div>
@@ -223,6 +240,7 @@ Features:
 <!-- The `search-form` block has the `focused` Boolean modifier -->
 <form class="search-form search-form_focused">
     <input class="search-form__input">
+
     <!-- The `button` element has the `disabled` Boolean modifier -->
     <button class="search-form__button search-form__button_disabled">Search</button>
 </form>
@@ -241,13 +259,23 @@ Features:
 <!-- The `search-form` block has the `theme` modifier with the value `islands` -->
 <form class="search-form search-form_theme_islands">
     <input class="search-form__input">
+
     <!-- The `button` element has the `size` modifier with the value `m` -->
-    <button class="search-form__button search-form__button_size_m">Search</button>
+    <button class="search-form__button search-form__button_size_m">Найти</button>
 </form>
+
 <!-- You can't use two identical modifiers with different values simultaneously -->
-<form class="search-form search-form_theme_lite search-form_theme_islands">
+<form class="search-form
+             search-form_theme_islands
+             search-form_theme_lite">
+
     <input class="search-form__input">
-    <button class="search-form__button search-form__button_size_s search-form__button_size_m">Search</button>
+
+    <button class="search-form__button
+                   search-form__button_size_s
+                   search-form__button_size_m">
+        Search
+    </button>
 </form>
 ```
 
@@ -263,11 +291,14 @@ From the BEM perspective, a modifier can't be used in isolation from the modifie
 <!-- Correct. The `search-form` block has the `theme` modifier with the value `islands`-->
 <form class="search-form search-form_theme_islands">
     <input class="search-form__input">
+
     <button class="search-form__button">Search</button>
 </form>
+
 <!-- Incorrect. The modified class `search-form` is missing -->
 <form class="search-form_theme_islands">
     <input class="search-form__input">
+
     <button class="search-form__button">Search</button>
 </form>
 ```
@@ -288,7 +319,10 @@ Mixes allow you to:
 ```html
 <!-- `header` block -->
 <div class="header">
-    <!-- The `search-form` block is mixed with the `search-form` element from the `header` block -->
+    <!--
+        The `search-form` block is mixed with the `search-form` element
+        from the `header` block
+    -->
     <div class="search-form header__search-form"></div>
 </div>
 ```
@@ -315,19 +349,28 @@ Features:
 
 ```files
 search-form/                           # Directory of the `search-form`
+
     __input/                           # Subdirectory of the `search-form__input`
-        search-form__input.css         # CSS implementation of the `search-form__input` element
-        search-form__input.js          # JavaScript implementation of the `search-form__input` element
+        search-form__input.css         # CSS implementation of the
+                                       # `search-form__input` element
+        search-form__input.js          # JavaScript implementation of the
+                                       # `search-form__input` element
+
     __button/                          # Subdirectory of the `search-form__button` element
         search-form__button.css
         search-form__button.js
+
     _theme/                            # Subdirectory of the `search-form_theme` modifier
         search-form_theme_islands.css  # CSS implementation of the `search-form` block
-                                         that has the `theme` modifier with the value `islands`
+                                       # that has the `theme` modifier with the value
+                                       # `islands`
         search-form_theme_lite.css     # CSS implementation of the `search-form` block
-                                         that has the `theme` modifier with the value `lite`
+                                       # that has the `theme` modifier with the value
+                                       # `lite`
+
 search-form.css                        # CSS implementation of the `search-form` block
-search-form.js                         # JavaScript implementation of the `search-form` block
+search-form.js                         # JavaScript implementation of the
+                                       # `search-form` block
 ```
 
 This file structure makes it easy to support the code and re-use it.
