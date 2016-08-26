@@ -6,7 +6,7 @@ If your projects are not yet included here, email us at [info@bem.info](mailto:i
 
 ## pobem
 
-PostCSS plugin for easy write CSS in BEM notation.
+PostCSS plugin to abstract from BEM naming scheme: _use your favorite scheme!_
 
 ```stylus
 block('checkbox').mod('theme', 'dark') { // 1
