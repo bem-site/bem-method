@@ -4,6 +4,33 @@
 
 Если вашего проекта еще нет в этом разделе, напишите нам на [info@bem.info](mailto:info@bem.info).
 
+## pobem
+
+PostCSS плагин для удобного написания CSS по БЭМ.
+
+```stylus
+block('checkbox').mod('theme', 'dark') { // 1
+
+  elem('box') { // 2
+    border: 3px solid #543463;
+  }
+
+  elem('control') { // 3
+    position: absolute;
+  }
+
+}
+
+1 -> .checkbox_theme_dark {}
+1 -> .checkbox_theme_dark .checkbox__box {}
+3 -> .checkbox_theme_dark .checkbox__control {}
+```
+
+- [NPM](https://www.npmjs.com/package/pobem).
+- [GitHub](https://github.com/bem-contrib/pobem).
+
+Автор проекта — Сергей Белозёрцев, [gh: belozyorcev](https://github.com/belozyorcev), [@belozyorcev](https://twitter.com/belozyorcev), [belozyorcev@ya.ru](mailto:belozyorcev@ya.ru).
+
 ## bem-flashcards
 
 Небольшой проект на основе [project-stub](https://ru.bem.info/tutorials/project-stub/) с использованием библиотек [bem-core](https://ru.bem.info/libs/bem-core/) и [bem-history](https://ru.bem.info/libs/bem-history/). Содержит набор английских слов с переводом, которые выводятся в виде переворачивающихся карточек. Есть возможность заменить словарь на другой или просто на произвольный набор пар фраз.

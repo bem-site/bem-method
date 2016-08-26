@@ -4,6 +4,33 @@ We have gathered here useful and interesting projects built with BEM.
 
 If your projects are not yet included here, email us at [info@bem.info](mailto:info@bem.info).
 
+## pobem
+
+PostCSS plugin to abstract from BEM naming scheme: _use your favorite scheme!_
+
+```stylus
+block('checkbox').mod('theme', 'dark') { // 1
+
+  elem('box') { // 2
+    border: 3px solid #543463;
+  }
+
+  elem('control') { // 3
+    position: absolute;
+  }
+
+}
+
+1 -> .checkbox_theme_dark {}
+1 -> .checkbox_theme_dark .checkbox__box {}
+3 -> .checkbox_theme_dark .checkbox__control {}
+```
+
+- [NPM](https://www.npmjs.com/package/pobem).
+- [GitHub](https://github.com/bem-contrib/pobem).
+
+Authored by Sergey Belozyorcev, [gh: belozyorcev](https://github.com/belozyorcev), [@belozyorcev](https://twitter.com/belozyorcev), [belozyorcev@ya.ru](mailto:belozyorcev@ya.ru).
+
 ## bem-flashcards
 
 A small project based on project-stub and built using bem-core and bem-history libraries. Contains of a set of English words with translations that are shown as tipping cards. Has an option to change its dictionary for any other dictionary or for a set of random phrases.
