@@ -365,7 +365,8 @@ search-form/                           # Директория блока `search
         search-form__button.css
         search-form__button.js
 
-    _theme/                            # Поддиректория модификатора `search-form_theme`
+    _theme/                            # Поддиректория модификатора
+                                       # `search-form_theme`
         search-form_theme_islands.css  # Реализация блока `search-form`, имеющего
                                        # модификатор `theme` со значением `islands`
                                        # в технологии CSS
@@ -373,8 +374,10 @@ search-form/                           # Директория блока `search
                                        # модификатор `theme` со значением `lite`
                                        # в технологии CSS
 
-search-form.css                        # Реализация блока `search-form` в технологии CSS
-search-form.js                         # Реализация блока `search-form` в технологии JavaScript
+search-form.css                        # Реализация блока `search-form`
+                                       # в технологии CSS
+search-form.js                         # Реализация блока `search-form`
+                                       # в технологии JavaScript
 ```
 
 Такая файловая структура позволяет легко поддерживать и повторно использовать код.

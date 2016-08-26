@@ -180,7 +180,10 @@ An element is **always part of a block**, and you shouldn't use it separately fr
     <button class="search-form__button">Search</button>
 </form>
 
-<!-- Incorrect. Elements are located outside of the context of the `search-form` block -->
+<!--
+    Incorrect. Elements are located outside of the context of
+    the `search-form` block
+-->
 <!-- `search-form` block -->
 <form class="search-form">
 </form>
@@ -288,7 +291,10 @@ From the BEM perspective, a modifier can't be used in isolation from the modifie
 **Example**
 
 ```html
-<!-- Correct. The `search-form` block has the `theme` modifier with the value `islands`-->
+<!--
+    Correct. The `search-form` block has the `theme` modifier with
+    the value `islands`
+-->
 <form class="search-form search-form_theme_islands">
     <input class="search-form__input">
 
@@ -356,11 +362,13 @@ search-form/                           # Directory of the `search-form`
         search-form__input.js          # JavaScript implementation of the
                                        # `search-form__input` element
 
-    __button/                          # Subdirectory of the `search-form__button` element
+    __button/                          # Subdirectory of the `search-form__button`
+                                       # element
         search-form__button.css
         search-form__button.js
 
-    _theme/                            # Subdirectory of the `search-form_theme` modifier
+    _theme/                            # Subdirectory of the `search-form_theme`
+                                       # modifier
         search-form_theme_islands.css  # CSS implementation of the `search-form` block
                                        # that has the `theme` modifier with the value
                                        # `islands`
