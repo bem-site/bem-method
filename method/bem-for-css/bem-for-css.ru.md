@@ -502,34 +502,34 @@ HTML-реализация:
 
 * Изменение существующей CSS-реализации
 
-```css
-.button {
-    font-family: Arial, sans-serif;
-    position: relative;
-    font-size: 13px;
-    line-height: 24px;
-}
-```
+  ```css
+  .button {
+      font-family: Arial, sans-serif;
+      position: relative;
+      font-size: 13px;
+      line-height: 24px;
+  }
+  ```
 
-Текущая CSS-реализация кнопки должна быть закрыта для редактирования. Изменения коснутся всех блоков `button`.
+  Текущая CSS-реализация кнопки должна быть закрыта для редактирования. Изменения коснутся всех блоков `button`.
 
 * Модификация контекстом
 
-```css
-.button {
-    font-family: Arial, sans-serif;
-    position: relative;  
-    font-size: 11px;
-    line-height: 20px;
-}
+  ```css
+  .button {
+      font-family: Arial, sans-serif;
+      position: relative;  
+      font-size: 11px;
+      line-height: 20px;
+  }
 
-.content .button {  
-    font-size: 13px;
-    line-height: 24px;
-}
-```
+  .content .button {  
+      font-size: 13px;
+      line-height: 24px;
+  }
+  ```
 
-Оформление кнопки стало зависеть от ее расположения. Изменения коснутся всех блоков `button` внутри блока `content`.
+  Оформление кнопки стало зависеть от ее расположения. Изменения коснутся всех блоков `button` внутри блока `content`.
 
 #### DRY
 
