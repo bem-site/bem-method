@@ -374,9 +374,9 @@ search-form/                           # Директория блока `search
                                        # модификатор `theme` со значением `lite`
                                        # в технологии CSS
 
-search-form.css                        # Реализация блока `search-form`
+    search-form.css                    # Реализация блока `search-form`
                                        # в технологии CSS
-search-form.js                         # Реализация блока `search-form`
+    search-form.js                     # Реализация блока `search-form`
                                        # в технологии JavaScript
 ```
 

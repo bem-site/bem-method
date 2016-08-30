@@ -376,8 +376,8 @@ search-form/                           # Directory of the `search-form`
                                        # that has the `theme` modifier with the value
                                        # `lite`
 
-search-form.css                        # CSS implementation of the `search-form` block
-search-form.js                         # JavaScript implementation of the
+    search-form.css                    # CSS implementation of the `search-form` block
+    search-form.js                     # JavaScript implementation of the
                                        # `search-form` block
 ```
 
