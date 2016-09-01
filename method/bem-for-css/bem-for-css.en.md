@@ -242,8 +242,8 @@ This frees you from unneeded copying and pasting.
 ### Mixes
 
 Allow you to:
-* combine the behavior and styles of multiple entities without duplicating code.
-* same style different HTML elements.
+* Combine the behavior and styles of multiple entities without duplicating code.
+* Same style different HTML elements.
 
 #### External geometry and positioning
 
@@ -509,7 +509,7 @@ HTML implementation:
 
 **Violating the open/closed principle**
 
-* Changing an existing CSS implementation
+* Changing an existing CSS implementation.
 
   ```css
   .button {
@@ -522,7 +522,7 @@ HTML implementation:
 
   The current CSS implementation of the button should be closed for changes. Changes will apply to all the `button` blocks.
 
-* Modification by context
+* Modification by context.
 
   ```css
   .button {
@@ -662,7 +662,7 @@ HTML implementation:
 
 Applying BEM principles to CSS allows you to separate block representations into different levels.
 
-Разделение по уровням позволяет:
+Separation block representations into different levels allows you to:
 * Implement a new appearance for a block on a different redefinition level while preserving the previous one by inheriting and extending it.
 * Completely override a block's appearance (redefine it).
 * Add blocks with a new representation.
