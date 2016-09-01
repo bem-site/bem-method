@@ -1,9 +1,9 @@
-# 
+# FAQ
 
-## Why bem?
+## Why BEM?
 
-* 1
-* 
+* [1tag] (2 tag&nbsp;)
+* BEM basics.
 * 
 
 ## 
