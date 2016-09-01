@@ -5,14 +5,14 @@ In the BEM methodology, CSS is used for page layout and is considered one of the
 Основные принципы работы с CSS рассматриваются в следующих разделах:
 * [Selectors](#selectors)
   * [Class selectors](#class-selectors)
-  * [Combining a tag and a class in a selector](#combining-tag-and-class-in-selector)
+  * [Combining a tag and a class in a selector](#combining-a-tag-and-a-class-in-a-selector)
   * [Nested selectors](#nested-selectors)
   * [Naming](#naming)
 * [Modifiers](#modifiers)
 * [Mixes](#mixes)
  * [External geometry and positioning](#external-geometry-and-positioning)
  * [Styling groups of blocks](#styling-groups-of-blocks)
-* [Dividing the code into parts](#dividing-the-code-into-parts)
+* [Dividing the code into parts](#dividing-code-into-parts)
  * [Single responsibility principle](#single-responsibility-principle)
  * [Open/closed principle](#openclosed-principle)
  * [DRY principle](#dry)
@@ -254,12 +254,12 @@ In CSS with BEM, styles that are responsible for the external geometry and posit
 HTML implementation:
 
 ```html
-<!-- `header` block  -->
+<!-- `header` block -->
 <header class="header">  
     <button class="button">...</button>  
 </header>
 
-<!-- `form` block  -->
+<!-- `form` block -->
 <form class="form" >
 </form>
 ```
@@ -288,7 +288,7 @@ The solution looks like this:
 HTML implementation:
 
 ```html
-<!-- `header` block  -->
+<!-- `header` block -->
 <header class="header">  
     <!-- Added the `header__button` class to the `button` block -->
     <button class="button header__button">...</button>  

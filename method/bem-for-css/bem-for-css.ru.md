@@ -253,12 +253,12 @@ CSS-реализация:
 HTML-реализация:
 
 ```html
-<!-- Блок `header`  -->
+<!-- Блок `header` -->
 <header class="header">  
     <button class="button">...</button>  
 </header>
 
-<!-- Блок `form`  -->
+<!-- Блок `form` -->
 <form class="form" >
 </form>
 ```
@@ -287,13 +287,13 @@ CSS-реализация кнопки:
 HTML-реализация:
 
 ```html
-<!-- Блок `header`  -->
+<!-- Блок `header` -->
 <header class="header">  
-    <!-- К блоку `button` добавили класс `header__button`-->
+    <!-- К блоку `button` добавили класс `header__button` -->
     <button class="button header__button">...</button>  
 </header>
 
-<!-- Блок `form`  -->
+<!-- Блок `form` -->
 <form class="form" >
     <button class="button">...</button>  
 </form>
