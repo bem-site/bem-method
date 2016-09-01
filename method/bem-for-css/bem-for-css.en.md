@@ -2,7 +2,7 @@
 
 In the BEM methodology, CSS is used for page layout and is considered one of the [block implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 
-Основные принципы работы с CSS рассматриваются в следующих разделах:
+Core principles of working with CSS detail in the following sections:
 * [Selectors](#selectors)
   * [Class selectors](#class-selectors)
   * [Combining a tag and a class in a selector](#combining-a-tag-and-a-class-in-a-selector)
