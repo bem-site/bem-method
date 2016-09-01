@@ -1,20 +1,20 @@
 # JavaScript implementation using the BEM methodology
 
-* [Declarative style](#Declarative-style)
-* [OOP principles in JavaScript for BEM](#OOP-principles-in-javascript-for-BEM)
+* [Declarative style](#declarative-style)
+* [OOP principles in JavaScript for BEM](#oop-principles-in-javascript-for-bem)
 * [DOM representation of dynamic blocks](#dom-representation-of-dynamic-blocks)
-* [Interaction between blocks](#Interaction-between-blocks)
-* [Interaction of a block with its elements](#Interaction-of-block-with-its-elements)
+* [Interaction between blocks](#interaction-between-blocks)
+* [Interaction of a block with its elements](#interaction-of-a-block-with-its-elements)
 
 ## Declarative style
 
 Declarative JavaScript in a BEM project is shown by the following:
 
 * The behavior of each block is described separately.
-* The block states are set declaratively. When [changing states](#Reaction-to-changing-modifiers), the code is automatically called that is declared for this state.
+* The block states are set declaratively. When [changing states](../bem-for-js/bem-for-js.en.md#response-to-changes-in-modifiers), the code is automatically called that is declared for this state.
 * The block’s logic is described as a set of actions and conditions for performing these actions. This makes it possible to separate the block’s functionality into individual parts and use [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
 
-> [More information about applying redefinition levels in JavaScript](#Working-with-redefinition-levels)
+> [More information about applying redefinition levels in JavaScript](../bem-for-js/bem-for-js.en.md#Working-with-redefinition-levels)
 
 ## OOP principles in JavaScript for BEM
 
