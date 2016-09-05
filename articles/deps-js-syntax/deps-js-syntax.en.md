@@ -33,7 +33,7 @@ To include styles and scripts for b2 and b3 blocks into the project, we have to 
 })
 ```
 
-If elements and modifiers are standalone files on a file system and not mentioned in the incoming BEMJSON file, they must be declared in the same way.
+If elements and modifiers are standalone files on a file structure and not mentioned in the incoming BEMJSON file, they must be declared in the same way.
 
 ## deps.js syntax
 

@@ -114,7 +114,7 @@ CSS implementation of the block:
 }
 ```
 
-The `logo` block in the project’s file system:
+The `logo` block in the project’s file structure:
 
 ```files
 logo/
@@ -135,7 +135,7 @@ JavaScript implementation of the block:
 document.querySelector('.logo').addEventListener('click', doSomething, false);
 ```
 
-The `logo.js` file in the block’s file system:
+The `logo.js` file in the block’s file structure:
 
 ```files
 logo/
@@ -144,7 +144,7 @@ logo/
     logo.js    # Dynamic behavior of the block in the browser
 ```
 
-Dividing the code into parts and strictly organizing the project’s file system not only make it easier to navigate the project and reuse or migrate components, but also allow us to work with redefinition levels for JavaScript and use assembly.
+Dividing the code into parts and strictly organizing the project’s file structure not only make it easier to navigate the project and reuse or migrate components, but also allow us to work with redefinition levels for JavaScript and use assembly.
 
 ### Working with redefinition levels
 
@@ -207,4 +207,4 @@ To immediately use all the BEM concepts in your project, you need to use the [i-
 * Reuse blocks and migrate them between projects.
 * Facilitate and accelerate project development and debugging due to components being independent, so blocks can be developed individually.
 * Include only the necessary JavaScript implementation of a block for assembly.
-* Simplify navigation through the project’s file system.
+* Simplify navigation through the project’s file structure.

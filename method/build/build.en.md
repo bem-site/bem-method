@@ -17,11 +17,11 @@ library/              # Library level
   button/
 ```
 
-> To find out more about the reasons for dividing a block implementation into separate files, read [File system organizaation of a BEM project](../filesystem/filesystem.en.md).
+> To find out more about the reasons for dividing a block implementation into separate files, read [File structure organizaation of a BEM project](../filesystem/filesystem.en.md).
 
 The build process takes care of the following:
 * combines individual [implementation files](../filesystem/filesystem.en.md#a-block-implementation-is-divided-into-separate-files) spread throughout the system.
-* includes only the necessary blocks, [elements](../key-concepts/key-concepts.en.md#element) and [modifiers](../key-concepts/key-concepts.en.md#modifier) in the project, out of those contained in the file system;
+* includes only the necessary blocks, [elements](../key-concepts/key-concepts.en.md#element) and [modifiers](../key-concepts/key-concepts.en.md#modifier) in the project, out of those contained in the file structure;
 * ensures that the files are linked to the project in a correct order.
 
 ## Main stages of the build process
@@ -44,7 +44,7 @@ In the BEM methodology, such file sets resulting from the build process are comm
 
 > Note that in this document the build process is illustrated on the example of a **page**, which is an instance of a bundle.
 
-In the file system, build results for individual files are placed in a default directory carrying the page name (e.g., `hello`):
+In the file structure, build results for individual files are placed in a default directory carrying the page name (e.g., `hello`):
 
 ```files
 blocks/       # Directory containing the blocks
@@ -74,7 +74,7 @@ bundles/          # Directory containing all build results
 
 Either of the following can be included in the project during the build process:
 
-* all the BEM entities from the file system (which increases the resulting code size considerably);
+* all the BEM entities from the file structure (which increases the resulting code size considerably);
 * only those BEM entities that are necessary for building the page, in a strictly defined order.
 
 Building a project with only the relevant BEM entities makes use of the following (all are optional):

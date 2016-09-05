@@ -39,8 +39,8 @@ Here's what I came up with:
 	A module allows variation in the way the task is accomplished without having to rewrite the module.
   4. Specification.
 	The module's architecture allows for full test coverage of the code.
-  5. Abstracting the file system.
-	If the module's job is not directly related to the file system, the module should be able to operate without it.
+  5. Abstracting the file structure.
+	If the module's job is not directly related to the file structure, the module should be able to operate without it.
   6. Compatibility.
 	The idea was to develop modules that could be used with a variety of tools: bem-tools, ENB, gulp, grunt, broccoli, etc.
 

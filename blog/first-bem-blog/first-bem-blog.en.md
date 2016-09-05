@@ -20,9 +20,9 @@ As far as live events were concerned, we were gradually moving from talks to mas
 
 We saw that many enjoyed "on the spot" coding and were good at it. Why not then have a bash at a BEM hackathon? We seemed to be equal to the task, as challenging as it was — the team had grown and were ready to present projects and answer questions, our Yandex colleagues were keen to take part and help us with our teams, and there was already a sufficient number of developers "from the outside" with the necessary skill level, creating their own BEM projects.
 
-So it was settled. We recorded a [fun promo video](https://video.yandex.ru/iframe/ya-events/hu2lbazfiz.5125/?player-type=custom&show-info=false&show-logo=false&hd=1) and it was off from there! 
+So it was settled. We recorded a [fun promo video](https://video.yandex.ru/iframe/ya-events/hu2lbazfiz.5125/?player-type=custom&show-info=false&show-logo=false&hd=1) and it was off from there!
 
-The next few months were spent in preparation: we had to find people to lead the projects, decide what those projects would be, select participants for the hackathon, help some of them get to Moscow. There was a lot of work involved but I think we managed. 
+The next few months were spent in preparation: we had to find people to lead the projects, decide what those projects would be, select participants for the hackathon, help some of them get to Moscow. There was a lot of work involved but I think we managed.
 ![](https://img-fotki.yandex.ru/get/15516/44214498.bd/0_9bc04_fe943d27_XL.jpg)
 
 ## Why hackathons are good
@@ -31,7 +31,7 @@ All the details of the project presentations, of people forming teams, working h
 
 What were those two days like? The participants gave different descriptions: strenuous, fun, interesting, enlightening, exhausting. The main answer though is that they were productive! There was not a project that didn't make it to the end. Some people may not have been able to achieve their original goals but everyone did their best.
 
-Our hackathon took place in a very friendly atmosphere. Everyone already knew each other either from the BEMups or through previous online communication. Participants didn't hesitate to offer assistance to or seek advice from members of "rival" teams. 
+Our hackathon took place in a very friendly atmosphere. Everyone already knew each other either from the BEMups or through previous online communication. Participants didn't hesitate to offer assistance to or seek advice from members of "rival" teams.
 I am not sure if that was because our chosen event format didn't imply competition as such or because the event attracted the right kind of people or  if it's just the way BEM influences people :) It's something that everyone can judge for themselves.
 
 ## What did we all get out of the hackathon?
@@ -52,7 +52,7 @@ I wasn't able to get a team together, people found other projects more interesti
 
 ![](https://img-fotki.yandex.ru/get/15565/44214498.bc/0_9bbec_203e98f4_XL.jpg)
 
-My project was about creating a full-blown engine on which you could deploy a small website using the full BEM technology stack, in a way that should be no more difficult to do than by using WordPress. Both file system based markdown files and a database of some sort could be used as data sources. Themes were to be provided by a redefinition level containing BEMTREE and BEMHTML templates, CSS and JS.
+My project was about creating a full-blown engine on which you could deploy a small website using the full BEM technology stack, in a way that should be no more difficult to do than by using WordPress. Both file structure based markdown files and a database of some sort could be used as data sources. Themes were to be provided by a redefinition level containing BEMTREE and BEMHTML templates, CSS and JS.
 
 I was aiming for a product that could be used in two modes: as a static page generator to avoid the need to search for specialized hosting supporting Node.js, and as a dynamic application.
 
