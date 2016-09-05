@@ -82,14 +82,7 @@ Let's say we added the `active` modifier to the block and set the value to `true
 <button class="button button_active">...</button>
 ```
 
-This is how priority is weighted for style selectors:
-
-* A tag selector has a weight of 1.
-* A class selector has a weight of 10.
-* An ID selector has a weight of 100.
-* An inline style has a weight of 1000.
-
-So the `.button_active` selector doesn't redefine the block properties written as `button.button`, because `button.button` has a weight of 11 (10 for the class name, and 1 for the tag selector), while `.button_active` only has 10. For successful redefinition, the selector for the block modifier also must be combined with the `button.button_active` tag.
+`.button_active` selector doesn't redefine the block properties written as `button.button`, because `button.button` has a weight higher than `.button_active`. For successful redefinition, the selector for the block modifier also must be combined with the `button.button_active` tag.
 
 As the project develops, it's possible that blocks could be added with the selectors `input.button`, `span.button` and `a.button`. In this case, all the modifiers of the `button` block and nested elements would require four different declarations for each case.
 
