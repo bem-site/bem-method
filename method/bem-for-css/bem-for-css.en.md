@@ -1,6 +1,6 @@
 # CSS for BEM
 
-In the BEM methodology, CSS is used for page layout and is considered one of the [block implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
+In the BEM methodology, CSS is used for page layout and is one of the [block implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 
 Core principles of working with CSS detail in the following sections:
 * [Selectors](#selectors)
@@ -26,7 +26,7 @@ BEM doesn't use tag and ID selectors. The styles of BEM blocks and elements are 
 
 #### Class selectors
 
-Позволяют указать конкретный HTML-элемент страницы, независимо от тега. Обращение к селектору класса происходит через атрибут `class`, который должен имет каждый HTML-элемент.
+Позволяют указать конкретный HTML-элемент страницы, независимо от тега. Обращение к селектору класса происходит через атрибут `class`, который должен иметь каждый HTML-элемент.
 
 **Example**
 
@@ -99,7 +99,7 @@ CSS implementation:
 
 The BEM methodology does allow using selectors like this, but we recommend keeping them to a minimum. Nested selectors increase code coupling and make reuse impossible.
 
-For example, nesting is appropriate if you need to change the styles of elements relative to the state of the block or the theme set:
+For example, nesting is appropriate if you need to change the styles of elements relative to the state of the block or the theme set.
 
 **Example**
 
@@ -270,7 +270,7 @@ CSS implementation of a button:
 
 **Task**
 
-Use the same button in the `form` block.
+Use the button from `header` block in the `form` block.
 
 The `button` block includes a padding of `30px`, which may prevent its reuse.
 
@@ -340,7 +340,7 @@ article, .footer div {
 }
 ```
 
-In this example the text inside the `article` and `copyright` blocks to have the same color and font.
+In this example the text inside the `article` and `copyright` blocks has the same color and font.
 
 Although group selectors do allow you to quickly change the design of the page, this approach tightens code coupling.
 
@@ -603,7 +603,7 @@ With the addition of modifiers, we got rid of the `btn` block.
 
 ![buttons](buttons.png)
 
-As the example shows, there are some small external differences between them. With the DRY principle, we are talking about entities that are functionally similar but have different formatting.
+As the example shows, there are some small external differences between buttons. With the DRY principle, we are talking about entities that are functionally similar but have different formatting.
 
 There isn't any reason to combine different types of blocks just because they have, for instance, the same color or size.
 
@@ -692,7 +692,7 @@ The `mobile.css` file will include the basic CSS button rules from the `common` 
 @import "mobile.blocks/button/button.css";    /* Specifics for mobile */
 ```
 
-Разделив представление блока `button` по уровням, можно:
+Разделение представления блока `button` по разным уровням позволяет:
 
 * Completely override a block's appearance on another redefinition level.
 
