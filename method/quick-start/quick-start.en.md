@@ -12,7 +12,7 @@ The idea behind it is to divide the user interface into independent blocks. This
 * [Should I create a block or an element?](#should-i-create-a-block-or-an-element)
 * [Modifier](#modifier)
 * [Mix](#mix)
-* [File system](#file-system)
+* [File structure](#file-structure)
 
 ## Block
 
@@ -337,9 +337,9 @@ In this example, we combined the behavior and styles of the `search-form` block 
 This approach allows us to set the external geometry and positioning in the `header__search-form` element, while the `search-form` block itself remains universal.
 As a result, we can use the block in any other environment, because it doesn't specify any padding. This is why we can call it independent.
 
-## File system
+## File structure
 
-The component approach adopted in the BEM methodology also applies to [projects in the file system](../filesystem/filesystem.en.md#file-system-organization). The implementations of blocks, elements, and modifiers are divided into independent technology files, which means we can connect them individually.
+The component approach adopted in the BEM methodology also applies to [projects in the file structure](../filestructure/filestructure.en.md#file-structure-organization). The implementations of blocks, elements, and modifiers are divided into independent technology files, which means we can connect them individually.
 
 Features:
 
@@ -385,6 +385,6 @@ This file structure makes it easy to support the code and re-use it.
 
 > The branched file structure assumes that in production the code will be [assembled into shared project files](../build/build.en.md#bem-project-building-methodology).
 
-You aren't required to follow the [recommended file system structure](../filesystem/filesystem.en.md#nested). You can use any alternative project structure that follows the BEM principles for organizing the file system, such as:
-* [Flat](../filesystem/filesystem.en.md#flat)
-* [Flex](../filesystem/filesystem.en.md#flex)
+You aren't required to follow the [recommended file structure](../filestructure/filestructure.en.md#nested). You can use any alternative project structure that follows the BEM principles for organizing the file structure, such as:
+* [Flat](../filestructure/filestructure.en.md#flat)
+* [Flex](../filestructure/filestructure.en.md#flex)

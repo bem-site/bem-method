@@ -32,7 +32,7 @@ BEM (the acronym for **B**lock, **E**lement, **M**odifier) is a methodology for 
 
 BEM offers an abstraction over a DOM tree. Blocks are independent of each other and encapsulate all the functionality and elements. It doesn't matter what HTML tags are used to implement a block — whether it's `div` or `form`, you can always change that or add more wrappers. Any such changes shouldn't affect other blocks. With BEM, we describe an application in terms of interface components, not in terms of HTML tags.
 
-Each block has its own folder in the file system. The folder contains all the technologies that describe the block, its elements and modifiers.
+Each block has its own folder in the file structure. The folder contains all the technologies that describe the block, its elements and modifiers.
 
 ```
 desktop.blocks/
@@ -91,7 +91,7 @@ A set of block implementations is called a redefinition level. A project may hav
 
 We can define and redefine styles, templates, the JavaScript implementation of blocks at our project's redefinition level. And we do so without modifying the library's source files, which means that our changes will be preserved if the library gets updated.
 
-Let's see how it may look on a file system:
+Let's see how it may look on a file structure:
 
 ```
 …

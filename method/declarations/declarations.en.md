@@ -23,7 +23,7 @@ You can form a declaration manually. To do this, list all the BEM entities invol
 A declaration can be built automatically:
 
 * [From the page description](#creating-a-declaration-from-the-page-description)
-* [Via an introspection of the file system](#creating-a-declaration-via-an-introspection-of-the-file-system)
+* [Via an introspection of the file structure](#creating-a-declaration-via-an-introspection-of-the-file-structure)
 
 ### Creating a declaration from the page description
 
@@ -42,15 +42,15 @@ When the page get built, the declaration is formed automatically based on the BE
 
 >For an example of a project where a separate declaration is formed for each individual page, see [Starting your own BEM project](https://en.bem.info/tutorials/start-with-project-stub/).
 
-### Creating a declaration via an introspection of the file system
+### Creating a declaration via an introspection of the file structure
 
-Another source of information about the entities is the project file system.
-The declaration will thus encompass all entities that are found in the file system of the project. Although it ensures a guaranteed inclusion of all the necessary entities in the build, this method is lacking in precision: the build will cover all of the existing entities, not just the relevant ones.
+Another source of information about the entities is the project file structure.
+The declaration will thus encompass all entities that are found in the file structure of the project. Although it ensures a guaranteed inclusion of all the necessary entities in the build, this method is lacking in precision: the build will cover all of the existing entities, not just the relevant ones.
 On the contrary, the page description-based declaration ensures the building of the relevant BEM entities on a per-entity basis, but does not guarantee inclusion of all those entities that are not explicitly specified in the HTML file for the page.
 
 ![A way of creating a declaration](declarations__fs2decl.en.png)
 
->In [bem-components](https://en.bem.info/libs/bem-components/), the method of creating a declaration via the introspection of a file system is used for the [Dist](https://en.bem.info/libs/bem-components/)-based library distribution.
+>In [bem-components](https://en.bem.info/libs/bem-components/), the method of creating a declaration via the introspection of a file structure is used for the [Dist](https://en.bem.info/libs/bem-components/)-based library distribution.
 
 ## Algebra of declarations
 

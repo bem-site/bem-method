@@ -9,7 +9,7 @@ BEM enforces [additional rules](../bem-js-principles/bem-js-principles.en.md) on
 JavaScript is one of the block implementation technologies, so the main concepts of the BEM methodology can be observed when working with JavaScript:
 
 * [Unified subject domain](#unified-subject-domain) — using blocks, elements, and modifiers named according to general [naming conventions](../naming-convention/naming-convention.en.md).
-* [Separating the code into parts](#dividing-the-code-into-parts) and the same [rules for organizing the file structure of a BEM project](../filesystem/filesystem.en.md).
+* [Separating the code into parts](#dividing-the-code-into-parts) and the same [rules for organizing the file structure of a BEM project](../filestructure/filestructure.en.md).
 * [Dividing the code by redefinition levels and using assembly](#working-with-redefinition-levels).
 
 ### Unified subject domain
@@ -95,7 +95,7 @@ This approach allows us to:
 We can apply the main BEM principles for organizing and storing code to JavaScript:
 
 * Dividing code into separate parts — each block’s logic and its optional elements and modifiers are described in separate files.
-* JavaScript files for each component are stored according to the [rules for organizing the file structure](../filesystem/filesystem.en.md) of a BEM project.
+* JavaScript files for each component are stored according to the [rules for organizing the file structure](../filestructure/filestructure.en.md) of a BEM project.
 
 **Example**
 
@@ -114,7 +114,7 @@ CSS implementation of the block:
 }
 ```
 
-The `logo` block in the project’s file system:
+The `logo` block in the project’s file structure:
 
 ```files
 logo/
@@ -135,7 +135,7 @@ JavaScript implementation of the block:
 document.querySelector('.logo').addEventListener('click', doSomething, false);
 ```
 
-The `logo.js` file in the block’s file system:
+The `logo.js` file in the block’s file structure:
 
 ```files
 logo/
@@ -144,11 +144,11 @@ logo/
     logo.js    # Dynamic behavior of the block in the browser
 ```
 
-Dividing the code into parts and strictly organizing the project’s file system not only make it easier to navigate the project and reuse or migrate components, but also allow us to work with redefinition levels for JavaScript and use assembly.
+Dividing the code into parts and strictly organizing the project’s file structure not only make it easier to navigate the project and reuse or migrate components, but also allow us to work with redefinition levels for JavaScript and use assembly.
 
 ### Working with redefinition levels
 
-The documentation for the BEM methodology provides [many examples](../filesystem/filesystem.en.md#examples-of-using-redefinition-levels) where the final CSS implementation of a block is assembled from different redefinition levels. Applying BEM principles to JavaScript allows us to similarly divide a block’s behavior into different levels:
+The documentation for the BEM methodology provides [many examples](../filestructure/filestructure.en.md#examples-of-using-redefinition-levels) where the final CSS implementation of a block is assembled from different redefinition levels. Applying BEM principles to JavaScript allows us to similarly divide a block’s behavior into different levels:
 
 * Implement new block functionality on a different redefinition level while preserving the previous block behavior, inheriting it and extending it (make a super call).
 * Completely override the block behavior (redefine it).
@@ -207,4 +207,4 @@ To immediately use all the BEM concepts in your project, you need to use the [i-
 * Reuse blocks and migrate them between projects.
 * Facilitate and accelerate project development and debugging due to components being independent, so blocks can be developed individually.
 * Include only the necessary JavaScript implementation of a block for assembly.
-* Simplify navigation through the project’s file system.
+* Simplify navigation through the project’s file structure.

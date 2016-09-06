@@ -166,7 +166,7 @@ The full name of the modifier `<div class="block block_mod">` leaves no doubt as
 
 ### Code search
 
-Explicit and unique names facilitate searching the code or the file system for specific entities.
+Explicit and unique names facilitate searching the code or the file structure for specific entities.
 
 Let's compare the results of a global search during the debugging stage. Let's find a modifier called `active`. If short notation is used (`active`), the search results will include all possible combinations and HTML fragments containing `active`. In the BEM-recommended notation the name of the modifier already contains a additional search parameter in the form of the block name (`button_active`). Because the modifier name is unique, the search will return only relevant code fragments.
 
@@ -197,11 +197,11 @@ BEM allows us to combine the implementation of different blocks using [mixes](..
 
 ## Why create separate directories and files for every block and technology?
 
-For the purpose of convenient development and support, the file system of a BEM project is divided into nested directories and files.
+For the purpose of convenient development and support, the file structure of a BEM project is divided into nested directories and files.
 
-The use of the [recommended file system](../method/filesystem/filesystem.en.md#nested) structure is optional. You can use any alternative project structure that conforms to the principles of BEM file system organization, for example:
-* [Flat](../method/filesystem/filesystem.en.md#flat).
-* [Flex](../method/filesystem/filesystem.en.md#flex).
+The use of the [recommended file structure](../method/filestructure/filestructure.en.md#nested) structure is optional. You can use any alternative project structure that conforms to the principles of BEM file structure organization, for example:
+* [Flat](../method/filestructure/filestructure.en.md#flat).
+* [Flex](../method/filestructure/filestructure.en.md#flex).
 
 ## Why use i-bem.js when you have jQuery?
 

@@ -805,7 +805,7 @@ This is very much a work in progress, and we invite everybody to make pull reque
 We also develop [bem-tools](https://en.bem.info/tools/bem/bem-tools/), a set of helper scripts and automation utilities that make working with BEM files easier. This is mostly done with Node.js, to keep the barriers low for front-end people familiar with JavaScript and willing to contribute.
 
 ### Redefinition levels in BEM
-One size never fits all... but one BEM does! Because blocks and elements are represented on a file system as files and folders, and BEM file structure is unified and based mostly on semantic criteria, we can easily redefine a part of a BEM block, or add more functionality. Similar to the way we extend objects in JavaScript, BEM blocks can be extended using so-called "redefinition levels".
+One size never fits all... but one BEM does! Because blocks and elements are represented on a file structure as files and folders, and BEM file structure is unified and based mostly on semantic criteria, we can easily redefine a part of a BEM block, or add more functionality. Similar to the way we extend objects in JavaScript, BEM blocks can be extended using so-called "redefinition levels".
 
 Typical redefinition levels may be defined like this:
 
@@ -898,4 +898,4 @@ Find CSS prefixes too long to type? Remove them!
 
 This is a perfect opportunity to try BEM concepts, and since we don't really have those strict rules, you're not really breaking anything as long as you hold on to the main principle of blocks, elements and modifiers.
 
-Read more about [putting blocks to filesystem](/method/filesystem/).
+Read more about [putting blocks to file structure](../filestructure/filestructure.en.md).

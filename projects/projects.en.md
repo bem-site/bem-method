@@ -71,7 +71,7 @@ Authored by Andrey Yamanov, [gh: tenphi](https://github.com/tenphi), [@tenphi](h
 
 ## bemy
 
-A Node.js application for manipulations with BEM structure. Allows creating and renaming BEM entities on a file system (analogue of the `bem create` command). Could be used to set up a block file structure using [ENB](http://enb-make.info) building tool `deps.js` files. Works via shell with Webstorm, Sublime and other editing programs.
+A Node.js application for manipulations with BEM structure. Allows creating and renaming BEM entities on a file structure (analogue of the `bem create` command). Could be used to set up a block file structure using [ENB](http://enb-make.info) building tool `deps.js` files. Works via shell with Webstorm, Sublime and other editing programs.
 
 Project repository on [GitHub](https://github.com/f0rmat1k/bemy).
 
