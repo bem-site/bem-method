@@ -1,18 +1,18 @@
-# File system organization
+# File structure organization
 
-A component-based approach used in the BEM methodology also determines the way that BEM projects are organized in a file system. In BEM, it's not just the interface that is divided into independent components, i.e. blocks, but the implementation of blocks is also divided into independent parts, namely files.
+A component-based approach used in the BEM methodology also determines the way that BEM projects are organized in a file structure. In BEM, it's not just the interface that is divided into independent components, i.e. blocks, but the implementation of blocks is also divided into independent parts, namely files.
 
 Below on this page you will find:
 
-* [Principles of file system organization](#principles-of-file-system-organization-for-bem-projects)
-* [Examples of file systems for a BEM project](#examples-of-file-systems-for-a-bem-project)
+* [Principles of file structure organization](#principles-of-file-structure-organization-for-bem-projects)
+* [Examples of file structures for a BEM project](#examples-of-file-structures-for-a-bem-project)
 * [Examples of using redefinition levels](#examples-of-using-redefinition-levels)
 
-## Principles of file system organization for BEM projects
+## Principles of file structure organization for BEM projects
 
 In a BEM project, the code is broken down into small independent parts, to make working with individual blocks easier. Before they are sent to the browser, the files are assembled and optimized. That way we separate the human-manipulated code from the code that is sent to the browser.
 
-In the file system, the codebase of BEM project is organized according to the following principles:
+In the file structure, the codebase of BEM project is organized according to the following principles:
 
 * [A block implementation is divided into separate parts](#a-block-implementation-is-divided-into-separate-files)
 * [Optional elements and modifiers are stored in separate files](#optional-elements-and-modifiers-are-stored-in-separate-files)
@@ -62,11 +62,11 @@ The final implementation of a block can be split into [redefinition levels](#exa
 * **Updating libraries linked to the project.**
   Dividing a project into distinct levels lets us modify blocks without affecting the library source code. If the library gets updated, the block modification is stored at a different level of the project.
 
-## Examples of file systems for a BEM project
+## Examples of file structures for a BEM project
 
 ### Nested
 
-* For every block, there's a directory in the file system.
+* For every block, there's a directory in the file structure.
 * The directory is named after the block.
 
 ```files
@@ -164,7 +164,7 @@ blocks/
 
 ### Flex
 
-The Flex scheme is very flexible in relation to the file system organization for BEM projects:
+The Flex scheme is very flexible in relation to the file structure organization for BEM projects:
 
 * One block per directory.
 * Elements and modifiers are implemented in separate files.
@@ -262,7 +262,7 @@ project.blocks/
 
 ### Dividing a project into platforms
 
-A project is divided into platforms (`mobile` and `desktop`) and into respective redefinition levels in the file system. The `common` level contains the implementation of blocks that is common to both platforms. The `desktop` and `mobile` levels contain platform-specific block implementations.
+A project is divided into platforms (`mobile` and `desktop`) and into respective redefinition levels in the file structure. The `common` level contains the implementation of blocks that is common to both platforms. The `desktop` and `mobile` levels contain platform-specific block implementations.
 
 Let's look at an example:
 
