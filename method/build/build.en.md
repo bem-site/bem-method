@@ -17,10 +17,10 @@ library/              # Library level
   button/
 ```
 
-> To find out more about the reasons for dividing a block implementation into separate files, read [File structure organizaation of a BEM project](../filesystem/filesystem.en.md).
+> To find out more about the reasons for dividing a block implementation into separate files, read [File structure organizaation of a BEM project](../filestructure/filestructure.en.md).
 
 The build process takes care of the following:
-* combines individual [implementation files](../filesystem/filesystem.en.md#a-block-implementation-is-divided-into-separate-files) spread throughout the system.
+* combines individual [implementation files](../filestructure/filestructure.en.md#a-block-implementation-is-divided-into-separate-files) spread throughout the system.
 * includes only the necessary blocks, [elements](../key-concepts/key-concepts.en.md#element) and [modifiers](../key-concepts/key-concepts.en.md#modifier) in the project, out of those contained in the file structure;
 * ensures that the files are linked to the project in a correct order.
 
@@ -145,8 +145,8 @@ The diagram illustrates the principle of applying redefinition levels to the bui
 
 To find out more about using redefinition levels, read these examples:
 
-* [Redefining library blocks](../filesystem/filesystem.en.md#linking-a-library)
-* [Dividing a project into platforms](../filesystem/filesystem.en.md#dividing-a-project-into platforms)
+* [Redefining library blocks](../filestructure/filestructure.en.md#linking-a-library)
+* [Dividing a project into platforms](../filestructure/filestructure.en.md#dividing-a-project-into platforms)
 
 ## Build tools
 

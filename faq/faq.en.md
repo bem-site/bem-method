@@ -199,9 +199,9 @@ BEM allows us to combine the implementation of different blocks using [mixes](..
 
 For the purpose of convenient development and support, the file structure of a BEM project is divided into nested directories and files.
 
-The use of the [recommended file structure](../method/filesystem/filesystem.en.md#nested) structure is optional. You can use any alternative project structure that conforms to the principles of BEM file structure organization, for example:
-* [Flat](../method/filesystem/filesystem.en.md#flat).
-* [Flex](../method/filesystem/filesystem.en.md#flex).
+The use of the [recommended file structure](../method/filestructure/filestructure.en.md#nested) structure is optional. You can use any alternative project structure that conforms to the principles of BEM file structure organization, for example:
+* [Flat](../method/filestructure/filestructure.en.md#flat).
+* [Flex](../method/filestructure/filestructure.en.md#flex).
 
 ## Why use i-bem.js when you have jQuery?
 

@@ -95,7 +95,7 @@ Blocks are our building materials for each page. You can use the already created
 
 Every block can be implemented in the following technologies: `css`/`styl`, `js`, `bemhtml.js`, `deps.js`, `bemjson.js`. We will call them [block implementation technology files](https://en.bem.info/methodology/key-concepts/#implementation-technology). Blocks implementation sets are stored in one directory. In BEM terms it is called [redefinition level](https://en.bem.info/methodology/key-concepts/#redefinition-level).
 
-[Project structure](https://en.bem.info/methodology/filesystem/) presumes that all newly created and redefined blocks are stored in a `desktop.blocks` directory. The web pages blocks and all blocks that are mentioned in BEMJSON declarations are stored in a `desktop.bundles` directory.
+[Project structure](https://en.bem.info/methodology/filestructure/) presumes that all newly created and redefined blocks are stored in a `desktop.blocks` directory. The web pages blocks and all blocks that are mentioned in BEMJSON declarations are stored in a `desktop.bundles` directory.
 
 ## Step-by-step
 
