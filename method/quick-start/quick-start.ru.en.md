@@ -9,7 +9,7 @@
 
 * 
 * 
-* [Should I create a block or an element?](should-i-create-a-block-or-an-element)
+* [Should I create a block or an element?](#should-i-create-a-block-or-an-element)
 * [Modifire](#modifier(
 * 
 * 
@@ -129,7 +129,7 @@
 
 ```
 
-## 
+## Should I create a block or an element?
 
 1. Если фрагмент кода может использоваться повторно и не зависит от реализации других компонентов страницы, необходимо создавать блок.
 2. Если фрагмент кода не может использоваться самостоятельно, без родительской сущности (блока), в большинстве случаев создается элемент.
