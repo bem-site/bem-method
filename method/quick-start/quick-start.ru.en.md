@@ -2,8 +2,8 @@
 
 ## 
 
-
- 
+BEM (Block, Element, Modifier) is a component-based approach to web development.&nbsp;
+The idea behind it is to divide the user interface into independent blocks.&nbsp; This makes interface development easy and fast even with a complex UI, and it allows reuse of existing code without copying and pasting.
 
 ##  
 
