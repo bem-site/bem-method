@@ -509,8 +509,8 @@ Lego provides an SVN branch for each of its major releases; sticking to a branch
 
 This simple technique proved quite flexible and is employed up to this day by many Yandex services.
 
-#### Per-page files
-Files linked from web pages were mostly importing corresponding block implementations from the Lego folder structure.
+#### CSS files
+CSS files linked from web pages were mostly importing corresponding block implementations from the Lego folder structure.
 
 ```css
 @import url(../../block/l-head/l-head.css);
