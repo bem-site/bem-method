@@ -28,24 +28,7 @@ BEM doesn't use tag and ID selectors. The styles of BEM blocks and elements are 
 
 Позволяют указать конкретный HTML-элемент страницы, независимо от тега. Обращение к селектору класса происходит через атрибут `class`, который должен иметь каждый HTML-элемент.
 
-**Example**
-
-HTML implementation:
-
-```html
-<button class="button">
-    <span class="button__text">...</span>
-</button>
-```
-
-CSS implementation:
-
-```css
-.button {}
-.button__text {}
-```
-
-Выше рассмотрены значения атрибута `class`, состоящие из одного слова. In HTML, the value of the `class` attribute can be a space-separated list of words. This allows you to use several [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) on a single DOM node.
+The value of the `class` attribute can be a space-separated list of words. This allows you to use several [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) on a single DOM node.
 
 **Example**
 
@@ -603,7 +586,7 @@ With the addition of modifiers, we got rid of the `btn` block.
 
 ![buttons](buttons.png)
 
-As the example shows, there are some small external differences between buttons. With the DRY principle, we are talking about entities that are functionally similar but have different formatting.
+As the example shows, there are some small external differences between buttons. The DRY principle addresses entities that are functionally similar but have different formatting.
 
 There isn't any reason to combine different types of blocks just because they have, for instance, the same color or size.
 
