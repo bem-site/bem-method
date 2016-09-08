@@ -355,7 +355,7 @@ CSS implementation:
 
 These basic principles for structuring and storing code are applied to BEM-style CSS:
   * Code is divided into separate parts. The logic of each block and its optional elements and modifiers is defined in separate files.
-  * CSS files for each component are stored according to the [rules of file system organization](../filesystem/filesystem.en.md) for a BEM project.
+  * CSS files for each component are stored according to the [rules of file system organization](../filestructure/filestructure.en.md) for a BEM project.
 
 Dividing code into parts and controlling the structure of the project's file system make it possible to:
   * Simplify navigation through the project.
