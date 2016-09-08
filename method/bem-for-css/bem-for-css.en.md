@@ -26,7 +26,7 @@ BEM doesn't use tag and ID selectors. The styles of BEM blocks and elements are 
 
 #### Class selectors
 
-Позволяют указать конкретный HTML-элемент страницы, независимо от тега. Обращение к селектору класса происходит через атрибут `class`, который должен иметь каждый HTML-элемент.
+Allow you to select a particular HTML element on a page, independent of the tag. The class selector is accessed via the `class` attribute that is required for every HTML element.
 
 The value of the `class` attribute can be a space-separated list of words. This allows you to use several [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) on a single DOM node.
 
@@ -219,7 +219,7 @@ This frees you from unneeded copying and pasting.
 
 Allow you to:
 * Combine the behavior and styles of multiple entities without duplicating code.
-* Same style different HTML elements.
+* Apply the same formatting to different HTML elements.
 
 #### External geometry and positioning
 
@@ -675,7 +675,7 @@ The `mobile.css` file will include the basic CSS button rules from the `common` 
 @import "mobile.blocks/button/button.css";    /* Specifics for mobile */
 ```
 
-Разделение представления блока `button` по разным уровням позволяет:
+Separating the representation of the `button` block into different levels allows you to:
 
 * Completely override a block's appearance on another redefinition level.
 
