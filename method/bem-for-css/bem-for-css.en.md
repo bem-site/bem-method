@@ -37,7 +37,7 @@ HTML implementation:
 ```html
 <header class="header">
     <!--
-    `header__button` — element in the `header` block;
+    `header__button` — element of the `header` block;
     `button` — block;
     `button_theme_islands` — modifier.
     -->
@@ -47,7 +47,7 @@ HTML implementation:
 
 #### Combining a tag and a class in a selector
 
-The BEM methodology not recommended to combine a tag and a class in a selector. Combination the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
+The BEM methodology not recommended to combine a tag and a class in a selector. Combining the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
 
 **Example**
 
