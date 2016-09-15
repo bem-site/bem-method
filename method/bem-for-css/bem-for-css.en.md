@@ -37,7 +37,7 @@ HTML implementation:
 ```html
 <header class="header">
     <!--
-    `header__button` — mix (element in the `header` block);
+    `header__button` — element in the `header` block;
     `button` — block;
     `button_theme_islands` — modifier.
     -->
@@ -47,7 +47,7 @@ HTML implementation:
 
 #### Combining a tag and a class in a selector
 
-The BEM methodology not recommended to combine a tag and a class in a selector. This method makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
+The BEM methodology not recommended to combine a tag and a class in a selector. Combination the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
 
 **Example**
 
@@ -69,9 +69,7 @@ Let's say we added the `active` modifier to the block and set the value to `true
 
 As the project develops, it's possible that blocks could be added with the selectors `input.button`, `span.button` and `a.button`. In this case, all the modifiers of the `button` block and nested elements would require four different declarations for each case.
 
-Try to keep selectors as short as possible.
-
-CSS implementation:
+Try to use only class selectors:
 
 ```css
 .button {}
