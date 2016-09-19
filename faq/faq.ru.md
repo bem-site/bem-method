@@ -208,22 +208,16 @@
 Рассмотрим пример DOM-дерева:
 
 ```html
-<body>
-    <header class="header">
-        <form class="search-form">
-            <div class="search-form__content">
-                <input type="text" class="input">
-                <button type="submit" class="button">Search</button>
-            </div>
-        </form>
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="button">Search</button>
+</form>
 
-        <form class="auth">
-            <input type="text" class="login">
-            <input type="password" class="password">
-            <!-- Здесь будет кнопка -->
-        </form>
-    </header>
-</body>
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <!-- Здесь будет кнопка -->
+</form>
 ```
 
 Первое, что необходимо сделать — скопировать код кнопки в блок `auth`.
@@ -231,22 +225,16 @@
 HTML-реализация:
 
 ```html
-<body>
-    <header class="header">
-        <form class="search-form">
-            <div class="search-form__content">
-                <input type="text" class="input">
-                <button type="submit" class="button">Search</button>
-            </div>
-        </form>
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="button">Search</button>
+</form>
 
-        <form class="auth">
-            <input type="text" class="login">
-            <input type="password" class="password">
-            <button type="submit" class="button">Sign in</button>
-        </form>
-    </header>
-</body>
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <button type="submit" class="button">Sign in</button>
+</form>
 ```
 
 Чтобы определить различные отступы для кнопок, можно воспользоваться [миксами](../method/bem-for-css/bem-for-css.ru.md#Миксы) и задать стили, отвечающие за внешнюю геометрию через их родительские блоки. Это позволит определить дополнительные CSS-правила для каждой из кнопок.
@@ -256,22 +244,16 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-<body>
-    <header class="header">
-        <form class="search-form">
-            <div class="search-form__content">
-                <input type="text" class="input">
-                <button type="submit" class="search-form__button button">Search</button>
-            </div>
-        </form>
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="search-form__button button">Search</button>
+</form>
 
-        <form class="auth">
-            <input type="text" class="login">
-            <input type="password" class="password">
-            <button type="submit" class="auth__button button">Sign in</button>
-        </form>
-    </header>
-</body>
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <button type="submit" class="auth__button button">Sign in</button>
+</form>
 ```
 
 Теперь каждая кнопка имеет соответствующие только ей уникальные CSS-правила, определяющие отступы.
@@ -297,22 +279,16 @@ CSS-реализация:
 HTML-реализация:
 
 ```html
-<body>
-    <header class="header">
-        <form class="search-form">
-            <div class="search-form__content">
-                <input type="text" class="input">
-                <button type="submit" class="search-form__button button button_theme_lite">Search</button>
-            </div>
-        </form>
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="search-form__button button button_theme_lite">Search</button>
+</form>
 
-        <form class="auth">
-            <input type="text" class="login">
-            <input type="password" class="password">
-            <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
-        </form>
-    </header>
-</body>
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
+</form>
 ```
 
 Cоответственно, CSS-реализация будет иметь такой вид:
