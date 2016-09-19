@@ -201,7 +201,7 @@
 
 **Задача**
 
-Необходимо переиспользовать кнопку (блок `button`) на странице в форме поиска (`search-form`), блоке авторизации (`auth`) и блоке оформления подписки (`subscribe`). Все три кнопки должны отличаться по цвету и иметь разные отступы.
+Необходимо переиспользовать кнопку (блок `button`) из формы поиска (блок `search-form`) в блоке авторизации (`auth`). Кнопки должны отличаться цветом и отступами.
 
 **Решение**
 
@@ -219,24 +219,35 @@
         <form class="auth">
             <input type="text" class="login">
             <input type="password" class="password">
-            <button type="submit" class="button">Sign in</button>
+            <!-- Здесь будет кнопка -->
         </form>
     </header>
-    <div class="content">
-    <!-- content -->
-    </div>
-    <footer>
-        <form class="subscribe">
-            <input type="text" class="email">
-            <button type="submit" class="button">Subscribe</button>
-        </form>
-    </footer>
 </body>
 ```
 
-В CSS по БЭМ, стили, отвечающие за внешнюю геометрию и позиционирование задают через родительский блок.
+Первое, что необходимо сделать — скопировать код кнопки в блок `auth`.
 
-Запишем тот же код в соответствии с этим правилом:
+```html
+<body>
+    <header class="header">
+        <form class="search-form">
+            <div class="search-form__content">
+                <input type="text" class="input">
+                <button type="submit" class="button">Search</button>
+            </div>
+        </form>
+        <form class="auth">
+            <input type="text" class="login">
+            <input type="password" class="password">
+            <button type="submit" class="button">Sign in</button>
+        </form>
+    </header>
+</body>
+```
+
+Чтобы определить разные отступы для кнопок, можно воспользоваться [миксом](../method/bem-for-css/bem-for-css.ru.md#Миксы) и задать стили, отвечающие за внешнюю геометрию через родительский блок. Это позволит определить дополнительные CSS-правила для каждой из кнопок.
+
+Добавим кнопкам классы `search-form__button`, `auth__button` соответственно:
 
 ```html
 <body>
@@ -253,38 +264,25 @@
             <button type="submit" class="auth__button button">Sign in</button>
         </form>
     </header>
-    <div class="content">
-    <!-- content -->
-    </div>
-    <footer>
-        <form class="subscribe">
-            <input type="text" class="email">
-            <button type="submit" class="subscribe__button button">Subscribe</button>
-        </form>
-    </footer>
 </body>
 ```
 
-Каждая кнопка будет иметь соответствующие только ей уникальные CSS-правила, определяющие отступы:
+Теперь каждая кнопка будет иметь соответствующие только ей уникальные CSS-правила, определяющие отступы:
 
 ```css
 .search-form__button {
     margin: 30px;
-    position: relative;
 }
 .auth__button {
     margin: 40px;
-    position: relative;
-}
-.subscribe__button {
-    margin: 50px;
-    position: relative;
 }
 ```
 
-Для того чтобы сделать кнопки разными по цвету, следует добавить блоку `button` модификатор c определенной темой оформления.
+Цветовое оформление блока в БЭМ может быть реализовано с помощью:
+* модификатора — примеяется, если существует вероятность переиспользовать блок в данном цветовом оформлении;
+* микса — применяется, если блок имеет специфичное оформление только для данного окружения и в данном виде точно не будет переиспользован на проекте.
 
-В таком случае запись будет следующей:
+Рассмотрим пример с модификатором блока. Добавим кнопкам следующие модификаторы: `button_theme_lite`, `button_theme_dark`.
 
 ```html
 <body>
@@ -301,19 +299,10 @@
             <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
         </form>
     </header>
-    <div class="content">
-    <!-- content -->
-    </div>
-    <footer>
-        <form class="subscribe">
-            <input type="text" class="email">
-            <button type="submit" class="subscribe__button button button_theme_island">Subscribe</button>
-        </form>
-    </footer>
 </body>
 ```
 
-Cоответственно, CSS будет иметь такой вид:
+Cоответственно, CSS-реализация будет иметь такой вид:
 
 ```css
 .button_theme_lite {
@@ -322,9 +311,6 @@ Cоответственно, CSS будет иметь такой вид:
 .button_theme_dark {
     background: #000;
 }
-.button_theme_island {
-    background: #ffff00;
-}
 ```
 
 Применение CSS-правил не зависит от порядка объявления классов:
@@ -332,11 +318,9 @@ Cоответственно, CSS будет иметь такой вид:
 ```html
 <button type="submit" class="search-form__button button button_theme_lite">Search</button>
 <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
-<button type="submit" class="subscribe__button button button_theme_island">Subscribe</button>
 
 <button type="submit" class="button_theme_lite search-form__button button">Search</button>
 <button type="submit" class="button auth__button button_theme_dark">Sign in</button>
-<button type="submit" class="button button_theme_island subscribe__button">Subscribe</button>
 ```
 
 ## Зачем использовать i-bem.js, если можно писать на jQuery?
