@@ -216,6 +216,7 @@
                 <button type="submit" class="button">Search</button>
             </div>
         </form>
+
         <form class="auth">
             <input type="text" class="login">
             <input type="password" class="password">
@@ -238,6 +239,7 @@ HTML-реализация:
                 <button type="submit" class="button">Search</button>
             </div>
         </form>
+
         <form class="auth">
             <input type="text" class="login">
             <input type="password" class="password">
@@ -262,6 +264,7 @@ HTML-реализация:
                 <button type="submit" class="search-form__button button">Search</button>
             </div>
         </form>
+
         <form class="auth">
             <input type="text" class="login">
             <input type="password" class="password">
@@ -279,6 +282,7 @@ CSS-реализация:
 .search-form__button {
     margin: 30px;
 }
+
 .auth__button {
     margin: 40px;
 }
@@ -301,6 +305,7 @@ HTML-реализация:
                 <button type="submit" class="search-form__button button button_theme_lite">Search</button>
             </div>
         </form>
+
         <form class="auth">
             <input type="text" class="login">
             <input type="password" class="password">
@@ -316,20 +321,13 @@ Cоответственно, CSS-реализация будет иметь та
 .button_theme_lite {
     background: #fff;
 }
+
 .button_theme_dark {
     background: #000;
 }
 ```
 
-В результате кнопки стали отличаться цветом и отступами. Применение CSS-правил не зависит от порядка объявления классов:
-
-```html
-<button type="submit" class="search-form__button button button_theme_lite">Search</button>
-<button type="submit" class="auth__button button button_theme_dark">Sign in</button>
-
-<button type="submit" class="button_theme_lite search-form__button button">Search</button>
-<button type="submit" class="button auth__button button_theme_dark">Sign in</button>
-```
+В результате кнопки стали отличаться по цвету и иметь различные отступы.
 
 ## Зачем использовать i-bem.js, если можно писать на jQuery?
 
