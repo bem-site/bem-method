@@ -67,7 +67,7 @@ For instance, the appearance of the menu block (`menu`) may change depending on 
 
 Modifiers can be changed in runtime (for example, as a reaction to a DOM event of the block), or via other blocks.
 
-E.g. a click on Sign In button (click DOM event) when sign in form is filled with wrong credentials will set visible modifier on hidden error block.
+For example, if the wrong credentials are entered when a user clicks the Sign In button (the 'click' DOM event), the 'visible' modifier is set on a hidden block with error messages.
 
 ## BEM entity
 
