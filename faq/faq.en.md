@@ -11,7 +11,7 @@
 * [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
 * [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
 * [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
-* [Why name of the modifier block is not written in the element name (block\_mod\__elem)?](#why-name-of-the-modifier-block-is-not-written-in-the-element-name-block_mod__elem)
+* [Why isn't the name of the block modifier written in the element name (block\_mod\__elem)?](#why-isnt-the-name-of-the-block-modifier-written-in-the-element-name-block_mod__elem)
 * [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
 * [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
 
