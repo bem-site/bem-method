@@ -105,10 +105,10 @@ CSS-реализация:
 В качестве примера рассмотрим следующие четыре строки CSS-кода:
 
 ```css
-.button {}                 
-.button__icon {}         
-.button__text {}           
-.button_theme_islands {}    
+.button {}
+.button__icon {}
+.button__text {}
+.button_theme_islands {}
 ```
 
 С определенной долей вероятности можно предположить, что мы имеем дело с одним блоком и его HTML-реализация выглядит следующим образом:
@@ -124,9 +124,9 @@ CSS-реализация:
 Сложнее сделать подобное предположение с такой группой селекторов:
 
 ```css
-.button {}                 
-.icon {}            
-.text {}         
+.button {}
+.icon {}
+.text {}
 .theme_islands {}
 ```
 
@@ -187,7 +187,7 @@ CSS-реализация:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
 }
 
 .button_size_s {
@@ -228,8 +228,8 @@ HTML-реализация:
 
 ```html
 <!-- Блок `header` -->
-<header class="header">  
-    <button class="button">...</button>  
+<header class="header">
+    <button class="button">...</button>
 </header>
 
 <!-- Блок `form` -->
@@ -242,7 +242,7 @@ CSS-реализация кнопки:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
     border: 1px solid black;    /* Рамка */
     margin: 30px;               /* Отступ */
 }
@@ -262,14 +262,14 @@ HTML-реализация:
 
 ```html
 <!-- Блок `header` -->
-<header class="header">  
+<header class="header">
     <!-- К блоку `button` добавили класс `header__button` -->
-    <button class="button header__button">...</button>  
+    <button class="button header__button">...</button>
 </header>
 
 <!-- Блок `form` -->
 <form class="form" >
-    <button class="button">...</button>  
+    <button class="button">...</button>
 </form>
 ```
 
@@ -382,8 +382,8 @@ button/                      # Директория блока `button`
 HTML-реализация:
 
 ```html
-<header class="header">  
-    <button class="button header__button">...</button>  
+<header class="header">
+    <button class="button header__button">...</button>
 </header>
 ```
 
@@ -393,7 +393,7 @@ CSS-реализация:
 .button {
     font-family: Arial, sans-serif;
     border: 1px solid black;
-    background: #fff;                     
+    background: #fff;
 }
 ```
 
@@ -414,7 +414,7 @@ CSS-реализация:
 .header__button {
     font-family: Arial, sans-serif;
     position: relative;
-    border: 1px solid black;    
+    border: 1px solid black;
     margin: 30px;
 }
 ```
@@ -439,7 +439,7 @@ CSS-реализация:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;  
+    text-align: center;
     font-size: 11px;
     line-height: 20px;
 }
@@ -460,7 +460,7 @@ CSS-реализация:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;  
+    text-align: center;
     font-size: 11px;
     line-height: 20px;
 }
@@ -480,7 +480,7 @@ CSS-реализация:
   ```css
   .button {
       font-family: Arial, sans-serif;
-      position: relative;
+      text-align: center;
       font-size: 13px;
       line-height: 24px;
   }
@@ -493,12 +493,12 @@ CSS-реализация:
   ```css
   .button {
       font-family: Arial, sans-serif;
-      position: relative;  
+      text-align: center;
       font-size: 11px;
       line-height: 20px;
   }
 
-  .content .button {  
+  .content .button {
       font-size: 13px;
       line-height: 24px;
   }
@@ -526,14 +526,14 @@ CSS-реализация:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
     color: #000;
     background: #fff;
 }
 
 .btn {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
     color: #000;
     background: rgba(255, 0, 0, 0.4);
 }
@@ -555,7 +555,7 @@ CSS-реализация:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
 }
 
 .button_theme_islands {
