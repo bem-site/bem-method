@@ -438,34 +438,34 @@ Cелектор `.button_active` не переопределит свойств�
 
 * на уровне CSS (с помощью медиазапросов). Имя CSS-селектора должно быть достаточно общим, для того чтобы его можно было использовать более чем с одной целью. Например, `block`.
 
-*CSS*
+  *CSS*
 
-```css
-@media screen and (min-width: 0px) and (max-width: 767px) {
-    .block {
-    	  left: 0;
-    }
-}
+  ```css
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+      .block {
+      	  left: 0;
+      }
+  }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px)  {
-    .block {
-        right: 0;
-    }
-}
-```
+  @media only screen and (min-width: 768px) and (max-width: 1023px)  {
+      .block {
+          right: 0;
+      }
+  }
+  ```
 
 * на уровне JavaScript (с помощью [переключения модификатора](https://ru.bem.info/platform/tutorials/i-bem/modifiers/#Переключение-toggle-модификатора)). Имена CSS-селекторов должны быть максимально конкретными. Например, `block_position_left`, `block_position_right`.
 
-*CSS*
+  *CSS*
 
-```css
-.block_position_left {
-	  left: 0;
-}
+  ```css
+  .block_position_left {
+  	  left: 0;
+  }
 
-.block_position_right {
-    right: 0;
-}
-```
+  .block_position_right {
+      right: 0;
+  }
+  ```
 
-Изменение CSS-классов на DOM-узле происходит при помощи JavaScript.
+  Изменение CSS-классов на DOM-узле происходит при помощи JavaScript.
