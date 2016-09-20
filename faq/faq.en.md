@@ -11,7 +11,7 @@
 * [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
 * [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
 * [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
-* [Why name of the modifier block is not written in the element name (block\_mod\__elem)?](#why-name-of-the-modifier-block-is-not-written-in-the-element-name-block_mod__elem)
+* [Why isn't the name of the block modifier written in the element name (block\_mod\__elem)?](#why-isnt-the-name-of-the-block-modifier-written-in-the-element-name-block_mod__elem)
 * [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
 * [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
 
@@ -168,20 +168,20 @@ The full name of the modifier `<div class="block block_mod">` leaves no doubt as
 
 Explicit and unique names facilitate searching the code or the file structure for specific entities.
 
-Let's compare the results of a global search during the debugging stage. Let's find a modifier called `active`. If short notation is used (`active`), the search results will include all possible combinations and HTML fragments containing `active`. In the BEM-recommended notation the name of the modifier already contains a additional search parameter in the form of the block name (`button_active`). Because the modifier name is unique, the search will return only relevant code fragments.
+Let's compare the results of a global search during the debugging stage. Let's find a modifier called `active`. If short notation is used (`active`), the search results will include all possible combinations and HTML fragments containing `active`. In the BEM-recommended notation the name of the modifier already contains an additional search parameter in the form of the block name (`button_active`). Because the modifier name is unique, the search will return only relevant code fragments.
 
-## Why name of the modifier block is not written in the element name (block\_mod\__elem)?
+## Why isn't the name of the block modifier written in the element name (block\_mod\__elem)?
 
-Element is an integrated part of the block, not the modifier block. Therefore, only block's name can set namespaces for elements.
+The element is an integrated part of the block, but not of the block modifier. Accordingly, only the block name can set the namespace for elements.
 
-That is important for the following reasons:
-* Block might have many modifiers.
+This is important for the following reasons:
+* A block can have multiple modifiers.
 ```html
 <div class="block block_mod1 block_mod2 block_mod3">
     <div class="block__elem"></div>
 </div>
 ```
-* Modifier determine the state of the block/element, which could be changed during executing JavaScript.
+* A modifier determines the state of the block or element, which can change during JavaScript execution.
 
 ## How do I make global modifiers for blocks?
 
