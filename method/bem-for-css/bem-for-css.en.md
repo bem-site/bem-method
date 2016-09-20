@@ -105,10 +105,10 @@ The name of the selector should fully and accurately describe the entity represe
 As an example, let's look at these four lines of CSS code:
 
 ```css
-.button {}                 
-.button__icon {}         
-.button__text {}           
-.button_theme_islands {}    
+.button {}
+.button__icon {}
+.button__text {}
+.button_theme_islands {}
 ```
 
 We can be fairly sure that we are dealing with a single block, and its HTML implementation looks like this:
@@ -124,9 +124,9 @@ We can be fairly sure that we are dealing with a single block, and its HTML impl
 It's harder to make the same assumption with a group of selectors like this:
 
 ```css
-.button {}                 
-.icon {}            
-.text {}         
+.button {}
+.icon {}
+.text {}
 .theme_islands {}
 ```
 
@@ -187,7 +187,7 @@ CSS implementation:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
 }
 
 .button_size_s {
@@ -229,8 +229,8 @@ HTML implementation:
 
 ```html
 <!-- `header` block -->
-<header class="header">  
-    <button class="button">...</button>  
+<header class="header">
+    <button class="button">...</button>
 </header>
 
 <!-- `form` block -->
@@ -243,7 +243,7 @@ CSS implementation of a button:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
     border: 1px solid black;
     margin: 30px;               /* Margin */
 }
@@ -263,14 +263,14 @@ HTML implementation:
 
 ```html
 <!-- `header` block -->
-<header class="header">  
+<header class="header">
     <!-- Added the `header__button` class to the `button` block -->
-    <button class="button header__button">...</button>  
+    <button class="button header__button">...</button>
 </header>
 
 <!-- `form` block -->
 <form class="form" >
-    <button class="button">...</button>  
+    <button class="button">...</button>
 </form>
 ```
 
@@ -383,8 +383,8 @@ Just as in object-oriented programming, the single responsibility principle in t
 HTML implementation:
 
 ```html
-<header class="header">  
-    <button class="button header__button">...</button>  
+<header class="header">
+    <button class="button header__button">...</button>
 </header>
 ```
 
@@ -394,7 +394,7 @@ CSS implementation:
 .button {
     font-family: Arial, sans-serif;
     border: 1px solid black;
-    background: #fff;                     
+    background: #fff;
 }
 ```
 
@@ -415,7 +415,7 @@ Incorrect:
 .header__button {
     font-family: Arial, sans-serif;
     position: relative;
-    border: 1px solid black;    
+    border: 1px solid black;
     margin: 30px;
 }
 ```
@@ -440,7 +440,7 @@ CSS implementation:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;  
+    text-align: center;
     font-size: 11px;
     line-height: 20px;
 }
@@ -461,7 +461,7 @@ CSS implementation:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;  
+    text-align: center;
     font-size: 11px;
     line-height: 20px;
 }
@@ -488,7 +488,7 @@ HTML implementation:
   ```css
   .button {
       font-family: Arial, sans-serif;
-      position: relative;
+      text-align: center;
       font-size: 13px;
       line-height: 24px;
   }
@@ -501,12 +501,12 @@ HTML implementation:
   ```css
   .button {
       font-family: Arial, sans-serif;
-      position: relative;  
+      text-align: center;
       font-size: 11px;
       line-height: 20px;
   }
 
-  .content .button {  
+  .content .button {
       font-size: 13px;
       line-height: 24px;
   }
@@ -534,14 +534,14 @@ CSS implementation:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
     color: #000;
     background: #fff;
 }
 
 .btn {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
     color: #000;
     background: rgba(255, 0, 0, 0.4);
 }
@@ -563,7 +563,7 @@ CSS implementation:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
+    text-align: center;
 }
 
 .button_theme_islands {
