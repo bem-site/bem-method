@@ -187,7 +187,6 @@ CSS-реализация:
 ```css
 .button {
     font-family: Arial, sans-serif;
-    position: relative;
 }
 
 .button_size_s {
