@@ -1,247 +1,395 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="737px" height="402px" viewBox="0 0 737 402" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="734px" height="413px" viewBox="0 0 734 413" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
-    <title>iPad Pro Portrait</title>
+    <title>iPad-Pro-Portrait</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPad-Pro-Portrait" transform="translate(-142.000000, -490.000000)">
-            <g id="build__declaration" transform="translate(146.000000, 514.000000)">
-                <g id="Page-1">
-                    <g id="scheme1">
+        <g id="iPad-Pro-Portrait" transform="translate(0.000000, -3.000000)">
+            <g id="build__declaration">
+                <g id="src" transform="translate(0.000000, 151.000000)" font-size="13">
+                    <g id="tree" transform="translate(1.000000, 31.000000)" font-family="PTMono-Regular, PT Mono" font-weight="normal">
+                        <g id="└──popup/" transform="translate(64.000000, 195.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="└──popup/">
+                                    <tspan x="0" y="12">└──popup/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="├──langswitch/" transform="translate(64.000000, 180.000000)">
+                            <g id="├──" fill="#000000">
+                                <text>
+                                    <tspan x="0" y="12">├──</tspan>
+                                </text>
+                            </g>
+                            <g id="langswitch/" transform="translate(23.000000, 0.000000)" fill="#FF6666">
+                                <g id="Group">
+                                    <text id="langswitch/">
+                                        <tspan x="0.4" y="12">langswitch/</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="├──image/" transform="translate(64.000000, 165.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="├──image/">
+                                    <tspan x="0" y="12">├──image/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="├──icon/" transform="translate(64.000000, 150.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="├──icon/">
+                                    <tspan x="0" y="12">├──icon/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="├──input/" transform="translate(64.000000, 135.000000)">
+                            <g id="├──" fill="#000000">
+                                <text>
+                                    <tspan x="0" y="12">├──</tspan>
+                                </text>
+                            </g>
+                            <g id="input/" transform="translate(23.000000, 0.000000)" fill="#FF6666">
+                                <g id="Group">
+                                    <text id="input/">
+                                        <tspan x="0.4" y="12">input/</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="├──button/-copy" transform="translate(64.000000, 120.000000)">
+                            <g id="├──" fill="#000000">
+                                <text>
+                                    <tspan x="0" y="12">├──</tspan>
+                                </text>
+                            </g>
+                            <g id="button/" transform="translate(23.000000, 0.000000)" fill="#FF6666">
+                                <g id="Group">
+                                    <text id="button/">
+                                        <tspan x="0.4" y="12">button/</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="└──lib/" transform="translate(32.000000, 105.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="└──lib/">
+                                    <tspan x="0" y="12">└──lib/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="└──link/" transform="translate(64.000000, 90.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="└──link/">
+                                    <tspan x="0" y="12">└──link/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="├──icon/" transform="translate(64.000000, 75.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="├──icon/">
+                                    <tspan x="0" y="12">├──icon/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="├──logo/" transform="translate(64.000000, 60.000000)">
+                            <g id="├──" fill="#000000">
+                                <text>
+                                    <tspan x="0" y="12">├──</tspan>
+                                </text>
+                            </g>
+                            <g id="logo/" transform="translate(23.000000, 0.000000)" fill="#FF6666">
+                                <g id="Group">
+                                    <text id="logo/">
+                                        <tspan x="0.4" y="12">logo/</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="├──input/" transform="translate(64.000000, 45.000000)">
+                            <g id="├──" fill="#000000">
+                                <text>
+                                    <tspan x="0" y="12">├──</tspan>
+                                </text>
+                            </g>
+                            <g id="input/" transform="translate(23.000000, 0.000000)" fill="#FF6666">
+                                <g id="Group">
+                                    <text id="input/">
+                                        <tspan x="0.4" y="12">input/</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="├──button/" transform="translate(64.000000, 30.000000)">
+                            <g id="├──" fill="#000000">
+                                <text>
+                                    <tspan x="0" y="12">├──</tspan>
+                                </text>
+                            </g>
+                            <g id="button/" transform="translate(23.000000, 0.000000)" fill="#FF6666">
+                                <g id="Group">
+                                    <text id="button/">
+                                        <tspan x="0.4" y="12">button/</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="└──blocks/" transform="translate(32.000000, 15.000000)" fill="#000000">
+                            <g id="Group">
+                                <text id="└──blocks/">
+                                    <tspan x="0" y="12">└──blocks/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="project/" fill="#000000">
+                            <text>
+                                <tspan x="0" y="12">project/</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Source-files" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
+                        <text>
+                            <tspan x="0" y="13">Source files</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="src_arrows" transform="translate(192.000000, 217.000000)" fill="#FF6666">
+                    <path d="M0,2 L31,2 L31,3 L0,3 L0,2 L0,2 L0,2 L0,2 L0,2 Z M36,2.5 L31,5 L31,-4.7439589e-16 L36,2.5 L36,2.5 L36,2.5 L36,2.5 L36,2.5 Z" id="arrow"></path>
+                    <path d="M0,17 L31,17 L31,18 L0,18 L0,17 L0,17 L0,17 L0,17 L0,17 Z M36,17.5 L31,20 L31,15 L36,17.5 L36,17.5 L36,17.5 L36,17.5 L36,17.5 Z" id="arrow-copy"></path>
+                    <path d="M0,32 L31,32 L31,33 L0,33 L0,32 L0,32 L0,32 L0,32 L0,32 Z M36,32.5 L31,35 L31,30 L36,32.5 L36,32.5 L36,32.5 L36,32.5 L36,32.5 Z" id="arrow-copy-3"></path>
+                    <path d="M0,92 L31,92 L31,93 L0,93 L0,92 L0,92 L0,92 L0,92 L0,92 Z M36,92.5 L31,95 L31,90 L36,92.5 L36,92.5 L36,92.5 L36,92.5 L36,92.5 Z" id="arrow-copy-4"></path>
+                    <path d="M0,107 L31,107 L31,108 L0,108 L0,107 L0,107 L0,107 L0,107 L0,107 Z M36,107.5 L31,110 L31,105 L36,107.5 L36,107.5 L36,107.5 L36,107.5 L36,107.5 Z" id="arrow-copy-5"></path>
+                    <path d="M0,152 L31,152 L31,153 L0,153 L0,152 L0,152 L0,152 L0,152 L0,152 Z M36,152.5 L31,155 L31,150 L36,152.5 L36,152.5 L36,152.5 L36,152.5 L36,152.5 Z" id="arrow-copy-6"></path>
+                </g>
+                <g id="declaration" transform="translate(173.000000, 0.000000)">
+                    <g id="Declaration" transform="translate(91.000000, 0.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
                         <g id="Group">
-                            <g id="src" transform="translate(0.000000, 74.000000)" font-size="13">
-                                <g id="tree" transform="translate(1.000000, 31.000000)" font-family="PTMono-Regular, PT Mono" font-weight="normal">
-                                    <g id="└──popup/" transform="translate(64.000000, 195.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">└──popup/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──langswitch/" transform="translate(64.000000, 180.000000)">
-                                        <text id="├──" fill="#000000">
-                                            <tspan x="0" y="12">├──</tspan>
-                                        </text>
-                                        <text id="langswitch/" fill="#FF6666">
-                                            <tspan x="23.4" y="12">langswitch/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──image/" transform="translate(64.000000, 165.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">├──image/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──icon/" transform="translate(64.000000, 150.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">├──icon/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──input/" transform="translate(64.000000, 135.000000)">
-                                        <text id="├──" fill="#000000">
-                                            <tspan x="0" y="12">├──</tspan>
-                                        </text>
-                                        <text id="input/" fill="#FF6666">
-                                            <tspan x="23.4" y="12">input/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──button/-copy" transform="translate(64.000000, 120.000000)">
-                                        <text id="├──" fill="#000000">
-                                            <tspan x="0" y="12">├──</tspan>
-                                        </text>
-                                        <text id="button/" fill="#FF6666">
-                                            <tspan x="23.4" y="12">button/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="└──lib/" transform="translate(32.000000, 105.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">└──lib/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="└──link/" transform="translate(64.000000, 90.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">└──link/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──icon/" transform="translate(64.000000, 75.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">├──icon/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──logo/" transform="translate(64.000000, 60.000000)">
-                                        <text id="├──" fill="#000000">
-                                            <tspan x="0" y="12">├──</tspan>
-                                        </text>
-                                        <text id="logo/" fill="#FF6666">
-                                            <tspan x="23.4" y="12">logo/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──input/" transform="translate(64.000000, 45.000000)">
-                                        <text id="├──" fill="#000000">
-                                            <tspan x="0" y="12">├──</tspan>
-                                        </text>
-                                        <text id="input/" fill="#FF6666">
-                                            <tspan x="23.4" y="12">input/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="├──button/" transform="translate(64.000000, 30.000000)">
-                                        <text id="├──" fill="#000000">
-                                            <tspan x="0" y="12">├──</tspan>
-                                        </text>
-                                        <text id="button/" fill="#FF6666">
-                                            <tspan x="23.4" y="12">button/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="└──blocks/" transform="translate(32.000000, 15.000000)" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">└──blocks/</tspan>
-                                        </text>
-                                    </g>
-                                    <g id="project/" fill="#000000">
-                                        <text>
-                                            <tspan x="0" y="12">project/</tspan>
-                                        </text>
-                                    </g>
-                                </g>
-                                <g id="Source-files" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
-                                    <text>
-                                        <tspan x="0" y="13">Source files</tspan>
-                                    </text>
-                                </g>
+                            <text id="Declaration">
+                                <tspan x="0.411377" y="13">Declaration</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Rectangle-22" transform="translate(0.000000, 32.000000)">
+                        <g id="path-1-link" stroke-opacity="0.8" stroke="#000000">
+                            <path d="M4,94 L2.99094783,94 C1.33909296,94 0,89.7784017 0,84.5999402 L0,9.40005985 L0,9.40005985 C0,4.20855014 1.3430418,0 2.99651262,0 L4,0" id="path-1"></path>
+                        </g>
+                        <path d="M4,94 L2.99094783,94 C1.33909296,94 0,89.7784017 0,84.5999402 L0,9.40005985 L0,9.40005985 C0,4.20855014 1.3430418,0 2.99651262,0 L4,0" id="path-1"></path>
+                    </g>
+                    <g id="Rectangle-22-Copy" transform="translate(248.000000, 32.000000)">
+                        <g id="path-2-link" transform="translate(2.000000, 47.000000) scale(-1, 1) translate(-2.000000, -47.000000) " stroke-opacity="0.8" stroke="#000000">
+                            <path d="M4,94 L2.990948,94 C1.339093,94 0,89.7784017 0,84.5999402 L0,9.40005985 L0,9.40005985 C0,4.20855014 1.343042,0 2.996513,0 L4,0" id="path-2"></path>
+                        </g>
+                        <path d="M4,94 L2.990948,94 C1.339093,94 0,89.7784017 0,84.5999402 L0,9.40005985 L0,9.40005985 C0,4.20855014 1.343042,0 2.996513,0 L4,0" id="path-2"></path>
+                    </g>
+                    <g id="button,-logo,-input," transform="translate(17.000000, 31.000000)" font-size="13" font-family="PTMono-Regular, PT Mono" fill="#FF6666" font-weight="normal">
+                        <g id="button" transform="translate(25.000000, 15.000000)">
+                            <g id="{-&quot;name&quot;:-&quot;button&quot;-}">
+                                <text id="{-&quot;name&quot;:-&quot;button&quot;-},">
+                                    <tspan x="0" y="12">{ "name": "button" },</tspan>
+                                </text>
                             </g>
-                            <g id="src_arrows" transform="translate(192.000000, 140.000000)" fill="#FF6666">
-                                <path d="M0,2 L31,2 L31,3 L0,3 L0,2 L0,2 Z M36,2.5 L31,5 L31,-4.7439589e-16 L36,2.5 L36,2.5 Z" id="arrow"></path>
-                                <path d="M0,17 L31,17 L31,18 L0,18 L0,17 L0,17 Z M36,17.5 L31,20 L31,15 L36,17.5 L36,17.5 Z" id="arrow-copy"></path>
-                                <path d="M0,32 L31,32 L31,33 L0,33 L0,32 L0,32 Z M36,32.5 L31,35 L31,30 L36,32.5 L36,32.5 Z" id="arrow-copy-3"></path>
-                                <path d="M0,92 L31,92 L31,93 L0,93 L0,92 L0,92 Z M36,92.5 L31,95 L31,90 L36,92.5 L36,92.5 Z" id="arrow-copy-4"></path>
-                                <path d="M0,107 L31,107 L31,108 L0,108 L0,107 L0,107 Z M36,107.5 L31,110 L31,105 L36,107.5 L36,107.5 Z" id="arrow-copy-5"></path>
-                                <path d="M0,152 L31,152 L31,153 L0,153 L0,152 L0,152 Z M36,152.5 L31,155 L31,150 L36,152.5 L36,152.5 Z" id="arrow-copy-6"></path>
+                        </g>
+                        <g id="exports.blocks-=-[">
+                            <text>
+                                <tspan x="0" y="12">exports.blocks = [</tspan>
+                            </text>
+                        </g>
+                        <g id="exports.blocks-=-[-copy" transform="translate(0.000000, 75.000000)">
+                            <g id="];">
+                                <text>
+                                    <tspan x="0" y="12">];</tspan>
+                                </text>
                             </g>
-                            <g id="declaration" transform="translate(168.000000, 0.000000)">
-                                <g id="Declaration" transform="translate(91.000000, 0.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
-                                    <text>
-                                        <tspan x="0.411377" y="13">Declaration</tspan>
-                                    </text>
-                                </g>
-                                <g id="Rectangle-22" transform="translate(0.000000, 21.000000)">
-                                    <g id="path-1-link" stroke-opacity="0.8" stroke="#000000">
-                                        <path d="M4,30 L2.99094783,30 C1.33909296,30 0,28.6526814 0,26.9999809 L0,3.0000191 L0,3.0000191 C0,1.3431543 1.3430418,0 2.99651262,0 L4,0" id="path-1"></path>
-                                    </g>
-                                    <path d="M4,30 L2.99094783,30 C1.33909296,30 0,28.6526814 0,26.9999809 L0,3.0000191 L0,3.0000191 C0,1.3431543 1.3430418,0 2.99651262,0 L4,0" id="path-1"></path>
-                                </g>
-                                <g id="Rectangle-22-Copy" transform="translate(257.000000, 21.000000)">
-                                    <g id="path-2-link" transform="translate(2.000000, 15.000000) scale(-1, 1) translate(-2.000000, -15.000000) " stroke-opacity="0.8" stroke="#000000">
-                                        <path d="M4,30 L2.990948,30 C1.339093,30 0,28.6526814 0,26.9999809 L0,3.0000191 L0,3.0000191 C0,1.3431543 1.343042,0 2.996513,0 L4,0" id="path-2"></path>
-                                    </g>
-                                    <path d="M4,30 L2.990948,30 C1.339093,30 0,28.6526814 0,26.9999809 L0,3.0000191 L0,3.0000191 C0,1.3431543 1.343042,0 2.996513,0 L4,0" id="path-2"></path>
-                                </g>
-                                <g id="button,-logo,-input," transform="translate(10.000000, 29.000000)" font-size="13" font-family="PTMono-Regular, PT Mono" font-weight="normal">
-                                    <text id="button" fill="#FF6666">
-                                        <tspan x="0" y="12">button</tspan>
-                                    </text>
-                                    <text id="," fill="#333333">
-                                        <tspan x="46.8" y="12">,</tspan>
-                                    </text>
-                                    <text id="logo" fill="#FF6666">
-                                        <tspan x="62.4" y="12">logo</tspan>
-                                    </text>
-                                    <text id="," fill="#444444">
-                                        <tspan x="93.6" y="12">,</tspan>
-                                    </text>
-                                    <text id="input" fill="#FF6666">
-                                        <tspan x="109.2" y="12">input</tspan>
-                                    </text>
-                                    <text id="," fill="#444444">
-                                        <tspan x="148.2" y="12">,</tspan>
-                                    </text>
-                                    <text id="langswitch" fill="#FF6666">
-                                        <tspan x="163.8" y="12">langswitch</tspan>
-                                    </text>
-                                </g>
+                        </g>
+                        <g id="logo" transform="translate(25.000000, 30.000000)">
+                            <g id="{-&quot;name&quot;:-&quot;logo&quot;-},">
+                                <text>
+                                    <tspan x="0.4" y="12">{ "name": "logo" },</tspan>
+                                </text>
                             </g>
-                            <g id="declaration_arrows" transform="translate(296.000000, 61.000000)" fill="#FF6666">
-                                <path d="M-15.5,17.5 L15.5,17.5 L15.5,18.5 L-15.5,18.5 L-15.5,17.5 L-15.5,17.5 Z M20.5,18 L15.5,20.5 L15.5,15.5 L20.5,18 L20.5,18 Z" id="arrow" transform="translate(2.500000, 18.000000) rotate(90.000000) translate(-2.500000, -18.000000) "></path>
+                        </g>
+                        <g id="input" transform="translate(26.000000, 45.000000)">
+                            <g id="{-&quot;name&quot;:-&quot;input&quot;-},">
+                                <text>
+                                    <tspan x="0.2" y="12">{ "name": "input" },</tspan>
+                                </text>
                             </g>
-                            <g id="sborka" transform="translate(249.000000, 108.000000)">
-                                <g id="Rectangle-22">
-                                    <g id="path-3-link" stroke="#000000" stroke-opacity="0.2" fill="#000000" fill-opacity="0.05">
-                                        <rect id="path-3" x="0" y="0" width="100" height="230" rx="3"></rect>
-                                    </g>
-                                    <g id="path-3-link" stroke="#FFFFFF">
-                                        <rect id="path-3" x="0" y="0" width="100" height="230" rx="3"></rect>
-                                    </g>
-                                </g>
-                                <g id="Build" transform="translate(32.500000, 106.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
-                                    <text>
-                                        <tspan x="0.4343262" y="13.541126">Build</tspan>
-                                    </text>
-                                </g>
-                            </g>
-                            <g id="bundle_css" transform="translate(426.000000, 140.000000)">
-                                <rect id="Rectangle-25" stroke-opacity="0.1" stroke="#000000" fill="#F6F5F3" x="0" y="0" width="307" height="181"></rect>
-                                <g id="@import-“lib/button/" transform="translate(16.000000, 13.000000)" font-size="13" font-family="PTMono-Regular, PT Mono" font-weight="normal">
-                                    <text id="@import" fill="#A71D5D">
-                                        <tspan x="0" y="12">@import</tspan>
-                                    </text>
-                                    <text id="“lib/button/button.css”" fill="#183691">
-                                        <tspan x="62.4" y="12">“lib/button/button.css”</tspan>
-                                    </text>
-                                    <text id=";" fill="#333333">
-                                        <tspan x="241.8" y="12">;</tspan>
-                                    </text>
-                                    <text id="@import" fill="#A71D5D">
-                                        <tspan x="0" y="27">@import</tspan>
-                                    </text>
-                                    <text id="“blocks/button/button.css”" fill="#183691">
-                                        <tspan x="62.4" y="27">“blocks/button/button.css”</tspan>
-                                    </text>
-                                    <text id=";" fill="#333333">
-                                        <tspan x="265.2" y="27">;</tspan>
-                                    </text>
-                                    <text id="@import" fill="#A71D5D">
-                                        <tspan x="0" y="57">@import</tspan>
-                                    </text>
-                                    <text id="“lib/input/input.css”" fill="#183691">
-                                        <tspan x="62.4" y="57">“lib/input/input.css”</tspan>
-                                    </text>
-                                    <text id=";" fill="#333333">
-                                        <tspan x="226.2" y="57">;</tspan>
-                                    </text>
-                                    <text id="@import" fill="#A71D5D">
-                                        <tspan x="0" y="72">@import</tspan>
-                                    </text>
-                                    <text id="“blocks/input/input.css”" fill="#183691">
-                                        <tspan x="62.4" y="72">“blocks/input/input.css”</tspan>
-                                    </text>
-                                    <text id=";" fill="#333333">
-                                        <tspan x="249.6" y="72">;</tspan>
-                                    </text>
-                                    <text id="@import" fill="#A71D5D">
-                                        <tspan x="0" y="102">@import</tspan>
-                                    </text>
-                                    <text id="“lib/langswitch/" fill="#183691">
-                                        <tspan x="62.4" y="102">“lib/langswitch/</tspan>
-                                    </text>
-                                    <text id="langswitch.css”" fill="#183691">
-                                        <tspan x="0" y="117">langswitch.css”</tspan>
-                                    </text>
-                                    <text id=";" fill="#333333">
-                                        <tspan x="117" y="117">;</tspan>
-                                    </text>
-                                    <text id="@import" fill="#A71D5D">
-                                        <tspan x="0" y="147">@import</tspan>
-                                    </text>
-                                    <text id="“blocks/logo/logo.css”" fill="#183691">
-                                        <tspan x="62.4" y="147">“blocks/logo/logo.css”</tspan>
-                                    </text>
-                                    <text id=";" fill="#333333">
-                                        <tspan x="234" y="147">;</tspan>
-                                    </text>
-                                </g>
-                            </g>
-                            <g id="bundle_css_arrow" transform="translate(370.000000, 221.000000)" fill="#FF6666">
-                                <path d="M0,2 L31,2 L31,3 L0,3 L0,2 L0,2 Z M36,2.5 L31,5 L31,-4.7439589e-16 L36,2.5 L36,2.5 Z" id="arrow"></path>
+                        </g>
+                        <g id="langswitch" transform="translate(26.000000, 60.000000)">
+                            <g id="{-&quot;name&quot;:-&quot;langswitc">
+                                <text id="{-&quot;name&quot;:-&quot;langswitch&quot;-}">
+                                    <tspan x="0.8" y="12">{ "name": "langswitch" }</tspan>
+                                </text>
                             </g>
                         </g>
                     </g>
+                </g>
+                <g id="declaration_arrows" transform="translate(296.000000, 138.000000)" fill="#FF6666">
+                    <path d="M-15.5,17.5 L15.5,17.5 L15.5,18.5 L-15.5,18.5 L-15.5,17.5 L-15.5,17.5 L-15.5,17.5 L-15.5,17.5 L-15.5,17.5 Z M20.5,18 L15.5,20.5 L15.5,15.5 L20.5,18 L20.5,18 L20.5,18 L20.5,18 L20.5,18 Z" id="arrow" transform="translate(2.500000, 18.000000) rotate(90.000000) translate(-2.500000, -18.000000) "></path>
+                </g>
+                <g id="sborka" transform="translate(249.000000, 185.000000)">
+                    <g id="Rectangle-22">
+                        <g id="path-3-link" stroke="#000000" stroke-opacity="0.2" fill="#000000" fill-opacity="0.05">
+                            <rect id="path-3" x="0" y="0" width="100" height="230" rx="3"></rect>
+                        </g>
+                        <g id="path-3-link" stroke="#FFFFFF">
+                            <rect id="path-3" x="0" y="0" width="100" height="230" rx="3"></rect>
+                        </g>
+                    </g>
+                    <g id="Build" transform="translate(32.500000, 106.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
+                        <g id="Group">
+                            <text id="Build">
+                                <tspan x="0.4343262" y="13.541126">Build</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="bundle_css" transform="translate(426.000000, 187.000000)">
+                    <rect id="Rectangle-25" stroke-opacity="0.1" stroke="#000000" fill="#F6F5F3" x="0" y="30" width="307" height="181"></rect>
+                    <g id="@import-“lib/button/" transform="translate(16.000000, 43.000000)" font-size="13" font-family="PTMono-Regular, PT Mono" font-weight="normal">
+                        <g id="@import" fill="#A71D5D">
+                            <text>
+                                <tspan x="0" y="12">@import</tspan>
+                            </text>
+                        </g>
+                        <g id="“lib/button/button.css”" transform="translate(62.000000, 0.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="“lib/button/button.css”">
+                                    <tspan x="0.4" y="12">“lib/button/button.css”</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id=";" transform="translate(241.000000, 0.000000)" fill="#333333">
+                            <g id="Group">
+                                <text id=";">
+                                    <tspan x="0.8" y="12">;</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="@import" transform="translate(0.000000, 15.000000)" fill="#A71D5D">
+                            <g id="Group">
+                                <text id="@import">
+                                    <tspan x="0" y="12">@import</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="“blocks/button/button.css”" transform="translate(62.000000, 15.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="“blocks/button/button.css”">
+                                    <tspan x="0.4" y="12">“blocks/button/button.css”</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id=";" transform="translate(265.000000, 15.000000)" fill="#333333">
+                            <g id="Group">
+                                <text id=";">
+                                    <tspan x="0.2" y="12">;</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="@import" transform="translate(0.000000, 45.000000)" fill="#A71D5D">
+                            <g id="Group">
+                                <text id="@import">
+                                    <tspan x="0" y="12">@import</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="“lib/input/input.css”" transform="translate(62.000000, 45.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="“lib/input/input.css”">
+                                    <tspan x="0.4" y="12">“lib/input/input.css”</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id=";" transform="translate(226.000000, 45.000000)" fill="#333333">
+                            <g id="Group">
+                                <text id=";">
+                                    <tspan x="0.2" y="12">;</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="@import" transform="translate(0.000000, 60.000000)" fill="#A71D5D">
+                            <g id="Group">
+                                <text id="@import">
+                                    <tspan x="0" y="12">@import</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="“blocks/input/input.css”" transform="translate(62.000000, 60.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="“blocks/input/input.css”">
+                                    <tspan x="0.4" y="12">“blocks/input/input.css”</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id=";" transform="translate(249.000000, 60.000000)" fill="#333333">
+                            <g id="Group">
+                                <text id=";">
+                                    <tspan x="0.6" y="12">;</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="@import" transform="translate(0.000000, 90.000000)" fill="#A71D5D">
+                            <g id="Group">
+                                <text id="@import">
+                                    <tspan x="0" y="12">@import</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="“lib/langswitch/" transform="translate(62.000000, 90.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="“lib/langswitch/">
+                                    <tspan x="0.4" y="12">“lib/langswitch/</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="langswitch.css”" transform="translate(0.000000, 105.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="langswitch.css”">
+                                    <tspan x="0" y="12">langswitch.css”</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id=";" transform="translate(117.000000, 105.000000)" fill="#333333">
+                            <g id="Group">
+                                <text id=";">
+                                    <tspan x="0" y="12">;</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="@import" transform="translate(0.000000, 135.000000)" fill="#A71D5D">
+                            <g id="Group">
+                                <text id="@import">
+                                    <tspan x="0" y="12">@import</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="“blocks/logo/logo.css”" transform="translate(62.000000, 135.000000)" fill="#183691">
+                            <g id="Group">
+                                <text id="“blocks/logo/logo.css”">
+                                    <tspan x="0.4" y="12">“blocks/logo/logo.css”</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id=";" transform="translate(234.000000, 135.000000)" fill="#333333">
+                            <g id="Group">
+                                <text id=";">
+                                    <tspan x="0" y="12">;</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="project.css" transform="translate(118.000000, 0.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
+                        <g id="Group">
+                            <text id="project.css">
+                                <tspan x="0.411377" y="13">project.css</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="bundle_css_arrow" transform="translate(370.000000, 298.000000)" fill="#FF6666">
+                    <path d="M0,2 L31,2 L31,3 L0,3 L0,2 L0,2 L0,2 L0,2 L0,2 Z M36,2.5 L31,5 L31,-4.7439589e-16 L36,2.5 L36,2.5 L36,2.5 L36,2.5 L36,2.5 Z" id="arrow"></path>
                 </g>
             </g>
         </g>
