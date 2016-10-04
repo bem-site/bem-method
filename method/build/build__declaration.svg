@@ -163,7 +163,7 @@
                     <path d="M0,152 L31,152 L31,153 L0,153 L0,152 L0,152 L0,152 L0,152 L0,152 Z M36,152.5 L31,155 L31,150 L36,152.5 L36,152.5 L36,152.5 L36,152.5 L36,152.5 Z" id="arrow-copy-6"></path>
                 </g>
                 <g id="declaration" transform="translate(173.000000, 0.000000)">
-                    <g id="Declaration" transform="translate(91.000000, 0.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
+                    <g id="Declaration" transform="translate(90.000000, 0.000000)" font-size="13" font-family="Helvetica-Bold, Helvetica" fill="#333333" font-weight="bold">
                         <g id="Group">
                             <text id="Declaration">
                                 <tspan x="0.411377" y="13">Declaration</tspan>
@@ -182,46 +182,89 @@
                         </g>
                         <path d="M4,94 L2.990948,94 C1.339093,94 0,89.7784017 0,84.5999402 L0,9.40005985 L0,9.40005985 C0,4.20855014 1.343042,0 2.996513,0 L4,0" id="path-2"></path>
                     </g>
-                    <g id="button,-logo,-input," transform="translate(17.000000, 31.000000)" font-size="13" font-family="PTMono-Regular, PT Mono" fill="#FF6666" font-weight="normal">
-                        <g id="button" transform="translate(25.000000, 15.000000)">
-                            <g id="{-&quot;name&quot;:-&quot;button&quot;-}">
-                                <text id="{-&quot;name&quot;:-&quot;button&quot;-},">
-                                    <tspan x="0" y="12">{ "name": "button" },</tspan>
-                                </text>
-                            </g>
-                        </g>
-                        <g id="exports.blocks-=-[">
+                    <g id="exports.blocks" transform="translate(20.000000, 33.000000)" font-size="13" font-family="PTMono-Regular, PT Mono" font-weight="normal">
+                        <g id="];" transform="translate(0.000000, 75.000000)" fill="#000000">
                             <text>
-                                <tspan x="0" y="12">exports.blocks = [</tspan>
+                                <tspan x="0" y="12">];</tspan>
                             </text>
                         </g>
-                        <g id="exports.blocks-=-[-copy" transform="translate(0.000000, 75.000000)">
-                            <g id="];">
-                                <text>
-                                    <tspan x="0" y="12">];</tspan>
-                                </text>
-                            </g>
-                        </g>
-                        <g id="logo" transform="translate(25.000000, 30.000000)">
-                            <g id="{-&quot;name&quot;:-&quot;logo&quot;-},">
-                                <text>
-                                    <tspan x="0.4" y="12">{ "name": "logo" },</tspan>
-                                </text>
-                            </g>
+                        <g id="langswitch" transform="translate(26.000000, 60.000000)">
+                            <text id="}" fill="#000000">
+                                <tspan x="176.8" y="12">}</tspan>
+                            </text>
+                            <text id="&quot;langswitch&quot;-" fill="#FF6666">
+                                <tspan x="77" y="12">"langswitch"</tspan>
+                            </text>
+                            <text id=":" fill="#000000">
+                                <tspan x="62" y="12">:</tspan>
+                            </text>
+                            <text id="&quot;name&quot;" fill="#FF6666">
+                                <tspan x="15" y="12">"name"</tspan>
+                            </text>
+                            <text id="{-" fill="#000000">
+                                <tspan x="0" y="12">{</tspan>
+                            </text>
                         </g>
                         <g id="input" transform="translate(26.000000, 45.000000)">
-                            <g id="{-&quot;name&quot;:-&quot;input&quot;-},">
-                                <text>
-                                    <tspan x="0.2" y="12">{ "name": "input" },</tspan>
-                                </text>
-                            </g>
+                            <text id="}," fill="#000000">
+                                <tspan x="140.8" y="12">},</tspan>
+                            </text>
+                            <text id="&quot;input&quot;" fill="#FF6666">
+                                <tspan x="77" y="12">"input"</tspan>
+                            </text>
+                            <text id=":" fill="#000000">
+                                <tspan x="62" y="12">:</tspan>
+                            </text>
+                            <text id="&quot;name&quot;" fill="#FF6666">
+                                <tspan x="15" y="12">"name"</tspan>
+                            </text>
+                            <text id="{-" fill="#000000">
+                                <tspan x="0" y="12">{</tspan>
+                            </text>
                         </g>
-                        <g id="langswitch" transform="translate(26.000000, 60.000000)">
-                            <g id="{-&quot;name&quot;:-&quot;langswitc">
-                                <text id="{-&quot;name&quot;:-&quot;langswitch&quot;-}">
-                                    <tspan x="0.8" y="12">{ "name": "langswitch" }</tspan>
-                                </text>
-                            </g>
+                        <g id="logo" transform="translate(26.000000, 30.000000)">
+                            <text id="}," fill="#000000">
+                                <tspan x="131.8" y="12">},</tspan>
+                            </text>
+                            <text id="&quot;logo&quot;" fill="#FF6666">
+                                <tspan x="77" y="12">"logo"</tspan>
+                            </text>
+                            <text id=":" fill="#000000">
+                                <tspan x="62" y="12">:</tspan>
+                            </text>
+                            <text id="&quot;name&quot;-" fill="#FF6666">
+                                <tspan x="15" y="12">"name"</tspan>
+                            </text>
+                            <text id="{-" fill="#000000">
+                                <tspan x="0" y="12">{</tspan>
+                            </text>
+                        </g>
+                        <g id="button" transform="translate(26.000000, 15.000000)">
+                            <text id="}," fill="#000000">
+                                <tspan x="146.8" y="12">},</tspan>
+                            </text>
+                            <text id="&quot;button&quot;" fill="#FF6666">
+                                <tspan x="77" y="12">"button"</tspan>
+                            </text>
+                            <text id=":" fill="#000000">
+                                <tspan x="62" y="12">:</tspan>
+                            </text>
+                            <text id="&quot;name&quot;-" fill="#FF6666">
+                                <tspan x="15" y="12">"name"</tspan>
+                            </text>
+                            <text id="{-" fill="#000000">
+                                <tspan x="0" y="12">{</tspan>
+                            </text>
+                        </g>
+                        <g id="=-[" transform="translate(117.000000, 0.000000)" fill="#000000">
+                            <text>
+                                <tspan x="0" y="12">= [</tspan>
+                            </text>
+                        </g>
+                        <g id="exports.blocks-=-[" fill="#008080">
+                            <text id="exports.blocks">
+                                <tspan x="0" y="12">exports.blocks</tspan>
+                            </text>
                         </g>
                     </g>
                 </g>
