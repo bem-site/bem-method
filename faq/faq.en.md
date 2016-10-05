@@ -98,9 +98,9 @@ The existence of elements of elements hinders the ability to change the internal
 
 A block name in in the names of BEM entities is used for:
 
-* [Namespace](#Namespace)
-* [Mixes](#mixes)
-* [Code searching](#code searching)
+* [Namespace](#namespace).
+* [Mixes](#mixes).
+* [Code searching](#code-search).
 
 **NB** The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
 
@@ -355,7 +355,7 @@ The rules for the modifier `active` for the button are written as the combined s
 Using the block name in the name of a modifier gives a higher priority to CSS rules for block redefinition.
 The `.header .button` selector will be always of a higher priority than `.button_active`.
 
->[Reasons for including the block name in a modifier name](#why-include-the-block-name-in-names-of-modifier-and-element)
+>[Reasons for including the block name in a modifier name](#why-include-the-block-name-in-modifier-and-element-names)
 
 ## Can I combine a tag and a class in a selector (e.g. button.button)?
 
