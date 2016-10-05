@@ -82,7 +82,7 @@ In BEM terms, [Bootstrap](http://getbootstrap.com/) is a set of ready-made block
 * Develop web applications based on independent blocks.
 * Facilitate project support.
 
-BEM does provide its own block library, called [bem-components](https://en.bem.info/libs/bem-components/). [Other](https://en.bem.info/libs/) BEM libraries are also available.
+BEM does provide its own block library, called [bem-components](https://en.bem.info/libs/bem-components/). [Other BEM libraries](https://en.bem.info/libs/) are also available.
 
 ## Should I create a block or an element?
 
@@ -96,7 +96,7 @@ The existence of elements of elements hinders the ability to change the internal
 
 ## Why include the block name in modifier and element names?
 
-A block name in in the names of BEM entities is used for:
+A block name in the names of BEM entities is used for:
 
 * [Namespace](#namespace).
 * [Mixes](#mixes).
