@@ -263,7 +263,7 @@ HTML-реализация:
 ```html
 <!-- Блок `header` -->
 <header class="header">
-    <!-- К блоку `button` добавили класс `header__button` -->
+    <!-- К блоку `button` примиксован элемент `button` блока `header` -->
     <button class="button header__button">...</button>
 </header>
 
