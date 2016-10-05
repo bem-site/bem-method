@@ -10,10 +10,10 @@
 
 * [Should I create a block or an element?](#should-i-create-a-block-or-an-element)
 * [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
-* [Why write the block name in the names of modifiers and elements?](#Why-write-the-block-name-in-the-names-of-modifiers-and-elements)
+* [Why write the block name in the names of modifiers and elements?](#why-include-the-block-name-in-modifier-and-element-names)
 * [Why isn't the name of the block modifier written in the element name (block\_mod\__elem)?](#why-isnt-the-name-of-the-block-modifier-written-in-the-element-name-block_mod__elem)
 * [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
-* [How should I choose between a boolean modifier and a key-value modifier?](#how-should-i-choose-between-a-boolean-modifer-and-a-key-value-modifer)
+* [How should I choose between a boolean modifier and a key-value modifier?](#how-should-i-choose-between-a-boolean-modifier-and-a-key-value-modifier)
 * [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
 * [What is the correct way to modify the appearance of every block instance on a page?](#what-is-the-correct-way-to-modify-the-appearance-of-every-block-instance-on-a-page)
 
@@ -27,10 +27,10 @@
 * [Why does BEM advise against using combined selectors for creating CSS rules for modifiers?](#why-does-bem-advise-against-using-combined-selectors-for-creating-css-rules-for-modifiers)
 * [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 * [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
-* [Why can't I use a CSS Reset?](#why-cannot-i-use-a-css-reset)
-* [Why can't I write block_mod instead of block block_mod, when the modifier name already contains all the block data?](#why-cannot-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
-* [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cannot-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
-* [How do I redefine CSS properties of BEM entities at breakpoints?](#how-do-i-redefine-css-properties-of-bem-entities-at-breakpoints?)
+* [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
+* [Why can't I write block_mod instead of block block_mod, when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-if-the-modifier-name-already-contains-all-the-block-information)
+* [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+* [How do I redefine CSS properties of BEM entities at breakpoints?](#how-do-i-redefine-css-properties-of-bem-entities-at-breakpoints)
 
 **Didn't find the answer you were looking for?** – [Submit your question on our forum!](https://en.bem.info/forum/)
 
