@@ -62,7 +62,7 @@ Template execution
 * In BEM, template generation is possible at the development stage. This lets us pass the ready HTML. Templates can be executed both in the browser and on the server side.
 
 * Web Components are based on an imperative principle, using string interpolation.
-* BEM uses a declarative approach, which helps manage templating in a flexible way and avoid redundancy. For more information about the difference between the declarative and imperative approaches, you can see the presentation from [Sergey Berezhnoy](https://ru.bem.info/authors/berezhnoy-sergey/) on [Template Engines](https://events.yandex.ru/lib/talks/553/) (in Russian).
+* BEM uses a declarative approach, which helps manage templating in a flexible way and avoid redundancy.
 
 Build vs HTML import
 
