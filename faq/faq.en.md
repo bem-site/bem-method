@@ -67,7 +67,9 @@ Template execution
 Build vs HTML import
 
 * Web Components use HTML Imports, which work directly in the browser. The [Vulcanize](http://webcomponents.org/articles/introduction-to-html-imports/#aggregating-network-requests) tool is used to aggregate multiple HTML files into one file.
-* BEM uses build tools: [ENB](https://en.bem.info/tools/bem/enb-bem/) or [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
+* BEM uses build tools:
+  * [ENB](https://en.bem.info/tools/bem/enb-bem/);
+  * [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
 
 Abstraction over a DOM tree vs Custom Elements
 
@@ -90,7 +92,7 @@ The BEM methodology doesn't have strict rules for creating blocks and elements. 
 
 ## Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?
 
-The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
+The existence of elements of elements hinders the ability to change the internal structure of the block. Elements cannot be swapped around, removed or added without modifying the existing code.
 
 >For more information, see the [Quick Start](../method/quick-start/quick-start.en.md#nesting-1).
 
@@ -102,7 +104,12 @@ A block name in the names of BEM entities is used for:
 * [Mixes](#mixes).
 * [Code searching](#code-search).
 
-**NB** The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
+**NB** The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options:
+
+* `context`, `ctx` or `c`;
+* `attributes`, `attrs` or `as`.
+
+Select one name and stick with it throughout the project.
 
 ### Namespace
 
@@ -128,7 +135,11 @@ This kind of HTML markup leaves it unclear as to whether the modifier relates to
 
 Likewise, notation like `<div class="block mod">` leaves it unclear as to what BEM entities are being used. For example, you can't tell from `<div class="checkbox button">` whether it's a mix of a modifier and a block or a mix of two blocks.
 
-The full name of the modifier `<div class="block block_mod">` leaves no doubt as to the types of entities: `<div class="checkbox checkbox_button">`.
+The full name of the modifier `<div class="block block_mod">` leaves no doubt as to the types of entities:
+
+```html
+<div class="checkbox checkbox_button"></div>
+```
 
 ### Code search
 
@@ -196,6 +207,7 @@ If the block can have several states, use a key-value modifier. An example is a 
 For the purpose of [convenient development and support](../method/filestructure/filestructure.en.md#a-block-implementation-is-divided-into-separate-files), the file structure of a BEM project is divided into nested directories and files.
 
 You aren't required to follow the [recommended file structure](../method/filestructure/filestructure.en.md#nested). You can use any alternative project structure that follows the BEM principles for organizing the file structure, such as:
+
 * [Flat](../method/filestructure/filestructure.en.md#flat).
 * [Flex](../method/filestructure/filestructure.en.md#flex).
 
@@ -273,6 +285,7 @@ Now each button has its own unique CSS rules defining the margins.
 ```
 
 You can implement the color of the blocks using a:
+
 * Modifier — if it's possible that the block will be reused with this color scheme.
 * Mix — if the block has a specific design just for this context, and it won't be reused in the project with this color.
 
