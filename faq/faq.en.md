@@ -8,12 +8,14 @@
 
 ## Blocks and elements
 
-* [A block or an element: when should I use which?](#a-block-or-an-element-when-should-i-use-which)
+* [Should I create a block or an element?](#should-i-create-a-block-or-an-element)
 * [Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
-* [Why include the block name in names of modifier and element?](#why-include-the-block-name-in-names-of-modifier-and-element)
+* [Why write the block name in the names of modifiers and elements?](#why-include-the-block-name-in-modifier-and-element-names)
 * [Why isn't the name of the block modifier written in the element name (block\_mod\__elem)?](#why-isnt-the-name-of-the-block-modifier-written-in-the-element-name-block_mod__elem)
 * [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
+* [How should I choose between a boolean modifier and a key-value modifier?](#how-should-i-choose-between-a-boolean-modifier-and-a-key-value-modifier)
 * [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
+* [What is the correct way to modify the appearance of every block instance on a page?](#what-is-the-correct-way-to-modify-the-appearance-of-every-block-instance-on-a-page)
 
 ## JavaScript
 
@@ -25,19 +27,20 @@
 * [Why does BEM advise against using combined selectors for creating CSS rules for modifiers?](#why-does-bem-advise-against-using-combined-selectors-for-creating-css-rules-for-modifiers)
 * [Can I combine a tag and a class in a selector (e.g. button.button)?](#can-i-combine-a-tag-and-a-class-in-a-selector-eg-buttonbutton)
 * [Why are custom tags not used for blocks in BEM?](#why-are-custom-tags-not-used-for-blocks-in-bem)
-* [Why can't I use a CSS Reset?](#why-cannot-i-use-a-css-reset)
-* [Why can't I write block\_mod instead of block block\_mod, when the modifier name already contains all the block data?](#why-cannot-i-write-block_mod-instead-of-block-block_mod-when-the-modifier-name-already-contains-all-the-block-data)
-* [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cannot-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+* [Why can't I use a CSS Reset?](#why-cant-i-use-a-css-reset)
+* [Why can't I write block_mod instead of block block_mod, when the modifier name already contains all the block data?](#why-cant-i-write-block_mod-instead-of-block-block_mod-if-the-modifier-name-already-contains-all-the-block-information)
+* [Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?](#why-cant-i-include-a-css-property-name-in-a-modifier-name-block__element_border-color_grey)
+* [How do I redefine CSS properties of BEM entities at breakpoints?](#how-do-i-redefine-css-properties-of-bem-entities-at-breakpoints)
 
-**No answer found?** — [Place your question on our forum!](https://en.bem.info/forum/)
+**Didn't find the answer you were looking for?** – [Submit your question on our forum!](https://en.bem.info/forum/)
 
 ## How does BEM differ from OOCSS, AMCSS, SMACSS, SUITCSS?
 
-1.  BEM is applicable to JavaScript as well as CSS.
-2.  BEM has more in common with Web Components than with the CSS solutions listed. ([What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components))
-3.  BEM provides a comprehensive solution for creating the architecture for your project and helps organize development processes.
+1. BEM is applicable to JavaScript as well as CSS.
+2. BEM has more in common with Web Components than with the CSS solutions listed. ([What is the difference between BEM and Web Components?](#what-is-the-difference-between-bem-and-web-components))
+3. BEM provides a comprehensive solution for creating the architecture for your project and helps organize development processes. Find out more about [how the BEM methodology is used for web development](../method/solved-problems/solved-problems.en.md).
 
-> Find out more about the [BEM methodology](https://en.bem.info/method/).
+>More information about the [BEM methodology](https://en.bem.info/method/).
 
 It is possible to use BEM at the CSS level only. You just need to follow the [guidelines proposed by the methodology](../method/naming-convention/naming-convention.en.md).
 
@@ -45,7 +48,7 @@ It is possible to use BEM at the CSS level only. You just need to follow the [gu
 
 Browser support
 
-* Web Components [are not supported](http://caniuse.com/#search=Web%20Components) by Safari, iOS Safari, Internet Explorer, Firefox.
+* Web Components [are not supported ](http://caniuse.com/#search=Web%20Components) by Safari, iOS Safari, Internet Explorer and Firefox.
 * BEM works in all browsers.
 
 Encapsulation
@@ -64,7 +67,9 @@ Template execution
 Build vs HTML import
 
 * Web Components use HTML Imports, which work directly in the browser. The [Vulcanize](http://webcomponents.org/articles/introduction-to-html-imports/#aggregating-network-requests) tool is used to aggregate multiple HTML files into one file.
-* BEM uses build tools: [ENB](https://en.bem.info/tools/bem/enb-bem/) or [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
+* BEM uses build tools:
+  * [ENB](https://en.bem.info/tools/bem/enb-bem/);
+  * [bem-tools](https://en.bem.info/tools/bem/bem-tools/).
 
 Abstraction over a DOM tree vs Custom Elements
 
@@ -73,70 +78,38 @@ Abstraction over a DOM tree vs Custom Elements
 
 ## What is the difference between BEM and Bootstrap?
 
-In BEM terms, [Bootstrap](http://getbootstrap.com/) is a set of ready-made blocks. BEM, on the other hand, is not a library of interface elements but a methodology that allows you to
+In BEM terms, [Bootstrap](http://getbootstrap.com/) is a set of ready-made blocks. BEM, on the other hand, is not a library of interface elements but a methodology that allows you to:
 
-* Create the architecture for your project
-* Develop web applications based on independent blocks
+* Create the architecture for your project.
+* Develop web applications based on independent blocks.
 * Facilitate project support.
 
-BEM does provide its own block library, called [bem-components](https://en.bem.info/libs/bem-components/). [Other](https://en.bem.info/libs/) BEM libraries are also available.
+BEM does provide its own block library, called [bem-components](https://en.bem.info/libs/bem-components/). [Other BEM libraries](https://en.bem.info/libs/) are also available.
 
-## A block or an element: when should I use which?
+## Should I create a block or an element?
 
-1.  If you're dealing with a fragment of code that can be reused and does not depend on the implementation of other components of the page, you should implement it as a [block](../method/key-concepts/key-concepts.en.md#block).
-2.  If it's a fragment of code that cannot be used on its own, without a parent entity (block), in most cases that should be an [element](../method/key-concepts/key-concepts.en.md#element).
-
-This rule does not apply when implementing elements that, for reasons of simplifying the development process, have to be broken down into smaller, sub-element, parts. The BEM methodology [does not recommend creating elements of elements](#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2). So, in cases like this, instead of an element, a service block should be created.
+The BEM methodology doesn't have strict rules for creating blocks and elements. A lot depends on specific implementations and the personal preferences of the developer. However, we do have [some recommendations](../method/quick-start/quick-start.en.md#a-block-or-an-element-when-should-i-use-which) that can help you figure this out.
 
 ## Why does BEM not recommend using elements within elements (block\__elem1\__elem2)?
 
-The existence of elements of elements hinders the ability to change the internal structure of the block: elements cannot be swapped around, removed or added without modifying the existing code.
+The existence of elements of elements hinders the ability to change the internal structure of the block. Elements cannot be swapped around, removed or added without modifying the existing code.
 
-In the BEM methodology, blocks are the only entities that support nested structure (`block__elem`). A block name defines a namespace that [ensures the dependence](../method/naming-convention/naming-convention.en.md#element-name) of elements on the block.
+>For more information, see the [Quick Start](../method/quick-start/quick-start.en.md#nesting-1).
 
-A block can have a nested element structure in a DOM tree.
+## Why include the block name in modifier and element names?
 
-```html
-<div class="block">
-    <div class="block__elem1">
-        <div class="block__elem2">
-            <div class="block__elem3"></div>
-        </div>
-    </div>
-</div>
-```
+A block name in the names of BEM entities is used for:
 
-In the BEM methodology, though, the same structure is always represented by a flat list of elements.
+* [Namespace](#namespace).
+* [Mixes](#mixes).
+* [Code searching](#code-search).
 
-```css
-.block {}
-.block__elem1 {}
-.block__elem2 {}
-.block__elem3 {}
-```
+**NB** The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options:
 
-This makes it possible to change the DOM structure of the block without modifying the code of each individual element.
+* `context`, `ctx` or `c`;
+* `attributes`, `attrs` or `as`.
 
-```html
-<div class="block">
-    <div class="block__elem1">
-        <div class="block__elem2"></div>
-    </div>
-    <div class="block__elem3"></div>
-</div>
-```
-
-The structure of the block changes while the rules for its elements and their names remain the same.
-
-## Why include the block name in names of modifier and element?
-
-A block name in the names of [BEM entities](../method/key-concepts/key-concepts.en.md#bem-entity) is used for
-
-* [Namespace](#namespace)
-* [Mixes](#mixes)
-* [Code searching](#code-searching)
-
-**NB**: The BEM methodology [allows freedom of choice](../method/naming-convention/naming-convention.en.md#alternative-naming-schemes) when it comes to a choosing a preferred naming strategy, however consistency of names is required. For example, the following are all valid options: `context`, `ctx` or `c`, `attributes`, `attrs` or `as`. Select one name and stick with it throughout the project.
+Select one name and stick with it throughout the project.
 
 ### Namespace
 
@@ -144,9 +117,9 @@ A block name defines a namespace and ensures unique names for elements and modif
 
 ### Mixes
 
-A [mix](../method/key-concepts/key-concepts.en.md#mix) is an instance of different BEM entities being hosted on a single DOM node. When mixing a modifier, a block name indicates what block the modifier will be applied to. If a block name is not specified, the modifier will be applied to all the mixed BEM entities.
+When mixing a modifier, a block name indicates what block the modifier will be applied to. If a block name is not specified, the modifier will be applied to all the mixed BEM entities.
 
-Let's say we have a mix of a menu item (`menu_item`) and a button (`button`):
+Let's say we have a mix of a menu item (`menu__item`) and a button (`button`):
 
 ```html
 <div class="menu__item button"></div>
@@ -162,7 +135,11 @@ This kind of HTML markup leaves it unclear as to whether the modifier relates to
 
 Likewise, notation like `<div class="block mod">` leaves it unclear as to what BEM entities are being used. For example, you can't tell from `<div class="checkbox button">` whether it's a mix of a modifier and a block or a mix of two blocks.
 
-The full name of the modifier `<div class="block block_mod">` leaves no doubt as to the types of entities: `<div class="checkbox checkbox_button">`.
+The full name of the modifier `<div class="block block_mod">` leaves no doubt as to the types of entities:
+
+```html
+<div class="checkbox checkbox_button"></div>
+```
 
 ### Code search
 
@@ -175,12 +152,15 @@ Let's compare the results of a global search during the debugging stage. Let's f
 The element is an integrated part of the block, but not of the block modifier. Accordingly, only the block name can set the namespace for elements.
 
 This is important for the following reasons:
+
 * A block can have multiple modifiers.
+
 ```html
 <div class="block block_mod1 block_mod2 block_mod3">
     <div class="block__elem"></div>
 </div>
 ```
+
 * A modifier determines the state of the block or element, which can change during JavaScript execution.
 
 ## How do I make global modifiers for blocks?
@@ -195,13 +175,148 @@ BEM allows us to combine the implementation of different blocks using [mixes](..
 <div class="block1 block2"></div>
 ```
 
+## How should I choose between a boolean modifier and a key-value modifier?
+
+A modifier's full name is created using a pattern:
+
+* For boolean modifiers, it is `block-name_mod-name`.
+* For key-value modifiers, it is `block-name_mod-name_mod-val`.
+
+The modifier name makes it clear what state it refers to. If just the presence or absence of the modifier on the block is important and its value is irrelevant, use a boolean modifier. An example is a modifier that describes the "disabled" state: `disabled`.
+
+**Example**
+
+```html
+<div class="block block_disabled"></div>
+<div class="block block_visible"></div>
+<div class="block block_checked"></div>
+```
+
+If the block can have several states, use a key-value modifier. An example is a `size` modifier with possible values `s`, `m`, and `l` to describe the size of the block.
+
+**Example**
+
+```html
+<div class="block block_size_s"></div>
+<div class="block block_size_m"></div>
+<div class="block block_size_l"></div>
+```
+
 ## Why create separate directories and files for every block and technology?
 
-For the purpose of convenient development and support, the file structure of a BEM project is divided into nested directories and files.
+For the purpose of [convenient development and support](../method/filestructure/filestructure.en.md#a-block-implementation-is-divided-into-separate-files), the file structure of a BEM project is divided into nested directories and files.
 
-The use of the [recommended file structure](../method/filestructure/filestructure.en.md#nested) structure is optional. You can use any alternative project structure that conforms to the principles of BEM file structure organization, for example:
+You aren't required to follow the [recommended file structure](../method/filestructure/filestructure.en.md#nested). You can use any alternative project structure that follows the BEM principles for organizing the file structure, such as:
+
 * [Flat](../method/filestructure/filestructure.en.md#flat).
 * [Flex](../method/filestructure/filestructure.en.md#flex).
+
+## What is the correct way to modify the appearance of every block instance on a page?
+
+**Task**
+
+Reuse a button (the `button` block) from the search form (the `search-form` block) in the authorization block (`auth`). The buttons should have different colors and margins.
+
+**Solution**
+
+Here is an example of the DOM tree:
+
+```html
+<form class="search-form">
+   <input type="text" class="input">
+   <button type="submit" class="button">Search</button>
+</form>
+
+<form class="auth">
+   <input type="text" class="login">
+   <input type="password" class="password">
+   <!-- The button goes here -->
+</form>
+```
+
+The first thing to do is copy the button code to the `auth` block.
+
+*HTML*
+
+```html
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="button">Search</button>
+</form>
+
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <button type="submit" class="button">Sign in</button>
+</form>
+```
+
+In order to define different margins for the buttons, you can use [mixes](../method/bem-for-css/bem-for-css.en.md#mixes) and use these parent blocks to set styles for the external geometry. This allows you to define additional CSS rules for each of the buttons.
+
+Adding the `search-form__button` and `auth__button` classes to the buttons.
+
+*HTML*
+
+```html
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="search-form__button button">Search</button>
+</form>
+
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <button type="submit" class="auth__button button">Sign in</button>
+</form>
+```
+
+Now each button has its own unique CSS rules defining the margins.
+
+*CSS*
+
+```css
+.search-form__button {
+    margin: 30px;
+}
+
+.auth__button {
+    margin: 40px;
+}
+```
+
+You can implement the color of the blocks using a:
+
+* Modifier — if it's possible that the block will be reused with this color scheme.
+* Mix — if the block has a specific design just for this context, and it won't be reused in the project with this color.
+
+Adding modifiers: `button_theme_lite`, `button_theme_dark`.
+
+*HTML*
+
+```html
+<form class="search-form">
+    <input type="text" class="input">
+    <button type="submit" class="search-form__button button button_theme_lite">Search</button>
+</form>
+
+<form class="auth">
+    <input type="text" class="login">
+    <input type="password" class="password">
+    <button type="submit" class="auth__button button button_theme_dark">Sign in</button>
+</form>
+```
+
+The CSS implementation will look like this:
+
+```css
+.button_theme_lite {
+    background: #fff;
+}
+
+.button_theme_dark {
+    background: #000;
+}
+```
 
 ## Why use i-bem.js when you have jQuery?
 
@@ -209,19 +324,19 @@ The use of the [recommended file structure](../method/filestructure/filestructur
 
 `i-bem.js` is not meant to replace any general-purpose framework, such as jQuery.
 
-`i-bem.js` allows you to
+`i-bem.js` allows you to:
 
-* Develop a web interface in terms of blocks, elements, modifiers
-* Integrate JavaScript code with templates and BEM-style CSS rules
+* Develop a web interface in terms of blocks, elements, modifiers.
+* Integrate JavaScript code with templates and BEM-style CSS rules.
 * Describe the logic of a block as a set of states.
 
 ## Why should I avoid using nested selectors?
 
-BEM is all about independent blocks. Nested selectors increase coupling within the code and make code reuse impossible. This is in contradiction to the BEM principles.
+The main idea behind BEM is having independent blocks. [Nested selectors](http://thesassway.com/beginner/the-inception-rule) increase code coupling and make reuse impossible. This is in contradiction to the BEM principles.
 
-The BEM methodology allows nested selectors, but recommends keeping their use to a minimum.
+The BEM methodology does allow using selectors like this, but we recommend keeping them to a minimum.
 
-For instance, nesting is appropriate for changing elements depending on the state of a block or its assigned theme.
+For example, nesting is appropriate if you need to change elements relative to the state of the block or the theme set:
 
 ```css
 .nav_hovered .nav__link
@@ -229,7 +344,6 @@ For instance, nesting is appropriate for changing elements depending on the stat
     text-decoration: underline;
 }
 ```
-
 ```css
 .nav_theme_islands .nav__item
 {
@@ -241,29 +355,29 @@ For instance, nesting is appropriate for changing elements depending on the stat
 
 Combined selectors make block redefinition more difficult because of their higher CSS specificity compared to single selectors. Combined selectors for a block modifier (`.block1.mod`) and for a redefined block (`.block2 .block1`) have the same specificity. Block redefinition would depend only on the order of rules in the declaration.
 
-Consider an example:
+Let's look at an example:
 
 ```html
 <div class="header">
-    <button class="button active">
+  <button class="button active">...</button>
 </div>
 ```
 
-The rules for the modifier `active` for the button are written as the combined selector `.button.active`. To redefine the button with the parent block `header`, selector `.header .button` is created. Both selectors have the same specificity, so the application of CSS rules is determined by their declaration order.
+The rules for the modifier `active` for the button are written as the combined selector `.button.active`. To redefine the button with the parent block `header`, the selector `.header .button` is created. Both selectors have the same specificity, so the application of CSS rules is determined by their declaration order.
 
-Using the block name in the name of a modifier gives a higher priority to CSS rules for block redefinition. The
-`.header .button` selector will be always of a higher priority than `.button_active`.
+Using the block name in the name of a modifier gives a higher priority to CSS rules for block redefinition.
+The `.header .button` selector will be always of a higher priority than `.button_active`.
 
-> [Reasons for including the block name in a modifier name](#why-include-the-block-name-in-names-of-modifier-and-element)
+>[Reasons for including the block name in a modifier name](#why-include-the-block-name-in-modifier-and-element-names)
 
 ## Can I combine a tag and a class in a selector (e.g. button.button)?
 
-Combining a tag and a class in one selector increases its CSS specificity. Adding a modifier won't redefine the CSS rules of the block since the specificity of the block selector is higher.
+Combining a tag and a class in a selector makes the CSS rules more specific. Adding a modifier won't redefine the CSS rules of the block since the specificity of the block selector is higher.
 
 Let's look at an example:
 
 ```html
- <button class="button">
+<button class="button">...</button>
 ```
 
 Let's use a `button.button` selector for the CSS rules of this block.
@@ -271,23 +385,23 @@ Let's use a `button.button` selector for the CSS rules of this block.
 Now with a modifier:
 
 ```html
- <button class="button button_active">
+<button class="button button_active">...</button>
 ```
 
-The `.button_mod` selector will not redefine CSS properties of the block with the `button.button` selector, as the latter has higher specificity. For the redefinition to work, the selector for the modifier needs to be combined with the tag as well: `button.button_mod`.
+The `.button_active` selector will not redefine CSS properties of the block with the `button.button` selector, as `button.button` has higher specificity. For successful redefinition, the selector for the block modifier also must be combined with the `button.button_active` tag.
 
-As your project keeps growing, you may have blocks with selectors like `input.button`, `span.button` and, say, `a.button`. Then all modifiers of the `button` block and all its nested elements will require four different declarations for each instance.
+As the project develops, it's possible that blocks could be added with the selectors `input.button`, `span.button` and `a.button`. In this case, all the modifiers of the `button` block and nested elements would require four different declarations for each case.
 
 ## Why are custom tags not used for blocks in BEM?
 
-> Blocks could be represented in HTML by custom tags, with CSS rules defined for them. In that case classes would only be used for modifiers: `<button class="msod"/>`.
+>Blocks could be represented in HTML by custom tags, with CSS rules defined for them. In that case classes would only be used for modifiers: `<button class="mod">...</button>`.
 
-Custom tags can indeed be used for creating block selectors, but the following restrictions apply
+Custom tags can indeed be used for creating block selectors, but the following restrictions apply:
 
 * [Mixes](../method/key-concepts/key-concepts.en.md#mix) can't be used.
 * Not all blocks can be represented by custom tags. For example, all links require an `<a>` tag, and all fields require `<input>`.
 
-## Why cannot I use a CSS Reset?
+## Why can't I use a CSS Reset?
 
 Blocks are independent components. They must not be affected by page-wide CSS rules. Otherwise their independence is compromised and their reuse becomes problematic.
 
@@ -295,7 +409,7 @@ A CSS Reset is carried out using [global CSS rules](#how-do-i-make-global-modifi
 
 If you must reset your styles, in BEM you can do it on a per-block basis.
 
-Here is an example. If a menu block and a list block in your project are both represented by a `<ul>` tag in HTML, then each block must provide a CSS Reset for `<ul>`. Duplication in the resultant code can be avoided by using a CSS optimizer.
+Let's look at an example: If a menu block and a list block in your project are both represented by a `<ul>` tag in HTML, then each block must provide a CSS Reset for `<ul>`. Duplication in the resultant code can be avoided by using a CSS optimizer.
 
 If your project does not use a CSS optimizer that combines selectors with the same sets of rules, you can use a CSS preprocessor. Then you can have a reset of rules for every new block, [mixing](../method/key-concepts/key-concepts.en.md#mix) the proper code. E.g., in SASS it would look like this:
 
@@ -303,6 +417,7 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 .menu {
     @include reset-list;
 }
+
 .menu__item {
     @include reset-list-item;
 }
@@ -310,6 +425,7 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 .list {
     @include reset-list;
 }
+
 .list__item {
     @include reset-list-item;
 }
@@ -317,16 +433,57 @@ If your project does not use a CSS optimizer that combines selectors with the sa
 
 This method is only appropriate in the absence of an optimizer.
 
-## Why can't I write block_mod instead of block block_mod, if the modifier name already contains all the block information?
+## Why can't I write block\_mod instead of block block\_mod, if the modifier name already contains all the block information?
 
-If you write `block_mod` instead of `block block_mod`, you have to define all the block's basic CSS properties in the `block_mod` modifier. Modifiers can change when the block is being used (for example, in response to DOM events on the block), or when this is requested by other blocks. So you would have to copy the CSS code for the block's basic functionality to all its modifiers, as well. This would lead to code duplication.
+If you write `block_mod` instead of `block block_mod`, you have to define all the block's basic CSS properties in the `block_mod` modifier.
 
+Modifiers can change when the block is being used (for example, in response to DOM events on the block), or when this is requested by other blocks. So you would have to copy the CSS code for the block's basic functionality to all its modifiers, as well.
 
-## Why cannot I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?
+Combining multiple modifiers on the same DOM node (for instance, `<div class="block_theme_christmas block_size_big">`) would lead to code duplication.
 
-* If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to `red`, you will need to edit the templates, and most likely, the JavaScript code.
+## Why can't I include a CSS property name in a modifier name: .block\__element\_border-color\_grey?
+
+* If the block or the element changes its look, you will have to edit not only the CSS code but also the selector names. E.g., if the border color is changed from `grey` to (`red`), you will need to edit the templates, and most likely, the JavaScript code.
 * If other properties (background, margins) are added, the name of the modifier will no longer match the content.
 
 The BEM methodology recommends choosing names for modifiers based on semantics rather than visual representation.
 
-<small>This FAQ is partially based on http://getbem.com/faq/</small>
+## How do I redefine CSS properties of BEM entities at breakpoints?
+
+Sometimes you need to base page styles on the height and width of the entire browser window. To do this, you set breakpoints, which are conditions for switching between different layouts for the site.
+
+You can change the CSS properties of a BEM entity during runtime:
+
+* In CSS (using media queries). The name of the CSS selector must be general enough to use it for more than one purpose. For example, `block`.
+
+  *CSS*
+
+  ```css
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+      .block {
+      	  left: 0;
+      }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px)  {
+      .block {
+          right: 0;
+      }
+  }
+  ```
+
+* In JavaScript (by [toggling a modifier](https://en.bem.info/platform/tutorials/i-bem/modifiers/#toggling-a-modifier) ). Make the names of CSS selectors as specific as possible. For example, `block_position_left` or `block_position_right`.
+
+  *CSS*
+
+  ```css
+  .block_position_left {
+      left: 0;
+  }
+
+  .block_position_right {
+      right: 0;
+  }
+  ```
+
+  CSS classes on a DOM node are changed using JavaScript.
