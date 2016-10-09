@@ -109,18 +109,18 @@ blocks/
 ```files
 blocks/
     input/
-        _type/                                 # Директория модификатора `type`
-            input_type_search.css              # Реализация модификатора `type`
-                                               # со значением `search` в технологии CSS
-        __box/                                 # Директория элемента `box`
+        _type/                                # Директория модификатора `type`
+            input_type_search.css             # Реализация модификатора `type`
+                                              # со значением `search` в технологии CSS
+        __box/                                # Директория элемента `box`
             input__box.css
-        __clear/                               # Директория элемента `clear`
-            _visible/                          # Директория модификатора `visible`
-                input__clear_visible.css       # Реализация булевого модификатора `visible`
-                                               # со значением `true` в технологии CSS
-            _size/                             # Директория модификатора `size`
-                input__clear_size_large.css    # Реализация модификатора `size`
-                                               # со значением `large` в технологии CSS
+        __clear/                              # Директория элемента `clear`
+            _visible/                         # Директория модификатора `visible`
+                input__clear_visible.css      # Реализация булевого модификатора `visible`
+                                              # со значением `true` в технологии CSS
+            _size/                            # Директория модификатора `size`
+                input__clear_size_large.css   # Реализация модификатора `size`
+                                              # со значением `large` в технологии CSS
             input__clear.css
             input__clear.js
         input.css
