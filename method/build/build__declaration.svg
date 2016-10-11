@@ -1,1 +1,424 @@
-<svg width="734" height="413" viewBox="0 0 734 413" xmlns="http://www.w3.org/2000/svg"><title>iPad-Pro-Portrait</title><g fill="none" fill-rule="evenodd"><g font-size="13"><text transform="translate(65 374)" fill="#000"><tspan x="0" y="12">└──popup/</tspan></text><text transform="translate(65 359)" fill="#000"><tspan x="0" y="12">├──</tspan></text><text transform="translate(88 359)" fill="#F66"><tspan x=".4" y="12">langswitch/</tspan></text><text transform="translate(65 344)" fill="#000"><tspan x="0" y="12">├──image/</tspan></text><text transform="translate(65 329)" fill="#000"><tspan x="0" y="12">├──icon/</tspan></text><text transform="translate(65 314)" fill="#000"><tspan x="0" y="12">├──</tspan></text><text transform="translate(88 314)" fill="#F66"><tspan x=".4" y="12">input/</tspan></text><text transform="translate(65 299)" fill="#000"><tspan x="0" y="12">├──</tspan></text><text transform="translate(88 299)" fill="#F66"><tspan x=".4" y="12">button/</tspan></text><text transform="translate(33 284)" fill="#000"><tspan x="0" y="12">└──lib/</tspan></text><text transform="translate(65 269)" fill="#000"><tspan x="0" y="12">└──link/</tspan></text><text transform="translate(65 254)" fill="#000"><tspan x="0" y="12">├──icon/</tspan></text><text transform="translate(65 239)" fill="#000"><tspan x="0" y="12">├──</tspan></text><text transform="translate(88 239)" fill="#F66"><tspan x=".4" y="12">logo/</tspan></text><text transform="translate(65 224)" fill="#000"><tspan x="0" y="12">├──</tspan></text><text transform="translate(88 224)" fill="#F66"><tspan x=".4" y="12">input/</tspan></text><text transform="translate(65 209)" fill="#000"><tspan x="0" y="12">├──</tspan></text><text transform="translate(88 209)" fill="#F66"><tspan x=".4" y="12">button/</tspan></text><g fill="#000"><text transform="translate(33 194)"><tspan x="0" y="12">└──blocks/</tspan></text></g><g fill="#000"><text transform="translate(1 179)"><tspan x="0" y="12">project/</tspan></text></g><text transform="translate(0 148)" fill="#333" font-weight="bold"><tspan x="0" y="13">Source files</tspan></text></g><path d="M192 216h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5zM192 231h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5zM192 246h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5zM192 306h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5zM192 321h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5zM192 366h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5z" fill="#F66"/><text transform="translate(263 -3)" font-size="13" fill="#333" font-weight="bold"><tspan x=".411" y="13">Declaration</tspan></text><path d="M177 123h-1.01c-1.65 0-2.99-4.222-2.99-9.4V38.4c0-5.191 1.343-9.4 2.997-9.4H177" stroke-opacity=".8" stroke="#000"/><path d="M177 123h-1.01c-1.65 0-2.99-4.222-2.99-9.4V38.4c0-5.191 1.343-9.4 2.997-9.4H177"/><path d="M421 123h1.01c1.65 0 2.99-4.222 2.99-9.4V38.4c0-5.191-1.343-9.4-2.997-9.4H421" stroke-opacity=".8" stroke="#000"/><path d="M425 123h-1.01c-1.65 0-2.99-4.222-2.99-9.4V38.4c0-5.191 1.343-9.4 2.997-9.4H425"/><g font-size="13"><text transform="translate(193 105)" fill="#000"><tspan x="0" y="12">];</tspan></text><text fill="#000" transform="translate(219 90)"><tspan x="176.8" y="12">}</tspan></text><text fill="#F66" transform="translate(219 90)"><tspan x="77" y="12">&quot;langswitch&quot;</tspan></text><text fill="#000" transform="translate(219 90)"><tspan x="62" y="12">:</tspan></text><text fill="#F66" transform="translate(219 90)"><tspan x="15" y="12">&quot;name&quot;</tspan></text><text fill="#000" transform="translate(219 90)"><tspan x="0" y="12">{</tspan></text><text fill="#000" transform="translate(219 75)"><tspan x="140.8" y="12">},</tspan></text><text fill="#F66" transform="translate(219 75)"><tspan x="77" y="12">&quot;input&quot;</tspan></text><text fill="#000" transform="translate(219 75)"><tspan x="62" y="12">:</tspan></text><text fill="#F66" transform="translate(219 75)"><tspan x="15" y="12">&quot;name&quot;</tspan></text><text fill="#000" transform="translate(219 75)"><tspan x="0" y="12">{</tspan></text><text fill="#000" transform="translate(219 60)"><tspan x="131.8" y="12">},</tspan></text><text fill="#F66" transform="translate(219 60)"><tspan x="77" y="12">&quot;logo&quot;</tspan></text><text fill="#000" transform="translate(219 60)"><tspan x="62" y="12">:</tspan></text><text fill="#F66" transform="translate(219 60)"><tspan x="15" y="12">&quot;name&quot;</tspan></text><text fill="#000" transform="translate(219 60)"><tspan x="0" y="12">{</tspan></text><g><text fill="#000" transform="translate(219 45)"><tspan x="146.8" y="12">},</tspan></text><text fill="#F66" transform="translate(219 45)"><tspan x="77" y="12">&quot;button&quot;</tspan></text><text fill="#000" transform="translate(219 45)"><tspan x="62" y="12">:</tspan></text><text fill="#F66" transform="translate(219 45)"><tspan x="15" y="12">&quot;name&quot;</tspan></text><text fill="#000" transform="translate(219 45)"><tspan x="0" y="12">{</tspan></text></g><g fill="#000"><text transform="translate(310 30)"><tspan x="0" y="12">= [</tspan></text></g><g fill="teal"><text transform="translate(193 30)"><tspan x="0" y="12">exports.blocks</tspan></text></g></g><path d="M299 135v31h-1v-31h1zm-.5 36l-2.5-5h5l-2.5 5z" fill="#F66"/><rect width="100" height="230" rx="3" stroke="#000" stroke-opacity=".2" fill="#000" fill-opacity=".05" transform="translate(249 182)"/><rect width="100" height="230" rx="3" stroke="#FFF" transform="translate(249 182)"/><text transform="translate(281.5 288)" font-size="13" fill="#333" font-weight="bold"><tspan x=".434" y="13.541">Build</tspan></text><g><path stroke-opacity=".1" stroke="#000" fill="#F6F5F3" d="M426 214h307v181H426z"/><g font-size="13"><text transform="translate(442 227)" fill="#A71D5D"><tspan x="0" y="12">@import</tspan></text><text transform="translate(504 227)" fill="#183691"><tspan x=".4" y="12">“lib/button/button.css”</tspan></text><text transform="translate(683 227)" fill="#333"><tspan x=".8" y="12">;</tspan></text><text transform="translate(442 242)" fill="#A71D5D"><tspan x="0" y="12">@import</tspan></text><text transform="translate(504 242)" fill="#183691"><tspan x=".4" y="12">“blocks/button/button.css”</tspan></text><text transform="translate(707 242)" fill="#333"><tspan x=".2" y="12">;</tspan></text><text transform="translate(442 272)" fill="#A71D5D"><tspan x="0" y="12">@import</tspan></text><text transform="translate(504 272)" fill="#183691"><tspan x=".4" y="12">“lib/input/input.css”</tspan></text><text transform="translate(668 272)" fill="#333"><tspan x=".2" y="12">;</tspan></text><text transform="translate(442 287)" fill="#A71D5D"><tspan x="0" y="12">@import</tspan></text><text transform="translate(504 287)" fill="#183691"><tspan x=".4" y="12">“blocks/input/input.css”</tspan></text><text transform="translate(691 287)" fill="#333"><tspan x=".6" y="12">;</tspan></text><text transform="translate(442 317)" fill="#A71D5D"><tspan x="0" y="12">@import</tspan></text><text transform="translate(504 317)" fill="#183691"><tspan x=".4" y="12">“lib/langswitch/</tspan></text><text transform="translate(442 332)" fill="#183691"><tspan x="0" y="12">langswitch.css”</tspan></text><text transform="translate(559 332)" fill="#333"><tspan x="0" y="12">;</tspan></text><text transform="translate(442 362)" fill="#A71D5D"><tspan x="0" y="12">@import</tspan></text><text transform="translate(504 362)" fill="#183691"><tspan x=".4" y="12">“blocks/logo/logo.css”</tspan></text><text transform="translate(676 362)" fill="#333"><tspan x="0" y="12">;</tspan></text></g><text transform="translate(544 184)" font-size="13" fill="#333" font-weight="bold"><tspan x=".411" y="13">project.css</tspan></text></g><g fill="#F66"><path d="M370 297h31v1h-31v-1zm36 .5l-5 2.5v-5l5 2.5z"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by Microsoft Visio, SVG Export build__decl.svg new-page -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		width="786" height="359" viewBox="0 0 785.578 359.054" xml:space="preserve" color-interpolation-filters="sRGB"
+		class="st24">
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:url(#grad0-4);stroke:#000000;stroke-linecap:butt;stroke-width:1}
+		.st2 {fill:#ffcc00;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st3 {fill:none;marker-end:url(#mrkr13-13);stroke:none;stroke-linecap:butt;stroke-width:1.5}
+		.st4 {fill:#ffcc00;fill-opacity:1;stroke:#ffcc00;stroke-opacity:1;stroke-width:0.37313432835821}
+		.st5 {fill:#000000;font-family:Yandex Sans Text Light;font-size:1.33333em;font-weight:bold}
+		.st6 {stroke:#000000;stroke-linecap:butt;stroke-width:1.5}
+		.st7 {fill:#000000;font-family:Yandex Sans Text Light;font-size:1.33333em}
+		.st8 {fill:none;marker-end:url(#mrkr13-27);stroke:none;stroke-linecap:butt;stroke-width:1.5}
+		.st9 {fill:#ff6666;fill-opacity:1;stroke:#ff6666;stroke-opacity:1;stroke-width:0.37313432835821}
+		.st10 {fill:#ff6666;font-family:Yandex Sans Text Light;font-size:1.33333em}
+		.st11 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:1.5}
+		.st12 {fill:#12100b;stroke:none;stroke-linecap:butt;stroke-width:1.5}
+		.st13 {fill:#000000;font-family:Arial;font-size:1.00001em}
+		.st14 {fill:#ffcc09}
+		.st15 {stroke:#010202;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st16 {fill:#ffffff;stroke:#000000;stroke-width:2.25}
+		.st17 {fill:#000000;stroke:#000000;stroke-width:0.72}
+		.st18 {marker-end:url(#mrkr3-213);stroke:#000000;stroke-linecap:butt;stroke-width:1.5}
+		.st19 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.45454545454545}
+		.st20 {marker-end:url(#mrkr3-233);stroke:#ffcc00;stroke-dasharray:12,6;stroke-linecap:butt;stroke-width:1.5}
+		.st21 {fill:#ffcc00;fill-opacity:1;stroke:#ffcc00;stroke-opacity:1;stroke-width:0.45454545454545}
+		.st22 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st23 {fill:#000000;font-size:1em}
+		.st24 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad0-4" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="grad0-18" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#f2f2f2" stop-opacity="1"/>
+			<stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+		</linearGradient>
+		<pattern id="ptrn2-224" patternUnits="userSpaceOnUse" width="6" height="6" viewBox="0 0 64 64">
+			<image x="0" y="0" width="64" height="64" image-rendering="optimizeSpeed"
+					xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA9SURBVChTfY8xDgAgCMT4/3cZbzhzRI0o2IVAu2AAWKG7u9PmnlhS8wlOKVJwS7GDSooIOinii04K+0kAHIw2/SFJpU9IAAAAAElFTkSuQmCC"/>
+		</pattern>
+		<linearGradient id="grad0-298" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#1e1e1e" stop-opacity="1"/>
+			<stop offset="1" stop-color="#000000" stop-opacity="1"/>
+		</linearGradient>
+	</defs>
+	<defs id="Markers">
+		<g id="lend13">
+			<path d="M 3 1 L 0 0 L 3 -1 L 3 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr13-13" class="st4" refX="-8.04" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(-2.68,-2.68) "/>
+		</marker>
+		<marker id="mrkr13-27" class="st9" refX="-8.04" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(-2.68,-2.68) "/>
+		</marker>
+		<g id="lend3">
+			<path d="M 2 1 L 0 0 L 2 -1 " style="stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+		</g>
+		<marker id="mrkr3-213" class="st19" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend3" transform="scale(-2.2,-2.2) "/>
+		</marker>
+		<marker id="mrkr3-233" class="st21" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend3" transform="scale(-2.2,-2.2) "/>
+		</marker>
+	</defs>
+	<g>
+		<title>scheme1</title>
+		<g id="shape126-1" transform="translate(480.014,-113.386)">
+			<title>Sheet.126</title>
+			<ellipse cx="14.1732" cy="323.621" rx="14.1732" ry="35.4331" class="st1"/>
+		</g>
+		<g id="shape125-5" transform="translate(338.848,-113.386)">
+			<title>Sheet.125</title>
+			<ellipse cx="14.1732" cy="323.621" rx="14.1732" ry="35.4331" class="st1"/>
+		</g>
+		<g id="shape1-8" transform="translate(154.216,-328.342)">
+			<title>Горизонтальная линия выноски.540</title>
+			<path d="M0 359.05 L134.31 359.05 L0 359.05 Z" class="st2"/>
+		</g>
+		<g id="shape2-10" transform="translate(30.7124,-299.996)">
+			<title>Text (14).543</title>
+			<desc>Source files</desc>
+			<rect x="0" y="330.708" width="133.228" height="28.3465" class="st3"/>
+			<text x="25.49" y="349.68" class="st5">Source files</text>		</g>
+		<g id="shape3-15" transform="translate(491.823,114.994) rotate(89.8791)">
+			<title>Line.544</title>
+			<path d="M0 359.05 L62.36 359.05" class="st6"/>
+		</g>
+		<g id="shape4-20" transform="translate(103.988,-237.633)">
+			<title>Text (14).4</title>
+			<desc>blocks/</desc>
+			<rect x="0" y="330.708" width="85.0394" height="28.3465" class="st3"/>
+			<text x="16.42" y="349.68" class="st7">blocks/</text>		</g>
+		<g id="shape11-24" transform="translate(144.675,-175.838)">
+			<title>Text (14).13</title>
+			<desc>icon/</desc>
+			<rect x="0" y="347.716" width="49.4544" height="11.3386" class="st8"/>
+			<text x="6.65" y="358.19" class="st7">icon/</text>		</g>
+		<g id="shape12-29" transform="translate(168.486,-158.263)">
+			<title>Text (14).14</title>
+			<desc>icon.css</desc>
+			<rect x="0" y="347.716" width="85.0394" height="11.3386" class="st3"/>
+			<text x="13.81" y="358.19" class="st7">icon.css</text>		</g>
+		<g id="shape13-33" transform="translate(132.901,-180.94)">
+			<title>Line.15</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape14-37" transform="translate(163.951,-164.499)">
+			<title>Line.14</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape15-41" transform="translate(41.484,-265.98)">
+			<title>Text (14).17</title>
+			<desc>project/</desc>
+			<rect x="0" y="330.708" width="85.0394" height="28.3465" class="st3"/>
+			<text x="14.14" y="349.68" class="st7">project/</text>		</g>
+		<g id="shape16-45" transform="translate(98.8856,-251.807)">
+			<title>Line.16</title>
+			<path d="M0 359.05 L19.84 359.05" class="st6"/>
+		</g>
+		<g id="shape17-49" transform="translate(457.94,95.9092) rotate(90)">
+			<title>Line.17</title>
+			<path d="M0 359.05 L11.34 359.05" class="st6"/>
+		</g>
+		<g id="shape18-53" transform="translate(98.7439,-144.09)">
+			<title>Line.20</title>
+			<path d="M0 359.05 L19.84 359.05" class="st6"/>
+		</g>
+		<g id="shape19-57" transform="translate(457.798,204.193) rotate(90)">
+			<title>Line.21</title>
+			<path d="M0 359.05 L11.34 359.05" class="st6"/>
+		</g>
+		<g id="shape20-61" transform="translate(89.673,-136.153)">
+			<title>Text (14).20</title>
+			<desc>lib/</desc>
+			<rect x="0" y="347.716" width="85.0394" height="11.3386" class="st3"/>
+			<text x="31.05" y="358.19" class="st7">lib/</text>		</g>
+		<g id="shape22-65" transform="translate(121.563,-100.153)">
+			<title>Text (14).22</title>
+			<rect x="0" y="330.708" width="85.0394" height="28.3465" class="st3"/>
+		</g>
+		<g id="shape28-68" transform="translate(491.956,226.303) rotate(90)">
+			<title>Line.33</title>
+			<path d="M0 359.05 L62.36 359.05" class="st6"/>
+		</g>
+		<g id="shape50-72" transform="translate(523.005,187.318) rotate(90)">
+			<title>Line.50</title>
+			<path d="M0 359.05 L24.81 359.05" class="st6"/>
+		</g>
+		<g id="shape51-76" transform="translate(163.951,-146.791)">
+			<title>Line.51</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape55-80" transform="translate(176.99,-141.122)">
+			<title>Text (14).55</title>
+			<desc>icon.js</desc>
+			<rect x="0" y="347.716" width="56.6929" height="11.3386" class="st3"/>
+			<text x="5.59" y="358.19" class="st7">icon.js</text>		</g>
+		<g id="shape56-84" transform="translate(133.053,-121.279)">
+			<title>Line.56</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape57-88" transform="translate(146.528,-117.169)">
+			<title>Text (14).57</title>
+			<desc>button/</desc>
+			<rect x="0" y="350.55" width="64.7615" height="8.50394" class="st3"/>
+			<text x="4.87" y="359.6" class="st10">button/</text>		</g>
+		<g id="shape58-92" transform="translate(178.276,-100.161)">
+			<title>Text (14).58</title>
+			<desc>button.css</desc>
+			<rect x="0" y="350.55" width="85.0394" height="8.50394" class="st3"/>
+			<text x="4.38" y="359.6" class="st10">button.css</text>		</g>
+		<g id="shape59-96" transform="translate(176.008,-81.736)">
+			<title>Text (14).59</title>
+			<desc>button.js</desc>
+			<rect x="0" y="347.716" width="77.6693" height="11.3386" class="st3"/>
+			<text x="6.65" y="358.19" class="st10">button.js</text>		</g>
+		<g id="shape60-100" transform="translate(164.103,-104.413)">
+			<title>Line.60</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape61-104" transform="translate(164.103,-87.4053)">
+			<title>Line.61</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape62-108" transform="translate(523.157,246.838) rotate(90)">
+			<title>Line.62</title>
+			<path d="M0 359.05 L24.81 359.05" class="st6"/>
+		</g>
+		<g id="shape63-112" transform="translate(145.546,-226.728)">
+			<title>Text (14).63</title>
+			<desc>logo/</desc>
+			<rect x="0" y="347.716" width="49.4544" height="11.3386" class="st8"/>
+			<text x="5.79" y="358.19" class="st10">logo/</text>		</g>
+		<g id="shape64-116" transform="translate(169.489,-209.153)">
+			<title>Text (14).64</title>
+			<desc>logo.css</desc>
+			<rect x="0" y="347.716" width="85.0394" height="11.3386" class="st3"/>
+			<text x="12.95" y="358.19" class="st10">logo.css</text>		</g>
+		<g id="shape65-120" transform="translate(132.77,-231.83)">
+			<title>Line.65</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape66-124" transform="translate(163.819,-215.39)">
+			<title>Line.66</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape67-128" transform="translate(522.874,136.428) rotate(90)">
+			<title>Line.67</title>
+			<path d="M0 359.05 L24.81 359.05" class="st6"/>
+		</g>
+		<g id="shape68-132" transform="translate(163.819,-197.681)">
+			<title>Line.68</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape69-136" transform="translate(177.426,-192.012)">
+			<title>Text (14).69</title>
+			<desc>logo.js</desc>
+			<rect x="0" y="347.716" width="56.6929" height="11.3386" class="st3"/>
+			<text x="4.74" y="358.19" class="st10">logo.js</text>		</g>
+		<g id="shape70-140" transform="translate(132.77,-70.2557)">
+			<title>Line.70</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape71-144" transform="translate(140.707,-66.1454)">
+			<title>Text (14).71</title>
+			<desc>input/</desc>
+			<rect x="0" y="350.55" width="64.7615" height="8.50394" class="st3"/>
+			<text x="10.59" y="359.6" class="st10">input/</text>		</g>
+		<g id="shape72-148" transform="translate(172.455,-49.1376)">
+			<title>Text (14).72</title>
+			<desc>input.css</desc>
+			<rect x="0" y="350.55" width="85.0394" height="8.50394" class="st3"/>
+			<text x="10.1" y="359.6" class="st10">input.css</text>		</g>
+		<g id="shape73-152" transform="translate(170.187,-30.7124)">
+			<title>Text (14).73</title>
+			<desc>input.js</desc>
+			<rect x="0" y="347.716" width="77.6693" height="11.3386" class="st3"/>
+			<text x="12.37" y="358.19" class="st10">input.js</text>		</g>
+		<g id="shape74-156" transform="translate(163.819,-53.3895)">
+			<title>Line.74</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape75-160" transform="translate(163.819,-36.3816)">
+			<title>Line.75</title>
+			<path d="M0 359.05 L14.17 359.05" class="st6"/>
+		</g>
+		<g id="shape76-164" transform="translate(522.874,297.861) rotate(90)">
+			<title>Line.76</title>
+			<path d="M0 359.05 L24.81 359.05" class="st6"/>
+		</g>
+		<g id="group117-168" transform="translate(611.255,-36.8504)">
+			<title>Sheet.117</title>
+			<g id="shape92-169" transform="translate(0.62331,-0.62331)">
+				<title>Sheet.92</title>
+				<path d="M1.46 359.02 C0.65 359.02 0 358.37 0 357.56 L0 299.4 C-0 298.59 0.65 297.94 1.46 297.94 L39.05 297.94 C39.42
+							 297.94 39.8 298.09 40.08 298.38 L48.21 306.51 C48.49 306.79 48.65 307.16 48.65 307.54 L48.65 357.59
+							 C48.65 358.4 47.99 359.05 47.18 359.05 L1.46 359.05 L1.46 359.02 Z" class="st11"/>
+			</g>
+			<g id="shape93-171">
+				<title>Sheet.93</title>
+				<path d="M39.64 297.94 C39.86 297.94 40.08 298.03 40.23 298.19 L48.37 306.32 C48.52 306.48 48.62 306.7 48.62 306.91
+							 L48.62 356.97 C48.62 357.43 48.24 357.81 47.78 357.81 L2.09 357.81 C1.62 357.81 1.25 357.43 1.25 356.97
+							 L1.25 298.78 C1.25 298.31 1.62 297.94 2.09 297.94 L39.64 297.94 ZM39.64 296.69 L2.09 296.69 C0.93 296.69
+							 0 297.63 0 298.78 L0 356.97 C0 358.12 0.93 359.05 2.09 359.05 L47.81 359.05 C48.96 359.05 49.9 358.12
+							 49.9 356.97 L49.9 306.91 C49.9 306.35 49.68 305.82 49.27 305.45 L41.14 297.32 C40.73 296.91 40.2 296.69
+							 39.64 296.69 Z" class="st12"/>
+			</g>
+			<g id="shape94-173" transform="translate(1.27898E-013,-1.41732)">
+				<title>Sheet.94</title>
+				<desc>JS</desc>
+				<text x="17.52" y="355.14" class="st13">JS</text>			</g>
+			<g id="shape95-175" transform="translate(39.4867,-51.9529)">
+				<title>Sheet.95</title>
+				<path d="M0 349.27 L0 356.97 C-0 358.12 0.93 359.05 2.09 359.05 L9.75 359.05 L0 349.27 Z" class="st14"/>
+				<path d="M0 349.27 L0 356.97 C-0 358.12 0.93 359.05 2.09 359.05 L9.75 359.05" class="st15"/>
+			</g>
+			<g id="shape110-178" transform="translate(6.91811,-49.1988)">
+				<title>Sheet.110</title>
+				<path d="M0 359.05 L36.06 359.05" class="st15"/>
+			</g>
+			<g id="shape111-181" transform="translate(6.91811,-45.403)">
+				<title>Sheet.111</title>
+				<path d="M0 359.05 L36.06 359.05" class="st15"/>
+			</g>
+			<g id="shape112-184" transform="translate(6.91811,-41.6073)">
+				<title>Sheet.112</title>
+				<path d="M0 359.05 L36.06 359.05" class="st15"/>
+			</g>
+			<g id="shape113-187" transform="translate(6.91811,-37.8115)">
+				<title>Sheet.113</title>
+				<path d="M0 359.05 L36.06 359.05" class="st15"/>
+			</g>
+			<g id="shape114-190" transform="translate(6.91811,-34.0157)">
+				<title>Sheet.114</title>
+				<path d="M0 359.05 L26.57 359.05" class="st15"/>
+			</g>
+		</g>
+		<g id="group118-193" transform="translate(611.255,-198.425)">
+			<title>Sheet.118</title>
+			<g id="shape119-194" transform="translate(0.62331,-0.62331)">
+				<title>Sheet.119</title>
+				<path d="M1.46 359.02 C0.65 359.02 0 358.37 0 357.56 L0 299.4 C-0 298.59 0.65 297.94 1.46 297.94 L39.05 297.94 C39.42
+							 297.94 39.8 298.09 40.08 298.38 L48.21 306.51 C48.49 306.79 48.65 307.16 48.65 307.54 L48.65 357.59
+							 C48.65 358.4 47.99 359.05 47.18 359.05 L1.46 359.05 L1.46 359.02 Z" class="st11"/>
+			</g>
+			<g id="shape120-196">
+				<title>Sheet.120</title>
+				<path d="M39.64 297.94 C39.86 297.94 40.08 298.03 40.23 298.19 L48.37 306.32 C48.52 306.48 48.62 306.7 48.62 306.91
+							 L48.62 356.97 C48.62 357.43 48.24 357.81 47.78 357.81 L2.09 357.81 C1.62 357.81 1.25 357.43 1.25 356.97
+							 L1.25 298.78 C1.25 298.31 1.62 297.94 2.09 297.94 L39.64 297.94 ZM39.64 296.69 L2.09 296.69 C0.93 296.69
+							 0 297.63 0 298.78 L0 356.97 C0 358.12 0.93 359.05 2.09 359.05 L47.81 359.05 C48.96 359.05 49.9 358.12
+							 49.9 356.97 L49.9 306.91 C49.9 306.35 49.68 305.82 49.27 305.45 L41.14 297.32 C40.73 296.91 40.2 296.69
+							 39.64 296.69 Z" class="st12"/>
+			</g>
+			<g id="shape121-198" transform="translate(1.27898E-013,-1.41732)">
+				<title>Sheet.121</title>
+				<desc>CSS</desc>
+				<text x="12.18" y="355.14" class="st13">CSS</text>			</g>
+			<g id="shape122-200" transform="translate(39.4867,-51.9529)">
+				<title>Sheet.122</title>
+				<path d="M0 349.27 L0 356.97 C-0 358.12 0.93 359.05 2.09 359.05 L9.75 359.05 L0 349.27 Z" class="st14"/>
+				<path d="M0 349.27 L0 356.97 C-0 358.12 0.93 359.05 2.09 359.05 L9.75 359.05" class="st15"/>
+			</g>
+			<g id="shape123-203" transform="translate(10.4633,-19.8425)">
+				<title>Sheet.123</title>
+				<rect x="0" y="330.708" width="28.658" height="28.3465" class="st16"/>
+			</g>
+			<g id="shape124-205" transform="translate(13.0425,-22.6772)">
+				<title>Sheet.124</title>
+				<rect x="0" y="335.81" width="23.2441" height="23.2441" class="st17"/>
+			</g>
+		</g>
+		<g id="shape143-207" transform="translate(375.765,-183.979) rotate(21.3278)">
+			<title>Bow Arrow.521.143</title>
+			<path d="M0 351.69 A89.9642 22.9653 -6.79 0 0 116.13 351.69" class="st18"/>
+		</g>
+		<g id="shape144-214" transform="translate(108.043,-62.2188) rotate(-26.226)">
+			<title>Bow Arrow.521.144</title>
+			<path d="M-0 352.7 A82.9147 19.823 -6.29 0 0 107.12 352.7" class="st18"/>
+		</g>
+		<g id="shape145-220" transform="translate(37.133,27.9995) rotate(-37.8539)">
+			<title>Bow Arrow.521.145</title>
+			<pattern id="ptrn2-224_222" patternUnits="userSpaceOnUse" patternTransform="rotate(37.8539)" xlink:href="#ptrn2-224"/>
+			<path d="M0 351.07 A104.754 24.907 -6.25 0 0 135.35 351.07" class="st18"/>
+		</g>
+		<g id="shape149-227" transform="translate(328.733,-178.489) rotate(15.3631)">
+			<title>Bow Arrow.149</title>
+			<path d="M0 351.69 A91.9777 22.9723 -6.62 0 0 118.76 351.69" class="st20"/>
+		</g>
+		<g id="shape154-234" transform="translate(93.6538,-42.3098) rotate(-26.9021)">
+			<title>Bow Arrow.154</title>
+			<pattern id="ptrn2-224_236" patternUnits="userSpaceOnUse" patternTransform="rotate(26.9021)" xlink:href="#ptrn2-224"/>
+			<path d="M-0 351.21 A83.6651 24.3762 -7.94 0 0 107.76 351.21" class="st20"/>
+		</g>
+		<g id="shape156-240" transform="translate(31.2091,49.0987) rotate(-37.5404)">
+			<title>Bow Arrow.156</title>
+			<pattern id="ptrn2-224_242" patternUnits="userSpaceOnUse" patternTransform="rotate(37.5404)" xlink:href="#ptrn2-224"/>
+			<path d="M-0 345.14 A110.041 42.8797 -11.63 0 0 140.49 345.14" class="st20"/>
+		</g>
+		<g id="shape128-246" transform="translate(353.632,-184.219)">
+			<title>Sheet.128</title>
+			<path d="M0 359.05 L139.94 359.05" class="st6"/>
+		</g>
+		<g id="shape129-250" transform="translate(353.247,-113.39)">
+			<title>Sheet.129</title>
+			<path d="M0 359.05 L140.72 359.05" class="st6"/>
+		</g>
+		<g id="shape162-254" transform="translate(472.819,-114.123)">
+			<title>Sheet.162</title>
+			<rect x="0" y="289.662" width="21.5099" height="69.3921" class="st22"/>
+		</g>
+		<g id="shape163-256" transform="translate(392.14,-136.063)">
+			<title>Text (14).163</title>
+			<desc>Build</desc>
+			<rect x="0" y="330.708" width="62.3622" height="28.3465" class="st3"/>
+			<text x="13.24" y="349.68" class="st5">Build</text>		</g>
+		<g id="shape177-260" transform="translate(664.157,-223.37)">
+			<title>Text (14).177</title>
+			<desc>project.css</desc>
+			<rect x="0" y="347.716" width="90.7087" height="11.3386" class="st3"/>
+			<text x="6.34" y="358.19" class="st7">project.css</text>		</g>
+		<g id="shape181-264" transform="translate(663.591,-62.3622)">
+			<title>Text (14).181</title>
+			<desc>project.js</desc>
+			<rect x="0" y="347.716" width="80.5039" height="11.3386" class="st3"/>
+			<text x="7.2" y="358.19" class="st7">project.js</text>		</g>
+		<g id="shape182-268" transform="translate(371.63,-117.873) rotate(-24.3245)">
+			<title>Bow Arrow.541</title>
+			<path d="M-0 351.99 A74.294 21.9741 -8.09 0 0 95.66 351.99" class="st18"/>
+		</g>
+		<g id="shape192-274" transform="translate(663.966,-110.167) rotate(24.2045)">
+			<title>Sheet.192</title>
+			<pattern id="ptrn2-224_276" patternUnits="userSpaceOnUse" patternTransform="rotate(-24.2045)" xlink:href="#ptrn2-224"/>
+			<path d="M-0 359.05 A73.8039 20.5794 7.4 0 1 95.41 359.05" class="st20"/>
+		</g>
+		<g id="shape204-280" transform="translate(574.866,-299.655)">
+			<title>Text (14).204</title>
+			<desc>Bundles</desc>
+			<rect x="0" y="330.708" width="127.998" height="28.3465" class="st3"/>
+			<text x="35.01" y="349.68" class="st5">Bundles</text>		</g>
+		<g id="shape205-284" transform="translate(375.121,-306.496)">
+			<title>Text Bold (14).546</title>
+			<desc>Declaration</desc>
+			<rect x="0" y="343.535" width="96.378" height="15.5195" class="st3"/>
+			<text x="7.17" y="356.09" class="st5">Declaration</text>		</g>
+		<g id="shape207-288" transform="translate(333.921,-270.425)">
+			<title>Text (14).96</title>
+			<desc>&#34;button&#34;, &#34;logo&#34;, &#34;input&#34;</desc>
+			<rect x="0" y="340.364" width="178.322" height="18.6902" class="st3"/>
+			<text x="4" y="354.51" class="st10">&#34;button&#34;<tspan class="st23">, </tspan>&#34;logo&#34;<tspan class="st23">, </tspan>&#34;input&#34;</text>		</g>
+		<g id="shape209-294" transform="translate(782.265,100.745) rotate(90.1692)">
+			<title>Basic Arrow 1.122</title>
+			<path d="M0 359.05 L63.14 359.05" class="st18"/>
+		</g>
+	</g>
+</svg>
