@@ -47,7 +47,7 @@ HTML implementation:
 
 #### Combining a tag and a class in a selector
 
-The BEM methodology not recommended to combine a tag and a class in a selector. Combining the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
+The BEM methodology does not recommend combining a tag and a class in a selector. Combining the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
 
 **Example**
 
