@@ -17,7 +17,7 @@ library/              # Library level
   button/
 ```
 
-> To find out more about the reasons for dividing a block implementation into separate files, read [File structure organizaation of a BEM project](../filestructure/filestructure.en.md).
+> To find out more about the reasons for dividing a block implementation into separate files, read [File structure organization of a BEM project](../filestructure/filestructure.en.md).
 
 The build process takes care of the following:
 * combines individual [implementation files](../filestructure/filestructure.en.md#a-block-implementation-is-divided-into-separate-files) spread throughout the system.
