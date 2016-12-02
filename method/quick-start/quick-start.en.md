@@ -32,7 +32,7 @@ Features:
 <div class="red-text"></div>
 ```
 
-* The block shouldn't influence its environment,  meaning  you shouldn't set the external geometry (padding or boundaries that affect the size) or positioning for the block.
+* The block shouldn't influence its environment,  meaning  you shouldn't set the external geometry (margin) or positioning for the block.
 * You also shouldn't use CSS tag or `ID` selectors when using BEM.
 
 This ensures the necessary independence for reusing blocks or moving them from place to place.
