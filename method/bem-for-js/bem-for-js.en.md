@@ -199,7 +199,7 @@ BEM style allows us to:
 
 The fastest way is to start applying the principles of the BEM methodology in your project and get your first results without using a specialized framework.
 
-To immediately use all the BEM concepts in your project, you need to use the [i-bem.js](https://en.bem.info/technology/i-bem/current/i-bem-js/) framework:
+To immediately use all the BEM concepts in your project, you need to:
 
 * Use the [unified terminology](#unified-subject-domain) of blocks, elements, and modifiers in all technologies.
 * Create independent components (blocks) at the JavaScript level.
