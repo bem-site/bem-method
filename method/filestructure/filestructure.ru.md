@@ -103,7 +103,6 @@ blocks/
 * Модификатор блока — `block_mod_val.extension` (`input_type_search.css`) или `block_mod.extension` (`input_disabled.css`). Значение булевого модификатора не указывается.
 * Модификатор элемента — `block__elem_mod_val.extension` (`input__clear_size_large.css`) или `block__elem_mod.extension` (`input__clear_visible.css`).
 
-
 Модификаторы и элементы выделяются в отдельные файлы и группируются в поддиректории блока с соответствующими именами.
 
 ```files

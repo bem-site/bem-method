@@ -99,7 +99,7 @@ And the CSS will look like this:
 The new CSS class names contain all the information about the block structure. This means that we no longer need to look at the page HTML code to determine all the dependencies. The selector always contains knowledge of which blocks or elements are affected by its rules (in this case, the `nav__item` element). The developer doesn't need to think about the possibility of a `<div class="button active">Click me!</div>` button existing somewhere, because its CSS rules will be written as `.button_active` and won't depend on the rules for the `active` modifier for the menu item (`nav__item_active`).
 
 > Using long names has the following disadvantages:
-
+>
 > * The resulting code base is heavier. This problem is solved by using `gzip`, which compresses repetitive sequences in names.
 > * More time is spent on writing classes. This burden is eased by using autocomplete in the editor, along with CSS preprocessors and template engines that automatically add prefixes. Long class names provide explicit connections between parts of components, which saves time on analyzing the project architecture.
 

@@ -50,7 +50,7 @@ For example, a menu item is not used outside of the context of a menu block, the
 ![Menu items](key-concepts__menu-items.png)
 
 > [A block or an element: when should I use which?](../../faq/faq.en.md#a-block-or-an-element-when-should-i-use-which)
-
+>
 > [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
 
 ## Modifier
@@ -89,7 +89,6 @@ Let's consider the case of a mix comprising a block and an element of another bl
 Let's assume that links in your project are implemented via a `link` block. We need to format menu items as links. There are several ways to do that.
 
 * Create a modifier for a menu item that turns the item into a link. Implementing such a modifier would necessarily involve copying the behavior and styles of the `link` block. That would result in code duplication.
-
 * Have a mix combining a generic `link` block and a `link` element of a `menu` block. A mix of the two BEM entities will allow us to use the basic link functionality of the `link` block and additional CSS rules of the `menu` block without copying the code.
 
 ## BEM tree
@@ -120,7 +119,7 @@ Let's consider an example of a DOM tree:
 
 The corresponding BEM tree will look like this:
 
-```
+```files
 header
     ├──logo
     └──search-form
@@ -154,7 +153,6 @@ XML
     </block:lang-switcher>
 </block:header>
 ```
-
 
 BEMJSON
 

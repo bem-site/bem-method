@@ -49,4 +49,3 @@ To create a customized project, follow the instructions of [BEM projects generat
 ## License
 
 © 2014 YANDEX LLC. Code licensed by [Mozilla Public License 2.0](https://github.com/enb/enb-bem-techs/blob/master/LICENSE.txt).
-

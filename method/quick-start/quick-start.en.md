@@ -5,7 +5,7 @@
 BEM (Block, Element, Modifier) is a component-based approach to web development.
 The idea behind it is to divide the user interface into independent blocks. This makes interface development easy and fast even with a complex UI, and it allows reuse of existing code without copying and pasting.
 
-##  Contents
+## Contents
 
 * [Block](#block)
 * [Element](#element)
@@ -41,8 +41,8 @@ This ensures the necessary independence for reusing blocks or moving them from p
 
 #### Nesting
 
- * Blocks can be nested in each other.
- * You can have any number of nesting levels.
+* Blocks can be nested in each other.
+* You can have any number of nesting levels.
 
 **Example**
 
@@ -78,6 +78,7 @@ Features:
     <button class="search-form__button">Search</button>
 </form>
 ```
+
 ### Guidelines for using elements
 
 * [Nesting](#nesting-1)
@@ -120,7 +121,7 @@ Features:
 </form>
 ```
 
-The block name defines the namespace, which [guarantees that the ](../naming-convention/naming-convention.en.md#element-name) elements are dependent on the block (`block__elem`).
+The block name defines the namespace, which [guarantees that the](../naming-convention/naming-convention.en.md#element-name) elements are dependent on the block (`block__elem`).
 
 A block can have a nested structure of elements in the DOM tree:
 
@@ -233,7 +234,9 @@ Features:
 #### Boolean
 
 * Used when only the presence or absence of the modifier is important, and its value is irrelevant. For example, `disabled`. If a Boolean modifier is present, its value is assumed to be `true`.
+
 * The structure of the modifier's full name follows the pattern:
+
   * `block-name_modifier-name`
   * `block-name__element-name_modifier-name`
 
@@ -252,7 +255,9 @@ Features:
 #### Key-value
 
 * Used when the modifier value is important. For example, "a menu with the `islands` design theme": `menu_theme_islands`.
+
 * The structure of the modifier's full name follows the pattern:
+
   * `block-name_modifier-name_modifier-value`
   * `block-name__element-name_modifier-name_modifier-value`
 
@@ -386,5 +391,6 @@ This file structure makes it easy to support the code and re-use it.
 > The branched file structure assumes that in production the code will be [assembled into shared project files](../build/build.en.md#bem-project-building-methodology).
 
 You aren't required to follow the [recommended file structure](../filestructure/filestructure.en.md#nested). You can use any alternative project structure that follows the BEM principles for organizing the file structure, such as:
+
 * [Flat](../filestructure/filestructure.en.md#flat)
 * [Flex](../filestructure/filestructure.en.md#flex)
