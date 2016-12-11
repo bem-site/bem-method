@@ -10,21 +10,21 @@ Core principles of working with CSS detail in the following sections:
   * [Naming](#naming)
 * [Modifiers](#modifiers)
 * [Mixes](#mixes)
- * [External geometry and positioning](#external-geometry-and-positioning)
- * [Styling groups of blocks](#styling-groups-of-blocks)
+  * [External geometry and positioning](#external-geometry-and-positioning)
+  * [Styling groups of blocks](#styling-groups-of-blocks)
 * [Dividing the code into parts](#dividing-code-into-parts)
- * [Single responsibility principle](#single-responsibility-principle)
- * [Open/closed principle](#openclosed-principle)
- * [DRY principle](#dry)
- * [Composition instead of inheritance](#composition-instead-of-inheritance)
+  * [Single responsibility principle](#single-responsibility-principle)
+  * [Open/closed principle](#openclosed-principle)
+  * [DRY principle](#dry)
+  * [Composition instead of inheritance](#composition-instead-of-inheritance)
 * [Dividing code by redefinition levels and building an assembly](#working-with-redefinition-levels)
 * [How to switch to BEM-style CSS](#how-to-switch-to-bem-style-css)
 
-### Selectors
+## Selectors
 
 BEM doesn't use tag and ID selectors. The styles of BEM blocks and elements are defined by class selectors.
 
-#### Class selectors
+### Class selectors
 
 Allow you to select a particular HTML element on a page, independent of the tag. The class selector is accessed via the `class` attribute that is required for every HTML element.
 
@@ -45,7 +45,7 @@ HTML implementation:
 </header>
 ```
 
-#### Combining a tag and a class in a selector
+### Combining a tag and a class in a selector
 
 The BEM methodology not recommended to combine a tag and a class in a selector. Combining the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
 
@@ -98,7 +98,7 @@ CSS implementation:
 }
 ```
 
-#### Naming
+### Naming
 
 The name of the selector should fully and accurately describe the entity represented by the selector.
 
@@ -170,7 +170,7 @@ Naming CSS classes:
 .user_theme_islands {}    /* CSS class for the `user_theme_islands` modifier */
 ```
 
-### Modifiers
+## Modifiers
 
 BEM modifiers set the appearance, state, and behavior for blocks. A block's design is changed by setting or removing a modifier.
 
@@ -213,13 +213,13 @@ For example, like this:
 
 This frees you from unneeded copying and pasting.
 
-### Mixes
+## Mixes
 
 Allow you to:
 * Combine the behavior and styles of multiple entities without duplicating code.
 * Apply the same formatting to different HTML elements.
 
-#### External geometry and positioning
+### External geometry and positioning
 
 In CSS with BEM, styles that are responsible for the external geometry and positioning are set via the parent block.
 
@@ -294,7 +294,7 @@ CSS implementation of the `button` element in the `header` block:
 
 In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. Now the `button` block is independent and universal, because it doesn't specify any padding.
 
-#### Styling groups of blocks
+### Styling groups of blocks
 
 Sometimes you need to apply the same formatting to multiple different HTML elements on a page at once.
 Group selectors are often used for this purpose.
@@ -349,16 +349,16 @@ CSS implementation:
 }
 ```
 
-### Dividing code into parts
+## Dividing code into parts
 
 These basic principles for structuring and storing code are applied to BEM-style CSS:
-  * Code is divided into separate parts. The logic of each block and its optional elements and modifiers is defined in separate files.
-  * CSS files for each component are stored according to the [rules of file system organization](../filestructure/filestructure.en.md) for a BEM project.
+* Code is divided into separate parts. The logic of each block and its optional elements and modifiers is defined in separate files.
+* CSS files for each component are stored according to the [rules of file system organization](../filestructure/filestructure.en.md) for a BEM project.
 
 Dividing code into parts and controlling the structure of the project's file system make it possible to:
-  * Simplify navigation through the project.
-  * Re-use and move components.
-  * Work with redefinition levels and [use an assembly](../build/build.ru.md).
+* Simplify navigation through the project.
+* Re-use and move components.
+* Work with redefinition levels and [use an assembly](../build/build.ru.md).
 
 **Example**
 
@@ -374,7 +374,7 @@ button/                      # Directory of the `button`
 
 This separation allows you to quickly find needed files.
 
-#### Single responsibility principle
+### Single responsibility principle
 
 Just as in object-oriented programming, the single responsibility principle in the BEM approach to CSS means that every CSS implementation must have a single responsibility.
 
@@ -422,7 +422,7 @@ Incorrect:
 
 Single responsibility selectors give the code more flexibility.
 
-#### Open/closed principle
+### Open/closed principle
 
 Any HTML element on a page should be open for extension by modifiers, but closed for changes. You should develop new CSS implementations without needing to change existing ones.
 
@@ -514,7 +514,7 @@ HTML implementation:
 
   The button design now depends on its location. Changes will apply to all `button` blocks inside the `content` block.
 
-#### DRY
+### DRY
 
 DRY ("don't repeat yourself") is a software development principle aimed at reducing repetitions in code.
 
@@ -592,7 +592,7 @@ There isn't any reason to combine different types of blocks just because they ha
 
 ![yellow-blocks](yellow-blocks.png)
 
-#### Composition instead of inheritance
+### Composition instead of inheritance
 
 Inheritance is a mechanism for defining a new CSS class based on an existing one (a parent or base class). The derived class can add its own properties, as well as use the parent properties.
 
@@ -632,7 +632,7 @@ HTML implementation:
 </div>
 ```
 
-### Working with redefinition levels
+## Working with redefinition levels
 
 Applying BEM principles to CSS allows you to separate block representations into different levels.
 
@@ -736,7 +736,7 @@ Separating the representation of the `button` block into different levels allows
   * Divide code into small independent parts for ease of working with individual blocks.
   * Re-use blocks.
 
-  ### How do I start using BEM concepts in an existing project?
+  ### How do I start using BEM concepts in an existing project
 
   * Create new components using the BEM methodology, and change the old ones as needed.
   * When desigining blocks, follow the principles covered above.

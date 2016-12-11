@@ -103,7 +103,6 @@ blocks/
 * Модифікатор блоку — `block_mod_val.extension` (`input_type_search.css`) або `block_mod.extension` (`input_disabled.css`). Значення булевого модифікатора не вказується.
 * Модифікатор елемента — `block__elem_mod_val.extension` (`input__clear_size_large.css`) або `block__elem_mod.extension` (`input__clear_visible.css`).
 
-
 Модифікатори та елементи виділяються в окремі файли групуються в піддиректорії блоку з відповідними іменами.
 
 ```files
@@ -150,7 +149,6 @@ blocks/
 
 * [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
 * [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
-
 
 ### Flat
 
@@ -245,7 +243,6 @@ blocks/
         button.js
         button.png
 ```
-
 
 ## Приклади використання рівнів перевизначення
 

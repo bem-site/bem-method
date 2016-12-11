@@ -168,6 +168,5 @@ Project repository on [GitHub](https://github.com/azproduction/b_).
 
 Authored by Mikhail Davydov, [gh: azproduction](https://github.com/azproduction), [i@azproduction.me](mailto:i@azproduction.me).
 
-
 ____________________________________
 **Join us with your projects!**

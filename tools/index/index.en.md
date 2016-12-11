@@ -5,11 +5,11 @@
 based on BEM methodology.
 
 It allows you:
-  * creating entities;
-  * building final runtime;
-  * working with build declarations: merge, subtract and intersect them;
-  * building the whole project using ##bem make## command;
-  * launching development server on the projects source tree using ##bem server## command.
+* creating entities;
+* building final runtime;
+* working with build declarations: merge, subtract and intersect them;
+* building the whole project using ##bem make## command;
+* launching development server on the projects source tree using ##bem server## command.
 
 ## ENB
 [ENB](/tools/bem/enb-bem/) — project bundler.

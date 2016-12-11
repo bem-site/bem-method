@@ -122,7 +122,6 @@ logo/
     logo.tmpl  # Templates for generating the block’s HTML representation
 ```
 
-
 Adding JavaScript functionality to the `logo` block: now clicking the logo causes an action. According to the BEM methodology, the new behavior of the `logo` block will be implemented like this:
 
 * In a separate file.

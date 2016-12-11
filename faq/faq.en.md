@@ -48,7 +48,7 @@ It is possible to use BEM at the CSS level only. You just need to follow the [gu
 
 Browser support
 
-* Web Components [are not supported ](http://caniuse.com/#search=Web%20Components) by Safari, iOS Safari, Internet Explorer and Firefox.
+* Web Components [are not supported](http://caniuse.com/#search=Web%20Components) by Safari, iOS Safari, Internet Explorer and Firefox.
 * BEM works in all browsers.
 
 Encapsulation

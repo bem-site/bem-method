@@ -1,11 +1,11 @@
 # Libs overview
 
-### bem-core
+## bem-core
 [bem-core](https://en.bem.info/libs/bem-core/) is a core library required for starting your own BEM-powered project. It provides sufficient number of blocks necessary for client-side JavaScript coding and templating.
 
 [Github repo](https://github.com/bem/bem-core/) of `bem-core`.
 
-### bem-bl
+## bem-bl
 
 [bem-bl](https://en.bem.info/libs/bem-bl/) is an extended library that consists not only of basic blocks but also of a number of generic solutions for displaying a menu, text, logo, search tab, table and so on.
 
@@ -13,7 +13,7 @@ On a current state of development, `bem-bl` is suspended and will not be repleni
 
 [Github repo](https://github.com/bem/bem-bl/) of `bem-bl`.
 
-### bem-components
+## bem-components
 [bem-components](https://en.bem.info/libs/bem-components/) is a library of web-forms management blocks. It contains basic implementation techniques independent from design and allows to apply optional themes such as new Yandex.Islands design.
 
 [Github repo](https://github.com/bem/bem-components/) of `bem-components`.

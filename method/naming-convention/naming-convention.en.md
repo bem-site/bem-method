@@ -87,7 +87,6 @@ The namespace defined by the name of a block identifies a modifier as belonging 
 The full name of a modifier is created using the scheme:
 
 * For Boolean modifiers — `owner-name_mod-name`.
-
 * For key-value type modifiers — `owner-name_mod-name_mod-val`.
 
 **Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element).
@@ -118,11 +117,11 @@ The full name of a modifier is created using the scheme:
 ```
 
 > *Incorrect notation*
-
+>
 > ```html
 > <div class="menu_hidden">...</div>
 > ```
-
+>
 > Here the notation is missing the block that is affected by the modifier.
 
 *CSS*
@@ -188,7 +187,6 @@ The implementation of an authorization form in HTML and CSS:
 
 ## Alternative naming schemes
 
-
 There are some alternative solutions that are based on the BEM naming convention.
 
 ### Two Dashes style
@@ -218,10 +216,7 @@ This style differs from the classic one in that it uses [CamelCase](https://en.w
 * Modifiers are delimited by double hyphens (`--`).
 * The value of a modifier is separated from its name by a double hyphen (`--`).
 
-
-
 **Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
-
 
 ### No namespace style
 

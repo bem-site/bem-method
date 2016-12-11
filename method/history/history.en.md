@@ -180,21 +180,23 @@ Then its HTML container gets a unique CSS class, which is also used as a block n
 CSS classes for blocks got prefixes (`b-`, `c-`, `g-`) to provide sort of a namespace emulation in CSS.
 
 The naming convention itself was changed later, here's the initial list explained:
- * **b-**  block
-   an independent block, placed on a page wherever you need it
- * **с-**  control
-   a control (an independent block) with a JavaScript object bound to it
- * **g-**  global
-   a global definition, used sparingly and always defined for a specific, unique reason;
-   the number of these definitions kept at a minimum.
+* **b-**  block
+  an independent block, placed on a page wherever you need it
+
+* **с-**  control
+  a control (an independent block) with a JavaScript object bound to it
+
+* **g-**  global
+  a global definition, used sparingly and always defined for a specific, unique reason;
+  the number of these definitions kept at a minimum.
 
 Some suffixes were employed as well, e.g.:
- * **-nojs**   no javascript
-   style rule to be applied with JavaScript turned off. The onload callback may contain an `init()`
-   function call that removes these suffixes from all objects, thus semantically marking them
-   up as "JavaScript-enabled".
+* **-nojs**   no javascript
+ style rule to be applied with JavaScript turned off. The onload callback may contain an `init()`
+ function call that removes these suffixes from all objects, thus semantically marking them
+ up as "JavaScript-enabled".
 
-### What's inside?
+### What's inside
 In an HTML container forming a block, some nodes get a distinct CSS classname. This not only facilitates the creation of tagname-independent style rules, but also assigns semantically meaningful roles to each node. Such inner nodes are called "block elements", or simply "elements".
 
 The core distinction between a block and an element is the element's inability to exist out of its parent block context. As long as you cannot detach something from a block, it's an element; detachable elements (probably) should become blocks themselves.
@@ -338,9 +340,9 @@ In that presentation, the first attempt to define a `block` has been made.
 
 ### Blocks: the declaration of idependence
 In our attempt to produce a formal (in fact, semi-formal) declaration of `block`, the following 3 principles were highlighted:
-  1. Only classnames (not IDs) should be used to describe styles;
-  1. Each block classname has a prefix;
-  1. Any CSS rules except ones prefixed with g- must belong to a block.
+1. Only classnames (not IDs) should be used to describe styles;
+2. Each block classname has a prefix;
+3. Any CSS rules except ones prefixed with g- must belong to a block.
 
 As soon as unique IDs are dropped, the same block can be used on the same page more than once.
 This also allows two or more classes to co-exist on the same DOM node, which turned out to be quite useful later.
@@ -366,10 +368,11 @@ Tagname-based CSS rules may match more tags than we intended them to.
 As soon as we had to fight these and similar bugs in production, a strict version of an independent block
 (named Absolutely Independept Block, abbreviated AIB) was defined with the following extra rules:
 
-  1. never match CSS to tagnames, use classnames for everything:
-    `.b-user b -> .b-user .first-letter`
-  2. classnames for block elements must be prefixed with the parent block name:
-    `.b-user .first-letter -> .b-user-first_letter`
+1. never match CSS to tagnames, use classnames for everything
+  `.b-user b -> .b-user .first-letter`
+
+2. classnames for block elements must be prefixed with the parent block name
+  `.b-user .first-letter -> .b-user-first_letter`
 
 Such classnames tend to be much longer, and the resulting HTML code is considerably bigger in size.
 
@@ -380,14 +383,17 @@ As everybody is aware nowadays, giving names to variables is one of the most dif
 
 We approached it cautiously, and invented four prefixes allowed for block names, each one with its own semantics:
 
-  * **b-**
-    common blocks
-  * **h-**
-    holsters, used for gluing several elements together
-  * **l-**
-    layout grids
-  * **g-**
-    global styles
+* **b-**
+  common blocks
+
+* **h-**
+  holsters, used for gluing several elements together
+
+* **l-**
+  layout grids
+
+* **g-**
+  global styles
 
 #### Modifications
 `Modification` can be defined as a specific state of a block, or as a flag that holds some specific property.
@@ -444,9 +450,9 @@ css/
       b-hmenu.css
 ```
 
- 1. block — blocks shared between services
- 1. util — general-purpose blocks ready to be opensourced
- 1. service — CSS styles for specific Yandex services, used for branding, header/footer etc.
+1. block — blocks shared between services
+2. util — general-purpose blocks ready to be opensourced
+3. service — CSS styles for specific Yandex services, used for branding, header/footer etc.
 
 HTML folder structure was identical to CSS:
 
@@ -555,7 +561,7 @@ common/
         b-dropdown.ie.css
 ```
 
-MSIE-specific styles were renamed from *-ie.css to *.ie.css.
+MSIE-specific styles were renamed from *-ie.css* to *.ie.css*.
 
 All contents of optional CSS files (such as `b-dropdown_arr.css`) was moved into separate folders (`arr/b-dropdown.arr.css`).
 
@@ -797,7 +803,7 @@ This change turned out to be useful when working with modifiers from JavaScript.
 ## Going open source (2010)
 In 2010, we had published some code on [our GitHub account](https://github.com/bem) to continue growing as an open source project.
 
-#### Creating bem-bl library
+### Creating bem-bl library
 Blocks from Lego are being gradually ported to [bem-bl](https://en.bem.info/libs/bem-bl/), a library of blocks we consider useful for any web site, not just a Yandex project. As blocks are gradually open-sourced, we improve code and add new features.
 
 This is very much a work in progress, and we invite everybody to make pull requests :-)
@@ -809,9 +815,9 @@ One size never fits all... but one BEM does! Because blocks and elements are rep
 
 Typical redefinition levels may be defined like this:
 
- 1. public bem-bl library pulled from github, extended by...
- 1. internal block library (such as Lego), extended by..
- 1. project-specific block library
+1. public bem-bl library pulled from github, extended by...
+2. internal block library (such as Lego), extended by..
+3. project-specific block library
 
 You're free to go and add more levels. You might need some page-specific block improvements... oh, I believe you got the idea.
 
@@ -843,13 +849,13 @@ We tried different templating solutions, and ended up developing our own, called
 
 This templating engine:
 
- 1. operates on core BEM (Block, Element, Modifier) terms
- 1. supports redefinition levels: build common blocks and tailor them to your needs
- 1. precompiles templates into JavaScript code that runs either in a browser, or on a server
+1. operates on core BEM (Block, Element, Modifier) terms
+2. supports redefinition levels: build common blocks and tailor them to your needs
+3. precompiles templates into JavaScript code that runs either in a browser, or on a server
 
 More details on BEMHTML will be available soon.
 
-## BEM: try this at home!
+## BEM: try this at home
 As you can see, BEM has a long history of trial and error. It took Yandex a while to figure out what's important and what’s not.
 
 The foundation of the BEM methodology are Block, Element and Modifier; these entities are consistently used in all our projects.
