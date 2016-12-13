@@ -1,5 +1,5 @@
 # Бібліотеки
 
-* [bem-core](https://ru.bem.info/libs/bem-core/)
-* [bem-components](https://ru.bem.info/libs/bem-components/)
-* [bem-history](https://ru.bem.info/libs/bem-history/)
+* [bem-core](/platform/libs/bem-core/)
+* [bem-components](/platform/libs/bem-components/)
+* [bem-history](/platform/libs/bem-history/)
