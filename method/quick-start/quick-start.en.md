@@ -314,7 +314,7 @@ From the BEM perspective, a modifier can't be used in isolation from the modifie
 </form>
 ```
 
-> [Why write the block name in the names of modifiers and elements?](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element)
+> [Why write the block name in the names of modifiers and elements?](../../faq/faq.en.md#why-include-the-block-name-in-modifier-and-element-names)
 
 ## Mix
 
