@@ -14,7 +14,7 @@
 
 **Пример**
 
-![Сборка БЭМ-проекта](https://rawgit.com/bem-site/bem-method/godfreyd-methodology-deps/method/build/build__bem-project.svg)
+![Сборка БЭМ-проекта](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/build/build__bem-project.svg)
 
 ## Задачи сборки
 
@@ -41,7 +41,7 @@
 
 **Пример**
 
-![Сборка БЭМ-проекта](https://rawgit.com/bem-site/bem-method/godfreyd-methodology-deps/method/build/build__declaration.svg)
+![Сборка БЭМ-проекта](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/build/build__declaration.svg)
 
 Декларация позволяет изменить состав получаемых при сборке бандлов, точечно определяя необходимые для проекта БЭМ-сущности. Это избавляет от ненужного кода, который значительно увеличивает объем бандлов.
 
@@ -55,7 +55,7 @@
 
 **Пример**
 
-![Пример составного блока](https://rawgit.com/bem-site/bem-method/godfreyd-methodology-deps/method/build/build__search-form.svg)
+![Пример составного блока](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/build/build__search-form.svg)
 
 Зависимости позволяют строить новые блоки на основе уже существующих. Это избавляет от ненужного «Copy-Paste».
 
@@ -80,7 +80,7 @@
 
 **Пример**
 
-![Уровни переопределения](https://rawgit.com/bem-site/bem-method/godfreyd-methodology-deps/method/build/build__levels.svg)
+![Уровни переопределения](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/build/build__levels.svg)
 
 Уровни переопределения позволяют изменять представление и поведение блоков для различных платформ.
 
