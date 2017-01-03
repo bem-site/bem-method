@@ -12,11 +12,11 @@ All tools that we are going to use work crossplatform.
 
 Be aware that you use suitable versions of BEM tools and libraries to run through this tutorial:
 * [enb v1.3.0](https://en.bem.info/toolbox/enb/)
-* [bem-core v2.8.0](https://en.bem.info/libs/bem-core/v2.8.0/)
+* [bem-core v4.1.1](https://en.bem.info/libs/bem-core/v4.1.1/)
 
 To get started with BEM-based project you need to install:
 
-* [Node.js 0.12+](http://nodejs.org/).
+* [Node.js 4+](http://nodejs.org/).
 * [Git Bash](https://git-for-windows.github.io/) if you use Windows OS.
 
 ## Starting with a new project repository
@@ -144,7 +144,7 @@ module.exports = {
     ],
     scripts: [{ elem: 'js', url: 'index.min.js' }],
     content: [
-        { block : 'head'}
+        { block : 'head' }
     ]
 };
 ```
@@ -210,7 +210,7 @@ Refresh the page to view the new corresponding HTML layout.
 
 This markup requires CSS rules for the `layout`. In BEM terms you have to [implement a block in CSS](https://en.bem.info/methodology/key-concepts/#implementation-technology).
 
-**Note** [Stylus](http://stylus-lang.com/) — CSS preprocessor based on JavaScript — is linked to the `project-stub` by default. Thus you can create CSS rules both in `.css` and `.styl` formats.
+**Note** [PostCSS](http://postcss.org) — is linked to the `project-stub` by default.
 
 ### Creating a new block
 
@@ -526,7 +526,7 @@ block('goods')(
 </html>
 ```
 
-Templates can produce not only HTML elements of a block but nested blocks as well. The example below shows you how to render a price element as a `link` block of [bem-components](https://en.bem.info/libs/bem-components/3.0.0/desktop/link/) library.
+Templates can produce not only HTML elements of a block but nested blocks as well. The example below shows you how to render a price element as a `link` block of [bem-components](https://en.bem.info/platform/libs/bem-components/5.0.0/desktop/link/) library.
 
 An extra trick: if you would like to avoid cascade when styling the block, mark this link as an element of a `goods` block.
 
@@ -604,8 +604,8 @@ You should declare a library name, its version (if available) and its repository
 
 ```js
 "dependencies": {
-  "bem-components": "3.0.0",
-  "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
+  "bem-components": "^5.0.0",
+  "j": "git://github.com/skad0/j.git#5e5d6e181ad98b33303a23fc610b614b5b0a3832"
 }
 ```
 
@@ -776,22 +776,28 @@ You need to use the `onSetMod` property in a `desktop.blocks/box/box.js` file to
 In this example the block is told to respond to setting up and removing a `closed` modifier:
 
 ```js
-onSetMod : {
+modules.define('box', ['i-bem-dom'], function(provide, bemDom) {
 
-    'closed': {
-        'yes': function() {
-            // some functionality here
-        },
+  provide(bemDom.declBlock(this.name, {
+      onSetMod : {
+          'closed': {
+              'yes': function() {
+                  // some functionality here
+              },
 
-        '': function() {
-            // some functionality here
-        }
-    }
+              '': function() {
+                  // some functionality here
+              }
+          }
+      }
+  }));
 
-}
+});
 ```
 
-[Code sample](https://gist.github.com/innabelaya/9503213) box.js.
+For example, animation can be added, like in the example linked below.
+
+[Code sample](https://gist.github.com/skad0/ad8fc5547dde0a3c3b389483e3e39529) box.js.
 
 ## Creating a new page
 
@@ -800,10 +806,8 @@ In a BEM world a page is also a block but at the `desktop.bundles` redefinition 
 Create a new page of the project called `contact`:
 
 ```bash
-bem create -l desktop.bundles -b contact
+bem create -l desktop.bundles -b contact -T bemjson.js
 ```
-
-As you can see there is no `-T` flag here, because `bem create` creates the `desktop.bundles` block level implementation in BEMJSON technology by default. As a result in a `desktop.bundles/contact/contact.bemjson.js` file being filled with dummy page contents.
 
 Load a new page in a browser: [http://localhost:8080/desktop.bundles/contact/contact.html](http://localhost:8080/desktop.bundles/contact/contact.html).
 

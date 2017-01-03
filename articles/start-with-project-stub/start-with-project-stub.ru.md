@@ -12,11 +12,11 @@
 
 Обратите внимание на актуальность версий инструментов и библиотек:
 * [enb v1.3.0](https://ru.bem.info/toolbox/enb/)
-* [bem-core v2.8.0](https://en.bem.info/libs/bem-core/v2.8.0/)
+* [bem-core v4.1.1](https://en.bem.info/libs/bem-core/v4.1.1/)
 
 Для начала работы с любым БЭМ-проектом вам необходимо установить:
 
-* [Node.js 0.12+](http://nodejs.org/);
+* [Node.js 4+](http://nodejs.org/);
 * [Git Bash](https://git-for-windows.github.io/) — для пользователей операционной системы Windows.
 
 ## Создание собственного репозитория проекта
@@ -144,7 +144,7 @@ module.exports = {
     ],
     scripts: [{ elem: 'js', url: 'index.min.js' }],
     content: [
-        { block : 'head'}
+        { block : 'head' }
     ]
 };
 ```
@@ -211,7 +211,7 @@ module.exports = {
 
 Теперь для блока `layout` необходимо прописать CSS-правила. В БЭМ-терминах будем называть это [реализацией блока в технологии CSS](https://ru.bem.info/methodology/key-concepts/#Технология-реализации).
 
-**Важно** В `project-stub` по умолчанию подключен CSS-препроцессор [Stylus](http://stylus-lang.com/), который компилируется в CSS. Таким образом, у вас есть возможность создавать CSS-правила как в `.css`, так и в `.styl` форматах.
+**Важно** В `project-stub` по умолчанию используется [PostCSS](http://postcss.org).
 
 ### Создание блока
 
@@ -526,7 +526,7 @@ block('goods')(
 </html>
 ```
 
-Шаблон может создавать не только HTML-элементы блока, но и другие блоки. Например, цену товара можно сделать ссылкой, используя для этого блок `link` из библиотеки [bem-components](https://ru.bem.info/libs/bem-components/3.0.0/desktop/link/).
+Шаблон может создавать не только HTML-элементы блока, но и другие блоки. Например, цену товара можно сделать ссылкой, используя для этого блок `link` из библиотеки [bem-components](https://ru.bem.info/platform/libs/bem-components/5.0.0/desktop/link/).
 
 Чтобы избежать каскада при оформлении этой ссылки стилями, пометим её как элемент блока `goods`.
 
@@ -604,8 +604,8 @@ bem create -l desktop.blocks -b goods -T deps.js
 
 ```js
 "dependencies": {
-  "bem-components": "3.0.0",
-  "j": "git://github.com/innabelaya/j.git#695d479fbdd7c97e61bd89953ef095e2e567e70e"
+  "bem-components": "^5.0.0",
+  "j": "git://github.com/skad0/j.git#5e5d6e181ad98b33303a23fc610b614b5b0a3832"
 }
 ```
 
@@ -776,22 +776,28 @@ bem create -l desktop.blocks -b box -T js
 В данном случае нужно реагировать на установку и снятие модификатора `closed`:
 
 ```js
-onSetMod : {
+modules.define('box', ['i-bem-dom'], function(provide, bemDom) {
 
-    'closed': {
-        'yes': function() {
-            // some functionality here
-        },
+  provide(bemDom.declBlock(this.name, {
+      onSetMod : {
+          'closed': {
+              'yes': function() {
+                  // some functionality here
+              },
 
-        '': function() {
-            // some functionality here
-        }
-    }
+              '': function() {
+                  // some functionality here
+              }
+          }
+      }
+  }));
 
-}
+});
 ```
 
-[Пример кода](https://gist.github.com/innabelaya/9503213) box.js.
+Например, можно добавить анимацию, как показано в примере ниже.
+
+[Пример кода](https://gist.github.com/skad0/ad8fc5547dde0a3c3b389483e3e39529) box.js.
 
 ## Создание новых страниц
 
@@ -800,10 +806,8 @@ onSetMod : {
 Создадим страницу `contact`:
 
 ```bash
-bem create -l desktop.bundles -b contact
+bem create -l desktop.bundles -b contact -T bemjson.js
 ```
-
-Флаг `-T` можно не указывать, потому что `bem create` благодаря настройкам уровня `desktop.bundles` знает, что создаваемые на этом уровне блоки должны быть представлены в технологии BEMJSON. Таким образом, bem-tools создает файл `desktop.bundles/contact/contact.bemjson.js` с минимальным содержимым для страницы.
 
 Новую страницу можно посмотреть по адресу [http://localhost:8080/desktop.bundles/contact/contact.html](http://localhost:8080/desktop.bundles/contact/contact.html).
 
