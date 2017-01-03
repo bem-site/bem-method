@@ -12,7 +12,7 @@ A page that contains an input field, a button, and a greeting text. The value fr
 
 ### Minimal requirements
 
-* [Node.js 0.10+](https://nodejs.org/);
+* [Node.js 4+](https://nodejs.org/);
 * [Git Bash](https://git-for-windows.github.io/) if you use Windows OS.
 
 ### A local copy and environment setting
@@ -160,12 +160,12 @@ To implement the block in BEM terms, use the created technology files.
     onSetMod: {
         'js': {
             'inited': function() {
-                this._input = this.findBlockInside('input');
+                this._input = this.findChildBlock(Input);
 
-                this.bindTo('submit', function(e) {
+                this._domEvents().on('submit', function(e) {
                     e.preventDefault();
 
-                    this.elem('greeting').text('Hello, ' +
+                    this._elem('greeting').domElem.text('Привет, ' +
                         this._input.getVal() + '!');
                 });
             }
@@ -178,28 +178,31 @@ To implement the block in BEM terms, use the created technology files.
     ```js
     modules.define(
         'hello', // a block name
-        ['i-bem__dom'], // dependence connection
-        function(provide, BEMDOM) { // a function that received names of the used modules
-            provide(BEMDOM.decl('hello', { // a block declaration
+        ['i-bem-dom'], // dependence connection
+
+        // a function that received names of the used modules
+        function(provide, bemDom) {
+            provide(bemDom.declBlock('hello', { // a block declaration
                 onSetMod: { // a constructor that describes reaction on an event
                     'js': {
                         'inited': function() {
-                            this._input = this.findBlockInside('input');
+                            this._input = this.findChildBlock('input');
 
-                            // the event that causes reaction
-                            this.bindTo('submit', function(e) {
+                            // the DOM-event that causes reaction
+                            this._domEvents('submit', function(e) {
                                 // prevention of event triggering by default:
                                 // form data sending to the server with page reload
                                 e.preventDefault();
 
-                                this.elem('greeting').text('Hello, ' +
+                                this._elem('greeting').domElem.text('Hello, ' +
                                     this._input.getVal() + '!');
                             });
                         }
                     }
                 }
             }));
-        });
+        }
+    );
     ```
 
 #### Implement the hello block in BEMHTML technology
