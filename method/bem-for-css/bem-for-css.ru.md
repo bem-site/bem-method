@@ -617,9 +617,9 @@ HTML-реализация:
 
 <div class="popup">
     <div class="menu">
-        <div class="menu-item">Блок</div>
-        <div class="menu-item">Элемент</div>
-        <div class="menu-item">Модификатор</div>
+        <div class="menu__item">Блок</div>
+        <div class="menu__item">Элемент</div>
+        <div class="menu__item">Модификатор</div>
     </div>
 </div>
 ```
