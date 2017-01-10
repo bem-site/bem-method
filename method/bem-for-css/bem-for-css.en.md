@@ -625,9 +625,9 @@ HTML implementation:
 
 <div class="popup">
     <div class="menu">
-        <div class="menu-item">Block</div>
-        <div class="menu-item">Element</div>
-        <div class="menu-item">Modifier</div>
+        <div class="menu__item">Block</div>
+        <div class="menu__item">Element</div>
+        <div class="menu__item">Modifier</div>
     </div>
 </div>
 ```
