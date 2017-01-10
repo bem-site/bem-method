@@ -12,7 +12,7 @@
 
 ### Минимальные требования
 
-* [Node.js 0.10+](https://nodejs.org/);
+* [Node.js 4+](https://nodejs.org/);
 * [Git Bash](https://git-for-windows.github.io/) — для пользователей операционной системы Windows.
 
 ### Локальная копия и настройка окружения
@@ -179,15 +179,15 @@
     ```js
     modules.define(
         'hello', // имя блока
-        ['i-bem-dom'], // подключение зависимости
+        ['i-bem-dom', 'input'], // подключение зависимости
 
         // функция, в которую передаются имена используемых модулей
-        function(provide, bemDom) {
+        function(provide, bemDom, Input) {
             provide(bemDom.declBlock('hello', { // декларация блока
                 onSetMod: { // конструктор для описания реакции на события
                     'js': {
                         'inited': function() {
-                            this._input = this.findChildBlock('input');
+                            this._input = this.findChildBlock(Input);
 
                             // DOM-событие, на которое будет реакция
                             this._domEvents('submit', function(e) {
