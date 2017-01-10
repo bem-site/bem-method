@@ -12,7 +12,7 @@
 
 ### Минимальные требования
 
-* [Node.js 0.10+](https://nodejs.org/);
+* [Node.js 4+](https://nodejs.org/);
 * [Git Bash](https://git-for-windows.github.io/) — для пользователей операционной системы Windows.
 
 ### Локальная копия и настройка окружения
