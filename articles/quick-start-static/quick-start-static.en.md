@@ -178,18 +178,18 @@ To implement the block in BEM terms, use the created technology files.
     ```js
     modules.define(
         'hello', // a block name
-        ['i-bem-dom'], // dependence connection
+        ['i-bem-dom', 'input'], // dependence connection
 
         // a function that received names of the used modules
-        function(provide, bemDom) {
+        function(provide, bemDom, Input) {
             provide(bemDom.declBlock('hello', { // a block declaration
                 onSetMod: { // a constructor that describes reaction on an event
                     'js': {
                         'inited': function() {
-                            this._input = this.findChildBlock('input');
+                            this._input = this.findChildBlock(Input);
 
                             // the DOM-event that causes reaction
-                            this._domEvents('submit', function(e) {
+                            this._domEvents.on('submit', function(e) {
                                 // prevention of event triggering by default:
                                 // form data sending to the server with page reload
                                 e.preventDefault();
