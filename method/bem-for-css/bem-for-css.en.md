@@ -739,7 +739,7 @@ Separating the representation of the `button` block into different levels allows
   ### How do I start using BEM concepts in an existing project
 
   * Create new components using the BEM methodology, and change the old ones as needed.
-  * When desigining blocks, follow the principles covered above.
+  * When designing blocks, follow the principles covered above.
   * Use prefixes in names of CSS classes (such as `bem-`) in order to differentiate the new code from the old code.
 
   Once you are familiar with BEM-style CSS, you can look at the specifics of implementing [BEM for JavaScript](../bem-for-js/bem-for-js.en.md).
