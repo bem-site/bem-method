@@ -189,7 +189,7 @@ To implement the block in BEM terms, use the created technology files.
                             this._input = this.findChildBlock(Input);
 
                             // the DOM-event that causes reaction
-                            this._domEvents.on('submit', function(e) {
+                            this._domEvents().on('submit', function(e) {
                                 // prevention of event triggering by default:
                                 // form data sending to the server with page reload
                                 e.preventDefault();
