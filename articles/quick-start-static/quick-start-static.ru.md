@@ -163,11 +163,12 @@
             'inited': function() {
                 this._input = this.findChildBlock(Input);
                 
+                var that = this;
                 this._domEvents().on('submit', function(e) {
                 	e.preventDefault();
                     
-                    this._elem('greeting').domElem.text('Привет, ' +
-                    	this._input.getVal() + '!');
+                    that._elem('greeting').domElem.text('Привет, ' +
+                    	that._input.getVal() + '!');
                 });
             }
         }
@@ -189,14 +190,15 @@
                         'inited': function() {
                             this._input = this.findChildBlock(Input);
 
+							var that = this;
                             // DOM-событие, на которое будет реакция
                             this._domEvents.on('submit', function(e) {
                                 // предотвращение срабатывания события по умолчанию:
                                 // отправка формы на сервер с перезагрузкой страницы
                                 e.preventDefault();
 
-                                this._elem('greeting').domElem.text('Привет, ' +
-                                	this._input.getVal() + '!');
+                                that._elem('greeting').domElem.text('Привет, ' +
+                                	that._input.getVal() + '!');
                             });
                         }
                     }
