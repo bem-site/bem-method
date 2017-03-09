@@ -3,7 +3,7 @@
 * [Introduction](#introduction)
 * [Build tasks](#build-tasks)
 * [Build stages](#build-stages)
-* [Build results](#build results)
+* [Build results](#build-results)
 * [Build tools](#build-tools)
 
 ## Introduction
@@ -30,7 +30,7 @@ The build performs the following tasks:
 In order to receive bundles as the result of the build, the following must be defined:
 
 1. [The list of BEM entities](#defining-the-list-of-bem-entities).
-2. [Dependencies between them](#describing-dependencies).
+2. [Dependencies between them](#defining-dependencies).
 3. [Order for including them](#defining-the-order-for-connecting-bem-entities-to-the-build).
 
 ### Defining the list of BEM entities
@@ -66,7 +66,7 @@ Dependencies allow you to build new blocks from existing ones. This frees you fr
 The order for connecting BEM entities to the build depends on:
 
 * [Dependencies](#dependencies-and-the-order-of-connecting-bem-entities-to-the-build).
-* [Redefinition levels](#dedefinition-levels-and-the-order-of-connecting-bem-entities-to-the-build).
+* [Redefinition levels](#redefinition-levels-and-the-order-of-connecting-bem-entities-to-the-build).
 
 #### Dependencies and the order of connecting BEM entities to the build
 
