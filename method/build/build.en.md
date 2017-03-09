@@ -3,7 +3,7 @@
 * [Introduction](#introduction)
 * [Build tasks](#build-tasks)
 * [Build stages](#build-stages)
-* [Build results](#build-results)
+* [Build result](#build-result)
 * [Build tools](#build-tools)
 
 ## Introduction
@@ -89,9 +89,9 @@ For more information about using redefinition levels, see the examples:
 * [Redefining library blocks](../filestructure/filestructure.en.md#linking-a-library).
 * [Dividing a project into platforms](../filestructure/filestructure.en.md#dividing-a-project-into-platforms).
 
-## Build results
+## Build result
 
-The build results can output files for:
+The build result can output files for:
 
 * A section of a page (for example, `header.css` or `footer.css`).
 * A separate page (for example, `hello.css` and `hello.js`).
