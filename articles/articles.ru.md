@@ -51,3 +51,8 @@
 * [ ] [19 принципов разработки по БЭМ, или что должен знать каждый разработчик библиотек](https://habrahabr.ru/company/yandex/blog/267875/), Инна Белая, Вячеслав Аристов, Яндекс
 * [ ] [Длинная телега про Бутстрав — заметка о практической пользе CSS методологий на примере БЭМ и о проблемах Bootstrap](https://gist.github.com/iAdramelk/d328b73c72cab92ef95f#Зачем-нужны-методологии), 04-10-2015, Алексей Иванов
 * [x] [БЭМантика: пишите осмысленные стили без повторов](http://css-live.ru/articles/bemantika-pishite-osmyslennye-stili-bez-povtorov.html), 21-05-2016, Мэтт Стоу, UX & a11y разработчик в @TOTVS Labs
+* [x] [БЭМ-методология организации CSS-кода](https://anadea.info/ru/blog/bem-methodology), 01-10-2015, Андрей Бакута
+* [x] [Как работать с CSS-препроцессорами и БЭМ](http://nicothin.github.io/idiomatic-pre-CSS/#bem-cool), 2017, Николай Громов
+* [x] [Почему БЭМ (как метод именования) лучше всех. Как облегчить себе жизнь, если Вы — верстальщик](http://nicothin.pro/page/bem), 20.10.2015, Николай Громов
+* [x] [Каскадирование и БЭМ](https://blog.adn.agency/kaskadirovanie-i-bem/), 03.06.2016, Олег Завражин, Frontend developer
+* [x] [БЭМ для CSS](http://www.gtalk.kz/verstka/bem-for-css.html), 08.11.2016, Gtalk.kz
