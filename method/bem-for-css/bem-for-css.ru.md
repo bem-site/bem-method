@@ -341,12 +341,8 @@ HTML-реализация:
 ```html
 <!-- Блок `header` -->
 <header class="header">
-    <button class="button">...</button>
+    <button class="button header__button">...</button>
 </header>
-
-<!-- Блок `form` -->
-<form class="form" >
-</form>
 ```
 
 CSS-реализация кнопки:
@@ -356,54 +352,23 @@ CSS-реализация кнопки:
     font-family: Arial, sans-serif;
     text-align: center;
     border: 1px solid black;    /* Рамка */
-    margin: 30px;               /* Отступ */
 }
-```
-
-**Задача**
-
-Использовать кнопку из блока `header` в блоке `form`.
-
-Блоку `button` установлен отступ в `30px`, который может помешать его переиспользовать.
-
-Решение выглядит следующим образом:
-
-**Пример**
-
-HTML-реализация:
-
-```html
-<!-- Блок `header` -->
-<header class="header">
-    <!-- К блоку `button` примиксован элемент `button` блока `header` -->
-    <button class="button header__button">...</button>
-</header>
-
-<!-- Блок `form` -->
-<form class="form" >
-    <button class="button">...</button>
-</form>
-```
-
-CSS-реализация кнопки:
-
-```css
-.button {
-    font-family: Arial, sans-serif;
-    border: 1px solid black;    /* Рамка */
-}
-```
-
-CSS-реализация элемента `button` блока `header`:
-
-```css
 .header__button {
-    margin: 30px;
+    margin: 30px;               /* Отступ */
     position: relative;
 }
 ```
 
-В данном примере внешняя геометрия и позиционирование блока `button` задана через элемент `header__button`. Блок `button` стал независимым и универсальным, потому что не специфицирует никакие отступы.
+В данном примере внешняя геометрия и позиционирование блока `button` задана через элемент `header__button`. Блок `button` не специфицирует никакие отступы и может быть легко переиспользован в любом месте.
+
+HTML-реализация:
+
+```html
+<!-- Блок `footer` -->
+<footer class="footer">
+    <button class="button">...</button>
+</footer>
+```
 
 ### Стилизация групп блоков
 
