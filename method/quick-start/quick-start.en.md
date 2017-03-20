@@ -215,8 +215,10 @@ An element is an optional block component. Not all blocks have elements.
 
 ## Should I create a block or an element?
 
-1. If a section of code might be reused and it doesn't depend on other page components being implemented, you should create a block.
-2. If the section of code can't be used separately without the parent entity (the block), an element is usually created.
+If a section of code:
+
+* might be reused and it doesn't depend on other page components being implemented, you should create a block;
+* can't be used separately without the parent entity (the block), an element is usually created.
 
 The exception is elements that must be divided into smaller parts – subelements – in order to simplify development. In the BEM methodology, [you can't create elements of elements](#nesting-1). In a case like this, instead of creating an element, you need to create a service block.
 
