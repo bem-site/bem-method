@@ -192,7 +192,7 @@
 
 Если нужная вам реализация может использоваться повторно и не зависит от реализации других компонентов страницы. Например, блок `select` имеет модификаторы: **hovered**, **focused**, **opened**.
 
-![Модификаторы блока select](https://rawgit.com/bem-site/bem-method/faq/faq/select.svg)
+![Модификаторы блока select](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/faq/select.svg)
 
 ### Создавайте микс
 
