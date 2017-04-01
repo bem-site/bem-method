@@ -253,7 +253,7 @@ CSS implementation of a button:
 
 Use the button from `header` block in the `form` block.
 
-The `button` block includes a padding of `30px`, which may prevent its reuse.
+The `button` block includes a margin of `30px`, which may prevent its reuse.
 
 The solution looks like this:
 
@@ -292,7 +292,7 @@ CSS implementation of the `button` element in the `header` block:
 }
 ```
 
-In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. Now the `button` block is independent and universal, because it doesn't specify any padding.
+In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. Now the `button` block is independent and universal, because it doesn't specify any margin.
 
 ### Styling groups of blocks
 
