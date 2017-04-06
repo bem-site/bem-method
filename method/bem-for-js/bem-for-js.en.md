@@ -102,11 +102,13 @@ We can apply the main BEM principles for organizing and storing code to JavaScri
 Let’s look at an example of a logo (the `logo` block) implemented in two technologies: a template and styles.
 
 HTML implementation of the block:
+
 ```html
 <a class="logo" href="/"> Your awesome company</a>
 ```
 
 CSS implementation of the block:
+
 ```css
 .logo {
     width: 150px;

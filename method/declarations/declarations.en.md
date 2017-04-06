@@ -6,14 +6,14 @@ A declaration is a list of [blocks](../key-concepts/key-concepts.en.md#block), [
 
 **The goal of a declaration** is to define what and in what order should be included in the build.
 
->In the BEM platform, a page description is created in BEMJSON format, and a page declaration is described in BEMDECL format, >e.g.:
->```js
->exports.blocks = [
+> In the BEM platform, a page description is created in BEMJSON format, and a page declaration is described in BEMDECL format, >e.g.:
+> ```js
+> exports.blocks = [
 >    { name: 'input' },
 >    { name: 'button' },
 >    { name: 'checkbox' }
->];
->```
+> ];
+> ```
 
 ## Ways of obtaining a declaration
 
@@ -35,11 +35,11 @@ When the page get built, the declaration is formed automatically based on the BE
 * If the same entity is used twice on a page, it only occurs once in the declaration.
 * The nesting of blocks and elements is not shown in the declaration.
 
->[html2bemjson](https://github.com/bem-incubator/html2bemjson) is one of the tools that builds a BEM tree out of the HTML structure of a page.
+> [html2bemjson](https://github.com/bem-incubator/html2bemjson) is one of the tools that builds a BEM tree out of the HTML structure of a page.
 
 ![A way of creating a declaration](declarations__html2decl.en.png)
 
->For an example of a project where a separate declaration is formed for each individual page, see [Starting your own BEM project](https://en.bem.info/tutorials/start-with-project-stub/).
+> For an example of a project where a separate declaration is formed for each individual page, see [Starting your own BEM project](https://en.bem.info/tutorials/start-with-project-stub/).
 
 ### Creating a declaration via an introspection of the file structure
 
@@ -49,9 +49,9 @@ On the contrary, the page description-based declaration ensures the building of 
 
 ![A way of creating a declaration](declarations__fs2decl.en.png)
 
->In [bem-components](https://en.bem.info/libs/bem-components/), the method of creating a declaration via the introspection of a file structure is used for the [Dist](https://en.bem.info/libs/bem-components/)-based library distribution.
+> In [bem-components](https://en.bem.info/libs/bem-components/), the method of creating a declaration via the introspection of a file structure is used for the [Dist](https://en.bem.info/libs/bem-components/)-based library distribution.
 
-## Algebra of declarations
+## Work with declarations
 
 Declarations can help you manage the build process. For instance, you can combine different page declarations into one and build the entire project at once instead of page by page. In addition to combining declarations, you can reuse them, extract their common and different parts.
 
@@ -123,4 +123,5 @@ Declaration 1       Declaration 2       Declaration 3
 'footer'            'footer'            'footer'
 ]                   ]                   ]
 ```
+
 For example, such a separation can be effective if every page of the project features a `header` and a `footer`. The common part of the pages is described in a separate declaration. During the build process each page is then built on the basis of two declarations: the common one (containing the `header` and the `footer`) and its own (describing the remaining part of the page).

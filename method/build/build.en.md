@@ -76,7 +76,7 @@ In BEM, dependencies can affect how BEM entities are added to the build.
 
 #### Redefinition levels and the order of connecting BEM entities to the build
 
-In BEM, the final block implementation might be distributed across different [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level). Each subsequent level extends or overrides the original block implementation. This is why it's important for the original implementation to be included in the build first, and then changes can be applied from all the redefinition levels. The example below shows a project with the redefinition levels `common.blocks`, `desktop.blocks`, and `touch.blocks`.
+In BEM, the final block implementation might be distributed across different [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level). Each subsequent level extends or overrides the original block implementation. This is why it's important for the original implementation to be included in the build first, and then changes can be applied from all the redefinition levels. The example below shows a project with the redefinition levels: `common.blocks`, `desktop.blocks`, and `touch.blocks`.
 
 **Example**
 
