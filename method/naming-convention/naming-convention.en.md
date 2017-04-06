@@ -8,7 +8,8 @@ Let's say we have a CSS selector named `menuitemvisible`. A quick view of such a
 
 Let’s add a delimiter:
 
-`menu-item-visible` or `menuItemVisible`
+* `menu-item-visible`;
+* `menuItemVisible`.
 
 Written like this, the name of the selector is clearly divided into logical parts. We can assume `menu` to be a block, `item` to be an element, and `visible` to be a modifier. However, real-life examples are often more complicated and not as straightforward, and that’s where the BEM naming convention comes in useful.
 
@@ -30,7 +31,9 @@ Naming rules for:
 
 A block name follows the `block-name` scheme and defines a [namespace](https://en.wikipedia.org/wiki/Namespace) for elements and modifiers.
 
-Different prefixes can sometimes be added to block names. Our experience of using prefixes is told in detail in the article [The History of BEM](../history/history.en.md#blocks-to-the-rescue).
+Different prefixes can sometimes be added to block names.
+
+> Our experience of using prefixes is told in detail in the article [The History of BEM](../history/history.en.md#blocks-to-the-rescue).
 
 **Example**
 
@@ -60,7 +63,7 @@ The full name of an element is created using this scheme:
 
 If a block has several identical elements, such as in the case of menu items, all of them will have the same name `menu__item`.
 
-**Important!** [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2).
+> **Important!** [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2).
 
 **Example**
 
@@ -71,7 +74,10 @@ If a block has several identical elements, such as in the case of menu items, al
 *HTML*
 
 ```html
-<div class="menu"> ... <span class="menu__item"></span> </div>
+<div class="menu">
+  ...
+  <span class="menu__item"></span>
+</div>
 ```
 
 *CSS*
@@ -89,77 +95,80 @@ The full name of a modifier is created using the scheme:
 * For Boolean modifiers — `owner-name_mod-name`.
 * For key-value type modifiers — `owner-name_mod-name_mod-val`.
 
-**Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element).
+> **Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#why-include-the-block-name-in-names-of-modifier-and-element).
 
 #### Block modifier
 
 * **Boolean modifier**.
-    The value of such a modifier is not specified. The full name is created using the scheme:
-    `block-name_mod-name`.
 
-**Example**
+  The value of such a modifier is not specified. The full name is created using the scheme: `block-name_mod-name`.
 
-`menu_hidden`
+  **Example**
+
+  `menu_hidden`
 
 * **Key-value type modifier**.
-    The value of a modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme:
-    `block-name_mod-name_mod-val`.
 
-**Example**
+  The value of a modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme: `block-name_mod-name_mod-val`.
 
-`menu_theme_morning-forest`
+  **Example**
 
-*HTML*
+  `menu_theme_islands`
 
-```html
-<div class="menu menu_hidden">...</div>
-<div class="menu menu_theme_morning-forest">...</div>
-```
+  *HTML*
 
-> *Incorrect notation*
->
-> ```html
-> <div class="menu_hidden">...</div>
-> ```
->
-> Here the notation is missing the block that is affected by the modifier.
+  ```html
+  <div class="menu menu_hidden">...</div>
+  <div class="menu menu_theme_islands">...</div>
+  ```
 
-*CSS*
+  > *Incorrect notation*
+  >
+  > ```html
+  > <div class="menu_hidden">...</div>
+  > ```
+  >
+  > Here the notation is missing the block that is affected by the modifier.
 
-```css
-.menu_hidden { display: none }
-.menu_theme_morning-forest { color: green; }
-```
+  *CSS*
+
+  ```css
+  .menu_hidden { display: none }
+  .menu_theme_islands { color: green; }
+  ```
 
 #### Element modifier
 
 * **Boolean modifier**.
-    The value of such a modifier is not specified. The full name is created using this scheme:
-    `block-name__elem-name_mod-name`.
 
-**Example**
+  The value of such a modifier is not specified. The full name is created using this scheme: `block-name__elem-name_mod-name`.
 
-`menu__item_visible`
+  **Example**
+
+  `menu__item_visible`
 
 * **Key-value type modifier**.
-    The value of a modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme:
-    `block-name__elem-name_mod-name_mod-val`.
 
-**Example**
+  The value of a modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme: `block-name__elem-name_mod-name_mod-val`.
 
-`menu__item_type_radio`
+  **Example**
 
-*HTML*
+  `menu__item_type_radio`
 
-```html
-<div class="menu"> ... <span class="menu__item menu__item_visible menu__item_type_radio"></span> </div>
-```
+  *HTML*
 
-*CSS*
+  ```html
+  <div class="menu">
+    ...
+    <span class="menu__item menu__item_visible menu__item_type_radio">...</span>
+  </div>
+  ```
 
-``` css
-.menu__item_type_radio { color: blue; }
-```
+  *CSS*
+
+  ``` css
+  .menu__item_type_radio { color: blue; }
+  ```
 
 ### Example of using the naming convention
 
@@ -199,7 +208,7 @@ There are some alternative solutions that are based on the BEM naming convention
 * Boolean modifiers are delimited by double hyphens (`--`).
 * Key-value type modifiers are not used.
 
-**Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
+> **Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
 
 ### CamelCase style
 
@@ -216,7 +225,7 @@ This style differs from the classic one in that it uses [CamelCase](https://en.w
 * Modifiers are delimited by double hyphens (`--`).
 * The value of a modifier is separated from its name by a double hyphen (`--`).
 
-**Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
+> **Important!** Double hyphen within the comment (`--`) is perceived as part of the comment and therefore its presence lead to error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments).
 
 ### No namespace style
 

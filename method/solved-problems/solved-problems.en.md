@@ -300,7 +300,7 @@ For example, a cascade is appropriate for changing elements depending on the sta
 }
 ```
 
-**Important!** Applying a cascade increases code coupling and makes reuse impossible.
+> **Important!** Applying a cascade increases code coupling and makes reuse impossible.
 
 ## How to host multiple entities on the same DOM node and avoid copy and paste
 

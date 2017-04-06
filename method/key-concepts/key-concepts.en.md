@@ -81,7 +81,7 @@ An instance of different [BEM entities](#bem-entity) being hosted on a single [D
 
 Mixes allow us to
 
-* Combine the behaviors and styles of several BEM entities while avoiding code duplication
+* Combine the behaviors and styles of several BEM entities while avoiding code duplication.
 * Create semantically new interface components on the basis of existing BEM entities.
 
 Let's consider the case of a mix comprising a block and an element of another block.

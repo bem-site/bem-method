@@ -26,8 +26,11 @@ A file set for a block (e.g., `input.css`, `input.js`) is determined by the [tec
 *Why?*
 
 * **Enhanced project navigation.**
+
   The project structure is built on a single principle, and the block names are unique. This enables developers to easily identify different parts of the project and to find necessary files quicker.
+
 * **Easier moving of blocks between projects.**
+
   The implementation of blocks is divided into separate files. To move a block from one project to another, you only need to copy the relevant files or directories.
 
 ### Optional elements and modifiers are stored in separate files
@@ -36,29 +39,34 @@ A file set for a block (e.g., `input.css`, `input.js`) is determined by the [tec
 
 * **Only relevant block implementation is included**
 
-Only files that are essential to a given block implementation are included in the build.
+  Only files that are essential to a given block implementation are included in the build.
 
 ### Files are grouped by meaning and not by type
 
-Block files are grouped together based on common [naming rules](../naming-convention/naming-convention.en.md). For convenience, they can be grouped into a block directory.
+  Block files are grouped together based on common [naming rules](../naming-convention/naming-convention.en.md). For convenience, they can be grouped into a block directory.
 
 *Why?*
 
 * **Only necessary blocks are included in the project**
 
-Blocks are implemented as independent entities. This enables us to configure a build in a way that ensures that only relevant blocks are included in the project.
+  Blocks are implemented as independent entities. This enables us to configure a build in a way that ensures that only relevant blocks are included in the project.
 
 ### A project is divided into redefinition levels
 
-The final implementation of a block can be split into [redefinition levels](#examples-of-using-redefinition-levels).
+  The final implementation of a block can be split into [redefinition levels](#examples-of-using-redefinition-levels).
 
 *Why?*
 
 * **No code duplication.**
+
   Storing implementation common to all platforms on a separate level helps avoid code duplication and reduce debugging time.
+
 * **Redefinition and extension of ready-made library blocks.**
+
   To modify a library block, you don't need to copy it to the project level. You just need to create the necessary file with the changes or new code at another redefinition level and include it in the build.
+
 * **Updating libraries linked to the project.**
+
   Dividing a project into distinct levels lets us modify blocks without affecting the library source code. If the library gets updated, the block modification is stored at a different level of the project.
 
 ## Examples of file structures for a BEM project
@@ -168,54 +176,55 @@ The Flex scheme is very flexible in relation to the file structure organization 
 * One block per directory.
 * Elements and modifiers are implemented in separate files.
 
-```files
-blocks/
-    input/
-        input_layout_horiz.css
-        input_layout_vertical.css
-        input__elem.css
-        input.css
-        input.js
-    button/
-```
+  ```files
+  blocks/
+      input/
+          input_layout_horiz.css
+          input_layout_vertical.css
+          input__elem.css
+          input.css
+          input.js
+      button/
+  ```
+
 * One block per directory.
 * Elements and modifiers are implemented inside block files.
 
-```files
-blocks/
-    input/
-        input.css
-        input.js
-    button/
-```
+  ```files
+  blocks/
+      input/
+          input.css
+          input.js
+      button/
+  ```
 
 * Blocks don't have their own directories.
 * Elements and modifiers are implemented inside block files.
 
-```files
-blocks/
-    input.css
-    input.js
-    button.css
-    button.js
-```
+  ```files
+  blocks/
+      input.css
+      input.js
+      button.css
+      button.js
+  ```
 
 * Blocks don't have their own directories.
 * Optional elements and modifiers are implemented in separate files.
 
-```files
-blocks/
-    input_type_search.js
-    input_type_search.bemhtml.js
-    input__box.bemhtml.js
-    input.css
-    input.js
-    input.bemhtml.js
-    button.css
-    button.js
-    button.bemhtml.js
-    button.png
-```
+  ```files
+  blocks/
+      input_type_search.js
+      input_type_search.bemhtml.js
+      input__box.bemhtml.js
+      input.css
+      input.js
+      input.bemhtml.js
+      button.css
+      button.js
+      button.bemhtml.js
+      button.png
+  ```
 
 Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
 
@@ -280,13 +289,13 @@ mobile.blocks/
 During the build process, all the generic CSS rules for the button will be included in the `desktop.css` file from the `common` level, and the redefined rules from the `desktop` level.
 
 ```css
-@import(common.blocks/button/button.css);    /* Generic CSS rules */
-@import(desktop.blocks/button/button.css);   /* Desktop platform-specific */
+@import url(common.blocks/button/button.css);    /* Generic CSS rules */
+@import url(desktop.blocks/button/button.css);   /* Desktop platform-specific */
 ```
 
 The `mobile.css` file will include the generic CSS rules for the button from the `common` level and the redefined rules from the `mobile` level.
 
 ```css
-@import(common.blocks/button/button.css);    /* Generic CSS rules */
-@import(mobile.blocks/button/button.css);    /* Mobile platform-specific */
+@import url(common.blocks/button/button.css);    /* Generic CSS rules */
+@import url(mobile.blocks/button/button.css);    /* Mobile platform-specific */
 ```

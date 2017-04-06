@@ -358,7 +358,7 @@ These basic principles for structuring and storing code are applied to BEM-style
 Dividing code into parts and controlling the structure of the project's file system make it possible to:
 * Simplify navigation through the project.
 * Re-use and move components.
-* Work with redefinition levels and [use an assembly](../build/build.ru.md).
+* Work with redefinition levels and [use an assembly](../build/build.en.md).
 
 **Example**
 
