@@ -244,9 +244,7 @@ You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.block
         block: 'logo',
         content: [{
             block: 'image',
-            attrs: {
-                src: '//varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
-            }
+            url: '//varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
         },
         {
             elem: 'slogan',
@@ -327,7 +325,7 @@ Use a `link` block from the same library to render an icon with a slogan as a li
                 content: [
                     {
                         block: 'image',
-                        attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
+                        url: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
                     },
                     {
                         elem: 'slogan',
