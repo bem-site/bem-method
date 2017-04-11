@@ -250,9 +250,7 @@ bem create desktop.blocks/layout.css
         block: 'logo',
         content: [{
             block: 'image',
-            attrs: {
-                src: '//varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
-            }
+            url: '//varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
         },
         {
             elem: 'slogan',
@@ -333,7 +331,7 @@ bem create desktop.blocks/layout.css
                 content: [
                     {
                         block: 'image',
-                        attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
+                        url: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
                     },
                     {
                         elem: 'slogan',
