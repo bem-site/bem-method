@@ -56,3 +56,4 @@
 * [x] [Почему БЭМ (как метод именования) лучше всех. Как облегчить себе жизнь, если Вы — верстальщик](http://nicothin.pro/page/bem), 20.10.2015, Николай Громов
 * [x] [Каскадирование и БЭМ](https://blog.adn.agency/kaskadirovanie-i-bem/), 03.06.2016, Олег Завражин, Frontend developer
 * [x] [БЭМ для CSS](http://www.gtalk.kz/verstka/bem-for-css.html), 08.11.2016, Gtalk.kz
+* [x] [БЭМ-одержимость. Последствие параметрического дизайна](https://medium.com/koloskof/бэм-одержимость-последствие-параметрического-дизайна-3c1ccbcecf5a)
