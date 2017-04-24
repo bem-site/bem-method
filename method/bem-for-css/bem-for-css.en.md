@@ -4,10 +4,10 @@ In the BEM methodology, CSS is used for page layout and is considered one of the
 
 The following sections cover the core principles of working with CSS:
 * [HTML for CSS](#html-for-css)
-  * [How do I make an HTML wrapper?](#how-to-make-html-wrapper)
+  * [How do I make an HTML wrapper?](#how-do-i-make-an-html-wrapper)
 * [Selectors](#selectors)
   * [Class selectors](#class-selectors)
-  * [Combining a tag and a class in a selector](#combining-tag-and-class-in-selector)
+  * [Combining a tag and a class in a selector](#combining-a-tag-and-a-class-in-a-selector)
   * [Nested selectors](#nested-selectors)
   * [Combined selectors](#combined-selectors)
   * [Naming](#naming)
@@ -15,13 +15,13 @@ The following sections cover the core principles of working with CSS:
 * [Mixes](#mixes)
   * [External geometry and positioning](#external-geometry-and-positioning)
   * [Styling groups of blocks](#styling-groups-of-blocks)
-* [Dividing the code into parts](#dividing-the-code-into-parts)
+* [Dividing the code into parts](#dividing-code-into-parts)
   * [Single responsibility principle](#single-responsibility-principle)
   * [Open/closed principle](#openclosed-principle)
   * [DRY](#dry)
   * [Composition instead of inheritance](#composition-instead-of-inheritance)
 * [Dividing code by redefinition levels and building an assembly](#working-with-redefinition-levels)
-* [How to migrate from CSS to BEM](#how-to-migrate-from-css-to-bem)
+* [How to migrate from CSS to BEM](#how-to-switch-to-bem-style-css)
 
 ## HTML for CSS
 
@@ -430,7 +430,7 @@ CSS implementation:
 
 These basic principles for structuring and storing code are applied to BEM-style CSS:
 * Code is divided into separate parts. The logic of each block and its optional elements and modifiers is defined in separate files.
-* CSS files for each component are stored according to the [rules of file system organization](../filesystem/filesystem.en.md) for a BEM project.
+* CSS files for each component are stored according to the [rules of file system organization](../filestructure/filestructure.en.md) for a BEM project.
 
 Dividing code into parts and controlling the project's file structure make it possible to:
 * Simplify navigation through the project.
