@@ -690,15 +690,15 @@ HTML implementation:
 ```html
 <div class="select">
     <button class="button select__button">
-        <span class="button__text"> Block</span>
+        <span class="button__text">Block</span>
     </button>
 </div>
 
 <div class="popup">
     <div class="menu">
-        <div class="menu__item"> Block</div>
-        <div class="menu__item"> Element</div>
-        <div class="menu__item"> Modifier</div>
+        <div class="menu__item">Block</div>
+        <div class="menu__item">Element</div>
+        <div class="menu__item">Modifier</div>
     </div>
 </div>
 ```
