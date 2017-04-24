@@ -636,7 +636,7 @@ HTML implementation:
 
 Applying BEM principles to CSS allows you to separate block representations into different levels.
 
-Separation block representations into different levels allows you to:
+Separating block representations into different levels allows you to:
 * Implement a new appearance for a block on a different redefinition level while preserving the previous one by inheriting and extending it.
 * Completely override a block's appearance (redefine it).
 * Add blocks with a new representation.
