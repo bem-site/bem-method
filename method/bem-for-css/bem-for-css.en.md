@@ -45,10 +45,10 @@ HTML implementation:
 ```html
 <body class="page">
     <!-- header and navigation-->
-    <header class="header page__header"> ...</header>
+    <header class="header page__header">...</header>
 
     <!-- footer -->
-    <footer class="footer page__footer"> ...</footer>
+    <footer class="footer page__footer">...</footer>
 </body>
 ```
 
@@ -76,10 +76,10 @@ HTML implementation:
 <body class="page">
     <div class="page__inner">
       <!-- header and navigation-->
-      <header class="header"> ...</header>
+      <header class="header">...</header>
 
       <!-- footer -->
-      <footer class="footer"> ...</footer>
+      <footer class="footer">...</footer>
     </div>
 </body>
 ```
@@ -115,7 +115,7 @@ HTML implementation:
     `button` — block;
     `button_theme_islands` — modifier.
     -->
-    <button class="header__button button button_theme_islands"> ...</button>
+    <button class="header__button button button_theme_islands">...</button>
 </header>
 ```
 
@@ -128,7 +128,7 @@ The BEM methodology doesn't recommend combining tags and classes in a selector. 
 HTML implementation:
 
 ```html
-<button class="button"> ...</button>
+<button class="button">...</button>
 ```
 
 CSS rules are defined in the `button.button` selector.
@@ -136,7 +136,7 @@ CSS rules are defined in the `button.button` selector.
 Let's say we add the `active` modifier to the block and set the value to `true`:
 
 ```html
-<button class="button button_active"> ...</button>
+<button class="button button_active">...</button>
 ```
 
 The `.button_active` selector will not redefine CSS properties of the block with the `button.button` selector, because `button.button` has higher specificity than `.button_active`. For successful redefinition, the selector for the block modifier also must be combined with the `button.button_active` tag.
@@ -183,7 +183,7 @@ The BEM methodology does not recommend using combined selectors. Combined select
 HTML implementation:
 
 ```html
-<button class="button button_theme_islands"> ...</button>
+<button class="button button_theme_islands">...</button>
 ```
 
 CSS rules are defined in the `button.button_theme_islands` selector.
@@ -191,7 +191,7 @@ CSS rules are defined in the `button.button_theme_islands` selector.
 Let's say we add the `active` modifier to the block and set the value to `true` :
 
 ```html
-<button class="button button_theme_islands button_active"> ...</button>
+<button class="button button_theme_islands button_active">...</button>
 ```
 
 The `.button_active` selector will not redefine CSS properties of the block with the `.button.button_theme_islands` selector, because `.button.button_theme_islands` has higher specificity than `.button_active`. For successful redefinition, the selector for the block modifier also must be combined with the `.button` selector and declared under `.button.button_theme_islands`, because both selectors have the same specificity:
@@ -229,7 +229,7 @@ We can be fairly sure that we are dealing with a single block, and its HTML impl
 <button class="button button_theme_islands">
     <span class="button__icon"></span>
 
-    <span class="button__text"> ...</span>
+    <span class="button__text">...</span>
 </button>
 ```
 
@@ -262,7 +262,7 @@ HTML implementation:
 <!-- `user` block-->
 <div class="user user_theme_islands">
     <img src="URL" alt="user-logo" class="user__img">
-    ...
+  ...
 </div>
 ```
 
@@ -291,7 +291,7 @@ BEM modifiers set the appearance, state, and behavior for blocks. A block's desi
 HTML implementation:
 
 ```html
-<button class="button button_size_s"> ...</button>
+<button class="button button_size_s">...</button>
 ```
 
 CSS implementation:
@@ -319,8 +319,8 @@ You can use modifiers to change a block's design by redefining specific points i
 For example, like this:
 
 ```html
-<button class="button button_size_s"> ...</button>
-<button class="button button_size_m"> ...</button>
+<button class="button button_size_s">...</button>
+<button class="button button_size_m">...</button>
 ```
 
 This frees you from unneeded copying and pasting.
@@ -342,7 +342,7 @@ HTML implementation:
 ```html
 <!-- `header` block -->
 <header class="header">
-      <button class="button header__button"> ...</button>
+      <button class="button header__button">...</button>
 </header>
 ```
 
