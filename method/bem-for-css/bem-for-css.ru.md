@@ -381,10 +381,10 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-<article class="article"></article>
+<article class="article">...</article>
 
 <footer class="footer">
-    <div class="copyright"></div>
+    <div class="copyright">...</div>
 </footer>
 ```
 
@@ -409,10 +409,10 @@ article, .footer div {
 HTML-реализация:
 
 ```html
-<article class="article text"></article>
+<article class="article text">...</article>
 
 <footer class="footer">
-    <div class="copyright text"></div>
+    <div class="copyright text">...</div>
 </footer>
 ```
 

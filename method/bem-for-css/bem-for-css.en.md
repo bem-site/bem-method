@@ -381,10 +381,10 @@ Group selectors are often used for this purpose.
 HTML implementation:
 
 ```html
-<article class="article"></article>
+<article class="article">...</article>
 
 <footer class="footer">
-    <div class="copyright"></div>
+    <div class="copyright">...</div>
 </footer>
 ```
 
@@ -409,10 +409,10 @@ This is why BEM uses [mixes](../key-concepts/key-concepts.en.md#mix) to uniforml
 HTML implementation:
 
 ```html
-<article class="article text"></article>
+<article class="article text">...</article>
 
 <footer class="footer">
-    <div class="copyright text"></div>
+    <div class="copyright text">...</div>
 </footer>
 ```
 

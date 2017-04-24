@@ -10,15 +10,15 @@
 
 * [Should I create a block or an element?](#should-i-create-a-block-or-an-element)
 * [What is the correct way to modify the appearance of every block instance on a page?](#what-is-the-correct-way-to-modify-the-appearance-of-every-block-instance-on-a-page)
-* [Why write the block name in the names of modifiers and elements?](#Why-write-the-block-name-in-the-names-of-modifiers-and-elements)
+* [Why write the block name in the names of modifiers and elements?](#why-include-the-block-name-in-modifier-and-element-names)
 * [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
-* [Can block elements inherit CSS properties from the block?](#can-block-elements-inherit-css-properties)
+* [Can block elements inherit CSS properties from the block?](#can-block-elements-inherit-css-properties-from-the-block)
 * [Can I create wrapper blocks?](#can-i-create-wrapper-blocks)
 * [Can I create elements of elements (block\__elem1\__elem2)?](#can-i-create-elements-of-elements-block__elem1__elem2)
 
 ## Modifiers and mixes
 
-* [Should I create a modifier or a mix?](#should-i-create-a-modifier-or-a-mix)
+* [Should I create a modifier or a mix?](#should-i-create-a-modifier-or-an-mix)
 * [How should I choose between a boolean modifier and a key-value modifier?](#how-should-i-choose-between-a-boolean-modifier-and-a-key-value-modifier)
 * [What makes a good modifier name?](#what-makes-a-good-modifier-name)
 * [How do I make global modifiers for blocks?](#how-do-i-make-global-modifiers-for-blocks)
@@ -32,9 +32,9 @@
 * [Can I use combined selectors?](#can-i-use-combined-selectors)
 * [Can I use custom tag selectors?](#can-i-use-custom-tag-selectors)
 * [Can I use a CSS reset?](#can-i-use-a-css-reset)
-* [Can I write "block_mod" instead of "block block_mod", since the modifier name already contains information about the block?](#can-i-write-block_mode-instead-of-block-block_mod-since-the-modifier-name-already-contains-information-about-the-block)
+* [Can I write "block_mod" instead of "block block_mod", since the modifier name already contains information about the block?](#can-i-write-block_mod-instead-of-block-block_mod-since-the-modifier-name-already-contains-all-the-block-information)
 * [Can I create helper classes?](#can-i-create-helper-classes)
-* [Why are the geometry and positioning set in the parent block?](#why-are-the-geometry-and-positioning-set-in-the-parent-block)
+* [Why are the geometry and positioning set in the parent block?](#why-are-the-external-geometry-and-positioning-set-via-the-parent-block)
 
 ## JavaScript
 
@@ -110,13 +110,13 @@ To change the styling of the same block, you can use:
 * Modifiers, if you will probably re-use the block with this styling.
 * Mixes, if the block has a specific design just for this context, and you won't be reusing it in the project with this styling.
 
-> For more information about using mixes and modifiers, see [Should I create a modifier or a mix?](#should-i-create-a-modifier-or-a-mix).
+> For more information about using mixes and modifiers, see [Should I create a modifier or a mix?](#should-i-create-a-modifier-or-an-mix)
 
 ## Why include the block name in modifier and element names?
 
 The block name in the names of BEM entities:
 
-* [Supports the namespace](#Namespace).
+* [Supports the namespace](#namespace).
 * [Makes mixes possible](#mixes).
 * [Simplifies code searching](#code-searching).
 
@@ -287,7 +287,7 @@ This is important for the following reasons:
 There are several ways to change the page markup based on the width of the browser window:
 
 * [Using Media Queries](#media-queries).
-* [Toggling modifiers](#toggling-a-modifier).
+* [Toggling modifiers](#switching-a-modifier).
 
 In both cases, you must set the breakpoints, which are conditions for switching between different layouts for the site.
 
