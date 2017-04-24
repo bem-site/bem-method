@@ -81,7 +81,7 @@
 **Вместо Custom Elements — абстракция над DOM-деревом**
 
 * В Web Components используются [Custom Elements](https://www.w3.org/TR/custom-elements/). Такой подход позволяет разместить на одном DOM-узле только один компонент.
-* В БЭМ существует понятие [БЭМ-дерева](../method/key-concepts/key-concepts.ru.md#БЭМ-дерево). Для размещения на одном DOM-узле нескольких [БЭМ-сущностей](./method/key-concepts/key-concepts.ru.md#БЭМ-сущность) используются [миксы](../method/key-concepts/key-concepts.ru.md#Микс).
+* В БЭМ существует понятие [БЭМ-дерева](../method/key-concepts/key-concepts.ru.md#БЭМ-дерево). Для размещения на одном DOM-узле нескольких [БЭМ-сущностей](../method/key-concepts/key-concepts.ru.md#БЭМ-сущность) используются [миксы](../method/key-concepts/key-concepts.ru.md#Микс).
 
 ## В чем разница между БЭМ и Bootstrap?
 
