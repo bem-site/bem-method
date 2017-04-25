@@ -255,7 +255,7 @@ Cущность, определяющая внешний вид, состоян�
     <input class="search-form__input">
 
     <!-- Элемент `button` имеет булевый модификатор `disabled` -->
-    <button class="search-form__button search-form__button_disabled">Найти</button>
+    <button class="search-form__button_search-form__button_disabled">Найти</button>
 </form>
 ```
 
@@ -276,7 +276,7 @@ Cущность, определяющая внешний вид, состоян�
     <input class="search-form__input">
 
     <!-- Элемент `button` имеет модификатор `size` со значением `m` -->
-    <button class="search-form__button search-form__button_size_m">Найти</button>
+    <button class="search-form__button_search-form__button_size_m">Найти</button>
 </form>
 
 <!--
