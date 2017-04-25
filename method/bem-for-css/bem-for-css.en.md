@@ -1,12 +1,15 @@
 # CSS for BEM
 
-In the BEM methodology, CSS is used for page layout and is one of the [block implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
+In the BEM methodology, CSS is used for page layout and is considered one of the [block implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 
-Core principles of working with CSS detail in the following sections:
+The following sections cover the core principles of working with CSS:
+* [HTML for CSS](#html-for-css)
+  * [How do I make an HTML wrapper?](#how-do-i-make-an-html-wrapper)
 * [Selectors](#selectors)
   * [Class selectors](#class-selectors)
   * [Combining a tag and a class in a selector](#combining-a-tag-and-a-class-in-a-selector)
   * [Nested selectors](#nested-selectors)
+  * [Combined selectors](#combined-selectors)
   * [Naming](#naming)
 * [Modifiers](#modifiers)
 * [Mixes](#mixes)
@@ -15,20 +18,91 @@ Core principles of working with CSS detail in the following sections:
 * [Dividing the code into parts](#dividing-code-into-parts)
   * [Single responsibility principle](#single-responsibility-principle)
   * [Open/closed principle](#openclosed-principle)
-  * [DRY principle](#dry)
+  * [DRY](#dry)
   * [Composition instead of inheritance](#composition-instead-of-inheritance)
 * [Dividing code by redefinition levels and building an assembly](#working-with-redefinition-levels)
-* [How to switch to BEM-style CSS](#how-to-switch-to-bem-style-css)
+* [How to migrate from CSS to BEM](#how-to-switch-to-bem-style-css)
+
+## HTML for CSS
+
+### How do I make an HTML wrapper?
+
+Traditionally, HTML wrappers are used for:
+
+* Positioning HTML elements relative to other elements.
+* Positioning elements inside a section.
+
+The BEM methodology achieves the same results by using [mixes](../key-concepts/key-concepts.en.md#mix), or by creating an additional block element. You don't need to create additional abstract wrappers. They don't add any specific features.
+
+#### Positioning a block relative to other blocks
+
+To set a block's position relative to other blocks, the best approach is usually to use a mix.
+
+**Example**
+
+HTML implementation:
+
+```html
+<body class="page">
+    <!-- header and navigation-->
+    <header class="header page__header">...</header>
+
+    <!-- footer -->
+    <footer class="footer page__footer">...</footer>
+</body>
+```
+
+CSS implementation:
+
+```css
+.page__header {
+    padding: 20px;
+}
+
+.page__footer {
+    padding: 50px;
+}
+```
+
+#### Positioning elements inside a block
+
+The position of nested HTML elements is usually set by creating an additional block element (for example, `block__inner` ).
+
+**Example**
+
+HTML implementation:
+
+```html
+<body class="page">
+    <div class="page__inner">
+      <!-- header and navigation-->
+      <header class="header">...</header>
+
+      <!-- footer -->
+      <footer class="footer">...</footer>
+    </div>
+</body>
+```
+
+CSS implementation:
+
+```css
+.page__inner {
+    margin-right: auto;
+    margin-left: auto;
+    width: 960px;
+}
+```
 
 ## Selectors
 
-BEM doesn't use tag and ID selectors. The styles of BEM blocks and elements are defined by class selectors.
+BEM doesn't use tag and ID selectors. The styles of blocks and elements are defined by class selectors.
 
 ### Class selectors
 
-Allow you to select a particular HTML element on a page, independent of the tag. The class selector is accessed via the `class` attribute that is required for every HTML element.
+Use selectors to specify a specific HTML element on the page, regardless of the tag. The class selector is accessed via the `class` attribute, which should be defined for every HTML element.
 
-The value of the `class` attribute can be a space-separated list of words. This allows you to use several [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) on a single DOM node.
+The value of the `class` attribute can be a space-separated list of words. This allows you to use different [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) on the same DOM node.
 
 **Example**
 
@@ -37,7 +111,7 @@ HTML implementation:
 ```html
 <header class="header">
     <!--
-    `header__button` — element of the `header` block;
+    `header__button` — block element `header`;
     `button` — block;
     `button_theme_islands` — modifier.
     -->
@@ -47,40 +121,42 @@ HTML implementation:
 
 ### Combining a tag and a class in a selector
 
-The BEM methodology does not recommend combining a tag and a class in a selector. Combining the tag and the class (for example, `button.button`) makes the CSS rules more specific, which makes it more difficult to override them. This starts priority battles, in which stylesheets are loaded by overly complicated selectors.
+The BEM methodology doesn't recommend combining tags and classes in a selector. Combining a tag and a class (for example, `button.button` ) makes the CSS rules more specific, which makes it more difficult to override them. This leads to priority battles, in which stylesheets are loaded by overly complicated selectors.
 
 **Example**
 
 HTML implementation:
 
 ```html
- <button class="button">...</button>
+<button class="button">...</button>
 ```
 
 CSS rules are defined in the `button.button` selector.
 
-Let's say we added the `active` modifier to the block and set the value to `true`:
+Let's say we add the `active` modifier to the block and set the value to `true`:
 
 ```html
 <button class="button button_active">...</button>
 ```
 
-`.button_active` selector doesn't redefine the block properties written as `button.button`, because `button.button` has a weight higher than `.button_active`. For successful redefinition, the selector for the block modifier also must be combined with the `button.button_active` tag.
+The `.button_active` selector will not redefine CSS properties of the block with the `button.button` selector, because `button.button` has higher specificity than `.button_active`. For successful redefinition, the selector for the block modifier also must be combined with the `button.button_active` tag.
 
-As the project develops, it's possible that blocks could be added with the selectors `input.button`, `span.button` and `a.button`. In this case, all the modifiers of the `button` block and nested elements would require four different declarations for each case.
+As the project develops, it's possible that blocks could be added with the selectors `input.button` ,`span.button` and `a.button` . In this case, all the modifiers of the `button` block and nested elements would require four different declarations for each case.
 
-Try to use only class selectors:
+Try to use simple class selectors:
 
 ```css
 .button {}
 .button_active {}
 ```
 
-#### Nested selectors
+### Nested selectors
 
-The BEM methodology does allow using selectors like this, but we recommend keeping them to a minimum. Nested selectors increase code coupling and make reuse impossible.
+The BEM methodology allows using nested selectors, but we recommend minimizing their use. Nested selectors increase code coupling and make reuse impossible.
 
-For example, nesting is appropriate if you need to change the styles of elements relative to the state of the block or the theme set.
+#### Valid use cases
+
+Nesting is appropriate if you need to change the styles of elements relative to the state of the block or the theme set.
 
 **Example**
 
@@ -98,9 +174,45 @@ CSS implementation:
 }
 ```
 
+### Combined selectors
+
+The BEM methodology does not recommend using combined selectors. Combined selectors (such as `.button.button_theme_islands` ) have higher CSS specificity compared to single selectors, which makes it more difficult to redefine them.
+
+**Example**
+
+HTML implementation:
+
+```html
+<button class="button button_theme_islands">...</button>
+```
+
+CSS rules are defined in the `button.button_theme_islands` selector.
+
+Let's say we add the `active` modifier to the block and set the value to `true` :
+
+```html
+<button class="button button_theme_islands button_active">...</button>
+```
+
+The `.button_active` selector will not redefine CSS properties of the block with the `.button.button_theme_islands` selector, because `.button.button_theme_islands` has higher specificity than `.button_active`. For successful redefinition, the selector for the block modifier also must be combined with the `.button` selector and declared under `.button.button_theme_islands`, because both selectors have the same specificity:
+
+CSS implementation:
+
+```css
+.button.button_theme_islands {}
+.button.button_active {}
+```
+
+Try to use simple class selectors:
+
+```css
+.button_active {}
+.button {}
+```
+
 ### Naming
 
-The name of the selector should fully and accurately describe the entity represented by the selector.
+The name of the selector must fully and accurately describe the BEM entity it represents.
 
 As an example, let's look at these four lines of CSS code:
 
@@ -130,7 +242,7 @@ It's harder to make the same assumption with a group of selectors like this:
 .theme_islands {}
 ```
 
-The names `icon`, `text`, and `theme_islands` aren't as informative.
+The names `icon` , `text` , and `theme_islands` aren't very informative.
 
 The general [rules for naming blocks, elements, and modifiers](../naming-convention/naming-convention.en.md) allow you to:
 * Make the names of CSS selectors as informative and clear as possible.
@@ -147,10 +259,10 @@ HTML implementation:
     <img src="URL" alt="logo" class="logo__img">
 </div>
 
-<!-- `user` block -->
+<!-- `user` block-->
 <div class="user user_theme_islands">
     <img src="URL" alt="user-logo" class="user__img">
-    ...
+  ...
 </div>
 ```
 
@@ -201,13 +313,13 @@ CSS implementation:
 }
 
 ```
+
 You can use modifiers to change a block's design by redefining specific points in the necessary CSS properties.
 
 For example, like this:
 
 ```html
 <button class="button button_size_s">...</button>
-
 <button class="button button_size_m">...</button>
 ```
 
@@ -215,9 +327,9 @@ This frees you from unneeded copying and pasting.
 
 ## Mixes
 
-Allow you to:
+Mixes allow you to:
 * Combine the behavior and styles of multiple entities without duplicating code.
-* Apply the same formatting to different HTML elements.
+* Apply identical formatting to different HTML elements.
 
 ### External geometry and positioning
 
@@ -230,12 +342,8 @@ HTML implementation:
 ```html
 <!-- `header` block -->
 <header class="header">
-    <button class="button">...</button>
+      <button class="button header__button">...</button>
 </header>
-
-<!-- `form` block -->
-<form class="form" >
-</form>
 ```
 
 CSS implementation of a button:
@@ -244,55 +352,24 @@ CSS implementation of a button:
 .button {
     font-family: Arial, sans-serif;
     text-align: center;
-    border: 1px solid black;
-    margin: 30px;               /* Margin */
+    border: 1px solid black;    /* Frame */
 }
-```
-
-**Task**
-
-Use the button from `header` block in the `form` block.
-
-The `button` block includes a margin of `30px`, which may prevent its reuse.
-
-The solution looks like this:
-
-**Example**
-
-HTML implementation:
-
-```html
-<!-- `header` block -->
-<header class="header">
-    <!-- Added the `header__button` class to the `button` block -->
-    <button class="button header__button">...</button>
-</header>
-
-<!-- `form` block -->
-<form class="form" >
-    <button class="button">...</button>
-</form>
-```
-
-CSS implementation of a button:
-
-```css
-.button {
-    font-family: Arial, sans-serif;
-    border: 1px solid black;
-}
-```
-
-CSS implementation of the `button` element in the `header` block:
-
-```css
 .header__button {
-    margin: 30px;
+    margin: 30px;               /* Padding */
     position: relative;
 }
 ```
 
-In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. Now the `button` block is independent and universal, because it doesn't specify any margin.
+In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. The `button` block doesn't specify any padding, so it can easily be reused anywhere.
+
+HTML implementation:
+
+```html
+<!-- `footer` block -->
+<footer class="footer">
+    <button class="button">...</button>
+</footer>
+```
 
 ### Styling groups of blocks
 
@@ -304,10 +381,10 @@ Group selectors are often used for this purpose.
 HTML implementation:
 
 ```html
-<article class="article"></article>
+<article class="article">...</article>
 
 <footer class="footer">
-    <div class="copyright"></div>
+    <div class="copyright">...</div>
 </footer>
 ```
 
@@ -321,7 +398,7 @@ article, .footer div {
 }
 ```
 
-In this example the text inside the `article` and `copyright` blocks has the same color and font.
+In this example, the text inside the `article` and `copyright` blocks has the same color and font.
 
 Although group selectors do allow you to quickly change the design of the page, this approach tightens code coupling.
 
@@ -332,10 +409,10 @@ This is why BEM uses [mixes](../key-concepts/key-concepts.en.md#mix) to uniforml
 HTML implementation:
 
 ```html
-<article class="article text"></article>
+<article class="article text">...</article>
 
 <footer class="footer">
-    <div class="copyright text"></div>
+    <div class="copyright text">...</div>
 </footer>
 ```
 
@@ -355,7 +432,7 @@ These basic principles for structuring and storing code are applied to BEM-style
 * Code is divided into separate parts. The logic of each block and its optional elements and modifiers is defined in separate files.
 * CSS files for each component are stored according to the [rules of file system organization](../filestructure/filestructure.en.md) for a BEM project.
 
-Dividing code into parts and controlling the structure of the project's file system make it possible to:
+Dividing code into parts and controlling the project's file structure make it possible to:
 * Simplify navigation through the project.
 * Re-use and move components.
 * Work with redefinition levels and [use an assembly](../build/build.en.md).
@@ -474,16 +551,9 @@ CSS implementation:
 
 The existing button functionality is extended using the `button_size_s` class (the `font-size` and `line-height` properties are redefined). Now the page has two buttons of different sizes.
 
-HTML implementation:
-
-```html
-<button class="button">...</button>
-<button class="button button_size_s">...</button>
-```
-
 **Violating the open/closed principle**
 
-* Changing an existing CSS implementation.
+* Changing an existing CSS implementation
 
   ```css
   .button {
@@ -496,7 +566,7 @@ HTML implementation:
 
   The current CSS implementation of the button should be closed for changes. Changes will apply to all the `button` blocks.
 
-* Modification by context.
+* Modification by context
 
   ```css
   .button {
@@ -512,7 +582,7 @@ HTML implementation:
   }
   ```
 
-  The button design now depends on its location. Changes will apply to all `button` blocks inside the `content` block.
+The button design now depends on its location. Changes will apply to all `button` blocks inside the `content` block.
 
 ### DRY
 
@@ -576,6 +646,7 @@ CSS implementation:
     background: rgba(255, 0, 0, 0.4);
 }
 ```
+
 With the addition of modifiers, we got rid of the `btn` block.
 
 **Important** The DRY principle only applies to functionally similar components of a page, such as buttons.
@@ -584,7 +655,7 @@ With the addition of modifiers, we got rid of the `btn` block.
 
 ![buttons](buttons.png)
 
-As the example shows, there are some small external differences between buttons. The DRY principle addresses entities that are functionally similar but have different formatting.
+As you can see, there are some small external differences between the buttons. The DRY principle is about exactly these types of entities – they are functionally similar, but they have different formatting.
 
 There isn't any reason to combine different types of blocks just because they have, for instance, the same color or size.
 
@@ -592,7 +663,7 @@ There isn't any reason to combine different types of blocks just because they ha
 
 ![yellow-blocks](yellow-blocks.png)
 
-### Composition instead of inheritance
+#### Composition instead of inheritance
 
 Inheritance is a mechanism for defining a new CSS class based on an existing one (a parent or base class). The derived class can add its own properties, as well as use the parent properties.
 
@@ -602,9 +673,9 @@ New CSS implementations are formed in BEM by combining existing ones. This keeps
 
 Let's say we have three existing implementations:
 
-* button — the `button` block
-* menu — the `menu` block
-* popup window — the `popup` block
+* A button (the `button` block).
+* A menu (the `menu` block).
+* A popup window (the `popup` block).
 
 **Task**
 
@@ -636,7 +707,7 @@ HTML implementation:
 
 Applying BEM principles to CSS allows you to separate block representations into different levels.
 
-Separation block representations into different levels allows you to:
+Separation into levels allows you to:
 * Implement a new appearance for a block on a different redefinition level while preserving the previous one by inheriting and extending it.
 * Completely override a block's appearance (redefine it).
 * Add blocks with a new representation.
@@ -673,7 +744,7 @@ The `mobile.css` file will include the basic CSS button rules from the `common` 
 @import "mobile.blocks/button/button.css";    /* Specifics for mobile */
 ```
 
-Separating the representation of the `button` block into different levels allows you to:
+Separating representations of the `button` block by levels allows you to:
 
 * Completely override a block's appearance on another redefinition level.
 
@@ -699,7 +770,7 @@ Separating the representation of the `button` block into different levels allows
   }
   ```
 
-* Add or partially change a block's appearance on another redefinition level.
+* Add to or partially change a block's appearance on another redefinition level.
 
   `common.blocks/button/button.css`
 
@@ -722,24 +793,24 @@ Separating the representation of the `button` block into different levels allows
   }
   ```
 
-  ## How to switch to BEM-style CSS
+## How to switch to BEM-style CSS
 
-  To implement BEM principles in a project:
+To implement BEM principles in a project:
 
-  * Put aside the DOM model and learn to create blocks.
-  * Don't use ID selectors or tag selectors.
-  * Minimize the number of nested selectors.
-  * Use the CSS class naming convention in order to avoid name collisions and make selector names as informative and clear as possible.
-  * Work in the terms of blocks, elements, and modifiers.
-  * Move CSS properties of a block to modifiers if they seem likely to be changed.
-  * Use mixes.
-  * Divide code into small independent parts for ease of working with individual blocks.
-  * Re-use blocks.
+* Put aside the DOM model and learn to create blocks.
+* Don't use ID selectors or tag selectors.
+* Minimize the number of nested selectors.
+* Use the CSS class naming convention in order to avoid name collisions and make selector names as informative and clear as possible.
+* Work in the terms of blocks, elements, and modifiers.
+* Move CSS properties of a block to modifiers if they seem likely to be changed.
+* Use mixes.
+* Divide code into small independent parts for ease of working with individual blocks.
+* Re-use blocks.
 
-  ### How do I start using BEM concepts in an existing project
+### How to start using BEM concepts in an existing project
 
-  * Create new components using the BEM methodology, and change the old ones as needed.
-  * When designing blocks, follow the principles covered above.
-  * Use prefixes in names of CSS classes (such as `bem-`) in order to differentiate the new code from the old code.
+* Create new components using the BEM methodology, and change the old ones as needed.
+* When desigining blocks, follow the principles covered above.
+* Use prefixes in names of CSS classes (such as `bem-`) in order to differentiate the new code from the old code.
 
-  Once you are familiar with BEM-style CSS, you can look at the specifics of implementing [BEM for JavaScript](../bem-for-js/bem-for-js.en.md).
+Once you are familiar with BEM-style CSS, you can look at the specifics of implementing [BEM for JavaScript](../bem-for-js/bem-for-js.en.md).

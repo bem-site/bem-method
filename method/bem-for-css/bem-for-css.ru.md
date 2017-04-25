@@ -313,6 +313,7 @@ CSS-реализация:
 }
 
 ```
+
 Используя модификаторы, можно изменять представление блока, точечно переопределяя необходимые для этого CSS-свойства.
 
 Например, так:
@@ -380,10 +381,10 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-<article class="article"></article>
+<article class="article">...</article>
 
 <footer class="footer">
-    <div class="copyright"></div>
+    <div class="copyright">...</div>
 </footer>
 ```
 
@@ -408,10 +409,10 @@ article, .footer div {
 HTML-реализация:
 
 ```html
-<article class="article text"></article>
+<article class="article text">...</article>
 
 <footer class="footer">
-    <div class="copyright text"></div>
+    <div class="copyright text">...</div>
 </footer>
 ```
 
@@ -645,6 +646,7 @@ CSS-реализация:
     background: rgba(255, 0, 0, 0.4);
 }
 ```
+
 Благодаря добавлению модификаторов, мы избавились от блока `btn`.
 
 **Важно!** Принцип DRY имеет отношение только к функционально однотипным компонентам страницы, например, кнопки.
