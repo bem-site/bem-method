@@ -783,7 +783,7 @@ Separating representations of the `button` block by levels allows you to:
   }
   ```
 
-  `desktop.blocks/button/button.css`
+  `mobile.blocks/button/button.css`
 
   ```css
   .button {
