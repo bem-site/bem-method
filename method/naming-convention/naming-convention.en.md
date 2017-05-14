@@ -2,7 +2,7 @@
 
 Working with [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) requires a knowledge of their naming rules.
 
-The main idea of the naming convention is to make the names of CSS selectors as informative and clear as possible. This will help make [code development](../solved-problems/#how-to-simplify-code-and-facilitate-refactoring) and [debugging](../solved-problems/#how-to-start-reusing-code-without-letting-components-influence-each-other) easier, and it also solves some of the [problems](../solved-problems/#how-to-get-self-documenting-code) faced by web developers.
+The main idea of the naming convention is to make the names of CSS selectors as informative and clear as possible. This will help make [code development](../solved-problems/solved-problems.en.md#how-to-simplify-code-and-facilitate-refactoring) and [debugging](../solved-problems/solved-problems.en.md#how-to-start-reusing-code-without-letting-components-influence-each-other) easier, and it also solves some of the [problems](../solved-problems/solved-problems.en.md#how-to-get-self-documenting-code) faced by web developers.
 
 Let's say we have a CSS selector named `menuitemvisible`. A quick view of such a notation doesn't allow us to identify types of BEM entities from the name of the selector.
 
