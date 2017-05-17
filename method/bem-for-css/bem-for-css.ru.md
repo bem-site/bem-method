@@ -653,7 +653,7 @@ CSS-реализация:
 
 **Пример**
 
-![buttons](buttons.png)
+![buttons](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/bem-for-css/buttons.svg)
 
 Как видно, между кнопками есть небольшие внешние отличия. Принцип DRY касается именно таких сущностей — функционально однотипных, но разных по оформлению.
 
@@ -661,7 +661,7 @@ CSS-реализация:
 
 **Пример**
 
-![yellow-blocks](yellow-blocks.png)
+![yellow-blocks](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/bem-for-css/yellow-blocks.svg)
 
 #### Композиция вместо наследования
 
