@@ -114,7 +114,7 @@ Have another look:
 
 See that `id` and tag names selectors are used in many rules.
 
-At the same time, even bigger project was started — [Yaru](http://wow.yandex.ru) — a blogging platform, a place for people to interact, to share, to read and to engage.
+At the same time, even bigger project was started Yaru — a blogging platform, a place for people to interact, to share, to read and to engage.
 
 There were dozens of various pages to support, and with the old-fashioned approach the code was running out of control on many levels.
 
