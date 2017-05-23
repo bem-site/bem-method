@@ -100,8 +100,8 @@ The namespace defined by the name of a block identifies a modifier as belonging 
 
 The full name of a modifier is created using the scheme:
 
-* Для булевых модификаторов — `owner-name_mod-name`.
-* Для модификаторов вида «ключ-значение» — `owner-name_mod-name_mod-val`.
+* For boolean modifiers — `owner-name_mod-name`.
+* For key-value modifiers — `owner-name_mod-name_mod-val`.
 
 > **Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#Why-write-the-block-name-in-the-names-of-modifiers-and-elements).
 
