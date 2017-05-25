@@ -328,7 +328,7 @@ common.blocks/
     button/
         _position/
             button_position_left.css
-            button_position_left.css
+            button_position_right.css
         button.js   # JS button implementation
 ```
 
