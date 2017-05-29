@@ -57,3 +57,4 @@
 * [x] [Каскадирование и БЭМ](https://blog.adn.agency/kaskadirovanie-i-bem/), 03.06.2016, Олег Завражин, Frontend developer
 * [x] [БЭМ для CSS](http://www.gtalk.kz/verstka/bem-for-css.html), 08.11.2016, Gtalk.kz
 * [x] [БЭМ-одержимость. Последствие параметрического дизайна](https://medium.com/koloskof/бэм-одержимость-последствие-параметрического-дизайна-3c1ccbcecf5a)
+* [x] [КБЭМ — Контейнер, Блок, Элемент, Модификатор](http://glivera-team.github.io/structure/2016/02/11/kbem.html), 11.02.2016, Glivera-team, команда разработчиков.
