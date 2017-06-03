@@ -49,9 +49,9 @@ Create a git repository from that directory:
 git init
 ```
 
-Install all dependencies:
+Install dependencies:
 
-**Note** Do not use `root` rights to install npm and bower dependencies. bower dependencies are installed in the `libs` directory by `npm postinstall`.
+**Note** Do not use `root` rights to install npm dependencies.
 
 ```bash
 npm install
@@ -60,7 +60,7 @@ npm install
 Build the project using [ENB](https://en.bem.info/toolbox/enb/):
 
 ```bash
-./node_modules/.bin/enb make
+npm run build
 ```
 
 Project build process configuration is determined in `.enb/make.js` file. It defines all the technologies of blocks implementation (templates, dependencies, CSS rules and JavaScript functionality) that have to be connected to the project pages by ENB.
@@ -68,7 +68,7 @@ Project build process configuration is determined in `.enb/make.js` file. It def
 Run a server mode for development:
 
 ```bash
-./node_modules/.bin/enb server
+npm start
 ```
 
 As a result, the following message appears:
@@ -79,10 +79,10 @@ This means that the ENB server is up and running. From this point on a solicited
 
 **Getting stuck?**
 
-If port:8080 is already in use by another program, you can redefine it using `-p` option.
+If `8080` port is already in use by another program, you can redefine it using `-p` option.
 
 ```bash
-./node_modules/.bin/enb server -p portNum
+npm start -- -p 8081
 ```
 
 ## Brief overview of the project structure
@@ -123,7 +123,7 @@ You have just one page in your project to begin with: index.html. Try and open i
 
 Initially index.html page contains sample blocks which demonstrate the diversity of the [bem-components](https://en.bem.info/libs/bem-components/) libraries, connected to the project-stub.
 
-**Note!** Make sure that you specify the full path to the index.html page. Otherwise some problems with relative paths could occur and all CSS rules will be ignored.
+**Note!** Make sure that you specify the full path to the index.html page. Otherwise some problems with relative paths could occur.
 
 ### Declaring a block in BEMJSON
 
@@ -214,7 +214,7 @@ This markup requires CSS rules for the `layout`. In BEM terms you have to [imple
 
 ### Creating a new block
 
-To implement a block using CSS technology you have to create a CSS file for this block in a corresponding block directory using `bem create` command of [bem-tools](https://github.com/bem/bem-tools/blob/dev/docs/commands/commands.en.md).
+To implement a block using CSS technology you have to create a CSS file for this block in a corresponding block directory using `bem create` command of [bem-tools-create](https://github.com/bem-tools/bem-tools-create).
 
 ```bash
 bem create -l desktop.blocks -b layout -T css
@@ -244,9 +244,7 @@ You can use our [cute BEM image](http://varya.me/online-shop-dummy/desktop.block
         block: 'logo',
         content: [{
             block: 'image',
-            attrs: {
-                src: '//varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
-            }
+            url: '//varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
         },
         {
             elem: 'slogan',
@@ -327,7 +325,7 @@ Use a `link` block from the same library to render an icon with a slogan as a li
                 content: [
                     {
                         block: 'image',
-                        attrs: { src: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png' }
+                        url: 'http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png'
                     },
                     {
                         elem: 'slogan',
@@ -600,34 +598,23 @@ It would be nice to have each item in the list of goods rendered as a rectangle 
 
 It provides just one block `box` that does all we need.
 
-You should declare a library name, its version (if available) and its repository URL in a `bower.json` file.
-
-```js
-"dependencies": {
-  "bem-components": "^5.0.0",
-  "j": "git://github.com/skad0/j.git#5e5d6e181ad98b33303a23fc610b614b5b0a3832"
-}
-```
-
-[Code sample](https://gist.github.com/tadatuta/ce9a013691c91adebec0) bower.json.
-
 Install a new library. For this run the following command:
 
 ```bash
-./node_modules/.bin/bower i
+npm install tadatuta/j --save-dev
 ```
 
 Next make your pages take blocks from the block level provided by the library . Do this by tuning a bundle configuration in a `.enb/make.js` file:
 
 ```js
 levels = [
-    { path: 'libs/bem-core/common.blocks', check: false },
-    { path: 'libs/bem-core/desktop.blocks', check: false },
-    { path: 'libs/bem-components/common.blocks', check: false },
-    { path: 'libs/bem-components/desktop.blocks', check: false },
-    { path: 'libs/bem-components/design/common.blocks', check: false },
-    { path: 'libs/bem-components/design/desktop.blocks', check: false },
-    { path: 'libs/j/blocks', check: false },
+    { path: 'node_modules/bem-core/common.blocks', check: false },
+    { path: 'node_modules/bem-core/desktop.blocks', check: false },
+    { path: 'node_modules/bem-components/common.blocks', check: false },
+    { path: 'node_modules/bem-components/desktop.blocks', check: false },
+    { path: 'node_modules/bem-components/design/common.blocks', check: false },
+    { path: 'node_modules/bem-components/design/desktop.blocks', check: false },
+    { path: 'node_modules/j/blocks', check: false },
     'common.blocks',
     'desktop.blocks'
 ];
@@ -635,7 +622,7 @@ levels = [
 
 [Code sample](https://gist.github.com/tadatuta/3d91a444180b23443b7e) .enb/make.js.
 
-You need to restart the server after changing the configuration to apply all changes. Kill the current process (`Ctrl+C`) and run the server again.
+You need to restart the server after changing the configuration to apply all changes. Kill the current process (`Ctrl + C`) and run the server again.
 
 ## Mix of blocks and elements
 
@@ -681,8 +668,8 @@ You can also mix an element with a block. Mix could be declared in BEMJSON or in
 Let's specify that each item element from a goods list has the same formatting as a head of the page. For this you need to mix each `item` from the `goods` block with the `box` block from the already linked library.
 
 ```js
-elem: 'item',
-    elemMods: { new: item.new ? 'yes' : undefined },
+    elem: 'item',
+    elemMods: { new: item.new && 'yes' },
     mix: [{ block: 'box' }],
     content: ...
 ```
@@ -817,10 +804,10 @@ Server builds it for us upon the first access.
 
 While developing every time you reload a page in a browser the server rebuilds what has to be rebuilt following your changes.
 
-To rebuild the entire project you can use the following ENB command:
+To rebuild the entire project you can use the following command:
 
 ```bash
-node_modules/.bin/enb make
+npm run build
 ```
 
 ## Key take-aways

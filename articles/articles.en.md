@@ -26,7 +26,6 @@
 * [ ] [How We’re Using Modules to Organize Our Front-End Code](http://code.tutsplus.com/articles/how-were-using-modules-to-organize-our-front-end-code--cms-22702), 19-11-2014, Tobias Cohen, web developer, Melbourne, Australia
 * [ ] [BEM and SMACSS: Advice From Developers Who’ve Been There](https://www.sitepoint.com/bem-smacss-advice-from-developers/), 07-01-2015, Patrick Catanzariti
 * [ ] [Side Effects in CSS](https://philipwalton.com/articles/side-effects-in-css/), 03-03-2015, Philip Walton. Engineer in Google
-* [ ] []
 * [ ] [Battling BEM (Extended Edition): 10 Common Problems And How To Avoid Them](https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/) Whether you’ve just discovered BEM or are an old hand (in web terms anyway!), you probably appreciate what a useful methodology it is.
 * [ ] [CSS at BBC Sport (Part 1)](https://medium.com/@shaunbent/css-at-bbc-sport-part-1-bab546184e66#.h32bnllba) The CSS foundation of BBC Sport is now under 9kb, with this they can build ~80% of any new components without adding any new CSS.
 * [x] [BEMantic: DRY Like You Mean It](https://medium.com/@stowball/bemantic-dry-like-you-mean-it-133ea3843d98#.x8bmlhfy8) Matt Stow explains why using a BEM (or similar methodology) doesn’t necessarily mean that your code won’t be semantic and accessible.
@@ -35,6 +34,10 @@
 * [ ] [Chainable BEM modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/), 16-02-2015, Jordan Lewis, Front End Developer
 * [x] [Learning to Love BEM](https://css-tricks.com/bem-101/), 06-05-2015, Johan Ronsse, Interface designer
 * [ ] [BEM 101](https://css-tricks.com/bem-101/), 02-04-2015, Robin Rendle, Web designer
+* [ ] [Working with BEM at Scale](https://www.sitepoint.com/working-bem-scale-advice-top-developers/), 28-04-2015, Patrick Catanzariti
+* [ ] [Building My Health Skill — Part 3](http://bluegg.co.uk/blog/building-my-health-skills-part-3), 01-05-2014, Tom Lloyd
+
+* https://www.stackbuilders.com/news/bem-and-maintainable-css
 
 TODO: process https://github.com/getbem/awesome-bem
 TODO: process https://github.com/sturobson/BEM-resources

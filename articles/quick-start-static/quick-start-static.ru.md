@@ -190,7 +190,7 @@
                             this._input = this.findChildBlock(Input);
 
                             // DOM-событие, на которое будет реакция
-                            this._domEvents('submit', function(e) {
+                            this._domEvents().on('submit', function(e) {
                                 // предотвращение срабатывания события по умолчанию:
                                 // отправка формы на сервер с перезагрузкой страницы
                                 e.preventDefault();
