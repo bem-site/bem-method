@@ -36,8 +36,8 @@
 * [ ] [BEM 101](https://css-tricks.com/bem-101/), 02-04-2015, Robin Rendle, Web designer
 * [ ] [Working with BEM at Scale](https://www.sitepoint.com/working-bem-scale-advice-top-developers/), 28-04-2015, Patrick Catanzariti
 * [ ] [Building My Health Skill — Part 3](http://bluegg.co.uk/blog/building-my-health-skills-part-3), 01-05-2014, Tom Lloyd
-
-* https://www.stackbuilders.com/news/bem-and-maintainable-css
+* [ ] [BEM AND MAINTAINABLE CSS](https://www.stackbuilders.com/news/bem-and-maintainable-css), 07-12-2016 by Juan Carlos Paucar
+* [ ] [Tame Unruly Style Sheets With These Three CSS Methodologies](https://www.sitepoint.com/tame-unruly-style-sheets-three-css-architecture-methodologies/), 29-03-2017 by Maria Antonietta Perna
 
 TODO: process https://github.com/getbem/awesome-bem
 TODO: process https://github.com/sturobson/BEM-resources
