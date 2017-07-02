@@ -15,7 +15,7 @@
 
 ```files
 project/
-    common.blocks/                             # уровень переопределения с блоками проекта
+    common.blocks/  # уровень переопределения с блоками проекта
         header/
         footer/
 ```
@@ -45,19 +45,19 @@ project/
 
 ```files
 project/
-    common.blocks/                             # уровень переопределения с блоками проекта
+    common.blocks/    # уровень переопределения с блоками проекта
         header/
         logo/
-    library.blocks/                            # уровень переопределения c блоками библиотеки
-        button/                                # блок button 
+    library.blocks/   # уровень переопределения c блоками библиотеки
+        button/       # блок button 
 ```
 
 В результате [сборки проекта](../build/build.ru.md) блок `button` будет подключен в проект: 
 
 ```css
-@import "common.blocks/header/header.css";     /* CSS-правила блока header с уровня общих блоков проекта */
-@import "common.blocks/logo/logo.css";         /* CSS-правила блока logo с уровня общих блоков проекта */
-@import "library.blocks/button/button.css";    /* CSS-правила блока button с уровня библиотеки */
+@import "common.blocks/header/header.css";  /* header с уровня общих блоков проекта */
+@import "common.blocks/logo/logo.css";      /* logo с уровня общих блоков проекта */
+@import "library.blocks/button/button.css"; /* button с уровня библиотеки */
 ```
 
 > Подробнее о [сборке БЭМ-проектов и порядке подключения БЭМ-сущностей в проект](https://ru.bem.info/methodology/build).
@@ -66,7 +66,7 @@ project/
 
 Блоки с любого уровня можно изменять под требования проекта на другом уровне переопределения: 
 
-<a name="redefine"> </a>
+<a name="redefine"></a>
 * **доопределять** — добавлять новые свойства блока;
 * **переопределять** — изменить существующие свойства блока.
 
@@ -78,17 +78,17 @@ project/
 
 Схема показывает подключение БЭМ-сущностей с разных уровней переопределения в сборку:
 
-![схема работы уровней переопределения](https://cdn.rawgit.com/innabelaya/bem-docs/6f6b44fa/pics/redefinition-level/redefinition-levels.svg)
+![схема работы уровней переопределения](redefinition-levels.svg)
 
 Рассмотрим подробнее изменение реализации блока на примере блока `button` из библиотеки, которая подключена в проект как отдельный уровень (`library.blocks`): 
 
 ```files
 project/
-    common.blocks/                             # уровень переопределения с блоками проекта
+    common.blocks/    # уровень переопределения с блоками проекта
         header/
         logo/
-    library.blocks/                            # уровень переопределения c блоками библиотеки
-        button/                                # блок button 
+    library.blocks/   # уровень переопределения c блоками библиотеки
+        button/       # блок button 
 ```
 
 Исходная CSS-реализация блока `button`:
@@ -107,7 +107,7 @@ CSS-реализация:
 
 Отображение:
 
-![button-default](https://cdn.rawgit.com/innabelaya/bem-docs/27499359/pics/redefinition-level/button-default.svg)
+![button-default](button-default.svg)
 
 Внесем изменения:
 
@@ -120,13 +120,13 @@ CSS-реализация:
 
 ```files
 project/
-    common.blocks/                             # уровень переопределения с блоками проекта
+    common.blocks/       # уровень переопределения с блоками проекта
         header/
         logo/
         button/
-            button.css                         # новые правила для блока button
-    library.blocks/                            # уровень переопределения c блоками библиотеки
-        button/                                # блок button 
+            button.css   # новые правила для блока button
+    library.blocks/      # уровень переопределения c блоками библиотеки
+        button/          # блок button 
             button.css
             button.js
 ```
@@ -137,17 +137,17 @@ project/
 /* Блок button в технологии CSS на уровне common.blocks */
 
 .button {
-    background-color: #ffdf3a;                 /* Новый цвет кнопки */
-    width: 150px;                              /* Ширина кнопки */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);      /* Параметры тени */
+    background-color: #ffdf3a;            /* Новый цвет кнопки */
+    width: 150px;                         /* Ширина кнопки */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 }
 ```
 
 В результате сборки реализация блока `button` будет состоять из исходных CSS-правил с уровня `library.blocks` и добавленных — с уровня `common.blocks`:
 
 ```css
-@import "library.blocks/button/button.css";    /* Исходные CSS-правила с уровня библиотеки */
-@import "common.blocks/button/button.css";     /* Особенности с уровня common.blocks*/
+@import "library.blocks/button/button.css";  /* Исходные CSS-правила с уровня библиотеки */
+@import "common.blocks/button/button.css";   /* Особенности с уровня common.blocks*/
 ```
 
 Повторяющееся свойство (`background-color`) будет переопределено (фон кнопки изменится на желтый), а новые свойства (`width` и `box-shadow`) — добавлены. Блоку `button` применится следующий набор свойств:
@@ -157,14 +157,14 @@ project/
     position: absolute;
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 3px;
-    background-color: #ffdf3a;                 /* Новый цвет кнопки */
-    width: 150px;                              /* Ширина кнопки */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);      /* Параметры тени */
+    background-color: #ffdf3a;             /* Новый цвет кнопки */
+    width: 150px;                          /* Ширина кнопки */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);  /* Параметры тени */
 }
 ```
 Новый вид кнопки:
 
-![Переопределенная кнопка](https://cdn.rawgit.com/innabelaya/bem-docs/fd92626a/pics/redefinition-level/button-redefined.svg)
+![Переопределенная кнопка](button-redefined.svg)
 
 В результате:
 
@@ -180,7 +180,7 @@ project/
 
 На схеме показана сборка проекта для разных платформ в зависимости от [юзер-агента](https://ru.wikipedia.org/wiki/User_Agent):
 
-![Уровни переопределения](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/build/build__levels.svg)
+![Уровни переопределения](../build/build__levels.svg)
 
 ## Примеры использования уровней переопределения
 
@@ -207,29 +207,29 @@ project/
 project/
     common.blocks/
         button/
-            button.css                         # базовая CSS-реализация кнопки
+            button.css   # базовая CSS-реализация кнопки
 
     desktop.blocks/   
         button/
-            button.css                         # особенности кнопки для настольных устройств
+            button.css   # особенности кнопки для настольных устройств
 
     mobile.blocks/
         button/
-            button.css                         # особенности кнопки для мобильных устройств
+            button.css   # особенности кнопки для мобильных устройств
 ```
 
 При сборке в файл `desktop.bundles/bundle/bundle.css` попадут все базовые CSS-правила кнопки с уровня `common.blocks` и переопределенные правила с уровня `desktop.blocks`.
 
 ```css
-@import "common.blocks/button/button.css";     /* Базовые CSS-правила */
-@import "desktop.blocks/button/button.css";    /* Особенности для настольных устройств */
+@import "common.blocks/button/button.css";   /* Базовые CSS-правила */
+@import "desktop.blocks/button/button.css";  /* Особенности для настольных устройств */
 ```
 
 Файл `mobile.bundles/bundle/bundle.css` будет включать базовые CSS-правила кнопки с уровня `common.blocks` и переопределенные правила с уровня `mobile.blocks`.
 
 ```css
-@import "common.blocks/button/button.css";     /* Базовые CSS-правила */
-@import "mobile.blocks/button/button.css";     /* Особенности для мобильных устройств */
+@import "common.blocks/button/button.css";   /* Базовые CSS-правила */
+@import "mobile.blocks/button/button.css";   /* Особенности для мобильных устройств */
 ```
 
 Разделение кода по отдельным уровням переопределения позволяет иметь одновременно разные сборки одного проекта и предоставлять необходимый вариант в зависимости от юзер-агента. 
@@ -242,10 +242,10 @@ project/
 
 ```files
 project/
-    common.blocks/                             # уровень переопределения с блоками проекта
+    common.blocks/     # уровень переопределения с блоками проекта
         header/
         logo/
-    library.blocks/                            # уровень переопределения c блоками библиотеки
+    library.blocks/    # уровень переопределения c блоками библиотеки
         button/                          
 ```
 
@@ -253,13 +253,13 @@ project/
 
 ```files
 project/
-    common.blocks/                             # уровень переопределения с блоками проекта
+    common.blocks/       # уровень переопределения с блоками проекта
         button/
-            button.css                         # переопределенные правила кнопки
+            button.css   # переопределенные правила кнопки
         header/
         logo/
-    library.blocks/                            # уровень переопределения c блоками библиотеки
-        button/                                # реализация кнопки в библиотеке
+    library.blocks/      # уровень переопределения c блоками библиотеки
+        button/          # реализация кнопки в библиотеке
 ```
 
 При обновлении библиотеки, переопределенное правило блока `button` (высота 24px) сохранится, так как [переопределение не затрагивает исходную реализацию блока](#Изменение-реализации-блока) и находится на другом уровне переопределения.
@@ -272,17 +272,17 @@ project/
 
 ```files
 projects/
-    common.blocks/                             # общие блоки для нескольких проектов
+    common.blocks/       # общие блоки для нескольких проектов
         button/
         input/
 
-    project-1/                                 # проект 1
-        button/                                # переопределение блока button для проекта 1
+    project-1/           # проект 1
+        button/          # переопределение блока button для проекта 1
         logo/
         modal/          
 
-    project-2/                                 # проект 2
-        button/                                # переопределение блока b1 для проекта 2
+    project-2/           # проект 2
+        button/          # переопределение блока b1 для проекта 2
         search/
         spin/         
 ```
@@ -295,14 +295,14 @@ projects/
 
 ```files
 project/
-    common.blocks/                             # общие блоки для описания бизнес-логики проекта
+    common.blocks/       # общие блоки для описания бизнес-логики проекта
         button/
         input/
         ...
-    alfa/                                      # тема оформления alfa
+    alfa/                # тема оформления alfa
         button/
         input/
-    beta/                                      # тема оформления beta
+    beta/                # тема оформления beta
         button/
         input/
 ```
@@ -322,24 +322,24 @@ project/
 
 ```files
 project/                    
-    common.blocks/                             # блоки проекта
+    common.blocks/      # блоки проекта
         headr/               
         user-name/          
         user-pic/           
         ...
     exps/
-        exp-1/                                 # уровень для эксперимента №1 
-            header/                            # новые отступы в шапке          
-            user-name/                         # новый шрифт для имени пользователя    
-            user-pic/                          # новый вид аватарки пользователя       
-        exp-2/                                 # уровень для эксперимента №2
-            header/                            # новые отступы в шапке          
-            user-name/                         # новый шрифт для имени пользователя    
-            user-pic/                          # новый вид аватарки пользователя       
-        exp-n/                                 # уровень для любого нового эксперимента
-            header/                            # новые отступы в шапке          
-            user-name/                         # новый шрифт для имени пользователя    
-            user-pic/                          # новый вид аватарки пользователя       
+        exp-1/          # уровень для эксперимента №1 
+            header/     # новые отступы в шапке          
+            user-name/  # новый шрифт для имени пользователя    
+            user-pic/   # новый вид аватарки пользователя       
+        exp-2/          # уровень для эксперимента №2
+            header/     # новые отступы в шапке          
+            user-name/  # новый шрифт для имени пользователя    
+            user-pic/   # новый вид аватарки пользователя       
+        exp-n/          # уровень для любого нового эксперимента
+            header/     # новые отступы в шапке          
+            user-name/  # новый шрифт для имени пользователя    
+            user-pic/   # новый вид аватарки пользователя       
 ```
 
 Чтобы увидеть изменения, достаточно подключить уровень эксперимента в сборку. 
