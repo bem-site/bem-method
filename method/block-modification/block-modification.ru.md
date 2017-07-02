@@ -38,11 +38,11 @@
 HTML-реализация:
 
 ```html
-    <!-- Блок popup -->
-    <div class="popup">...</div>
+<!-- Блок popup -->
+<div class="popup">...</div>
 ```
 
-![Default popup](https://cdn.rawgit.com/innabelaya/bem-docs/5b5972ad/pics/block-modification/popup-default.svg)
+![Default popup](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-default.svg)
 
 ### Изменение внешнего вида блока 
 
@@ -51,11 +51,11 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-    <!-- Блок popup с модификатором theme в значении sun-->
-    <div class="popup popup_theme_sun">...</div>
+<!-- Блок popup с модификатором theme в значении sun-->
+<div class="popup popup_theme_sun">...</div>
 ```
 
-![Всплывающее окно с желтым фоном](https://cdn.rawgit.com/innabelaya/bem-docs/5b5972ad/pics/block-modification/popup-theme-sun.svg)
+![Всплывающее окно с желтым фоном](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-theme-sun.svg)
 
 ### Изменение поведения блока
 
@@ -66,11 +66,11 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-    <!-- Блок popup -->
-    <div class="popup popup_direction_right">...</div>
+<!-- Блок popup -->
+<div class="popup popup_direction_right">...</div>
 ```
 
-![Всплывающее окно справа](https://cdn.rawgit.com/innabelaya/bem-docs/5b5972ad/pics/block-modification/popup-right.svg)
+![Всплывающее окно справа](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-right.svg)
 
 ### Изменение структуры блока
 
@@ -81,11 +81,11 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-    <!-- Блок popup -->
-    <div class="popup popup_has-tail">...</div>
+<!-- Блок popup -->
+<div class="popup popup_has-tail">...</div>
 ```
 
-![Всплывающее окно с хвостиком](https://cdn.rawgit.com/innabelaya/bem-docs/5b5972ad/pics/block-modification/popup-with-arrow.svg)
+![Всплывающее окно с хвостиком](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-with-arrow.svg)
 
 ### Изменение состояния блока
 
@@ -94,11 +94,11 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-    <!-- Блок button с модификатором disabled-->
-    <div class="button button_disabled">...</div>
+<!-- Блок button с модификатором disabled-->
+<div class="button button_disabled">...</div>
 ```
 
-![Disabled button](https://cdn.rawgit.com/innabelaya/bem-docs/5b5972ad/pics/block-modification/popup-disabled.svg)
+![Disabled button](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-disabled.svg)
 
 ### Добавление нескольких модификаторов 
 
@@ -110,13 +110,13 @@ HTML-реализация:
 HTML-реализация:
 
 ```html
-    <!-- Блок popup -->
-    <div class="popup popup_theme_sun popup_has-tail">...</div>
+<!-- Блок popup -->
+<div class="popup popup_theme_sun popup_has-tail">...</div>
 ```
 
 Всплывающее окно откроется вниз и будет иметь желтый фон и «хвостик»:
 
-![Всплывающее окно с желтым фоном и хвостиком](https://cdn.rawgit.com/innabelaya/bem-docs/5b5972ad/pics/block-modification/popup-with-arrow-theme-sun.svg)
+![Всплывающее окно с желтым фоном и хвостиком](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-with-arrow-theme-sun.svg)
 
 ## Изменение блока миксом
 
@@ -130,7 +130,7 @@ HTML-реализация:
 
 В примере рассмотрен блок `header` (шапки) из подключенной библиотеки. По умолчанию блок `header` ничего не знает о расположении вложенных в него блоков. Чтобы добавить в шапку блоки `logo`, `search` и `user`, необходимо определеить отступы для каждого вложенного блока: 
 
-![Универсалный блок header](https://cdn.rawgit.com/innabelaya/bem-docs/e5850a34/pics/block-modification/header-default.svg)
+![Универсалный блок header](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__header-default.svg)
 
 Шапка и вложенные в нее блоки `logo`, `search` и `user` должны остаться независимыми. Для этого позиционирование вложенных блоков задается через элементы блока `header`, которые примиксовываются к блокам.
 
@@ -145,7 +145,7 @@ HTML-реализация:
 </header>
 ```
 
-![Блок header с вложенными блоками](https://cdn.rawgit.com/innabelaya/bem-docs/e5850a34/pics/block-modification/header-with-blocks.svg)
+![Блок header с вложенными блоками](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__header-with-blocks.svg)
 
 Стили вложенных блоков `logo`, `search` и `user` не изменились и по-прежнему не содержат отступы. Блоки остались независимыми и могут использоваться повторно в любом месте.
 
@@ -189,7 +189,7 @@ CSS-реализация:
 
 Исходная реализация блока `button` в библиотеке:
 
-![Исходная реализация кнопки](https://cdn.rawgit.com/innabelaya/bem-docs/27499359/pics/redefinition-level/button-default.svg)
+![Исходная реализация кнопки](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__button-default.svg)
 
 Чтобы изменить цвет кнопки, необходимо доопределить CSS-правила блока `button` на уровне проекта (`project.blocks`).
 
@@ -199,23 +199,23 @@ CSS-реализация:
 project/
     library.blocks/
         button/
-            button.css                         # исходная CSS-реализация кнопки в библиотеке
+            button.css   # исходная CSS-реализация кнопки в библиотеке
 
     project.blocks/
         button/
-            button.css                         # переопределение на уровне проекта
+            button.css   # переопределение на уровне проекта
 ```
 
 В результате для блока `button` применятся правила с обоих уровней переопределения:
 
 ```css
-@import "library.blocks/button/button.css";   /* Исходные CSS-правила с уровня библиотеки */
-@import "project.blocks/button/button.css";   /* Особенности с уровня project.blocks */
+@import "library.blocks/button/button.css"; /* Исходные CSS-правила с уровня библиотеки */
+@import "project.blocks/button/button.css"; /* Особенности с уровня project.blocks */
 ```
 
 Новый внешний вид кнопки:
 
-![Переопределенная кнопка](https://cdn.rawgit.com/innabelaya/bem-docs/fd92626a/pics/redefinition-level/button-redefined.svg)
+![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__button-redefined.svg)
 
 > Больше [примеров использования уровней переопределения](../redefinition-level/redefinition-level.ru.md#Примеры-использования).
 
