@@ -28,9 +28,8 @@
 Один из наиболее распространенных способов — добавить соответствующий класс и жестко прописать имя блока в коде. 
 
 ```js
-document.querySelector('.button')
-.addEventListener('click', function() {
-  document.querySelector('.popup').classList.toggle('popup_visible');
+document.querySelector('.button').addEventListener('click', function() {
+    document.querySelector('.popup').classList.toggle('popup_visible');
 }, false);
 ```
 
@@ -38,7 +37,7 @@ document.querySelector('.button')
 
 ```js
 block('button').click(function() {
-  block('popup').toggleMod('visible');
+    block('popup').toggleMod('visible');
 });
 ```
 
