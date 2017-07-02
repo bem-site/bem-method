@@ -189,7 +189,7 @@ CSS-реализация:
 
 Исходная реализация блока `button` в библиотеке:
 
-![Исходная реализация кнопки](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__button-default.svg)
+![Исходная реализация кнопки](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__button-default.svg)
 
 Чтобы изменить цвет кнопки, необходимо доопределить CSS-правила блока `button` на уровне проекта (`project.blocks`).
 
@@ -215,7 +215,7 @@ project/
 
 Новый внешний вид кнопки:
 
-![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__button-redefined.svg)
+![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition/redefinition-levels__button-redefined.svg)
 
 > Больше [примеров использования уровней переопределения](../redefinition-level/redefinition-level.ru.md#Примеры-использования).
 
