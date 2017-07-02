@@ -215,7 +215,7 @@ project/
 
 Новый внешний вид кнопки:
 
-![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition/redefinition-levels__button-redefined.svg)
+![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__button-redefined.svg)
 
 > Больше [примеров использования уровней переопределения](../redefinition-level/redefinition-level.ru.md#Примеры-использования).
 
