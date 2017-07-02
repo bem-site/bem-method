@@ -60,7 +60,7 @@ project/
 @import "library.blocks/button/button.css"; /* button с уровня библиотеки */
 ```
 
-> Подробнее о [сборке БЭМ-проектов и порядке подключения БЭМ-сущностей в проект](https://ru.bem.info/methodology/build).
+> Подробнее о [сборке БЭМ-проектов и порядке подключения БЭМ-сущностей в проект](../build/build.ru.md).
 
 ### Изменение реализации блока
 
@@ -78,7 +78,7 @@ project/
 
 Схема показывает подключение БЭМ-сущностей с разных уровней переопределения в сборку:
 
-![схема работы уровней переопределения](redefinition-levels.svg)
+![схема работы уровней переопределения](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels.svg)
 
 Рассмотрим подробнее изменение реализации блока на примере блока `button` из библиотеки, которая подключена в проект как отдельный уровень (`library.blocks`): 
 
@@ -107,7 +107,7 @@ CSS-реализация:
 
 Отображение:
 
-![button-default](button-default.svg)
+![button-default](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/button-default.svg)
 
 Внесем изменения:
 
@@ -164,7 +164,7 @@ project/
 ```
 Новый вид кнопки:
 
-![Переопределенная кнопка](button-redefined.svg)
+![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/button-redefined.svg)
 
 В результате:
 
@@ -180,7 +180,7 @@ project/
 
 На схеме показана сборка проекта для разных платформ в зависимости от [юзер-агента](https://ru.wikipedia.org/wiki/User_Agent):
 
-![Уровни переопределения](../build/build__levels.svg)
+![Уровни переопределения](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/build/build__levels.svg)
 
 ## Примеры использования уровней переопределения
 
