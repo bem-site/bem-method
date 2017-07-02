@@ -78,7 +78,7 @@ project/
 
 Схема показывает подключение БЭМ-сущностей с разных уровней переопределения в сборку:
 
-![схема работы уровней переопределения](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels.svg)
+![схема работы уровней переопределения](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__levels.svg)
 
 Рассмотрим подробнее изменение реализации блока на примере блока `button` из библиотеки, которая подключена в проект как отдельный уровень (`library.blocks`): 
 
@@ -107,7 +107,7 @@ CSS-реализация:
 
 Отображение:
 
-![button-default](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/button-default.svg)
+![button-default](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__button-default.svg)
 
 Внесем изменения:
 
@@ -164,7 +164,7 @@ project/
 ```
 Новый вид кнопки:
 
-![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/button-redefined.svg)
+![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__button-redefined.svg)
 
 В результате:
 
