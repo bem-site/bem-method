@@ -121,18 +121,18 @@ The corresponding BEM tree will look like this:
 
 ```files
 header
-    ├──logo
-    └──search-form
-        ├──input
-        └──button
-    └──lang-switcher
-        └──lang-switcher__item
-            └──lang-switcher__link
-        └──lang-switcher__item
-            └──lang-switcher__link
+    logo
+    search-form
+        input
+        button
+    lang-switcher
+        lang-switcher__item
+            lang-switcher__link
+        lang-switcher__item
+            lang-switcher__link
 ```
 
-In XML and [BEMJSON](https://en.bem.info/technology/bemjson/) formats, the same BEM tree will appear as follows:
+In XML and [BEMJSON](https://github.com/bem/bem-xjst/blob/master/docs/en/4-data.md) formats, the same BEM tree will appear as follows:
 
 XML
 
@@ -174,7 +174,7 @@ BEMJSON
                 {
                     elem : 'item',
                     content : [
-                        { elem : 'link' }  
+                        { elem : 'link' }
                     ]
                 },
                 {

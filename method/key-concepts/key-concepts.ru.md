@@ -121,18 +121,18 @@
 
 ```files
 header
-    ├──logo
-    └──search-form
-        ├──input
-        └──button
-    └──lang-switcher
-        └──lang-switcher__item
-            └──lang-switcher__link
-        └──lang-switcher__item
-            └──lang-switcher__link
+    logo
+    search-form
+        input
+        button
+    lang-switcher
+        lang-switcher__item
+            lang-switcher__link
+        lang-switcher__item
+            lang-switcher__link
 ```
 
-Это же БЭМ-дерево будет иметь следующий вид в форматах XML и [BEMJSON](https://ru.bem.info/technology/bemjson/):
+Это же БЭМ-дерево будет иметь следующий вид в форматах XML и [BEMJSON](https://github.com/bem/bem-xjst/blob/master/docs/ru/4-data.md):
 
 XML
 
@@ -174,7 +174,7 @@ BEMJSON
                 {
                     elem : 'item',
                     content : [
-                        { elem : 'link' }  
+                        { elem : 'link' }
                     ]
                 },
                 {
