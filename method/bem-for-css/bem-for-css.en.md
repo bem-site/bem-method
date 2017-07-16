@@ -360,7 +360,7 @@ CSS implementation of a button:
 }
 ```
 
-In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. The `button` block doesn't specify any padding, so it can easily be reused anywhere.
+In this example, the external geometry and positioning of the `button` block are set via the `header__button` element. The `button` block doesn't specify any margin, so it can easily be reused anywhere.
 
 HTML implementation:
 
