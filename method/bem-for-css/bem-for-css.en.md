@@ -186,7 +186,7 @@ HTML implementation:
 <button class="button button_theme_islands">...</button>
 ```
 
-CSS rules are defined in the `button.button_theme_islands` selector.
+CSS rules are defined in the `.button.button_theme_islands` selector.
 
 Let's say we add the `active` modifier to the block and set the value to `true` :
 
