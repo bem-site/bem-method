@@ -2,7 +2,7 @@
 
 In the BEM methodology, JavaScript is used for making a webpage “come alive” and is considered one of the block [implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 
-BEM enforces [additional rules](../bem-js-principles/bem-js-principles.en.md) on JavaScript that help to apply all the concepts of the component approach of the BEM methodology.
+BEM enforces [additional rules](#javascript-implementation-using-the-bem-methodology) on JavaScript that help to apply all the concepts of the component approach of the BEM methodology.
 
 ## Basic principles of the component approach in JavaScript for BEM
 
