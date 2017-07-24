@@ -323,7 +323,7 @@ project/
 ```files
 project/                    
     common.blocks/      # блоки проекта
-        headr/               
+        header/               
         user-name/          
         user-pic/           
         ...
