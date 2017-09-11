@@ -49,9 +49,9 @@ For example, a menu item is not used outside of the context of a menu block, the
 
 ![Menu items](key-concepts__menu-items.png)
 
-> [A block or an element: when should I use which?](../../faq/faq.en.md#a-block-or-an-element-when-should-i-use-which)
+> [A block or an element: when should I use which?](../../faq/faq.en.md#should-i-create-a-block-or-an-element)
 >
-> [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2)
+> [Using elements within elements is not recommended by the BEM methodology](../../faq/faq.en.md#can-i-create-elements-of-elements-block__elem1__elem2)
 
 ## Modifier
 
