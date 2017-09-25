@@ -263,8 +263,8 @@ JavaScript-код описывается в файлах с расширение
     >
     > Способ 2. Изменение значения по умолчанию в файле `server/config.js`.
     >
-    > ```js
-    > defaultPort: 8000,
+    > ```text
+    > defaultPort: 8000
     > ```
 
     На компьютере запустился:
@@ -456,7 +456,7 @@ server/
 Содержит статические файлы, предназначенные для внешнего доступа:
 
 ```files
-static/                   
+static/
     favicon.ico           # Фавиконка
     index.min.css         # Символическая ссылка на `desktop.bundles/index/index.min.css`
     index.min.js          # Символическая ссылка на `desktop.bundles/index/index.min.js`
@@ -768,14 +768,14 @@ moment().startOf('day').fromNow();             // 17 часов назад
 
   Измените:
 
-  ```js
-  favicon: '/favicon.ico',
+  ```text
+  favicon: '/favicon.ico'
   ```
 
   На:
 
-  ```js
-  favicon: '/images/favicon.ico',
+  ```text
+  favicon: '/images/favicon.ico'
   ```
 
   [Полный код root.bemtree.js](https://gist.github.com/godfreyd/fba71361207a95134982579c13b0050d).
@@ -786,13 +786,13 @@ moment().startOf('day').fromNow();             // 17 часов назад
 
   Измените:
 
-  ```js
+  ```text
   .use(favicon(path.join(staticFolder, 'favicon.ico')))
   ```
 
   На:
 
-  ```js
+  ```text
   .use(favicon(path.join(staticFolder, '/images/favicon.ico')))
   ```
 
