@@ -103,8 +103,8 @@
 <header class="header">
     <img class="logo">
     <form class="search-form">
-        <input type="input">
-        <button type="button"></button>
+        <input class="input">
+        <button class="button"></button>
     </form>
     <ul class="lang-switcher">
         <li class="lang-switcher__item">
