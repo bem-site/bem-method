@@ -359,20 +359,20 @@ menu
 
 ```js
 block('menu')(
-    tag()('menu')
-        // Добавлен элемент menu__inner
-        content()(function() {
-            return {
-                elem: 'inner',
-                content: this.ctx.content
-            }
-        })
-    );
+    tag()('menu'),
+    // Добавлен элемент menu__inner
+    content()(function() {
+        return {
+            elem: 'inner',
+            content: this.ctx.content
+        };
+    })
+);
 
-    // Установлен тег <li> для элемента menu__inner
-    elem('inner')(
-        tag()('ul')
-    );
+// Установлен тег <li> для элемента menu__inner
+elem('inner')(
+    tag()('ul')
+);
 ```
 
 В результате выполнения шаблона элемент `menu__inner` будет добавлен как отдельный узел в HTML-дерево:
@@ -380,8 +380,8 @@ block('menu')(
 ```html
 <menu class="menu">
     <ul class="menu__inner">           // добавлен новый элемент menu__inner
-      <li class="menu__item"><li>
-      <li class="menu__item"><li>
+      <li class="menu__item"></li>
+      <li class="menu__item"></li>
     </ul>
 </menu>
 ```
