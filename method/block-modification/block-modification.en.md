@@ -28,10 +28,10 @@ The block is changed by setting or removing a modifier containing code that desc
 
 The modifier can define the block's:
 
-* [appearance](#changing-a-blocks-appearance) 
-* [behavior](#changing-a-blocks-behavior) 
-* [state](#changing-a-blocks-state) 
-* [structure](#changing-a-blocks-structure) 
+* [appearance](#changing-the-blocks-appearance) 
+* [behavior](#changing-the-blocks-behavior) 
+* [state](#changing-the-blocks-state) 
+* [structure](#changing-the-blocks-structure) 
 
 Let's use a `popup` block as an example for how to change a block using a modifier.
 
@@ -76,7 +76,7 @@ HTML implementation:
 
 The `has-tail` modifier with the `true` value adds to the `popup` block a new element — ”tail“. This modifier also adds offsets to the block to create space for the tail.
 
-> Information about when and how to use a [boolean modifier](../../faq/##how-should-i-choose-between-a-boolean-modifier-and-a-key-value-modifier) 
+> Information about when and how to use a [boolean modifier](../../faq/faq.en.md#how-should-i-choose-between-a-boolean-modifier-and-a-key-value-modifier).
 
 HTML implementation:
 
@@ -126,7 +126,7 @@ The block is changed by placing additional BEM entities on the same DOM node as 
 
 In the BEM methodology, a block's position on the page is set in the parent block. This allows the blocks to be independent and reusable.
 
-> More information about [external geometry and positioning](../bem-for-css/bem-for-css.en.md#external-geometry-and-positioning) .
+> More information about [external geometry and positioning](../bem-for-css/bem-for-css.en.md#external-geometry-and-positioning).
 
 The example shows a `header` block from an integrated library. By default, the `header` block doesn't know anything about the position of blocks that are nested in it. To add the `logo`, `search`, and `user` blocks to the header, you need to define the offsets for each nested block: 
 
@@ -153,7 +153,7 @@ The styles of the nested `logo`, `search`, and `user` blocks haven't changed, an
 
 Mixes are used to keep styles consistent in a set of different HTML elements on the page.
 
-> Information about [why BEM doesn't use global modifiers](#how-do-i-make-global-modifiers-for-blocks).
+> Information about [why BEM doesn't use global modifiers](../../faq/faq.en.md#how-do-i-make-global-modifiers-for-blocks).
 
 In the example, the text inside the `article` and `copyright` blocks needs to have the same color and font. To do this, you can mix the `text` block, which has styles defining the text color and font, with the `article` and `copyright` blocks.
 
@@ -178,9 +178,9 @@ CSS implementation:
 
 ## Using redefinition levels to change a block
 
-Changes are made to the block by combining the block properties from different [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level). Blocks can be [extended and redefined](../redefinition-levels/redefinition-levels.en.md#changing-block-implementation). Changes to a block are defined on a separate level and applied during assembly. 
+Changes are made to the block by combining the block properties from different [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level). Blocks can be [extended and redefined](../redefinition-levels/redefinition-levels.en.md#changing-the-block-implementation). Changes to a block are defined on a separate level and applied during assembly. 
 
-> More information about [how redefinition levels work](../redefinition-level/redefinition-level.en.md).
+> More information about [how redefinition levels work](../redefinition-levels/redefinition-levels.en.md).
 
 ### Example
 
@@ -215,7 +215,7 @@ New appearance of the button:
 
 ![Redefined button](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__button-redefined.svg) 
 
-> More [examples using redefinition levels](../redefinition-level/redefinition-level.en.md#usage-examples).
+> More [examples using redefinition levels](../redefinition-levels/redefinition-levels.en.md#examples-using-redefinition-levels).
 
 ## Using context to change a block
 
