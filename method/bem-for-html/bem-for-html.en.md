@@ -156,14 +156,14 @@ BEM tree:
 ```
 header 
     logo 
-        search-form 
-            input
-            button
-        lang-switcher 
-            lang-switcher__item 
-                lang-switcher__link 
-            lang-switcher__item 
-                lang-switcher__link
+    search-form 
+        input
+        button
+    lang-switcher 
+        lang-switcher__item 
+            lang-switcher__link 
+        lang-switcher__item 
+            lang-switcher__link
 ```
 
 ### Dividing code into parts
@@ -225,13 +225,13 @@ The example shows a template for the `menu` block from a library that is connect
 
 ```files
 project 
-    library.blocks/          # Redefinition level with blocks from the library 
-        menu/                # The `menu` block from the library 
+    library.blocks/              # Redefinition level with blocks from the library 
+        menu/                    # The `menu` block from the library 
             __item/ 
-            menu__item.tmpl  # Template for the `menu__item` element 
+                menu__item.tmpl  # Template for the `menu__item` element 
             menu.css 
             menu.js 
-            menu.tmpl        # Template for the `menu` block 
+            menu.tmpl            # Template for the `menu` block 
     common.blocks/                  
 ```
 
@@ -275,18 +275,18 @@ File system for the project:
 
 ```files
 project 
-    library.blocks/         # Redefinition level with library blocks 
-        menu/               # The `menu` block from the library 
+    library.blocks/             # Redefinition level with library blocks 
+        menu/                   # The `menu` block from the library 
             __item/ 
-            menu__item.tmpl 
+                menu__item.tmpl 
             menu.css 
             menu.js 
             menu.tmpl 
-    common.blocks/          # Redefinition level with project blocks 
+    common.blocks/              # Redefinition level with project blocks 
         menu/ 
             __item/ 
-            menu__item.tmpl # Redefined template for the `menu__item` element 
-            menu.tmpl       # Redefined template for the `menu` block
+                menu__item.tmpl # Redefined template for the `menu__item` element 
+            menu.tmpl           # Redefined template for the `menu` block
 ```
 
 Templates from the `common.blocks` level:
@@ -359,20 +359,20 @@ In the example, the `menu__inner` element is added to the tempate via JavaScript
 
 ```js
 block('menu')( 
-    tag()('menu') 
-        // Adding the menu__inner element 
-        content()(function() { 
-            return { 
-                elem: 'inner', 
-                content: this.ctx.content 
-            } 
-        }) 
-    ); 
+    tag()('menu'), 
+    // Adding the menu__inner element 
+    content()(function() { 
+        return { 
+            elem: 'inner', 
+            content: this.ctx.content 
+        }; 
+    }) 
+); 
 
-    // Setting the <li> tag for the menu__inner element 
-    elem('inner')( 
-    	tag()('ul') 
-    );
+// Setting the <li> tag for the menu__inner element 
+elem('inner')( 
+	tag()('ul') 
+);
 ```
 
 As a result of applying the template, the `menu__inner` element is added to the HTML tree as a separate node:
@@ -380,8 +380,8 @@ As a result of applying the template, the `menu__inner` element is added to the 
 ```html
 <menu class="menu"> 
     <ul class="menu__inner">           // Added the new menu__inner element  
-        <li class="menu__item"> <li> 
-        <li class="menu__item"> <li> 
+        <li class="menu__item"> </li> 
+        <li class="menu__item"> </li> 
     </ul> 
 </menu> 
 ```
