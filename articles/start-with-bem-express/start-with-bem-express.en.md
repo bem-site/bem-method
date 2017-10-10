@@ -432,7 +432,7 @@ desktop.bundles/
 
 #### server
 
-Contains the [Node modules](#node-modules) that listen for web requests and generate the page.
+Contains the Node modules that listen for web requests and generate the page.
 
 File system for the directory:
 
@@ -493,7 +493,7 @@ The user sends a query to the server.
 
 The application sends a request for data to the [Twitter Search API](https://dev.twitter.com/rest/public/search) and the [YouTube Data API](https://developers.google.com/youtube/v3/docs/search/list) according to the query received from the user.
 
-> **Note:** Generating the request and preparing the received data for templating are covered in detail in the section [Working with APIs](#working-with-apis).
+> **Note:** Generating the request and preparing the received data for templating are covered in detail below.
 
 #### Step 3. BEMTREE templating
 
@@ -616,7 +616,7 @@ passport.use('provider', new OAuth2Strategy({
 
 #### passport-youtube-v3
 
-Provides a [mechanism](https://github.com/yanatan16/passport-youtube-v3) for authentication on YouTube via the YouTube account and [OAuth 2.0](https://oauth.net/2/) tokens.
+Provides a mechanism for authentication on YouTube via the YouTube account and [OAuth 2.0](https://oauth.net/2/) tokens.
 
 Install:
 
