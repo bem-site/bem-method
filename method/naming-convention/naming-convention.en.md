@@ -1,250 +1,162 @@
 # Naming convention
 
-Working with [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) requires a knowledge of their naming rules.
+The name of a BEM entity is unique. The same BEM entity always has the same name in all technologies (CSS, JavaScript, and HTML). The primary purpose of the naming convention is to give names meaning so that they are as informative as possible for the developer. 
 
-The main idea of the naming convention is to make the names of CSS selectors as informative and clear as possible. This will help make [code development](../solved-problems/solved-problems.en.md#how-to-simplify-code-and-facilitate-refactoring) and [debugging](../solved-problems/solved-problems.en.md#how-to-start-reusing-code-without-letting-components-influence-each-other) easier, and it also solves some of the [problems](../solved-problems/solved-problems.en.md#how-to-get-self-documenting-code) faced by web developers.
+Compare the same name for a CSS selector that is written in different ways: 
 
-Let's say we have a CSS selector named `menuitemvisible`. A quick view of such a notation doesn't allow us to identify types of BEM entities from the name of the selector.
+* `menuitemvisible` 
+* `menu-item-visible` 
+* `menuItemVisible` 
 
-We can add a delimiter, or use a capital letter to start each word inside a phrase (classical CamelCase):
+To understand the meaning of the first name, you need read through each word carefully. In the last two examples, the name is clearly divided into its parts. But none of these names helps us understand that `menu` is a block, `item` is an element, and `visible` is a modifier. The rules for naming BEM entities were developed in order to make entity names unambiguous and easy to understand. 
 
-* `menu-item-visible`
-* `menuItemVisible`.
+## Naming rules
 
-Written like this, the name of the selector is clearly divided into logical parts.
+` block-name__elem-name_mod-name_mod-val` 
 
-We can assume that:
+* Names are written in lowercase Latin letters.
+* Words are separated by a hyphen (`-`).
+* The block name defines the [namespace](https://en.wikipedia.org/wiki/Namespace) for its elements and modifiers.
+* The element name is separated from the block name by a double underscore (`__`).
+* The modifier name is separated from the block or element name by a single underscore (`_`).
+* The modifier value is separated from the modifier name by a single underscore (`_`).
+* For boolean modifiers, the value is not included in the name.
 
-* `menu` is a block,
-* `item` is an element,
-* `visible` is a modifier.
+> **Important:** Elements of elements [do not exist in the BEM methodology](../../faq/faq.en.md#can-i-create-elements-of-elements-block__elem1__elem2). The naming rules do not allow creating elements of elements, but you can nest elements inside each other in the DOM tree. 
 
-However, real-life examples are often more complicated and not as straightforward, and that’s where the [BEM naming convention for CSS selectors](#css-selector-naming-convention) comes in useful.
+### Examples
 
-A number of [alternative naming schemes](#alternative-naming-schemes) based on the BEM principles also exist in the world of web development.
+In HTML, BEM entities are represented by the `class` attribute. In BEM, for any of the technologies, there is a call to the class: 
+* [CSS](../bem-for-css/bem-for-css.en.md#selectors) 
+* [JavaScript](../bem-for-js/bem-for-js.en.md#dom-representation-of-dynamic-blocks) 
+* [templates](../bem-for-html/bem-for-html.en.md#generating-html-automatically)
 
-## CSS selector naming convention
+Examples of the naming rules are applied to CSS.
 
-* Names of BEM entities are written using **numbers** and **lowercase Latin characters**.
-* Individual words within names are separated by a **hyphen** (`-`).
-* Information about the names of blocks, elements, and modifiers is stored using **CSS classes**.
+#### Block name
 
-Naming rules for:
+`menu` 
 
-* [blocks](#block-name)
-* [elements](#element-name)
-* [modifiers](#modifier-name)
+> [Why don't block names need prefixes?](../history/history.en.md#blocks-to-the-rescue) 
 
-### Block name
-
-A block name follows the `block-name` scheme and defines a [namespace](https://en.wikipedia.org/wiki/Namespace) for elements and modifiers.
-
-Various prefixes are sometimes added to block names.
-
-> Our experience of using prefixes is covered in detail in the article [The History of BEM](https://en.bem.info/methodology/history/#blocks-to-the-rescue).
-
-**Example**
-
-`menu`
-
-`lang-switcher`
-
-*HTML*
+*HTML* 
 
 ```html
-<div class="menu">...</div>
+<div class="menu">...</div> 
 ```
 
-*CSS*
+*CSS* 
 
 ```css
 .menu { color: red; }
 ```
 
-### Element name
+#### Element name
 
-The namespace defined by the name of a block identifies an element as belonging to the block. The element name is separated from the block name with a double underscore (`__`).
+`menu__item` 
 
-The full name of an element is created using this scheme:
+> **Important:** Identical elements in the same block have the same names. For example, all menu items in the menu block are called `menu__item`.
 
-`block-name__elem-name`
-
-If a block has several identical elements, such as in the case of menu items, all of them will have the same name `menu__item`.
-
-> **Important!** The BEM methodology [does not allow for elements of elements](../../faq/faq.en.md#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2).
-
-**Example**
-
-`menu__item`
-
-`lang-switcher__lang-icon`
-
-*HTML*
+*HTML* 
 
 ```html
-<div class="menu">
-  ...
-  <span class="menu__item"></span>
-</div>
+<div class="menu"> 
+    ...
+    <span class="menu__item"></span>
+</div> 
 ```
 
-*CSS*
+*CSS* 
 
 ```css
 .menu__item { color: red; }
 ```
 
-### Modifier name
+#### Block modifier name
 
-The namespace defined by the name of a block identifies a modifier as belonging to that block or its element. The modifier name is separated from the block or element name by a single underscore (`_`).
+`menu_hidden`  
+`menu_theme_islands` 
 
-The full name of a modifier is created using the scheme:
-
-* For boolean modifiers — `owner-name_mod-name`.
-* For key-value modifiers — `owner-name_mod-name_mod-val`.
-
-> **Important!** In the BEM methodology, [a modifier cannot be used outside of the context of its owner](../../faq/faq.en.md#Why-write-the-block-name-in-the-names-of-modifiers-and-elements).
-
-#### Block modifier
-
-* **Boolean modifier**.
-
-  The value is not specified for this type of modifier. The full name is created using the scheme: `block-name_mod-name`.
-
-  **Example**
-
-  `menu_hidden`
-
-* **Key-value modifier**.
-
-  The value of the modifier is separated from its name by a single underscore (`_`) The full name is created using the scheme: `block-name_mod-name_mod-val`.
-
-  **Example**
-
-  `menu_theme_islands`
-
-  *HTML*
-
-  ```html
-  <div class="menu menu_hidden">...</div>
-  <div class="menu menu_theme_islands">...</div>
-  ```
-
-  > *Incorrect notation*
-  >
-  > ```html
-  > <div class="menu_hidden">...</div>
-  > ```
-  >
-  > Here the notation is missing the block that is affected by the modifier.
-
-  *CSS*
-
-  ```css
-  .menu_hidden { display: none }
-  .menu_theme_islands { color: green; }
-  ```
-
-#### Element modifier
-
-* **Boolean modifier**.
-
-  The value is not specified for this type of modifier. The full name is created using the scheme: `block-name__elem-name_mod-name`.
-
-  **Example**
-
-  `menu__item_visible`
-
-* **Key-value modifier**.
-
-  The value of the modifier is separated from its name by a single underscore (`_`). The full name is created using the scheme: `block-name__elem-name_mod-name_mod-val`.
-
-  **Example**
-
-  `menu__item_type_radio`
-
-  *HTML*
-
-  ```html
-  <div class="menu">
-    ...
-    <span class="menu__item menu__item_visible menu__item_type_radio">...</span>
-  </div>
-  ```
-
-  *CSS*
-
-  ```css
-  .menu__item_type_radio { color: blue; }
-  ```
-
-## Example of using the naming convention
-
-The implementation of an authorization form in HTML and CSS:
-
-*HTML*
+*HTML* 
 
 ```html
-<form class="form form_login form_theme_forest">
-  <input class="form__input">
-  <input class="form__submit form__submit_disabled">
-</form>
+<div class="menu menu_hidden"> ... </div> 
+<div class="menu menu_theme_islands"> ... </div> 
 ```
 
-*CSS*
+*CSS* 
 
 ```css
-.form {}
-.form_theme_forest {}
-.form_login {}
-.form__input {}
-.form__submit {}
-.form__submit_disabled {}
+.menu_hidden { display: none; }
+.menu_theme_islands { color: green; }
+```
+
+#### Element modifier name
+
+`menu__item_visible`  
+` menu__item_type_radio` 
+
+*HTML* 
+
+```html
+<div class="menu"> 
+    ... 
+    <span class="menu__item menu__item_visible menu__item_type_radio"> ... </span> 
+</div> 
+```
+
+*CSS* 
+
+```css
+.menu__item_visible {}
+.menu__item_type_radio { color: blue; }
 ```
 
 ## Alternative naming schemes
 
-There are several alternative solutions that are based on the BEM naming convention.
+The naming rules above describe the classic approach to naming BEM entities. All [BEM tools](https://en.bem.info/toolbox/) follow the classic naming scheme by default.
+
+There are alternative solutions that are actively used in the BEM community. To have all technologies apply identical names that were created using alternative naming schemes, use the [bem-naming](https://en.bem.info/toolbox/sdk/bem-naming/) tool. By default, `bem-naming` is configured to use the methodology's standard naming convention, but it allows you to add rules so you can use alternative schemes.
 
 ### Two Dashes style
 
-`block-name__elem-name--mod-name`
+`block-name__elem-name--mod-name--mod-val` 
 
-* Names are written in lower case.
+* Names are written in lowercase Latin letters.
 * Words within the names of BEM entities are separated by a hyphen (`-`).
-* An element name is separated from a block name by a double underscore (`__`).
-* Boolean modifiers are delimited by double hyphens (`--`).
-* Key-value type modifiers are not used.
+* The element name is separated from the block name by a double underscore (`__`).
+* Boolean modifiers are separated from the name of the block or element by a double hyphen (`--`).
+* The value of a modifier is separated from its name by a double hyphen (`--`).
 
-> **Important!** A double hyphen inside a comment (`--`) is interpreted as part of the comment, which causes an error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments).
+> **Important:** A double hyphen inside a comment (`--`) may cause an error during [validation of an HTML document](http://www.w3.org/TR/html5/syntax.html#comments).
 
 ### CamelCase style
 
-`MyBlock__SomeElem_modName_modVal`
+`blockName-elemName_modName_modVal` 
 
-This style differs from the traditional [CamelCase](https://ru.wikipedia.org/wiki/CamelCase) in that it uses additional underscores for separating the names of BEM entities.
+* Names are written in Latin letters.
+* Each word inside a name begins with an uppercase letter.
+* The separators for names of blocks, elements, and modifiers are the same as in the standard scheme.
 
-### "Sans underscore" style
+### React style
 
-`blockName-elemName--modName--modVal`
+`BlockName-ElemName_modName_modVal` 
 
-* Names are written in CamelCase.
-* An element name is separated from a block name by a single hyphen (`-`).
-* Modifiers are delimited by double hyphens (`--`).
-* The value of a modifier is separated from its name by a double hyphen (`--`).
-
-> **Important!** A double hyphen inside a comment (`--`) is interpreted as part of the comment, which causes an error during document validation. [HTML5 Specification](http://www.w3.org/TR/html5/syntax.html#comments)
+* Names are written in Latin letters.
+* Names of blocks and elements begin with an uppercase letter. Names of modifiers begin with a lowercase letter.
+* Each word inside a name begins with an uppercase letter.
+* An element name is separated from the block name by a single hyphen (`-`).
+* The separators between names and values of modifiers are the same as in the standard scheme.
 
 ### No Namespace style
 
-`_available`
+`_available` 
 
-This style is characterized by the absence of a block or element name before a modifier. This scheme limits the use of [mixes](../key-concepts/key-concepts.en.md#mix), because it makes it impossible to determine which block or element a modifier belongs to.
+* Names are written in Latin letters.
+* The name of the block or element is not included before the modifier. 
 
-## Which style to choose
+This naming scheme limits the use of [mixes](../key-concepts/key-concepts.en.md#mix), because it makes it impossible to determine which block or element a modifier belongs to.
 
-The BEM methodology offers general principles for naming BEM entities. The choice of a particular naming scheme depends on your project requirements and personal preferences. One considerable advantage of using the [naming convention](#css-selector-naming-convention) offered by the methodology is the existence of ready-made development tools that are specifically geared towards the "classic naming".
+### Your naming system
 
-In addition, the BEM methodology is not limited in its scope to the HTML and CSS technologies that are discussed in this document. The concepts of blocks, elements, and modifiers are used when working with the JavaScript, templates and file structure of a BEM project.  The [bem-naming](https://en.bem.info/toolbox/sdk/bem-naming/) tool enables you to use the same names for BEM entities in any [implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology) that you may be using.
-
-By default, `bem-naming` is configured to use the naming convention according to the methodology, but it allows you to add rules so you can use alternative schemes.
+You can create your own custom naming solution for BEM entities. The most important thing is that your new naming system makes it possible to programmatically separate blocks from elements and modifiers.
