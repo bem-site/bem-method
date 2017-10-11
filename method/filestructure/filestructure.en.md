@@ -1,301 +1,183 @@
 # File structure organization
 
-A component-based approach used in the BEM methodology also determines the way that BEM projects are organized in a file structure. In BEM, it's not just the interface that is divided into independent components, i.e. blocks, but the implementation of blocks is also divided into independent parts, namely files.
+All BEM projects follow a similar structure in their file structure. When files are always in a familiar location, this makes it easier for developers to navigate a project and switch between projects.
 
-Below on this page you will find:
+In BEM, the [block](../key-concepts/key-concepts.en.md#block) is primary, and [technologies](../key-concepts/key-concepts.en.md#implementation-technology) are secondary.
 
-* [Principles of file structure organization](#principles-of-file-structure-organization-for-bem-projects)
-* [Examples of file structures for a BEM project](#examples-of-file-structures-for-a-bem-project)
-* [Examples of using redefinition levels](#examples-of-using-redefinition-levels)
+The BEM methodology has several approaches to organizing the project's file system:
 
-## Principles of file structure organization for BEM projects
+* [nested](#nested)
+* [flat](#flat)
+* [flex](#flex)
 
-In a BEM project, the code is broken down into small independent parts, to make working with individual blocks easier. Before they are sent to the browser, the files are assembled and optimized. That way we separate the human-manipulated code from the code that is sent to the browser.
+The choice is up to the developer.
 
-In the file structure, the codebase of BEM project is organized according to the following principles:
+## Guidelines for the file structure of a BEM project
 
-* [A block implementation is divided into separate parts](#a-block-implementation-is-divided-into-separate-files)
-* [Optional elements and modifiers are stored in separate files](#optional-elements-and-modifiers-are-stored-in-separate-files)
-* [Files are grouped by meaning and not by type](#files-are-grouped-by-meaning-and-not-by-type)
-* [A project is divided into redefinition levels](#a-project-is-divided-into-redefinition-levels)
+* [Projects consist of redefinition levels](#projects-consist-of-redefinition-levels)
+* [Block implementation consists of separate files](#block-implementation-consists-of-separate-files)
+* [Files are grouped by meaning, not by type](#files-are-grouped-by-meaning-not-by-type)
 
-### A block implementation is divided into separate files
+### Projects consist of redefinition levels
 
-A file set for a block (e.g., `input.css`, `input.js`) is determined by the [technologies](../key-concepts/key-concepts.en.md#implementation-technology) that make up the implementation of the block.
+A project always has at least one redefinition level. There is no limit on the maximum number of levels.
 
-*Why?*
+**Example**
 
-* **Enhanced project navigation.**
+```files
+project/
+    common.blocks/  # Redefinition level with the project blocks 
+    library.blocks/ # Redefinition level with the library blocks
+```
 
-  The project structure is built on a single principle, and the block names are unique. This enables developers to easily identify different parts of the project and to find necessary files quicker.
+### Block implementation consists of separate files
 
-* **Easier moving of blocks between projects.**
+There is a separate file for each implementation technology. The names of implementation files match the block names. 
 
-  The implementation of blocks is divided into separate files. To move a block from one project to another, you only need to copy the relevant files or directories.
+For example, if the appearance of the `input` block is defined using CSS, the code is stored in the `input.css` file.
 
-### Optional elements and modifiers are stored in separate files
+**Example**
 
-*Why?*
+```files
+project 
+    common.blocks/ 
+        input.css   # CSS implementation of the input block 
+        input.js    # JavaScript implementation of the input block
+```
 
-* **Only relevant block implementation is included**
+The code of modifiers and elements is also stored in separate files of the block. This approach allows you to [include](../build/build.en.md) just the modifiers and elements that are needed for this implementation of the block. 
 
-  Only files that are essential to a given block implementation are included in the build.
+**Example**
 
-### Files are grouped by meaning and not by type
+```files
+project 
+    common.blocks/ 
+        input.css            # CSS implementation of the input block 
+        input.js             # JavaScript implementation of the input block 
+        input_theme_sun.css  # Implementation of the input_theme_sun modifier 
+        input__clear.css     # CSS implementation of the input__clear element 
+        input__clear.js      # JavaScript implementation of the input__clear element
+``` 
 
-  Block files are grouped together based on common [naming rules](../naming-convention/naming-convention.en.md). For convenience, they can be grouped into a block directory.
+### Files are grouped by meaning, not by type
 
-*Why?*
+Each block has a directory with the name of the block that contains the files for implementing the block.
 
-* **Only necessary blocks are included in the project**
+In some approaches to file structure organization, block directories are not used. In this case, the block files are grouped using a namespace that is set as the block name. 
 
-  Blocks are implemented as independent entities. This enables us to configure a build in a way that ensures that only relevant blocks are included in the project.
+**Example**
 
-### A project is divided into redefinition levels
+```files
+project 
+    common.blocks/ 
+        input/            # Directory for the input block 
+            input.css     # CSS implementation of the input block 
+            input.js      # JavaScript implementation of the input block 
+        popup/            # Directory for the popup block 
+            popup.css     # CSS implementation of the popup block 
+            popup.js      # JavaScript implementation of the popup block
+```
 
-  The final implementation of a block can be split into [redefinition levels](#examples-of-using-redefinition-levels).
+To improve navigation across the project, block modifiers with multiple values can also be combined in separate directories. 
 
-*Why?*
+**Example**
 
-* **No code duplication.**
+```files
+project 
+    common.blocks/                     # Redefinition level with blocks 
+        input/                         # Directory for the input block 
+            _type/                     # Directory for the input_type modifier 
+                input_type_search.css  # CSS implementation of the input_type modifier 
+                input_type_pass.css    # CSS implementation of the input_type modifier 
+            input.css                  # CSS implementation of the input block 
+            input.js                   # JavaScript implementation of the input block 
+        popup/                         # Directory for the popup block
+```
 
-  Storing implementation common to all platforms on a separate level helps avoid code duplication and reduce debugging time.
 
-* **Redefinition and extension of ready-made library blocks.**
-
-  To modify a library block, you don't need to copy it to the project level. You just need to create the necessary file with the changes or new code at another redefinition level and include it in the build.
-
-* **Updating libraries linked to the project.**
-
-  Dividing a project into distinct levels lets us modify blocks without affecting the library source code. If the library gets updated, the block modification is stored at a different level of the project.
-
-## Examples of file structures for a BEM project
+## Approaches 
 
 ### Nested
 
-* For every block, there's a directory in the file structure.
-* The directory is named after the block.
+This is the classic file structure approach for BEM projects:
+
+* Each block corresponds to a single directory.
+* The code of modifiers and elements is stored in separate files.
+* The files of modifiers and elements are stored in separate directories.
+* The block directory is the root directory for the subdirectories of its elements and modifiers.
+* Names of element directories begin with a double underscore (`__`).
+* Names of modifier directories begin with a single underscore (`_`).
+
+**Example**
 
 ```files
-blocks/
-    input/     # input block directory
-    button/    # button block directory
+project 
+    common.blocks/                            # Redefinition level with blocks 
+        input/                                # Directory for the input block 
+            _type/                            # Directory for the input_type modifier 
+                input_type_search.css         # CSS implementation of the input_type modifier 
+            __clear/                          # Directory for the input__clear element 
+                _visible/                     # Directory for the input__clear_visible modifier 
+                    input__clear_visible.css  # CSS implementation of the input__clear_visible modifier 
+                input__clear.css              # CSS implementation of the input__clear element
+                input__clear.js               # JavaScript implementation of the input__clear element 
+        input.css                             # CSS implementation of the input block 
+        input.js                              # JavaScript implementation of the input block
 ```
 
-* A block implementation is divided into separate files known as technology files.
-* The files all have the same name as the block.
-* The extension of each file corresponds to its technology.
+The `nested` approach is used in the file structure of BEM libraries:
 
-```files
-blocks/
-    input/
-        input.css       # `input` block implementation in CSS
-        input.js        # `input` block implementation in JavaScript
-    button/
-        button.css
-        button.js
-        button.png
-```
-
-Names of files and directories for [BEM entities](../key-concepts/key-concepts.en.md#bem-entity) are based on the [naming convention](../naming-convention/naming-convention.en.md):
-
-* Element — `block__elem.extension` (`input__box.css`).
-* Block modifier — `block_mod_val.extension` (`input_type_search.css`) or `block_mod.extension` (`input_disabled.css`). Values of boolean modifiers are not included.
-* Element modifier — `block__elem_mod_val.extension` (`input__clear_size_large.css`) or `block__elem_mod.extension` (`input__clear_visible.css`).
-
-Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
-
-```files
-blocks/
-    input/
-        _type/                                 # `type` modifier directory
-            input_type_search.css              # Implementation of modifier `type`
-                                               # with value `search` in CSS technology
-        __box/                                 # `box` element directory
-            input__box.css
-        __clear/                               # `clear` element directory
-            _visible/                          # `visible` modifier directory
-                input__clear_visible.css       # Implementation of boolean modifier `visible`
-                                               # with value `true` in CSS technology
-            _size/                             # `size` modifier directory
-                input__clear_size_large.css    # Implementation of modifier `size`
-                                               # with value `large` in CSS technology
-            input__clear.css
-            input__clear.js
-        input.css
-        input.js
-    button/
-        button.css
-        button.js
-        button.png
-```
-
-If there are modifiers that differ in value (e.g., `popup_target_anchor.extension` and `popup_target_position.extension`), the shared code can be stored in a separate file (`popup_target.extension`) with no modifier value included in the name.
-
-```files
-blocks/
-    popup/
-        _target/
-            popup_target.css            # Common code of  modifier `target`
-            popup_target_anchor.css     # Modifier `target` with value `anchor`
-            popup_target_position.css   # Modifier `target` with value `position`
-        _visible/
-            popup_visible.css           # Boolean modifier `visible`
-    popup.css
-    popup.js
-```
-
-#### Real-life examples
-
-* [bem-core](https://github.com/bem/bem-core/tree/v2/common.blocks/page)
-* [bem-components](https://github.com/bem/bem-components/tree/v2/common.blocks/button)
+* [bem-core](https://github.com/bem/bem-core/tree/v4.2.1/common.blocks/page)
+* [bem-components](https://github.com/bem/bem-components/tree/v6.0.0/common.blocks/button)
 
 ### Flat
 
-* Blocks don't have their own directories.
-* Optional elements and modifiers are implemented in separate files.
+Simplified structure for the file structure:
+
+* Directories aren't used for blocks.
+* Optional elements and modifiers are implemented in separate files or in the main block file.
+
+**Example**
 
 ```files
-blocks/
-    input_type_search.js
-    input_type_search.bemhtml.js
-    input__box.bemhtml.js
-    input.css
-    input.js
-    input.bemhtml.js
-    button.css
-    button.js
-    button.bemhtml.js
-    button.png
+project 
+    common.blocks/ 
+        input_type_search.css     # The input_type_search modifier in CSS 
+        input_type_search.js      # The input_type_search modifier in JavaScript 
+        input__clear.js           # Optional element of the input block 
+        input.css 
+        input.js 
+        popup.css 
+        popup.js 
+        popup.png
 ```
 
 ### Flex
 
-The Flex scheme is very flexible in relation to the file structure organization for BEM projects:
+The most flexible approach is a combination of `flat` and `nested`. Blocks with a branched file structure used the `nested` approach. Simple blocks use the `flat` approach. 
 
-* One block per directory.
-* Elements and modifiers are implemented in separate files.
+How it works:
 
-  ```files
-  blocks/
-      input/
-          input_layout_horiz.css
-          input_layout_vertical.css
-          input__elem.css
-          input.css
-          input.js
-      button/
-  ```
+* Each block corresponds to a separate directory.
+* Elements and modifiers can be implemented in block files or in separate files.
 
-* One block per directory.
-* Elements and modifiers are implemented inside block files.
-
-  ```files
-  blocks/
-      input/
-          input.css
-          input.js
-      button/
-  ```
-
-* Blocks don't have their own directories.
-* Elements and modifiers are implemented inside block files.
-
-  ```files
-  blocks/
-      input.css
-      input.js
-      button.css
-      button.js
-  ```
-
-* Blocks don't have their own directories.
-* Optional elements and modifiers are implemented in separate files.
-
-  ```files
-  blocks/
-      input_type_search.js
-      input_type_search.bemhtml.js
-      input__box.bemhtml.js
-      input.css
-      input.js
-      input.bemhtml.js
-      button.css
-      button.js
-      button.bemhtml.js
-      button.png
-  ```
-
-Modifiers and elements are stored in separate files and are grouped into accordingly named block subdirectories.
+**Example**
 
 ```files
-blocks/
-    input/
-        _type/                                 # `type` modifier directory
-            input_type_search.css              # Implementation of modifier `type`
-                                               # with value `search` in CSS technology
-        __box/                                 # `box` element directory
-            input__box.css
-        input.css
-        input.js
-    button/
-        button.css
-        button.js
-        button.png
-```
-
-## Examples of using redefinition levels
-
-The implementation of a block can be divided into [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
-
-Let's take a few examples:
-
-* [Linking a library](#linking-a-library)
-* [Dividing a project into platforms](#dividing-a-project-into-platforms)
-
-### Linking a library
-
-A library can be linked to a project as a separate level. Blocks can be modified (extended or redefined) at another project level. During the build process the original block implementation will be linked from the library level and the redefined one from the project level.
-
-Such an arrangement allows us to preserve changes made to the blocks if the library gets updated — the library source code will be updated while the specific implementation of the project blocks will remain the same because it is stored at a different level.
-
-```files
-library.blocks/
-    button/
-        button.css    # CSS implementation in the linked library (height 20px)
-project.blocks/
-    button/
-        button.css    # Redefinition of CSS implementation (height 24px)
-```
-
-### Dividing a project into platforms
-
-A project is divided into platforms (`mobile` and `desktop`) and into respective redefinition levels in the file structure. The `common` level contains the implementation of blocks that is common to both platforms. The `desktop` and `mobile` levels contain platform-specific block implementations.
-
-Let's look at an example:
-
-```files
-common.blocks/
-    button/
-        button.css    # Generic CSS implementation of the button
-desktop.blocks/
-    button/
-        button.css    # Desktop platform-specific button features
-mobile.blocks/
-    button/
-        button.css    # Mobile platform-specific button features
-```
-
-During the build process, all the generic CSS rules for the button will be included in the `desktop.css` file from the `common` level, and the redefined rules from the `desktop` level.
-
-```css
-@import url(common.blocks/button/button.css);    /* Generic CSS rules */
-@import url(desktop.blocks/button/button.css);   /* Desktop platform-specific */
-```
-
-The `mobile.css` file will include the generic CSS rules for the button from the `common` level and the redefined rules from the `mobile` level.
-
-```css
-@import url(common.blocks/button/button.css);    /* Generic CSS rules */
-@import url(mobile.blocks/button/button.css);    /* Mobile platform-specific */
+project 
+    common.blocks/
+        input/                                # Directory for the input block 
+            _type/                            # Directory for the input_type modifier 
+                input_type_search.css         # CSS implementation of the input_type modifier 
+            __clear/                          # Directory for the input__clear element 
+                _visible/                     # Directory for the input__clear_visible modifier 
+                    input__clear_visible.css  # CSS implementation of the input__clear_visible modifier 
+                input__clear.css              # CSS implementation of the input__clear element 
+                input__clear.js               # JavaScript implementation of the input__clear element 
+            input.css                         # CSS implementation of the input block 
+            input.js                          # JavaScript implementation of the input block 
+        popup/                                # Directory for the popup block 
+            popup.css 
+            popup.js 
+            popup.png
 ```
