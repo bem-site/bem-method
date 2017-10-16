@@ -53,66 +53,72 @@
 
 ### bem-xjst
 Выпустили релизы: 
-* [v8.6.12](https://github.com/bem/bem-xjst/releases/tag/v8.6.12)-[v8.6.13](https://github.com/bem/bem-xjst/releases/tag/v8.6.13).  
-  * `generate()` method fixed: CommonJS variant should not affect global.
-
-* [v8.7.0](https://github.com/bem/bem-xjst/releases/tag/v8.7.0)-[v8.7.1](https://github.com/bem/bem-xjst/releases/tag/v8.7.1)  
-  * Nested mixes is supported. It’s been worked in v1.x but then somehow was broken. Now you can use it again.
-
-{ block: 'b', mix: { block: 'c', mix: { block: 'nested-mix', js: true } } }
-Will be rendered as:
-
-<div class="b c nexted-mix i-bem"></div>
-BEMHTML: OL and UL end tags is not optional according to W3C HTML4 spec.
-
-* Source map support added.
-* Runtime line check: mods can’t be Array typed.
-
-
 * [v8.8.0](https://github.com/bem/bem-xjst/releases/tag/v8.8.0)-[v8.8.2](https://github.com/bem/bem-xjst/releases/tag/v8.8.2)  
-  * Custom naming improved: mods can be object { name: '...', val: '...' }. Backward capability is supported. Улучшено пользовательское именование: модами могут быть объекты {name: '...', val: '...'}. Поддерживается обратная возможность.  
-  * Fix: generate() exports to commonJS  
-  * When you use production option with true value you can define function for custom error logging. This function will be used instead of regilar console.error. Custom function will be filled with two arguments:
+* [v8.7.0](https://github.com/bem/bem-xjst/releases/tag/v8.7.0)-[v8.7.1](https://github.com/bem/bem-xjst/releases/tag/v8.7.1) 
+* [v8.6.12](https://github.com/bem/bem-xjst/releases/tag/v8.6.12)-[v8.6.13](https://github.com/bem/bem-xjst/releases/tag/v8.6.13).  
 
-* Object with block, element and modifiers fields where error occurred.
-* Original JS error.
+Основные изменения:
 
-You can define custom onError function by extending prototype of BEMContext. 
+* Исправлен экспорт библиотек, в первую очередь для CommonJS.
+* Добавили возможность задавать функцию для кастомизации вывода ошибок.
+* Возобновили поддержку вложенных миксов.
+* Обновили зависимости от [vow](https://www.npmjs.com/package/vow) и [uglify-js](https://www.npmjs.com/package/uglify-js). 
+* Добавили поддержку source map.
 
+Подробности читайте в [CHANGELOG](https://github.com/bem/bem-xjst/blob/master/CHANGELOG.md).
 
 ### bem-express
 Обновили версии библиотек bem-core 4.2.1 и bem-components 6.0.1.
 
+### bemhint
+Выпустили новую версию [bemhint](https://ru.bem.info/toolbox/bemhint/) [0.10.0](https://github.com/bemhint/bemhint/tree/v0.10.0), где появилась поддержка предупреждений. Обновление сохраняет полную обратную совместимость с предыдущей версией и уже опробовано на нескольких реальных проектах.
+
+Кроме того, вынесли в open source линтер недостающих депсов [bemhint-estree](https://github.com/bemhint/bemhint-estree), где добавили поддержку ES6 и написали [обертку-раннер](https://github.com/bemhint/bemhint-bem-xjst) для линтера [bem-xjst](#bem-xjst). В каждом репозитории есть подробная документация.
+
 ### bemhint-deps-schema
 Выпустили новую версию плагина для bemhint — [bemhint-deps-schema 2.1.0](https://www.npmjs.com/package/bemhint-deps-schema), который проверяет, чтобы файлы `*.deps.js` соответствовали спецификации. Теперь `bemhint-deps-schema` умеет обрабатывать не только `.json`-, но и `.js`-файлы с `module.exports`.
  
+### enb-bemxjst
+Начали обновление [enb-bemxjst](https://github.com/enb/enb-bemxjst) до актуальной версии [bem-xjst](#bem-xjst), где появилась поддержка экспортов в разные модульные системы (раньше эту задачу брала на себя технология для ENB). В процессе обнаружились баги в самом bem-xjst, после решения которых в enb-bemxjst станут доступны все те крутые фичи и багфиксы, которые уже давно готовы в самом bem-xjst 8.x.
+
 ## Новости инструментов
 
 ### bem-sdk
-Начали большую работу по переносу bem-sdk в монорепозиторий: https://github.com/bem/bem-sdk.
+Начали, но пока не закончили большую работу по переносу bem-sdk в [монорепозиторий](https://github.com/bem/bem-sdk).
+
+В процессе избавились от циклических зависимостей между модулями и распилили все для оптимального использования на клиенте. Однако закончить миграцию не успели.
+
+На хакатоне продолжили работу по миграции тестов модулей bem-sdk с `ava` на `mocha`, что позволило считать покрытие в монорепозитории. Доделать поддержку сетов не успели, но, кажется, придумали, как сделать правильно и сохранить обратную совместимость.
+
+Помимо этого починили баги и обновили документацию.
+
+Алексей Ярошевич написал еще пару пакетов [@bem/sdk.file](https://www.npmjs.com/package/@bem/sdk.file) и [@bem/sdk.naming.file.stringify](https://www.npmjs.com/package/@bem/sdk.naming.file.stringify) — теперь можно взять описание БЭМ-сущности, путь до уровня, передать вашу схему файловой структуры и получить путь до файла.
+
+Все пакеты зарелизили, так что теперь можно пробовать мигрировать (впрочем, можно было и раньше ;)
+
+### bem-sdk в ENB
+Продолжаем внедрять модули из bem-sdk в ENB.
+В ближайшее время ожидается canary-версия, которую можно будет пробовать у себя в проекте. Подглядывать (или помогать) можно [здесь](https://github.com/enb/enb-bem-techs/tree/3.x).
 
 ### borschik
 Выпустили мажорную версию borschik [v2.0.0](https://github.com/borschik/borschik/tree/v2.0.0), где заменили [uglify-js](https://www.npmjs.com/package/uglify-js) на [uglify-es](https://www.npmjs.com/package/uglify-es) для поддержки ES6.
 
+### md2xliff и линтер Markdown-документации
+Начали миграцию [md2xliff](https://github.com/cataria-rocks/md2xliff/) — инструмента для итеративного перевода документации в маркдауне — с marked на remark. По задумке это должно исправить нерешаемые проблемы marked.
+Написали правило для [линтера Markdown-документации](https://github.com/godfreyd/tech-doc-insider) на поиск стоп-слов.
+
 ## Новости БЭМ из мира React
 
 ### bem-react-core
-Продолжаем активно развивать библиотеку bem-react-core. Выпустили несколько минорных версий [v0.4.3](https://github.com/bem/bem-react-core/tree/v0.4.3)-[v0.4.6](https://github.com/bem/bem-react-core/tree/v0.4.6). 
+Продолжаем активно развивать библиотеку bem-react-core в beta-режиме. Выпустили несколько минорных версий [v0.4.3](https://github.com/bem/bem-react-core/tree/v0.4.3)-[v0.4.6](https://github.com/bem/bem-react-core/tree/v0.4.6). 
 
-//
-Основные изменения: 
-- Рендер без CSS-класса (bem:false). 
-- Поддержка [cls](https://github.com/bem/bem-react-core/blob/v0.4.2/REFERENCE.ru.md#cls), [mix](https://github.com/bem/bem-react-core/blob/v0.4.2/REFERENCE.ru.md#mix-addmix). 
-- Доопределение статических полей `defaultProps` и `propTypes`. 
-- Сокращенный синтаксис декларации модификаторов. 
-- Поддержка [HOC](https://facebook.github.io/react/docs/higher-order-components.html) (redux, flux и других оберток). 
-//
-
-Обновили документацию – [REFERENCE](https://github.com/bem/bem-react-core/blob/master/REFERENCE.ru.md). 
+Основная документация:
+* [README](https://github.com/bem/bem-react-core/blob/master/README.ru.md)
+* [REFERENCE](https://github.com/bem/bem-react-core/blob/master/REFERENCE.ru.md)
 
 Провели ряд мероприятий, посвященных bem-react-core:
 * Провели серию мастер-классов по bem-react-core. Видео можно найти на YouTube в канале [bem.info](http://bit.ly/BEM-video).
-* Сергей Бережной рассказл на Я.Субботнике по фронтенду, что делать, если вы используете i-bem.js и хотите получить преимущества React-подхода без потери привычных БЭМ-терминов и декларативности. И как поступить, когда вы используете React и хотите получить преимущества БЭМ-методологии. [Видео доклада](http://bit.ly/2xcIDlY).
+* Сергей Бережной рассказл на Я.Субботнике по фронтенду, что делать, если вы используете i-bem.js и хотите получить преимущества React-подхода без потери привычных БЭМ-терминов и декларативности. Как нужно поступать, если вы используете React и хотите получить преимущества БЭМ-методологии. [Видео доклада](http://bit.ly/2xcIDlY).
 
 ### bem-react-components
 Продолжаем активно развивать [bem-react-components](https://github.com/bem/bem-react-components) — библиотеку блоков для разработки с React по БЭМ-методологии. 
