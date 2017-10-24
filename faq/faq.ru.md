@@ -186,7 +186,7 @@
 
 Если нужная вам реализация может использоваться повторно и не зависит от реализации других компонентов страницы. Например, блок `select` имеет модификаторы: **hovered**, **pressed**, **disabled**, **focused**, **opened**.
 
-![Модификаторы блока select](https://rawgit.com/bem-site/bem-method/godfreyd-FAQ/faq/faq_create_modifier.svg)
+![Модификаторы блока select](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/faq/faq_create_modifier.svg)
 
 ### Создавайте микс
 
