@@ -25,12 +25,10 @@
 ### BEM-XJST
 * [Основы шаблонизации в БЭМ](http://bit.ly/2uON7RG) (видео)
 
-
 ### Сборка
 * [Сборка](https://ru.bem.info/forum/-686/) (видео)
 * [Сборка на основе деклараций с уровнями переопределения](https://events.yandex.ru/lib/talks/3521/) (видео)
 * [Сборка проекта с Gulp](http://bit.ly/2xarloh) (видео)
-
 
 ### bem-components
 * [Обзор библиотеки](http://bit.ly/2uXLKME) (видео)
@@ -43,10 +41,8 @@
 
 * [Автоматизация БЭМ](https://www.youtube.com/watch?v=-un-YYgU6Pg)
 * [Инструменты фронтенд-разработчика](https://ru.bem.info/talks/bemup-moscow-2014/#Инструменты-фронтенд-разработчика-—-Владимир-Гриненко)
-
+* [Записи всех вебинаров по БЭМ](https://ru.bem.info/forum/?labels=webinar)
 
 ## База знаний БЭМ
 * [Внешние статьи про БЭМ](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/articles.ru.md)
-* [Записи всех вебинаров по БЭМ](https://ru.bem.info/forum/?labels=webinar)
 
-Официальный канал bem.info [bem.info](http://bit.ly/BEM-video) на YouTube.
