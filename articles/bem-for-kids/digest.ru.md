@@ -7,9 +7,8 @@
 * [Новости инструментов](#Новости-инструментов)
 * [Новости БЭМ из мира React](#Новости-БЭМ-из-мира-react)
 * [Новости документации](#Новости-документации)
-* [Новости сайта bem.info](#Новости-сайта-bem.info)
+* [Новости сайта bem.info](#Новости-сайта-beminfo)
 * [Новости мероприятий и сообщества](#Новости-мероприятий-и-сообщества)
-
 
 ## Новости библиотек
 
@@ -60,13 +59,12 @@
 
 Основные изменения:
 
-* Исправлено поведение режима `wrap()`, который ?? Wrap should save BEMContext
-* Исправлены ошибки в методе `generate()`
-* Исправлен экспорт библиотек, в первую очередь для CommonJS.
-* Добавили возможность задавать функцию для кастомизации вывода ошибок.
-* Возобновили поддержку вложенных миксов.
-* Обновили зависимости от [vow](https://www.npmjs.com/package/vow) и [uglify-js](https://www.npmjs.com/package/uglify-js). 
 * Добавили поддержку source map.
+* Исправлен экспорт библиотек, в первую очередь для CommonJS.
+* Возобновили поддержку вложенных миксов.
+* Исправлены ошибки в методе `generate()`
+* Добавили возможность задавать функцию для кастомизации вывода ошибок.
+* Обновили зависимости от [vow](https://www.npmjs.com/package/vow) и [uglify-js](https://www.npmjs.com/package/uglify-js). 
 
 Подробности читайте в [CHANGELOG](https://github.com/bem/bem-xjst/blob/master/CHANGELOG.md).
 
@@ -76,7 +74,8 @@
 ### bemhint
 Выпустили новую версию [bemhint](https://ru.bem.info/toolbox/bemhint/) [0.10.0](https://github.com/bemhint/bemhint/tree/v0.10.0), где появилась поддержка предупреждений. Обновление сохраняет полную обратную совместимость с предыдущей версией и уже опробовано на нескольких реальных проектах.
 
-Кроме того, вынесли в open source линтер недостающих депсов [bemhint-estree](https://github.com/bemhint/bemhint-estree), где добавили поддержку ES6 и написали [обертку-раннер](https://github.com/bemhint/bemhint-bem-xjst) для линтера [bem-xjst](#bem-xjst). В каждом репозитории есть подробная документация.
+### bemhint-estree
+Выпустили линтер недостающих депсов [bemhint-estree](https://github.com/bemhint/bemhint-estree), где добавили поддержку ES6 и написали [обертку-раннер](https://github.com/bemhint/bemhint-bem-xjst) для линтера [bem-xjst](#bem-xjst). В каждом репозитории есть подробная документация.
 
 ### bemhint-deps-schema
 Выпустили новую версию плагина для bemhint — [bemhint-deps-schema 2.1.0](https://www.npmjs.com/package/bemhint-deps-schema), который проверяет, чтобы файлы `*.deps.js` соответствовали спецификации. Теперь `bemhint-deps-schema` умеет обрабатывать не только `.json`-, но и `.js`-файлы с `module.exports`.
@@ -87,7 +86,7 @@
 ## Новости инструментов
 
 ### bem-sdk
-Начали большую работу по переносу bem-sdk в [монорепозиторий](https://github.com/bem/bem-sdk).
+Проделали большую работу по переносу bem-sdk в [монорепозиторий](https://github.com/bem/bem-sdk).
 
 В процессе избавились от циклических зависимостей между модулями и распилили все для оптимального использования на клиенте. Однако закончить миграцию не успели.
 
@@ -105,10 +104,6 @@
 
 ### borschik
 Выпустили мажорную версию borschik [v2.0.0](https://github.com/borschik/borschik/tree/v2.0.0), где заменили [uglify-js](https://www.npmjs.com/package/uglify-js) на [uglify-es](https://www.npmjs.com/package/uglify-es) для поддержки ES6.
-
-### md2xliff и линтер Markdown-документации
-Начали миграцию [md2xliff](https://github.com/cataria-rocks/md2xliff/) — инструмента для итеративного перевода документации в маркдауне — с marked на remark. По задумке это должно исправить нерешаемые проблемы marked.
-Написали правило для [линтера Markdown-документации](https://github.com/godfreyd/tech-doc-insider) на поиск стоп-слов.
 
 ## Новости БЭМ из мира React
 
