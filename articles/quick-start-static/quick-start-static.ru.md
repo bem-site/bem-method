@@ -43,7 +43,7 @@
 
 ## Клонируем БЭМ-проект
 
-Чтобы быстро развернуть БЭМ-проект, воспользуемся локальной копией шаблонного репозитория [project-stub](https://github.com/bem/project-stub), который содержит необходимый минимум конфигурационных файлов для создания БЭМ-проекта с нуля. В project-stub по умолчанию подключены основные [БЭМ-библиотеки](https://ru.bem.info/platform/libs/):
+Чтобы быстро развернуть БЭМ-проект, воспользуемся локальной копией шаблонного репозитория [project-stub](https://github.com/bem/project-stub), который содержит необходимый минимум конфигурационных файлов. В project-stub по умолчанию подключены основные [БЭМ-библиотеки](https://ru.bem.info/platform/libs/):
 
 * [bem-core](https://ru.bem.info/platform/libs/bem-core/)
 * [bem-components](https://ru.bem.info/platform/libs/bem-components/)
