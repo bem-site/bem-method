@@ -369,7 +369,7 @@ block('menu')(
     })
 );
 
-// Установлен тег <li> для элемента menu__inner
+// Установлен тег <ul> для элемента menu__inner
 elem('inner')(
     tag()('ul')
 );
