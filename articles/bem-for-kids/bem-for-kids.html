@@ -49,3 +49,40 @@
 		BEMup 2016
 	</footer>	
 </body>
+
+
+
+{
+	block: 'menu',
+	content: [
+		{
+			elem: 'item',
+			content: {
+			    block: 'link'
+		    }
+	    },
+	    {
+			elem: 'item',
+			elemMods: { current: true },  // Задали модификтаор пункту меню
+			content: {
+			    block: 'link'
+		    }
+	    }
+	]
+}
+
+
+<div class="menu">
+	<div class="menu__item">
+         <div class="link"></div>
+	</div>
+    <div class="menu__item menu__item_current">
+         <div class="link"></div>
+	</div>
+</div>
+
+
+
+
+
+
