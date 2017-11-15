@@ -132,7 +132,7 @@
 
 ### Стиль CamelCase
 
-`blockName-elemName_modName_modVal`
+`blockName__elemName_modName_modVal`
 
 * Имена записываются латиницей.
 * Каждое слово внутри имени пишется с заглавной буквы.
