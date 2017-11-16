@@ -501,11 +501,11 @@ common/
       arr/
         b-dropdown.arr.css
         b-dropdown.arr.ie.css
-        b-dropdown.css
-        b-dropdown.ie.css
+      b-dropdown.css
+      b-dropdown.ie.css
 ```
 
-Всё, что находилось в опциональном CSS (файлах `b-dropdown_arr.css`), вынесено в директории (`arr/b-dropdown.arr.css`). В основном файле блока стало меньше кода.
+Всё, что находилось в опциональном CSS (файлах `b-dropdown_arr.css`, `b-dropdown_arr.ie.css`), вынесено в директории (`arr/`). В основном файле блока стало меньше кода.
 
 ### Правила именования
 
