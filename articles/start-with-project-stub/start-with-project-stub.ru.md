@@ -87,9 +87,9 @@ npm start -- -p 8081
 
 ## Кратко о структуре проекта
 
-HTML-разметка web-страницы и применяемые к ней CSS-правила генерируются из её описания в [BEMJSON](https://ru.bem.info/platform/bemjson/)-файле `page-name.bemjson.js`. В терминах БЭМ-методологии будем называть BEMJSON-описание страницы [декларацией](https://ru.bem.info/methodology/declarations/).
+HTML-разметка web-страницы генерируется из её описания в [BEMJSON](https://ru.bem.info/platform/bemjson/)-файле `page-name.bemjson.js`. В терминах БЭМ-методологии будем называть BEMJSON-описание страницы [декларацией](https://ru.bem.info/methodology/declarations/).
 
-BEMJSON-декларация — это структура страницы, описанная в терминах блоков, элементов и модификаторов. Для создания HTML-представления web-страницы в работу включается [шаблонизатор BEMHTML](https://ru.bem.info/platform/bem-xjst/), который преобразует входные данные из BEMJSON-файла в HTML. На основе BEMJSON-файла, который описывает страницу в виде [БЭМ-дерева](https://ru.bem.info/methodology/key-concepts/#БЭМ-дерево), [собираются зависимости](https://ru.bem.info/methodology/build/), на основании которых собираются бандлы технологий.
+BEMJSON-декларация — это структура страницы, описанная в терминах блоков, элементов и модификаторов. Для создания HTML-представления web-страницы в работу включается [шаблонизатор BEMHTML](https://ru.bem.info/platform/bem-xjst/), который преобразует входные данные из BEMJSON-файла в HTML. На основе BEMJSON-файла, который описывает страницу в виде [БЭМ-дерева](https://ru.bem.info/methodology/key-concepts/#БЭМ-дерево), [собираются зависимости](https://ru.bem.info/methodology/build/), по которым строятся [бандлы](https://ru.bem.info/methodology/build/) технологий.
 
 Блоки — строительный материал для страниц. Их можно заимствовать из [библиотек](https://ru.bem.info/libs/) или создавать самостоятельно.
 
@@ -189,7 +189,7 @@ module.exports = {
 
 [Пример кода](https://gist.github.com/tadatuta/fcc6b7bd8523d453d0fd) index.bemjson.js.
 
-В HTML-представлении страницы появится необходимая разметка (вы сможете увидеть её, обновив страницу).
+В HTML-представлении страницы появится необходимая разметка. Обновите страницу, чтобы увидеть разметку:
 
 ```html
 <!DOCTYPE html>
@@ -239,9 +239,7 @@ bem create desktop.blocks/layout.css
 
 Блоки можно создавать и вручную: создадим директорию `desktop.blocks/layout` и в ней разместим необходимые нам файлы технологий реализации блока.
 
-Мы хотим, чтобы блок `logo` состоял из картинки и слогана. Для этого задекларируем его в блоке `head` файла `desktop.bundles/index/index.bemjson.js`.
-
-Можете использовать картинку из [нашего примера](http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png) или указать свою.
+Блок `logo` будет состоять из картинки и слогана. Для этого задекларируем блок `logo` в блоке `head` файла `desktop.bundles/index/index.bemjson.js`.
 
 ```js
 {
@@ -260,7 +258,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/tadatuta/4b4175f7eaa0a8113365) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/a5c5e962c07c19865cda) index.bemjson.js.
 
 ![Блок logo](start-with-project-stub__logo.png)
 
@@ -286,7 +284,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/7da95e41ed257bf1e5a4f63247c25925) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/d9886223909f269ab8ebd1c8ce473aba) index.bemjson.js.
 
 Добавим обработку пользовательского запроса Яндексом:
 
@@ -312,7 +310,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/3d862f3e6ff2eb5221498cdfe7bc9351) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/0d9232d7f5c3d208f4854943fbf242ef) index.bemjson.js.
 
 ![Форма поиска](start-with-project-stub__search.png)
 
@@ -344,7 +342,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/ed8a8e811a9f3d83950aff6116990fd6) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/b52a83c7860355f6d5ec9877517439af) index.bemjson.js.
 
 ### Модификация блоков библиотек
 
@@ -449,21 +447,24 @@ bem create -l desktop.blocks -b head -T css
     block: 'goods',
     goods: [
         {
-            title: 'Apple iPhone 4S 32Gb',
-            image: 'https://mdata.yandex.net/i?path=b1004232748_img_id8368283111385023010.jpg',
-            price: '259',
+            title: 'iPhone 7 128Gb',
+            image: 'https://cdn.rawgit.com/bem-site/bem-method/bem-project/articles/start-with-project-stub/iphone7.png',
+            price: '47 000',
             url: '/'
         },
         {
-            title: 'Samsung Galaxy Ace S5830',
-            image: 'https://mdata.yandex.net/i?path=b0206005907_img_id5777488190397681906.jpg',
-            price: '73',
+            title: 'Samsung Galaxy A7 32Gb',
+            image: 'https://cdn.rawgit.com/bem-site/bem-method/bem-project/articles/start-with-project-stub/samsung.png',
+            price: '26 000',
             url: '/'
         },
-        //...
+        {
+            //...
+        }
+    ]
 }
 ```
-[Пример кода](https://gist.github.com/godfreyd/357ea81bdd3cbeb86d1c64ca05cfc1a7) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/b20986600db84c1b8ed229d4a7e012ff) index.bemjson.js.
 
 Чтобы эти данные превратились в нужную разметку, блок должен быть реализован в технологии BEMHTML. Для корректировки внешнего вида применим CSS-правила. Воспользуемся командой `bem create`, чтобы создать блок сразу в двух технологиях:
 
@@ -507,22 +508,18 @@ block('goods')(
 <!DOCTYPE html>
 <html class="ua_js_yes">
     <head>...</head>
-
     <body class="page">
         <div class="page__inner">
             <div class="head">...</div>
-
             <ul class="goods">
                 <li class="goods__item">
-                    <h3 class="goods__title">Apple iPhone 4S 32Gb</h3>
-                    <img class="goods__image" src="http://mdata.yandex.net/
-                         i?path=b1004232748_img_id8368283111385023010.jpg"/>
+                    <h3 class="goods__title">iPhone 7 128Gb</h3>
+                    <img class="goods__image" src="https://cdn.rawgit.com/bem-site/bem-method/bem-project/articles/start-with-project-stub/iphone7.png"/>
                     <span class="goods__price">259</span>
                 </li>
                 <li class="goods__item">...</li>
                 <li class="goods__item">...</li>
             </ul>
-
             <script src="index.min.js"></script>
         </div>
     </body>
@@ -531,7 +528,7 @@ block('goods')(
 
 Шаблон может создавать не только HTML-элементы блока, но и другие блоки. Например, цену товара можно сделать ссылкой, используя для этого блок `link` из библиотеки [bem-components](https://ru.bem.info/platform/libs/bem-components/5.0.0/desktop/link/).
 
-Чтобы избежать вложенных селекторов при оформлении этой ссылки стилями, пометим её как элемент блока `goods`.
+Чтобы избежать вложенных селекторов при оформлении этой ссылки стилями, пометим ее как элемент блока `goods`.
 
 ```js
 {
@@ -550,10 +547,9 @@ block('goods')(
 ```html
 <ul class="goods">
     <li class="goods__item">
-        <h3 class="goods__title">Apple iPhone 4S 32Gb</h3>
+        <h3 class="goods__title">iPhone 7 128Gb</h3>
 
-        <img class="goods__image" src="http://mdata.yandex.net/
-             i?path=b1004232748_img_id8368283111385023010.jpg"/>
+        <img class="goods__image" src="https://cdn.rawgit.com/bem-site/bem-method/bem-project/articles/start-with-project-stub/iphone7.png"/>
 
         <span class="goods__price">
             <a class="link goods__link" href="/">259</a>
@@ -627,7 +623,7 @@ levels = [
 
 [Пример кода](https://gist.github.com/tadatuta/3d91a444180b23443b7e) .enb/make.js.
 
-При изменении конфигурации проекта необходимо перезапустить сервер. Текущий процесс придётся прервать (`Ctrl + C`) и снова ввести команду запуска сервера.
+При изменении конфигурации проекта необходимо перезапустить сервер. Текущий процесс придется прервать (`Ctrl + C`) и снова ввести команду запуска сервера.
 
 ## Миксы блоков и элементов
 
@@ -645,7 +641,7 @@ levels = [
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/bcd05232adf5f3a06de7ccc9ea05f337) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/44cdaec2deecad91b8564406b1043f53) index.bemjson.js.
 
 ```html
 <!DOCTYPE html>
@@ -731,7 +727,7 @@ levels = [
 
     mix: [{ block: 'box', js: true }]
 
-[Пример кода](https://gist.github.com/godfreyd/1fe1aa79ccb602e50e1484dbc98f6e12) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/192fcfb438f48be05606aee9b3767f13) index.bemjson.js.
 
 Также разместим внутри блока элемент `switcher`:
 
@@ -750,15 +746,15 @@ content: [
 ]
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/f4e8e10349bc1de79eda1a2f63aeb9aa) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/6842d077cfd7f1c5e1650847c21e8182) index.bemjson.js.
 
-Теперь в блоке `head` есть стрелочка, умеющая сворачивать и разворачивать его.
+Теперь в блоке `head` есть стрелочка, которая умеет его сворачивать и разворачивать.
 
 ![Стрелочка](start-with-project-stub__arrow.png)
 
 ### Модификация JavaScript
 
-Расширим предлагаемую библиотекой JavaScript-функциональность блока `box`. Сделаем так, чтобы он сворачивался не только по вертикали, но и по горизонтали. При этом вносить изменения в чужую библиотеку мы не можем. Но благодаря тому, что JavaScript блока написан с использованием декларативного фреймворка [i-bem.js](https://ru.bem.info/platform/i-bem/), есть возможность изменить поведение блока.
+Расширим предлагаемую библиотекой JavaScript-функциональность блока `box`. Сделаем так, чтобы он сворачивался не только по вертикали, но и по горизонтали. При этом вносить изменения в чужую библиотеку мы не можем. Но благодаря тому, что JavaScript блока `box` написан с использованием декларативного фреймворка [i-bem.js](https://ru.bem.info/platform/i-bem/), есть возможность изменить его поведение.
 
 ```bash
 bem create -l desktop.blocks -b box -T js
