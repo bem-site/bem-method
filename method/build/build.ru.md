@@ -120,7 +120,7 @@ bundles/
 
 В БЭМ-платформе используются следующие сборщики:
 
-* [ENB](https://ru.bem.info/tools/bem/enb-bem/)
+* [ENB](https://ru.bem.info/toolbox/enb/)
 
   > Подробно о том, как собрать БЭМ-проект с помощью ENB, см. в разделе [Создаем проект по БЭМ](https://ru.bem.info/tutorials/start-with-project-stub/).
 

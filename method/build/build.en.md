@@ -134,7 +134,7 @@ The BEM methodology doesn't limit your choice of build tools in any way. You can
 
 We use the following build tools on the BEM platform:
 
-* [ENB](https://en.bem.info/tools/bem/enb-bem/)
+* [ENB](https://en.bem.info/toolbox/enb/)
 * [Gulp](http://gulpjs.com/)
 
 > Example of building a BEM project using ENB: [Starting your own BEM project](https://en.bem.info/tutorials/start-with-project-stub/).
