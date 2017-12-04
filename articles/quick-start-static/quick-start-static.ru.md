@@ -13,7 +13,7 @@
 
 В результате выполнения всех шагов вы получите страницу с полем ввода, кнопкой и фразой приветствия пользователя, как показано на рисунке ниже. Имя, введенное в поле, при нажатии на кнопку, будет отображаться в приветствии.
 
-![Страница приветствия](quick-start-static__hello-user.ru.png)
+![Страница приветствия](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.ru.svg)
 
 Для работы с примерами, описанными в документе, необходимы базовые навыки:
 
@@ -21,7 +21,7 @@
 * CSS
 * JavaScript
 * БЭМ
->
+
 > **Важно!** В документе не рассматриваются вопросы [сборки](../../method/build/build.ru.md) БЭМ-проекта.
 
 ### Минимальные требования
@@ -39,7 +39,7 @@
 * Технологии:
   * [BEMJSON](https://ru.bem.info/platform/bemjson/)
   * [i-bem.js](https://ru.bem.info/platform/i-bem/)
-  * [BEMHTML](https://ru.bem.info/platform/bem-xjst/8/)
+  * [BEMHTML](https://ru.bem.info/platform/bem-xjst/)
 
 ## Клонируем БЭМ-проект
 
@@ -88,9 +88,7 @@
     > npm start -- -p 8081
     > ```
 
-
-5.  Откройте браузер и введите адрес [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
-    Должна открыться страница с примерами блоков библиотеки [bem-components](https://github.com/bem/bem-components).
+5.  Откройте браузер и введите адрес [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). Должна открыться страница с примерами блоков библиотеки [bem-components](https://github.com/bem/bem-components).
 
 После сборки и установки всех зависимостей файловая структура проекта будет иметь следующий вид:
 
@@ -121,27 +119,27 @@ start-project/
 1. Создайте директорию с именем страницы (например, `hello`) в `desktop.bundles`.
 2. Создайте файл `hello.bemjson.js` в директории `desktop.bundles/hello/`.
 
-  В результате корневая директория проекта будет выглядеть так:
+    В результате корневая директория проекта будет выглядеть так:
 
-  ```files
-  start-project/
-      .bem
-      .enb/
-      common.blocks/
-      desktop.blocks/
-      desktop.bundles/
-          index/               # Директория бандлов страницы index
-          hello/               # Директория бандлов страницы hello
-              hello.bemjson.js # Описание страницы hello
-  ```
+    ```files
+    start-project/
+        .bem
+        .enb/
+        common.blocks/
+        desktop.blocks/
+        desktop.bundles/
+            index/               # Директория бандлов страницы index
+            hello/               # Директория бандлов страницы hello
+                hello.bemjson.js # Описание страницы hello
+    ```
 
-  > Имена файлов и директорий соответствуют [соглашению по именованию](../../method/naming-convention/naming-convention.ru.md).
+    > Имена файлов и директорий соответствуют [соглашению по именованию](../../method/naming-convention/naming-convention.ru.md).
 
 3. Чтобы не оставлять файл `hello.bemjson.js` пустым, добавьте в него комментарий:
 
-  ```text
-  // BEMJSON-описание страницы будет здесь
-  ```
+    ```text
+    // BEMJSON-описание страницы будет здесь
+    ```
 
 ### Описываем страницу в BEMJSON-файле
 
@@ -201,12 +199,12 @@ start-project/
                     block : 'input',
                     mods : { theme: 'islands', size : 'm' },
                     name : 'name',
-                    placeholder : 'Введите имя'
+                    placeholder : 'Имя пользователя'
                 },
                 {
                     block : 'button',
                     mods : { theme : 'islands', size : 'm', type : 'submit' },
-                    text : 'Поздороваться'
+                    text : 'Нажать'
                 }
             ]
         }
@@ -243,7 +241,6 @@ start-project/
             }
         }
     },
-
     _onSubmit: function(e) {
         // предотвращение срабатывания события по умолчанию:
         // отправка формы на сервер с перезагрузкой страницы
@@ -276,7 +273,6 @@ start-project/
                     }
                 }
             },
-
             _onSubmit: function(e) {
                 e.preventDefault();
                 this._elem('greeting').domElem.text('Привет, ' + this._input.getVal() + '!');
@@ -287,7 +283,6 @@ start-project/
                 this._domEvents().on('submit', this.prototype._onSubmit);
             }
         }));
-
     });
     ```
 
@@ -296,6 +291,7 @@ start-project/
 [BEMHTML](https://ru.bem.info/platform/bem-xjst/) — технология, которая преобразует входные данные из BEMJSON-файла в HTML.
 
 Чтобы создать шаблон:
+
 1. Откройте файл `desktop.blocks/hello/hello.bemhtml.js`.
 2. Напишите [BEMHTML-шаблон](https://ru.bem.info/platform/bem-xjst/templates-syntax/), в котором укажите, что блок `hello` имеет JavaScript-реализацию.
 3. Оберните блок `hello` в форму с помощью стандартного режима [tag](https://ru.bem.info/platform/bem-xjst/8/templates-syntax/#tag).
@@ -333,7 +329,7 @@ start-project/
     }
     ```
 
-4. Добавьте блоку `input` дополнительные CSS-правила с помощью поля [mix](https://ru.bem.info/platform/bemjson/#mix) в файле `desktop.bundles/hello/hello.bemjson.js`.
+3. Добавьте блоку `input` дополнительные CSS-правила с помощью поля [mix](https://ru.bem.info/platform/bemjson/#mix) в файле `desktop.bundles/hello/hello.bemjson.js`.
 
     ```js
     {
