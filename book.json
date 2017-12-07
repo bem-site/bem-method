@@ -1,0 +1,13 @@
+{
+    "description":"BEM documentation",
+    "styles": {
+       "website": "static/index.css"
+    },
+    "plugins":[
+        "comment",
+        "theme-api",
+        "-sharing",
+        "search",
+        "collapsible-menu"
+    ]
+}

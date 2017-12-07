@@ -1,7 +1,6 @@
-# Содержание
+# Summary
 
-## Русский
-
+* [Введение](README.md)
 * [Методология](method/quick-start/quick-start.ru.md)
     * [Быстрый старт](method/quick-start/quick-start.ru.md)
     * [Основные понятия](method/key-concepts/key-concepts.ru.md)
@@ -17,14 +16,12 @@
     * [Какие проблемы решает](method/solved-problems/solved-problems.ru.md)
     * [История](method/history/history.ru.md)
     * [FAQ](faq/faq.ru.md)
+
 * [Учебные материалы](platform/tutorials/index.ru.md)
     * [Dist bem-components: подключаем блоки на страницу](platform/tutorials/dist-quick-start/dist-quick-start.ru.md)
     * [Собираем статическую страницу](platform/tutorials/quick-start-static/quick-start-static.ru.md)
     * [Создаём статический БЭМ-проект](platform/tutorials/start-with-project-stub/start-with-project-stub.ru.md)
     * [Создаём динамический БЭМ-проект](platform/tutorials/start-with-bem-express/start-with-bem-express.ru.md)
-
-## English
-
 * [Methodology](method/quick-start/quick-start.en.md)
     * [Quick start](method/quick-start/quick-start.en.md)
     * [Key concepts](method/key-concepts/key-concepts.en.md)
