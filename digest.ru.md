@@ -125,7 +125,7 @@
 Выпустили версии [1.7.0](https://github.com/borschik/borschik/tree/v1.7.0)-[2.0.0](https://github.com/borschik/borschik/tree/v2.0.0).
 Где прекратили поддержку node 0.8.0. и заменили [uglify-js](https://www.npmjs.com/package/uglify-js) на [uglify-es](https://www.npmjs.com/package/uglify-es) для поддержки ES6.
 
-Подробности в [CHANGELOG](https://github.com/borschik/borschik/blob/v2.0.0/CHANGELOG.ru.md).
+Подробности в [CHANGELOG](https://github.com/borschik/borschik/blob/v2.0.0/CHANGELOG.md).
 
 ### bem-walk
 Написали полный и понятный [README](https://github.com/bem-sdk/bem-walk/blob/master/README.md).
