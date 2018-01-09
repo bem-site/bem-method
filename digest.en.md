@@ -2,7 +2,7 @@
 
 Brief news about the BEM world since the beginning of the year 2017:
 
-* [Documents](#libraries)
+* [Libraries](#libraries)
 * [BEM & React](#bem-&-react)
 * [Technologies](#technologies)
 * [Toolbox](#toolbox)
@@ -10,20 +10,20 @@ Brief news about the BEM world since the beginning of the year 2017:
 * [bem.info](#beminfo)
 * [Events](#events)
 
-## Documents
+## Libraries
 
 ### bem-core
-Released bem-core [4.1.0](https://en.bem.info/platform/libs/bem-core/4.1.0/)-[4.2.1](https://en.bem.info/platform/libs/bem-core/4.2.1/).
+Released bem-core [4.1.0](https://en.bem.info/platform/libs/bem-core/4.1.0/)-[4.2.1](https://github.com/bem/bem-core/tree/v4.2.1).
 
-All changes of the releases are described in the [CHANGELOG](https://en.bem.info/platform/libs/bem-core/4.2.1/changelog/).
+All changes of the releases are described in the [CHANGELOG](https://github.com/bem/bem-core/blob/v4.2.1/CHANGELOG.md).
 
 ### bem-core: turbo
-jQuery has been removed from the bem-core. There is not any offical release yet, but you can try the [release candidate build](https://github.com/bem/bem-core/tree/turbo-rc.1) and send your feedback.
+jQuery has been removed from the bem-core library. There is not an official release yet, but you can try the [release candidate build](https://github.com/bem/bem-core/tree/turbo-rc.1) and send your feedback.
 
 ### bem-components
-Released the following versions: [4.0.0](https://github.com/bem/bem-components/tree/v4.0.0)-[6.0.1](https://github.com/bem/bem-components/tree/v6.0.1).
+Released the following versions: [4.0.0](https://en.bem.info/platform/libs/bem-components/4.0.0/)-[6.0.1](https://github.com/bem/bem-components/tree/v6.0.1).
 
-All changes of the releases are described in the [CHANGELOG](https://en.bem.info/platform/libs/bem-core/6.0.1/changelog/).
+All changes of the releases are described in the [CHANGELOG](https://github.com/bem/bem-components/blob/v6.0.1/CHANGELOG.md).
 
 ### bem-history
 Released the [4.0.0](https://en.bem.info/platform/libs/bem-history/4.0.0/) version.
@@ -48,10 +48,10 @@ Published a [bem-font-awesome](https://github.com/tadatuta/bem-font-awesome) lib
 
 Published the alternative version of the `bem-font-awesome` library — [bem-font-awesome-icons](https://github.com/tadatuta/bem-font-awesome-icons), where we split the font into separate SVG icons to sent to the client side the usefull parts only.
 
-## БЭМ и React
+## BEM & React
 
 ### bem-react-core
-Release candidate version — [1.0.0](https://github.com/bem/bem-react-core/tree/v1.0.0-rc.5). Leack of usefull documentation blocks the official release of the library.
+Release candidate version — [1.0.0](https://github.com/bem/bem-react-core/tree/v1.0.0-rc.5). Lack of useful documentation blocks the official release of the library.
 
 ### bem-react-components
 Actively worked on [bem-react-components](https://github.com/bem/bem-react-components/tree/v0.0.2) - the library of blocks for development with React and BEM-methodology. The official release has not yet been published, but most of the [blocks](https://github.com/bem/bem-react-components/tree/v0.0.2/blocks) have already been implemented.
@@ -67,17 +67,17 @@ Continue to create the React project stub [create-bem-react-app](https://github.
 Published the major releases:
 
 * Updated the libraries versions — bem-core [4.2.1](https://en.bem.info/platform/libs/bem-core/4.1.0/) and bem-components [6.0.1](https://github.com/bem/bem-components/tree/v6.0.1).
-* Switched from Stylus to PostCSS. By default comes the same set of plug-ins as in bem-components.
+* Switched from Stylus to PostCSS. By default comes the same set of plug-ins like in the bem-components.
 * Implemented an optional `livereload`. For details see [documentation](https://github.com/bem/bem-express/blob/master/development.blocks/livereload/livereload.md) and [README](https://github.com/bem/bem-express/blob/master/README.md) file.
-* Achieved acceleration of the buld procedure due to the `npm`-modules.
+* Achieved acceleration of the build procedure due to the `npm`-modules.
 * Refused `bower` for the supply of libraries. Now all dependencies are set through `npm` in the `node_modules` folder.
 
 Wrote step-by-step tutorial: [Dynamic projects with BEM](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/start-with-bem-express/start-with-bem-express.en.md).
 
 ### project-stub
-Updated bem-core library version to [4.2.1](https://en.bem.info/platform/libs/bem-core/4.1.0/), bem-components — to [6.0.1](https://github.com/bem/bem-components/tree/v6.0.1) and othe dependences.
+Updated bem-core library version to [4.2.1](https://en.bem.info/platform/libs/bem-core/4.1.0/), bem-components — to [6.0.1](https://github.com/bem/bem-components/tree/v6.0.1) and other dependencies.
 
-As an axperiment include [gulp-bem](https://github.com/gulp-bem) into the project-stub.
+As an experiment include [gulp-bem](https://github.com/gulp-bem) into the project-stub.
 
 ### bem-xjst
 Released [v8.3.1](https://github.com/bem/bem-xjst/releases/tag/v8.3.1)-[v8.8.5](https://github.com/bem/bem-xjst/releases/tag/v8.8.5) versions.
@@ -136,11 +136,11 @@ Released [0.10.0](https://github.com/bemhint/bemhint/tree/v0.10.0)-[0.10.1](http
 Released missing dependencies linter — [bemhint-estree](https://github.com/bemhint/bemhint-estree). Added ES6 support and wrote [wrapper](https://github.com/bemhint/bemhint-bem-xjst) for the linter of [bem-xjst](#bem-xjst).
 
 #### bemhint-deps-schema
-Released a new version of bemhint plagin — [bemhint-deps-schema 2.1.0](https://www.npmjs.com/package/bemhint-deps-schema), that checks that the files `* .deps.js` match the specification. Now `bemhint-deps-schema` can process not only` .json`-, but `.js` files with `module.exports`.
+Released a new version of bemhint plugin — [bemhint-deps-schema 2.1.0](https://www.npmjs.com/package/bemhint-deps-schema), that checks that the files `* .deps.js` match the specification. Now `bemhint-deps-schema` can process not only` .json`-, but `.js` files with `module.exports`.
 
 ## Documentation
 * Wrote step-by-step tutorial for bem-express usage: [Dynamic projects with BEM](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/start-with-bem-express/start-with-bem-express.en.md).
-* Publised a new document which shows [how describe dependencies in BEM](https://en.bem.info/platform/deps/).
+* Published a new document which shows [how to describe dependencies in BEM](https://en.bem.info/platform/deps/).
 * Wrote [DEPS specification](https://en.bem.info/platform/deps-spec/).
 * Added new documents in the [Methodology](https://en.bem.info/method/) section:
   * [Redefinition levels](https://en.bem.info/methodology/redefinition-levels/)
