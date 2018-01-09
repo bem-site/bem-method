@@ -3,10 +3,10 @@
 Brief news about the BEM world since the beginning of the year 2017:
 
 * [Libraries](#libraries)
-* [BEM & React](#bem-&-react)
+* [BEM & React](#bem--react)
 * [Technologies](#technologies)
 * [Toolbox](#toolbox)
-* [Documents](#documents)
+* [Documentation](#documentation)
 * [bem.info](#beminfo)
 * [Events](#events)
 
