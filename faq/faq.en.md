@@ -192,7 +192,7 @@ The presence of elements of elements restricts your ability to change the intern
 
 If you think you are going to re-use the implementation you need, and it doesn't depend on the implementation of other page components. For example, the `select` block has the modifiers **hovered**, **focused**, and **opened**.
 
-![Modifiers of the "select" block](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/faq/select.svg)
+![Modifiers of the "select" block](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/faq/faq_create_modifier.svg)
 
 ### Create a mix
 
