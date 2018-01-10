@@ -13,7 +13,7 @@ Creating a simple static page will help you understand the structure of a BEM pr
 
 Completing all the steps will result in a page with an input field, a button, and a user greeting, as shown in the figure below. The name entered in the field will be displayed in the greeting when the button is clicked.
 
-![Welcome page](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.en.svg)
+![Welcome page](https://cdn.rawgit.com/bem-site/bem-method/quick-start/articles/quick-start-static/quick-start-static__hello-user.svg)
 
 Working with the examples laid out in this document requires basic skills in:
 
