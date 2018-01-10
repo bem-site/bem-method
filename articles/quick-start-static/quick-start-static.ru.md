@@ -13,7 +13,7 @@
 
 В результате выполнения всех шагов вы получите страницу с полем ввода, кнопкой и фразой приветствия пользователя, как показано на рисунке ниже. Имя, введенное в поле, при нажатии на кнопку, будет отображаться в приветствии.
 
-![Страница приветствия](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.ru.svg)
+![Страница приветствия](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.svg)
 
 Для работы с примерами, описанными в документе, необходимы базовые навыки:
 
@@ -177,7 +177,7 @@ start-project/
             content : [
                 {
                     elem : 'greeting',
-                    content : 'Привет, %пользователь%!'
+                    content : 'Hello %user%!'
                 }
             ]
         }
@@ -193,18 +193,18 @@ start-project/
             content : [
                 {
                     elem : 'greeting',
-                    content : 'Привет, %пользователь%!'
+                    content : 'Hello %user%!'
                 },
                 {
                     block : 'input',
                     mods : { theme: 'islands', size : 'm' },
                     name : 'name',
-                    placeholder : 'Имя пользователя'
+                    placeholder : 'User name'
                 },
                 {
                     block : 'button',
                     mods : { theme : 'islands', size : 'm', type : 'submit' },
-                    text : 'Нажать'
+                    text : 'Click'
                 }
             ]
         }
@@ -245,7 +245,7 @@ start-project/
         // предотвращение срабатывания события по умолчанию:
         // отправка формы на сервер с перезагрузкой страницы
         e.preventDefault();
-        this._elem('greeting').domElem.text('Привет, ' + this._input.getVal() + '!');
+        this._elem('greeting').domElem.text('Hello ' + this._input.getVal() + '!');
     },
     {
         lazyInit: true,
@@ -275,7 +275,7 @@ start-project/
             },
             _onSubmit: function(e) {
                 e.preventDefault();
-                this._elem('greeting').domElem.text('Привет, ' + this._input.getVal() + '!');
+                this._elem('greeting').domElem.text('Hello ' + this._input.getVal() + '!');
             }
         }, {
             lazyInit: true,
@@ -340,7 +340,7 @@ start-project/
         mix : { block : 'hello', elem : 'input' },
 
         name : 'name',
-        placeholder : 'Имя пользователя'
+        placeholder : 'User name'
     }
     ```
 
