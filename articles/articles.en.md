@@ -38,6 +38,7 @@
 * [ ] [Building My Health Skill — Part 3](http://bluegg.co.uk/blog/building-my-health-skills-part-3), 01-05-2014, Tom Lloyd
 * [ ] [BEM AND MAINTAINABLE CSS](https://www.stackbuilders.com/news/bem-and-maintainable-css), 07-12-2016 by Juan Carlos Paucar
 * [ ] [Tame Unruly Style Sheets With These Three CSS Methodologies](https://www.sitepoint.com/tame-unruly-style-sheets-three-css-architecture-methodologies/), 29-03-2017 by Maria Antonietta Perna
+* [ ] [BEM - Methodology to enable reuse in front-end development](https://survivejs.com/blog/bem-interview/), 01-12-2018, Short interview with Sergey Berezhnoy about BEM and its future.
 
 TODO: process https://github.com/getbem/awesome-bem
 TODO: process https://github.com/sturobson/BEM-resources
