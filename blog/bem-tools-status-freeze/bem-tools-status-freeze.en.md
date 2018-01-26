@@ -4,7 +4,7 @@ Hi!
 
 Currently bem-tools development is in freeze state.
 
-We smooothly migrate to [ENB](http://enb-make.info/). ENB is an alternative implementation of `bem make` command. It does not support other commands. Besides, ENB core allows building projects not connected to BEM. ENB as well as bem-tools has most of its logic in technologies (techs) modules.
+We smooothly migrate to [ENB](https://en.bem.info/toolbox/enb/). ENB is an alternative implementation of `bem make` command. It does not support other commands. Besides, ENB core allows building projects not connected to BEM. ENB as well as bem-tools has most of its logic in technologies (techs) modules.
 
 Because of the fact that ENB core does not know anything about BEM, it has no default behavior, and it makes its configs more verbose however they become easier to read.
 
