@@ -31,9 +31,9 @@ bem-react-core позволяет:
 
 Пример декларации компонента
 
-|| bem-react-core | React.Components ||
-||-----|-----||
-|| ``` js
+| bem-react-core | React.Components |
+|-----|-----|
+| ``` js
 import {decl} from 'bem-react-core';
 
 export default decl({
@@ -53,13 +53,13 @@ export default class Hello extends Component {
     }
 }
 ```
- ||
-|| Результат | Результат ||
-|| ``` html
+ |
+| Результат | Результат |
+| ``` html
 <div class='hello'>world</div>
 ``` | ``` html
 <div class='hello'>world</div>
-``` ||
+``` |
 
 
 
