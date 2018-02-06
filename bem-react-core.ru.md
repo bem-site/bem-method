@@ -33,8 +33,7 @@ bem-react-core позволяет:
 
 | bem-react-core | React.Components |
 |-----|-----|
-| ``` js
-import {decl} from 'bem-react-core';
+| <code>import {decl} from 'bem-react-core';
 
 export default decl({
     block: 'hello',
@@ -42,8 +41,7 @@ export default decl({
         return 'world';
     }
 });
-``` | ``` js
-import React, {Component} from 'react';
+</code> | <code>import React, {Component} from 'react';
 
 export default class Hello extends Component {
     render() {
@@ -52,14 +50,10 @@ export default class Hello extends Component {
         );
     }
 }
-```
+</code>
  |
 | Результат | Результат |
-| ``` html
-<div class='hello'>world</div>
-``` | ``` html
-<div class='hello'>world</div>
-``` |
+| <code><div class='hello'>world</div></code> | <code><div class='hello'>world</div></code> |
 
 
 
