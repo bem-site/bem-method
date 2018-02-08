@@ -1,4 +1,4 @@
-# JavaScript for BEM
+# JavaScript with BEM
 
 In the BEM methodology, JavaScript is used for making a webpage “come alive” and is considered one of the block [implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 

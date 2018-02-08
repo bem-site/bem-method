@@ -1,4 +1,4 @@
-# CSS for BEM
+# CSS with BEM
 
 In the BEM methodology, CSS is used for page layout and is considered one of the [block implementation technologies](../key-concepts/key-concepts.en.md#implementation-technology).
 

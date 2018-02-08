@@ -1,4 +1,4 @@
-# HTML for BEM
+# HTML with BEM
 
 When using BEM, you can create HTML markup [manually](#creating-html-manually) or [generate it automatically](#automatic-html-generation). In both cases, the HTML code follows the same principles:
 
