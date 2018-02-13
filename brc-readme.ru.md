@@ -1,36 +1,31 @@
 # BEM React Core [![Build Status](https://travis-ci.org/bem/bem-react-core.svg?branch=master)](https://travis-ci.org/bem/bem-react-core) [![GitHub Release](https://img.shields.io/github/release/bem/bem-react-core.svg)](https://github.com/bem/bem-react-core/releases) [![devDependency Status](https://david-dm.org/bem/bem-react-core/dev-status.svg)](https://david-dm.org/bem/bem-react-core#info=devDependencies)
 
-## Что это?
-## Как работает?
-## Для чего?
-## Пример синтаксиса
-## Установка / Как использовать
-## Документация
-## Команда разработки
+Библиотека для работы с [React](https://reactjs.org/)-компонентами в виде деклараций [БЭМ-сущностей](https://ru.bem.info/methodology/key-concepts/#БЭМ-сущность).
 
-## Что это?
+> Подробнее про [БЭМ](https://ru.bem.info/method).
 
-bem-react-core — это библиотека для работы с React-компонентами в виде деклараций БЭМ-сущностей.
+bem-react-core работает поверх обычных React-компонентов и предоставляет API для описания деклараций [блоков](https://ru.bem.info/methodology/key-concepts/#Блок), [элементов](https://ru.bem.info/methodology/key-concepts/#Элемент) и [модификаторов](https://ru.bem.info/methodology/key-concepts/#Модификатор). Блоки и элементы, созданные с помощью bem-react-core, полностью совместимы с React-компонентами: могут использовать внутри себя готовые React-компоненты и могут быть вызываны сами в коде React-компонентов.
 
-это легковесная библиотека с открытым исходным кодом
+Библиотека предоставляет набор [дополнительных методов](#ссылка на раздел про методы и поля деклараций и переопределение стандартных методов react) для React-компонентов. Наравне с этим также работают стандартные методы React-компонентов.
 
-// ## Как работает?
-Библиотека работает поверх обычных React-компонентов и предоставляет API для описания деклараций блоков, элементов и модификаторов. Блоки и элементы, созданные с помощью bem-react-core, полностью совместимы с любыми React-компонентами: могут использовать внутри себя готовые React-компоненты и использоваться сами в коде React-компонентов.
+Разработка библиотеки ведется в [Open Source](https://github.com/bem/bem-react-core).
 
-Библиотека предоставляет набор дополнительных методов для React-компонентов. Наравне с этим также работают нативные методы React-компонентов.
+## Для кого?
 
-Разработка библиотеки ведется в [Open Source](https://github.com/bem/bem-react-core). Описание деклараций работает в совокупности с [особенным синтаксисом импортов](https://github.yandex-team.ru/lego/islands/blob/dev/guidelines/bem-react-import.md) нового стандарта.
+Библиотека предназначена для тех, кто хочет совместить преимущества БЭМ и React.js в одном проекте.
 
-## Зачем? // ## Для чего?
+Почему мы выбрали React? — Он быстрый, модульный, декларативный и модный. Компонентный подход БЭМ и React схож.
+
+Почему вы захотите выбрать bem-react-core, если используете React?
+Чтобы:
 
 * Точечно управлять вариативностью компонентов, которая в обычных React-компонентах выражается через цепочку произвольных условий в коде в императивном стиле.
 * Повторно использовать компоненты и переопределять их, не изменяя базовый код.
-* Одновременно разрабатывать одну версию проекта для разных платформ.
-* Одновременно проводить неограниченное количество экспериментов. При этом не затрагивать исходный код проекта.
+* Получить все, что предоставляет мощный инструмент уровни переопределения без применения фреймворка i-bem.js. (Одновременно разрабатывать одну версию проекта для разных платформ. Проводить неограниченное количество экспериментов, сохраняя рабочую версию проекта.)
 
-> Подробнее в Motivation
+> Подробнее о том, почему стоит использовать bem-react-core в [Motivation](/docs/ru/Basics/Introduction/Motivation.md).
 
-## Пример синтаксиса
+## Пример синтаксиса декларации блока
 
 Простой пример:
 
@@ -45,13 +40,7 @@ export default decl({
 });
 ```
 
-Результат:
-
-```html
-<div class='hello'>world</div>
-```
-
-Тот же код без декларации:
+Код React-компонента Тот же код без декларации:
 
 ```jsx
 import React, {Component} from 'react';
@@ -65,36 +54,29 @@ export default class Hello extends Component {
 }
 ```
 
+Результат одинаковый:
 
-Обычный код React-компонента:
-
-```jsx
-import React from 'react';
-
-export default class Button extends React.Component {
-    render() {
-        const { size, theme, children } = this.props;
-        return (
-            <button className={`Button Button_size_${size} Button_theme_${theme}`}>
-                {children}
-            </button>
-        );
-    }
-};
+```html
+<div class='hello'>world</div>
 ```
 
-Тот же компонент, записанный с помощью bem-react-core:
+```diff Button.jsx
+- import React, {Component} from 'react';
++ import {decl} from 'bem-react-core';
 
-```jsx
-import { decl } from 'bem-react-core';
-
-export default decl({
-    block : 'Button',
-    tag: 'button',
-    mods({ size, theme }) {
-        return { size, theme };
-    }
-});
+- export default class Hello extends Component {
++ export default decl({
+-    render() {
+-         return (
+-             <div className='hello'>world</div>
+-         );
+-     }
+- }
++     block: 'hello',
++     content() {
++         return 'world';
++     }
++ });
 ```
 
 ## Как использовать
@@ -205,3 +187,10 @@ __.babelrc__
 ## Лицензия
 
 Code and documentation copyright 2017 YANDEX LLC. Code released under the [Mozilla Public License 2.0](LICENSE.txt).
+
+
+
+Декларации
+
+Описание деклараций работает в совокупности с [особенным синтаксисом импортов](https://github.yandex-team.ru/lego/islands/blob/dev/guidelines/bem-react-import.md) нового стандарта.
+
