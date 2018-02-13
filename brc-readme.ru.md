@@ -6,28 +6,27 @@
 
 bem-react-core работает поверх обычных React-компонентов и предоставляет API для описания деклараций [блоков](https://ru.bem.info/methodology/key-concepts/#Блок), [элементов](https://ru.bem.info/methodology/key-concepts/#Элемент) и [модификаторов](https://ru.bem.info/methodology/key-concepts/#Модификатор). Блоки и элементы, созданные с помощью bem-react-core, полностью совместимы с React-компонентами: могут использовать внутри себя готовые React-компоненты и могут быть вызываны сами в коде React-компонентов.
 
-Библиотека предоставляет набор [дополнительных методов](#ссылка на раздел про методы и поля деклараций и переопределение стандартных методов react) для React-компонентов. Наравне с этим также работают стандартные методы React-компонентов.
+Библиотека предоставляет набор [дополнительных методов](./#ссылка на раздел про методы и поля деклараций и переопределение стандартных методов react) для React-компонентов. Наравне с этим также работают стандартные методы React-компонентов.
 
 Разработка библиотеки ведется в [Open Source](https://github.com/bem/bem-react-core).
 
 ## Для кого?
 
-Библиотека предназначена для тех, кто хочет совместить преимущества БЭМ и React.js в одном проекте.
+Библиотека предназначена для тех, кто хочет совместить преимущества подходов БЭМ и React в одном проекте.
 
-Почему мы выбрали React? — Он быстрый, модульный, декларативный и модный. Компонентный подход БЭМ и React схож.
+Почему мы выбрали React? — React быстрый, модульный, декларативный и модный.
 
-Почему вы захотите выбрать bem-react-core, если используете React?
-Чтобы:
+bem-react-core дает возможность в вашем проекте на React:
 
 * Точечно управлять вариативностью компонентов, которая в обычных React-компонентах выражается через цепочку произвольных условий в коде в императивном стиле.
 * Повторно использовать компоненты и переопределять их, не изменяя базовый код.
-* Получить все, что предоставляет мощный инструмент уровни переопределения без применения фреймворка i-bem.js. (Одновременно разрабатывать одну версию проекта для разных платформ. Проводить неограниченное количество экспериментов, сохраняя рабочую версию проекта.)
+* Получить все, что предоставляет мощный инструмент уровни переопределения без применения фреймворка [i-bem.js](https://en.bem.info/platform/i-bem/). (Дифференцировать код для разных платформ. Одновременно проводить неограниченное количество экспериментов, сохраняя рабочую версию проекта.)
 
-> Подробнее о том, почему стоит использовать bem-react-core в [Motivation](/docs/ru/Basics/Introduction/Motivation.md).
+> Подробнее о том, почему стоит использовать bem-react-core в [Motivation](/docs/ru/Introduction/Motivation.md).
 
-## Пример синтаксиса декларации блока
+## Пример синтаксиса
 
-Простой пример:
+Пример декларации блока:
 
 ```jsx
 import {decl} from 'bem-react-core';
@@ -40,7 +39,7 @@ export default decl({
 });
 ```
 
-Код React-компонента Тот же код без декларации:
+Код React-компонента без декларации:
 
 ```jsx
 import React, {Component} from 'react';
@@ -60,6 +59,8 @@ export default class Hello extends Component {
 <div class='hello'>world</div>
 ```
 
+Как вариант, показать так:
+
 ```diff Button.jsx
 - import React, {Component} from 'react';
 + import {decl} from 'bem-react-core';
@@ -78,6 +79,11 @@ export default class Hello extends Component {
 +     }
 + });
 ```
+
+* [Декларация блока](/docs/ru/Basics/Blocks.ru.md)
+* [Декларация элемента](/docs/ru/Basics/Elements.ru.md)
+* [Декларация модификатора](/docs/ru/Basics/Modifiers.ru.md)
+
 
 ## Как использовать
 
@@ -130,7 +136,7 @@ bemLoader : {
 
 #### Babel
 
-Используйте БЭМ [плагин](https://github.com/bem/babel-plugin-bem-import) для Babel.
+Используйте [плагин](https://github.com/bem/babel-plugin-bem-import) для Babel.
 
 > npm i -D babel-plugin-bem-import
 
@@ -153,44 +159,49 @@ __.babelrc__
 Подробная документация на gitbook или на bem.info разделена на отдельные секции:
 
 * Quick Start
-* Базовый уровень/Базовые знания
-* Advanced Guides
-* Reference
-* Tutorials and recipes
-* Where to Get Support
+* Базовые знания
+* Расширенные руководства / Advanced guides
+* Референс
+* Пошаговые руководства и рецепты / Tutorials and recipes
+* API Reference
 * Contribution Guide
+* FAQ
 
-Вы всегда можете улучшить документацию, прислав свой пулл реквест или создав ишью.
+Вы всегда можете улучшить документацию, прислав свой pull request или создав задачу на Github.
 
 ## Разработка
 
-получите исходные файлы:
+Получите исходные файлы:
 
-> git clone git://github.com/bem/bem-react-core.git
-> cd bem-react-core
+```
+git clone git://github.com/bem/bem-react-core.git
+cd bem-react-core
+```
 
 Установите зависимости:
 
-> npm i
+```
+npm i
+```
 
-Установите линтер для кода:
+Установите линтер:
 
-> npm run lint
+```
+npm run lint
+```
 
 Запустите тесты:
 
-> npm test
+```
+npm test
+```
 
 ## Команда разработки
 
+[@veged](https://github.com/veged)
+[@awinogradov ](https://github.com/awinogradov)
+[@Yeti-or](https://github.com/Yeti-or)
 
 ## Лицензия
 
 Code and documentation copyright 2017 YANDEX LLC. Code released under the [Mozilla Public License 2.0](LICENSE.txt).
-
-
-
-Декларации
-
-Описание деклараций работает в совокупности с [особенным синтаксисом импортов](https://github.yandex-team.ru/lego/islands/blob/dev/guidelines/bem-react-import.md) нового стандарта.
-
