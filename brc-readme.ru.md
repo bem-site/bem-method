@@ -66,15 +66,15 @@ export default class Hello extends Component {
 
 - export default class Hello extends Component {
 + export default decl({
--    render() {
+-     render() {
++     block: 'hello',
++     content() {
 -         return (
 -             <div className='hello'>world</div>
++         return 'world';
 -         );
 -     }
 - }
-+     block: 'hello',
-+     content() {
-+         return 'world';
 +     }
 + });
 ```
