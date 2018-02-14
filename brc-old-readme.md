@@ -1,26 +1,35 @@
+Старый вариант ридми
+
+
 # BEM React Core [![Build Status](https://travis-ci.org/bem/bem-react-core.svg?branch=master)](https://travis-ci.org/bem/bem-react-core) [![GitHub Release](https://img.shields.io/github/release/bem/bem-react-core.svg)](https://github.com/bem/bem-react-core/releases) [![devDependency Status](https://david-dm.org/bem/bem-react-core/dev-status.svg)](https://david-dm.org/bem/bem-react-core#info=devDependencies)
 
-Библиотека для работы с [React](https://reactjs.org/)-компонентами в виде деклараций [БЭМ-сущностей](https://ru.bem.info/methodology/key-concepts/#БЭМ-сущность). Позволяет совместить преимущества подходов [БЭМ](https://ru.bem.info/method) и React в одном проекте.
+Библиотека для работы с [React](https://reactjs.org/)-компонентами в виде деклараций [БЭМ-сущностей](https://ru.bem.info/methodology/key-concepts/#БЭМ-сущность).
 
-bem-react-core работает поверх обычных React-компонентов и предоставляет [API](./docs/ru/REFERENCE.ru.md) для описания деклараций [блоков](https://ru.bem.info/methodology/key-concepts/#Блок), [элементов](https://ru.bem.info/methodology/key-concepts/#Элемент) и [модификаторов](https://ru.bem.info/methodology/key-concepts/#Модификатор). Блоки и элементы, созданные с помощью bem-react-core, полностью совместимы с React-компонентами. Они могут использовать внутри себя готовые React-компоненты и могут сами быть вызываны в коде React-компонентов.
+> Подробнее про [БЭМ](https://ru.bem.info/method).
 
-Библиотека bem-react-coore работает со стандартными методами React-компонентов и предоставляет набор [дополнительных методов](./#ссылка на раздел про методы и поля деклараций и переопределение стандартных методов react) для React-компонентов.
+bem-react-core работает поверх обычных React-компонентов и предоставляет API для описания деклараций [блоков](https://ru.bem.info/methodology/key-concepts/#Блок), [элементов](https://ru.bem.info/methodology/key-concepts/#Элемент) и [модификаторов](https://ru.bem.info/methodology/key-concepts/#Модификатор). Блоки и элементы, созданные с помощью bem-react-core, полностью совместимы с React-компонентами: могут использовать внутри себя готовые React-компоненты и могут быть вызываны сами в коде React-компонентов.
 
 Библиотека предоставляет набор [дополнительных методов](./м#ссылка на раздел про методы и поля деклараций и переопределение стандартных методов react) для React-компонентов. Наравне с этим также работают стандартные методы React-компонентов.
 
-## Преимущества
+Разработка библиотеки ведется в [Open Source](https://github.com/bem/bem-react-core).
 
-В проекте с bem-react-core можно:
+## Для кого?
+
+Библиотека предназначена для тех, кто хочет совместить преимущества подходов БЭМ и React в одном проекте.
+
+Почему мы выбрали React? — React быстрый, модульный, декларативный и модный.
+
+bem-react-core дает возможность в вашем проекте на React:
 
 * Точечно управлять вариативностью компонентов, которая в обычных React-компонентах выражается через цепочку произвольных условий в коде в императивном стиле.
-* Повторно использовать компоненты и переопределять их, не изменяя исходный код.
-* Использовать уровни переопределения без применения фреймворка [i-bem.js](https://en.bem.info/platform/i-bem/) для решения разного рода задач: дифференцирования кода по платформам, проведения экспериментов, обновления подключенных в проект библиотек, управления процессом сборки.)
+* Повторно использовать компоненты и переопределять их, не изменяя базовый код.
+* Получить все, что предоставляет мощный инструмент уровни переопределения без применения фреймворка [i-bem.js](https://en.bem.info/platform/i-bem/). (Дифференцировать код для разных платформ. Одновременно проводить неограниченное количество экспериментов, сохраняя рабочую версию проекта.)
 
-> Подробнее о том, что [мотивировало](/docs/ru/Introduction/Motivation.md) нас создать bem-react-core.
+> Подробнее о том, почему стоит использовать bem-react-core в [Motivation](/docs/ru/Introduction/Motivation.md).
 
-## Пример генерации CSS-класса
+## Пример синтаксиса
 
-Создание CSS-класса компонента `helo` с помощью декларации блока в bem-react-core:
+Пример декларации блока:
 
 ```jsx
 import {decl} from 'bem-react-core';
@@ -33,7 +42,7 @@ export default decl({
 });
 ```
 
-Создание CSS-класса компонента `hello` с помощью React-компонента без декларации:
+Код React-компонента без декларации:
 
 ```jsx
 import React, {Component} from 'react';
@@ -47,7 +56,7 @@ export default class Hello extends Component {
 }
 ```
 
-Результат выполнения двух скриптов будет одинаковый:
+Результат одинаковый:
 
 ```html
 <div class='hello'>world</div>
@@ -74,26 +83,9 @@ export default class Hello extends Component {
 + });
 ```
 
-Читать подробнее:
-
 * [Декларация блока](/docs/ru/Basics/Blocks.ru.md)
 * [Декларация элемента](/docs/ru/Basics/Elements.ru.md)
 * [Декларация модификатора](/docs/ru/Basics/Modifiers.ru.md)
-* [Как перевести БЭМ-проект на bem-react-core]()
-
-## Документация
-Подробная документация на gitbook или на bem.info разделена на отдельные секции:
-
-* Quick Start
-* Базовые знания
-* Расширенные руководства / Advanced guides
-* Референс
-* Пошаговые руководства и рецепты / Tutorials and recipes
-* API Reference
-* Contribution Guide
-* FAQ
-
-Вы всегда можете улучшить документацию, прислав свой pull request или создав задачу на Github.
 
 
 ## Как использовать
@@ -165,6 +157,20 @@ __.babelrc__
   ]
 }
 ```
+
+## Документация
+Подробная документация на gitbook или на bem.info разделена на отдельные секции:
+
+* Quick Start
+* Базовые знания
+* Расширенные руководства / Advanced guides
+* Референс
+* Пошаговые руководства и рецепты / Tutorials and recipes
+* API Reference
+* Contribution Guide
+* FAQ
+
+Вы всегда можете улучшить документацию, прислав свой pull request или создав задачу на Github.
 
 ## Разработка
 
