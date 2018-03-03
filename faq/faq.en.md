@@ -16,7 +16,7 @@ Do you have questions about BEM? We can help you find answers quickly.
 * [Why create separate directories and files for every block and technology?](#why-create-separate-directories-and-files-for-every-block-and-technology)
 * [Do block elements inherit the block's CSS properties?](#do-block-elements-inherit-the-blocks-css-properties)
 * [Why not create wrapper blocks?](#why-not-create-wrapper-blocks)
-* [Why not create elements of elements (block__elem1__elem2)?](#why-not-create-elements-of-elements-block__elem1__elem2)
+* [Why not create elements of elements (block\__elem1\__elem2)?](#why-not-create-elements-of-elements-block__elem1__elem2)
 
 ## Modifiers and mixes
 
@@ -176,7 +176,7 @@ Abstract wrappers are not necessary, because the tasks they would solve are impl
 
 > Read more in the section [BEM for HTML](../method/bem-for-html/bem-for-html.en.md).
 
-## Why not create elements of elements (block__elem1__elem2)?
+## Why not create elements of elements (block\__elem1\__elem2)?
 
 The existence of elements of elements hinders the ability to change the internal structure of the block. Elements cannot be swapped around, removed or added without modifying the existing code.
 
