@@ -42,7 +42,7 @@
 
 Чтобы подключить скрипты и стили библиотеки в проект, скопируйте ссылки на бандлы в теги `<link>` и `<script>`:
 
-```diff hello.html
+```diff
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,7 +82,7 @@
 
 Скопируйте код и вставьте на страницу:
 
-```diff hello.html
+```diff
 <!DOCTYPE html>
 <html>
 <head>
@@ -149,7 +149,7 @@ modules.require('i-bem-dom__init', function(init) { init(); });
 
 Чтобы генерировать HTML-разметку блока в браузере, необходимо использовать шаблонизатор [BEMHTML](https://ru.bem.info/platform/bem-xjst/8/), который преобразует [BEMJSON](https://ru.bem.info/platform/bemjson/) в HTML. Для этого [подключите](##Подключение-библиотеки-в-проект) бандл с шаблонизатором (`*.js+bemhtml.js`):
 
-```diff hello.html
+```diff
 <!DOCTYPE html>
 <html>
 <head>
@@ -174,7 +174,7 @@ modules.require('i-bem-dom__init', function(init) { init(); });
 
 Скопируйте код и вставьте его в скрипт с шаблоном на страницу:
 
-```diff hello.js
+```diff
 modules.define('hello', ['i-bem-dom', 'BEMHTML', 'input', 'button'],
     function(provide, bemDom, BEMHTML, Input, Button) {
 
