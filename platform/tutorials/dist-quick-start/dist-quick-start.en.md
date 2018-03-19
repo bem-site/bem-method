@@ -43,7 +43,7 @@ Flow for connecting a file using CDN: `//yastatic.net/library-name/version/platf
 
 To connect library scripts and styles to the project, copy the links to the bundles to the `<link>` and `<script>` tags:
 
-```diff hello.html
+```diff
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,7 +83,7 @@ To get the prepared HTML markup for the block, go to the `HTML` tab in the block
 
 Copy the code and insert it on the page:
 
-```diff hello.html
+```diff
 <!DOCTYPE html>
 <html>
 <head>
@@ -150,7 +150,7 @@ The project in [JSFiddle](https://jsfiddle.net/inna__neige/0hLmLmzn/).
 
 To generate the block's HTML markup in the browser, use the [BEMHTML](https://en.bem.info/platform/bem-xjst/8/) template engine that transforms [BEMJSON](https://en.bem.info/platform/bemjson/) to HTML. To do this, [connect](#connecting-the-library) the bundle with the template engine (`*.js+bemhtml.js`):
 
-```diff hello.html
+```diff
 <!DOCTYPE html>
 <html>
 <head>
@@ -175,7 +175,7 @@ To get the`BEMJSON` code of the block, go to the `BEMJSON` tab in the block exam
 
 Copy the code and insert it in the template script on the page:
 
-```diff hello.js
+```diff
 modules.define('hello', ['i-bem-dom', 'BEMHTML', 'input', 'button'],
     function(provide, bemDom, BEMHTML, Input, Button) {
 
