@@ -1,18 +1,19 @@
 # The history of BEM
 
-Once upon a time, in a distant country far-far away, an IT company named [Yandex](https://company.yandex.com) started developing web search and affiliated services. Time went by and services were growing, and more and more front-end developers put their tireless efforts into improving the ecosystem of Yandex.
+* [Typical markup in Yandex (2005)](#typical-yandex-markup-in-2005)
+* [Birth of the methodology (2006)](#birth-of-the-methodology)
+* [Beginning of the unified portal-wide framework (2006)](#building-up-the-unified-framework)
+* [Independent blocks (2007)](#layout-with-independent-blocks)
+* [Lego framework (2008)](#lego-unified-framework)
+* [Lego 1.2 framework (2008)](#lego-framework-12-2008)
+* [Lego 2.0. The birth of BEM (2009)](#lego-20-birth-of-bem)
+* [BEM and open source (2010)](#bem-and-open-source-2010)
 
-Great things they did, and amazing tools they built, making their developers lives easier, and times now have come to share that knowledge with the community, to embrace the magic power of Open Source and benefit all good people around.
+## Typical Yandex markup in 2005
 
-This article tells about Yandex front-end developers constantly revising and improving the way they build web pages. Front-end developers are well known for their enormous curiosity (that often brings innovation) and their remarkable laziness that makes them devise sophisticated systems to save precious time, to unify and automate everything.
+The history of BEM began in 2005. Back then, from the frontender perspective, a typical Yandex project was a set of static HTML pages that served as a base for creating XSL templates.
 
-This is how many exciting things were born into life, but now let's travel back in time to 2005 and sneak a peek over a shoulder of a really-really-busy Yandex front-end developer, and thus see...
-
-## ...where it all began
-
-Back in 2005, the focus was still pretty much on the server side of things. From frontender perspective, a typical Yandex project was a set of static HTML pages that served as a base reference for creating advanced templates like XSL stylesheets.
-
-These pages were kept in a separate folder and looked like this after a checkout:
+The HTML pages were kept in a separate folder with the following structure:
 
 ```files
 about.html
@@ -24,145 +25,133 @@ i/
   yandex.png
 ```
 
-There was a static HTML file for each page, with all the CSS pushed into a single stylesheet, `project.css`, and all Javascript placed in a single `project.js`. Both files were shared between project pages.
+* There was a separate HTML file for each page. The layout used `IDs` and `classes`.
+* All scripts for the project were kept in a single `project.js` file. JavaScript was used as an auxiliary tool for interactive elements, so `project.js` was small.
+* Images were put in a separate folder. Because of the need to support IE 5 and the lack of CSS3 in browsers, images were used for all sorts of design elements — even for creating rounded corners.
+* Styles and scripts were written in files: `project.css` and `project.js`. To separate the styles of different parts of a page, we used comments to indicate the beginning and the end:
 
-At those times, JavaScript was only sparsely applied to some controls, so all the interaction magic for the whole project could fit comfortably into a single small file.
-
-Images were placed into a separate folder, as they were numerous. With IE 5 roaming in the wild and no CSS3, images were used for all sorts of eye-candy, even for creating rounded corners (although none of the younger web developers would probably believe me :-)).
-
-To keep some structure, style definitions for different page sections were separated using plain
-CSS comments like this:
-
-```css
-/* Content container (begin) */
-    #body
-    {
+  ```css
+  /* Content container (begin) */    
+    #body    
+    {        
         font: 0.8em Arial, sans-serif;
-        margin: 0.5em 1.95% 0.5em 2%;
+        margin: 0.5em 1.95% 0.5em 2%;    
     }
-/* Content container (end) */
+  
+  /* Content container (end) */
 
-/* Graphical banner (begin) */
-    .banner
-    {
-        text-align: center;
+  /* Graphical banner (begin) */    
+    .banner    
+    {        
+        text-align: center;    
     }
-/* Graphical banner (end) */
-```
+  
+  /* Graphical banner (end) */
+  ```
 
-Both IDs and classnames were used in the HTML markup.
+The static HTML pages were divided up into XSL templates. If the HTML changed, all the edits had to be manually copied to the XSL. And the opposite was also true: template changes required manual edits in the HTML (to keep the static HTML up to date).
 
-Static HTML was manually copied into production XSL templates, and all changes were synced two-way, manually.
+## Birth of the methodology
 
-That was hard, and even when it wasn't hard, it was dull.
+In 2006, we started working on our first large projects: Yandex.Music and Ya.Ru. These projects, with dozens of pages, revealed the main drawbacks of the current approach to development:
 
-## Mid-scale projects
+* Any changes to the code of one page affected the code of other pages.
+* It was difficult to choose classnames.
 
-At the beginning of 2006, the first version of Yandex.Music had been under heavy development.
-Multiple pages, each unlike the other, didn't fit well into familiar simplistic concepts.
-
-Dozens of CSS classes you had to invent meaningful names for, a growing number of unintentional dependencies spread along the project — all that had been calling for a better solution.
-
-Typical piece of CSS code from those days:
+A typical CSS back then contained a long cascade:
 
 ```css
-/* Albums (begin) */
-    .result .albums .info
-    {
-        padding-right: 8.5em;
+/* Albums (begin) */    
+    .result .albums .info    
+    {        
+        padding-right: 8.5em;    
+    } 
+
+    .result .albums .title    
+    {        
+        float: left;        
+        padding-bottom: 0.3em;    
     }
 
-    .result .albums .title
-    {
-        float: left;
-        padding-bottom: 0.3em;
+    .result .albums .album .listen    
+    {        
+        float: left;        
+        padding: 0.3em 1em 0 1em;    
     }
 
-    .result .albums .album .listen
-    {
-        float: left;
-        padding: 0.3em 1em 0 1em;
-    }
 /* Albums (end) */
 ```
 
-See that long cascade rules are used throughout the code.
-
-Have another look:
+ID and tag name selectors were used at the same time:
 
 ```css
-/* Background images (begin) */
-    #foot div
-    {
-        height: 71px;
-        background: transparent url(../i/foot-1.png) 4% 50% no-repeat;
-    }
+/* Background images (begin) */    
+    #foot div    
+    {        
+        height: 71px;        
+        background: transparent url(../i/foot-1.png) 4% 50% no-repeat;    
+    }    
 
-    #foot div div
-    {
-        background-position: 21%;
-        background-image: url(../i/foot-2.png);
-    }
+    #foot div div    
+    {        
+        background-position: 21%;        
+        background-image: url(../i/foot-2.png);    
+    }    
 
-    #foot div div div
-    {
-        background-position: 38%;
-        background-image: url(../i/foot-3.png);
-    }
+    #foot div div div    
+    {        
+        background-position: 38%;        
+        background-image: url(../i/foot-3.png);    
+        }
 /* Background images (end) */
 ```
 
-See that `id` and tag names selectors are used in many rules.
+A big project's layout was unmanageable. To avoid this, we needed to set rules for dealing with classes, tags, visual components, and so on.
 
-At the same time, even bigger project was started Yaru — a blogging platform, a place for people to interact, to share, to read and to engage.
+### The introduction of blocks
 
-There were dozens of various pages to support, and with the old-fashioned approach the code was running out of control on many levels.
+Developers were spending most of their time creating the HTML structure of a page and writing CSS styles for it. JavaScript was regarded as nothing more than a supplementary technology.
 
-### Blocks to the rescue
+To speed up development, we needed to simplify the support of HTML and CSS for separate page components. We introduced the concept of blocks for this purpose.
 
-We needed to specify a data domain for managing page interface objects. This was a methodology thing, we needed to put more clarity into the way we work with concepts like `class`, `tag`, `visual component` etc.
+A block is a part of a page design or layout that has a specific and unique meaning defined either semantically or visually.
 
-For a typical web page of a Yandex project, HTML structure and its CSS styles were still the focus of our development efforts, and JavaScript was understood as a supplementary technology.
+In most cases, any page element (either complex or simple) may be viewed as a block. The block's HTML container gets a unique CSS class that uses the same name as the block.
 
-For easier maintenance of HTML/CSS for many different components, a new term was invented: `block`.
-Block is a part of a page design or layout having its specific and unique meaning defined either semantically, or visually.
+We added prefixes (`b-`, `c-`, `g-`) to the block classes to distinguish them from internal classes:
 
-In most cases, any distinct page element (either complex or simple) may be seen as a block.
-Then its HTML container gets a unique CSS class, which is also used as a block name.
+* **b-** — Block.
 
-CSS classes for blocks got prefixes (`b-`, `c-`, `g-`) to provide sort of a namespace emulation in CSS.
+   An independent block that can be used in any part of the page.
 
-The naming convention itself was changed later, here's the initial list explained:
+* **с-** — Control.
 
-* **b-** block
+   A control (an independent block) with an associated JavaScript object that provides its functionality. Can be used anywhere on the page.
 
-  An independent block, placed on a page wherever you need it
+* **g-** — Global.
 
-* **с-** control
+   Global definition, used if necessary. The number of these definitions is kept at a minimum.
 
-  A control (an independent block) with a JavaScript object bound to it
+Postfixes were also used along with the prefixes. For example:
 
-* **g-** global
+* **-nojs** — No javascript.
 
-  A global definition, used sparingly and always defined for a specific, unique reason.
-  The number of these definitions kept at a minimum.
+The style to be applied with JavaScript turned off. If JavaScript is enabled, the `init()` method in onload is called when loading the page, and the postfix is ​​removed from all classes. This is how JavaScript was ”turned on“ for the blocks.
 
-Some suffixes were employed as well, e.g.:
+### The introduction of elements
 
-* **-nojs** no javascript
+In an HTML container forming the block, some nodes got a distinct CSS class. This facilitated the creation of style rules independent from tag names. It also allowed us to assign a semantically meaningful role to each node. We called these inner nodes ”block elements“, or simply ”elements“.
 
- Style rule to be applied with JavaScript turned off. The onload callback may contain an `init()` function call that removes these suffixes from all objects, thus semantically marking them
- up as "JavaScript-enabled".
+The key difference between a block and an element at that moment was:
 
-### What's inside
+* An element can't exist outside of its parent block context.
+* An element can't be detached from the block.
 
-In an HTML container forming a block, some nodes get a distinct CSS classname. This not only facilitates the creation of tagname-independent style rules, but also assigns semantically meaningful roles to each node. Such inner nodes are called "block elements", or simply "elements".
+Detachable elements become blocks themselves.
 
-The core distinction between a block and an element is the element's inability to exist out of its parent block context. As long as you cannot detach something from a block, it's an element; detachable elements (probably) should become blocks themselves.
+Later, it became possible to detach some elements from the block while still keeping the block in working condition.
 
-At first, elements could have been defined only inside their parent block container; later, a technique was provided to place some elements outside and still keep a block consistent.
-
-In stylesheets, elements with lots of CSS got extra indentation and were wrapped in comments:
+Elements with a lot of code were marked with comments.
 
 ```css
 /* Head (begin) */
@@ -189,21 +178,15 @@ In stylesheets, elements with lots of CSS got extra indentation and were wrapped
 /* Head (end) */
 ```
 
-### Project file structure evolves
+### Unifying the project file structure
 
-At Yandex, a front-end developers usually support more than one project.
+Interface designers usually support several projects simultaneously. Working with multiple projects is easier if they have the same (or very similar) file structure. To this end, we unified the repository structure of the projects.
 
-Switching between different repositories and various branches is easier when all projects use the same (or very similar) file structure.
+We started storing CSS, Javascript and images in separate directories.
 
-Granularity is another requirement as it provides more flexibility for version control systems and helps avoid conflicts during concurrent development.
+JavaScript was used more and more often, and additional components and libraries were added to projects.
 
-This led us to a more unified structure.
-
-CSS, JavaScript, and image files reside in separate folders.
-
-JavaScript was employed more and more daily, thus the addition of optional components and libraries.
-
-Typical file structure:
+The typical project layout structure in 2006 looked like this:
 
 ```files
 index.html
@@ -216,7 +199,7 @@ i/
   yandex.png
 ```
 
-MSIE-specific hacks could have gone into the main CSS file (`yaru.css`) if they were in compliance with the CSS standards:
+The basic code for Internet Explorer was added to the main CSS file, such as `yaru.css`.
 
 ```css
 /* Common definitions (begin) */
@@ -234,7 +217,7 @@ MSIE-specific hacks could have gone into the main CSS file (`yaru.css`) if they 
     }
 ```
 
-Non-valid workarounds were put in a standalone `yaru-ie.css` (loaded with IE-only conditional comments).
+The IE-specific rules (temporary hacks) were put in a separate file. The file name was extended with a special `ie` identifier: `yaru-ie.css`.
 
 ```css
 /* Common blocks (begin) */
@@ -246,21 +229,19 @@ Non-valid workarounds were put in a standalone `yaru-ie.css` (loaded with IE-onl
         }
 ```
 
-## Building up a framework: the beginning
+## Building up the unified framework
 
 Designing similar projects eventually leads to re-creating the same blocks over and over again.
 
-Yandex is a portal having more than 100 services sharing the same corporate style, so careless copy/paste doesn't work really well on this scale.
+At that point, Yandex had more than 100 services sharing the same style. For this volume of data, copying and pasting between the projects didn't work anymore.
 
-So, to have something to begin with, we had a small compilation of reusable components, which inside Yandex was referred to as "common blocks library", or simply "the Common".
+We created a shared storage of reusable components, referred to as the ”common blocks library“, or simply `Common`.
 
-First page fragments to be unified were: header, footer and some typographic CSS definitions.
+The first blocks in `Common` were the header, footer and standard text styles.
 
-> The corresponding files were hosted on an internal dedicated server (**common.cloudkill.yandex.ru** in the listings below).
+> The block files were hosted on an internal dedicated server (**common.cloudkill.yandex.ru** in the example below).
 
-This was the very beginning of our unified framework.
-
-Styles could be imported directly from that server:
+This was the beginning of our unified framework. Styles could be imported to the main project file directly from that server:
 
 ```css
 @import url(http://common.cloudkill.yandex.ru/css/global.css);
@@ -272,122 +253,115 @@ Styles could be imported directly from that server:
 
 /* Header (begin) */
     /* Service (begin) */
-        .b-head .service h1 { … }
-        .b-head .service h1, .b-head .service h1 a, .b-head .service h1 b { … }
+        .b-head .service h1 { … }        .b-head .service h1, .b-head .service h1 a, .b-head .service h1 b { … }
 ```
 
-Obviousy, too many imports, page loads slowly! So, we decided to pre-compile styles (and later, JS files) before deployment.
+This caused an issue: many imports slowed down the loading of the page. So we decided to pre-compile styles (and later, JavaScript files) before deployment.
 
-The compilation replaces `@import` directives with the actual contents of external files (this is called `inlining`) and performs more optimizations, e.g. unrequired to browser whitespaces and comments.
+Compiling replaces `@import` with the contents of external files (this is called `inlining`) and optimizes the code. For example, it removes spaces and comments not required by the browser.
 
-Our internal inlining tool evolved from a simple wrapper perl script into an open source project [borschik](https://en.bem.info/tools/optimizers/borschik/).
+Our internal optimization tool evolved from a simple Perl script into an open source project [borschik](https://github.com/borschik/borschik/blob/master/docs/index/index.en.md).
 
-## Independent blocks as a concept
+## Layout with independent blocks
 
-By the fall of 2007, our everyday practice got some theory behind it.
+By the fall of 2007, we had developed clear layout rules. We saw the practical benefits of the new approach, so we decided to share our experience outside Yandex.
 
-The Independent Block concept, which was by that time the basis of our HTML layouts, was featured at the ClientSide'07 conference in Moscow, Russia.
+The [independent block layout](http://vitaly.harisov.name/article/independent-blocks.html), which was by that time the basis of our HTML pages, was featured at the ClientSide'07 conference in Moscow, Russia.
 
-In that presentation, the first attempt to define a `block` has been made.
+The presentation at the conference officially introduced the block concept:
 
-### Blocks: the declaration of idependence
+> A block is a page fragment with certain markup and styles.
 
-In our attempt to produce a formal (in fact, semi-formal) declaration of `block`, the following 3 principles were highlighted:
+Blocks could be simple and compound.
 
-1. Only classnames (not IDs) should be used to describe styles;
-2. Each block classname has a prefix;
-3. Any CSS rules except ones prefixed with g- must belong to a block.
+> Simple blocks can't contain other blocks, whereas compound blocks can.
 
-As soon as unique IDs are dropped, the same block can be used on the same page more than once.
+This classification proved to be wrong: even the simplest blocks sometimes were wrapped around other blocks, so that we had to change the layout. In the end, we accepted the opposite principle:
 
-This also allows two or more classes to co-exist on the same DOM node, which turned out to be quite useful later.
+> Any block should allow nested blocks, whenever possible.
 
-#### Blocks simple and compound: the misclassification
+### Rules for block independence
 
-We defined simple blocks as not being able to contain another blocks anywhere inside their markup.
+We introduced the first rules for independence of a block.
 
-Compound blocks were allowed (or sometimes, required) to have nested blocks embedded.
+1. Only `classes` (not `IDs`) should be used to describe an element.
+2. Each block has a prefix.
+3. The CSS sheets don't contain classes outside the blocks.
 
-This classification was naive; even the simplest blocks sometimes were wrapped around other blocks and had to be "upgraded" and refactored to fit the new role.
+Dropping `IDs` was an important decision.
 
-This misclassification in fact had struck back in so many cases that we had finally accepted the opposite principle: any block should allow for arbitrary content to be embedded, whenever possible.
+Now it became possible to:
 
-#### Completely independent blocks
+* Display the same block on the page several times.
+* Use multiple classes on the same DOM node (which proved to be useful later).
 
-CSS definitions aren't bulletproof when we mix a lot of styled content originating from different sources
-on a single web page.
+#### Rules for absolutely independent blocks
 
-In complex layouts, blocks may alter each other appearance because of element names conflicts.
-Tagname-based CSS rules may match more tags than we intended them to.
+The approach we were using still had a number of problems with CSS:
 
-As soon as we had to fight these and similar bugs in production, a strict version of an independent block (named Absolutely Independept Block, abbreviated AIB) was defined with the following extra rules:
+* CSS sometimes didn't work right if the page included code fragments written by third-party developers (such as libraries).
+* Blocks were sometimes displayed incorrectly because of conflicts in element names.
+* Tag selectors sometimes matched more HTML elements than we intended.
 
-1. Never match CSS to tagnames, use classnames for everything.
+To deal with these issues, we defined absolutely independent blocks with stricter block independence rules:
 
-  **Example**
+1. Do not use tag selectors. Describe the block and element styles with class selectors.
 
-  `.b-user b -> .b-user .first-letter`
+**Example**
 
-2. Classnames for block elements must be prefixed with the parent block name.
+`.b-user b -> .b-user .first-letter`
 
-  **Example**
+2. Name classes within the block starting with the block name.
 
-  `.b-user .first-letter -> .b-user-first_letter`
+**Example**
 
-  Such classnames tend to be much longer, and the resulting HTML code is considerably bigger in size.
+`.b-user .first-letter -> .b-user-first_letter`
 
-This was the main reason why AIB was considered a "costly solution" to be used more as a remedy, not as an everyday practice.
+We were aware that assigning a class to each DOM node would dramatically increase the volume of the HTML code. At that point we considered this solution too costly and decided to apply it only in exceptional cases.
 
-### The first rules of naming convention are prefixes
+### The first naming rules: prefixes
 
-As everybody is aware nowadays, giving names to variables is one of the most difficult problems in development, ever.
+Naming is a common problem in development. We decided to use prefixes in the block names, each one with its own semantics:
 
-We approached it cautiously, and invented four prefixes allowed for block names, each one with its own semantics:
-
-* **b-**
-  common blocks
-
-* **h-**
-  holsters, used for gluing several elements together
-
-* **l-**
-  layout grids
-
-* **g-**
-  global styles
+* **b-** — Common blocks
+* **h-** — Wrappers for several blocks
+* **l-** — Layout grids
+* **g-** — Global styles
 
 ### The addition of block modifications
 
-`Modification` can be defined as a specific state of a block, or as a flag that holds some specific property.
+While using blocks, we realized they can be in different states.
 
-This is best explained with an example: a block representing a button may have three default sizes: small, normal and big.
+For example, the `button` block can be:
 
-Instead of creating 3 different blocks, you should assign a `modification` to your block. The modification requires a name (e.g. `size`) and a value (`small`, `normal` or `big`).
+* Small
+* Normal
+* Large
 
-There are two reasons for a block to get a modification:
+Instead of creating three different blocks, we applied modifications.
 
-1. Block may alter its presentation according to its placement in the layout.Such modification is called `context-dependent`.
-2. An additional (postfixed) classname may change block appearance. This is a context-independent (postfix-based) modification.
+We defined a modification as a specific state of a block, or as a label that adds some specific property to the block.
 
-  **Example**
+The modification was defined by its name (such as `size`) and a value (such as `small`, `normal` or `large`).
 
-  `class="b-block b-block-postfix"`
+Modification can be used in the following cases:
 
-## Unified portal-wide framework
+1. The block can change its appearance depending on its location. This is called context-dependent modification.
+2. A second class can be added to the block. This is a postfix-based modification, independent from the context.
 
-At the beginning of 2008, Yandex had been going through a major review of its internal design policies. We decided to create a brand book (for internal use) to enforce best practices in interface design, company-wide.
+**Example**
 
-This task was assigned to the front-end team, and after some pondering of options, we decided to proceed with technologies we were the most proficient with, namely: HTML and CSS code.
+`class="b-block b-block-postfix"`
 
-Interfaces evolve fast, so fast that any long-term attempt to describe interfaces with words and pictures will become obsolete even before completion. We needed a brand book that would represent our interfaces as they were: changing rapidly and still unified between different Yandex services and products.
+## Lego unified framework
 
-Therefore, we decided that our interface brand book should be built with the same blocks we used to build our web sites. Blocks could be shared between projects and represent the latest in Yandex interface design.
+At the beginning of 2008, we needed to create a brand book describing the style of our portal. We decided to get started by writing HTML/CSS code.
 
-We decided to build a portal-wide framework of blocks so all could benefit from it and contribute back. The project was internally named `Lego`.
+The project was named `Lego`.
 
-### Lego repository structure, first approach
+### Repository structure
 
-The topmost level corresponded to various available `implementations`:
+The topmost level corresponded to implementations:
 
 ```files
 css/
@@ -399,11 +373,11 @@ xsl/
 
 Each implementation contained its own sub-structure of folders.
 
-CSS went into 3 different folders:
+CSS went into the following folders:
 
-1. `block` — blocks shared between services
-2. `util` — general-purpose blocks ready to be opensourced
-3. `service` — CSS styles for specific Yandex services, used for branding, header/footer etc.
+1. `block` — Common unified blocks.
+2. `util` — Blocks that can be used outside Yandex and can be opensourced.
+3. `service` — CSS styles for specific Yandex services. They can be connected to the service to display a header or footer.
 
 **Example**
 
@@ -422,7 +396,7 @@ css/
       b-hmenu.css
 ```
 
-HTML folder structure was identical to CSS:
+The HTML folder structure was identical to CSS:
 
 ```files
 html/
@@ -435,7 +409,7 @@ html/
     b-hmenu.html
 ```
 
-JavaScript was yet loosely structured and used inconsistently between services:
+JavaScript wasn't widely used yet and was stored in a single directory:
 
 ```files
 js/
@@ -447,7 +421,7 @@ js/
   event.del.js
 ```
 
-Each service had a corresponding XML file semantically describing its page header (and providing necessary project-specific data), which in conjunction with an XSL stylesheet generated header HTML code.
+Each service had a corresponding XML file used for building the page header.
 
 ```files
 xml/
@@ -460,7 +434,7 @@ xml/
       head.xml
 ```
 
-XSL templates for various blocks (one file per block) were contained in one folder:
+XSL templates for the blocks were located in one folder. One file corresponded to one block:
 
 ```files
 xsl/
@@ -473,19 +447,15 @@ xsl/
     l-head.xsl
 ```
 
-What about integration?
+Lego is connected to projects using *svn:externals*.
 
-Lego is linked to projects with the help of a version control feature known as *svn:externals*.
+When a package is built for production deployment, the library code is included into the project, which is similar to static linking in compiled languages.
 
-When a package is built for production deployment, the external library (Lego) code is embedded into the package; this is similar to static library linking in compiled languages.
-
-Lego provides an SVN branch for each of its major releases; sticking to a branch in svn:externals allows for hotfixes to arrive to a project; for extreme stability, project can freeze at a specific Lego revision. In either case, major versions switches can be prepared and made whenever necessary.
-
-This simple technique proved quite flexible and is employed up to this day by many Yandex services.
+This approach allows us to release service versions with different versions of Lego and switch to the new version when it is convenient for the project team.
 
 #### CSS files
 
-CSS files linked from web pages were mostly importing corresponding block implementations from the Lego folder structure.
+CSS files linked from web pages consisted mostly of block implementation `@import`s.
 
 ```css
 @import url(../../block/l-head/l-head.css);
@@ -494,15 +464,17 @@ CSS files linked from web pages were mostly importing corresponding block implem
 @import url(block/b-head-logo-auto.css);
 ```
 
-The consistency of import directives was maintained manually.
+These `@import`s were maintained manually.
 
-At that point, we didn't yet come to a unified file naming convention and tried several approaches.
+### Naming rules
 
-## Portal-wide framework lego 1.2 (2008)
+We didn't have a unified file naming convention and tried several approaches.
 
-### The structure of the repository
+## Lego framework 1.2 (2008)
 
-Upon releasing Lego version 1.2, the code had been refactored and folder structure had changed.
+### Repository structure
+
+In Lego version 1.2, the code was refactored and the project repository folder structure changed.
 
 ```files
 common/
@@ -518,9 +490,9 @@ service/
     xml/
 ```
 
-Blocks previously separated and placed in `util` and `block` folders are now combined. Common styles shared by most blocks are stored in common/css.
+The difference between `util` and `block` was removed, and common CSS styles were now put in `common/css`.
 
-We had been pondering the possibility of open-sourcing the code but postponed it until two years later.
+We rejected the idea of open sourcing the code at that moment and returned to it two years later.
 
 ```files
 common/
@@ -529,62 +501,58 @@ common/
       arr/
         b-dropdown.arr.css
         b-dropdown.arr.ie.css
-        b-dropdown.css
-        b-dropdown.ie.css
+      b-dropdown.css
+      b-dropdown.ie.css
 ```
 
-MSIE-specific styles were renamed from *-ie.css* to *.ie.css*.
-
-All contents of optional CSS files (such as `b-dropdown_arr.css`) was moved into separate folders (`arr/b-dropdown.arr.css`).
+The content of optional CSS files (the `b-dropdown_arr.css` and `b-dropdown_arr.ie.css` files) was moved into separate folders (`arr/`). There was less code in the main block file.
 
 ### Naming rules
 
-For classname-based modification of a block, the underscore was assigned as a separator, replacing a single dash that was used previously.
+In IE-specific files, the IE indicator was moved from the file name to the suffix. That is, `-ie.css` was changed to `.ie.css`. File extensions could now contain several words.
 
-This made a block name visually separated from a modificator name, and proved quite useful while developing automated tools, as it allowed for unambiguous search and pattern matching.
+For modifier postfixes, the single dash was replaced with an underscore. This made a block name visually separated from a modifier name, and proved useful while developing tools for working with code.
 
-## BEM, est. 2009
+## Lego 2.0. Birth of BEM
 
-In March of 2009, Lego 2.0 had been released.
+In March of 2009, Lego 2.0 was released.
 
-That event marked the end of the "independent blocks" epoch and formation of the BEM methodology.
+This event marked the end of the independent block layout and the beginning of BEM.
 
-**BEM** stands for Block, Element, Modifier; these are three key entities we use to develop web components.
+**BEM** stands for Block, Element, Modifier. These are three key entities we use to develop web components.
 
-What was the key update the 2.0 version had delivered?
+What was the key update the 2.0 version delivered?
 
-What really changed our understanding of the methodology was the primacy of `block` regardless of the underlying implementation technologies.
+The main change was that we moved the blocks to the forefront, instead of the implementations. Blocks became the primary units, and implementation technologies became secondary.
 
-Each block is contained in a separate folder; each technology (CSS, JS, XSL etc.) is represented by a separate file. Documentation just gets its own file type such as `.wiki`.
+Each block is stored in a separate folder; each technology is represented by a separate file inside the folder. Also, each block had documentation — the `.wiki` file inside the block.
 
-What additional terms did we operate on at that time?
+### Independent block
 
-### Independent Block
+Can be used anywhere on the page.
 
-`Independent Block` may be used on any web page and placed anywhere in the layout.
-
-In XML we apply XSL stylesheets to, the block is represented by a node in `lego` namespace:
+In XML, the block is represented with a tag in the `lego` namespace:
 
 ```xml
 <lego:l-head>
 <lego:b-head-logo>
 ```
 
-In HTML, block container gets a classname exactly corresponding to its name:
+The HTML class of the block corresponds to the name of this tag:
 
 ```html
 <table class="l-head">
 <div class="b-head-logo">
 ```
 
-CSS:
+The CSS rules are written for the class:
 
 ```css
 .l-head
 .b-head-logo
 ```
 
-All block files (`css`, `js`, `html`, `xsl`) are stored in block folder:
+All files (`css`, `js`, `html`, `xsl`) related to the block are stored in its directory:
 
 ```files
 common/
@@ -598,7 +566,9 @@ common/
 
 ### Element
 
-In XML files that describe page structure, blocks are described with nodes in `lego` namespace; block name prefix is omitted:
+A part of the block that can't be used outside the block.
+
+In XML, the element is represented in the `lego` namespace without a prefix:
 
 ```xml
 <lego:b-head-logo>
@@ -606,17 +576,21 @@ In XML files that describe page structure, blocks are described with nodes in `l
 </lego:b-head-logo>
 ```
 
-HTML classes inside the block have their prefixes omitted as well.
+The HTML class corresponds to the element name without a prefix.
 
 ```html
 <div class="b-head-logo">
     <span class="name">Auto</span>
 </div>
+```
 
+The CSS rules are written for the class:
+
+```css
 .b-head-logo .name { ... }
 ```
 
-Files related to inner elements each get their own folder:
+The element files are stored in a separate folder.
 
 ```files
 common/
@@ -628,41 +602,45 @@ common/
         b-head-logo.name.wiki
 ```
 
+The element file names use the dot as a separator: `b-head-logo.name.css`
+
 ### Modifier
 
-Modifiers in XML are specified as node attributes in `lego` namespace:
+Defines the appearance, state, and sometimes the behavior of the block.
+
+In XML, the modifier is represented with an attribute in the  `lego` namespace:
 
 ```xml
 <lego:b-head-tabs lego:theme="grey">
 ```
 
-In HTML, an extra classname is added:
+In HTML, an extra class is added:
 
 ```html
 <div class="b-head-tabs b-head-tabs_grey">...</div>
 ```
 
-CSS rules are written in class:
+The CSS rules are written for the class:
 
 ```css
 .b-head-tabs_grey { ... }
 ```
 
-Modifier files (styles etc.) go into separate folders prefixed with an underscore:
+The modifier files are placed in a separate folder. The name of the modifier directory begins with an underscore:
 
 ```files
 common/
-  block/
-    b-head-logo/
-      _theme/
-        b-head-logo_gray.css
-        b-head-logo_gray.png
-        b-head-logo_gray.wiki
+    block/
+        b-head-logo/
+            _theme/
+                b-head-logo_gray.css
+                b-head-logo_gray.png
+                b-head-logo_gray.wiki
 ```
 
-#### Declaration in XML
+### Declaration of blocks in use
 
-All Lego components used in a project are described in an XML file:
+All Lego components are described in the XML file.
 
 ```xml
 <lego:page>
@@ -674,7 +652,7 @@ All Lego components used in a project are described in an XML file:
         <lego:b-head-tabs type="search-and-content"/>
 ```
 
-This XML allows for CSS imports to be generated:
+It is used to generate CSS files.
 
 ```css
 @import url(../../common/block/global/_type/global_reset.css);
@@ -698,9 +676,9 @@ This XML allows for CSS imports to be generated:
 @import url(block/b-head-search/b-head-search.css);
 ```
 
-This example shows that common styles are imported first; then, project styles add extra definitions or redefine some of the common blocks. This makes project-specific changes possible while maintaining a common shared codebase.
+This example shows that common code is imported first, then the styles are added to adapt the Lego blocks to the project design.
 
-Same XML declarations allow for JS includes to be autogenerated.
+The JavaScript files are also generated from the XML declaration.
 
 ```js
 include("../../common/block/i-locale/i-locale.js");
@@ -709,14 +687,13 @@ include("../../common/block/b-search/sample/b-search.sample.js");
 include("../../common/block/b-head-userinfo/user/b-head-userinfo.user.js");
 ```
 
-XSL templates imports are autogenerated as well, using the same XML-based definitions:
+And the XSL files are, too.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<xsl:import href="../../common/block/i-common/i-common.xsl"/>
-<xsl:import href="../../common/block/i-items/i-items.xsl"/>
+<xsl:import href="../.. /common/block/i-common/i-common.xsl "/> < xsl: import href ="../../common/block/i-items/i-items.xsl"/>
 <xsl:import href="../../common/block/l-head/l-head.xsl"/>
 <xsl:import href="../../common/block/b-head-logo/b-head-logo.xsl"/>
 <xsl:import href="../../common/block/b-head-logo/name/b-head-logo.name.xsl"/>
@@ -738,22 +715,21 @@ XSL templates imports are autogenerated as well, using the same XML-based defini
 </xsl:stylesheet>
 ```
 
-Code generation was an important step forward; from this point onwards, we don't have to maintain dependencies manually.
+We stopped writing these files manually and started generating code.
 
-### CSS selector speed revisited, 2009
+### Selector speed (2009)
 
-During major redesign of Yandex.Mail service in 2009, interface responsiveness and overall speed were the key factors. It was our goal to release a web application that feels as fast as a piece of desktop software, and maybe even faster.
+When implementing a new version of Yandex.Mail, our goal was to make it fast.
 
-Client-side (in-browser) XSL transformations were employed as a main templating solution (XML with all the data was loaded separately). XSL transforms are applied really fast, but the resulting HTML code takes significant time to be appended to the page DOM. However, disabling all CSS made this problem go away magically.
+To achieve this, we started using XSL in the browser (and loading XML needed to render the data on the page). We faced a problem: XSL transformations were applied fast, but the resulting HTML code was appended to the DOM too slowly. Disabling CSS solved the problem.
 
-While studying various factors that could have affected the rendering speed, CSS selectors were identified as a major source of the slowdown. The bigger the DOM tree and the CSS stylesheet, the longer it takes for all CSS rules to be applied.
+It turned out that everything is slowed down by the CSS selectors. With a large DOM tree and a large style sheet, they have a significant effect on how fast the page is rendered by the browser.
 
-There’s a summary of our study available (in Russian): [completely independent blocks](https://ru.bem.info/forum/-55/).
+We had a solution ready — *absolutely independent blocks (AIB)*.
 
-It turned out there is a way to make CSS many times faster: switching to simple selectors and eliminating CSS cascade wherever possible. Selectors based on a single classname are quick and browser handles them with ease. We already had a solution that could use such selectors: the so-called
-[completely independent blocks](https://ru.bem.info/forum/-46/).
+We refactored all `Lego` blocks to follow the AIB notation. Since then we've been creating them so that each DOM node has a `class` to write the styles to. Also, we don't use the Tag Rules in CSS.
 
-All Lego blocks were refactored to follow the completely independent blocks restrictions. As soon as all classnames become unique, most rules require a single class query and work way faster.
+Element classnames contain the name of the block. Selectors are simple and fast.
 
 ```html
 <div class="b-head-logo">
@@ -765,57 +741,55 @@ All Lego blocks were refactored to follow the completely independent blocks rest
 
 ### Establishing naming conventions
 
-After taking several attempts to modify naming conventions, we agreed on some naming principles that hadn't changed since then.
+Gradually we achieved the point where code notation and file structure were stable and didn't change.
 
-* In file names, the dot separator was replaced by double underscore `__`.
+* In file names, the `.` separator was replaced with `__`.
 
-  **Example**
+   **Example**
 
-  `b-block.elem.css` —> `b-block__elem.css`
+   `b-block.elem.css` —> `b-block__elem.css`
 
-  Thus, file names were made consistent with CSS selectors.
+   Now they matched CSS selectors.
 
-* Block elements were allowed to have their own modifiers, too.
+* We implemented element modifiers similar to block modifiers:
 
-  `.b-block__elem_theme_green`, similar to `.b-block_theme_green`.
+   `.b-block__elem_theme_green` following the pattern of `.b-block_theme_green`.
 
-* Modifiers were changed to be a key/value pair.
+* The modifier type was included in the modifier file name and class.
 
-  Before:
+   Previous value:
 
-  `.b-menu__item_current`
+   `.b-menu__item_current`
 
-  After:
+   Current value:
 
-  `.b-menu__item_state_current`.
+   `.b-menu__item_state_current`
 
-  This change turned out to be useful when working with modifiers from JavaScript.
+   The reason for this change is to work with modifiers from JavaScript.
 
-## Going open source (2010)
+## BEM and open source (2010)
 
-In 2010, we had published some code on [our GitHub account](https://github.com/bem) to continue growing as an open source project.
+In 2010, we again returned to the idea of ​​open source. We created a [bem](https://github.com/bem) organization on GitHub.
 
-### Creating bem-bl library
+### The bem-bl library
 
-Blocks from Lego are being gradually ported to [bem-bl](https://en.bem.info/libs/bem-bl/), a library of blocks we consider useful for any web site, not just a Yandex project. As blocks are gradually open-sourced, we improve code and add new features.
+We began moving blocks from Lego to [bem-bl](https://github.com/bem/bem-bl), refactoring them at the same time.
 
-This is very much a work in progress, and we invite everybody to make pull requests.
+While moving the blocks to the new library, we published information about them.
 
 ### Tools
 
-We also develop [bem-tools](https://github.com/bem-archive/bem-tools/blob/dev/docs/index/index.en.md), a set of helper scripts and automation utilities that make working with BEM files easier. This is mostly done with Node.js, to keep the barriers low for front-end people familiar with JavaScript and willing to contribute.
+To work with files using BEM methodology, we needed our own tools. We started implementing [bem-tools](https://en.bem.info/tools/bem/bem-tools/) in JavaScript for Node.js.
 
-### Redefinition levels in BEM
+### Redefinition levels
 
-One size never fits all... but one BEM does! Because blocks and elements are represented on a file structure as files and folders, and BEM file structure is unified and based mostly on semantic criteria, we can easily redefine a part of a BEM block, or add more functionality. Similar to the way we extend objects in JavaScript, BEM blocks can be extended using so-called "redefinition levels".
+A new concept was introduced: the redefinition level. We started using it for folders with block implementation.
 
-Typical redefinition levels may be defined like this:
+For example, a project might contain:
 
-1. public bem-bl library pulled from github, extended by...
-2. internal block library (such as Lego), extended by..
-3. project-specific block library
-
-You're free to go and add more levels. You might need some page-specific block improvements... oh, I believe you got the idea.
+1. A public block library from GitHub.
+2. An internal lego library.
+3. Blocks for the project itself.
 
 **Example**
 
@@ -829,77 +803,33 @@ auto/
     b-logo/
 ```
 
-It is also possible to use a custom file structure on a redefinition level; as long as you follow the BEM concept, all you need is to configure our build tools according to your new cool structure.
-
-We won't go into much detail here, but there's a configuration file for that:
+You can use different naming patterns for files and folders on a redefinition level. To do this, you need to specify a new level in the configuration:
 
 ```files
-.bem/
-  level.js
+.bem/  
+    level.js
 ```
 
-You can specify different file naming patterns, or even flatten your folder structure completely.
+For example, you can set different separators between the block name and the element name. Or discard all folders and flatten the project folder structure.
 
-### BEMHTML templating engine
+### BEMHTML template engine
 
-We tried different templating solutions, and ended up developing our own, called [BEMHTML](https://en.bem.info/platform/bem-xjst/).
+After experimenting with template engines, we developed [BEMHTML](https://en.bem.info/platform/bem-xjst/), which allows you to:
 
-This templating engine:
+1. Write templates using BEM terminology.
+2. Redefine them on [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
+3. Use these templates both on the server and in the browser, because the templates are compiled into simple and fast JavaScript.
 
-1. Operates on core BEM (Block, Element, Modifier) terms.
-2. Supports [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level): build common blocks and tailor them to your needs.
-3. Precompiles templates into JavaScript code that runs either in a browser, or on a server.
+## Summary
 
-More details on BEMHTML will be available soon.
+Before BEM appeared in its current form, it had to go through a long period of tests and experiments.
 
-## BEM: try this at home
+Despite that, it was still BEM at all stages of its development.
 
-As you can see, BEM has a long history of trial and error. It took Yandex a while to figure out what's important and what’s not.
+The BEM that we use now isn't the only right solution to everything.
 
-The foundation of the BEM methodology are Block, Element and Modifier; these entities are consistently used in all our projects.
+We recommend using BEM in your projects to the extent that brings the greatest benefit. You can try using it only for layout. This is what we ourselves started from. BEM methodology is flexible. You can customize it to suit your current processes and organize the work on the project.
 
-BEM as we know and use it today is not the final truth, nor the revelation, but something constantly being driven by practice, and tested on real-life projects. You can follow this methodology to the extent that you find useful.
+The main thing is to understand the benefits BEM can bring to your project, choose an approach that suits you, and start applying it!
 
-BEM is quite flexible, as it is mostly a methodology; there is no such thing as BEM API, or BEM SDK. While we encourage you to try and use the open source tools we provide, which are indeed a BEM framework, you might find BEM principles good enough to be embedded into your products or technologies in some other way.
-
-BEM is a development methodology that allows team members to collaborate and communicate ideas using the unified language consisting of simple yet powerful terms: blocks, elements, modifiers.
-
-There is no such thing as "true BEM", and we don't try to create one. The implementation we offer is consistent and we like it a lot, but you may create your own and still call it BEM, as long as you stay true to the core principles.
-
-BEM is a collection of ideas and methods, a *methodology*.
-Each company and each team may integrate it into an existing workflow gradually, finding out what works best for them.
-
-I assume you've got a web project and want to give BEM a try by using it here and there in your HTML and CSS.
-
-That's great! It's how we started using BEM, too.
-
-Choose an approach you find the easiest to understand and maintain, for example let your block elements have simple (non-prefixed) classes, and use modifiers with a key/value pair:
-
-```css
-.b-block
-.b-block .elem
-.b-block_size_l
-.b-block .elem_size_l
-```
-
-You can go one step further and assign a specific class to all DOM nodes inside your block that have a semantic meaning (we call that "completely independent blocks", see above):
-
-```css
-.b-block
-.b-block__elem
-.b-block_size_l
-.b-block__elem_size_l
-```
-
-Find CSS prefixes too long to type? Remove them!
-
-```css
-.block
-.block__elem
-.block_size_l
-.block__elem_size_l
-```
-
-This is a perfect opportunity to try BEM concepts, and since we don't really have those strict rules, you're not really breaking anything as long as you hold on to the main principle of blocks, elements and modifiers.
-
-Read more about [putting blocks to file structure](../filestructure/filestructure.en.md).
+If you have any questions, ask us in the [forum](https://en.bem.info/forum/).
