@@ -13,7 +13,7 @@ In this lesson, you will learn to:
 
 You will connect the `button` and `input` blocks from the library to the greeting form as shown below. The [result](#result) will be a form that displays the username in the greeting after the user clicks the button.
 
-![The greeting page](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.svg)
+![The greeting page](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/quick-start-static/quick-start-static__hello-user.svg)
 
 > [HTML code](https://jsfiddle.net/inna__neige/jbrtwwcp/) of the page with the greeting form.
 
@@ -79,7 +79,7 @@ To add a block to the page:
 
 To get the prepared HTML markup for the block, go to the `HTML` tab in the block example:
 
-![The HTML tab in the input block example](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-html.png)
+![The HTML tab in the input block example](dist-quick-start-html.png)
 
 Copy the code and insert it on the page:
 
@@ -171,7 +171,7 @@ To generate the block's HTML markup in the browser, use the [BEMHTML](https://en
 
 To get the`BEMJSON` code of the block, go to the `BEMJSON` tab in the block example:
 
-![The BEMJSON tab in the "input" block example](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-bemjson.png)
+![The BEMJSON tab in the "input" block example](dist-quick-start-bemjson.png)
 
 Copy the code and insert it in the template script on the page:
 

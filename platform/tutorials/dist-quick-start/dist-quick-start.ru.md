@@ -12,7 +12,7 @@
 
 Мы подключим блоки `button` и `input` из библиотеки в форму приветствия, как показано на рисунке ниже. В [результате](#Результат) получим форму, в которой имя пользователя при нажатии на кнопку отобразится в приветствии.
 
-![Страница приветствия](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.svg)
+![Страница приветствия](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/quick-start-static/quick-start-static__hello-user.svg)
 
 > [HTML-код](https://jsfiddle.net/inna__neige/jbrtwwcp/) страницы с формой приветствия.
 
@@ -78,7 +78,7 @@
 
 Чтобы получить готовую HTML-разметку блока, перейдите во вкладку `HTML` в примере блока:
 
-![Вкладка HTML в примере блока input](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-html.png)
+![Вкладка HTML в примере блока input](dist-quick-start-html.png)
 
 Скопируйте код и вставьте на страницу:
 
@@ -170,7 +170,7 @@ modules.require('i-bem-dom__init', function(init) { init(); });
 
 Чтобы получить `BEMJSON`-код блока, перейдите во вкладку `BEMJSON` в примере блока:
 
-![Вкладка BEMJSON в примере блока input](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-bemjson.png)
+![Вкладка BEMJSON в примере блока input](dist-quick-start-bemjson.png)
 
 Скопируйте код и вставьте его в скрипт с шаблоном на страницу:
 

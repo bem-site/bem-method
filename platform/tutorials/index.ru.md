@@ -6,6 +6,7 @@
 * [Темы](#Темы) — подробные руководства по отдельным технологиям или инструментам. 
 
 ## Проекты
+
 * [Быстрый старт. Собираем статическую страницу](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/quick-start-static/quick-start-static.ru.md) (~15 минут)
 * [Создаем статический БЭМ-проект](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/start-with-project-stub/start-with-project-stub.ru.md) (~1 час) 
 * [Создаем динамический БЭМ-проект](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/start-with-bem-express/start-with-bem-express.ru.md) (~2 часа)
@@ -16,6 +17,7 @@
 * [SSSR (Social Services Search Robot): учебное приложение на полном стеке БЭМ](https://github.com/bem/sssr)
 
 ## Темы
+
 ### Фреймворк i-bem.js
 * [Справочное руководство](https://ru.bem.info/platform/tutorials/i-bem/)
 * [i-bem: вебинар](http://bit.ly/2wgtbaz) (видео)
