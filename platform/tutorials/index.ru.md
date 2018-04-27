@@ -7,10 +7,11 @@
 
 ## Проекты
 
-* [Быстрый старт. Собираем статическую страницу](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/quick-start-static/quick-start-static.ru.md) (~15 минут)
-* [Создаем статический БЭМ-проект](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/start-with-project-stub/start-with-project-stub.ru.md) (~1 час) 
-* [Создаем динамический БЭМ-проект](https://github.com/bem-site/bem-method/blob/bem-info-data/articles/start-with-bem-express/start-with-bem-express.ru.md) (~2 часа)
-* [Dist bem-components: подключаем блоки на страницу](https://github.com/bem-site/bem-method/blob/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start.ru.md) (~10 минут)
+* [Dist bem-components: подключаем блоки на страницу](dist-quick-start/dist-quick-start.ru.md) (~10 минут)
+* [Быстрый старт. Собираем статическую страницу](quick-start-static/quick-start-static.ru.md) (~15 минут)
+* [Создаем статический БЭМ-проект](start-with-project-stub/start-with-project-stub.ru.md) (~1 час) 
+* [Создаем динамический БЭМ-проект](start-with-bem-express/start-with-bem-express.ru.md) (~2 часа)
+
 
 ### Проекты на Github
 * [Мастер-класс: вы пишете БЭМ-проект, а мы подсказываем](https://github.com/bem/do-it-yourself-workshop)
