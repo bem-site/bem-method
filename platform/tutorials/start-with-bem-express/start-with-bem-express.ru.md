@@ -16,6 +16,7 @@
 Цель документа — показать, как разрабатывать БЭМ-проекты, ориентированные на динамические данные.
 
 В документе рассматривается процесс создания двух приложений:
+
 * [Hello, World](#Приложение-hello-world) — быстрый старт по созданию динамических приложений.
 * [Social Services Search Robot](#Приложение-social-services-search-robot) —  приложение для поиска твитов и видео по ключевому слову.
 
@@ -152,7 +153,7 @@
 Представляет собой динамическое приложение, которое выводит последние твиты и видео по ключевому слову.
 
 Цель разработки данного приложения — показать взаимосвязь:
-* [технологий БЭМ](#Используемые-технологии);
+* [технологий БЭМ](#Используемые-технологии-БЭМ);
 * данных и интерфейса в БЭМ-проекте.
 
 ![Demo](start-with-bem-express__demo.png)
@@ -163,25 +164,11 @@
 
 ![Chart of Social Services Search Robot](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/start-with-bem-express/start-with-bem-express__chart.svg)
 
-#### Шаг 1. Запрос
-
-Пользователь отправляет запрос на сервер.
-
-#### Шаг 2. Получение данных
-
-Приложение получает данные от [Twitter Search API](https://dev.twitter.com/rest/public/search) и [YouTube Data API](https://developers.google.com/youtube/v3/docs/search/list) в соответствии с запросом пользователя.
-
-#### Шаг 3. BEMTREE-шаблонизация
-
-Приложение передает полученные данные [BEMTREE-шаблонизатору](#bemtree), который преобразует данные в BEMJSON.
-
-#### Шаг 4. BEMHTML-шаблонизация
-
-Приложение передает BEMJSON [BEMHTML-шаблонизатору](#bemhtml), который преобразует BEMJSON в HTML.
-
-#### Шаг 5. Отправка результата пользователю
-
-Приложение возвращает HTML-страницу пользователю.
+1. Пользователь отправляет запрос на сервер.
+2. Приложение получает данные от [Twitter Search API](https://dev.twitter.com/rest/public/search) и [YouTube Data API](https://developers.google.com/youtube/v3/docs/search/list) в соответствии с запросом пользователя.
+3. Приложение передает полученные данные [BEMTREE-шаблонизатору](#bemtree), который преобразует данные в BEMJSON.
+4. Приложение передает BEMJSON [BEMHTML-шаблонизатору](#bemhtml), который преобразует BEMJSON в HTML.
+5. Приложение возвращает HTML-страницу пользователю.
 
 ### Используемые технологии БЭМ
 
@@ -285,10 +272,10 @@ JavaScript-код описывается в файлах с расширение
 
 Позволяет:
 
-* разрабатывать веб-интерфейс в терминах блоков, элементов, модификаторов;
-* описывать логику работы блока в декларативном стиле — как набор состояний;
-* легко интегрировать код JavaScript с BEMHTML-шаблонами и CSS;
-* гибко переопределять поведение библиотечных блоков.
+* Разрабатывать веб-интерфейс в терминах блоков, элементов, модификаторов.
+* Описывать логику работы блока в декларативном стиле — как набор состояний.
+* Легко интегрировать код JavaScript с BEMHTML-шаблонами и CSS.
+* Гибко переопределять поведение библиотечных блоков.
 
 > Подробнее о [технологии i-bem.js](https://ru.bem.info/platform/i-bem/).
 
@@ -556,8 +543,8 @@ Google предлагает приложениям возможность выд
    > **Примечание.** Получить ключи Consumer Key и Consumer Secret можно, перейдя на вкладку **Keys and Access Tokens** [вашего приложения](https://apps.twitter.com).
 
 2. Запустите терминал или Git Bash (пользователям ОС Windows).
-4. Выполните команду `echo -n "xvz1evFS4wEEPTGEFPHBog:L8qq9PZyRg6ieKGEKhZolGC0vJWLw8iEJ88DRdyOg" | base64`.
-5. Скопируйте полученный код.
+3. Выполните команду `echo -n "xvz1evFS4wEEPTGEFPHBog:L8qq9PZyRg6ieKGEKhZolGC0vJWLw8iEJ88DRdyOg" | base64`.
+4. Скопируйте полученный код.
 
    **Пример**
 
@@ -575,10 +562,10 @@ Google предлагает приложениям возможность выд
 4. Перейдите на вкладку **Headers**.
 5. Добавьте заголовки: `Authorization` и `Content-Type` с соответствующими значениями.
 
-   | Key             | Value         |
-   | :-------------: |:-------------:|
-   | Authorization   | Basic <закодированная строка Consumer Key:Consumer Secret> |
-   | Content-Type    | application/x-www-form-urlencoded;charset=UTF-8 |
+   | Key | Value |
+   | --- | ----- |
+   | Authorization | Basic `закодированная строка Consumer Key:Consumer Secret` |
+   | Content-Type | application/x-www-form-urlencoded;charset=UTF-8 |
 
    > **Примечание.** Basic указывает на базовый метод авторизации.
 
