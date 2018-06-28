@@ -1,232 +1,227 @@
-# Dist bem-components: подключаем блоки на страницу
+# Dist bem-components: быстрый старт и работа с блоками
 
-## Описание урока
+Предварительно собранные файлы ([бандлы](https://ru.bem.info/methodology/build/#Введение)) библиотеки [bem-components](https://ru.bem.info/platform/libs/bem-components/) — это самый быстрый способ попробовать блоки библиотеки в действии.
 
-Один из [вариантов поставки](https://ru.bem.info/platform/libs/bem-components/6.0.0/#Использование) библиотеки [bem-components](https://ru.bem.info/platform/libs/bem-components/6.0.0/) — это предварительно собранные файлы ([бандлы](https://ru.bem.info/methodology/build/#Введение)), которые подключаются ссылками в HTML страницы. Это самый быстрый способ попробовать [блоки](https://ru.bem.info/methodology/key-concepts/#Блок) библиотеки в действии.
+Руководство содержит пошаговую инструкцию по созданию формы приветствия пользователя и включает следующие разделы:
 
-> **Важно!** Данный вариант поставки не позволяет использовать все преимущества БЭМ-проекта: [уровни переопределения](../../../method/key-concepts/key-concepts.ru.md#Уровень-переопределения), [миксы](../../../method/key-concepts/key-concepts.ru.md#Микс) и возможность [точечной сборки проекта](../../../method/build/build.ru.md#Определение-списка-БЭМ-сущностей). Для максимально эффективного использования библиотеки, воспользуйтесь поставками [source или compiled](https://ru.bem.info/platform/libs/bem-components/6.0.0/#source-compiled).
+* [Быстрый старт](#Быстрый-старт). Как подключить библиотеку и вставить блок на страницу.
+* [Руководство](#Работа-с-блоками-библиотеки). Как работать с блоками библиотеки.
 
-В этом уроке вы научитесь:
-* [Подключать библиотеку в проект](#Подключение-библиотеки-в-проект)
-* [Работать с блоками из библиотеки](#Работа-с-блоками)
+## Быстрый старт
 
-Мы подключим блоки `button` и `input` из библиотеки в форму приветствия, как показано на рисунке ниже. В [результате](#Результат) получим форму, в которой имя пользователя при нажатии на кнопку отобразится в приветствии.
+Чтобы попробовать блоки библиотеки bem-components без сборки и настройки проекта, выполните следующие шаги.
 
-![Страница приветствия](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/articles/quick-start-static/quick-start-static__hello-user.svg)
+1. Создайте `.html`-файл  
+  Создайте локально HTML-файл с минимальным набором элементов (например, `hello.html`): 
+  
+  ```html
+  <!DOCTYPE HTML>
+  <html>
+   <head>
+    <meta charset="utf-8">
+    <title>Try Bem Components</title>
+   </head>
+   <body></body>
+  </html>
+  ```
 
-> [HTML-код](https://jsfiddle.net/inna__neige/jbrtwwcp/) страницы с формой приветствия.
+2. Подключите библиотеку
 
-Для работы с примерами необходимы:
+  Скопируйте ссылки на предсобранные файлы библиотеки с [CDN Яндекса](https://tech.yandex.ru/jslibs/) в HTML-код страницы:
 
-* базовые навыки
-  * HTML
-  * CSS
-  * JavaScript
-  * БЭМ
+  ```diff
+  <!DOCTYPE HTML>
+  <html>
+      <head>
+          <meta charset="utf-8">
+          <title>Try Bem Components</title>
+      </head>
+      <body>
+  +         <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script> 
+      </body>
+  </html>
+  ```
 
-* понимание технологий БЭМ
-  * [i-bem.js](https://ru.bem.info/platform/i-bem/)
-  * [BEMHTML](https://ru.bem.info/platform/bem-xjst/8/)
+3. Вставьте блок на страницу  
+  3.1 Откройте документацию блока (например, [input](https://ru.bem.info/platform/libs/bem-components/current/touch-phone/input)).  
+  3.2 Выберите подходящий вариант использования блока (например, блок [input с модификатором type в значении search](https://ru.bem.info/platform/libs/bem-components/6.0.0/touch-phone/input/#Модификатор-type-10)).  
+  3.3 Перейдите во вкладку HTML и скопируйте код.    
+  ![Вкладка HTML в примере блока input](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-html.png)  
+  3.4 Вставьте код блока в файл `hello.html`.  
 
-### Как выполнить урок
+  ```diff
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <title>Try Bem Components</title>
+      <link rel="stylesheet" href="https://yastatic.net/bem-components/latest/desktop/bem-components.css">
+  </head>
+  <body>
+      <!-- HTML-код блока input -->
+  +    <span class="input input_theme_islands input_size_m i-bem" data-bem='{"input":{}}'>
+  +        <span class="input__box">
+  +            <input class="input__control" placeholder="User name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  +    </span>
+      </span>
+      <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script>
+  </body>
+  </html>
+  ```
 
-Есть несколько способов выполнить этот урок: вы можете писать код локально или использовать любую среду веб-разработки (например, [JSFiddle](https://jsfiddle.net), [CodePen](https://codepen.io/), [JS Bin](http://jsbin.com/?html,output)), которая позволяет редактировать и запускать код HTML, JavaScript и CSS.
+4. Проверьте результат  
+  Откройте файл `hello.html` в браузере. 
 
-> Все примеры выполнены в JSFiddle.
+## Работа с блоками библиотеки
 
-## Подключение библиотеки
+Не всегда достаточно увидеть, как выглядит блок на странице, часто нужно понять, как блоки могут взаимодействовать друг с другом. 
 
-Существует [несколько способов](https://ru.bem.info/platform/libs/bem-components/6.0.0/#Подключение-предсобранных-файлов-библиотеки-dist) получить предсобранные бандлы библиотеки. В документе рассмотрен способ подключения файлов с [CDN Яндекса](https://tech.yandex.ru/jslibs/).
+Чтобы научиться работать с блоками bem-components, создадим форму приветствия пользователя. Форма будет состоять из поля ввода, кнопки и фразы с приветствием. Если в поле ввода указать имя и нажать на кнопку, это имя отобразится в приветствии. 
 
-Схема подключения файла с CDN: `//yastatic.net/название-библиотеки/версия/платформа/имя-файла`.
+### Создание формы приветствия
 
-Чтобы подключить скрипты и стили библиотеки в проект, скопируйте ссылки на бандлы в теги `<link>` и `<script>`:
-
+* Откройте файл `hello.html`, который вы получили в результате [быстрого старта](#Быстрый-старт).
+* Добавьте в него форму приветствия — блок `hello`.
+ 
 ```diff
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>bem-components as a library</title>
-+   <link rel="stylesheet" href="https://yastatic.net/bem-components/latest/desktop/bem-components.css">
+    <title>Try Bem Components</title>
+    <link rel="stylesheet" href="https://yastatic.net/bem-components/latest/desktop/bem-components.css">
 </head>
 <body>
-+   <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script>
+    <!-- Блок hello для создания формы приветствия -->
++   <form class="hello i-bem" data-bem='{ "hello": {} }'>
++       <div class="hello__greeting">Hello, %user name%!</div>
++       <!-- HTML-код для блока input будет здесь -->
++         ...
++       <!-- HTML-код блока button будет здесь -->
++     </form>
+    <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script>
 </body>
 </html>
 ```
 
-> **Важно!** Библиотека содержит бандлы без [автоинициализации](https://ru.bem.info/platform/i-bem/init/) (`*.no-autoinit.js`), которые позволяют доопределять JavaScript-реализацию блоков библиотеки.
+### Добавьте блок `button`
 
-## Работа с блоками
-
-Чтобы добавить блок на страницу, необходимо:
-
-1. Выбрать блок  
-  Зайдите в описание блока на сайте [bem.info](https://ru.bem.info/platform/libs/bem-components/6.0.0/) и выберите подходящий пример:  
-    * [input](https://ru.bem.info/platform/libs/bem-components/6.0.0/touch-phone/input/#Модификатор-type-10)
-    * [button](https://ru.bem.info/platform/libs/bem-components/6.0.0/touch-phone/button/#Кнопка-отправки-формы-модификатор-type-в-значении-submit-1)
-
-2. Получить HTML-разметку выбранного блока  
-  Воспользуйтесь примером из документации, чтобы получить HTML. HTML-код блока можно получить несколькими способами:  
-    * [Использовать готовый HTML](#Использование-готового-html)  
-        > Если новая версия библиотеки будет содержать шаблоны, которые изменят HTML-разметку, потребуется исправлять каждый блок вручную.
-    * [Генерировать HTML в браузере](#Генерация-html-в-браузере)  
-        > Если в новой версии библиотеки обновленные шаблоны изменят разметку, исправлять шаблоны вручную не потребуется. Но генерируемая в браузере разметка хуже индексируется поисковыми системами.
-
-### Использование готового HTML
-
-Чтобы получить готовую HTML-разметку блока, перейдите во вкладку `HTML` в примере блока:
-
-![Вкладка HTML в примере блока input](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-html.png)
-
-Скопируйте код и вставьте на страницу:
+Вставьте HTML-код блока `button` в код файла `hello.html` по аналогии с блоком `input`:
+1. Откройте описание блока [button](https://ru.bem.info/platform/libs/bem-components/6.0.0/touch-phone/button/#Кнопка-отправки-формы-модификатор-type-в-значении-submit-1).
+2. Перейдите во вкладку HTML в примере блока и скопируйте код.
+3. Вставьте код блока в файл `hello.html`. 
 
 ```diff
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>bem-components as a library</title>
+    <title>Try Bem Components</title>
     <link rel="stylesheet" href="https://yastatic.net/bem-components/latest/desktop/bem-components.css">
 </head>
 <body>
     <!-- Блок hello для создания формы приветствия -->
     <form class="hello i-bem" data-bem='{ "hello": {} }'>
         <div class="hello__greeting">Hello, %user name%!</div>
-        <!-- HTML-код для блока input -->
-+       <span class="input input_theme_islands input_size_m i-bem" data-bem='{"input":{}}'>
-+           <span class="input__box">
-+               <input class="input__control" placeholder="User name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-+           </span>
-+       </span>
-        <!-- HTML-код для блока button -->
-+       <button class="button button_theme_islands button_size_m button_type_submit button__control i-bem" data-bem='{"button":{}}' role="button" type="submit">
-+           <span class="button__text">Click</span>
-+       </button>
+        <!-- HTML-код блока input -->
+        <span class="input input_theme_islands input_size_m i-bem" data-bem='{"input":{}}'>
+            <span class="input__box">
+                <input class="input__control" placeholder="User name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </span>
+        </span>
+        <!-- HTML-код блока button -->
++        <button class="button button_theme_islands button_size_m button_type_submit button__control i-bem" data-bem='{"button":{}}' role="button" type="submit">
++          <span class="button__text">Click</span>
++        </button>
     </form>
     <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script>
 </body>
 </html>
 ```
 
-Блоки `input` и `button` отобразились [на странице](https://jsfiddle.net/inna__neige/0hLmLmzn/6/). Чтобы имя из поля ввода появлялось в приветствии, опишите поведение блоков:
+Чтобы проверить, что блоки `input` и `button` отобразились на странице, откройте файл `hello.html` в браузере. 
 
-```javascript
-modules.define('hello', ['i-bem-dom', 'input', 'button'],
-    function(provide, bemDom, Input, Button) {
+### Добавление JavaScript-реализации блокам
 
-    provide(bemDom.declBlock('hello', {
-        onSetMod: {
-            js: {
-                inited: function() {
-                    this._input = this.findChildBlock(Input);
-                }
-            }
-        },
+> **Важно!** Чтобы изменять JavaScript-реализацию блоков библиотеки bem-components, необходимо [подключать](#Подключите-библиотеку) бандлы без [автоинициализации](https://ru.bem.info/platform/i-bem/init/) (`*.no-autoinit.js`).
+>
+> `https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js`
 
-        _onSubmit: function(e) {
-            e.preventDefault();
-            this._elem('greeting').domElem.text('Hello, ' + this._input.getVal() + '!');
-        }
-    }, {
-        lazyInit: true,
-        onInit: function() {
-            this._domEvents().on('submit', this.prototype._onSubmit);
-        }
-    }));
+Добавьте скрипт с описанием поведения блоков, чтобы имя из поля ввода появлялось в приветствии:
 
-});
-// Вызов `init();`. Hеобходимо явно вызвать `init();`, чтобы инициализировать блоки, заранее присутствующие в HTML-разметке.
-modules.require('i-bem-dom__init', function(init) { init(); });
-```
-
-Чтобы изменять поведение блоков, используется фреймворк [i-bem.js](https://ru.bem.info/platform/i-bem/), который является частью библиотеки [bem-core](https://ru.bem.info/platform/libs/bem-core/4.2.0/). Чтобы писать код на i-bem.js, дополнительно подключать на страницу предсобранные бандлы библиотеки `bem-core` не нужно, они уже включены в сборку.
-
-Проект в [JSFiddle](https://jsfiddle.net/inna__neige/0hLmLmzn/).
-
-### Генерация HTML в браузере
-
-Чтобы генерировать HTML-разметку блока в браузере, необходимо использовать шаблонизатор [BEMHTML](https://ru.bem.info/platform/bem-xjst/8/), который преобразует [BEMJSON](https://ru.bem.info/platform/bemjson/) в HTML. Для этого [подключите](##Подключение-библиотеки-в-проект) бандл с шаблонизатором (`*.js+bemhtml.js`):
-
-```diff
+```diff hello.html
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>bem-components as a library</title>
+    <title>Try Bem Components</title>
     <link rel="stylesheet" href="https://yastatic.net/bem-components/latest/desktop/bem-components.css">
 </head>
-<body class="page page_theme_islands">
+<body>
     <!-- Блок hello для создания формы приветствия -->
     <form class="hello i-bem" data-bem='{ "hello": {} }'>
         <div class="hello__greeting">Hello, %user name%!</div>
+        <!-- HTML-код для блока input будет здесь -->
+        <span class="input input_theme_islands input_size_m i-bem" data-bem='{"input":{}}'>
+            <span class="input__box">
+                <input class="input__control" placeholder="User name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </span>
+        </span>
+        <!-- HTML-код блока button -->
+        <button class="button button_theme_islands button_size_m button_type_submit button__control i-bem" data-bem='{"button":{}}' role="button" type="submit">
+          <span class="button__text">Click</span>
+        </button>
     </form>
--   <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script>
-+   <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js+bemhtml.js"></script>
+    <script src="https://yastatic.net/bem-components/latest/desktop/bem-components.no-autoinit.js"></script>
++    <script>
++        modules.define('hello', ['i-bem-dom', 'input', 'button'],
++            function(provide, bemDom, Input, Button) {
++
++            provide(bemDom.declBlock('hello', {
++                onSetMod: {
++                    js: {
++                        inited: function() {
++                            this._input = this.findChildBlock(Input);
++                        }
++                    }
++                },
++
++                _onSubmit: function(e) {
++                    e.preventDefault();
++                    this._elem('greeting').domElem.text('Hello, ' + this._input.getVal() + '!');
++                }
++            }, {
++                lazyInit: true,
++                onInit: function() {
++                    this._domEvents().on('submit', this.prototype._onSubmit);
++                }
++            }));
++
++        });
++        // Вызов `init();`. Hеобходимо явно вызвать `init();`, чтобы инициализировать блоки, заранее присутствующие в HTML-разметке.
++        modules.require('i-bem-dom__init', function(init) { init(); });
++    </script>
 </body>
 </html>
 ```
 
-Чтобы получить `BEMJSON`-код блока, перейдите во вкладку `BEMJSON` в примере блока:
+Чтобы описывать поведение блоков, используется фреймворк [i-bem.js](https://ru.bem.info/platform/i-bem/), который является частью библиотеки [bem-core](https://ru.bem.info/platform/libs/bem-core/4.2.0/). Дополнительно подключать bem-core на страницу не нужно, библиотека уже включена в предсобранные бандлы `bem-components.
 
-![Вкладка BEMJSON в примере блока input](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/platform/tutorials/dist-quick-start/dist-quick-start-bemjson.png)
+Проект в [JSFiddle](https://jsfiddle.net/inna__neige/0hLmLmzn/).
 
-Скопируйте код и вставьте его в скрипт с шаблоном на страницу:
+## Что дальше?
 
-```diff
-modules.define('hello', ['i-bem-dom', 'BEMHTML', 'input', 'button'],
-    function(provide, bemDom, BEMHTML, Input, Button) {
+Использовать готовый HTML-код — это не единственный способ получить готовый блок на странице. HTML блоков можно не копировать из примера, а генерировать в браузере.
 
-    provide(bemDom.declBlock('hello', {
-        onSetMod: {
-            js: {
-                inited: function() {
-                    bemDom.append(this.domElem, BEMHTML.apply([ // Выполнение шаблона
-+                       {
-+                           block: 'input',
-+                           mods: {
-+                               theme: 'islands',
-+                               size: 'm'
-+                           },
-+                           placeholder: 'User name'
-+                       },
-+                       {
-+                           block: 'button',
-+                           mods: {
-+                               theme: 'islands',
-+                               size: 'm',
-+                               type: 'submit'
-+                           },
-+                           text: 'Click'
-+                       }
-                    ]));
+Оба способа имеют свои ограничения:
 
-                    this._input = this.findChildBlock(Input);
-                }
-            }
-        },
+* [Использование готового HTML](#Работа-с-блоками-библиотеки)  
+    Если в новой версии библиотеки изменится код шаблонов, которые изменят HTML-разметку блоков, потребуется исправлять разметку каждого блока на странице вручную.
+* [Генерация HTML в браузере](./dist-html-generation.ru.md)  
+    Если в новой версии библиотеки обновленные шаблоны изменят разметку, исправлять шаблоны вручную не потребуется. Но генерируемая в браузере разметка хуже индексируется поисковыми системами.
 
-        _onSubmit: function(e) {
-            e.preventDefault();
-            this._elem('greeting').domElem.text('Hello, ' + this._input.getVal() + '!');
-        }
-    }, {
-        onInit: function() {
-            this._domEvents().on('submit', this.prototype._onSubmit);
-        }
-    }));
-});
 
-// Вызов `init();`
-modules.require('i-bem-dom__init', function(init) { init(); });
-```
-
-Проект в [JSFiddle](https://jsfiddle.net/inna__neige/df6uuw7u/).
-
-## Результат
-
-Форма приветствия готова. Чтобы она выглядела, как на рисунке в начале документа, добавьте блокам новые [стили](https://gist.github.com/innabelaya/dacca124dc486e7a3b0854752d9013e7).
+Библиотека bem-components в виде Dist не позволяет использовать все преимущества БЭМ-проекта: [уровни переопределения](../../../method/key-concepts/key-concepts.ru.md#Уровень-переопределения), [миксы](../../../method/key-concepts/key-concepts.ru.md#Микс) и возможность [точечной сборки проекта](../../../method/build/build.ru.md#Определение-списка-БЭМ-сущностей). Для максимально эффективного использования библиотеки, воспользуйтесь поставками [source или compiled](https://ru.bem.info/platform/libs/bem-components/6.0.0/#source-compiled).
 
 **Не получилось?**
 
