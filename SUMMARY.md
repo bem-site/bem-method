@@ -36,7 +36,7 @@
     * [Declarations](method/declarations/declarations.en.md)
     * [Solved problems](method/solved-problems/solved-problems.en.md)
     * [History](method/history/history.en.md)
-    * [FAQ](faq/faq.ru.md)
+    * [FAQ](faq/faq.en.md)
 * [Tutorials](platform/tutorials/index.en.md)
     * [Dist bem-components: adding blocks to a page](platform/tutorials/dist-quick-start/dist-quick-start.en.md)
     * [Creating a static page](platform/tutorials/quick-start-static/quick-start-static.en.md)
