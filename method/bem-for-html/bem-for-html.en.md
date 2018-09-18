@@ -58,7 +58,7 @@ The BEM methodology does not recommend using HTML wrappers to [position one bloc
 
 To position a block relative to other blocks, use a [mix](../key-concepts/key-concepts.en.md#mix).
 
-In the example, the `header`  and `footer`  blocks are positioned on the page using a mix with the `page` block elements that set the styles. The `page__header`  and `page__footer` elements are optional. They are applied to the `page` block to add the header (`page`) or the footer (`footer`) to the page. The `page`, `header`  and `footer` blocks remain independent because they don't contain styles that deal with mutual positioning.
+In the example, the `header`  and `footer`  blocks are positioned on the page using a mix with the `page` block elements that set the styles. The `page__header`  and `page__footer` elements are optional. They are applied to the `page` block to add the header (`header`) or the footer (`footer`) to the page. The `page`, `header`  and `footer` blocks remain independent because they don't contain styles that deal with mutual positioning.
 
 HTML implementation:
 
