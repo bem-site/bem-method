@@ -391,7 +391,7 @@ HTML implementation:
 CSS implementation:
 
 ```css
-article, .footer div {
+.article, .footer div {
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #000;
