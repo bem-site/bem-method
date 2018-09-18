@@ -232,7 +232,7 @@ An entity that defines the appearance, state, or behavior of a block or element.
 
 Features:
 
-* The [modifier name](../naming-convention/naming-convention.en.md#modifier-name) describes its appearance ("What size?" or "Which theme?" and so on — `size_s` or `theme_islands`), its state ("How is it different from the others?" — `disabled`, `focused`, etc.) and its behavior ("How does it behave?" or "How does it respond to the user?" — such as `directions_left-top`).
+* The [modifier name](../naming-convention/naming-convention.en.md#block-modifier-name) describes its appearance ("What size?" or "Which theme?" and so on — `size_s` or `theme_islands`), its state ("How is it different from the others?" — `disabled`, `focused`, etc.) and its behavior ("How does it behave?" or "How does it respond to the user?" — such as `directions_left-top`).
 * The modifier name is separated from the block or element name by a single underscore (`_`).
 
 ### Types of modifiers
@@ -394,7 +394,7 @@ search-form/                           # Directory of the `search-form`
 
 This file structure makes it easy to support the code and re-use it.
 
-> The branched file structure assumes that in production the code will be [assembled into shared project files](../build/build.en.md#bem-project-building-methodology).
+> The branched file structure assumes that in production the code will be [assembled into shared project files](../build/build.en.md#building-a-bem-project).
 
 You aren't required to follow the [recommended file structure](../filestructure/filestructure.en.md#nested). You can use any alternative project structure that follows the BEM principles for organizing the file structure, such as:
 

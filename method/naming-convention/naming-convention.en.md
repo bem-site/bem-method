@@ -22,14 +22,14 @@ To understand the meaning of the first name, you need read through each word car
 * The modifier value is separated from the modifier name by a single underscore (`_`).
 * For boolean modifiers, the value is not included in the name.
 
-> **Important:** Elements of elements [do not exist in the BEM methodology](../../faq/faq.en.md#can-i-create-elements-of-elements-block__elem1__elem2). The naming rules do not allow creating elements of elements, but you can nest elements inside each other in the DOM tree.
+> **Important:** Elements of elements [do not exist in the BEM methodology](../../faq/faq.en.md#why-not-create-elements-of-elements-block__elem1__elem2). The naming rules do not allow creating elements of elements, but you can nest elements inside each other in the DOM tree.
 
 ### Examples
 
 In HTML, BEM entities are represented by the `class` attribute. In BEM, for any of the technologies, there is a call to the class:
 * [CSS](../bem-for-css/bem-for-css.en.md#selectors)
 * [JavaScript](../bem-for-js/bem-for-js.en.md#dom-representation-of-dynamic-blocks)
-* [templates](../bem-for-html/bem-for-html.en.md#generating-html-automatically)
+* [templates](../bem-for-html/bem-for-html.en.md#automatic-html-generation)
 
 Examples of the naming rules are applied to CSS.
 
@@ -37,7 +37,7 @@ Examples of the naming rules are applied to CSS.
 
 `menu`
 
-> [Why don't block names need prefixes?](../history/history.en.md#blocks-to-the-rescue)
+> [Why don't block names need prefixes?](../history/history.en.md#the-introduction-of-blocks)
 
 *HTML*
 

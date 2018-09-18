@@ -1,6 +1,6 @@
 # Declarations in BEM
 
-To list BEM entities needed to build a web page (effectively, ”an instance of a [bundle](../build/build.en.md#bundle)“), you can use a **declaration**.
+To list BEM entities needed to build a web page (effectively, ”an instance of a [bundle](../build/build.en.md#build-result)“), you can use a **declaration**.
 
 A declaration is a list of [blocks](../key-concepts/key-concepts.en.md#block), [elements](../key-concepts/key-concepts.en.md#element), and [modifiers](../key-concepts/key-concepts.en.md#modifier) that are used on a page.. A build tool uses declaration data to narrow down a list of entities that end up in the final project. Rather than include all the blocks of the project, you can pick only the necessary ones from the list.
 
@@ -55,7 +55,7 @@ On the contrary, the page description-based declaration ensures the building of 
 
 Declarations can help you manage the build process. For instance, you can combine different page declarations into one and build the entire project at once instead of page by page. In addition to combining declarations, you can reuse them, extract their common and different parts.
 
-This kind of control enables you to assemble all pages into one [bundle](../build/build.en.md#bundle), load the necessary parts of a page on request or reuse already built common components on different pages.
+This kind of control enables you to assemble all pages into one [bundle](../build/build.en.md#build-result), load the necessary parts of a page on request or reuse already built common components on different pages.
 
 ### Operations with declarations
 

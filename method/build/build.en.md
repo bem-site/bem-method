@@ -7,7 +7,7 @@
 
 ## Introduction
 
-In a BEM project, the code is divided into [separate files](../filestructure/filestructure.en.md#file-structure-of-bem-project) (the source files). To combine the source files into a single file (for example, to put all CSS files in `project.css`, all JS files in `project.js`, and so on), we use the build process. The resulting files are called **bundles** in the BEM methodology.
+In a BEM project, the code is divided into [separate files](../filestructure/filestructure.en.md#guidelines-for-the-file-structure-of-a-bem-project) (the source files). To combine the source files into a single file (for example, to put all CSS files in `project.css`, all JS files in `project.js`, and so on), we use the build process. The resulting files are called **bundles** in the BEM methodology.
 
 **Example**
 

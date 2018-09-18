@@ -76,7 +76,7 @@ HTML implementation:
 
 The `has-tail` modifier with the `true` value adds to the `popup` block a new element — ”tail“. This modifier also adds offsets to the block to create space for the tail.
 
-> Information about when and how to use a [boolean modifier](../../faq/faq.en.md#how-should-i-choose-between-a-boolean-modifier-and-a-key-value-modifier).
+> Information about when and how to use a [boolean modifier](../../faq/faq.en.md#when-to-create-a-boolean-modifier-and-when-to-create-a-key-value-modifier).
 
 HTML implementation:
 
@@ -153,7 +153,7 @@ The styles of the nested `logo`, `search`, and `user` blocks haven't changed, an
 
 Mixes are used to keep styles consistent in a set of different HTML elements on the page.
 
-> Information about [why BEM doesn't use global modifiers](../../faq/faq.en.md#how-do-i-make-global-modifiers-for-blocks).
+> Information about [why BEM doesn't use global modifiers](../../faq/faq.en.md#how-to-make-global-modifiers-for-blocks).
 
 In the example, the text inside the `article` and `copyright` blocks needs to have the same color and font. To do this, you can mix the `text` block, which has styles defining the text color and font, with the `article` and `copyright` blocks.
 
