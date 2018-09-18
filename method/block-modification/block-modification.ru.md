@@ -217,7 +217,7 @@ project/
 
 ![Переопределенная кнопка](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/redefinition-levels/redefinition-levels__button-redefined.svg)
 
-> Больше [примеров использования уровней переопределения](../redefinition-levels/redefinition-levels.ru.md#Примеры-использования).
+> Больше [примеров использования уровней переопределения](../redefinition-levels/redefinition-levels.ru.md#Примеры-использования-уровней-переопределения).
 
 ## Изменение блока контекстом
 

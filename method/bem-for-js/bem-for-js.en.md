@@ -226,7 +226,7 @@ Declarative JavaScript in a BEM project is shown by the following:
 * The block states are set declaratively. When [changing states](../bem-for-js/bem-for-js.en.md#response-to-changes-in-modifiers), the code is automatically called that is declared for this state.
 * The block’s logic is described as a set of actions and conditions for performing these actions. This makes it possible to separate the block’s functionality into individual parts and use [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
 
-> [More information about applying redefinition levels in JavaScript](../bem-for-js/bem-for-js.en.md#Working-with-redefinition-levels)
+> [More information about applying redefinition levels in JavaScript](#working-with-redefinition-levels)
 
 ## OOP principles in JavaScript for BEM
 
@@ -250,7 +250,7 @@ You can also create inheritance chains, meaning that a block inherits from anoth
 
 Blocks with JavaScript implementation can correspond to nodes in HTML. We refer to this as the **blocks having a DOM representation**.
 
-In the simplest case, a block has a one-to-one relationship with a DOM node. However, a DOM node and a block are not always equivalent. You can put multiple blocks on the same DOM node (this is called a [mix](../key-concepts/key-concepts.en.md#Mix)), or implement a single block on multiple DOM nodes.
+In the simplest case, a block has a one-to-one relationship with a DOM node. However, a DOM node and a block are not always equivalent. You can put multiple blocks on the same DOM node (this is called a [mix](../key-concepts/key-concepts.en.md#mix)), or implement a single block on multiple DOM nodes.
 
 There are also **blocks without DOM representation**. In JavaScript, they are presented as objects with their own methods.
 
