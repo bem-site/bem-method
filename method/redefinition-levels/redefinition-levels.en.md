@@ -112,8 +112,8 @@ Rendered result:
 
 To make changes, you need to:
 
-* Redefine the block – change the color and size of the button.
-* Extend the block – add a shadow to the button.
+* Redefine the block – change the color of the button.
+* Extend the block – add a shadow and set the size of the button.
 
 To do this, create the `button` block on the `common.blocks` project level and place the `button.css` file in it with the new button styles.
 
