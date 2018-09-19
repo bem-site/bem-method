@@ -149,7 +149,7 @@ Dividing the code into parts and strictly organizing the project’s file struct
 
 ### Working with redefinition levels
 
-The documentation for the BEM methodology provides [many examples](../filestructure/filestructure.en.md#examples-of-using-redefinition-levels) where the final CSS implementation of a block is assembled from different redefinition levels. Applying BEM principles to JavaScript allows us to similarly divide a block’s behavior into different levels:
+The documentation for the BEM methodology provides [many examples](../redefinition-levels/redefinition-levels.en.md#examples-using-redefinition-levels) where the final CSS implementation of a block is assembled from different redefinition levels. Applying BEM principles to JavaScript allows us to similarly divide a block’s behavior into different levels:
 
 * Implement new block functionality on a different redefinition level while preserving the previous block behavior, inheriting it and extending it (make a super call).
 * Completely override the block behavior (redefine it).
