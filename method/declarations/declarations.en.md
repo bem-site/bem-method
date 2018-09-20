@@ -6,7 +6,7 @@ A declaration is a list of [blocks](../key-concepts/key-concepts.en.md#block), [
 
 **The goal of a declaration** is to define what and in what order should be included in the build.
 
-> In the BEM platform, a page description is created in BEMJSON format, and a page declaration is described in BEMDECL format, >e.g.:
+> In the BEM platform, a page description is created in BEMJSON format, and a page declaration is described in BEMDECL format, e.g.:
 > ```js
 > exports.blocks = [
 >    { name: 'input' },
