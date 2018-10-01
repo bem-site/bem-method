@@ -1,101 +1,92 @@
 # Создаем статический БЭМ-проект
 
-Эта статья рассказывает о том, как быстро создать свой проект с использованием [БЭМ-платформы](https://ru.bem.info/platform/). Для изучения материала, представленного в статье, необходимо знание JavaScript.
+Эта статья рассказывает о том, как создать проект с использованием [БЭМ-платформы](https://ru.bem.info/platform/). Для изучения материала, представленного в статье, необходимо знание JavaScript.
 
-Мы шаг за шагом создадим [страничку каталога товаров](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html), пользуясь принципами БЭМ в CSS, возможностью писать декларативный JavaScript с использованием фреймворка [i-bem.js](https://ru.bem.info/platform/i-bem/) и шаблонизатора [BEMHTML](https://ru.bem.info/platform/bem-xjst/).
+Мы шаг за шагом создадим [страничку каталога товаров](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html), используя принципы БЭМ в CSS, возможностью писать декларативный JavaScript с использованием фреймворка [i-bem.js](https://ru.bem.info/platform/i-bem/) и шаблонизатора [BEMHTML](https://ru.bem.info/platform/bem-xjst/).
 
 ![Каталог товаров](start-with-project-stub__catalog.png)
 
-## Настройка окружения
+## Зависимости
 
-Инструменты, которые мы собираемся использовать, кроссплатформенны.
-
-Обратите внимание на актуальность версий инструментов и библиотек:
-* [enb v1.3.0](https://ru.bem.info/toolbox/enb/)
-* [bem-core v4.1.1](https://en.bem.info/libs/bem-core/v4.1.1/)
-
-Для начала работы с любым БЭМ-проектом вам необходимо установить:
-
+* [enb v1.3.0](https://ru.bem.info/toolbox/enb/);
+* [bem-core v4.1.1](https://en.bem.info/libs/bem-core/v4.1.1/);
 * [Node.js 4+](http://nodejs.org/);
 * [Git Bash](https://git-for-windows.github.io/) — для пользователей операционной системы Windows.
 
-## Создание собственного репозитория проекта
+## Создание проекта
 
-Самый оптимальный путь создания собственного проекта — использование шаблонного репозитория [project-stub](https://github.com/bem/project-stub). Он содержит необходимый минимум конфигурационных файлов и папок и позволяет быстро развернуть проект.
+Рекомендуемый способ создания статических БЭМ-проектов — использовать шаблонный репозиторий [project-stub](https://github.com/bem/project-stub). Project Stub содержит необходимый минимум конфигурационных файлов.
 
-Нам понадобится локальная копия `project-stub`. Её можно сделать любым удобным для вас способом. Мы будем использовать Git.
+Чтобы создать проект:
 
-**Важно** Пользователям Windows необходимо выполнять все команды в Git Bash. Убедитесь, что Git Bash запущен от имени администратора.
+1. Склонируйте `project-stub`.
 
-```bash
-git clone https://github.com/bem/project-stub.git --depth 1 test-project
-```
+    ```bash
+    git clone https://github.com/bem/project-stub.git --depth 1 test-project
+    ```
 
-Переходим в директорию нашего проекта:
+2. Перейдите в директорию `test-project`:
 
-```bash
-cd test-project
-```
+    ```bash
+    cd test-project
+    ```
 
-Удаляем всю историю версионирования исходного репозитория:
+3. Установите зависимости:
 
-```bash
-rm -rf .git
-```
+    ```bash
+    npm install
+    ```
 
-Инициализируем собственный репозиторий в директории проекта:
+4. Соберите проект:
 
-```bash
-git init
-```
+    ```bash
+    npm run build
+    ```
 
-Устанавливаем зависимости:
+    > **Примечание.** Сборка осуществляется сборщиком [ENB](https://ru.bem.info/toolbox/enb/). Конфигурация процесса сборки определена в файле `.enb/make.js`.
 
-**Важно** Не используйте права суперпользователя (`root`) при установке npm-зависимостей.
+5. Запустите сервер:
 
-```bash
-npm install
-```
+    ```bash
+    npm start
+    ```
 
-Собираем проект с помощью [ENB](https://ru.bem.info/toolbox/enb/):
-
-```bash
-npm run build
-```
-
-Конфигурация процесса сборки хранится в файле `.enb/make.js`. На её основе `ENB` подключает все технологии, которые составляют реализацию блоков: шаблоны, зависимости, CSS-правила и JavaScript-функциональность.
-
-Для удобства разработки запускаем сервер:
-
-```bash
-npm start
-```
-
-В результате вы увидите следующее сообщение:
+При запуске приложения в терминале выведется сообщение о том, что сервер выполняется на порту 8080:
 
 `Server started at 0.0.0.0:8080`
 
-На вашем компьютере запустился ENB-сервер — инструмент для разработки, который при обновлении страницы в браузере будет автоматически пересобирать только ту часть проекта, которую затронули ваши изменения. Результат доступен по ссылке: [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+Откройте браузер и введите адрес [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
 
-**Проблема?**
+## Структура проекта
 
-Если порт 8080 уже используется другой программой, его можно переназначить с помощью аргумента `-p`.
-
-```bash
-npm start -- -p 8081
+```fs
+.enb/                       # Конфигурационные файлы для сборщика ENB
+common.blocks/              # Базовые реализации блоков
+desktop.blocks/             # Реализации блоков для десктопных браузеров
+desktop.bundles/            # Директория бандлов проекта
+node_modules/               # Установленные модули Node (пакеты)
+.bemrc                      # Конфигурация для плагинов BEM SDK
+.editorconfig               # Конфигурация EditorConfig
+.gitignore                  # Исключение файлов и директорий в Git
+.travis.yml                 # Автоматический запуск линтеров в Continuous Integration
+gulpfile.js                 # Конфигурация Gulp
+package.json                # Описание проекта для npm
+README.md                   # Текстовое описание проекта
 ```
 
-## Кратко о структуре проекта
+[Декларация](https://ru.bem.info/methodology/declarations/) проекта определяется вручную в [BEMJSON](https://ru.bem.info/platform/bemjson/)-файле:
 
-HTML-разметка web-страницы генерируется из её описания в [BEMJSON](https://ru.bem.info/platform/bemjson/)-файле `page-name.bemjson.js`. В терминах БЭМ-методологии будем называть BEMJSON-описание страницы [декларацией](https://ru.bem.info/methodology/declarations/).
+```fs
+desktop.bundles/ 
+    index/
+        index.bemjson.js    #  Декларация страницы index.html
+        ...
+```
 
-BEMJSON-декларация — это структура страницы, описанная в терминах блоков, элементов и модификаторов. Для создания HTML-представления web-страницы в работу включается [шаблонизатор BEMHTML](https://ru.bem.info/platform/bem-xjst/), который преобразует входные данные из BEMJSON-файла в HTML. На основе BEMJSON-файла, который описывает страницу в виде [БЭМ-дерева](https://ru.bem.info/methodology/key-concepts/#БЭМ-дерево), [собираются зависимости](https://ru.bem.info/methodology/build/), по которым строятся [бандлы](https://ru.bem.info/methodology/build/) технологий.
+[Уровни переопределения](https://ru.bem.info/methodology/key-concepts/#Уровень-переопределения) содержат реализации блоков, элементов и модификаторов:
 
-Блоки — строительный материал для страниц. Их можно заимствовать из [библиотек](https://ru.bem.info/platform/libs/) или создавать самостоятельно.
-
-Блок может быть представлен с помощью таких технологий как `css`/`styl`, `js`, `bemhtml.js`, `deps.js` и т.д., которые в БЭМ-методологии называются [файлами технологий реализации блока](https://ru.bem.info/methodology/key-concepts/#Технология-реализации). Наборы реализаций блоков хранятся в одной директории. В БЭМ-терминах она называется [уровнем переопределения](https://ru.bem.info/methodology/key-concepts/#Уровень-переопределения).
-
-[Структура проекта](https://ru.bem.info/methodology/filestructure/) предполагает, что все созданные и переопределенные блоки размещаются в директории `desktop.blocks`. А директория `desktop.bundles` содержит блоки страниц проекта и все блоки, указанные в их BEMJSON-декларациях.
+* `common.blocks/`;
+* `desktop.blocks/`.
 
 ## Шаг за шагом
 
@@ -464,7 +455,8 @@ bem create -l desktop.blocks -b head -T css
     ]
 }
 ```
-[Пример кода](https://gist.github.com/innabelaya/b20986600db84c1b8ed229d4a7e012ff) index.bemjson.js.
+
+[Пример кода](https://gist.github.com/godfreyd/ef343328d90070affee06b230c96525a) index.bemjson.js.
 
 Чтобы эти данные превратились в нужную разметку, блок должен быть реализован в технологии BEMHTML. Для корректировки внешнего вида применим CSS-правила. Воспользуемся командой `bem create`, чтобы создать блок сразу в двух технологиях:
 
