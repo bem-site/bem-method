@@ -70,7 +70,7 @@ HTML implementation:
 <div class="popup popup_direction_right"> ...</div>
 ```
 
-![Popup window to the right](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-theme-sun.svg) 
+![Popup window to the right](https://cdn.rawgit.com/bem-site/bem-method/bem-info-data/method/block-modification/block-modification__popup-right.svg)
 
 ### Changing the block's structure
 
