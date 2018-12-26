@@ -135,15 +135,9 @@ start-project/
 
     > Имена файлов и директорий соответствуют [соглашению по именованию](../../method/naming-convention/naming-convention.ru.md).
 
-3. Чтобы не оставлять файл `hello.bemjson.js` пустым, добавьте в него комментарий:
-
-    ```text
-    // BEMJSON-описание страницы будет здесь
-    ```
-
 ### Описываем страницу в BEMJSON-файле
 
-Чтобы создать описание страницы, необходимо представлять ее структуру. В нашем случае, на странице разместим блок `hello`, в котором будет приветствие (элемент `greeting` блока `hello`), поле ввода (блок `input`) и кнопка (блок `button`). Блоки [input](https://ru.bem.info/platform/libs/bem-components/current/desktop/input/) и [button](https://ru.bem.info/platform/libs/bem-components/current/desktop/button/) можно взять из готовой библиотеки bem-components.
+Чтобы создать описание страницы, необходимо представлять ее структуру. Создадим блок-контейнер `hello`, в котором разместим поле ввода, кнопку и текст приветствия. Блоки [input](https://ru.bem.info/platform/libs/bem-components/current/desktop/input/) (поле ввода) и [button](https://ru.bem.info/platform/libs/bem-components/current/desktop/button/) (кнопка) возьмем из готовой библиотеки [bem-components](https://ru.bem.info/platform/libs/bem-components), а текст приветствия реализуем как элемент `greeting` блока `hello`.
 
 > Подробнее о [BEMJSON](https://ru.bem.info/platform/bemjson/)-формате входных данных.
 
@@ -171,47 +165,63 @@ start-project/
 2.  Поместите элемент `greeting` с текстом приветствия пользователя (поле `content`) в блок `hello`.
 
     ```js
-    content : [
-        {
-            block : 'hello',
-            content : [
-                {
-                    elem : 'greeting',
-                    content : 'Hello %user%!'
-                }
-            ]
-        }
-    ]
+    ({
+        block : 'page',
+        title : 'hello',
+        head : [
+            { elem : 'css', url : 'hello.min.css' }
+        ],
+        scripts : [{ elem : 'js', url : 'hello.min.js' }],
+        mods : { theme : 'islands' },
+        content : [
+            {
+                block : 'hello',
+                content : [
+                    {
+                        elem : 'greeting',
+                        content : 'Hello %user%!'
+                    }
+                ]
+            }
+        ]
+    })
     ```
 
 3.  Добавьте блоки `input` и `button` в блок `hello`.
 
     ```js
-    content : [
-        {
-            block : 'hello',
-            content : [
-                {
-                    elem : 'greeting',
-                    content : 'Hello %user%!'
-                },
-                {
-                    block : 'input',
-                    mods : { theme: 'islands', size : 'm' },
-                    name : 'name',
-                    placeholder : 'User name'
-                },
-                {
-                    block : 'button',
-                    mods : { theme : 'islands', size : 'm', type : 'submit' },
-                    text : 'Click'
-                }
-            ]
-        }
-    ]
+    ({
+        block : 'page',
+        title : 'hello',
+        head : [
+            { elem : 'css', url : 'hello.min.css' }
+        ],
+        scripts : [{ elem : 'js', url : 'hello.min.js' }],
+        mods : { theme : 'islands' },
+        content : [
+            {
+                block : 'hello',
+                content : [
+                    {
+                        elem : 'greeting',
+                        content : 'Hello %user%!'
+                    },
+                    {
+                        block : 'input',
+                        mods : {theme : 'islands', size : 'm'},
+                        name : 'name',
+                        placeholder : 'User name'
+                    },
+                    {
+                        block : 'button',
+                        mods : {theme : 'islands', size : 'm', type : 'submit'},
+                        text : 'Click'
+                    }
+                ]
+            }
+        ]
+    })
     ```
-
-[Полный код](https://gist.github.com/innabelaya/837a96299de6fd488223) BEMJSON-файла.
 
 Чтобы убедиться, что на странице появились все описанные блоки и элементы, откройте страницу `hello` в браузере: [http://localhost:8080/desktop.bundles/hello/hello.html](http://localhost:8080/desktop.bundles/hello/hello.html).
 
