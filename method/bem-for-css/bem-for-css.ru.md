@@ -60,7 +60,7 @@ HTML-реализация:
 
 CSS-правила заданы в селекторе `button.button`.
 
-Допустим, блоку добавили модификатор `active` с значением `true`:
+Допустим, блоку добавили модификатор `active` со значением `true`:
 
 ```html
 <button class="button button_active">...</button>
