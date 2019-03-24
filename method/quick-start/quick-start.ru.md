@@ -397,4 +397,4 @@ search-form/                           # Директория блока `search
 Придерживаться [рекомендуемой файловой структуры](../filestructure/filestructure.ru.md#nested) не обязательно. Вы можете использовать любую альтернативную структуру проекта, соответствующую принципам организации файловой структуры БЭМ, например:
 
 * [Flat](../filestructure/filestructure.ru.md#flat)
-* [Flex](../filestructure/filestructure.ru.md#flex)
+* [Mixed](../filestructure/filestructure.ru.md#mixed)
