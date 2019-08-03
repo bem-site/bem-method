@@ -712,7 +712,7 @@ Separating into levels allows you to:
 * Completely override a block's appearance (redefine it).
 * Add blocks with a new representation.
 
-You can use redefinition levels to create a universal CSS block library and change it on the project level. You can then use use an assembly to only include the desired block representations in the project.
+You can use redefinition levels to create a universal CSS block library and change it on the project level. You can then use an assembly to only include the desired block representations in the project.
 
 **Example**
 
