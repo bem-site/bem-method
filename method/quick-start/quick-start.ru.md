@@ -134,9 +134,9 @@
 
 ```html
 <div class="block">
-    <div class="block__elem1">
-        <div class="block__elem2">
-            <div class="block__elem3"></div>
+    <div class="block__block1">
+        <div class="block__block2">
+            <div class="block__elem"></div>
         </div>
     </div>
 </div>
