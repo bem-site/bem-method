@@ -158,7 +158,7 @@
 Ви можете дотримуватися [рекомендованої структури проекту](../method/filestructure/filestructure.uk.md#nested) або використовувати будь-яку альтернативну:
 
 * [Flat](../method/filestructure/filestructure.uk.md#flat)
-* [Flex](../method/filestructure/filestructure.uk.md#flex)
+* [Mixed](../method/filestructure/filestructure.uk.md#mixed)
 
 ## Успадковують елементи блоку його CSS-властивості?
 

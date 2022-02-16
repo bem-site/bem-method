@@ -184,7 +184,7 @@
 Вы можете придерживаться [рекомендуемой структуры проекта](../method/filestructure/filestructure.ru.md#nested) или использовать любую альтернативную:
 
 * [Flat](../method/filestructure/filestructure.ru.md#flat)
-* [Flex](../method/filestructure/filestructure.ru.md#flex)
+* [Mixed](../method/filestructure/filestructure.ru.md#mixed)
 
 ## Наследуют ли элементы блока его CSS-свойства?
 
