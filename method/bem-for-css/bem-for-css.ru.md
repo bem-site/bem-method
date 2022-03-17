@@ -714,7 +714,6 @@ mobile.blocks/
 
   ```css
   .button {
-      background: #fff;
       color: rgb(255, 0, 0);
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
