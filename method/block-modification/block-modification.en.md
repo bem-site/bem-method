@@ -221,7 +221,7 @@ New appearance of the button:
 
 The block is changed by placing one block inside another one. The rules of the parent block cascade down to the nested blocks.
 
-> **Important** You should use context to change the appearance or behavior of a block only when you can't use [mixes](#using-a-mix-to-change-a-block). Using context to make changes restricts the independence of the blocks.
+> ****Important**** You should use context to change the appearance or behavior of a block only when you can't use [mixes](#using-a-mix-to-change-a-block). Using context to make changes restricts the independence of the blocks.
 
 The most common case for using context to stylize a block is the implementation of blocks for comments in blogs or forums in any CMS. 
 
