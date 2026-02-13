@@ -13,7 +13,7 @@ ENB использует [пакеты](../enb-packages-index/enb-packages-index
 
 > [Пакеты ENB-технологий](https://www.npmjs.com/search?q=enb) находятся в [NPM](https://www.npmjs.com).
 
-**Основная задача ENB** — сборка исходных файлов в [бандлы](https://github.com/bem-site/bem-method/blob/bem-info-data/method/build/build.ru.md#Введение), обычно для дальнейшего их использования в браузере.
+**Основная задача ENB** — сборка исходных файлов в [бандлы](https://github.com/bem-site/bem-method/blob/bem-info-data/method/build/build.ru.md#введение), обычно для дальнейшего их использования в браузере.
 
 Сборка включает:
 * Объединение и обработку исходных файлов.

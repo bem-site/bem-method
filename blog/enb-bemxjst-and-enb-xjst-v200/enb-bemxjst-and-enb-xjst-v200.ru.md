@@ -46,7 +46,7 @@ block('post').elem('data').content()(function () {
 });
 ```
 
-Подробности читайте в документации пакетов [enb-xjst](https://ru.bem.info/tools/bem/enb-xjst/readme/#Подключение-сторонних-библиотек) и [enb-bemxjst](https://ru.bem.info/tools/bem/enb-bemxjst/readme/#Особенности-работы-пакета).
+Подробности читайте в документации пакетов [enb-xjst](https://ru.bem.info/tools/bem/enb-xjst/readme/#подключение-сторонних-библиотек) и [enb-bemxjst](https://ru.bem.info/tools/bem/enb-bemxjst/readme/#особенности-работы-пакета).
 
 ## Скорость сборки
 

@@ -16,7 +16,7 @@
 
 Первое изменение — одна технология вместо трех — [Stylus](https://github.com/enb-make/enb-stylus/blob/master/api.ru.md). 
 
-Вариативность поддерживается с помощью [опций](https://ru.bem.info/tools/bem/enb-stylus/api#Опции): для добавления вендорных 
+Вариативность поддерживается с помощью [опций](https://ru.bem.info/tools/bem/enb-stylus/api#опции): для добавления вендорных 
 префиксов следует использовать опцию [autoprefixer](https://ru.bem.info/tools/bem/enb-stylus/api#autoprefixer), а для подключения 
 бибилиотеки [nib](https://github.com/tj/nib) опцию [useNib](https://ru.bem.info/tools/bem/enb-stylus/api#usenib).
 
