@@ -16,7 +16,7 @@ The BEM team spent a lot of last year getting to know people from the community.
 
 At one point we realized that the simple talk format was no longer enough. People were trying their hand at their own projects and facing some real problems in the process. Where possible, we gave online assistance via messengers and forums. But that wasn't enough.
 
-As far as live events were concerned, we were gradually moving from talks to master classes. When the increase in the developers' level became evident, we had an idea to conduct a [master class in reverse](http://ru.bem.info/talks/bemup-spb-2014/#Мастер-класс-наоборот:-вы-пишете-БЭМ-проект,-а-мы-подсказываем-—-Евгений-Константинов,-Дима-Белицкий,-Яндекс), where BEMup participants carried out assignments under our guidance.
+As far as live events were concerned, we were gradually moving from talks to master classes. When the increase in the developers' level became evident, we had an idea to conduct a [master class in reverse](http://ru.bem.info/talks/bemup-spb-2014/#мастер-класс-наоборот:-вы-пишете-бэм-проект,-а-мы-подсказываем-—-евгений-константинов,-дима-белицкий,-яндекс), where BEMup participants carried out assignments under our guidance.
 
 We saw that many enjoyed "on the spot" coding and were good at it. Why not then have a bash at a BEM hackathon? We seemed to be equal to the task, as challenging as it was — the team had grown and were ready to present projects and answer questions, our Yandex colleagues were keen to take part and help us with our teams, and there was already a sufficient number of developers "from the outside" with the necessary skill level, creating their own BEM projects.
 

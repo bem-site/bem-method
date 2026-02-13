@@ -18,7 +18,7 @@
 * [dist для bem-core](https://github.com/bem/bem-core-dist)
 * [dist для bem-components](https://github.com/bem/bem-components-dist)
 
-Подробнее о том, как подключать не требующие сборки dist-версии а-ля Bootstrap читайте [в нашем блоге](https://ru.bem.info/blog/bem-as-bootstrap/) или [в описании](https://ru.bem.info/libs/bem-components/current/#Подключение-предсобранных-файлов-библиотеки-dist) библиотек.
+Подробнее о том, как подключать не требующие сборки dist-версии а-ля Bootstrap читайте [в нашем блоге](https://ru.bem.info/blog/bem-as-bootstrap/) или [в описании](https://ru.bem.info/libs/bem-components/current/#подключение-предсобранных-файлов-библиотеки-dist) библиотек.
 
 ## Новости инструментов
 
