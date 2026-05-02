@@ -120,13 +120,13 @@ There are alternative solutions that are actively used in the BEM community. To 
 
 ### Two Dashes style
 
-`block-name__elem-name--mod-name--mod-val`
+`block-name__elem-name--mod-name_mod-val`
 
 * Names are written in lowercase Latin letters.
 * Words within the names of BEM entities are separated by a hyphen (`-`).
 * The element name is separated from the block name by a double underscore (`__`).
-* Boolean modifiers are separated from the name of the block or element by a double hyphen (`--`).
-* The value of a modifier is separated from its name by a double hyphen (`--`).
+* The modifier name is separated from the block or element name by a double hyphen (`--`).
+* The modifier value is separated from the modifier name by a single underscore (`_`).
 
 > **Important:** A double hyphen inside a comment (`--`) may cause an error during [validation of an HTML document](http://www.w3.org/TR/html5/syntax.html#comments).
 
