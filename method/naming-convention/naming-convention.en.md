@@ -37,7 +37,7 @@ Examples of the naming rules are applied to CSS.
 
 `menu`
 
-> [Why don't block names need prefixes?](../history/history.en.md#the-introduction-of-blocks)
+> **Why don't block names need prefixes?** In BEM, the block name itself acts as a namespace for its elements and modifiers, so prefixes like `b-`, `c-`, `g-` to set blocks apart from other classes aren't needed: a semantically meaningful block name is enough (`menu`, `header`, `search-form`). We originally used prefixes but eventually dropped them — see the [History](../history/history.en.md) section for details.
 
 *HTML*
 
