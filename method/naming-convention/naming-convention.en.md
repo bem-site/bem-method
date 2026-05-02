@@ -132,7 +132,7 @@ There are alternative solutions that are actively used in the BEM community. To 
 
 ### CamelCase style
 
-`blockName-elemName_modName_modVal`
+`blockName__elemName_modName_modVal`
 
 * Names are written in Latin letters.
 * Each word inside a name begins with an uppercase letter.

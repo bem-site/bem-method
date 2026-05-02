@@ -87,7 +87,9 @@ CSS implementation:
 
 To position HTML elements inside a block, use an additional block element (for example, `button__inner`). The `button__inner` element contains styles that deal with positioning inside the `button` block. It replaces an abstract wrapper.
 
-In the example, the icon (the `icon` block) is positioned inside the universal button using the `button_inner` element styles.
+A mix on the content won't work here: the contents of a universal button aren't known in advance — it could be an icon, some text, or any other block. We can't add a `button__icon` (or similar) class to every possible block that might end up inside. So positioning inside the block is handled by a separate wrapper element, `button__inner`, which doesn't depend on what specifically is placed inside.
+
+In the example, the icon (the `icon` block) is positioned inside the universal button using the `button__inner` element styles.
 
 HTML implementation:
 

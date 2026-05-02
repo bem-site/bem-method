@@ -210,7 +210,7 @@ If additional components containing items will be added to the page, another cod
 </div>
 ```
 
-In this case, the CSS can be formatted with cascades. To do this, you only need to extend the rules already written for `.item`:
+In this case, the CSS can be formatted with nested selectors. To do this, you only need to extend the rules already written for `.item`:
 
 ```css
 .item
@@ -228,7 +228,7 @@ In this case, the CSS can be formatted with cascades. To do this, you only need 
 
 Code like this will work until the page has to be changed. For example, until you have to move the menu items, use the code somewhere else separate from the parent component, or nest a navigation menu in the `snippets` block.
 
-Using cascades increases coupling of interface components of the interface. You can't fix one component without affecting the style of another one.
+Using nested selectors increases coupling of interface components. You can't fix one component without affecting the style of another one.
 
 **Solution**
 
@@ -280,11 +280,11 @@ This approach makes it possible to protect elements from mutually affecting each
 
 The `snippets` and `nav` blocks can be reused and moved within the page or project. The uniqueness of class names based on BEM naming rules allows blocks to be independent of each other.
 
-### Using cascades in BEM
+### Using nested selectors in BEM
 
-The BEM methodology allows using cascades.
+The BEM methodology allows using nested selectors.
 
-For example, a cascade is appropriate for changing elements depending on the state of the block or the theme assigned to it:
+For example, nested selectors are appropriate for changing elements depending on the state of the block or the theme assigned to it:
 
 ```css
 .nav_hovered .nav__link
@@ -300,7 +300,7 @@ For example, a cascade is appropriate for changing elements depending on the sta
 }
 ```
 
-> **Important!** Applying a cascade increases code coupling and makes reuse impossible.
+> **Important!** Applying nested selectors increases code coupling and makes reuse impossible.
 
 ## How to host multiple entities on the same DOM node and avoid copy and paste
 
