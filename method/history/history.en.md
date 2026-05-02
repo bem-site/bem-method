@@ -820,6 +820,13 @@ After experimenting with template engines, we developed [BEMHTML](https://en.bem
 2. Redefine them on [redefinition levels](../key-concepts/key-concepts.en.md#redefinition-level).
 3. Use these templates both on the server and in the browser, because the templates are compiled into simple and fast JavaScript.
 
+Videos about BEMHTML (in Russian):
+
+* [bemhtml — BEM js template engine](https://vimeo.com/29159832)
+* [BEMHTML. Not yet another template engine (Moscow)](https://vimeo.com/30814503)
+* [BEMHTML. Not yet another template engine (Saint Petersburg)](https://vimeo.com/30786491)
+* [Template engine working with multiple levels of redefinition](https://vimeo.com/42632215)
+
 ## Summary
 
 Before BEM appeared in its current form, it had to go through a long period of tests and experiments.
