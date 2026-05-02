@@ -75,11 +75,11 @@ CSS implementation:
 
 ```css
 .page__header {
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .page__footer {
-    padding: 50px;
+    margin-top: 50px;
 }
 ```
 

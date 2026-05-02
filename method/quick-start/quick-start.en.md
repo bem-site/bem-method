@@ -228,7 +228,7 @@ The exception is elements that must be divided into smaller parts – subelement
 
 ## Modifier
 
-An entity that defines the appearance, state, or behavior of a block or element.
+A BEM entity that defines the appearance, state, or behavior of a block or element.
 
 Features:
 
@@ -312,7 +312,7 @@ From the BEM perspective, a modifier can't be used in isolation from the modifie
     <button class="search-form__button">Search</button>
 </form>
 
-<!-- Incorrect. The modified class `search-form` is missing -->
+<!-- Incorrect. The block class `search-form` is missing -->
 <form class="search-form_theme_islands">
     <input class="search-form__input">
 

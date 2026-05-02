@@ -561,15 +561,14 @@ CSS-реализация:
 .button {
     font-family: Arial, sans-serif;
     text-align: center;
+    color: #000;
 }
 
 .button_theme_islands {
-    color: #000;
     background: #fff;
 }
 
 .button_theme_simple {
-    color: #000;
     background: rgba(255, 0, 0, 0.4);
 }
 ```
