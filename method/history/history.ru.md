@@ -826,11 +826,10 @@ auto/
 
 Видео по BEMHTML:
 
-* [bemhtml — bem js-шаблонизатор](https://ru.bem.info/forum/-78/)
-* [xjst — низкоуровневый js-шаблонизатор](https://ru.bem.info/forum/-79/)
-* [BEMHTML. Not yet another шаблонизатор](https://ru.bem.info/forum/-103/)
-* [BEMHTML. Not yet another шаблонизатор](https://ru.bem.info/forum/-108/)
-* [Шаблонизатор, работающий с несколькими уровнями](https://ru.bem.info/forum/-145/)
+* [bemhtml — bem js-шаблонизатор](https://vimeo.com/29159832)
+* [BEMHTML. Not yet another шаблонизатор (Москва)](https://vimeo.com/30814503)
+* [BEMHTML. Not yet another шаблонизатор (Санкт-Петербург)](https://vimeo.com/30786491)
+* [Шаблонизатор, работающий с несколькими уровнями](https://vimeo.com/42632215)
 
 ## Резюме
 
