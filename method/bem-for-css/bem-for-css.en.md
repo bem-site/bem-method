@@ -426,6 +426,8 @@ CSS implementation:
 }
 ```
 
+> **Important!** When mixing blocks, their CSS properties shouldn't overlap. Shared properties belong in the mixin block (`text`), while section-specific properties stay in their own block (`article`, `copyright`). If the same CSS property is defined in both blocks, the outcome ends up depending on CSS rule order — that's a property of the CSS cascade itself, not specific to BEM. The same discipline is used in the [External geometry and positioning](#external-geometry-and-positioning) section above: the `button` block defines only the internal styles, while `header__button` defines only the external positioning, so the properties don't collide.
+
 ## Dividing code into parts
 
 These basic principles for structuring and storing code are applied to BEM-style CSS:
